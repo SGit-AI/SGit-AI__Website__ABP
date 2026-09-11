@@ -2,7 +2,7 @@
 
 > You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.
 
-*Source: <https://abp.sgit.ai/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,8 +28,10 @@ An ABP is not a single list. It is four objects, and the order they are produced
 |---|---|---|
 | **The mandate** | What the agent is authorised and expected to do | **Elicited.** In minutes, because the deployer already knows it |
 | **The grant** | Everything the agent can do | **Measured.** From the deployment shape, the account and the credentials |
-| **The delta** | Excess where it can and you did not ask; shortfall where you asked and it cannot | **Computed. Never stored**, because the deployment changes |
+| **The delta** | Excess where it can and you did not ask; shortfall where you asked and it cannot | **Derived.** Recomputed whenever the grant or the mandate changes, stored with the versions of both, and never edited by hand |
 | **The barrier** | What stands between the agent and each capability | **Recorded**, per capability, from one of four kinds |
+
+> **The delta is derived and never authored.** Nobody writes one: it is only ever the output of a computation over the grant and the mandate, and it is stored with the versions of both inputs and the time it was computed. This site said the opposite this morning, and **the correction is published rather than applied quietly**: [what changed and what follows from it](model/delta/index.md).
 
 **A grant on its own is an inventory, and nobody acts on an inventory.** *Your agent can do three hundred and forty things* is a shrug. *Your agent can do three hundred and forty things and you authorised twelve* is a finding. [The model, in full](model/index.md).
 
@@ -69,6 +71,9 @@ The clearest way to see what an ABP does is to change one setting and watch the 
 **[What an ABP is](what-is-an-abp/index.md)**: The foundation document: the definition, the four objects, the barrier, one worked example with published numbers, and the questions we would like answered.
 This is the document, rendered. Not a summary of it.
 
+**[The delta](model/delta/index.md)**: Derived and never authored. Stored with its inputs pinned, recomputed when either moves, and the history is the business case.
+Corrected on 11 September, in the open.
+
 **[The model](model/index.md)**: The 23 capability primitives, the four barriers, the three undo classes, the graph rules and the schema.
 Promoted from a published map, not invented here.
 
@@ -101,7 +106,7 @@ The argument, the model, the examples and the data are published here. **There i
 
 > **Provenance.** 21 of 99 capability rows on this page were measured, meaning seen directly on the thing itself. The other 78 were derived from what the deployment architecturally is, or from the vendor's published documentation. Every row traces to [the published capability map](https://what-can-it-do.games.sgit.ai/map/index.html), retrieved 2026-09-11T13:00:37Z, content hash `sha256:d6d4ba40f1fb1f93f66`. [The source bytes](data/upstream/pack.json).
 
-> **Validity.** This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+> **Validity.** This describes the deployment shape as at 11 September 2026, from a twin last synchronised at no twin: these shapes are published profiles, not a synchronised environment. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
 
 ---
 

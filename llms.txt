@@ -2,7 +2,7 @@
 
 > The Agent Behaviour Policy: what your agent can do, what you authorised it to do, the gap between them, and what actually stands in the way.
 
-Site version: v0.1.0
+Site version: v0.2.0
 
 Every page below has a markdown twin generated from the same content as the
 HTML page. Fetch the `.md` and you have the page, without the chrome.
@@ -42,6 +42,7 @@ rating and no risk level anywhere on it, including in the data.
 - [read.record.browsing](https://abp.sgit.ai/model/capabilities/read.record.browsing/index.md): Read every page you visit. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 - [The barrier](https://abp.sgit.ai/model/barriers/index.md): Four kinds of thing that can stand between an agent and a capability, and only the fourth bounds anything. The enforcer test, which this estate published as a glyph before it named it as a rule.
 - [The undo class](https://abp.sgit.ai/model/undo/index.md): Three classes of reversibility, the ordering on every rendering this site produces, and the one column that is not fully context free.
+- [The delta](https://abp.sgit.ai/model/delta/index.md): Derived and never authored: stored with the versions of its inputs, recomputed when either moves, and never edited by hand. Reality is the third input, the history is the business case, and there are three clocks.
 - [The graph](https://abp.sgit.ai/model/graph/index.md): The five published graph rules, what they force on this model, and the sentence test that decides whether the edges are right.
 - [The schema](https://abp.sgit.ai/model/schema/index.md): What is in the published files, what this site added to the data it promoted, and the two rules a consumer and a contributor each have to follow.
 - [Chat in the browser, nothing connected](https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.md): An Agent Behaviour Policy for chatGPT (in the browser, no connectors): a grant of 1, a mandate of 1, an excess of 0 and an unbounded excess of 0. Derived from published data, with no score.
@@ -53,6 +54,7 @@ rating and no risk level anywhere on it, including in the data.
 - [The data](https://abp.sgit.ai/data/index.md): The capabilities, barriers, undo classes, deployment shapes and mandates an ABP is written in, as JSON at stable addresses with cross origin access, with the source bytes they were promoted from.
 - [Agent Behaviour Policy (ABP): You Know What You Asked For, And You Do Not Know What It Can Do](https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.md): version v0.33.70 date 11 September 2026 from Dinis Cruz to Anyone deploying an agent, anyone building one, and anyone who has to sign for one
 - [The Behaviour Policy Is A Graph And Every Document Is A Projection: The W3C Has The Vocabulary, And A Prohibition Has Two Lives](https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.md): version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever models the graph, whoever builds the renderer, and whoever compiles the prohibitions into something that enforces them
+- [The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case](https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.md): version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published
 - [The Behaviour Policy Is The Document The Only Agent Insurer Already Requires: Sell The Correction, And Not The Draft](https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.md): version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever names the product, prices it, and stands at the table with it next week
 - [The Prohibitions Are The Exclusions: Your Own Demo Says No Policy Covers The Delta, And The Insurance Act Says How](https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.md): version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever plans the ladder from the behaviour policy to everything above it, and whoever talks to an underwriter first
 - [Start Here](https://abp.sgit.ai/docs/pack/00__START-HERE/index.md): You are building abp.sgit.ai, the site for the Agent Behaviour Policy. This pack is what has been decided, what already exists, and what you must not invent.
@@ -63,6 +65,7 @@ rating and no risk level anywhere on it, including in the data.
 - [The Hard Rules](https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.md): Thirteen rules that constrain this site. Each has a source and a reason. Rule 0 sits above the others and rules 1 and 13 are the two most likely to be broken.
 - [The Prompt](https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.md): Paste this to the agent that builds the site. It is the standard prompt for a new network site, extended with what this one needs.
 - [Docs](https://abp.sgit.ai/docs/index.md): Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
+- [v0.2.0: the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it](https://abp.sgit.ai/versions/v0.2.0/index.md): A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes...
 - [v0.1.0: the ontology is promoted out of a game and the five examples are derived rather than written](https://abp.sgit.ai/versions/v0.1.0/index.md): The first version of abp.sgit.ai. The capability ontology the ABP needs already existed, published, as the data pack a game reads, so this release promotes it into a schema with a stable address rather than authoring a second one, and derives five worked ABPs from it. Nothing on...
 - [Versions](https://abp.sgit.ai/versions/index.md): Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
@@ -73,4 +76,5 @@ rating and no risk level anywhere on it, including in the data.
 
 ## Release history
 
+- [v0.2.0](https://abp.sgit.ai/versions/v0.2.0/index.md) (2026-09-11) the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it
 - [v0.1.0](https://abp.sgit.ai/versions/v0.1.0/index.md) (2026-09-11) the ontology is promoted out of a game and the five examples are derived rather than written

@@ -2,7 +2,7 @@
 
 > Read a retained record: shell history, past sessions. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 

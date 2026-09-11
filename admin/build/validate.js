@@ -38,7 +38,11 @@
 //      the tree that the generator does not.
 //  12. THE DATA HOLDS TOGETHER: the promoted vocabulary resolves, the upstream bytes hash to
 //      what their manifest says, every profile row names a real capability and a real barrier,
-//      no mandate both wants and refuses the same thing, and NO FILE CONTAINS A STORED DELTA.
+//      no mandate both wants and refuses the same thing, and EVERY STORED DELTA RECOMPUTES
+//      FROM ITS OWN PINNED INPUTS. That last one was the opposite check until 11 September
+//      2026, when the published rule was corrected from `computed and never stored' to
+//      `derived and never authored'. Never authored is the harder rule and this is how a
+//      machine holds it.
 //
 // Any failure exits 1: no tag, no publish.
 'use strict';
@@ -383,17 +387,91 @@ for (const f of files) {
     if (n !== caps.count) errors.push(`data/${e.file}: covers ${n} capabilities, there are ${caps.count}`);
   }
 
-  // THE DELTA IS COMPUTED AND NEVER STORED. A stored delta is a stale claim about somebody's
-  // environment, and the environment is the thing that changes. This is a standing ruling, so
-  // it is a check rather than a comment.
-  for (const f of walk(D).filter(x => x.endsWith('.json') && !rel(x).startsWith('data/upstream/'))) {
-    const j = JSON.parse(read(f));
-    const hit = ['delta', 'excess', 'unbounded_excess', 'shortfall'].filter(k => k in j);
-    if (hit.length) {
-      errors.push(`${rel(f)}: carries ${hit.join(', ')} -- the delta is computed from a grant `
-                + `and a mandate every time it is needed and is never stored`);
+  // THE DELTA IS DERIVED AND NEVER AUTHORED.
+  //
+  // This check was the opposite one until 11 September 2026, when it refused any file
+  // carrying a delta at all, on a published rule that the delta is computed and never stored.
+  // Half of that rule was right. The delta is computed; it is also stored, because the history
+  // of grants, mandates and deltas is what lets a control project be evidenced as a
+  // subtraction, and because a question about whether a control held throughout a period is a
+  // question about a series that a recomputed present cannot answer.
+  //
+  // NEVER AUTHORED is the harder rule, and it is the one that needs a machine to hold it: it
+  // forbids the ACT rather than the artefact, and a hand edited delta is a fiction about an
+  // environment that nothing downstream could detect. So the gate does not take the stored
+  // records on trust. It RECOMPUTES every one of them from the profile and the mandate it
+  // names, and fails on a single row of disagreement. That is a few lines because the
+  // computation is a set difference, which is the whole point of holding the grant and the
+  // mandate as graphs with a schema rather than as prose.
+  (function () {
+    const didx = J('deltas/index.json');
+    if (!didx) { errors.push('data/deltas/index.json is missing -- run build_pages.py'); return; }
+    const eq = (a, b) => a.length === b.length && a.every((x, i) => x === b[i]);
+    for (const e of didx.deltas || []) {
+      const d = J(e.file); if (!d) continue;
+      const prof = J(`profiles/${d.profile}.json`);
+      const man = J(`mandates/${d.mandate}.json`);
+      if (!prof || !man) { errors.push(`data/${e.file}: names a profile or mandate that is missing`); continue; }
+
+      // The inputs have to be pinned, or the record is the stale claim the old rule feared.
+      for (const k of ['grant_version', 'mandate_version', 'computed_at', 'computed_by']) {
+        if (!d[k]) errors.push(`data/${e.file}: no ${k} -- a stored delta that does not pin its inputs cannot be checked`);
+      }
+      if (d.grant_version !== prof.profile_version) {
+        errors.push(`data/${e.file}: pinned to grant ${d.grant_version}, the profile is now ${prof.profile_version} -- recompute`);
+      }
+      if (d.mandate_version !== man.authored) {
+        errors.push(`data/${e.file}: pinned to mandate ${d.mandate_version}, the mandate is now ${man.authored} -- recompute`);
+      }
+
+      // The recompute. Order is irreversible first, then weakest barrier first, then by id --
+      // the same ordering the site renders in, because a record whose order is not the
+      // document's order would be a second thing to keep in step.
+      const UNDO = ['no', 'with-effort', 'yes'];
+      const BAR = ['none', 'expectation', 'setting', 'boundary'];
+      const undoOf = Object.fromEntries(caps.capabilities.map(c => [c.id, c.undo]));
+      const byCap = Object.fromEntries((prof.grant || []).map(r => [r.capability, r]));
+      const want = new Set(man.want || []);
+      const refused = new Set(man.do_not_want || []);
+      const sortRows = ids => ids.slice().sort((a, b) =>
+        UNDO.indexOf(undoOf[a]) - UNDO.indexOf(undoOf[b]) ||
+        BAR.indexOf(byCap[a].barrier) - BAR.indexOf(byCap[b].barrier) ||
+        (a < b ? -1 : a > b ? 1 : 0));
+      const granted = Object.keys(byCap);
+      const want_ = sortRows(granted.filter(c => want.has(c)));
+      const excess = sortRows(granted.filter(c => !want.has(c)));
+      const expect = {
+        excess,
+        excess_refused: excess.filter(c => refused.has(c)),
+        excess_unstated: excess.filter(c => !refused.has(c)),
+        unbounded_excess: excess.filter(c => !byCap[c].is_bounded),
+        shortfall: [...want].filter(c => !(c in byCap)).sort(),
+        aligned: want_,
+      };
+      for (const k of Object.keys(expect)) {
+        if (!eq(expect[k], d[k] || [])) {
+          errors.push(`data/${e.file}: ${k} does not recompute from its own inputs. `
+                    + `A delta is DERIVED AND NEVER AUTHORED: expected [${expect[k].join(', ')}], `
+                    + `the file says [${(d[k] || []).join(', ')}]. Either somebody edited this `
+                    + `record by hand, or the build was not rerun after a grant or a mandate moved.`);
+        }
+      }
+      for (const k of Object.keys(d.counts || {})) {
+        if (d.counts[k] !== (d[k] || []).length) {
+          errors.push(`data/${e.file}: counts.${k} says ${d.counts[k]}, the list has ${(d[k] || []).length}`);
+        }
+      }
+      if (!d.provenance || !d.provenance.content_hash) {
+        errors.push(`data/${e.file}: no provenance`);
+      }
     }
-  }
+    // A delta for a pair the mandates do not name is an orphan nothing recomputes.
+    const named = new Set((didx.deltas || []).map(e => `deltas/${e.id}.json`));
+    for (const f of walk(path.join(D, 'deltas')).filter(x => x.endsWith('.json') && path.basename(x) !== 'index.json')) {
+      const r = 'deltas/' + path.basename(f);
+      if (!named.has(r)) errors.push(`data/${r} exists but is not in deltas/index.json`);
+    }
+  }());
 
   const man = J('index.json');
   if (man && man.version !== VERSION) {
@@ -414,4 +492,4 @@ console.log(`validate: OK -- ${VERSION} on ${HOST}, ${htmlFiles.length} pages, `
           + `${mdFiles.length} markdown files, links resolve, every page has a twin and is in `
           + `llms.txt, the version surface agrees with version.txt, no score vocabulary, no `
           + `forbidden word, no em dash outside the promoted data, the upstream bytes hash to `
-          + `their manifest, and no file carries a stored delta`);
+          + `their manifest, and every stored delta recomputes from its own inputs`);

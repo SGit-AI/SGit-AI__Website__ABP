@@ -141,6 +141,60 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.2.0", "2026-09-11",
+     "the delta is derived and never authored, so it is stored with its inputs pinned and the "
+     "gate recomputes it",
+     {
+       "summary":
+         "A correction to a rule this site published nine hours earlier, applied in the open. "
+         "The foundation document says, twice, that the delta is computed and never stored. The "
+         "first half is right and the second half is wrong: the delta is stored, and storing it "
+         "is most of what makes it useful, because a question about whether a control held "
+         "throughout a period is a question about a series that a recomputed present cannot "
+         "answer. The corrected rule is that the delta is DERIVED AND NEVER AUTHORED, which is "
+         "the harder rule, because it forbids the act rather than the artefact. The release "
+         "gate's check is inverted to match: it refused any stored delta and now recomputes "
+         "every one of them.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "data/deltas/ carries 9 stored deltas, one per deployment shape and mandate pair. Each "
+         "record pins the version of both inputs, the published vocabulary it was computed "
+         "against, the time it was computed and the version of the computation that produced "
+         "it, so it can be recomputed and compared rather than taken on trust. No field in one "
+         "is writable by a person.",
+         "The release gate's twelfth check is inverted. It refused any file carrying a delta; "
+         "it now recomputes every stored delta from the profile and the mandate it names and "
+         "fails on a single row of disagreement, including the ordering. That check is a few "
+         "lines because the computation is a set difference, and it is a set difference because "
+         "the grant and the mandate are held as graphs with a schema rather than as prose.",
+         "A new page at /model/delta/ carries the correction with both passages quoted and both "
+         "replacements given, what the old rule was protecting and why all of it survives, the "
+         "materialised view the pattern already had a name for, reality as the third input and "
+         "the calibration loop it creates, the recompute trigger mapped onto an existing event "
+         "standard, the rule that a threshold crossing is a record and the consequence is a "
+         "policy somebody set in advance, the history as a business case read rather than "
+         "constructed, the three clocks, and the distinction from behaviour drift.",
+         "The validity statement on every example gains the second clock: as at this date, from "
+         "a twin last synchronised at this date. This site has no twin connected to anything "
+         "and the label says so rather than leaving the field out.",
+         "The dev brief that makes the correction is published in /docs/briefs/ and appears in "
+         "the index, in llms.txt and in the sitemap without a second edit, because the index is "
+         "generated from the files present.",
+         "The foundation document is NOT rewritten. Both corrected passages stand as published, "
+         "with a correction notice above them pointing at the brief and at /model/delta/. "
+         "Everything else in that document stands.",
+       ],
+       "basis": [
+         "The dev brief of 11 September 2026, the delta is derived and never authored, which is "
+         "the fifth document of that day and the first written to correct one already pushed.",
+         "The foundation document of 11 September 2026, which the brief corrects in two "
+         "passages and leaves standing in every other.",
+         "The site building guidance, for the rule that indexes are generated from the data "
+         "they index, which the brief records this as the fourth instance of.",
+       ],
+     }),
     ("v0.1.0", "2026-09-11",
      "the ontology is promoted out of a game and the five examples are derived rather than "
      "written",
@@ -239,6 +293,16 @@ VERIFICATIONS = [
 # Where this pack, the guidance and the published sources disagree. The published source wins
 # and the disagreement is recorded rather than quietly resolved.
 DISAGREEMENTS = [
+    ("SETTLED IN v0.2.0. The foundation document and the project lead, on whether a delta is "
+     "stored",
+     "v0.1.0 built to the foundation document's rule that the delta is computed and NEVER "
+     "STORED, and put a check in the release gate refusing any file that carried one. The "
+     "project lead's correction, issued the same day, is that the second half was an error: "
+     "the delta belongs in a vault along with the history of the grants and mandates that "
+     "produced it.",
+     "v0.2.0 stores the deltas with their inputs pinned and inverts the check, so the gate now "
+     "recomputes every one of them. **Never authored** is the rule that replaced it, and it is "
+     "harder than the one it replaced. See [the delta](model/delta/index.html)."),
     ("The foundation document and the published data, on what changes when confirmations go off",
      "The foundation document says that turning confirmations off moves the barrier on **every "
      "capability in the delta** by one row. In the published pack it moves exactly one barrier, "
@@ -348,10 +412,17 @@ def home(D):
                  "**Measured.** From the deployment shape, the account and the credentials"],
                 ["**The delta**", "Excess where it can and you did not ask; shortfall where you "
                                   "asked and it cannot",
-                 "**Computed. Never stored**, because the deployment changes"],
+                 "**Derived.** Recomputed whenever the grant or the mandate changes, "
+                 "stored with the versions of both, and never edited by hand"],
                 ["**The barrier**", "What stands between the agent and each capability",
                  "**Recorded**, per capability, from one of four kinds"],
             ]),
+            ("note", "**The delta is derived and never authored.** Nobody writes one: it is "
+                     "only ever the output of a computation over the grant and the mandate, and "
+                     "it is stored with the versions of both inputs and the time it was "
+                     "computed. This site said the opposite this morning, and **the correction "
+                     "is published rather than applied quietly**: "
+                     "[what changed and what follows from it](model/delta/index.html)."),
             ("p", "**A grant on its own is an inventory, and nobody acts on an inventory.** "
                   "*Your agent can do three hundred and forty things* is a shrug. *Your agent "
                   "can do three hundred and forty things and you authorised twelve* is a "
@@ -412,6 +483,10 @@ def home(D):
                         "one worked example with published numbers, and the questions we would "
                         "like answered.",
                  "foot": "This is the document, rendered. Not a summary of it."},
+                {"title": "[The delta](model/delta/index.html)",
+                 "sub": "Derived and never authored. Stored with its inputs pinned, recomputed "
+                        "when either moves, and the history is the business case.",
+                 "foot": "Corrected on 11 September, in the open."},
                 {"title": "[The model](model/index.html)",
                  "sub": f"The {caps} capability primitives, the four barriers, the three undo "
                         f"classes, the graph rules and the schema.",
@@ -459,7 +534,7 @@ def home(D):
             ("p", f"[Propose a change](data/index.html) · [The repository]({SITE['github']}) "
                   f"· [Everything on this site, in one file](llms-full.txt)"),
             abp_pages.provenance_block(prov["rows"]),
-            ("note", "**Validity.** " + abp.VALIDITY.format(as_at=abp_pages.AS_AT)),
+            ("note", "**Validity.** " + abp.VALIDITY.format(as_at=abp_pages.AS_AT, synced=abp_pages.SYNCED)),
         ]}
 
 
@@ -484,18 +559,64 @@ TERMS = [
 ]
 
 
+# The two passages the dev brief of 11 September corrects, and the replacement wording it
+# gives verbatim. The foundation document is NOT rewritten: the pack requires it published as
+# written, the brief itself says everything else in it stands, and a document corrected by
+# silently editing it is a document nobody can trust. So the correction is rendered ABOVE each
+# passage, where a reader meets it before the sentence it corrects, and the source bytes under
+# /docs/ stay exactly as published.
+CORRECTIONS = [
+    ("Never stored, because the deployment changes",
+     "**Corrected the same day.** The replacement wording is: **The delta. Derived.** "
+     "Recomputed whenever the grant or the mandate changes, stored with the versions of both, "
+     "and never edited by hand. "
+     "[What changed and what follows from it](model/delta/index.html)."),
+    ("The delta is computed and never stored",
+     "**Corrected the same day.** The replacement wording is: **The delta is derived and never "
+     "authored.** Nobody writes a delta. It is only ever the output of a computation over the "
+     "grant and the mandate, and it is stored along with the versions of both inputs and the "
+     "time it was computed. That is what makes it checkable rather than stale. **What must "
+     "never happen is that somebody edits a delta**, because a hand edited delta is a fiction "
+     "about an environment, and nothing downstream could tell. "
+     "[What changed and what follows from it](model/delta/index.html)."),
+    ("the delta is computed and never stored, and the barrier is recorded per capability",
+     "**Corrected the same day.** Claim 3 reads, in the corrected wording: the mandate is "
+     "elicited, the grant is measured, **the delta is derived and never authored**, and the "
+     "barrier is recorded per capability. "
+     "[What changed and what follows from it](model/delta/index.html)."),
+]
+
+
 def what_is_an_abp(D):
     src = ROOT / "docs/briefs" / (docs_pages.FOUNDATION + ".md")
     href = "docs/briefs/" + docs_pages.FOUNDATION + ".md"
     title, blocks = docs_pages.to_blocks(src.read_text(), href,
                                          "docs/briefs/" + docs_pages.FOUNDATION + ".md")
-    seen = set()
+    seen, corrected = set(), set()
     linked = []
     for kind, *args in blocks:
+        # A corrected passage gets its correction rendered immediately BEFORE it, so a reader
+        # cannot meet the superseded sentence without the replacement.
+        if isinstance(args[0], str):
+            for i, (needle, note) in enumerate(CORRECTIONS):
+                if i not in corrected and needle in args[0]:
+                    linked.append(("note", note))
+                    corrected.add(i)
+        elif kind == "table":
+            flat = " ".join(c for r in args[1] for c in r)
+            for i, (needle, note) in enumerate(CORRECTIONS):
+                if i not in corrected and needle in flat:
+                    linked.append(("note", note))
+                    corrected.add(i)
         if kind in ("p", "lead") and isinstance(args[0], str):
             linked.append((kind, _link_terms(args[0], seen)))
         else:
             linked.append((kind, *args))
+    if len(corrected) != len(CORRECTIONS):
+        raise SystemExit(f"what_is_an_abp: {len(CORRECTIONS) - len(corrected)} correction(s) "
+                         f"found no passage to attach to. The foundation document changed, or "
+                         f"the needle did. A correction that silently fails to render is worse "
+                         f"than no correction.")
     return {
         "title": "What is an Agent Behaviour Policy",
         "description": "The foundation document: the definition of the Agent Behaviour Policy, "
@@ -504,6 +625,15 @@ def what_is_an_abp(D):
         "blocks": [
             ("crumb", "[Home](index.html) / What is an ABP"),
             ("h1", shell.ascii_safe(title)),
+            ("note", "**Two passages in this document were corrected on the day it was "
+                     "published, and this page does not rewrite them.** Both stand exactly as "
+                     "written, each with its correction rendered immediately above it, because "
+                     "a document corrected by silently editing it is a document nobody can "
+                     "trust. The correction is that **the delta is derived and never "
+                     "authored**, not computed and never stored. [The brief that makes it]"
+                     "(docs/briefs/" + abp_pages._DELTA_BRIEF + "/index.html) and [what follows "
+                     "from it](model/delta/index.html). Everything else in this document "
+                     "stands."),
             ("note", "**This is the foundation document itself, rendered, not a summary of it.** "
                      "It is the definition the rest of this site stands on, and it is the "
                      "document being put in front of the community for feedback, so its wording "

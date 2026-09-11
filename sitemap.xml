@@ -29,6 +29,7 @@
   <url><loc>https://abp.sgit.ai/model/capabilities/read.record.browsing/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/model/barriers/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/model/undo/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/delta/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/model/graph/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/model/schema/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html</loc><priority>0.7</priority></url>
@@ -40,6 +41,7 @@
   <url><loc>https://abp.sgit.ai/data/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/pack/00__START-HERE/index.html</loc><priority>0.7</priority></url>
@@ -50,6 +52,7 @@
   <url><loc>https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/versions/v0.2.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.1.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/index.html</loc><priority>0.7</priority></url>
 </urlset>

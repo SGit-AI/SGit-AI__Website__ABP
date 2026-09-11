@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case - abp.sgit.ai</title>
+<meta name="description" content="version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published">
+<link rel="canonical" href="https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html">
+<meta property="og:title" content="The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case - abp.sgit.ai">
+<meta property="og:description" content="version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../../versions/v0.2.0/index.html" title="What changed in v0.2.0, and the commit it was built from">v0.2.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../model/index.html">The four objects</a>
+      <a class="sl" href="../../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../examples/index.html">All five</a>
+      <a class="sl" href="../../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../../index.html">Home</a> / <a href="../../../docs/index.html">Docs</a> / <a href="../../../docs/index.html#briefs">The briefs</a> / The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case</p>
+  <h1>The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case</h1>
+  <div class="note"><b>The source bytes.</b> This page is generated from <a href="../../../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case.md"><code>docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case.md</code></a>, which is served unchanged. Anything rendered on this network stays one click from the file it came from.</div>
+  <p><b>version</b> v0.33.70 <b>date</b> 11 September 2026 <b>from</b> Human (project lead) <b>to</b> Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published</p>
+  <p><b>type</b> Dev brief (a correction to a published formulation, and the specification it turns into)</p>
+  <p><em>Fifth of 11 September, and the first document in this corpus written to correct one already pushed. The foundation document published earlier today carries the sentence that the delta is computed and never stored, twice. The project lead's correction is that the second half is wrong and the first half was the point. This brief states the correction, gives the replacement wording verbatim so it can be pasted, and then works out what follows, which is more than a wording change. Both the corpus and the outside were searched. The outside search found a standard for the event that triggers a recompute, and a product announced two days ago that measures a neighbouring thing and thereby sharpens what this one measures. Limitations: nothing here is built; the calibration loop has a collection problem that is named and not solved; and one specification's status could not be confirmed from its own page.</em></p>
+  <h2 id="what-this-is">What This Is</h2>
+  <p>The correction of one phrase in a published document, and the specification that the corrected phrase turns out to require: <b>the foundation document states that the delta is computed and never stored, on the reasoning that a stored delta is a claim about an environment on a day that has passed; the project lead's correction is that computed was the whole point and never stored was an error, because the delta belongs in a vault along with the history of the grants and the mandates that produced it, since both of those are interpretive and improve over time as the customer says what they actually meant and as more of what the agent can do is discovered, because reality is the calibrator, in that something happening which is not in the grant means the grant was incomplete and something being blocked which the grant said was possible means a barrier was missed; the power of a computed delta is a direct consequence of holding the grant and the mandate as graphs with a schema and an ontology that can be calculated against, which is the underlying capability, because all of this can be done manually today and almost nobody does it, and a programmatic delta is not a given; a computed delta reacts to changes in either input without anybody touching it, which means behaviours can be hooked to it, including actions, consequences, the granting of a licence to operate and the removal of one, so that a newly discovered weakness or a quietly widened credential moves the agent outside the authorised set without a human noticing; and the history matters commercially, because a project that introduces a control reduces the grant and therefore the delta, and that before and after is the business case, read off a series rather than constructed; the first finding is that the correct formulation is that the delta is derived and never authored, which keeps everything the original ruling was protecting while removing the error, and that the thing being described already has a name in computing, being a materialised view, stored for use, refreshed from its inputs, never hand edited, and carrying its own staleness; the second is that reality is a third input alongside the grant and the mandate, and the calibration loop it creates is the answer to the honest weakness in the published document, which is that twenty one of ninety nine capability rows are measured and the rest derived; the third is that the event which triggers a recompute has an existing standard with defined event types, so the recompute trigger is a receiver rather than an invention; the fourth is that a product announced on 9 September 2026 detects drift between an agent's runtime behaviour and its authorised scope, which is a neighbouring measurement and makes the distinction sharp, because behaviour drift is detected after an action and capability excess exists before any action; and the fifth is that hooking a consequence to a computed value is powerful and hazardous, and the estate's own rule resolves it, because the delta crossing a threshold is a record and the consequence is a policy somebody set in advance.</b> New contributions: <b>the correction with replacement wording; reality as the third input and the calibration loop; the recompute trigger mapped onto an existing standard; the history as a business case read rather than constructed; the three clocks and the gap the risk layer accounts for; the distinction from behaviour drift; and the collection problem the loop creates against a product that promises not to phone home.</b></p>
+  <h2 id="the-correction">The Correction</h2>
+  <p><b>The published foundation document says this, in two places.</b></p>
+  <p>In the four objects table:</p>
+  <div class="note"><b>The delta.</b> Computed. Never stored, because the deployment changes.</div>
+  <p>And in the body:</p>
+  <div class="note"><b>The delta is computed and never stored.</b> A stored delta is a claim about somebody's environment on a day that has passed. The environment is the thing that changes, so the delta is recomputed from the grant and the mandate every time it is needed.</div>
+  <p><b>The first half is right and the second half is wrong.</b> The delta is computed. It is also stored, and storing it is most of what makes it useful.</p>
+  <p><b>The replacement wording, for the table:</b></p>
+  <div class="note"><b>The delta.</b> Derived. Recomputed whenever the grant or the mandate changes, stored with the versions of both, and never edited by hand.</div>
+  <p><b>The replacement wording, for the body:</b></p>
+  <div class="note"><b>The delta is derived and never authored.</b> Nobody writes a delta. It is only ever the output of a computation over the grant and the mandate, and it is stored along with the versions of both inputs and the time it was computed. That is what makes it checkable rather than stale: a stored delta that carries its inputs can be recomputed and compared, and one that carries no inputs is the claim the older wording was afraid of. <b>What must never happen is that somebody edits a delta</b>, because a hand edited delta is a fiction about an environment, and nothing downstream could tell.</div>
+  <h2 id="what-the-old-ruling-was-protecting-and-what-survives">What The Old Ruling Was Protecting, And What Survives</h2>
+  <p><b>Being fair to the sentence being corrected: it was guarding against three real things, and all three survive the correction.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>The fear</th><th>Does the correction still handle it</th></tr></thead><tbody><tr><td>A delta becomes a stale claim about somebody's environment</td><td><b>Yes.</b> A stored delta carries the versions of its inputs and the time it was computed, so its staleness is a fact rather than a surprise</td></tr><tr><td>A delta gets hand edited into a fiction</td><td><b>Yes, and more strongly.</b> Never authored is a harder rule than never stored, because it forbids the act rather than the artefact</td></tr><tr><td>A delta is treated as authoritative after the inputs move</td><td><b>Yes.</b> It reacts. A recompute is cheap because the inputs are graphs</td></tr></tbody></table></div>
+  <p><b>So the correction loses nothing and gains the history.</b></p>
+  <p><b>And this is the fourth instance of a pattern already in force across the estate</b>, which is worth noticing because it means the corrected sentence is the one that fits and the old one was the odd one out:</p>
+  <ul><li><b>Indexes are generated from the data they index</b>, so they cannot disagree with the source. Stored, derived, never authored.</li><li><b>Prose is derived from the graph and never hand edited</b>, which was the renderer rule of this morning's second brief.</li><li><b>A software bill of materials is generated from the dependency files</b> rather than asserted, which was the finding in the findability brief of 10 September.</li><li><b>The delta is derived from the grant and the mandate</b> and never authored.</li></ul>
+  <p><b>In every case the artefact is stored. What is forbidden is writing it.</b></p>
+  <h2 id="the-word-for-this-already-exists">The Word For This Already Exists</h2>
+  <p><b>A stored result of a computation over other data, refreshed when its inputs change, never edited directly, is a materialised view.</b> The vocabulary is decades old and it carries exactly the right properties: it exists for use, it has a refresh policy, its staleness is knowable, and writing to it directly is a category error rather than a permission question.</p>
+  <p><b>The related pair is worth naming too.</b> The grant and the mandate are the event sourced side: an append only history of what changed and when. The delta is the read model computed from them. <b>That is the same shape as the estate's own published pattern in two places, where a story is a graph and an article is a projection, and where briefs are arguments and infographics are projections.</b> The delta is a projection of the ABP graph, and so is the label, and so is the leaflet.</p>
+  <p><b>Practical consequence for the model: the delta gets a stored record with a fixed shape.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Field</th><th>Why</th></tr></thead><tbody><tr><td><code>grant_version</code></td><td>The input, pinned</td></tr><tr><td><code>mandate_version</code></td><td>The input, pinned</td></tr><tr><td><code>computed_at</code></td><td>When</td></tr><tr><td><code>computed_by</code></td><td>Which version of the computation, because the computation is code and code changes</td></tr><tr><td><code>excess</code></td><td>Capabilities in the grant and not in the mandate</td></tr><tr><td><code>unbounded_excess</code></td><td>Excess whose barrier is one of the first three kinds</td></tr><tr><td><code>shortfall</code></td><td>Capabilities in the mandate and not in the grant</td></tr></tbody></table></div>
+  <p><b>No field in that record is writable by a person.</b> The way to change a delta is to change a grant or a mandate.</p>
+  <h2 id="reality-is-the-third-input">Reality Is The Third Input</h2>
+  <p><b>This is the part of the correction that is not a wording change.</b></p>
+  <p>The grant is a model of what the agent can do. The mandate is a statement of what somebody meant. <b>Both are interpretations, and both improve.</b> The customer says <em>what I actually meant was this</em>, and the mandate sharpens. Somebody discovers a capability nobody had listed, and the grant grows.</p>
+  <p><b>And reality calibrates both.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>What is observed</th><th>What it tells you</th></tr></thead><tbody><tr><td>Something happened that is not in the grant</td><td><b>The grant was incomplete.</b> Add the capability</td></tr><tr><td>Something was blocked that the grant said was possible</td><td><b>A barrier was missed</b>, or recorded at the wrong kind. Correct it</td></tr><tr><td>Something in the mandate never happens</td><td>Either the mandate is aspirational, or the capability is missing and the shortfall is real</td></tr><tr><td>Something happens repeatedly that is in the grant and not in the mandate</td><td><b>The mandate is wrong, or the deployment is.</b> This is the interesting one and it is the only case where the observation does not say which</td></tr></tbody></table></div>
+  <p><b>That last row is worth dwelling on, because it is the one place a computed delta cannot resolve itself.</b> An agent doing something outside its mandate, repeatedly, without anybody complaining, means either that the mandate was written too narrowly or that something is happening nobody authorised. <b>The ABP publishes the observation. Which of the two it is belongs to the risk layer and to a person.</b> Record, not verdict, again.</p>
+  <p><b>And the calibration loop is the answer to the published document's honest weakness.</b> Twenty one of ninety nine capability rows are measured and the rest are derived from documentation. <b>Every deployment that runs and reports back is an experiment that moves a row from derived to measured</b>, and because the capability map is shared and public, it moves for everybody. <b>That is a network effect and it is the reason the map should stay in the open repository rather than inside a product.</b></p>
+  <h2 id="the-delta-reacts-and-the-trigger-has-a-standard">The Delta Reacts, And The Trigger Has A Standard</h2>
+  <p><b>Because the delta is derived, a change in either input propagates without anybody touching the document.</b> That is the property a template cannot have and a rendered document cannot have, and it is the strongest differentiator yet, stronger than derived from your deployment, because it is <em>continuously</em> derived.</p>
+  <p><b>Three worked cases.</b></p>
+  <p><b>A weakness is disclosed in a tool the agent can call.</b> Nothing about the deployment changed. But a capability that was recorded at the fourth barrier, a boundary enforced above the agent, is now at the first. <b>The grant is the same and the unbounded excess jumps.</b> The ABP changes because the world did.</p>
+  <p><b>A credential is quietly widened.</b> Somebody adds a scope to a token to fix an unrelated problem. The grant grows, the mandate does not, and the excess grows by exactly the capabilities that scope carries. <b>Nobody involved thought they were changing a policy.</b></p>
+  <p><b>A control ships.</b> A gateway is deployed with default deny. A set of capabilities move from the second barrier to the fourth. <b>Unbounded excess falls, and the number it falls by is what the project bought.</b></p>
+  <p><b>The trigger for a recompute already has a standard, and the estate should receive rather than invent one.</b> The continuous access evaluation profile, published 29 August 2025 on the standards track by the shared signals working group, defines event types transmitted by an identity provider and consumed by a receiver so that access can be attenuated as things change. Its own framing is that transmitters send continuous updates which receivers use to attenuate access for human or robotic users, devices, sessions and applications.</p>
+  <div class="tablewrap"><table><thead><tr><th>Event type</th><th>What it means for the ABP</th></tr></thead><tbody><tr><td><b>Credential Change</b></td><td><b>The grant may have moved.</b> Recompute</td></tr><tr><td><b>Token Claims Change</b></td><td><b>The grant may have moved.</b> Recompute</td></tr><tr><td><b>Assurance Level Change</b></td><td>A barrier may have moved</td></tr><tr><td><b>Device Compliance Change</b></td><td>A barrier may have moved</td></tr><tr><td><b>Risk Level Change</b></td><td>Not ours. This is the risk layer's input, not the ABP's</td></tr><tr><td><b>Session Revoked, Established, Presented</b></td><td>Session lifecycle, below the ABP's altitude</td></tr></tbody></table></div>
+  <p><b>So the recompute trigger is a receiver for two or three event types, and the rest is the graph.</b> That is a small build and it is standards shaped. <b>The status of that specification could not be confirmed from its own page</b>, which said standards track rather than final while sitting at a final address, and somebody should check before it is cited publicly.</p>
+  <h2 id="what-hooks-to-it-and-the-hazard">What Hooks To It, And The Hazard</h2>
+  <p><b>The project lead's point is that behaviours can be hooked to the delta: actions, consequences, the granting of a licence to operate and its removal.</b> That is right and it is where the ABP stops being a document.</p>
+  <p><b>And it is hazardous in a specific way: a computation error would revoke a licence.</b> The estate's own rule resolves it cleanly.</p>
+  <p><b>The delta crossing a threshold is a record. The consequence is a verdict.</b> So the ABP publishes the crossing, with its inputs and its computation version, and <b>the consequence is a policy that the customer or the underwriter set in advance</b>, not a judgement the ABP makes. That keeps the ABP consequence agnostic while making the automation real, and it means an automatic suspension is always traceable to a threshold somebody chose and a computation anybody can rerun.</p>
+  <p><b>One elegant fit worth recording.</b> The statute analysed in this morning's third brief already provides for exactly this shape: a warranty breach <b>suspends</b> cover for losses occurring after the breach and before it is remedied, rather than discharging the contract. <b>A continuously computed delta is a thing that can trigger a suspensive condition and evidence it</b>, and remedy is visible in the same series. Nobody has to notice. That is a better fit between a statutory mechanism and a data structure than anything else in this estate.</p>
+  <h2 id="the-history-is-the-business-case-read-rather-than-constructe">The History Is The Business Case, Read Rather Than Constructed</h2>
+  <p><b>Store the series and the business case stops being a document somebody writes.</b></p>
+  <p>A control project has a date. The series has grants, mandates and deltas with dates. So the value of the project is a subtraction:</p>
+  <div class="note">On 14 March the gateway was deployed. Unbounded excess fell from thirty one to six. Excess was unchanged, because the agent can still do the same things; what changed is that twenty five of them are now bounded by something it cannot reach.</div>
+  <p><b>That sentence contains no verdict, no score and no adjective, and it is the strongest thing a security team can take to a budget conversation.</b> It is also checkable, because both ends of it are stored records with their inputs pinned.</p>
+  <p><b>Three uses of the series, in order of how soon they pay.</b></p>
+  <p><b>Justifying what was already bought</b>, which is the easiest and the one every security team needs and cannot produce today.</p>
+  <p><b>Pricing what to buy next.</b> The capabilities in unbounded excess, ordered by how many would move to the fourth barrier per control, is a shopping list with an effect size on each row.</p>
+  <p><b>Evidencing a condition over time.</b> An underwriter or an auditor asking whether a control was in place throughout a period is asking a question about a series, not about a snapshot. <b>A stored history answers it and a recomputed present cannot.</b> This is the strongest argument of the three and it is the one the old wording made impossible.</p>
+  <h2 id="three-clocks-and-the-gap-that-belongs-to-the-risk-layer">Three Clocks, And The Gap That Belongs To The Risk Layer</h2>
+  <p><b>The project lead's last point is the honest limit and it should be written down as three clocks.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Clock</th><th>What it measures</th><th>Who controls it</th></tr></thead><tbody><tr><td><b>The ABP's clock</b></td><td>When the grant was last measured or calibrated</td><td>Us, and it can be fast</td></tr><tr><td><b>The twin's clock</b></td><td>When the twin last synchronised with the real environment</td><td>The customer's integration</td></tr><tr><td><b>Reality's clock</b></td><td>Never stops</td><td>Nobody</td></tr></tbody></table></div>
+  <p><b>Inside the vault and the graph, the first clock can run in near real time on events.</b> The second is a connection to somebody else's systems and its latency is a property of their estate, not of our software. <b>The third does not wait.</b></p>
+  <p><b>So the ABP is exactly as fresh as the twin, and the twin is exactly as fresh as its connection.</b> That is not a defect to hide. It is a parameter, and it belongs on the label as part of the validity statement: <b>as at this date, from a twin last synchronised at this date.</b></p>
+  <p><b>And the gap between the second and third clocks is a risk that the risk layer accounts for</b>, which is the correct home for it, because how much that gap matters depends on the assets, and the ABP does not know the assets.</p>
+  <h2 id="drift-is-a-neighbouring-measurement-and-the-difference-is-th">Drift Is A Neighbouring Measurement, And The Difference Is The Mandate</h2>
+  <p><b>A product announced on 9 September 2026, two days ago, detects what it calls identity drift for agents</b>, comparing an agent's runtime behaviour against its original purpose and authorised scope, and triggering responses including reducing permissions, revoking credentials, disconnecting tools and application level kill switches. Another large vendor has announced continuous identity for agents. <b>The market has a word for the phenomenon and it is drift.</b></p>
+  <p><b>This is validation and it sharpens the distinction rather than blurring it.</b></p>
+  <div class="tablewrap"><table><thead><tr><th></th><th>What it compares</th><th>When you learn</th></tr></thead><tbody><tr><td><b>Behaviour drift</b></td><td>What the agent <b>did</b> against what it was allowed to do</td><td><b>After the action</b></td></tr><tr><td><b>Capability excess</b></td><td>What the agent <b>can do</b> against what it was authorised to do</td><td><b>Before any action</b></td></tr></tbody></table></div>
+  <p><b>You can only detect drift once an agent has drifted.</b> The ABP states that the drift is possible before it happens, which is a different product and an earlier one in the sequence. <b>Both want a mandate, and the mandate is the scarce input</b>, which is the strongest reason to make eliciting it cheap and to publish the method.</p>
+  <p><b>One datum from that announcement is worth keeping</b>, because it is a competitor's own number supporting the thesis of the published foundation document: <b>fifty seven per cent of enterprise identity is described as unseen and unmanaged.</b> You do not know what it can do, said by somebody selling a different answer to it.</p>
+  <h2 id="the-collection-problem-this-creates">The Collection Problem This Creates</h2>
+  <p><b>The calibration loop needs observation, and the toolkit brief of 10 September rules that the downloadable builds never transmit anything.</b> Those are in tension and the tension should be resolved now rather than in month three.</p>
+  <p><b>The resolution is that calibration happens inside the customer's own instance.</b> Their deployment observes, their grant improves, their delta recomputes, and none of it leaves.</p>
+  <p><b>What comes back to the shared map is a contribution, not telemetry</b>: a proposed correction to a capability row, carrying its evidence, submitted deliberately through the same mechanism as any other proposal to the public data files, with a source, a timestamp and a hash. <b>A person decides to send it. Nothing phones home.</b></p>
+  <p><b>That keeps both promises</b>, and it means the shared map improves at the speed of deliberate contribution rather than at the speed of collection. <b>Slower, and it is the only version that is honest.</b></p>
+  <h2 id="what-this-does-not-try-to-be">What This Does Not Try To Be</h2>
+  <ul><li><b>A schema.</b> The delta record's fields are listed. No file format, no identifier scheme and no storage layout is specified.</li><li><b>A recompute implementation.</b> The trigger is mapped onto existing event types. Nothing is wired.</li><li><b>A competitive analysis.</b> Two products are named from announcements read on one day, to draw one distinction. Neither was used or tested.</li><li><b>A rewrite of the published document.</b> Two passages are quoted and two replacements are given. Everything else in that document stands.</li><li><b>A decision about the consequence hooks.</b> The hazard is named and the shape of the safe version is given. What thresholds, set by whom, is not answered.</li></ul>
+  <h2 id="honest-tensions">Honest Tensions</h2>
+  <div class="tablewrap"><table><thead><tr><th>Tension</th><th>Note</th></tr></thead><tbody><tr><td>Correcting a published document</td><td>It is the estate's method, and it is the third correction issued in two days</td></tr><tr><td>Storing the delta</td><td>It makes the history and the business case possible, and it creates an artefact that can be quoted out of date</td></tr><tr><td>Reality as an input</td><td>It is what makes the grant improve, and it requires observing something we have promised not to observe</td></tr><tr><td>Hooking consequences</td><td>It makes the ABP operational, and a computation error becomes an outage</td></tr><tr><td>The three clocks</td><td>It is honest, and it tells a buyer their ABP is only as fresh as an integration they have not built</td></tr><tr><td>Publishing the calibration loop openly</td><td>It improves the map for everybody including competitors, and the map being shared is what makes it worth calibrating</td></tr><tr><td>Drift is a neighbouring product</td><td>The distinction is real and earlier in the sequence, and a buyer with a drift tool will believe they already have this</td></tr></tbody></table></div>
+  <h2 id="open-questions">Open Questions</h2>
+  <ol><li><b>What is the recompute policy?</b> On every event, on a schedule, on read, or a combination. It decides how much the receiver has to do.</li><li><b>Is the specification final?</b> Its own page says standards track at a final address, and it should be checked before being cited publicly.</li><li><b>Who sets the thresholds that consequences hook to?</b> The customer, the underwriter, or a default we publish. All three have different liability shapes.</li><li><b>How is a calibration contribution submitted without revealing the deployment?</b> A correction to a capability row implies somebody runs that shape.</li><li><b>Does the shortfall matter commercially?</b> Capabilities in the mandate and not in the grant are a real finding and nobody has proposed selling anything against them.</li><li><b>What happens to a stored delta whose computation version is superseded?</b> Recomputed, marked, or left as the record of what was believed at the time. The third is the most honest and the least useful.</li><li><b>Can the series be published without the deployment?</b> The business case sentence is compelling and it describes a customer's estate.</li></ol>
+  <h2 id="relationship-to-previous-briefs">Relationship To Previous Briefs</h2>
+  <p><b>From the foundation document published earlier today</b>, it corrects two passages and leaves the rest standing, including the four objects, the four barriers and the rule that the ABP describes and does not judge.</p>
+  <p><b>From this morning's second brief</b>, it takes the projection pattern and finds that the delta is a projection too, alongside the label and the leaflet.</p>
+  <p><b>From this morning's third brief</b>, it takes the suspensive condition under the statute, and finds that a continuously computed delta is the thing that can trigger one and evidence it.</p>
+  <p><b>From the toolkit brief of 10 September</b>, it takes the rule that the offline builds do not transmit, and resolves the tension that the calibration loop creates against it.</p>
+  <p><b>From the vault architecture brief of 10 September</b>, it takes the customer's data vault as the home for the series, and the pinning rule that a consumer states the versions it computed against.</p>
+  <p><b>From the findability brief of 10 September</b>, it takes the derived rather than asserted principle and records this as the fourth instance of it.</p>
+  <p><b>From the ruling of 20 August</b>, it takes publish the record and never the verdict, and applies it to the one place where automation would otherwise make the estate a decision maker.</p>
+  <h2 id="key-claims">Key Claims</h2>
+  <div class="tablewrap"><table><thead><tr><th>#</th><th>Claim</th></tr></thead><tbody><tr><td>1</td><td>The published wording is wrong in half: the delta is computed, and it is also stored</td></tr><tr><td>2</td><td>The correct formulation is that the delta is derived and never authored, which forbids the act rather than the artefact</td></tr><tr><td>3</td><td>Everything the old ruling protected survives, because a stored delta carries its inputs, their versions and the time it was computed</td></tr><tr><td>4</td><td>It is a materialised view, and the estate already applies the same pattern to indexes, prose and bills of materials</td></tr><tr><td>5</td><td>Reality is a third input, because something happening that is not in the grant means the grant was incomplete</td></tr><tr><td>6</td><td>The calibration loop is the answer to twenty one measured rows of ninety nine, and it improves the shared map for everybody</td></tr><tr><td>7</td><td>A derived delta reacts to a change in either input without anybody touching the document, which no template can do</td></tr><tr><td>8</td><td>The recompute trigger has an existing standard with defined event types, so it is a receiver rather than an invention</td></tr><tr><td>9</td><td>A threshold crossing is a record and the consequence is a policy somebody set in advance, which keeps the ABP consequence agnostic while the automation is real</td></tr><tr><td>10</td><td>A continuously computed delta can trigger and evidence a suspensive condition, which is the statutory mechanism analysed this morning</td></tr><tr><td>11</td><td>The history makes the business case a subtraction that is read rather than constructed, and it is the only way to evidence a control over a period</td></tr><tr><td>12</td><td>Behaviour drift is detected after an action and capability excess exists before any action, and both need a mandate that only one of them elicits</td></tr></tbody></table></div>
+  <h2 id="sources">Sources</h2>
+  <p>All read 11 September 2026.</p>
+  <p><b>Inside the estate.</b> The foundation document published earlier today. The capability map with its nine profiles, twenty three primitives, four barriers and its statement that twenty one of ninety nine rows were measured, at https://what-can-it-do.games.sgit.ai/map/index.html. The graph rules at https://graphs.sgit.ai/. The site building guidance, for the rule that indexes are generated from the data they index, at https://sgit.ai/docs/guidance/index.html. The three briefs of this morning and the toolkit, vault architecture and findability briefs of 10 September.</p>
+  <p><b>The recompute trigger.</b> The continuous access evaluation profile at https://openid.net/specs/openid-caep-1_0-final.html, dated 29 August 2025, whose own page described it as standards track rather than final and whose status should be confirmed before public citation. The working group at https://openid.net/wg/sharedsignals/ and its specification list at https://openid.net/wg/sharedsignals/specifications/.</p>
+  <p><b>The neighbouring measurement.</b> The drift detection and kill switch announcement of 9 September 2026 at https://www.helpnetsecurity.com/2026/09/09/orchid-security-ai-agents-application-level-kill-switches/ and https://www.globenewswire.com/news-release/2026/09/09/3358716/0/en/orchid-security-adds-ai-readiness-controls-identity-drift-detection-and-application-level-kill-switches-for-ai-agents.html, including the figure that fifty seven per cent of enterprise identity is unseen and unmanaged. The continuous identity announcement at https://www.crowdstrike.com/en-us/press-releases/crowdstrike-unveils-continuous-identity-for-ai-agents/. Neither product was used or tested and no adjective is attached to either.</p>
+  <p><b>The statutory mechanism.</b> Section 10 of the Insurance Act 2015 at https://www.legislation.gov.uk/ukpga/2015/4/section/10, analysed in this morning's third brief.</p>
+  <p>This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../../versions/v0.2.0/index.html">v0.2.0</a> · <a href="../../../versions/index.html">all versions</a> · <a href="../../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../../model/index.html">The four objects</a>
+    <a href="../../../model/barriers/index.html">The barrier</a>
+    <a href="../../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../../data/index.html">The published vocabulary</a>
+    <a href="../../../model/schema/index.html">The schema</a>
+    <a href="../../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../../docs/index.html">Docs</a>
+    <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

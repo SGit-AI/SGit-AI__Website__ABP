@@ -29,6 +29,11 @@ import abp  # noqa: E402
 import shell  # noqa: E402
 
 AS_AT = "11 September 2026"
+# The second of the three clocks. An ABP is exactly as fresh as the twin, and
+# this site has no twin connected to anything: the shapes here are published
+# profiles rather than a synchronised environment. That is the honest value and
+# it belongs on the label rather than in a footnote.
+SYNCED = "no twin: these shapes are published profiles, not a synchronised environment"
 MAP = "https://what-can-it-do.games.sgit.ai/map/index.html"
 GRAPHS = "https://graphs.sgit.ai/"
 TWINS = "https://twins.sgit.ai/"
@@ -259,10 +264,16 @@ def example_page(slug, profile_id, mandate_id, name, why, note, D):
                         for k, v in m["notes"].items()]))
 
     blocks += [
-        ("h2", "4. The delta, computed"),
-        ("note", "**This delta was computed when this page was built, from the grant and the "
-                 "mandate, and it is not stored anywhere.** A stored delta is a stale claim "
-                 "about somebody's environment, and the environment is the thing that changes."),
+        ("h2", "4. The delta, derived"),
+        ("note", f"**This delta is derived and never authored.** Nobody wrote it. It is the "
+                 f"output of a computation over the grant and the mandate, stored at "
+                 f"[`/data/deltas/{profile_id.replace('/', '__')}__{mandate_id}.json`]"
+                 f"(data/deltas/{profile_id.replace('/', '__')}__{mandate_id}.json) with the "
+                 f"version of both inputs pinned, the time it was computed and the version of "
+                 f"the computation that produced it. **The release gate recomputes it on every "
+                 f"build and fails on a single row of disagreement**, which is how a machine "
+                 f"holds a rule that forbids the act rather than the artefact. "
+                 f"[Why this changed this morning](model/delta/index.html)."),
         ("p", f"**Excess: {len(dlt['excess'])}.** In the grant and not in the mandate. That is "
               f"the published definition and it is wider than the set the mandate refused "
               f"outright: **{len(dlt['excess_refused'])}** were refused and "
@@ -320,7 +331,14 @@ def example_page(slug, profile_id, mandate_id, name, why, note, D):
 
         ("h2", "7. What this is not"),
         ("note", abp.NOT_AN_ASSESSMENT),
-        ("note", "**Validity.** " + abp.VALIDITY.format(as_at=AS_AT)),
+        ("note", "**Validity.** " + abp.VALIDITY.format(as_at=AS_AT, synced=SYNCED)),
+        ("p", "**Three clocks, and only the first is ours.** An ABP is exactly as fresh as the "
+              "twin, and the twin is exactly as fresh as its connection to somebody else's "
+              "systems. That is a parameter rather than a defect to hide, and the gap between "
+              "the second clock and the third belongs to the risk layer, because how much it "
+              "matters depends on the assets."),
+        ("table", ["Clock", "What it measures", "Who controls it"],
+         [[a, b, c] for a, b, c in abp.CLOCKS]),
 
         ("h2", "Follow one capability through the model"),
         ("p", "The fifth graph rule says a path should read as a sentence in the reader's own "
@@ -381,7 +399,8 @@ def model_pages(D):
                  "what account, with what credentials"],
                 ["**The delta**", "The difference. Excess where it can and you did not ask; "
                                   "shortfall where you asked and it cannot",
-                 "**Computed. Never stored**, because the deployment changes"],
+                 "**Derived.** Recomputed whenever the grant or the mandate changes, stored "
+                 "with the versions of both, and never edited by hand"],
                 ["**The barrier**", "What stands between the agent and each capability",
                  "**Recorded**, per capability, from one of four kinds"],
             ]),
@@ -389,12 +408,13 @@ def model_pages(D):
                   "and you authorised twelve is a finding.** The mandate is the edge that gives "
                   "the grant a shape, and it has to be captured even though it is already "
                   "known."),
-            ("h2", "Why the delta is never stored"),
-            ("note", "A stored delta is a claim about somebody's environment on a day that has "
-                     "passed. The environment is the thing that changes, so the delta is "
-                     "recomputed from the grant and the mandate every time it is needed. Every "
-                     "delta on this site was computed when the page was built. Nothing in "
-                     "[`/data/`](data/index.html) is a delta."),
+            ("h2", "Why the delta is derived and never authored"),
+            ("note", "**Nobody writes a delta.** It is only ever the output of a computation "
+                     "over the grant and the mandate, and it is stored along with the versions "
+                     "of both inputs and the time it was computed. That is what makes it "
+                     "checkable rather than stale. [What follows from "
+                     "that](model/delta/index.html), including why this site said the opposite "
+                     "this morning."),
             ("h2", "The pieces"),
             ("cards", [
                 {"title": "[The capability grammar](model/capabilities/index.html)",
@@ -407,6 +427,10 @@ def model_pages(D):
                 {"title": "[The undo class](model/undo/index.html)",
                  "sub": "Three classes, and the ordering on every rendering this site produces.",
                  "foot": "A property of the action. Not a severity."},
+                {"title": "[The delta](model/delta/index.html)",
+                 "sub": "Derived and never authored. Stored with its inputs pinned, recomputed "
+                        "when either moves, and never edited by hand.",
+                 "foot": "Corrected on 11 September, in the open."},
                 {"title": "[The graph](model/graph/index.html)",
                  "sub": "Five rules that govern the model rather than the styling.",
                  "foot": "Rule five is the acceptance test and it is cheap to apply."},
@@ -557,6 +581,277 @@ def model_pages(D):
                   "can change it. Saying so is the difference between a document that holds no "
                   "contextual judgements and one that has smuggled one in."),
             ("p", "[The undo classes as JSON](data/undo-classes.json)"),
+        ]}
+
+    # --- the delta ---------------------------------------------------------
+    didx = _deltas_index()
+    pages["model/delta/index.html"] = {
+        "title": "The delta",
+        "description": "Derived and never authored: stored with the versions of its inputs, "
+                       "recomputed when either moves, and never edited by hand. Reality is the "
+                       "third input, the history is the business case, and there are three "
+                       "clocks.",
+        "blocks": [
+            ("crumb", "[Home](index.html) / [The model](model/index.html) / The delta"),
+            ("h1", "The delta"),
+            ("lead", "**The delta is derived and never authored.** Nobody writes a delta. It is "
+                     "only ever the output of a computation over the grant and the mandate, and "
+                     "it is stored along with the versions of both inputs and the time it was "
+                     "computed."),
+
+            ("h2", "This page corrects something this site said this morning"),
+            ("note", "**The foundation document says, twice, that the delta is computed and "
+                     "never stored.** The first half is right and the second half is wrong, and "
+                     "the correction was issued on the same day by the project lead. It is "
+                     "published here rather than applied quietly, because the method is to "
+                     "record the gap: [the dev brief that makes the "
+                     "correction](docs/briefs/" + _DELTA_BRIEF + "/index.html), and [the "
+                     "foundation document as published](what-is-an-abp/index.html), which "
+                     "otherwise stands in full."),
+            ("table", ["Was", "Is"], [
+                ["The delta. Computed. Never stored, because the deployment changes.",
+                 "**The delta. Derived.** Recomputed whenever the grant or the mandate changes, "
+                 "stored with the versions of both, and never edited by hand."],
+                ["The delta is computed and never stored. A stored delta is a claim about "
+                 "somebody's environment on a day that has passed.",
+                 "**The delta is derived and never authored.** Nobody writes a delta. It is only "
+                 "ever the output of a computation over the grant and the mandate, and it is "
+                 "stored along with the versions of both inputs and the time it was computed. "
+                 "**What must never happen is that somebody edits a delta**, because a hand "
+                 "edited delta is a fiction about an environment, and nothing downstream could "
+                 "tell."],
+            ]),
+
+            ("h2", "What the old rule was protecting, and what survives"),
+            ("p", "The sentence being corrected was guarding against three real things, and all "
+                  "three survive."),
+            ("table", ["The fear", "Does the correction still handle it"], [
+                ["A delta becomes a stale claim about somebody's environment",
+                 "**Yes.** A stored delta carries the versions of its inputs and the time it "
+                 "was computed, so its staleness is a fact rather than a surprise"],
+                ["A delta gets hand edited into a fiction",
+                 "**Yes, and more strongly.** Never authored is a harder rule than never "
+                 "stored, because it forbids the act rather than the artefact"],
+                ["A delta is treated as authoritative after the inputs move",
+                 "**Yes.** It reacts. A recompute is cheap because the inputs are graphs"],
+            ]),
+            ("p", "**So the correction loses nothing and gains the history.** It is also the "
+                  "fourth instance of a pattern already in force across this network, which is "
+                  "why the corrected sentence is the one that fits and the old one was the odd "
+                  "one out: indexes are generated from the data they index, prose is derived "
+                  "from the graph and never hand edited, a bill of materials is generated from "
+                  "the dependency files, and the delta is derived from the grant and the "
+                  "mandate. **In every case the artefact is stored. What is forbidden is "
+                  "writing it.**"),
+
+            ("h2", "The word for this already exists"),
+            ("p", "**A stored result of a computation over other data, refreshed when its "
+                  "inputs change, never edited directly, is a materialised view.** The "
+                  "vocabulary is decades old and it carries exactly the right properties: it "
+                  "exists for use, it has a refresh policy, its staleness is knowable, and "
+                  "writing to it directly is a category error rather than a permission "
+                  "question."),
+            ("p", "The grant and the mandate are the append only side: a history of what "
+                  "changed and when. The delta is the read model computed from them. **The "
+                  "delta is a projection of the ABP graph, and so is the label, and so is the "
+                  "leaflet.**"),
+            ("h3", "The stored record"),
+            ("table", ["Field", "Why"], [
+                ["`grant_version`", "The input, pinned"],
+                ["`mandate_version`", "The input, pinned"],
+                ["`pack_version`", "The published vocabulary it was computed against"],
+                ["`computed_at`", "When"],
+                ["`computed_by`", "Which version of the computation, because the computation is "
+                                  "code and code changes"],
+                ["`excess`", "Capabilities in the grant and not in the mandate"],
+                ["`unbounded_excess`", "Excess whose barrier is one of the first three kinds"],
+                ["`shortfall`", "Capabilities in the mandate and not in the grant"],
+            ]),
+            ("note", "**No field in that record is writable by a person. The way to change a "
+                     "delta is to change a grant or a mandate.** So the release gate does not "
+                     "take the stored records on trust: it **recomputes every one of them** "
+                     "from the profile and the mandate it names and fails on a single row of "
+                     "disagreement. That check is a few lines, because the computation is a set "
+                     "difference, and it is a set difference because the grant and the mandate "
+                     "are held as graphs with a schema rather than as prose. **That is the "
+                     "underlying capability.** All of this can be done by hand today and almost "
+                     "nobody does it."),
+            ("p", f"**{didx['count']} stored deltas**, one per deployment shape and mandate "
+                  f"pair: [`/data/deltas/index.json`](data/deltas/index.json)."),
+
+            ("h2", "Reality is the third input"),
+            ("p", "The grant is a model of what the agent can do. The mandate is a statement of "
+                  "what somebody meant. **Both are interpretations, and both improve.** The "
+                  "customer says what they actually meant, and the mandate sharpens. Somebody "
+                  "discovers a capability nobody had listed, and the grant grows."),
+            ("table", ["What is observed", "What it tells you"], [
+                ["Something happened that is not in the grant",
+                 "**The grant was incomplete.** Add the capability"],
+                ["Something was blocked that the grant said was possible",
+                 "**A barrier was missed**, or recorded at the wrong kind. Correct it"],
+                ["Something in the mandate never happens",
+                 "Either the mandate is aspirational, or the capability is missing and the "
+                 "shortfall is real"],
+                ["Something happens repeatedly that is in the grant and not in the mandate",
+                 "**The mandate is wrong, or the deployment is.** This is the only row where "
+                 "the observation does not say which"],
+            ]),
+            ("note", "**That last row is the one place a derived delta cannot resolve itself.** "
+                     "An agent doing something outside its mandate, repeatedly, without anybody "
+                     "complaining, means either that the mandate was written too narrowly or "
+                     "that something is happening nobody authorised. **This site publishes the "
+                     "observation. Which of the two it is belongs to the risk layer and to a "
+                     "person.** Record, not verdict, again."),
+            ("p", f"**And the calibration loop is the answer to this site's honest weakness.** "
+                  f"{_prov()['rows']['measured']} of {_prov()['rows']['total']} capability rows "
+                  f"are measured and the rest derived from documentation. Every deployment that "
+                  f"runs and reports back moves a row from derived to measured, and because "
+                  f"[the capability map]({MAP}) is shared and public, **it moves for "
+                  f"everybody**. That is the reason the map belongs in an open repository "
+                  f"rather than inside a product."),
+            ("h3", "And the collection problem it creates"),
+            ("note", "**A calibration loop needs observation, and the downloadable builds in "
+                     "this estate are ruled never to transmit anything.** The resolution is "
+                     "that calibration happens inside the customer's own instance: their "
+                     "deployment observes, their grant improves, their delta recomputes, and "
+                     "none of it leaves. **What comes back to the shared map is a contribution, "
+                     "not telemetry**: a proposed correction to a capability row, carrying its "
+                     "evidence, submitted deliberately through the same mechanism as any other "
+                     "proposal, with a source, a timestamp and a hash. A person decides to send "
+                     "it. Nothing phones home. **That is slower, and it is the only version "
+                     "that is honest.**"),
+
+            ("h2", "It reacts, and the trigger has a standard"),
+            ("p", "Because the delta is derived, a change in either input propagates without "
+                  "anybody touching the document. **A template cannot do that and a rendered "
+                  "document cannot do that.** Three cases:"),
+            ("table", ["What happens", "What the ABP does"], [
+                ["**A weakness is disclosed in a tool the agent can call.**",
+                 "Nothing about the deployment changed, but a capability recorded at the fourth "
+                 "barrier is now at the first. The grant is the same and **the unbounded excess "
+                 "jumps**. The ABP changed because the world did"],
+                ["**A credential is quietly widened.**",
+                 "Somebody adds a scope to a token to fix an unrelated problem. The grant grows, "
+                 "the mandate does not, and the excess grows by exactly the capabilities that "
+                 "scope carries. **Nobody involved thought they were changing a policy**"],
+                ["**A control ships.**",
+                 "A gateway is deployed with default deny. A set of capabilities move from the "
+                 "second barrier to the fourth. **Unbounded excess falls, and the number it "
+                 "falls by is what the project bought**"],
+            ]),
+            ("p", "**The trigger for a recompute already has a standard, so it is a receiver "
+                  "rather than an invention.** The continuous access evaluation profile, "
+                  "published on the standards track by the shared signals working group, "
+                  "defines event types an identity provider transmits and a receiver consumes "
+                  "so that access can be attenuated as things change."),
+            ("table", ["Event type", "What it means for the ABP"], [
+                ["**Credential Change**", "**The grant may have moved.** Recompute"],
+                ["**Token Claims Change**", "**The grant may have moved.** Recompute"],
+                ["**Assurance Level Change**", "A barrier may have moved"],
+                ["**Device Compliance Change**", "A barrier may have moved"],
+                ["**Risk Level Change**",
+                 "**Not ours.** That is the risk layer's input, not the ABP's"],
+                ["**Session Revoked, Established, Presented**",
+                 "Session lifecycle, below the ABP's altitude"],
+            ]),
+            ("note", "**Nothing here is wired, and one caveat travels with the citation.** The "
+                     "status of that specification could not be confirmed from its own page, "
+                     "which said standards track rather than final while sitting at a final "
+                     "address. It is named here because it is the right shape, and it should be "
+                     "checked before anybody cites it as settled."),
+
+            ("h2", "What hooks to it, and the hazard"),
+            ("p", "Behaviours can be hooked to a derived delta: actions, the granting of a "
+                  "licence to operate and the removal of one. **That is where an ABP stops "
+                  "being a document.** It is also hazardous in a specific way: a computation "
+                  "error would revoke a licence."),
+            ("note", "**The delta crossing a threshold is a record. The consequence is a "
+                     "verdict.** So this site publishes the crossing, with its inputs and its "
+                     "computation version, and **the consequence is a policy the customer or "
+                     "the underwriter set in advance**, never a judgement the ABP makes. That "
+                     "keeps the ABP consequence agnostic while the automation is real, and it "
+                     "means any automatic suspension is traceable to a threshold somebody chose "
+                     "and a computation anybody can rerun."),
+
+            ("h2", "The history is the business case, read rather than constructed"),
+            ("p", "Store the series and the business case stops being a document somebody "
+                  "writes. A control project has a date; the series has grants, mandates and "
+                  "deltas with dates; so the value of the project is a subtraction:"),
+            ("note", "On 14 March the gateway was deployed. **Unbounded excess fell from thirty "
+                     "one to six. Excess was unchanged**, because the agent can still do the "
+                     "same things; what changed is that twenty five of them are now bounded by "
+                     "something it cannot reach."),
+            ("p", "**That sentence contains no verdict, no score and no adjective**, and both "
+                  "ends of it are stored records with their inputs pinned, so it is checkable."),
+            ("table", ["Use of the series", "How soon it pays"], [
+                ["**Justifying what was already bought**",
+                 "The easiest, and the one every security team needs and cannot produce today"],
+                ["**Pricing what to buy next**",
+                 "The capabilities in unbounded excess, ordered by how many would move to the "
+                 "fourth barrier per control, is a list with an effect size on each row"],
+                ["**Evidencing a condition over time**",
+                 "Asking whether a control was in place throughout a period is a question about "
+                 "a series, not a snapshot. **A stored history answers it and a recomputed "
+                 "present cannot.** This is the one the old wording made impossible"],
+            ]),
+
+            ("h2", "Three clocks, and the gap that is not ours"),
+            ("table", ["Clock", "What it measures", "Who controls it"],
+             [[a, b, c] for a, b, c in abp.CLOCKS]),
+            ("p", "**So an ABP is exactly as fresh as the twin, and the twin is exactly as "
+                  "fresh as its connection.** That is a parameter rather than a defect to hide, "
+                  "and it belongs on the label as part of the validity statement: as at this "
+                  "date, from a twin last synchronised at this date."),
+            ("p", f"**And the gap between the second clock and the third is a risk that [the "
+                  f"risk layer]({RISKS}) accounts for**, which is the correct home for it, "
+                  f"because how much that gap matters depends on the assets, and the ABP does "
+                  f"not know the assets. [The twin]({TWINS}) is the interface to the real "
+                  f"environment."),
+
+            ("h2", "Drift is a neighbouring measurement, and the difference is the mandate"),
+            ("p", "The market has a word for a related phenomenon and it is drift. Products "
+                  "announced in September 2026 compare an agent's runtime behaviour against its "
+                  "authorised scope. **That is validation, and it sharpens the distinction "
+                  "rather than blurring it.**"),
+            ("table", ["", "What it compares", "When you learn"], [
+                ["**Behaviour drift**",
+                 "What the agent **did** against what it was allowed to do",
+                 "**After the action**"],
+                ["**Capability excess**",
+                 "What the agent **can do** against what it was authorised to do",
+                 "**Before any action**"],
+            ]),
+            ("p", "**You can only detect drift once an agent has drifted.** An ABP states that "
+                  "the drift is possible before it happens, which is a different thing and an "
+                  "earlier one in the sequence. **Both want a mandate, and the mandate is the "
+                  "scarce input**, which is the strongest reason to make eliciting it cheap and "
+                  "to publish the method."),
+            ("note", "**No adjective is attached to any named product on this site, and none is "
+                     "here.** Neither product was used or tested. One number from one of those "
+                     "announcements is worth keeping because it is somebody else's figure "
+                     "supporting this site's thesis: fifty seven per cent of enterprise "
+                     "identity is described as unseen and unmanaged. *You do not know what it "
+                     "can do*, said by somebody selling a different answer to it."),
+
+            ("h2", "What is not settled"),
+            ("ul", [
+                "**What the recompute policy is**: on every event, on a schedule, on read, or a "
+                "combination. It decides how much the receiver has to do.",
+                "**Who sets the thresholds a consequence hooks to**: the customer, the "
+                "underwriter, or a default published here. All three have different shapes.",
+                "**How a calibration contribution is submitted without revealing the "
+                "deployment**, since a correction to a capability row implies somebody runs "
+                "that shape.",
+                "**Whether the shortfall matters commercially.** Capabilities in the mandate and "
+                "not in the grant are a real finding and nobody has proposed anything against "
+                "them.",
+                "**What happens to a stored delta whose computation version is superseded**: "
+                "recomputed, marked, or left as the record of what was believed at the time. "
+                "The third is the most honest and the least useful.",
+            ]),
+            ("p", f"[The full brief](docs/briefs/{_DELTA_BRIEF}/index.html) \u00b7 "
+                  f"[The stored deltas](data/deltas/index.json) \u00b7 "
+                  f"[The four objects](model/index.html)"),
         ]}
 
     # --- graph -------------------------------------------------------------
@@ -755,6 +1050,19 @@ def _capability_page(c, D):
     }
 
 
+_DELTA_BRIEF = ("v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-"
+                "the-point-and-the-history-is-the-business-case")
+
+
+def _deltas_index():
+    import json
+    return json.loads((Path(__file__).resolve().parents[2] / "data/deltas/index.json").read_text())
+
+
+def _prov():
+    return load()["provenance"]
+
+
 def _manifest(D):
     import json
     return json.loads((Path(__file__).resolve().parents[2] / "data/index.json").read_text())
@@ -921,11 +1229,21 @@ def data_page(D):
             ("h2", "The files"),
             ("table", ["Address", "What is in it"],
              [[f"[`/data/{v}`](data/{v})", k.replace("_", " ")]
-              for k, v in man["files"].items()]),
+              for k, v in man["files"].items() if not v.endswith("/")]),
+            ("h2", "The deltas, which are here on purpose"),
+            ("p", f"**{_deltas_index()['count']} stored deltas**, one per deployment shape and "
+                  f"mandate pair, at [`/data/deltas/index.json`](data/deltas/index.json). "
+                  f"{shell.ascii_safe(man['the_delta'])} "
+                  f"[What that means and why it changed](model/delta/index.html)."),
+            ("note", "**The release gate recomputes every stored delta on every build** from "
+                     "the profile and the mandate it names, and fails on a single row of "
+                     "disagreement. That is how a machine holds `never authored': the rule "
+                     "forbids the act rather than the artefact, and a hand edited delta is a "
+                     "fiction nothing downstream could detect."),
             ("h2", "What is deliberately not in these files"),
             ("table", ["Not here", "Why"], [
-                ["**A delta**", shell.ascii_safe(man["not_here"]["delta"])],
                 ["**A score**", shell.ascii_safe(man["not_here"]["score"])],
+                ["**A consequence**", shell.ascii_safe(man["not_here"]["consequence"])],
             ]),
             ("h2", "Proposing a change"),
             ("p", "**The data files are the shared facts and they live in this repository so "

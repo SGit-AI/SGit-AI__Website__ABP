@@ -2,7 +2,7 @@
 
 > Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
 
-*Source: <https://abp.sgit.ai/docs/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -25,6 +25,9 @@ The foundation document first, then the three briefs behind it. Published as wri
 
 **[The Behaviour Policy Is A Graph And Every Document Is A Projection: The W3C Has The Vocabulary, And A Prohibition Has Two Lives](../docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever models the graph, whoever builds the renderer, and whoever compiles the prohibitions into something that enforces them
 [the source bytes](../docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives.md)
+
+**[The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case](../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published
+[the source bytes](../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case.md)
 
 **[The Behaviour Policy Is The Document The Only Agent Insurer Already Requires: Sell The Correction, And Not The Draft](../docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever names the product, prices it, and stands at the table with it next week
 [the source bytes](../docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft.md)

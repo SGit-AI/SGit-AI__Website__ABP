@@ -1,7 +1,14 @@
 {
-  "current": "v0.1.0",
+  "current": "v0.2.0",
   "_what_this_is": "The version surface. The badge in the site chrome reads `current` from this file, so the badge cannot drift from the tag: the tag is derived from admin/build/version.txt and this file is generated from the same string.",
   "versions": [
+    {
+      "version": "v0.2.0",
+      "date": "2026-09-11",
+      "title": "the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it",
+      "file": "v0.2.0.json",
+      "page": "v0.2.0/index.html"
+    },
     {
       "version": "v0.1.0",
       "date": "2026-09-11",

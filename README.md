@@ -14,8 +14,14 @@ A written description, for one agent in one deployment, of four things:
 |---|---|---|
 | The mandate | What the agent is authorised and expected to do | Elicited |
 | The grant | Everything the agent can do | Measured |
-| The delta | The difference | Computed, never stored |
+| The delta | The difference | **Derived and never authored**: recomputed when either input moves, stored with both versions pinned |
 | The barrier | What stands between the agent and each capability | Recorded, from one of four kinds |
+
+**The delta rule was corrected on 11 September 2026**, the day the foundation document was
+published, from *computed and never stored* to *derived and never authored*. Never authored is
+the harder rule, because it forbids the act rather than the artefact. The correction is
+published rather than applied quietly: see `/model/delta/` and the dev brief in
+`docs/briefs/`.
 
 **It describes and it does not judge, so it carries no score**, anywhere, including in the
 data. The same ABP is dangerous in one deployment and harmless in another and nothing about the
@@ -26,9 +32,9 @@ document changed. A policy cannot be dangerous; a deployment can.
 ```
 index.html            the argument, in one screen
 what-is-an-abp/       the foundation document, rendered, with its terms linked to their nodes
-model/                the four objects, the 23 capabilities, the barriers, undo, the graph, the schema
+model/                the four objects, the 23 capabilities, the barriers, undo, the delta, the graph, the schema
 examples/             five ABPs, derived from the data rather than authored
-data/                 the published vocabulary as JSON, with the source bytes under upstream/
+data/                 the published vocabulary as JSON, the stored deltas, and the source bytes under upstream/
 docs/                 every reference document, rendered, one click from its bytes
 versions/             index.json, a file and a page per version
 llms.txt              generated, and every page is in it
@@ -51,7 +57,7 @@ CI fails a push whose committed tree does not match what the generator produces.
 |---|---|
 | `admin/build/version.txt` | The version. CI derives the tag from it. |
 | `admin/build/promote_data.py` | Promotes the upstream pack into the published vocabulary. |
-| `admin/build/abp.py` | The model: the label, and the delta that is never stored. |
+| `admin/build/abp.py` | The model: the label, and the delta that is derived and never authored. |
 | `admin/build/abp_pages.py` | Every page computed from the data. |
 | `admin/build/docs_pages.py` | The docs section. |
 | `admin/build/build_pages.py` | The authored pages, the nav, the footer, the version log. |
@@ -62,7 +68,7 @@ CI fails a push whose committed tree does not match what the generator produces.
 
 `data/` is the published vocabulary: 23 capability primitives in `verb.object.reach` form, four
 barriers, three undo classes, seven evidence tiers, nine deployment shapes and eight starting
-mandates, at stable addresses with cross origin access.
+mandates, plus the stored deltas, at stable addresses with cross origin access.
 
 **It was not authored here.** It is promoted from the capability map published at
 [what-can-it-do.games.sgit.ai](https://what-can-it-do.games.sgit.ai/map/index.html), pack
@@ -86,6 +92,10 @@ computed against. A clone that floats against the latest has no reproducible out
 
 - **No score.** No rating, no traffic light, no risk level, no severity, on any page or in any
   data file. The gate checks it.
+- **The delta is derived and never authored.** Nobody writes one. The gate recomputes every
+  stored delta from its own pinned inputs and fails on a single row of disagreement.
+- **A threshold crossing is a record; the consequence is a policy somebody set in advance.**
+  Nothing here decides what follows from a number.
 - **Every prohibition carries its barrier.** One shown without it manufactures assurance.
 - **Every page with capability rows carries its provenance**: measured against derived, and when.
 - **No adjective about a named third party product.** This site publishes capability claims

@@ -21,9 +21,17 @@ follows are the ones the pack imposes on anybody who consumes it.
   · THE UPSTREAM BYTES STAY. `data/upstream/` is served as published. Anything rendered stays
     one click from its source bytes, and a consumer can recompute the hash for itself.
 
-The delta is not here, and that is deliberate. A delta is computed from a grant and a mandate
-every time it is needed and never stored, because a stored delta is a stale claim about
-somebody's environment.
+THE DELTA IS HERE, and as of 11 September 2026 that is a correction rather than an oversight.
+The first published wording said a delta was computed and never stored. The corrected rule is
+that THE DELTA IS DERIVED AND NEVER AUTHORED: it is stored, with the version of each input and
+the time and code version that produced it, because the history of grants, mandates and deltas
+is what turns a business case into a subtraction read rather than constructed, and because an
+underwriter or an auditor asking whether a control held throughout a period is asking about a
+series, which a recomputed present cannot answer.
+
+So `deltas/` is written by `write_deltas()` below, from `abp.delta()`, on every build. No field
+in any of those records is writable by a person, and the release gate recomputes every one of
+them and fails on a single row of disagreement.
 """
 import hashlib
 import json
@@ -344,7 +352,7 @@ def tier_counts(profiles):
     return out
 
 
-def manifest(built, version):
+def manifest(built, version, n_deltas):
     """The one address a consumer starts from. A consumer pins a version: anything that computes
     from these files states which version it computed against, because a clone that floats
     against the latest has no reproducible output."""
@@ -368,6 +376,7 @@ def manifest(built, version):
             "evidence_tiers": "evidence-tiers.json",
             "profiles": "profiles/index.json",
             "mandates": "mandates/index.json",
+            "deltas": "deltas/index.json",
             "provenance": "provenance.json",
             "upstream": "upstream/pack.json",
         },
@@ -377,11 +386,17 @@ def manifest(built, version):
             "undo_classes": len(built["undo"]["classes"]),
             "profiles": len(built["profiles"]),
             "mandates": len(built["mandates"]),
+            "deltas": n_deltas,
             "rows": built["provenance"]["rows"],
         },
+        "the_delta": "Derived and never authored. Stored under deltas/, each record pinning the "
+                     "version of both inputs and the time and code version that produced it. No "
+                     "field in one is writable by a person: change a grant or a mandate and "
+                     "recompute. Corrected from `computed and never stored` on 11 September "
+                     "2026; the brief is in /docs/briefs/.",
         "not_here": {
-            "delta": "A delta is computed from a grant and a mandate every time it is needed and "
-                     "never stored. A stored delta is a stale claim about somebody's environment.",
+            "consequence": "A delta crossing a threshold is a record. What follows from it is a "
+                           "policy somebody set in advance, and it is not in this pack.",
             "score": "There is no score, rating, traffic light, risk level or severity in this "
                      "pack or anywhere on this site. A score is a verdict and the ABP describes "
                      "without judging.",
@@ -390,13 +405,79 @@ def manifest(built, version):
     }
 
 
+def write_deltas(built, computed_at):
+    """The stored deltas: one record per (shape, mandate) pair the starting mandates name.
+
+    A MATERIALISED VIEW, in the decades-old sense. It exists for use, it is refreshed from its
+    inputs, its staleness is knowable because it pins their versions, and writing to it
+    directly is a category error rather than a permission question.
+
+    Imported here rather than at module scope because `abp` reads the files this module
+    writes, so it cannot be loaded until they exist."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import abp  # noqa: E402
+
+    D = abp.load()
+    rows, index = [], []
+    for m in built["mandates"]:
+        for pid in m["applies_to"]:
+            if pid not in D["profiles"]:
+                continue
+            rec = abp.delta(D["profiles"][pid], D["mandates"][m["id"]], D, computed_at)
+            # The stored record carries the capability ids, not the whole grant row: the row
+            # lives in the profile and duplicating it here would create a second place for it
+            # to be wrong.
+            for k in ("excess", "excess_refused", "excess_unstated", "unbounded_excess",
+                      "aligned"):
+                rec[k] = [r["capability"] for r in rec[k]]
+            rec["counts"] = {k: len(rec[k]) for k in
+                             ("excess", "unbounded_excess", "shortfall", "aligned")}
+            slug = f"{pid.replace('/', '__')}__{m['id']}"
+            rec["id"] = slug
+            rec["provenance"] = _provenance(built["pack"], built["content_hash"],
+                                            "Derived from the grant and the mandate named "
+                                            "above. Never authored: no field here is writable "
+                                            "by a person, and the release gate recomputes it.")
+            (OUT / "deltas").mkdir(parents=True, exist_ok=True)
+            (OUT / f"deltas/{slug}.json").write_text(
+                json.dumps(rec, indent=2, ensure_ascii=False) + "\n")
+            index.append({"id": slug, "profile": pid, "mandate": m["id"],
+                          "grant_version": rec["grant_version"],
+                          "mandate_version": rec["mandate_version"],
+                          "computed_at": rec["computed_at"],
+                          "computed_by": rec["computed_by"],
+                          "counts": rec["counts"], "file": f"deltas/{slug}.json"})
+            rows.append(rec)
+    (OUT / "deltas/index.json").write_text(json.dumps({
+        "type": "abp/deltas-index/v1",
+        "_what_this_is": "Stored deltas, one per deployment shape and mandate pair. DERIVED AND "
+                         "NEVER AUTHORED: each record pins the version of both inputs and the "
+                         "time and code version that produced it, so it can be recomputed and "
+                         "compared rather than taken on trust. A delta that carries no inputs "
+                         "is the stale claim the earlier `never stored` wording was afraid of.",
+        "correction": "The foundation document of 11 September 2026 says the delta is computed "
+                      "and never stored. That was corrected the same day: the delta is derived "
+                      "and never authored. The correction and what follows from it are in the "
+                      "dev brief of 11 September in /docs/briefs/.",
+        "never_authored": "No field in any of these records is writable by a person. The way to "
+                          "change a delta is to change a grant or a mandate, and recompute.",
+        "count": len(index), "deltas": index,
+        "provenance": _provenance(built["pack"], built["content_hash"],
+                                  "Generated from the profiles and the mandates."),
+    }, indent=2, ensure_ascii=False) + "\n")
+    return index
+
+
 def main():
     version = (ROOT / "admin/build/version.txt").read_text().strip()
     built = build()
+    deltas = write_deltas(built, RETRIEVED)
     (OUT / "index.json").write_text(
-        json.dumps(manifest(built, version), indent=2, ensure_ascii=False) + "\n")
+        json.dumps(manifest(built, version, len(deltas)), indent=2, ensure_ascii=False) + "\n")
     print(f"promote_data: {built['capabilities']['count']} capabilities, "
           f"{len(built['profiles'])} profiles, {len(built['mandates'])} mandates, "
+          f"{len(deltas)} stored deltas, "
           f"{built['provenance']['rows']['measured']} of {built['provenance']['rows']['total']} "
           f"rows measured, {built['content_hash'][:19]}")
 

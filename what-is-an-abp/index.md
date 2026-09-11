@@ -2,7 +2,7 @@
 
 > The foundation document: the definition of the Agent Behaviour Policy, the four objects, the barrier as the test of whether anything is in the way, the rule that it never judges, and the questions we are asking.
 
-*Source: <https://abp.sgit.ai/what-is-an-abp/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/what-is-an-abp/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -11,6 +11,8 @@ below point at them.*
 [Home](../index.md) / What is an ABP
 
 # Agent Behaviour Policy (ABP): You Know What You Asked For, And You Do Not Know What It Can Do
+
+> **Two passages in this document were corrected on the day it was published, and this page does not rewrite them.** Both stand exactly as written, each with its correction rendered immediately above it, because a document corrected by silently editing it is a document nobody can trust. The correction is that **the delta is derived and never authored**, not computed and never stored. [The brief that makes it](../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.md) and [what follows from it](../model/delta/index.md). Everything else in this document stands.
 
 > **This is the foundation document itself, rendered, not a summary of it.** It is the definition the rest of this site stands on, and it is the document being put in front of the community for feedback, so its wording is the wording. Where it and anything else on this site disagree, it wins, and the disagreements are recorded in [v0.1.0's notes](../versions/v0.1.0/index.md) rather than resolved quietly. The first mention of each term below links to its node in [the model](../model/index.md).
 
@@ -40,6 +42,8 @@ We have been measuring this. A published capability map covers nine common [depl
 
 An ABP is not a single list. It is four objects, and the order they are produced in matters.
 
+> **Corrected the same day.** The replacement wording is: **The delta. Derived.** Recomputed whenever the grant or the mandate changes, stored with the versions of both, and never edited by hand. [What changed and what follows from it](../model/delta/index.md).
+
 | Object | What it is | How it is obtained |
 |---|---|---|
 | **The mandate** | What the agent is authorised and expected to do | **Elicited.** In minutes, because the deployer already knows it |
@@ -48,6 +52,8 @@ An ABP is not a single list. It is four objects, and the order they are produced
 | **The barrier** | What stands between the agent and each capability | **Recorded**, per capability, from one of four kinds |
 
 **The mandate must be captured even though it is already known**, because a grant on its own is an inventory, and nobody acts on an inventory. *Your agent can do three hundred and forty things* is a shrug. *Your agent can do three hundred and forty things and you authorised twelve* is a finding. The mandate is the edge that gives the grant a shape.
+
+> **Corrected the same day.** The replacement wording is: **The delta is derived and never authored.** Nobody writes a delta. It is only ever the output of a computation over the grant and the mandate, and it is stored along with the versions of both inputs and the time it was computed. That is what makes it checkable rather than stale. **What must never happen is that somebody edits a delta**, because a hand edited delta is a fiction about an environment, and nothing downstream could tell. [What changed and what follows from it](../model/delta/index.md).
 
 **The delta is computed and never stored.** A stored delta is a claim about somebody's environment on a day that has passed. The environment is the thing that changes, so the delta is recomputed from the grant and the mandate every time it is needed.
 
@@ -188,6 +194,8 @@ This is the part we want back.
 This document consolidates three briefs of 11 September 2026: one on the product and how it is sold, one on the ABP as a graph with its renderings and its enforcement targets, and one on what sits above it. It inherits the rulings of 10 September on the words that may not be used, and the rule of 20 August that the record is published and the verdict is not. The capability grammar, the nine profiles and the four barriers come from the published capability map and the published simulation, and this document adds nothing to them except a name for the whole.
 
 ## Key Claims
+
+> **Corrected the same day.** Claim 3 reads, in the corrected wording: the mandate is elicited, the grant is measured, **the delta is derived and never authored**, and the barrier is recorded per capability. [What changed and what follows from it](../model/delta/index.md).
 
 | # | Claim |
 |---|---|

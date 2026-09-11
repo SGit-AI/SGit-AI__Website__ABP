@@ -2,7 +2,7 @@
 
 > An Agent Behaviour Policy for chatGPT (in the browser, no connectors): a grant of 1, a mandate of 1, an excess of 0 and an unbounded excess of 0. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -74,9 +74,9 @@ Everything the agent can do: **1 of 23** primitives. Ordered irreversible first,
 
 A mandate is elicited rather than measured, in minutes, because the deployer already knows it. This one was not: it is a first draft written to be argued with, authored 2026-09-09 by the site, as a starting point - not measured, not surveyed; the first thing to argue with. It authorises **1** primitives, refuses **14** and says nothing either way about **8**. [Propose a change to it](../../data/index.md).
 
-## 4. The delta, computed
+## 4. The delta, derived
 
-> **This delta was computed when this page was built, from the grant and the mandate, and it is not stored anywhere.** A stored delta is a stale claim about somebody's environment, and the environment is the thing that changes.
+> **This delta is derived and never authored.** Nobody wrote it. It is the output of a computation over the grant and the mandate, stored at [`/data/deltas/openai__chatgpt-web__default__chat-no-connectors.json`](../../data/deltas/openai__chatgpt-web__default__chat-no-connectors.json) with the version of both inputs pinned, the time it was computed and the version of the computation that produced it. **The release gate recomputes it on every build and fails on a single row of disagreement**, which is how a machine holds a rule that forbids the act rather than the artefact. [Why this changed this morning](../../model/delta/index.md).
 
 **Excess: 0.** In the grant and not in the mandate. That is the published definition and it is wider than the set the mandate refused outright: **0** were refused and **0** were never mentioned. A capability the mandate never mentioned was not authorised, and hiding the split would be the other kind of dishonesty.
 
@@ -110,7 +110,15 @@ The enforceable projection of the delta: one sentence per excess capability, eac
 
 > **This is not an assessment.** Nothing here is an audit, a certification, a compliance assessment or a security review of any named product. It is an illustration of a method, using a published configuration, and every row carries its source, its date and whether it was measured or derived. No adjective is attached to any of it, and there is no score.
 
-> **Validity.** This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+> **Validity.** This describes the deployment shape as at 11 September 2026, from a twin last synchronised at no twin: these shapes are published profiles, not a synchronised environment. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+
+**Three clocks, and only the first is ours.** An ABP is exactly as fresh as the twin, and the twin is exactly as fresh as its connection to somebody else's systems. That is a parameter rather than a defect to hide, and the gap between the second clock and the third belongs to the risk layer, because how much it matters depends on the assets.
+
+| Clock | What it measures | Who controls it |
+|---|---|---|
+| The ABP's clock | When the grant was last measured or calibrated | Us, and it can run on events |
+| The twin's clock | When the twin last synchronised with the real environment | The customer's integration |
+| Reality's clock | Never stops | Nobody |
 
 ## Follow one capability through the model
 

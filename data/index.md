@@ -2,7 +2,7 @@
 
 > The capabilities, barriers, undo classes, deployment shapes and mandates an ABP is written in, as JSON at stable addresses with cross origin access, with the source bytes they were promoted from.
 
-*Source: <https://abp.sgit.ai/data/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/data/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4 barriers**, **3 undo classes**, **9 deployment shapes** and **8 starting mandates**, at stable addresses with cross origin access.
 
-> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.1.0`.
+> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.2.0`.
 
 ## Where it came from, and what that obliges
 
@@ -49,15 +49,22 @@ The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4
 | [`/data/evidence-tiers.json`](../data/evidence-tiers.json) | evidence tiers |
 | [`/data/profiles/index.json`](../data/profiles/index.json) | profiles |
 | [`/data/mandates/index.json`](../data/mandates/index.json) | mandates |
+| [`/data/deltas/index.json`](../data/deltas/index.json) | deltas |
 | [`/data/provenance.json`](../data/provenance.json) | provenance |
 | [`/data/upstream/pack.json`](../data/upstream/pack.json) | upstream |
+
+## The deltas, which are here on purpose
+
+**9 stored deltas**, one per deployment shape and mandate pair, at [`/data/deltas/index.json`](../data/deltas/index.json). Derived and never authored. Stored under deltas/, each record pinning the version of both inputs and the time and code version that produced it. No field in one is writable by a person: change a grant or a mandate and recompute. Corrected from `computed and never stored` on 11 September 2026; the brief is in /docs/briefs/. [What that means and why it changed](../model/delta/index.md).
+
+> **The release gate recomputes every stored delta on every build** from the profile and the mandate it names, and fails on a single row of disagreement. That is how a machine holds `never authored': the rule forbids the act rather than the artefact, and a hand edited delta is a fiction nothing downstream could detect.
 
 ## What is deliberately not in these files
 
 | Not here | Why |
 |---|---|
-| **A delta** | A delta is computed from a grant and a mandate every time it is needed and never stored. A stored delta is a stale claim about somebody's environment. |
 | **A score** | There is no score, rating, traffic light, risk level or severity in this pack or anywhere on this site. A score is a verdict and the ABP describes without judging. |
+| **A consequence** | A delta crossing a threshold is a record. What follows from it is a policy somebody set in advance, and it is not in this pack. |
 
 ## Proposing a change
 

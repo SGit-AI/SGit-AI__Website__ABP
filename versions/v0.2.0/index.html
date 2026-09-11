@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>v0.2.0: the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it - abp.sgit.ai</title>
+<meta name="description" content="A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes...">
+<link rel="canonical" href="https://abp.sgit.ai/versions/v0.2.0/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/versions/v0.2.0/index.html">
+<meta property="og:title" content="v0.2.0: the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it - abp.sgit.ai">
+<meta property="og:description" content="A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes...">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.2.0/index.html" title="What changed in v0.2.0, and the commit it was built from">v0.2.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../versions/index.html">Versions</a> / v0.2.0</p>
+  <h1>v0.2.0: the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it</h1>
+  <p class="lead">A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes it useful, because a question about whether a control held throughout a period is a question about a series that a recomputed present cannot answer. The corrected rule is that the delta is DERIVED AND NEVER AUTHORED, which is the harder rule, because it forbids the act rather than the artefact. The release gate's check is inverted to match: it refused any stored delta and now recomputes every one of them.</p>
+  <div class="tablewrap"><table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>Version</td><td><code>v0.2.0</code></td></tr><tr><td>Date</td><td>2026-09-11</td></tr><tr><td>Commit</td><td><code>git rev-list -n 1 v0.2.0</code>, written into <a href="../../versions/v0.2.0.json"><code>versions/v0.2.0.json</code></a> once CI has tagged this release. Until then the file says where the hash will come from rather than carrying one that would be wrong.</td></tr><tr><td>Reconstructed</td><td>no</td></tr><tr><td>Machine readable</td><td><a href="../../versions/v0.2.0.json"><code>versions/v0.2.0.json</code></a></td></tr></tbody></table></div>
+  <h2 id="what-changed">What changed</h2>
+  <ul><li>data/deltas/ carries 9 stored deltas, one per deployment shape and mandate pair. Each record pins the version of both inputs, the published vocabulary it was computed against, the time it was computed and the version of the computation that produced it, so it can be recomputed and compared rather than taken on trust. No field in one is writable by a person.</li><li>The release gate's twelfth check is inverted. It refused any file carrying a delta; it now recomputes every stored delta from the profile and the mandate it names and fails on a single row of disagreement, including the ordering. That check is a few lines because the computation is a set difference, and it is a set difference because the grant and the mandate are held as graphs with a schema rather than as prose.</li><li>A new page at /model/delta/ carries the correction with both passages quoted and both replacements given, what the old rule was protecting and why all of it survives, the materialised view the pattern already had a name for, reality as the third input and the calibration loop it creates, the recompute trigger mapped onto an existing event standard, the rule that a threshold crossing is a record and the consequence is a policy somebody set in advance, the history as a business case read rather than constructed, the three clocks, and the distinction from behaviour drift.</li><li>The validity statement on every example gains the second clock: as at this date, from a twin last synchronised at this date. This site has no twin connected to anything and the label says so rather than leaving the field out.</li><li>The dev brief that makes the correction is published in /docs/briefs/ and appears in the index, in llms.txt and in the sitemap without a second edit, because the index is generated from the files present.</li><li>The foundation document is NOT rewritten. Both corrected passages stand as published, with a correction notice above them pointing at the brief and at /model/delta/. Everything else in that document stands.</li></ul>
+  <h2 id="what-it-was-built-against">What it was built against</h2>
+  <ul><li>The dev brief of 11 September 2026, the delta is derived and never authored, which is the fifth document of that day and the first written to correct one already pushed.</li><li>The foundation document of 11 September 2026, which the brief corrects in two passages and leaves standing in every other.</li><li>The site building guidance, for the rule that indexes are generated from the data they index, which the brief records this as the fourth instance of.</li></ul>
+  <h2 id="the-five-verifications-against-the-sibling">The five verifications against the sibling</h2>
+  <p>The pipeline, the release gate and the page shell were copied from <a href="https://github.com/SGit-AI/SGit-AI__Website__Game__What-Can-It-Do">SGit-AI__Website__Game__What-Can-It-Do</a> at its v0.8.0. The conventions ask for five things to be verified rather than assumed, and <b>an absent one is a finding that belongs in the first version's notes</b> rather than a thing to fix quietly.</p>
+  <div class="tablewrap"><table><thead><tr><th>Verification</th><th>The sibling</th><th>What this repository does</th></tr></thead><tbody><tr><td>The tag is derived from the version file, not typed by hand</td><td><b>holds</b></td><td><code>admin/build/version.txt</code> owns the version. CI reads it, refuses to tag if the newest release commit's subject disagrees, refuses if the tag already exists on an earlier commit, and refuses if the bump is not the next minor or a deliberate major. Copied unchanged.</td></tr><tr><td>The build fails when <code>llms.txt</code> does not list every page</td><td><b>did not hold</b></td><td>The sibling generates <code>llms.txt</code> from its page list, so it cannot miss a page the generator knows about, and nothing fails if a page exists in the tree that the generator does not. Check 11 here walks the tree and fails on any <code>.html</code> page missing from <code>llms.txt</code>.</td></tr><tr><td>The custom domain survives a rebuild</td><td><b>did not hold</b></td><td>The sibling commits <code>CNAME</code> once. Here the build writes it from <code>SITE['host']</code>, and the canonical check reads the same file, so a domain change is one edit in one place.</td></tr><tr><td>The markdown twin of every page is produced by the build</td><td><b>holds</b></td><td><code>shell.write_site</code> emits the <code>.html</code> and the <code>.md</code> from the same block list, and gate check 7 fails on a page without a twin. Copied unchanged, and it is the reason the twins cannot drift.</td></tr><tr><td>The version in the chrome comes from <code>versions/index.json</code></td><td><b>did not hold</b></td><td>The sibling has no <code>versions/index.json</code> at all: the badge reads <code>version.txt</code> and links to a hand-maintained history page. Here the build generates <code>versions/index.json</code>, a file and a page per version, from the same string the tag is derived from, and the badge links to that version's own details. The published pipeline still owns the tag, so the two cannot disagree.</td></tr></tbody></table></div>
+  <p><b>Two of the three that did not hold are one-line fixes and the third is a surface that did not exist.</b> None of them is a criticism of a site that has been publishing for weeks: they are the cost of a pipeline growing by copy, which is exactly what the five verifications are for.</p>
+  <h2 id="where-the-sources-disagree">Where the sources disagree</h2>
+  <p>The published source wins and the disagreement is recorded. <b>The estate's method is to record the gap, not to quietly resolve it.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>The disagreement</th><th>What each says</th><th>What this site did</th></tr></thead><tbody><tr><td>SETTLED IN v0.2.0. The foundation document and the project lead, on whether a delta is stored</td><td>v0.1.0 built to the foundation document's rule that the delta is computed and NEVER STORED, and put a check in the release gate refusing any file that carried one. The project lead's correction, issued the same day, is that the second half was an error: the delta belongs in a vault along with the history of the grants and mandates that produced it.</td><td>v0.2.0 stores the deltas with their inputs pinned and inverts the check, so the gate now recomputes every one of them. <b>Never authored</b> is the rule that replaced it, and it is harder than the one it replaced. See <a href="../../model/delta/index.html">the delta</a>.</td></tr><tr><td>The foundation document and the published data, on what changes when confirmations go off</td><td>The foundation document says that turning confirmations off moves the barrier on <b>every capability in the delta</b> by one row. In the published pack it moves exactly one barrier, on <code>execute.process.host</code>, and that capability is <b>inside the mandate</b>: the deployer asked for it. So the label's numbers do not move at all and the two documents still differ materially.</td><td>The data wins on the fact and the foundation document wins on the wording, so both example pages state what actually changes. It makes the pair a <b>better</b> argument, not a worse one: identical headline numbers, a materially different document, which is the case for the leaflet and against any single number.</td></tr><tr><td>The pack and the sibling, on where the version lives</td><td>The conventions ask for <code>versions/index.json</code> as the home of the version. The sibling's working pipeline derives the tag from <code>admin/build/version.txt</code> and has no <code>versions/index.json</code>.</td><td>Both. <code>version.txt</code> still owns the tag, because that is the published pipeline and it wins; <code>versions/index.json</code> is generated from the same string, so the surface the guidance asks for exists and cannot drift from the tag. The gate checks the agreement.</td></tr><tr><td>The pack and the published data, on whether the smallest grant has an empty delta</td><td>The pack says the smallest shape in the set is where a reader who does not believe an agent can do much <em>finds the delta is still not empty</em>. In the published data that shape's grant is one capability and the starting mandate asks for exactly it, so <b>the delta is empty</b>.</td><td>The example says so, plainly, and says why an empty delta is a result rather than a failure: a method that could never report nothing would be a sales document, and the other four examples would be worth less for it. Changing the mandate to manufacture a delta would have been the dishonest fix.</td></tr><tr><td>The published headline and the pack's own vocabulary, on what `measured' means</td><td>The map's headline says 21 of 99 rows were measured. The pack's vocabulary defines <code>measured</code> as a dated probe with an evidence file, and <b>no row in the pack is at that tier</b>: the 21 are at <code>observed</code>, which is seen directly on the thing itself.</td><td>The site counts <code>observed</code> as measured, which reproduces the published figure, and says so in <code>data/provenance.json</code> and on the data page. Reproducing the number without the note would have been less careful than the map.</td></tr><tr><td>The hard rules and the published data, on em dashes and pure ASCII</td><td>Every document in this repository is to be pure ASCII, with zero em dashes and zero en dashes. The data promoted from the capability map carries all three, because it was written elsewhere and this site does not get to edit somebody else's bytes.</td><td>Both. The JSON keeps the upstream strings exactly as they arrived and <code>data/</code> is exempt from the guard for that reason; every upstream string rendered into a page is transliterated at render time; and the bytes are one click away under <code>/data/upstream/</code>. The guard is in the pipeline and fails the build everywhere else.</td></tr><tr><td>The guidance and the docs section, on rebuilding the markdown renderer</td><td>The guidance forbids rebuilding markdown viewing, file trees and page layouts, because the platform provides them. The docs section has to turn eleven markdown documents into pages.</td><td><code>admin/build/docs_pages.py</code> translates a markdown document into the same small block vocabulary every other page here is written in, at build time. No viewer is shipped to a browser, no file tree and no layout engine, and the source bytes are served beside every rendered document. It is a judgement call and it is recorded as one rather than assumed.</td></tr></tbody></table></div>
+  <h2 id="what-is-not-built-yet-stated-plainly">What is not built yet, stated plainly</h2>
+  <ul><li><b>No view across the nine shapes.</b> Each example carries a grant-against-mandate figure, and there is no figure that puts one capability across every deployment shape at once. The third graph rule says render the result of a query rather than the whole graph, so that would be another query rather than a map.</li><li><b>No ABP for a shape outside the published map</b>, which means the cost of producing one where the grant has to be measured rather than looked up is still unknown, and that is the number the store needs.</li><li><b>No interchange form emitted.</b> The W3C vocabulary is described on <a href="../../model/graph/index.html">the graph page</a> and nothing on this site serialises to it yet.</li><li><b>Quantity and agent-to-agent interaction are not modelled</b>, as the model page says. They are gaps in the ontology rather than in this site.</li></ul>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.2.0/index.html">v0.2.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../versions/v0.2.0/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

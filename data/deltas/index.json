@@ -1,0 +1,163 @@
+{
+  "type": "abp/deltas-index/v1",
+  "_what_this_is": "Stored deltas, one per deployment shape and mandate pair. DERIVED AND NEVER AUTHORED: each record pins the version of both inputs and the time and code version that produced it, so it can be recomputed and compared rather than taken on trust. A delta that carries no inputs is the stale claim the earlier `never stored` wording was afraid of.",
+  "correction": "The foundation document of 11 September 2026 says the delta is computed and never stored. That was corrected the same day: the delta is derived and never authored. The correction and what follows from it are in the dev brief of 11 September in /docs/briefs/.",
+  "never_authored": "No field in any of these records is writable by a person. The way to change a delta is to change a grant or a mandate, and recompute.",
+  "count": 9,
+  "deltas": [
+    {
+      "id": "anthropic__claude-code__local-default__coding-assistant-on-my-machine",
+      "profile": "anthropic/claude-code/local-default",
+      "mandate": "coding-assistant-on-my-machine",
+      "grant_version": "2026-09-05",
+      "mandate_version": "2026-09-09",
+      "computed_at": "2026-09-11T13:00:37Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 12,
+        "unbounded_excess": 12,
+        "shortfall": 1,
+        "aligned": 4
+      },
+      "file": "deltas/anthropic__claude-code__local-default__coding-assistant-on-my-machine.json"
+    },
+    {
+      "id": "anthropic__claude-code__local-confirmations-off__coding-assistant-on-my-machine",
+      "profile": "anthropic/claude-code/local-confirmations-off",
+      "mandate": "coding-assistant-on-my-machine",
+      "grant_version": "2026-09-05",
+      "mandate_version": "2026-09-09",
+      "computed_at": "2026-09-11T13:00:37Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 12,
+        "unbounded_excess": 12,
+        "shortfall": 1,
+        "aligned": 4
+      },
+      "file": "deltas/anthropic__claude-code__local-confirmations-off__coding-assistant-on-my-machine.json"
+    },
+    {
+      "id": "anthropic__claude-code-remote__ccr-container__coding-assistant-in-a-container",
+      "profile": "anthropic/claude-code-remote/ccr-container",
+      "mandate": "coding-assistant-in-a-container",
+      "grant_version": "2026-09-05.2",
+      "mandate_version": "2026-09-09",
+      "computed_at": "2026-09-11T13:00:37Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 9,
+        "unbounded_excess": 7,
+        "shortfall": 0,
+        "aligned": 6
+      },
+      "file": "deltas/anthropic__claude-code-remote__ccr-container__coding-assistant-in-a-container.json"
+    },
+    {
+      "id": "anthropic__claude-desktop__default__desktop-app-with-local-tools",
+      "profile": "anthropic/claude-desktop/default",
+      "mandate": "desktop-app-with-local-tools",
+      "grant_version": "2026-09-05",
+      "mandate_version": "2026-09-09",
+      "computed_at": "2026-09-11T13:00:37Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 8,
+        "unbounded_excess": 8,
+        "shortfall": 1,
+        "aligned": 2
+      },
+      "file": "deltas/anthropic__claude-desktop__default__desktop-app-with-local-tools.json"
+    },
+    {
+      "id": "anthropic__claude-web__connectors-on__chat-with-connectors",
+      "profile": "anthropic/claude-web/connectors-on",
+      "mandate": "chat-with-connectors",
+      "grant_version": "2026-09-05",
+      "mandate_version": "2026-09-09",
+      "computed_at": "2026-09-11T13:00:37Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 2,
+        "unbounded_excess": 0,
+        "shortfall": 0,
+        "aligned": 3
+      },
+      "file": "deltas/anthropic__claude-web__connectors-on__chat-with-connectors.json"
+    },
+    {
+      "id": "openai__chatgpt-web__default__chat-no-connectors",
+      "profile": "openai/chatgpt-web/default",
+      "mandate": "chat-no-connectors",
+      "grant_version": "2026-09-05",
+      "mandate_version": "2026-09-09",
+      "computed_at": "2026-09-11T13:00:37Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 0,
+        "unbounded_excess": 0,
+        "shortfall": 0,
+        "aligned": 1
+      },
+      "file": "deltas/openai__chatgpt-web__default__chat-no-connectors.json"
+    },
+    {
+      "id": "github__actions-runner__ci__ci-job",
+      "profile": "github/actions-runner/ci",
+      "mandate": "ci-job",
+      "grant_version": "2026-08-26",
+      "mandate_version": "2026-09-09",
+      "computed_at": "2026-09-11T13:00:37Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 4,
+        "unbounded_excess": 3,
+        "shortfall": 1,
+        "aligned": 4
+      },
+      "file": "deltas/github__actions-runner__ci__ci-job.json"
+    },
+    {
+      "id": "generic__browser-extension__broad-host-permissions__browser-extension-i-installed",
+      "profile": "generic/browser-extension/broad-host-permissions",
+      "mandate": "browser-extension-i-installed",
+      "grant_version": "2026-09-05",
+      "mandate_version": "2026-09-09",
+      "computed_at": "2026-09-11T13:00:37Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 2,
+        "unbounded_excess": 2,
+        "shortfall": 0,
+        "aligned": 1
+      },
+      "file": "deltas/generic__browser-extension__broad-host-permissions__browser-extension-i-installed.json"
+    },
+    {
+      "id": "generic__scheduled-job__service-account__scheduled-job-under-a-service-account",
+      "profile": "generic/scheduled-job/service-account",
+      "mandate": "scheduled-job-under-a-service-account",
+      "grant_version": "2026-09-05",
+      "mandate_version": "2026-09-09",
+      "computed_at": "2026-09-11T13:00:37Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 4,
+        "unbounded_excess": 4,
+        "shortfall": 1,
+        "aligned": 3
+      },
+      "file": "deltas/generic__scheduled-job__service-account__scheduled-job-under-a-service-account.json"
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Generated from the profiles and the mandates.",
+    "licence": "CC BY 4.0"
+  }
+}

@@ -2,7 +2,7 @@
 
 > The four objects an ABP is made of, the grammar they are written in, the barrier that decides whether anything is in the way, and the graph rules that govern all of it.
 
-*Source: <https://abp.sgit.ai/model/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -20,14 +20,14 @@ An ABP is not a document. It is four objects, of which the document is a renderi
 |---|---|---|
 | **The mandate** | What the agent is authorised and expected to do | **Elicited.** In minutes, because the deployer already knows it |
 | **The grant** | Everything the agent can do | **Measured.** From the deployment shape: the product, where it runs, with what account, with what credentials |
-| **The delta** | The difference. Excess where it can and you did not ask; shortfall where you asked and it cannot | **Computed. Never stored**, because the deployment changes |
+| **The delta** | The difference. Excess where it can and you did not ask; shortfall where you asked and it cannot | **Derived.** Recomputed whenever the grant or the mandate changes, stored with the versions of both, and never edited by hand |
 | **The barrier** | What stands between the agent and each capability | **Recorded**, per capability, from one of four kinds |
 
 **Three hundred and forty things is a shrug. Three hundred and forty things and you authorised twelve is a finding.** The mandate is the edge that gives the grant a shape, and it has to be captured even though it is already known.
 
-## Why the delta is never stored
+## Why the delta is derived and never authored
 
-> A stored delta is a claim about somebody's environment on a day that has passed. The environment is the thing that changes, so the delta is recomputed from the grant and the mandate every time it is needed. Every delta on this site was computed when the page was built. Nothing in [`/data/`](../data/index.md) is a delta.
+> **Nobody writes a delta.** It is only ever the output of a computation over the grant and the mandate, and it is stored along with the versions of both inputs and the time it was computed. That is what makes it checkable rather than stale. [What follows from that](../model/delta/index.md), including why this site said the opposite this morning.
 
 ## The pieces
 
@@ -39,6 +39,9 @@ The enforcer test, published as a glyph before it was named as a rule.
 
 **[The undo class](../model/undo/index.md)**: Three classes, and the ordering on every rendering this site produces.
 A property of the action. Not a severity.
+
+**[The delta](../model/delta/index.md)**: Derived and never authored. Stored with its inputs pinned, recomputed when either moves, and never edited by hand.
+Corrected on 11 September, in the open.
 
 **[The graph](../model/graph/index.md)**: Five rules that govern the model rather than the styling.
 Rule five is the acceptance test and it is cheap to apply.

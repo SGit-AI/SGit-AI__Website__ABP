@@ -2,7 +2,7 @@
 
 > The Agent Behaviour Policy: what your agent can do, what you authorised it to do, the gap between them, and what actually stands in the way.
 
-Site version: v0.1.0. Generated from the same content as the HTML pages, so
+Site version: v0.2.0. Generated from the same content as the HTML pages, so
 this file cannot disagree with them.
 
 
@@ -14,7 +14,7 @@ this file cannot disagree with them.
 
 > You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.
 
-*Source: <https://abp.sgit.ai/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -40,8 +40,10 @@ An ABP is not a single list. It is four objects, and the order they are produced
 |---|---|---|
 | **The mandate** | What the agent is authorised and expected to do | **Elicited.** In minutes, because the deployer already knows it |
 | **The grant** | Everything the agent can do | **Measured.** From the deployment shape, the account and the credentials |
-| **The delta** | Excess where it can and you did not ask; shortfall where you asked and it cannot | **Computed. Never stored**, because the deployment changes |
+| **The delta** | Excess where it can and you did not ask; shortfall where you asked and it cannot | **Derived.** Recomputed whenever the grant or the mandate changes, stored with the versions of both, and never edited by hand |
 | **The barrier** | What stands between the agent and each capability | **Recorded**, per capability, from one of four kinds |
+
+> **The delta is derived and never authored.** Nobody writes one: it is only ever the output of a computation over the grant and the mandate, and it is stored with the versions of both inputs and the time it was computed. This site said the opposite this morning, and **the correction is published rather than applied quietly**: [what changed and what follows from it](model/delta/index.md).
 
 **A grant on its own is an inventory, and nobody acts on an inventory.** *Your agent can do three hundred and forty things* is a shrug. *Your agent can do three hundred and forty things and you authorised twelve* is a finding. [The model, in full](model/index.md).
 
@@ -81,6 +83,9 @@ The clearest way to see what an ABP does is to change one setting and watch the 
 **[What an ABP is](what-is-an-abp/index.md)**: The foundation document: the definition, the four objects, the barrier, one worked example with published numbers, and the questions we would like answered.
 This is the document, rendered. Not a summary of it.
 
+**[The delta](model/delta/index.md)**: Derived and never authored. Stored with its inputs pinned, recomputed when either moves, and the history is the business case.
+Corrected on 11 September, in the open.
+
 **[The model](model/index.md)**: The 23 capability primitives, the four barriers, the three undo classes, the graph rules and the schema.
 Promoted from a published map, not invented here.
 
@@ -113,7 +118,7 @@ The argument, the model, the examples and the data are published here. **There i
 
 > **Provenance.** 21 of 99 capability rows on this page were measured, meaning seen directly on the thing itself. The other 78 were derived from what the deployment architecturally is, or from the vendor's published documentation. Every row traces to [the published capability map](https://what-can-it-do.games.sgit.ai/map/index.html), retrieved 2026-09-11T13:00:37Z, content hash `sha256:d6d4ba40f1fb1f93f66`. [The source bytes](data/upstream/pack.json).
 
-> **Validity.** This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+> **Validity.** This describes the deployment shape as at 11 September 2026, from a twin last synchronised at no twin: these shapes are published profiles, not a synchronised environment. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
 
 ---
 
@@ -128,7 +133,7 @@ The argument, the model, the examples and the data are published here. **There i
 
 > The foundation document: the definition of the Agent Behaviour Policy, the four objects, the barrier as the test of whether anything is in the way, the rule that it never judges, and the questions we are asking.
 
-*Source: <https://abp.sgit.ai/what-is-an-abp/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/what-is-an-abp/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -137,6 +142,8 @@ below point at them.*
 [Home](../index.md) / What is an ABP
 
 # Agent Behaviour Policy (ABP): You Know What You Asked For, And You Do Not Know What It Can Do
+
+> **Two passages in this document were corrected on the day it was published, and this page does not rewrite them.** Both stand exactly as written, each with its correction rendered immediately above it, because a document corrected by silently editing it is a document nobody can trust. The correction is that **the delta is derived and never authored**, not computed and never stored. [The brief that makes it](../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.md) and [what follows from it](../model/delta/index.md). Everything else in this document stands.
 
 > **This is the foundation document itself, rendered, not a summary of it.** It is the definition the rest of this site stands on, and it is the document being put in front of the community for feedback, so its wording is the wording. Where it and anything else on this site disagree, it wins, and the disagreements are recorded in [v0.1.0's notes](../versions/v0.1.0/index.md) rather than resolved quietly. The first mention of each term below links to its node in [the model](../model/index.md).
 
@@ -166,6 +173,8 @@ We have been measuring this. A published capability map covers nine common [depl
 
 An ABP is not a single list. It is four objects, and the order they are produced in matters.
 
+> **Corrected the same day.** The replacement wording is: **The delta. Derived.** Recomputed whenever the grant or the mandate changes, stored with the versions of both, and never edited by hand. [What changed and what follows from it](../model/delta/index.md).
+
 | Object | What it is | How it is obtained |
 |---|---|---|
 | **The mandate** | What the agent is authorised and expected to do | **Elicited.** In minutes, because the deployer already knows it |
@@ -174,6 +183,8 @@ An ABP is not a single list. It is four objects, and the order they are produced
 | **The barrier** | What stands between the agent and each capability | **Recorded**, per capability, from one of four kinds |
 
 **The mandate must be captured even though it is already known**, because a grant on its own is an inventory, and nobody acts on an inventory. *Your agent can do three hundred and forty things* is a shrug. *Your agent can do three hundred and forty things and you authorised twelve* is a finding. The mandate is the edge that gives the grant a shape.
+
+> **Corrected the same day.** The replacement wording is: **The delta is derived and never authored.** Nobody writes a delta. It is only ever the output of a computation over the grant and the mandate, and it is stored along with the versions of both inputs and the time it was computed. That is what makes it checkable rather than stale. **What must never happen is that somebody edits a delta**, because a hand edited delta is a fiction about an environment, and nothing downstream could tell. [What changed and what follows from it](../model/delta/index.md).
 
 **The delta is computed and never stored.** A stored delta is a claim about somebody's environment on a day that has passed. The environment is the thing that changes, so the delta is recomputed from the grant and the mandate every time it is needed.
 
@@ -315,6 +326,8 @@ This document consolidates three briefs of 11 September 2026: one on the product
 
 ## Key Claims
 
+> **Corrected the same day.** Claim 3 reads, in the corrected wording: the mandate is elicited, the grant is measured, **the delta is derived and never authored**, and the barrier is recorded per capability. [What changed and what follows from it](../model/delta/index.md).
+
 | # | Claim |
 |---|---|
 | 1 | Most people who deploy an agent know what they asked it to do, and almost nobody knows what it can do |
@@ -357,7 +370,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The four objects an ABP is made of, the grammar they are written in, the barrier that decides whether anything is in the way, and the graph rules that govern all of it.
 
-*Source: <https://abp.sgit.ai/model/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -375,14 +388,14 @@ An ABP is not a document. It is four objects, of which the document is a renderi
 |---|---|---|
 | **The mandate** | What the agent is authorised and expected to do | **Elicited.** In minutes, because the deployer already knows it |
 | **The grant** | Everything the agent can do | **Measured.** From the deployment shape: the product, where it runs, with what account, with what credentials |
-| **The delta** | The difference. Excess where it can and you did not ask; shortfall where you asked and it cannot | **Computed. Never stored**, because the deployment changes |
+| **The delta** | The difference. Excess where it can and you did not ask; shortfall where you asked and it cannot | **Derived.** Recomputed whenever the grant or the mandate changes, stored with the versions of both, and never edited by hand |
 | **The barrier** | What stands between the agent and each capability | **Recorded**, per capability, from one of four kinds |
 
 **Three hundred and forty things is a shrug. Three hundred and forty things and you authorised twelve is a finding.** The mandate is the edge that gives the grant a shape, and it has to be captured even though it is already known.
 
-## Why the delta is never stored
+## Why the delta is derived and never authored
 
-> A stored delta is a claim about somebody's environment on a day that has passed. The environment is the thing that changes, so the delta is recomputed from the grant and the mandate every time it is needed. Every delta on this site was computed when the page was built. Nothing in [`/data/`](../data/index.md) is a delta.
+> **Nobody writes a delta.** It is only ever the output of a computation over the grant and the mandate, and it is stored along with the versions of both inputs and the time it was computed. That is what makes it checkable rather than stale. [What follows from that](../model/delta/index.md), including why this site said the opposite this morning.
 
 ## The pieces
 
@@ -394,6 +407,9 @@ The enforcer test, published as a glyph before it was named as a rule.
 
 **[The undo class](../model/undo/index.md)**: Three classes, and the ordering on every rendering this site produces.
 A property of the action. Not a severity.
+
+**[The delta](../model/delta/index.md)**: Derived and never authored. Stored with its inputs pinned, recomputed when either moves, and never edited by hand.
+Corrected on 11 September, in the open.
 
 **[The graph](../model/graph/index.md)**: Five rules that govern the model rather than the styling.
 Rule five is the acceptance test and it is cheap to apply.
@@ -427,7 +443,7 @@ Each states which rows were measured and which derived.
 
 > verb.object.reach: 23 capability primitives, each with its reach and the undo class of its effect. The action vocabulary for everything else on this site.
 
-*Source: <https://abp.sgit.ai/model/capabilities/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -506,7 +522,7 @@ below point at them.*
 
 > Read the project it is working on. Reach project, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.file.project/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.file.project/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -570,7 +586,7 @@ below point at them.*
 
 > Change the project it is working on. Reach project, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.file.project/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.file.project/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -632,7 +648,7 @@ below point at them.*
 
 > Read any file the account can reach. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -696,7 +712,7 @@ below point at them.*
 
 > Change any file the account can reach. Reach host, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.file.host/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.file.host/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -759,7 +775,7 @@ below point at them.*
 
 > Delete files anywhere the account can reach. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/delete.file.host/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/delete.file.host/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -820,7 +836,7 @@ below point at them.*
 
 > Run programs as the account. Reach host, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/execute.process.host/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/execute.process.host/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -883,7 +899,7 @@ below point at them.*
 
 > Run programs inside its own sandbox only. Reach self, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/execute.process.self/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/execute.process.self/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -939,7 +955,7 @@ No published shape in this set has it.
 
 > Reach a permitted list of hosts. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.allowed/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.allowed/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -997,7 +1013,7 @@ below point at them.*
 
 > Reach any host on the internet. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.world/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.world/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1060,7 +1076,7 @@ below point at them.*
 
 > Read credentials stored where it runs. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.credential.host/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.credential.host/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1121,7 +1137,7 @@ below point at them.*
 
 > Act in accounts with the credentials it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1185,7 +1201,7 @@ below point at them.*
 
 > Change its own permission settings. Reach self, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/grant.credential.self/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/grant.credential.self/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1245,7 +1261,7 @@ below point at them.*
 
 > Send a message to anyone. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.message.world/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.message.world/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1301,7 +1317,7 @@ No published shape in this set has it.
 
 > Read mail or chat it is connected to. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1359,7 +1375,7 @@ below point at them.*
 
 > Commit to the repository it was pointed at. Reach project, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.repository.project/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.repository.project/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1420,7 +1436,7 @@ below point at them.*
 
 > Push to a code host (any branch it can reach). Reach tenant, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.repository.tenant/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.repository.tenant/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1481,7 +1497,7 @@ below point at them.*
 
 > Sign commits with the key it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.signing/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.signing/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1541,7 +1557,7 @@ below point at them.*
 
 > Publish packages, images or pages under the name it holds. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.record.world/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.record.world/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1600,7 +1616,7 @@ below point at them.*
 
 > Spend money or tokens against an account it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.budget.tenant/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.budget.tenant/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1658,7 +1674,7 @@ below point at them.*
 
 > Create something that outlives the turn where it runs (a cron, a service). Reach host, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.host/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.host/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1719,7 +1735,7 @@ below point at them.*
 
 > Read a retained record: shell history, past sessions. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1780,7 +1796,7 @@ below point at them.*
 
 > Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session). Reach tenant, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.tenant/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.tenant/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1830,7 +1846,7 @@ below point at them.*
 
 > Read every page you visit. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.record.browsing/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.record.browsing/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1888,7 +1904,7 @@ below point at them.*
 
 > Four kinds of thing that can stand between an agent and a capability, and only the fourth bounds anything. The enforcer test, which this estate published as a glyph before it named it as a rule.
 
-*Source: <https://abp.sgit.ai/model/barriers/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/barriers/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1940,7 +1956,7 @@ The glyph system on [the published map](https://what-can-it-do.games.sgit.ai/map
 
 > Three classes of reversibility, the ordering on every rendering this site produces, and the one column that is not fully context free.
 
-*Source: <https://abp.sgit.ai/model/undo/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/undo/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1977,13 +1993,179 @@ An ABP that lists prohibitions alphabetically has buried the only ones that matt
 
 ------------------------------------------------------------------------
 
+<!-- https://abp.sgit.ai/model/delta/index.html -->
+
+# The delta
+
+> Derived and never authored: stored with the versions of its inputs, recomputed when either moves, and never edited by hand. Reality is the third input, the history is the business case, and there are three clocks.
+
+*Source: <https://abp.sgit.ai/model/delta/index.html> · site v0.2.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../index.md) / [The model](../../model/index.md) / The delta
+
+# The delta
+
+**The delta is derived and never authored.** Nobody writes a delta. It is only ever the output of a computation over the grant and the mandate, and it is stored along with the versions of both inputs and the time it was computed.
+
+## This page corrects something this site said this morning
+
+> **The foundation document says, twice, that the delta is computed and never stored.** The first half is right and the second half is wrong, and the correction was issued on the same day by the project lead. It is published here rather than applied quietly, because the method is to record the gap: [the dev brief that makes the correction](../../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.md), and [the foundation document as published](../../what-is-an-abp/index.md), which otherwise stands in full.
+
+| Was | Is |
+|---|---|
+| The delta. Computed. Never stored, because the deployment changes. | **The delta. Derived.** Recomputed whenever the grant or the mandate changes, stored with the versions of both, and never edited by hand. |
+| The delta is computed and never stored. A stored delta is a claim about somebody's environment on a day that has passed. | **The delta is derived and never authored.** Nobody writes a delta. It is only ever the output of a computation over the grant and the mandate, and it is stored along with the versions of both inputs and the time it was computed. **What must never happen is that somebody edits a delta**, because a hand edited delta is a fiction about an environment, and nothing downstream could tell. |
+
+## What the old rule was protecting, and what survives
+
+The sentence being corrected was guarding against three real things, and all three survive.
+
+| The fear | Does the correction still handle it |
+|---|---|
+| A delta becomes a stale claim about somebody's environment | **Yes.** A stored delta carries the versions of its inputs and the time it was computed, so its staleness is a fact rather than a surprise |
+| A delta gets hand edited into a fiction | **Yes, and more strongly.** Never authored is a harder rule than never stored, because it forbids the act rather than the artefact |
+| A delta is treated as authoritative after the inputs move | **Yes.** It reacts. A recompute is cheap because the inputs are graphs |
+
+**So the correction loses nothing and gains the history.** It is also the fourth instance of a pattern already in force across this network, which is why the corrected sentence is the one that fits and the old one was the odd one out: indexes are generated from the data they index, prose is derived from the graph and never hand edited, a bill of materials is generated from the dependency files, and the delta is derived from the grant and the mandate. **In every case the artefact is stored. What is forbidden is writing it.**
+
+## The word for this already exists
+
+**A stored result of a computation over other data, refreshed when its inputs change, never edited directly, is a materialised view.** The vocabulary is decades old and it carries exactly the right properties: it exists for use, it has a refresh policy, its staleness is knowable, and writing to it directly is a category error rather than a permission question.
+
+The grant and the mandate are the append only side: a history of what changed and when. The delta is the read model computed from them. **The delta is a projection of the ABP graph, and so is the label, and so is the leaflet.**
+
+### The stored record
+
+| Field | Why |
+|---|---|
+| `grant_version` | The input, pinned |
+| `mandate_version` | The input, pinned |
+| `pack_version` | The published vocabulary it was computed against |
+| `computed_at` | When |
+| `computed_by` | Which version of the computation, because the computation is code and code changes |
+| `excess` | Capabilities in the grant and not in the mandate |
+| `unbounded_excess` | Excess whose barrier is one of the first three kinds |
+| `shortfall` | Capabilities in the mandate and not in the grant |
+
+> **No field in that record is writable by a person. The way to change a delta is to change a grant or a mandate.** So the release gate does not take the stored records on trust: it **recomputes every one of them** from the profile and the mandate it names and fails on a single row of disagreement. That check is a few lines, because the computation is a set difference, and it is a set difference because the grant and the mandate are held as graphs with a schema rather than as prose. **That is the underlying capability.** All of this can be done by hand today and almost nobody does it.
+
+**9 stored deltas**, one per deployment shape and mandate pair: [`/data/deltas/index.json`](../../data/deltas/index.json).
+
+## Reality is the third input
+
+The grant is a model of what the agent can do. The mandate is a statement of what somebody meant. **Both are interpretations, and both improve.** The customer says what they actually meant, and the mandate sharpens. Somebody discovers a capability nobody had listed, and the grant grows.
+
+| What is observed | What it tells you |
+|---|---|
+| Something happened that is not in the grant | **The grant was incomplete.** Add the capability |
+| Something was blocked that the grant said was possible | **A barrier was missed**, or recorded at the wrong kind. Correct it |
+| Something in the mandate never happens | Either the mandate is aspirational, or the capability is missing and the shortfall is real |
+| Something happens repeatedly that is in the grant and not in the mandate | **The mandate is wrong, or the deployment is.** This is the only row where the observation does not say which |
+
+> **That last row is the one place a derived delta cannot resolve itself.** An agent doing something outside its mandate, repeatedly, without anybody complaining, means either that the mandate was written too narrowly or that something is happening nobody authorised. **This site publishes the observation. Which of the two it is belongs to the risk layer and to a person.** Record, not verdict, again.
+
+**And the calibration loop is the answer to this site's honest weakness.** 21 of 99 capability rows are measured and the rest derived from documentation. Every deployment that runs and reports back moves a row from derived to measured, and because [the capability map](https://what-can-it-do.games.sgit.ai/map/index.html) is shared and public, **it moves for everybody**. That is the reason the map belongs in an open repository rather than inside a product.
+
+### And the collection problem it creates
+
+> **A calibration loop needs observation, and the downloadable builds in this estate are ruled never to transmit anything.** The resolution is that calibration happens inside the customer's own instance: their deployment observes, their grant improves, their delta recomputes, and none of it leaves. **What comes back to the shared map is a contribution, not telemetry**: a proposed correction to a capability row, carrying its evidence, submitted deliberately through the same mechanism as any other proposal, with a source, a timestamp and a hash. A person decides to send it. Nothing phones home. **That is slower, and it is the only version that is honest.**
+
+## It reacts, and the trigger has a standard
+
+Because the delta is derived, a change in either input propagates without anybody touching the document. **A template cannot do that and a rendered document cannot do that.** Three cases:
+
+| What happens | What the ABP does |
+|---|---|
+| **A weakness is disclosed in a tool the agent can call.** | Nothing about the deployment changed, but a capability recorded at the fourth barrier is now at the first. The grant is the same and **the unbounded excess jumps**. The ABP changed because the world did |
+| **A credential is quietly widened.** | Somebody adds a scope to a token to fix an unrelated problem. The grant grows, the mandate does not, and the excess grows by exactly the capabilities that scope carries. **Nobody involved thought they were changing a policy** |
+| **A control ships.** | A gateway is deployed with default deny. A set of capabilities move from the second barrier to the fourth. **Unbounded excess falls, and the number it falls by is what the project bought** |
+
+**The trigger for a recompute already has a standard, so it is a receiver rather than an invention.** The continuous access evaluation profile, published on the standards track by the shared signals working group, defines event types an identity provider transmits and a receiver consumes so that access can be attenuated as things change.
+
+| Event type | What it means for the ABP |
+|---|---|
+| **Credential Change** | **The grant may have moved.** Recompute |
+| **Token Claims Change** | **The grant may have moved.** Recompute |
+| **Assurance Level Change** | A barrier may have moved |
+| **Device Compliance Change** | A barrier may have moved |
+| **Risk Level Change** | **Not ours.** That is the risk layer's input, not the ABP's |
+| **Session Revoked, Established, Presented** | Session lifecycle, below the ABP's altitude |
+
+> **Nothing here is wired, and one caveat travels with the citation.** The status of that specification could not be confirmed from its own page, which said standards track rather than final while sitting at a final address. It is named here because it is the right shape, and it should be checked before anybody cites it as settled.
+
+## What hooks to it, and the hazard
+
+Behaviours can be hooked to a derived delta: actions, the granting of a licence to operate and the removal of one. **That is where an ABP stops being a document.** It is also hazardous in a specific way: a computation error would revoke a licence.
+
+> **The delta crossing a threshold is a record. The consequence is a verdict.** So this site publishes the crossing, with its inputs and its computation version, and **the consequence is a policy the customer or the underwriter set in advance**, never a judgement the ABP makes. That keeps the ABP consequence agnostic while the automation is real, and it means any automatic suspension is traceable to a threshold somebody chose and a computation anybody can rerun.
+
+## The history is the business case, read rather than constructed
+
+Store the series and the business case stops being a document somebody writes. A control project has a date; the series has grants, mandates and deltas with dates; so the value of the project is a subtraction:
+
+> On 14 March the gateway was deployed. **Unbounded excess fell from thirty one to six. Excess was unchanged**, because the agent can still do the same things; what changed is that twenty five of them are now bounded by something it cannot reach.
+
+**That sentence contains no verdict, no score and no adjective**, and both ends of it are stored records with their inputs pinned, so it is checkable.
+
+| Use of the series | How soon it pays |
+|---|---|
+| **Justifying what was already bought** | The easiest, and the one every security team needs and cannot produce today |
+| **Pricing what to buy next** | The capabilities in unbounded excess, ordered by how many would move to the fourth barrier per control, is a list with an effect size on each row |
+| **Evidencing a condition over time** | Asking whether a control was in place throughout a period is a question about a series, not a snapshot. **A stored history answers it and a recomputed present cannot.** This is the one the old wording made impossible |
+
+## Three clocks, and the gap that is not ours
+
+| Clock | What it measures | Who controls it |
+|---|---|---|
+| The ABP's clock | When the grant was last measured or calibrated | Us, and it can run on events |
+| The twin's clock | When the twin last synchronised with the real environment | The customer's integration |
+| Reality's clock | Never stops | Nobody |
+
+**So an ABP is exactly as fresh as the twin, and the twin is exactly as fresh as its connection.** That is a parameter rather than a defect to hide, and it belongs on the label as part of the validity statement: as at this date, from a twin last synchronised at this date.
+
+**And the gap between the second clock and the third is a risk that [the risk layer](https://risks.sgit.ai/) accounts for**, which is the correct home for it, because how much that gap matters depends on the assets, and the ABP does not know the assets. [The twin](https://twins.sgit.ai/) is the interface to the real environment.
+
+## Drift is a neighbouring measurement, and the difference is the mandate
+
+The market has a word for a related phenomenon and it is drift. Products announced in September 2026 compare an agent's runtime behaviour against its authorised scope. **That is validation, and it sharpens the distinction rather than blurring it.**
+
+|  | What it compares | When you learn |
+|---|---|---|
+| **Behaviour drift** | What the agent **did** against what it was allowed to do | **After the action** |
+| **Capability excess** | What the agent **can do** against what it was authorised to do | **Before any action** |
+
+**You can only detect drift once an agent has drifted.** An ABP states that the drift is possible before it happens, which is a different thing and an earlier one in the sequence. **Both want a mandate, and the mandate is the scarce input**, which is the strongest reason to make eliciting it cheap and to publish the method.
+
+> **No adjective is attached to any named product on this site, and none is here.** Neither product was used or tested. One number from one of those announcements is worth keeping because it is somebody else's figure supporting this site's thesis: fifty seven per cent of enterprise identity is described as unseen and unmanaged. *You do not know what it can do*, said by somebody selling a different answer to it.
+
+## What is not settled
+
+- **What the recompute policy is**: on every event, on a schedule, on read, or a combination. It decides how much the receiver has to do.
+- **Who sets the thresholds a consequence hooks to**: the customer, the underwriter, or a default published here. All three have different shapes.
+- **How a calibration contribution is submitted without revealing the deployment**, since a correction to a capability row implies somebody runs that shape.
+- **Whether the shortfall matters commercially.** Capabilities in the mandate and not in the grant are a real finding and nobody has proposed anything against them.
+- **What happens to a stored delta whose computation version is superseded**: recomputed, marked, or left as the record of what was believed at the time. The third is the most honest and the least useful.
+
+[The full brief](../../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.md) · [The stored deltas](../../data/deltas/index.json) · [The four objects](../../model/index.md)
+
+---
+
+*[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/model/delta/index.html)*
+
+
+------------------------------------------------------------------------
+
 <!-- https://abp.sgit.ai/model/graph/index.html -->
 
 # The graph
 
 > The five published graph rules, what they force on this model, and the sentence test that decides whether the edges are right.
 
-*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2039,7 +2221,7 @@ The W3C has had a rights expression vocabulary since 2018: a policy carries perm
 
 > What is in the published files, what this site added to the data it promoted, and the two rules a consumer and a contributor each have to follow.
 
-*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2075,7 +2257,7 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 
 ## The two rules
 
-> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.1.0`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
+> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.2.0`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
 
 > **A proposal carries evidence.** Every node taken from a third party site carries a source URL, a retrieval timestamp and a content hash. A proposal that changes a capability row without one is an assertion, and this site publishes capability claims about named commercial products.
 
@@ -2094,7 +2276,7 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 
 > An Agent Behaviour Policy for chatGPT (in the browser, no connectors): a grant of 1, a mandate of 1, an excess of 0 and an unbounded excess of 0. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2166,9 +2348,9 @@ Everything the agent can do: **1 of 23** primitives. Ordered irreversible first,
 
 A mandate is elicited rather than measured, in minutes, because the deployer already knows it. This one was not: it is a first draft written to be argued with, authored 2026-09-09 by the site, as a starting point - not measured, not surveyed; the first thing to argue with. It authorises **1** primitives, refuses **14** and says nothing either way about **8**. [Propose a change to it](../../data/index.md).
 
-## 4. The delta, computed
+## 4. The delta, derived
 
-> **This delta was computed when this page was built, from the grant and the mandate, and it is not stored anywhere.** A stored delta is a stale claim about somebody's environment, and the environment is the thing that changes.
+> **This delta is derived and never authored.** Nobody wrote it. It is the output of a computation over the grant and the mandate, stored at [`/data/deltas/openai__chatgpt-web__default__chat-no-connectors.json`](../../data/deltas/openai__chatgpt-web__default__chat-no-connectors.json) with the version of both inputs pinned, the time it was computed and the version of the computation that produced it. **The release gate recomputes it on every build and fails on a single row of disagreement**, which is how a machine holds a rule that forbids the act rather than the artefact. [Why this changed this morning](../../model/delta/index.md).
 
 **Excess: 0.** In the grant and not in the mandate. That is the published definition and it is wider than the set the mandate refused outright: **0** were refused and **0** were never mentioned. A capability the mandate never mentioned was not authorised, and hiding the split would be the other kind of dishonesty.
 
@@ -2202,7 +2384,15 @@ The enforceable projection of the delta: one sentence per excess capability, eac
 
 > **This is not an assessment.** Nothing here is an audit, a certification, a compliance assessment or a security review of any named product. It is an illustration of a method, using a published configuration, and every row carries its source, its date and whether it was measured or derived. No adjective is attached to any of it, and there is no score.
 
-> **Validity.** This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+> **Validity.** This describes the deployment shape as at 11 September 2026, from a twin last synchronised at no twin: these shapes are published profiles, not a synchronised environment. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+
+**Three clocks, and only the first is ours.** An ABP is exactly as fresh as the twin, and the twin is exactly as fresh as its connection to somebody else's systems. That is a parameter rather than a defect to hide, and the gap between the second clock and the third belongs to the risk layer, because how much it matters depends on the assets.
+
+| Clock | What it measures | Who controls it |
+|---|---|---|
+| The ABP's clock | When the grant was last measured or calibrated | Us, and it can run on events |
+| The twin's clock | When the twin last synchronised with the real environment | The customer's integration |
+| Reality's clock | Never stops | Nobody |
 
 ## Follow one capability through the model
 
@@ -2225,7 +2415,7 @@ agent [`chatgpt-web-no-connectors`](../../examples/chatgpt-web-no-connectors/ind
 
 > An Agent Behaviour Policy for claude Code (the CLI, on your own machine): a grant of 16, a mandate of 5, an excess of 12 and an unbounded excess of 12. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2311,9 +2501,9 @@ A mandate is elicited rather than measured, in minutes, because the deployer alr
 | [`write.repository.tenant`](../../model/capabilities/write.repository.tenant/index.md) | left unstated on purpose: some people want it to push, some do not, and the mandate should not pretend to know |
 | [`send.endpoint.world`](../../model/capabilities/send.endpoint.world/index.md) | unstated: the want is 'the hosts it needs', which is the allowed-list capability; whether the whole internet is acceptable is a real decision |
 
-## 4. The delta, computed
+## 4. The delta, derived
 
-> **This delta was computed when this page was built, from the grant and the mandate, and it is not stored anywhere.** A stored delta is a stale claim about somebody's environment, and the environment is the thing that changes.
+> **This delta is derived and never authored.** Nobody wrote it. It is the output of a computation over the grant and the mandate, stored at [`/data/deltas/anthropic__claude-code__local-default__coding-assistant-on-my-machine.json`](../../data/deltas/anthropic__claude-code__local-default__coding-assistant-on-my-machine.json) with the version of both inputs pinned, the time it was computed and the version of the computation that produced it. **The release gate recomputes it on every build and fails on a single row of disagreement**, which is how a machine holds a rule that forbids the act rather than the artefact. [Why this changed this morning](../../model/delta/index.md).
 
 **Excess: 12.** In the grant and not in the mandate. That is the published definition and it is wider than the set the mandate refused outright: **10** were refused and **2** were never mentioned. A capability the mandate never mentioned was not authorised, and hiding the split would be the other kind of dishonesty.
 
@@ -2360,7 +2550,15 @@ The enforceable projection of the delta: one sentence per excess capability, eac
 
 > **This is not an assessment.** Nothing here is an audit, a certification, a compliance assessment or a security review of any named product. It is an illustration of a method, using a published configuration, and every row carries its source, its date and whether it was measured or derived. No adjective is attached to any of it, and there is no score.
 
-> **Validity.** This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+> **Validity.** This describes the deployment shape as at 11 September 2026, from a twin last synchronised at no twin: these shapes are published profiles, not a synchronised environment. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+
+**Three clocks, and only the first is ours.** An ABP is exactly as fresh as the twin, and the twin is exactly as fresh as its connection to somebody else's systems. That is a parameter rather than a defect to hide, and the gap between the second clock and the third belongs to the risk layer, because how much it matters depends on the assets.
+
+| Clock | What it measures | Who controls it |
+|---|---|---|
+| The ABP's clock | When the grant was last measured or calibrated | Us, and it can run on events |
+| The twin's clock | When the twin last synchronised with the real environment | The customer's integration |
+| Reality's clock | Never stops | Nobody |
 
 ## Follow one capability through the model
 
@@ -2383,7 +2581,7 @@ agent [`claude-code-cli-confirmations-enabled`](../../examples/claude-code-cli-c
 
 > An Agent Behaviour Policy for claude Code (the CLI, on your own machine): a grant of 16, a mandate of 5, an excess of 12 and an unbounded excess of 12. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2469,9 +2667,9 @@ A mandate is elicited rather than measured, in minutes, because the deployer alr
 | [`write.repository.tenant`](../../model/capabilities/write.repository.tenant/index.md) | left unstated on purpose: some people want it to push, some do not, and the mandate should not pretend to know |
 | [`send.endpoint.world`](../../model/capabilities/send.endpoint.world/index.md) | unstated: the want is 'the hosts it needs', which is the allowed-list capability; whether the whole internet is acceptable is a real decision |
 
-## 4. The delta, computed
+## 4. The delta, derived
 
-> **This delta was computed when this page was built, from the grant and the mandate, and it is not stored anywhere.** A stored delta is a stale claim about somebody's environment, and the environment is the thing that changes.
+> **This delta is derived and never authored.** Nobody wrote it. It is the output of a computation over the grant and the mandate, stored at [`/data/deltas/anthropic__claude-code__local-confirmations-off__coding-assistant-on-my-machine.json`](../../data/deltas/anthropic__claude-code__local-confirmations-off__coding-assistant-on-my-machine.json) with the version of both inputs pinned, the time it was computed and the version of the computation that produced it. **The release gate recomputes it on every build and fails on a single row of disagreement**, which is how a machine holds a rule that forbids the act rather than the artefact. [Why this changed this morning](../../model/delta/index.md).
 
 **Excess: 12.** In the grant and not in the mandate. That is the published definition and it is wider than the set the mandate refused outright: **10** were refused and **2** were never mentioned. A capability the mandate never mentioned was not authorised, and hiding the split would be the other kind of dishonesty.
 
@@ -2518,7 +2716,15 @@ The enforceable projection of the delta: one sentence per excess capability, eac
 
 > **This is not an assessment.** Nothing here is an audit, a certification, a compliance assessment or a security review of any named product. It is an illustration of a method, using a published configuration, and every row carries its source, its date and whether it was measured or derived. No adjective is attached to any of it, and there is no score.
 
-> **Validity.** This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+> **Validity.** This describes the deployment shape as at 11 September 2026, from a twin last synchronised at no twin: these shapes are published profiles, not a synchronised environment. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+
+**Three clocks, and only the first is ours.** An ABP is exactly as fresh as the twin, and the twin is exactly as fresh as its connection to somebody else's systems. That is a parameter rather than a defect to hide, and the gap between the second clock and the third belongs to the risk layer, because how much it matters depends on the assets.
+
+| Clock | What it measures | Who controls it |
+|---|---|---|
+| The ABP's clock | When the grant was last measured or calibrated | Us, and it can run on events |
+| The twin's clock | When the twin last synchronised with the real environment | The customer's integration |
+| Reality's clock | Never stops | Nobody |
 
 ## Follow one capability through the model
 
@@ -2541,7 +2747,7 @@ agent [`claude-code-cli-confirmations-disabled`](../../examples/claude-code-cli-
 
 > An Agent Behaviour Policy for A browser extension with broad host permissions: a grant of 3, a mandate of 1, an excess of 2 and an unbounded excess of 2. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2618,9 +2824,9 @@ A mandate is elicited rather than measured, in minutes, because the deployer alr
 |---|---|
 | [`read.record.browsing`](../../model/capabilities/read.record.browsing/index.md) | the want is 'the sites I chose'; the grant is every page - the same capability at two different reaches, which is what the reduction ('on click, or on a list of sites') narrows |
 
-## 4. The delta, computed
+## 4. The delta, derived
 
-> **This delta was computed when this page was built, from the grant and the mandate, and it is not stored anywhere.** A stored delta is a stale claim about somebody's environment, and the environment is the thing that changes.
+> **This delta is derived and never authored.** Nobody wrote it. It is the output of a computation over the grant and the mandate, stored at [`/data/deltas/generic__browser-extension__broad-host-permissions__browser-extension-i-installed.json`](../../data/deltas/generic__browser-extension__broad-host-permissions__browser-extension-i-installed.json) with the version of both inputs pinned, the time it was computed and the version of the computation that produced it. **The release gate recomputes it on every build and fails on a single row of disagreement**, which is how a machine holds a rule that forbids the act rather than the artefact. [Why this changed this morning](../../model/delta/index.md).
 
 **Excess: 2.** In the grant and not in the mandate. That is the published definition and it is wider than the set the mandate refused outright: **2** were refused and **0** were never mentioned. A capability the mandate never mentioned was not authorised, and hiding the split would be the other kind of dishonesty.
 
@@ -2657,7 +2863,15 @@ The enforceable projection of the delta: one sentence per excess capability, eac
 
 > **This is not an assessment.** Nothing here is an audit, a certification, a compliance assessment or a security review of any named product. It is an illustration of a method, using a published configuration, and every row carries its source, its date and whether it was measured or derived. No adjective is attached to any of it, and there is no score.
 
-> **Validity.** This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+> **Validity.** This describes the deployment shape as at 11 September 2026, from a twin last synchronised at no twin: these shapes are published profiles, not a synchronised environment. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+
+**Three clocks, and only the first is ours.** An ABP is exactly as fresh as the twin, and the twin is exactly as fresh as its connection to somebody else's systems. That is a parameter rather than a defect to hide, and the gap between the second clock and the third belongs to the risk layer, because how much it matters depends on the assets.
+
+| Clock | What it measures | Who controls it |
+|---|---|---|
+| The ABP's clock | When the grant was last measured or calibrated | Us, and it can run on events |
+| The twin's clock | When the twin last synchronised with the real environment | The customer's integration |
+| Reality's clock | Never stops | Nobody |
 
 ## Follow one capability through the model
 
@@ -2680,7 +2894,7 @@ agent [`browser-extension-broad-host-permissions`](../../examples/browser-extens
 
 > An Agent Behaviour Policy for actions runner (a hosted CI job): a grant of 8, a mandate of 5, an excess of 4 and an unbounded excess of 3. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2764,9 +2978,9 @@ A mandate is elicited rather than measured, in minutes, because the deployer alr
 | [`write.repository.tenant`](../../model/capabilities/write.repository.tenant/index.md) | deliberately in the mandate: most release workflows push a tag, and this profile's token is contents:read - so this row is a shortfall, and the kind the game calls 'a gap you were counting on' |
 | [`delete.file.host`](../../model/capabilities/delete.file.host/index.md) | unstated: the runner is destroyed after the job |
 
-## 4. The delta, computed
+## 4. The delta, derived
 
-> **This delta was computed when this page was built, from the grant and the mandate, and it is not stored anywhere.** A stored delta is a stale claim about somebody's environment, and the environment is the thing that changes.
+> **This delta is derived and never authored.** Nobody wrote it. It is the output of a computation over the grant and the mandate, stored at [`/data/deltas/github__actions-runner__ci__ci-job.json`](../../data/deltas/github__actions-runner__ci__ci-job.json) with the version of both inputs pinned, the time it was computed and the version of the computation that produced it. **The release gate recomputes it on every build and fails on a single row of disagreement**, which is how a machine holds a rule that forbids the act rather than the artefact. [Why this changed this morning](../../model/delta/index.md).
 
 **Excess: 4.** In the grant and not in the mandate. That is the published definition and it is wider than the set the mandate refused outright: **0** were refused and **4** were never mentioned. A capability the mandate never mentioned was not authorised, and hiding the split would be the other kind of dishonesty.
 
@@ -2805,7 +3019,15 @@ The enforceable projection of the delta: one sentence per excess capability, eac
 
 > **This is not an assessment.** Nothing here is an audit, a certification, a compliance assessment or a security review of any named product. It is an illustration of a method, using a published configuration, and every row carries its source, its date and whether it was measured or derived. No adjective is attached to any of it, and there is no score.
 
-> **Validity.** This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+> **Validity.** This describes the deployment shape as at 11 September 2026, from a twin last synchronised at no twin: these shapes are published profiles, not a synchronised environment. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.
+
+**Three clocks, and only the first is ours.** An ABP is exactly as fresh as the twin, and the twin is exactly as fresh as its connection to somebody else's systems. That is a parameter rather than a defect to hide, and the gap between the second clock and the third belongs to the risk layer, because how much it matters depends on the assets.
+
+| Clock | What it measures | Who controls it |
+|---|---|---|
+| The ABP's clock | When the grant was last measured or calibrated | Us, and it can run on events |
+| The twin's clock | When the twin last synchronised with the real environment | The customer's integration |
+| Reality's clock | Never stops | Nobody |
 
 ## Follow one capability through the model
 
@@ -2828,7 +3050,7 @@ agent [`github-actions-hosted-runner`](../../examples/github-actions-hosted-runn
 
 > Five Agent Behaviour Policies, one per deployment shape, derived from published data rather than authored. Each states which of its rows were measured and which were derived, and none carries a score.
 
-*Source: <https://abp.sgit.ai/examples/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2893,7 +3115,7 @@ Nobody knows what an ABP costs to produce, and the store has to price one. So th
 
 > The capabilities, barriers, undo classes, deployment shapes and mandates an ABP is written in, as JSON at stable addresses with cross origin access, with the source bytes they were promoted from.
 
-*Source: <https://abp.sgit.ai/data/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/data/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2905,7 +3127,7 @@ below point at them.*
 
 The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4 barriers**, **3 undo classes**, **9 deployment shapes** and **8 starting mandates**, at stable addresses with cross origin access.
 
-> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.1.0`.
+> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.2.0`.
 
 ## Where it came from, and what that obliges
 
@@ -2940,15 +3162,22 @@ The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4
 | [`/data/evidence-tiers.json`](../data/evidence-tiers.json) | evidence tiers |
 | [`/data/profiles/index.json`](../data/profiles/index.json) | profiles |
 | [`/data/mandates/index.json`](../data/mandates/index.json) | mandates |
+| [`/data/deltas/index.json`](../data/deltas/index.json) | deltas |
 | [`/data/provenance.json`](../data/provenance.json) | provenance |
 | [`/data/upstream/pack.json`](../data/upstream/pack.json) | upstream |
+
+## The deltas, which are here on purpose
+
+**9 stored deltas**, one per deployment shape and mandate pair, at [`/data/deltas/index.json`](../data/deltas/index.json). Derived and never authored. Stored under deltas/, each record pinning the version of both inputs and the time and code version that produced it. No field in one is writable by a person: change a grant or a mandate and recompute. Corrected from `computed and never stored` on 11 September 2026; the brief is in /docs/briefs/. [What that means and why it changed](../model/delta/index.md).
+
+> **The release gate recomputes every stored delta on every build** from the profile and the mandate it names, and fails on a single row of disagreement. That is how a machine holds `never authored': the rule forbids the act rather than the artefact, and a hand edited delta is a fiction nothing downstream could detect.
 
 ## What is deliberately not in these files
 
 | Not here | Why |
 |---|---|
-| **A delta** | A delta is computed from a grant and a mandate every time it is needed and never stored. A stored delta is a stale claim about somebody's environment. |
 | **A score** | There is no score, rating, traffic light, risk level or severity in this pack or anywhere on this site. A score is a verdict and the ABP describes without judging. |
+| **A consequence** | A delta crossing a threshold is a record. What follows from it is a policy somebody set in advance, and it is not in this pack. |
 
 ## Proposing a change
 
@@ -2975,7 +3204,7 @@ The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4
 
 > version v0.33.70 date 11 September 2026 from Dinis Cruz to Anyone deploying an agent, anyone building one, and anyone who has to sign for one
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3202,7 +3431,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever models the graph, whoever builds the renderer, and whoever compiles the prohibitions into something that enforces them
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3423,13 +3652,301 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 ------------------------------------------------------------------------
 
+<!-- https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html -->
+
+# The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case
+
+> version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published
+
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html> · site v0.2.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../../index.md) / [Docs](../../../docs/index.md) / [The briefs](../../../docs/index.md#briefs) / The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case
+
+# The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case
+
+> **The source bytes.** This page is generated from [`docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case.md`](../../../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case.md), which is served unchanged. Anything rendered on this network stays one click from the file it came from.
+
+**version** v0.33.70 **date** 11 September 2026 **from** Human (project lead) **to** Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published
+
+**type** Dev brief (a correction to a published formulation, and the specification it turns into)
+
+*Fifth of 11 September, and the first document in this corpus written to correct one already pushed. The foundation document published earlier today carries the sentence that the delta is computed and never stored, twice. The project lead's correction is that the second half is wrong and the first half was the point. This brief states the correction, gives the replacement wording verbatim so it can be pasted, and then works out what follows, which is more than a wording change. Both the corpus and the outside were searched. The outside search found a standard for the event that triggers a recompute, and a product announced two days ago that measures a neighbouring thing and thereby sharpens what this one measures. Limitations: nothing here is built; the calibration loop has a collection problem that is named and not solved; and one specification's status could not be confirmed from its own page.*
+
+## What This Is
+
+The correction of one phrase in a published document, and the specification that the corrected phrase turns out to require: **the foundation document states that the delta is computed and never stored, on the reasoning that a stored delta is a claim about an environment on a day that has passed; the project lead's correction is that computed was the whole point and never stored was an error, because the delta belongs in a vault along with the history of the grants and the mandates that produced it, since both of those are interpretive and improve over time as the customer says what they actually meant and as more of what the agent can do is discovered, because reality is the calibrator, in that something happening which is not in the grant means the grant was incomplete and something being blocked which the grant said was possible means a barrier was missed; the power of a computed delta is a direct consequence of holding the grant and the mandate as graphs with a schema and an ontology that can be calculated against, which is the underlying capability, because all of this can be done manually today and almost nobody does it, and a programmatic delta is not a given; a computed delta reacts to changes in either input without anybody touching it, which means behaviours can be hooked to it, including actions, consequences, the granting of a licence to operate and the removal of one, so that a newly discovered weakness or a quietly widened credential moves the agent outside the authorised set without a human noticing; and the history matters commercially, because a project that introduces a control reduces the grant and therefore the delta, and that before and after is the business case, read off a series rather than constructed; the first finding is that the correct formulation is that the delta is derived and never authored, which keeps everything the original ruling was protecting while removing the error, and that the thing being described already has a name in computing, being a materialised view, stored for use, refreshed from its inputs, never hand edited, and carrying its own staleness; the second is that reality is a third input alongside the grant and the mandate, and the calibration loop it creates is the answer to the honest weakness in the published document, which is that twenty one of ninety nine capability rows are measured and the rest derived; the third is that the event which triggers a recompute has an existing standard with defined event types, so the recompute trigger is a receiver rather than an invention; the fourth is that a product announced on 9 September 2026 detects drift between an agent's runtime behaviour and its authorised scope, which is a neighbouring measurement and makes the distinction sharp, because behaviour drift is detected after an action and capability excess exists before any action; and the fifth is that hooking a consequence to a computed value is powerful and hazardous, and the estate's own rule resolves it, because the delta crossing a threshold is a record and the consequence is a policy somebody set in advance.** New contributions: **the correction with replacement wording; reality as the third input and the calibration loop; the recompute trigger mapped onto an existing standard; the history as a business case read rather than constructed; the three clocks and the gap the risk layer accounts for; the distinction from behaviour drift; and the collection problem the loop creates against a product that promises not to phone home.**
+
+## The Correction
+
+**The published foundation document says this, in two places.**
+
+In the four objects table:
+
+> **The delta.** Computed. Never stored, because the deployment changes.
+
+And in the body:
+
+> **The delta is computed and never stored.** A stored delta is a claim about somebody's environment on a day that has passed. The environment is the thing that changes, so the delta is recomputed from the grant and the mandate every time it is needed.
+
+**The first half is right and the second half is wrong.** The delta is computed. It is also stored, and storing it is most of what makes it useful.
+
+**The replacement wording, for the table:**
+
+> **The delta.** Derived. Recomputed whenever the grant or the mandate changes, stored with the versions of both, and never edited by hand.
+
+**The replacement wording, for the body:**
+
+> **The delta is derived and never authored.** Nobody writes a delta. It is only ever the output of a computation over the grant and the mandate, and it is stored along with the versions of both inputs and the time it was computed. That is what makes it checkable rather than stale: a stored delta that carries its inputs can be recomputed and compared, and one that carries no inputs is the claim the older wording was afraid of. **What must never happen is that somebody edits a delta**, because a hand edited delta is a fiction about an environment, and nothing downstream could tell.
+
+## What The Old Ruling Was Protecting, And What Survives
+
+**Being fair to the sentence being corrected: it was guarding against three real things, and all three survive the correction.**
+
+| The fear | Does the correction still handle it |
+|---|---|
+| A delta becomes a stale claim about somebody's environment | **Yes.** A stored delta carries the versions of its inputs and the time it was computed, so its staleness is a fact rather than a surprise |
+| A delta gets hand edited into a fiction | **Yes, and more strongly.** Never authored is a harder rule than never stored, because it forbids the act rather than the artefact |
+| A delta is treated as authoritative after the inputs move | **Yes.** It reacts. A recompute is cheap because the inputs are graphs |
+
+**So the correction loses nothing and gains the history.**
+
+**And this is the fourth instance of a pattern already in force across the estate**, which is worth noticing because it means the corrected sentence is the one that fits and the old one was the odd one out:
+
+- **Indexes are generated from the data they index**, so they cannot disagree with the source. Stored, derived, never authored.
+- **Prose is derived from the graph and never hand edited**, which was the renderer rule of this morning's second brief.
+- **A software bill of materials is generated from the dependency files** rather than asserted, which was the finding in the findability brief of 10 September.
+- **The delta is derived from the grant and the mandate** and never authored.
+
+**In every case the artefact is stored. What is forbidden is writing it.**
+
+## The Word For This Already Exists
+
+**A stored result of a computation over other data, refreshed when its inputs change, never edited directly, is a materialised view.** The vocabulary is decades old and it carries exactly the right properties: it exists for use, it has a refresh policy, its staleness is knowable, and writing to it directly is a category error rather than a permission question.
+
+**The related pair is worth naming too.** The grant and the mandate are the event sourced side: an append only history of what changed and when. The delta is the read model computed from them. **That is the same shape as the estate's own published pattern in two places, where a story is a graph and an article is a projection, and where briefs are arguments and infographics are projections.** The delta is a projection of the ABP graph, and so is the label, and so is the leaflet.
+
+**Practical consequence for the model: the delta gets a stored record with a fixed shape.**
+
+| Field | Why |
+|---|---|
+| `grant_version` | The input, pinned |
+| `mandate_version` | The input, pinned |
+| `computed_at` | When |
+| `computed_by` | Which version of the computation, because the computation is code and code changes |
+| `excess` | Capabilities in the grant and not in the mandate |
+| `unbounded_excess` | Excess whose barrier is one of the first three kinds |
+| `shortfall` | Capabilities in the mandate and not in the grant |
+
+**No field in that record is writable by a person.** The way to change a delta is to change a grant or a mandate.
+
+## Reality Is The Third Input
+
+**This is the part of the correction that is not a wording change.**
+
+The grant is a model of what the agent can do. The mandate is a statement of what somebody meant. **Both are interpretations, and both improve.** The customer says *what I actually meant was this*, and the mandate sharpens. Somebody discovers a capability nobody had listed, and the grant grows.
+
+**And reality calibrates both.**
+
+| What is observed | What it tells you |
+|---|---|
+| Something happened that is not in the grant | **The grant was incomplete.** Add the capability |
+| Something was blocked that the grant said was possible | **A barrier was missed**, or recorded at the wrong kind. Correct it |
+| Something in the mandate never happens | Either the mandate is aspirational, or the capability is missing and the shortfall is real |
+| Something happens repeatedly that is in the grant and not in the mandate | **The mandate is wrong, or the deployment is.** This is the interesting one and it is the only case where the observation does not say which |
+
+**That last row is worth dwelling on, because it is the one place a computed delta cannot resolve itself.** An agent doing something outside its mandate, repeatedly, without anybody complaining, means either that the mandate was written too narrowly or that something is happening nobody authorised. **The ABP publishes the observation. Which of the two it is belongs to the risk layer and to a person.** Record, not verdict, again.
+
+**And the calibration loop is the answer to the published document's honest weakness.** Twenty one of ninety nine capability rows are measured and the rest are derived from documentation. **Every deployment that runs and reports back is an experiment that moves a row from derived to measured**, and because the capability map is shared and public, it moves for everybody. **That is a network effect and it is the reason the map should stay in the open repository rather than inside a product.**
+
+## The Delta Reacts, And The Trigger Has A Standard
+
+**Because the delta is derived, a change in either input propagates without anybody touching the document.** That is the property a template cannot have and a rendered document cannot have, and it is the strongest differentiator yet, stronger than derived from your deployment, because it is *continuously* derived.
+
+**Three worked cases.**
+
+**A weakness is disclosed in a tool the agent can call.** Nothing about the deployment changed. But a capability that was recorded at the fourth barrier, a boundary enforced above the agent, is now at the first. **The grant is the same and the unbounded excess jumps.** The ABP changes because the world did.
+
+**A credential is quietly widened.** Somebody adds a scope to a token to fix an unrelated problem. The grant grows, the mandate does not, and the excess grows by exactly the capabilities that scope carries. **Nobody involved thought they were changing a policy.**
+
+**A control ships.** A gateway is deployed with default deny. A set of capabilities move from the second barrier to the fourth. **Unbounded excess falls, and the number it falls by is what the project bought.**
+
+**The trigger for a recompute already has a standard, and the estate should receive rather than invent one.** The continuous access evaluation profile, published 29 August 2025 on the standards track by the shared signals working group, defines event types transmitted by an identity provider and consumed by a receiver so that access can be attenuated as things change. Its own framing is that transmitters send continuous updates which receivers use to attenuate access for human or robotic users, devices, sessions and applications.
+
+| Event type | What it means for the ABP |
+|---|---|
+| **Credential Change** | **The grant may have moved.** Recompute |
+| **Token Claims Change** | **The grant may have moved.** Recompute |
+| **Assurance Level Change** | A barrier may have moved |
+| **Device Compliance Change** | A barrier may have moved |
+| **Risk Level Change** | Not ours. This is the risk layer's input, not the ABP's |
+| **Session Revoked, Established, Presented** | Session lifecycle, below the ABP's altitude |
+
+**So the recompute trigger is a receiver for two or three event types, and the rest is the graph.** That is a small build and it is standards shaped. **The status of that specification could not be confirmed from its own page**, which said standards track rather than final while sitting at a final address, and somebody should check before it is cited publicly.
+
+## What Hooks To It, And The Hazard
+
+**The project lead's point is that behaviours can be hooked to the delta: actions, consequences, the granting of a licence to operate and its removal.** That is right and it is where the ABP stops being a document.
+
+**And it is hazardous in a specific way: a computation error would revoke a licence.** The estate's own rule resolves it cleanly.
+
+**The delta crossing a threshold is a record. The consequence is a verdict.** So the ABP publishes the crossing, with its inputs and its computation version, and **the consequence is a policy that the customer or the underwriter set in advance**, not a judgement the ABP makes. That keeps the ABP consequence agnostic while making the automation real, and it means an automatic suspension is always traceable to a threshold somebody chose and a computation anybody can rerun.
+
+**One elegant fit worth recording.** The statute analysed in this morning's third brief already provides for exactly this shape: a warranty breach **suspends** cover for losses occurring after the breach and before it is remedied, rather than discharging the contract. **A continuously computed delta is a thing that can trigger a suspensive condition and evidence it**, and remedy is visible in the same series. Nobody has to notice. That is a better fit between a statutory mechanism and a data structure than anything else in this estate.
+
+## The History Is The Business Case, Read Rather Than Constructed
+
+**Store the series and the business case stops being a document somebody writes.**
+
+A control project has a date. The series has grants, mandates and deltas with dates. So the value of the project is a subtraction:
+
+> On 14 March the gateway was deployed. Unbounded excess fell from thirty one to six. Excess was unchanged, because the agent can still do the same things; what changed is that twenty five of them are now bounded by something it cannot reach.
+
+**That sentence contains no verdict, no score and no adjective, and it is the strongest thing a security team can take to a budget conversation.** It is also checkable, because both ends of it are stored records with their inputs pinned.
+
+**Three uses of the series, in order of how soon they pay.**
+
+**Justifying what was already bought**, which is the easiest and the one every security team needs and cannot produce today.
+
+**Pricing what to buy next.** The capabilities in unbounded excess, ordered by how many would move to the fourth barrier per control, is a shopping list with an effect size on each row.
+
+**Evidencing a condition over time.** An underwriter or an auditor asking whether a control was in place throughout a period is asking a question about a series, not about a snapshot. **A stored history answers it and a recomputed present cannot.** This is the strongest argument of the three and it is the one the old wording made impossible.
+
+## Three Clocks, And The Gap That Belongs To The Risk Layer
+
+**The project lead's last point is the honest limit and it should be written down as three clocks.**
+
+| Clock | What it measures | Who controls it |
+|---|---|---|
+| **The ABP's clock** | When the grant was last measured or calibrated | Us, and it can be fast |
+| **The twin's clock** | When the twin last synchronised with the real environment | The customer's integration |
+| **Reality's clock** | Never stops | Nobody |
+
+**Inside the vault and the graph, the first clock can run in near real time on events.** The second is a connection to somebody else's systems and its latency is a property of their estate, not of our software. **The third does not wait.**
+
+**So the ABP is exactly as fresh as the twin, and the twin is exactly as fresh as its connection.** That is not a defect to hide. It is a parameter, and it belongs on the label as part of the validity statement: **as at this date, from a twin last synchronised at this date.**
+
+**And the gap between the second and third clocks is a risk that the risk layer accounts for**, which is the correct home for it, because how much that gap matters depends on the assets, and the ABP does not know the assets.
+
+## Drift Is A Neighbouring Measurement, And The Difference Is The Mandate
+
+**A product announced on 9 September 2026, two days ago, detects what it calls identity drift for agents**, comparing an agent's runtime behaviour against its original purpose and authorised scope, and triggering responses including reducing permissions, revoking credentials, disconnecting tools and application level kill switches. Another large vendor has announced continuous identity for agents. **The market has a word for the phenomenon and it is drift.**
+
+**This is validation and it sharpens the distinction rather than blurring it.**
+
+|  | What it compares | When you learn |
+|---|---|---|
+| **Behaviour drift** | What the agent **did** against what it was allowed to do | **After the action** |
+| **Capability excess** | What the agent **can do** against what it was authorised to do | **Before any action** |
+
+**You can only detect drift once an agent has drifted.** The ABP states that the drift is possible before it happens, which is a different product and an earlier one in the sequence. **Both want a mandate, and the mandate is the scarce input**, which is the strongest reason to make eliciting it cheap and to publish the method.
+
+**One datum from that announcement is worth keeping**, because it is a competitor's own number supporting the thesis of the published foundation document: **fifty seven per cent of enterprise identity is described as unseen and unmanaged.** You do not know what it can do, said by somebody selling a different answer to it.
+
+## The Collection Problem This Creates
+
+**The calibration loop needs observation, and the toolkit brief of 10 September rules that the downloadable builds never transmit anything.** Those are in tension and the tension should be resolved now rather than in month three.
+
+**The resolution is that calibration happens inside the customer's own instance.** Their deployment observes, their grant improves, their delta recomputes, and none of it leaves.
+
+**What comes back to the shared map is a contribution, not telemetry**: a proposed correction to a capability row, carrying its evidence, submitted deliberately through the same mechanism as any other proposal to the public data files, with a source, a timestamp and a hash. **A person decides to send it. Nothing phones home.**
+
+**That keeps both promises**, and it means the shared map improves at the speed of deliberate contribution rather than at the speed of collection. **Slower, and it is the only version that is honest.**
+
+## What This Does Not Try To Be
+
+- **A schema.** The delta record's fields are listed. No file format, no identifier scheme and no storage layout is specified.
+- **A recompute implementation.** The trigger is mapped onto existing event types. Nothing is wired.
+- **A competitive analysis.** Two products are named from announcements read on one day, to draw one distinction. Neither was used or tested.
+- **A rewrite of the published document.** Two passages are quoted and two replacements are given. Everything else in that document stands.
+- **A decision about the consequence hooks.** The hazard is named and the shape of the safe version is given. What thresholds, set by whom, is not answered.
+
+## Honest Tensions
+
+| Tension | Note |
+|---|---|
+| Correcting a published document | It is the estate's method, and it is the third correction issued in two days |
+| Storing the delta | It makes the history and the business case possible, and it creates an artefact that can be quoted out of date |
+| Reality as an input | It is what makes the grant improve, and it requires observing something we have promised not to observe |
+| Hooking consequences | It makes the ABP operational, and a computation error becomes an outage |
+| The three clocks | It is honest, and it tells a buyer their ABP is only as fresh as an integration they have not built |
+| Publishing the calibration loop openly | It improves the map for everybody including competitors, and the map being shared is what makes it worth calibrating |
+| Drift is a neighbouring product | The distinction is real and earlier in the sequence, and a buyer with a drift tool will believe they already have this |
+
+## Open Questions
+
+1. **What is the recompute policy?** On every event, on a schedule, on read, or a combination. It decides how much the receiver has to do.
+2. **Is the specification final?** Its own page says standards track at a final address, and it should be checked before being cited publicly.
+3. **Who sets the thresholds that consequences hook to?** The customer, the underwriter, or a default we publish. All three have different liability shapes.
+4. **How is a calibration contribution submitted without revealing the deployment?** A correction to a capability row implies somebody runs that shape.
+5. **Does the shortfall matter commercially?** Capabilities in the mandate and not in the grant are a real finding and nobody has proposed selling anything against them.
+6. **What happens to a stored delta whose computation version is superseded?** Recomputed, marked, or left as the record of what was believed at the time. The third is the most honest and the least useful.
+7. **Can the series be published without the deployment?** The business case sentence is compelling and it describes a customer's estate.
+
+## Relationship To Previous Briefs
+
+**From the foundation document published earlier today**, it corrects two passages and leaves the rest standing, including the four objects, the four barriers and the rule that the ABP describes and does not judge.
+
+**From this morning's second brief**, it takes the projection pattern and finds that the delta is a projection too, alongside the label and the leaflet.
+
+**From this morning's third brief**, it takes the suspensive condition under the statute, and finds that a continuously computed delta is the thing that can trigger one and evidence it.
+
+**From the toolkit brief of 10 September**, it takes the rule that the offline builds do not transmit, and resolves the tension that the calibration loop creates against it.
+
+**From the vault architecture brief of 10 September**, it takes the customer's data vault as the home for the series, and the pinning rule that a consumer states the versions it computed against.
+
+**From the findability brief of 10 September**, it takes the derived rather than asserted principle and records this as the fourth instance of it.
+
+**From the ruling of 20 August**, it takes publish the record and never the verdict, and applies it to the one place where automation would otherwise make the estate a decision maker.
+
+## Key Claims
+
+| # | Claim |
+|---|---|
+| 1 | The published wording is wrong in half: the delta is computed, and it is also stored |
+| 2 | The correct formulation is that the delta is derived and never authored, which forbids the act rather than the artefact |
+| 3 | Everything the old ruling protected survives, because a stored delta carries its inputs, their versions and the time it was computed |
+| 4 | It is a materialised view, and the estate already applies the same pattern to indexes, prose and bills of materials |
+| 5 | Reality is a third input, because something happening that is not in the grant means the grant was incomplete |
+| 6 | The calibration loop is the answer to twenty one measured rows of ninety nine, and it improves the shared map for everybody |
+| 7 | A derived delta reacts to a change in either input without anybody touching the document, which no template can do |
+| 8 | The recompute trigger has an existing standard with defined event types, so it is a receiver rather than an invention |
+| 9 | A threshold crossing is a record and the consequence is a policy somebody set in advance, which keeps the ABP consequence agnostic while the automation is real |
+| 10 | A continuously computed delta can trigger and evidence a suspensive condition, which is the statutory mechanism analysed this morning |
+| 11 | The history makes the business case a subtraction that is read rather than constructed, and it is the only way to evidence a control over a period |
+| 12 | Behaviour drift is detected after an action and capability excess exists before any action, and both need a mandate that only one of them elicits |
+
+## Sources
+
+All read 11 September 2026.
+
+**Inside the estate.** The foundation document published earlier today. The capability map with its nine profiles, twenty three primitives, four barriers and its statement that twenty one of ninety nine rows were measured, at https://what-can-it-do.games.sgit.ai/map/index.html. The graph rules at https://graphs.sgit.ai/. The site building guidance, for the rule that indexes are generated from the data they index, at https://sgit.ai/docs/guidance/index.html. The three briefs of this morning and the toolkit, vault architecture and findability briefs of 10 September.
+
+**The recompute trigger.** The continuous access evaluation profile at https://openid.net/specs/openid-caep-1_0-final.html, dated 29 August 2025, whose own page described it as standards track rather than final and whose status should be confirmed before public citation. The working group at https://openid.net/wg/sharedsignals/ and its specification list at https://openid.net/wg/sharedsignals/specifications/.
+
+**The neighbouring measurement.** The drift detection and kill switch announcement of 9 September 2026 at https://www.helpnetsecurity.com/2026/09/09/orchid-security-ai-agents-application-level-kill-switches/ and https://www.globenewswire.com/news-release/2026/09/09/3358716/0/en/orchid-security-adds-ai-readiness-controls-identity-drift-detection-and-application-level-kill-switches-for-ai-agents.html, including the figure that fifty seven per cent of enterprise identity is unseen and unmanaged. The continuous identity announcement at https://www.crowdstrike.com/en-us/press-releases/crowdstrike-unveils-continuous-identity-for-ai-agents/. Neither product was used or tested and no adjective is attached to either.
+
+**The statutory mechanism.** Section 10 of the Insurance Act 2015 at https://www.legislation.gov.uk/ukpga/2015/4/section/10, analysed in this morning's third brief.
+
+This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+---
+
+*[Site index for agents](../../../llms.txt) · [HTML version](https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html)*
+
+
+------------------------------------------------------------------------
+
 <!-- https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.html -->
 
 # The Behaviour Policy Is The Document The Only Agent Insurer Already Requires: Sell The Correction, And Not The Draft
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever names the product, prices it, and stands at the table with it next week
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3687,7 +4204,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever plans the ladder from the behaviour policy to everything above it, and whoever talks to an underwriter first
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3935,7 +4452,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > You are building abp.sgit.ai, the site for the Agent Behaviour Policy. This pack is what has been decided, what already exists, and what you must not invent.
 
-*Source: <https://abp.sgit.ai/docs/pack/00__START-HERE/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/00__START-HERE/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4035,7 +4552,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Every site in the network is named for an argument rather than for a function, and there are twenty seven of them. The argument here is not a product name.
 
-*Source: <https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4153,7 +4670,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Three sources govern how this site is built. Read all three before writing code. Where this pack and a source disagree, the source wins and you should say so.
 
-*Source: <https://abp.sgit.ai/docs/pack/02__THE-CONVENTIONS/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/02__THE-CONVENTIONS/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4254,7 +4771,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The ABP describes. It does not judge. It states what the agent can do, what it was authorised to do, the gap between them, and what stands in the way. It says nothing about whether any of that is acceptable, because acceptability is not in...
 
-*Source: <https://abp.sgit.ai/docs/pack/03__THE-ABP-MODEL/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/03__THE-ABP-MODEL/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4451,7 +4968,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The memo asks for a few ABPs, from simple to complex, to find out what they look like in practice and how hard they are to make. The answer is that the first five can be derived rather than authored, because the data exists.
 
-*Source: <https://abp.sgit.ai/docs/pack/04__THE-FIRST-EXAMPLES/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/04__THE-FIRST-EXAMPLES/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4540,7 +5057,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Thirteen rules that constrain this site. Each has a source and a reason. Rule 0 sits above the others and rules 1 and 13 are the two most likely to be broken.
 
-*Source: <https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4613,7 +5130,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Paste this to the agent that builds the site. It is the standard prompt for a new network site, extended with what this one needs.
 
-*Source: <https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4686,7 +5203,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
 
-*Source: <https://abp.sgit.ai/docs/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4709,6 +5226,9 @@ The foundation document first, then the three briefs behind it. Published as wri
 
 **[The Behaviour Policy Is A Graph And Every Document Is A Projection: The W3C Has The Vocabulary, And A Prohibition Has Two Lives](../docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever models the graph, whoever builds the renderer, and whoever compiles the prohibitions into something that enforces them
 [the source bytes](../docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives.md)
+
+**[The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case](../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published
+[the source bytes](../docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case.md)
 
 **[The Behaviour Policy Is The Document The Only Agent Insurer Already Requires: Sell The Correction, And Not The Draft](../docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever names the product, prices it, and stands at the table with it next week
 [the source bytes](../docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft.md)
@@ -4766,13 +5286,96 @@ The six numbered documents that settled what this site is, what it must not inve
 
 ------------------------------------------------------------------------
 
+<!-- https://abp.sgit.ai/versions/v0.2.0/index.html -->
+
+# v0.2.0: the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it
+
+> A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes...
+
+*Source: <https://abp.sgit.ai/versions/v0.2.0/index.html> · site v0.2.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../index.md) / [Versions](../../versions/index.md) / v0.2.0
+
+# v0.2.0: the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it
+
+A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes it useful, because a question about whether a control held throughout a period is a question about a series that a recomputed present cannot answer. The corrected rule is that the delta is DERIVED AND NEVER AUTHORED, which is the harder rule, because it forbids the act rather than the artefact. The release gate's check is inverted to match: it refused any stored delta and now recomputes every one of them.
+
+| Field | Value |
+|---|---|
+| Version | `v0.2.0` |
+| Date | 2026-09-11 |
+| Commit | `git rev-list -n 1 v0.2.0`, written into [`versions/v0.2.0.json`](../../versions/v0.2.0.json) once CI has tagged this release. Until then the file says where the hash will come from rather than carrying one that would be wrong. |
+| Reconstructed | no |
+| Machine readable | [`versions/v0.2.0.json`](../../versions/v0.2.0.json) |
+
+## What changed
+
+- data/deltas/ carries 9 stored deltas, one per deployment shape and mandate pair. Each record pins the version of both inputs, the published vocabulary it was computed against, the time it was computed and the version of the computation that produced it, so it can be recomputed and compared rather than taken on trust. No field in one is writable by a person.
+- The release gate's twelfth check is inverted. It refused any file carrying a delta; it now recomputes every stored delta from the profile and the mandate it names and fails on a single row of disagreement, including the ordering. That check is a few lines because the computation is a set difference, and it is a set difference because the grant and the mandate are held as graphs with a schema rather than as prose.
+- A new page at /model/delta/ carries the correction with both passages quoted and both replacements given, what the old rule was protecting and why all of it survives, the materialised view the pattern already had a name for, reality as the third input and the calibration loop it creates, the recompute trigger mapped onto an existing event standard, the rule that a threshold crossing is a record and the consequence is a policy somebody set in advance, the history as a business case read rather than constructed, the three clocks, and the distinction from behaviour drift.
+- The validity statement on every example gains the second clock: as at this date, from a twin last synchronised at this date. This site has no twin connected to anything and the label says so rather than leaving the field out.
+- The dev brief that makes the correction is published in /docs/briefs/ and appears in the index, in llms.txt and in the sitemap without a second edit, because the index is generated from the files present.
+- The foundation document is NOT rewritten. Both corrected passages stand as published, with a correction notice above them pointing at the brief and at /model/delta/. Everything else in that document stands.
+
+## What it was built against
+
+- The dev brief of 11 September 2026, the delta is derived and never authored, which is the fifth document of that day and the first written to correct one already pushed.
+- The foundation document of 11 September 2026, which the brief corrects in two passages and leaves standing in every other.
+- The site building guidance, for the rule that indexes are generated from the data they index, which the brief records this as the fourth instance of.
+
+## The five verifications against the sibling
+
+The pipeline, the release gate and the page shell were copied from [SGit-AI__Website__Game__What-Can-It-Do](https://github.com/SGit-AI/SGit-AI__Website__Game__What-Can-It-Do) at its v0.8.0. The conventions ask for five things to be verified rather than assumed, and **an absent one is a finding that belongs in the first version's notes** rather than a thing to fix quietly.
+
+| Verification | The sibling | What this repository does |
+|---|---|---|
+| The tag is derived from the version file, not typed by hand | **holds** | `admin/build/version.txt` owns the version. CI reads it, refuses to tag if the newest release commit's subject disagrees, refuses if the tag already exists on an earlier commit, and refuses if the bump is not the next minor or a deliberate major. Copied unchanged. |
+| The build fails when `llms.txt` does not list every page | **did not hold** | The sibling generates `llms.txt` from its page list, so it cannot miss a page the generator knows about, and nothing fails if a page exists in the tree that the generator does not. Check 11 here walks the tree and fails on any `.html` page missing from `llms.txt`. |
+| The custom domain survives a rebuild | **did not hold** | The sibling commits `CNAME` once. Here the build writes it from `SITE['host']`, and the canonical check reads the same file, so a domain change is one edit in one place. |
+| The markdown twin of every page is produced by the build | **holds** | `shell.write_site` emits the `.html` and the `.md` from the same block list, and gate check 7 fails on a page without a twin. Copied unchanged, and it is the reason the twins cannot drift. |
+| The version in the chrome comes from `versions/index.json` | **did not hold** | The sibling has no `versions/index.json` at all: the badge reads `version.txt` and links to a hand-maintained history page. Here the build generates `versions/index.json`, a file and a page per version, from the same string the tag is derived from, and the badge links to that version's own details. The published pipeline still owns the tag, so the two cannot disagree. |
+
+**Two of the three that did not hold are one-line fixes and the third is a surface that did not exist.** None of them is a criticism of a site that has been publishing for weeks: they are the cost of a pipeline growing by copy, which is exactly what the five verifications are for.
+
+## Where the sources disagree
+
+The published source wins and the disagreement is recorded. **The estate's method is to record the gap, not to quietly resolve it.**
+
+| The disagreement | What each says | What this site did |
+|---|---|---|
+| SETTLED IN v0.2.0. The foundation document and the project lead, on whether a delta is stored | v0.1.0 built to the foundation document's rule that the delta is computed and NEVER STORED, and put a check in the release gate refusing any file that carried one. The project lead's correction, issued the same day, is that the second half was an error: the delta belongs in a vault along with the history of the grants and mandates that produced it. | v0.2.0 stores the deltas with their inputs pinned and inverts the check, so the gate now recomputes every one of them. **Never authored** is the rule that replaced it, and it is harder than the one it replaced. See [the delta](../../model/delta/index.md). |
+| The foundation document and the published data, on what changes when confirmations go off | The foundation document says that turning confirmations off moves the barrier on **every capability in the delta** by one row. In the published pack it moves exactly one barrier, on `execute.process.host`, and that capability is **inside the mandate**: the deployer asked for it. So the label's numbers do not move at all and the two documents still differ materially. | The data wins on the fact and the foundation document wins on the wording, so both example pages state what actually changes. It makes the pair a **better** argument, not a worse one: identical headline numbers, a materially different document, which is the case for the leaflet and against any single number. |
+| The pack and the sibling, on where the version lives | The conventions ask for `versions/index.json` as the home of the version. The sibling's working pipeline derives the tag from `admin/build/version.txt` and has no `versions/index.json`. | Both. `version.txt` still owns the tag, because that is the published pipeline and it wins; `versions/index.json` is generated from the same string, so the surface the guidance asks for exists and cannot drift from the tag. The gate checks the agreement. |
+| The pack and the published data, on whether the smallest grant has an empty delta | The pack says the smallest shape in the set is where a reader who does not believe an agent can do much *finds the delta is still not empty*. In the published data that shape's grant is one capability and the starting mandate asks for exactly it, so **the delta is empty**. | The example says so, plainly, and says why an empty delta is a result rather than a failure: a method that could never report nothing would be a sales document, and the other four examples would be worth less for it. Changing the mandate to manufacture a delta would have been the dishonest fix. |
+| The published headline and the pack's own vocabulary, on what `measured' means | The map's headline says 21 of 99 rows were measured. The pack's vocabulary defines `measured` as a dated probe with an evidence file, and **no row in the pack is at that tier**: the 21 are at `observed`, which is seen directly on the thing itself. | The site counts `observed` as measured, which reproduces the published figure, and says so in `data/provenance.json` and on the data page. Reproducing the number without the note would have been less careful than the map. |
+| The hard rules and the published data, on em dashes and pure ASCII | Every document in this repository is to be pure ASCII, with zero em dashes and zero en dashes. The data promoted from the capability map carries all three, because it was written elsewhere and this site does not get to edit somebody else's bytes. | Both. The JSON keeps the upstream strings exactly as they arrived and `data/` is exempt from the guard for that reason; every upstream string rendered into a page is transliterated at render time; and the bytes are one click away under `/data/upstream/`. The guard is in the pipeline and fails the build everywhere else. |
+| The guidance and the docs section, on rebuilding the markdown renderer | The guidance forbids rebuilding markdown viewing, file trees and page layouts, because the platform provides them. The docs section has to turn eleven markdown documents into pages. | `admin/build/docs_pages.py` translates a markdown document into the same small block vocabulary every other page here is written in, at build time. No viewer is shipped to a browser, no file tree and no layout engine, and the source bytes are served beside every rendered document. It is a judgement call and it is recorded as one rather than assumed. |
+
+## What is not built yet, stated plainly
+
+- **No view across the nine shapes.** Each example carries a grant-against-mandate figure, and there is no figure that puts one capability across every deployment shape at once. The third graph rule says render the result of a query rather than the whole graph, so that would be another query rather than a map.
+- **No ABP for a shape outside the published map**, which means the cost of producing one where the grant has to be measured rather than looked up is still unknown, and that is the number the store needs.
+- **No interchange form emitted.** The W3C vocabulary is described on [the graph page](../../model/graph/index.md) and nothing on this site serialises to it yet.
+- **Quantity and agent-to-agent interaction are not modelled**, as the model page says. They are gaps in the ontology rather than in this site.
+
+---
+
+*[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/versions/v0.2.0/index.html)*
+
+
+------------------------------------------------------------------------
+
 <!-- https://abp.sgit.ai/versions/v0.1.0/index.html -->
 
 # v0.1.0: the ontology is promoted out of a game and the five examples are derived rather than written
 
 > The first version of abp.sgit.ai. The capability ontology the ABP needs already existed, published, as the data pack a game reads, so this release promotes it into a schema with a stable address rather than authoring a second one, and derives five worked ABPs from it. Nothing on...
 
-*Source: <https://abp.sgit.ai/versions/v0.1.0/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.1.0/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4812,40 +5415,6 @@ The first version of abp.sgit.ai. The capability ontology the ABP needs already 
 - The five graph rules at graphs.sgit.ai, read 11 September 2026.
 - The style guide at coding.sgit.ai, read 11 September 2026.
 
-## The five verifications against the sibling
-
-The pipeline, the release gate and the page shell were copied from [SGit-AI__Website__Game__What-Can-It-Do](https://github.com/SGit-AI/SGit-AI__Website__Game__What-Can-It-Do) at its v0.8.0. The conventions ask for five things to be verified rather than assumed, and **an absent one is a finding that belongs in the first version's notes** rather than a thing to fix quietly.
-
-| Verification | The sibling | What this repository does |
-|---|---|---|
-| The tag is derived from the version file, not typed by hand | **holds** | `admin/build/version.txt` owns the version. CI reads it, refuses to tag if the newest release commit's subject disagrees, refuses if the tag already exists on an earlier commit, and refuses if the bump is not the next minor or a deliberate major. Copied unchanged. |
-| The build fails when `llms.txt` does not list every page | **did not hold** | The sibling generates `llms.txt` from its page list, so it cannot miss a page the generator knows about, and nothing fails if a page exists in the tree that the generator does not. Check 11 here walks the tree and fails on any `.html` page missing from `llms.txt`. |
-| The custom domain survives a rebuild | **did not hold** | The sibling commits `CNAME` once. Here the build writes it from `SITE['host']`, and the canonical check reads the same file, so a domain change is one edit in one place. |
-| The markdown twin of every page is produced by the build | **holds** | `shell.write_site` emits the `.html` and the `.md` from the same block list, and gate check 7 fails on a page without a twin. Copied unchanged, and it is the reason the twins cannot drift. |
-| The version in the chrome comes from `versions/index.json` | **did not hold** | The sibling has no `versions/index.json` at all: the badge reads `version.txt` and links to a hand-maintained history page. Here the build generates `versions/index.json`, a file and a page per version, from the same string the tag is derived from, and the badge links to that version's own details. The published pipeline still owns the tag, so the two cannot disagree. |
-
-**Two of the three that did not hold are one-line fixes and the third is a surface that did not exist.** None of them is a criticism of a site that has been publishing for weeks: they are the cost of a pipeline growing by copy, which is exactly what the five verifications are for.
-
-## Where the sources disagree
-
-The published source wins and the disagreement is recorded. **The estate's method is to record the gap, not to quietly resolve it.**
-
-| The disagreement | What each says | What this site did |
-|---|---|---|
-| The foundation document and the published data, on what changes when confirmations go off | The foundation document says that turning confirmations off moves the barrier on **every capability in the delta** by one row. In the published pack it moves exactly one barrier, on `execute.process.host`, and that capability is **inside the mandate**: the deployer asked for it. So the label's numbers do not move at all and the two documents still differ materially. | The data wins on the fact and the foundation document wins on the wording, so both example pages state what actually changes. It makes the pair a **better** argument, not a worse one: identical headline numbers, a materially different document, which is the case for the leaflet and against any single number. |
-| The pack and the sibling, on where the version lives | The conventions ask for `versions/index.json` as the home of the version. The sibling's working pipeline derives the tag from `admin/build/version.txt` and has no `versions/index.json`. | Both. `version.txt` still owns the tag, because that is the published pipeline and it wins; `versions/index.json` is generated from the same string, so the surface the guidance asks for exists and cannot drift from the tag. The gate checks the agreement. |
-| The pack and the published data, on whether the smallest grant has an empty delta | The pack says the smallest shape in the set is where a reader who does not believe an agent can do much *finds the delta is still not empty*. In the published data that shape's grant is one capability and the starting mandate asks for exactly it, so **the delta is empty**. | The example says so, plainly, and says why an empty delta is a result rather than a failure: a method that could never report nothing would be a sales document, and the other four examples would be worth less for it. Changing the mandate to manufacture a delta would have been the dishonest fix. |
-| The published headline and the pack's own vocabulary, on what `measured' means | The map's headline says 21 of 99 rows were measured. The pack's vocabulary defines `measured` as a dated probe with an evidence file, and **no row in the pack is at that tier**: the 21 are at `observed`, which is seen directly on the thing itself. | The site counts `observed` as measured, which reproduces the published figure, and says so in `data/provenance.json` and on the data page. Reproducing the number without the note would have been less careful than the map. |
-| The hard rules and the published data, on em dashes and pure ASCII | Every document in this repository is to be pure ASCII, with zero em dashes and zero en dashes. The data promoted from the capability map carries all three, because it was written elsewhere and this site does not get to edit somebody else's bytes. | Both. The JSON keeps the upstream strings exactly as they arrived and `data/` is exempt from the guard for that reason; every upstream string rendered into a page is transliterated at render time; and the bytes are one click away under `/data/upstream/`. The guard is in the pipeline and fails the build everywhere else. |
-| The guidance and the docs section, on rebuilding the markdown renderer | The guidance forbids rebuilding markdown viewing, file trees and page layouts, because the platform provides them. The docs section has to turn eleven markdown documents into pages. | `admin/build/docs_pages.py` translates a markdown document into the same small block vocabulary every other page here is written in, at build time. No viewer is shipped to a browser, no file tree and no layout engine, and the source bytes are served beside every rendered document. It is a judgement call and it is recorded as one rather than assumed. |
-
-## What is not built yet, stated plainly
-
-- **No view across the nine shapes.** Each example carries a grant-against-mandate figure, and there is no figure that puts one capability across every deployment shape at once. The third graph rule says render the result of a query rather than the whole graph, so that would be another query rather than a map.
-- **No ABP for a shape outside the published map**, which means the cost of producing one where the grant has to be measured rather than looked up is still unknown, and that is the number the store needs.
-- **No interchange form emitted.** The W3C vocabulary is described on [the graph page](../../model/graph/index.md) and nothing on this site serialises to it yet.
-- **Quantity and agent-to-agent interaction are not modelled**, as the model page says. They are gaps in the ontology rather than in this site.
-
 ---
 
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/versions/v0.1.0/index.html)*
@@ -4859,7 +5428,7 @@ The published source wins and the disagreement is recorded. **The estate's metho
 
 > Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
-*Source: <https://abp.sgit.ai/versions/index.html> · site v0.1.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/index.html> · site v0.2.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4873,6 +5442,7 @@ Every release of this site. **The badge in the top bar reads `current` from [`ve
 
 | Version | Date | What changed |
 |---|---|---|
+| [v0.2.0](../versions/v0.2.0/index.md) | 2026-09-11 | the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it |
 | [v0.1.0](../versions/v0.1.0/index.md) | 2026-09-11 | the ontology is promoted out of a game and the five examples are derived rather than written |
 
 ## How the version cannot drift

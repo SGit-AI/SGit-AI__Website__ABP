@@ -1,16 +1,39 @@
 #!/usr/bin/env python3
-"""The ABP model: the four objects, the label, and the delta that is never stored.
+"""The ABP model: the four objects, the label, and the delta that is derived and never authored.
 
 An ABP is not a document. It is four objects, of which the document is a rendering:
 
     the MANDATE    elicited, in minutes, because the deployer already knows it
     the GRANT      measured, from the deployment shape and the credentials
-    the DELTA      computed, NEVER STORED
+    the DELTA      DERIVED, recomputed whenever either input changes, stored with the versions
+                   of both, and NEVER EDITED BY HAND
     the BARRIER    recorded per capability, from one of four kinds
 
-This module holds the third one. `delta()` is a function and not a file, and nothing here
-writes a delta to disk: a stored delta is a stale claim about somebody's environment, and the
-environment is the thing that changes. The build calls it on every page render.
+CORRECTED ON 11 SEPTEMBER 2026, and the correction is recorded rather than quietly applied.
+The first published wording was that the delta is computed and NEVER STORED. Half of that was
+right. The delta is computed; it is also stored, and storing it is most of what makes it
+useful, because the history of grants, mandates and deltas is what turns a business case into
+a subtraction that is read rather than constructed.
+
+    THE DELTA IS DERIVED AND NEVER AUTHORED. Nobody writes a delta. It is only ever the
+    output of a computation over the grant and the mandate, and it is stored along with the
+    versions of both inputs and the time it was computed.
+
+Everything the old ruling was protecting survives, and one thing is protected better:
+
+    a stale claim         a stored delta carries its inputs and the time it was computed, so
+                          its staleness is a fact rather than a surprise
+    a hand edited delta   NEVER AUTHORED is a harder rule than never stored, because it
+                          forbids the ACT rather than the artefact
+    a delta treated as    it reacts. A recompute is cheap because the inputs are graphs
+    authoritative after
+    the inputs move
+
+The word for this already exists: it is a MATERIALISED VIEW. Stored for use, refreshed from
+its inputs, never edited directly, carrying its own staleness. Writing to one is a category
+error rather than a permission question, and it is the fourth instance of a pattern already in
+force across this estate, alongside indexes generated from the data they index, prose derived
+from the graph, and a bill of materials generated from the dependency files.
 
 TWO THINGS THIS MODULE WILL NOT COMPUTE, and both are refusals rather than omissions.
 
@@ -18,6 +41,11 @@ TWO THINGS THIS MODULE WILL NOT COMPUTE, and both are refusals rather than omiss
     dangerous in one deployment and harmless in the next and nothing about it changed. A
     policy cannot be dangerous; a deployment can. Risk is a function of the ABP, the
     assets, the consequences and the date, and this module holds only the first.
+
+    A CONSEQUENCE. A delta crossing a threshold is a RECORD. What follows from it is a
+    policy somebody set in advance, not a judgement this code makes. That is what keeps the
+    automation real and the ABP consequence agnostic at the same time, and it means any
+    suspension is traceable to a threshold a person chose and a computation anybody can rerun.
 
     AN ORDERING BY CONSEQUENCE. The one ordering here is irreversible first, and it is
     descriptive: reversibility is a property of the ACTION. The risk product reorders by
@@ -35,6 +63,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data"
+
+# The version of THIS computation. A stored delta records which version of the code produced
+# it, because the code changes and a record that does not say what computed it cannot be
+# compared with one produced later. Bump it whenever `delta()` changes what it returns.
+COMPUTED_BY = "abp.delta/v1"
 
 UNDO_ORDER = ["no", "with-effort", "yes"]
 BARRIER_ORDER = ["none", "expectation", "setting", "boundary"]
@@ -65,11 +98,19 @@ def load():
 
 
 # ---------------------------------------------------------------------------
-# the delta: computed, never stored
+# the delta: derived, stored, never authored
 # ---------------------------------------------------------------------------
 
-def delta(profile, mandate, D):
+def delta(profile, mandate, D, computed_at=None):
     """The difference between what it can do and what it was authorised to do.
+
+    DERIVED AND NEVER AUTHORED. The return value is the stored record's content: it pins the
+    version of each input and the time and code version that produced it, so a consumer can
+    recompute it and compare rather than take it on trust. A delta that carries no inputs is
+    exactly the claim the older `never stored' wording was afraid of; one that carries them is
+    checkable. What must never happen is that somebody edits it, because a hand edited delta is
+    a fiction about an environment and nothing downstream could tell. `admin/build/validate.js'
+    recomputes every stored record on every build for that reason.
 
     EXCESS is the published definition: in the grant and not in the mandate. That is a wider
     set than the capabilities the mandate explicitly refused, and it is the right one, because
@@ -90,8 +131,15 @@ def delta(profile, mandate, D):
     unbounded = [r for r in excess if not D["is_control"][r["barrier"]]]
     shortfall = sorted(want - set(grant))
     return {
+        "type": "abp/delta/v1",
         "profile": profile["id"],
         "mandate": mandate["id"],
+        # The inputs, pinned. Without these the record is not checkable.
+        "grant_version": profile["profile_version"],
+        "mandate_version": mandate.get("authored"),
+        "pack_version": D["provenance"]["pack_version"],
+        "computed_at": computed_at,
+        "computed_by": COMPUTED_BY,
         "excess": order(excess, D),
         "excess_refused": order([r for r in excess if r["capability"] in refused], D),
         "excess_unstated": order([r for r in excess
@@ -99,8 +147,9 @@ def delta(profile, mandate, D):
         "unbounded_excess": order(unbounded, D),
         "shortfall": shortfall,
         "aligned": order([grant[c] for c in grant if c in want], D),
-        "computed": "on this page, from the grant and the mandate, every time it is rendered",
-        "never_stored": True,
+        "derived_never_authored":
+            "No field in this record is writable by a person. The way to change a delta is to "
+            "change a grant or a mandate, and then recompute.",
     }
 
 
@@ -143,8 +192,21 @@ def label(profile, mandate, dlt, D, as_at):
     ]
 
 
-VALIDITY = ("This describes the deployment shape as at {as_at}. It is not an expiry and it does "
-            "not mean stale: if the risk changed, the deployment changed, not this document.")
+VALIDITY = ("This describes the deployment shape as at {as_at}, from a twin last synchronised "
+            "at {synced}. It is not an expiry and it does not mean stale: if the risk changed, "
+            "the deployment changed, not this document.")
+
+# Three clocks, and only the first is ours. An ABP is exactly as fresh as the twin, and the
+# twin is exactly as fresh as its connection to somebody else's systems. That is a parameter
+# rather than a defect to hide, and the gap between the second and the third belongs to the
+# risk layer, because how much it matters depends on the assets.
+CLOCKS = [
+    ("The ABP's clock", "When the grant was last measured or calibrated",
+     "Us, and it can run on events"),
+    ("The twin's clock", "When the twin last synchronised with the real environment",
+     "The customer's integration"),
+    ("Reality's clock", "Never stops", "Nobody"),
+]
 
 NOT_AN_ASSESSMENT = (
     "**This is not an assessment.** Nothing here is an audit, a certification, a compliance "
