@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chat in the browser, nothing connected - abp.sgit.ai</title>
+<meta name="description" content="An Agent Behaviour Policy for chatGPT (in the browser, no connectors): a grant of 1, a mandate of 1, an excess of 0 and an unbounded excess of 0. Derived from published data, with no score.">
+<link rel="canonical" href="https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html">
+<meta property="og:title" content="Chat in the browser, nothing connected - abp.sgit.ai">
+<meta property="og:description" content="An Agent Behaviour Policy for chatGPT (in the browser, no connectors): a grant of 1, a mandate of 1, an excess of 0 and an unbounded excess of 0. Derived from published data, with no score.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.1.0/index.html" title="What changed in v0.1.0, and the commit it was built from">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl here" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../examples/index.html">Examples</a> / Chat in the browser, nothing connected</p>
+  <h1>Chat in the browser, nothing connected</h1>
+  <p><b>The deployment shape:</b> ChatGPT (in the browser, no connectors), variant <code>default</code>.</p>
+  <p class="lead">The smallest grant in the set. A reader who does not believe an agent can do much starts here, and finds that the delta is still not empty. It establishes the four objects with the fewest moving parts.</p>
+  <h2 id="before-you-scroll">Before you scroll</h2>
+  <div class="note"><b>Write down a number.</b> Of the 23 capability primitives, how many do you think this deployment has? And of those, how many do you think the person who deployed it asked for? The page answers both below. Writing the guess down first is the one thing that makes a static page do any of the work <a href="https://what-can-it-do.games.sgit.ai/map/index.html">the game</a> does.</div>
+  <h2 id="the-label">The label</h2>
+  <p>One line, on the outside, for anybody. Two numbers matter: <b>excess</b> answers the question this document exists for, and <b>unbounded excess</b> is the only number on it that buying a control moves.</p>
+  <div class="tablewrap"><table><thead><tr><th>Field</th><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>Shape</td><td><b>ChatGPT (in the browser, no connectors), default</b></td><td>The named deployment, in the product's published words</td></tr><tr><td>Grant</td><td><b>1 of 23 primitives</b></td><td>Everything the agent can do</td></tr><tr><td>Mandate</td><td><b>1 primitives</b></td><td>What the deployer authorised and expected</td></tr><tr><td>Excess</td><td><b>0</b></td><td>In the grant, not in the mandate. The finding</td></tr><tr><td>Unbounded excess</td><td><b>0</b></td><td>Excess whose barrier is not a control. The only number a control purchase moves</td></tr><tr><td>Irreversible</td><td><b>0</b></td><td>Granted capabilities with undo: no, as published</td></tr><tr><td>Widest reach</td><td><b>project</b></td><td>The furthest reach class in the grant</td></tr><tr><td>Measured</td><td><b>0 of 1 rows</b></td><td>Rows seen directly against rows derived</td></tr><tr><td>As at</td><td><b>11 September 2026, pack v0.8.0</b></td><td>The date and the source version</td></tr></tbody></table></div>
+  <div class="note"><b>There is no score on this label, and there will not be one.</b> The same ABP is dangerous in one deployment and harmless in the next and nothing about the document changed. A policy cannot be dangerous; a deployment can. Risk is a function of the ABP, the assets, the consequences and the date, and only the first of those is here. The score belongs to <a href="https://risks.sgit.ai/">the risk work above it</a>, where the assets are known and a named person signs.</div>
+  <h2 id="1-the-shape">1. The shape</h2>
+  <p>An assistant in the vendor's environment. It reaches what you paste or upload and nothing on your machine: the vendor's environment is a boundary you did not build. DERIVED from the assess library's web tree. Browsing, if on, is the vendor's egress, not yours.</p>
+  <p>Tools in this shape: <code>conversation and uploads</code>. Profile version <code>2026-09-05</code>, surface <code>web</code>.</p>
+  <p>What the reach classes mean here, which is the profile's to say rather than the grammar's: <b>host</b> means the vendor's environment; not your machine, <b>tenant</b> means nothing of yours, <b>world</b> means the vendor's egress, if browsing is on.</p>
+  <p><b>What it cannot reach, and why.</b> A grant is as much about the boundaries that hold as the ones that do not.</p>
+  <div class="tablewrap"><table><thead><tr><th>What</th><th>Why</th><th>Source</th></tr></thead><tbody><tr><td>your machine's files</td><td>the vendor's environment is a boundary you did not build</td><td><code>assess/library.json (web: home)</code></td></tr><tr><td>your accounts</td><td>no connectors are on</td><td><code>assess/library.json (web: connect)</code></td></tr></tbody></table></div>
+  <h2 id="2-the-grant-measured">2. The grant, measured</h2>
+  <p>Everything the agent can do: <b>1 of 23</b> primitives. Ordered irreversible first, then weakest barrier first. <b>Reversibility is a property of the action, not a severity</b>, and stating it as the reason is what keeps the ordering descriptive.</p>
+  <div class="tablewrap"><table><thead><tr><th></th><th>Capability</th><th>Undo</th><th>Barrier</th><th>Known by</th><th>The mandate</th></tr></thead><tbody><tr><td>●</td><td><a href="../../model/capabilities/read.file.project/index.html"><code>read.file.project</code></a> Read the project it is working on</td><td>yes</td><td>none (not a control)</td><td>derived</td><td><b>authorised</b></td></tr></tbody></table></div>
+  <div class="tablewrap"><table><thead><tr><th></th><th>Barrier</th><th>What stands in the way</th><th>Is it a control</th></tr></thead><tbody><tr><td>●</td><td>none</td><td>nothing in the way</td><td>no</td></tr><tr><td>◉</td><td>expectation</td><td>a rule in prose, enforced by nobody</td><td>no</td></tr><tr><td>◐</td><td>setting</td><td>a switch the agent's own account can flip</td><td>no</td></tr><tr><td>○</td><td>boundary</td><td>enforced above the grant, out of the agent's reach</td><td><b>yes</b></td></tr></tbody></table></div>
+  <h2 id="3-the-mandate-elicited">3. The mandate, elicited</h2>
+  <p><b>Chat in the browser, nothing connected.</b> I paste things in and read what comes back. That is the whole mandate, and the honest baseline: a chat window with nothing connected should be able to do nothing else.</p>
+  <p>A mandate is elicited rather than measured, in minutes, because the deployer already knows it. This one was not: it is a first draft written to be argued with, authored 2026-09-09 by the site, as a starting point - not measured, not surveyed; the first thing to argue with. It authorises <b>1</b> primitives, refuses <b>14</b> and says nothing either way about <b>8</b>. <a href="../../data/index.html">Propose a change to it</a>.</p>
+  <h2 id="4-the-delta-computed">4. The delta, computed</h2>
+  <div class="note"><b>This delta was computed when this page was built, from the grant and the mandate, and it is not stored anywhere.</b> A stored delta is a stale claim about somebody's environment, and the environment is the thing that changes.</div>
+  <p><b>Excess: 0.</b> In the grant and not in the mandate. That is the published definition and it is wider than the set the mandate refused outright: <b>0</b> were refused and <b>0</b> were never mentioned. A capability the mandate never mentioned was not authorised, and hiding the split would be the other kind of dishonesty.</p>
+  <p><b>Unbounded excess: 0.</b> The excess whose barrier is one of the first three rows: nothing, a rule somebody wrote down, or a setting the agent's own account could change. None of those bounds anything.</p>
+  <div class="note"><b>The delta on this shape is empty, and that is a result rather than a failure.</b> Everything this deployment can do, the mandate asked for. An ABP that could never come back with nothing to report would not be a description, it would be a sales document, and the other four examples would be worth less for it. Note what the grant still is, though: one capability, and a record once read is exposure that cannot be unread, on the vendor's side.</div>
+  <p><b>Shortfall: 0.</b> There is nothing the mandate asked for that this deployment cannot do.</p>
+  <h2 id="the-same-facts-as-a-figure">The same facts, as a figure</h2>
+  <p>The table above is complete and it is the wrong shape for the one question this document exists to answer, which is how much of the right hand side has nothing on the left. <b>A mark with no line reaching it is excess.</b></p>
+  <figure class="gamwrap"><svg class="gam" viewBox="0 0 770 136" role="img" aria-label="The mandate on the left, the grant on the right. 0 capabilities on the right have no line reaching them."><text x="0" y="20" class="gam-h">The mandate</text><text x="0" y="36" class="gam-s">1 authorised</text><text x="470" y="20" class="gam-h">The grant</text><text x="470" y="36" class="gam-s">1 of 23 primitives</text><path class="gam-line" d="M 200 58 C 260 58, 400 58, 460 58"/><text x="194" y="62" class="gam-l">read.file.project</text><circle cx="466" cy="58" r="4.5" fill="#b91c1c" fill-opacity="0.3"/><text x="478" y="62" class="gam-r">● read.file.project</text><text x="0" y="98" class="gam-k">A line means the mandate asked for it. A mark with no line is excess: 0 here, of which 0 sit at a barrier that is not a control.</text><text x="0" y="113" class="gam-k">The glyph is the barrier. An asterisk means the effect cannot be undone.</text><text x="0" y="128" class="gam-k">There is no score in this figure, and no axis of consequence.</text></svg><figcaption>Chat in the browser, nothing connected: the mandate against the grant. Every fact in this figure is in the table above it.</figcaption></figure>
+  <h2 id="5-the-prohibitions">5. The prohibitions</h2>
+  <p>The enforceable projection of the delta: one sentence per excess capability, each carrying the layer it would be enforced at and whether it is enforced today.</p>
+  <div class="note"><b>There are no prohibitions on this ABP, because the delta is empty.</b> Nothing this deployment can do sits outside what the mandate asked for. That does not mean nothing is worth deciding: it means the decision was already taken when the mandate was written.</div>
+  <div class="note"><b>Why the barrier is on every row.</b> A prohibition shown without its barrier manufactures assurance. All four major model providers stated in their own 2026 words that an instruction at the prompt layer can be bypassed, and the rule underneath is older than any of them: a control bounds a grant only if it is enforced by something the grant does not include. The right hand column is where a control would have to sit, not a recommendation that you buy one.</div>
+  <h2 id="6-the-provenance">6. The provenance</h2>
+  <div class="note"><b>Provenance.</b> 0 of 1 capability rows on this page were measured, meaning seen directly on the thing itself. The other 1 were derived from what the deployment architecturally is, or from the vendor's published documentation. Every row traces to <a href="https://what-can-it-do.games.sgit.ai/map/index.html">the published capability map</a>, retrieved 2026-09-11T13:00:37Z, content hash <code>sha256:d6d4ba40f1fb1f93f66</code>. <a href="../../data/upstream/pack.json">The source bytes</a>.</div>
+  <p><b>No row here was obtained by probing anybody's system.</b> A row is measured only from a system we are entitled to run, or from the vendor's own published documentation. Causing a computer to output data intending unauthorised access is an offence with no damage requirement and no research defence.</p>
+  <h2 id="7-what-this-is-not">7. What this is not</h2>
+  <div class="note"><b>This is not an assessment.</b> Nothing here is an audit, a certification, a compliance assessment or a security review of any named product. It is an illustration of a method, using a published configuration, and every row carries its source, its date and whether it was measured or derived. No adjective is attached to any of it, and there is no score.</div>
+  <div class="note"><b>Validity.</b> This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.</div>
+  <h2 id="follow-one-capability-through-the-model">Follow one capability through the model</h2>
+  <p>The fifth graph rule says a path should read as a sentence in the reader's own language, and it is the acceptance test for this model:</p>
+  <p>agent <a href="../../examples/chatgpt-web-no-connectors/index.html"><code>chatgpt-web-no-connectors</code></a> <b>is-granted</b> capability <a href="../../model/capabilities/read.file.project/index.html"><code>read.file.project</code></a> <b>bounded-by</b> barrier <a href="../../model/barriers/index.html"><code>none</code></a> <b>which-exceeds</b> mandate <a href="../../model/index.html"><code>chat-no-connectors</code></a> <b>and-is</b> undo <a href="../../model/undo/index.html"><code>yes</code></a>.</p>
+  <p><a href="../../model/index.html">The four objects</a> · <a href="../../model/capabilities/index.html">The capability grammar</a> · <a href="../../model/barriers/index.html">The barriers</a> · <a href="../../data/profiles/openai/chatgpt-web/default.json">This shape as JSON</a> · <a href="../../data/mandates/chat-no-connectors.json">This mandate as JSON</a></p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.1.0/index.html">v0.1.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../examples/chatgpt-web-no-connectors/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

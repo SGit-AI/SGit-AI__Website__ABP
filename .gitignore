@@ -216,3 +216,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---------------------------------------------------------------------------
+# abp.sgit.ai
+# ---------------------------------------------------------------------------
+# admin/build/ is the SITE GENERATOR, not a Python build directory. The stock
+# `build/` rule above matches it and would have quietly excluded every file that
+# produces this site, leaving a repository of generated pages with nothing that
+# generates them. It was caught on the first commit, and the negation is here
+# rather than as an edit to the stock rule so that the trap stays visible.
+!admin/build/
+!admin/build/**

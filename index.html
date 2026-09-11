@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agent Behaviour Policy</title>
+<meta name="description" content="You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.">
+<link rel="canonical" href="https://abp.sgit.ai/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/index.html">
+<meta property="og:title" content="Agent Behaviour Policy">
+<meta property="og:description" content="You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="versions/v0.1.0/index.html" title="What changed in v0.1.0, and the commit it was built from">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl here" href="index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="model/index.html">The four objects</a>
+      <a class="sl" href="model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="model/barriers/index.html">The barrier</a>
+      <a class="sl" href="model/undo/index.html">The undo class</a>
+      <a class="sl" href="model/graph/index.html">The graph</a>
+      <a class="sl" href="model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="examples/index.html">All five</a>
+      <a class="sl" href="examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="docs/index.html">Everything, rendered</a>
+      <a class="sl" href="docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <h1>You know what you asked for. You do not know what it can do.</h1>
+  <p class="lead">An <b>Agent Behaviour Policy</b> is a written description, for one agent in one deployment, of everything it can do, what it was authorised to do, the difference between the two, and what actually stands in the way. It is derived from the deployment rather than copied from a template. <b>It describes and it does not judge, so it carries no score.</b></p>
+  <h2 id="the-gap">The gap</h2>
+  <p><b>You know what you asked for.</b> Draft the reply, fix the build, summarise the ticket, book the travel. That is the mandate, and it is usually clear, whether or not anybody wrote it down.</p>
+  <p><b>You do not know what it can do.</b> The agent runs with an account, on a machine, inside a container or on a desktop, with credentials and network access and a set of tools. Everything those permit is the grant. It is almost never enumerated, and when it is, it is larger than the person who deployed the agent expected.</p>
+  <div class="note"><b>Before you scroll.</b> For a deployment you actually run, write down how many of 23 capability primitives you think it has, and how many of those you asked for. Then read <a href="examples/index.html">the five worked examples</a>. The gap between your two numbers is the reason this document type exists.</div>
+  <h2 id="the-four-objects">The four objects</h2>
+  <p>An ABP is not a single list. It is four objects, and the order they are produced in matters.</p>
+  <div class="tablewrap"><table><thead><tr><th>Object</th><th>What it is</th><th>How it is obtained</th></tr></thead><tbody><tr><td><b>The mandate</b></td><td>What the agent is authorised and expected to do</td><td><b>Elicited.</b> In minutes, because the deployer already knows it</td></tr><tr><td><b>The grant</b></td><td>Everything the agent can do</td><td><b>Measured.</b> From the deployment shape, the account and the credentials</td></tr><tr><td><b>The delta</b></td><td>Excess where it can and you did not ask; shortfall where you asked and it cannot</td><td><b>Computed. Never stored</b>, because the deployment changes</td></tr><tr><td><b>The barrier</b></td><td>What stands between the agent and each capability</td><td><b>Recorded</b>, per capability, from one of four kinds</td></tr></tbody></table></div>
+  <p><b>A grant on its own is an inventory, and nobody acts on an inventory.</b> <em>Your agent can do three hundred and forty things</em> is a shrug. <em>Your agent can do three hundred and forty things and you authorised twelve</em> is a finding. <a href="model/index.html">The model, in full</a>.</p>
+  <h2 id="only-one-kind-of-thing-is-actually-in-the-way">Only one kind of thing is actually in the way</h2>
+  <div class="tablewrap"><table><thead><tr><th></th><th>Barrier</th><th>What stands in the way</th><th>Is it a control</th></tr></thead><tbody><tr><td>●</td><td>none</td><td>nothing in the way</td><td>no</td></tr><tr><td>◉</td><td>expectation</td><td>a rule in prose, enforced by nobody</td><td>no</td></tr><tr><td>◐</td><td>setting</td><td>a switch the agent's own account can flip</td><td>no</td></tr><tr><td>○</td><td>boundary</td><td>enforced above the grant, out of the agent's reach</td><td><b>yes</b></td></tr></tbody></table></div>
+  <div class="note"><b>A control bounds a grant only if it is enforced by something the grant does not include.</b> Read the third and fourth rows together and the test falls out of them. A setting the agent's own account could change is not a control, because the grant includes the ability to remove the bound. <a href="model/barriers/index.html">The barrier</a>.</div>
+  <h2 id="one-setting-two-documents">One setting, two documents</h2>
+  <p>The clearest way to see what an ABP does is to change one setting and watch the document change. A coding agent on a developer's own machine, profiled twice: once with confirmations enabled, once with them disabled. Same product, same machine, same account.</p>
+  <div class="tablewrap"><table><thead><tr><th></th><th>Confirmations on</th><th>Confirmations off</th></tr></thead><tbody><tr><td>Grant</td><td>16</td><td>16</td></tr><tr><td>Mandate</td><td>5</td><td>5</td></tr><tr><td>Excess</td><td>12</td><td>12</td></tr><tr><td>Unbounded excess</td><td>12</td><td>12</td></tr><tr><td>Barrier on <code>execute.process.host</code></td><td>setting (not a control)</td><td>none (not a control)</td></tr></tbody></table></div>
+  <p><b>1 barrier moved and not one number did.</b> The confirmation prompt was the only thing standing between an authorised capability and the whole of the machine, and it was a setting the agent's own account could change, which is the third row and not the fourth. <b>The ABP is about the deployment, not the product</b>, and the pair says it in a way no paragraph can: <a href="examples/claude-code-cli-confirmations-enabled/index.html">confirmations on</a> and <a href="examples/claude-code-cli-confirmations-disabled/index.html">confirmations off</a>.</p>
+  <h2 id="it-describes-and-it-does-not-judge">It describes and it does not judge</h2>
+  <p><b>The same ABP is dangerous in one deployment and harmless in another, and nothing about the document changed.</b> The most permissive grant imaginable, running where there are no assets and nothing reachable, is a low risk. The same grant with a production database attached tomorrow is a high one. Risk is a function of the ABP, the assets, the consequences and the date, and <b>the ABP is the one input that does not move.</b></p>
+  <div class="note"><b>A policy cannot be dangerous. A deployment can.</b> So there is no rating on an ABP, no traffic light and no risk level, anywhere on this site or in its data. Every reader asks for one. <b>The score has a home and it is <a href="https://risks.sgit.ai/">the risk work above this</a></b>, where the assets are known and a named person signs. The people who sell do not sign, which is why the two are separate products and not two sections of one.</div>
+  <h2 id="what-is-here">What is here</h2>
+  <div class="gamegrid"><div class="gamecard"><h3><a href="what-is-an-abp/index.html">What an ABP is</a></h3><p class="sub">The foundation document: the definition, the four objects, the barrier, one worked example with published numbers, and the questions we would like answered.</p><div class="foot">This is the document, rendered. Not a summary of it.</div></div><div class="gamecard"><h3><a href="model/index.html">The model</a></h3><p class="sub">The 23 capability primitives, the four barriers, the three undo classes, the graph rules and the schema.</p><div class="foot">Promoted from a published map, not invented here.</div></div><div class="gamecard"><h3><a href="examples/index.html">Five worked examples</a></h3><p class="sub">From the smallest grant in the set to a service account that outlives the turn. Derived from the data, with the delta computed on the page.</p><div class="foot">Each states how many rows were measured.</div></div><div class="gamecard"><h3><a href="data/index.html">The data</a></h3><p class="sub">The published vocabulary as JSON, at stable addresses with cross origin access, with the source bytes it was promoted from.</p><div class="foot">21 of 99 rows measured.</div></div><div class="gamecard"><h3><a href="docs/index.html">The docs</a></h3><p class="sub">Every reference document behind this site, rendered, each one click from its source bytes.</p><div class="foot">The index is generated from the files present.</div></div><div class="gamecard"><h3><a href="https://risks.sgit.ai/">Where a score lives</a></h3><p class="sub">The ABP is the input. The risk work above it knows the assets and the consequences, and a named professional signs.</p><div class="foot">Not here, and that is the point.</div></div></div>
+  <h2 id="what-an-abp-is-not">What an ABP is not</h2>
+  <ul><li><b>Not an acceptable use policy.</b> That governs a person's use of a system. An ABP governs what an agent can and may do.</li><li><b>Not a risk assessment.</b> It has no assets in it and no consequences. It is the input to one.</li><li><b>Not a compliance assessment, a certification, an audit or a security review</b> of anything or anybody.</li><li><b>Not a guardrail.</b> It is what guardrails are compiled from. The barrier column says which prohibitions are guardrails already and which are sentences.</li><li><b>Not a claim about any product.</b> The capability rows come from published documentation and published measurement, with the source, the date and the measured ratio stated, and no adjective attached to any of them.</li><li><b>Not a template.</b> It is derived from one deployment, and a template cannot know what your agent can do.</li></ul>
+  <h2 id="this-site-is-the-library-it-is-free-and-it-stays-free">This site is the library. It is free, and it stays free</h2>
+  <p>The argument, the model, the examples and the data are published here. <b>There is no checkout on this site and there will not be one.</b> The data files are the shared facts and they live in the repository so that people can propose changes to them, with evidence attached.</p>
+  <p><a href="data/index.html">Propose a change</a> · <a href="https://github.com/SGit-AI/SGit-AI__Website__ABP">The repository</a> · <a href="llms-full.txt">Everything on this site, in one file</a></p>
+  <div class="note"><b>Provenance.</b> 21 of 99 capability rows on this page were measured, meaning seen directly on the thing itself. The other 78 were derived from what the deployment architecturally is, or from the vendor's published documentation. Every row traces to <a href="https://what-can-it-do.games.sgit.ai/map/index.html">the published capability map</a>, retrieved 2026-09-11T13:00:37Z, content hash <code>sha256:d6d4ba40f1fb1f93f66</code>. <a href="data/upstream/pack.json">The source bytes</a>.</div>
+  <div class="note"><b>Validity.</b> This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.</div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="versions/v0.1.0/index.html">v0.1.0</a> · <a href="versions/index.html">all versions</a> · <a href="llms.txt">llms.txt</a> · CC BY 4.0 · <a href="index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="model/index.html">The four objects</a>
+    <a href="model/barriers/index.html">The barrier</a>
+    <a href="examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="data/index.html">The published vocabulary</a>
+    <a href="model/schema/index.html">The schema</a>
+    <a href="data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="docs/index.html">Docs</a>
+    <a href="docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

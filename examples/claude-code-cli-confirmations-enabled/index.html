@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A coding agent on your own machine, confirmations on - abp.sgit.ai</title>
+<meta name="description" content="An Agent Behaviour Policy for claude Code (the CLI, on your own machine): a grant of 16, a mandate of 5, an excess of 12 and an unbounded excess of 12. Derived from published data, with no score.">
+<link rel="canonical" href="https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/index.html">
+<meta property="og:title" content="A coding agent on your own machine, confirmations on - abp.sgit.ai">
+<meta property="og:description" content="An Agent Behaviour Policy for claude Code (the CLI, on your own machine): a grant of 16, a mandate of 5, an excess of 12 and an unbounded excess of 12. Derived from published data, with no score.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.1.0/index.html" title="What changed in v0.1.0, and the commit it was built from">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl here" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../examples/index.html">Examples</a> / A coding agent on your own machine, confirmations on</p>
+  <h1>A coding agent on your own machine, confirmations on</h1>
+  <p><b>The deployment shape:</b> Claude Code (the CLI, on your own machine), variant <code>local-default</code>.</p>
+  <p class="lead">The confirmation is a barrier, and you can see which row it sits on. This is where the barrier stops being a column and becomes the argument. A confirmation prompt is a setting the agent's own account could change, which is the third row, not the fourth.</p>
+  <h2 id="before-you-scroll">Before you scroll</h2>
+  <div class="note"><b>Write down a number.</b> Of the 23 capability primitives, how many do you think this deployment has? And of those, how many do you think the person who deployed it asked for? The page answers both below. Writing the guess down first is the one thing that makes a static page do any of the work <a href="https://what-can-it-do.games.sgit.ai/map/index.html">the game</a> does.</div>
+  <h2 id="the-label">The label</h2>
+  <p>One line, on the outside, for anybody. Two numbers matter: <b>excess</b> answers the question this document exists for, and <b>unbounded excess</b> is the only number on it that buying a control moves.</p>
+  <div class="tablewrap"><table><thead><tr><th>Field</th><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>Shape</td><td><b>Claude Code (the CLI, on your own machine), local-default</b></td><td>The named deployment, in the product's published words</td></tr><tr><td>Grant</td><td><b>16 of 23 primitives</b></td><td>Everything the agent can do</td></tr><tr><td>Mandate</td><td><b>5 primitives</b></td><td>What the deployer authorised and expected</td></tr><tr><td>Excess</td><td><b>12</b></td><td>In the grant, not in the mandate. The finding</td></tr><tr><td>Unbounded excess</td><td><b>12</b></td><td>Excess whose barrier is not a control. The only number a control purchase moves</td></tr><tr><td>Irreversible</td><td><b>8</b></td><td>Granted capabilities with undo: no, as published</td></tr><tr><td>Widest reach</td><td><b>world</b></td><td>The furthest reach class in the grant</td></tr><tr><td>Measured</td><td><b>0 of 22 rows</b></td><td>Rows seen directly against rows derived</td></tr><tr><td>As at</td><td><b>11 September 2026, pack v0.8.0</b></td><td>The date and the source version</td></tr></tbody></table></div>
+  <div class="note"><b>There is no score on this label, and there will not be one.</b> The same ABP is dangerous in one deployment and harmless in the next and nothing about the document changed. A policy cannot be dangerous; a deployment can. Risk is a function of the ABP, the assets, the consequences and the date, and only the first of those is here. The score belongs to <a href="https://risks.sgit.ai/">the risk work above it</a>, where the assets are known and a named person signs.</div>
+  <h2 id="1-the-shape">1. The shape</h2>
+  <p>The common case: one CLI agent running as your user account, credentials in the home directory, confirmations on, no containment. DERIVED from what a command-line program running as your account architecturally is, not measured on any instance - every row is a claim until somebody runs the probes and contributes the file. The assess library's cli tree is the source.</p>
+  <p>Tools in this shape: <code>shell (Bash)</code>, <code>files (Read, Edit, Write)</code>, <code>fetch (WebFetch)</code>. Profile version <code>2026-09-05</code>, surface <code>cli</code>.</p>
+  <p>What the reach classes mean here, which is the profile's to say rather than the grammar's: <b>host</b> means your machine, as your user account, <b>tenant</b> means your accounts, with the credentials in your home directory, <b>world</b> means the internet.</p>
+  <h2 id="2-the-grant-measured">2. The grant, measured</h2>
+  <p>Everything the agent can do: <b>16 of 23</b> primitives. Ordered irreversible first, then weakest barrier first. <b>Reversibility is a property of the action, not a severity</b>, and stating it as the reason is what keeps the ordering descriptive.</p>
+  <div class="tablewrap"><table><thead><tr><th></th><th>Capability</th><th>Undo</th><th>Barrier</th><th>Known by</th><th>The mandate</th></tr></thead><tbody><tr><td>●</td><td><a href="../../model/capabilities/authenticate-as.credential.signing/index.html"><code>authenticate-as.credential.signing</code></a> Sign commits with the key it holds</td><td>no</td><td>none (not a control)</td><td>documented</td><td><b>excess</b> (refused)</td></tr><tr><td>●</td><td><a href="../../model/capabilities/authenticate-as.credential.tenant/index.html"><code>authenticate-as.credential.tenant</code></a> Act in accounts with the credentials it holds</td><td>no</td><td>none (not a control)</td><td>derived</td><td><b>excess</b> (refused)</td></tr><tr><td>●</td><td><a href="../../model/capabilities/create.record.world/index.html"><code>create.record.world</code></a> Publish packages, images or pages under the name it holds</td><td>no</td><td>none (not a control)</td><td>documented</td><td><b>excess</b> (refused)</td></tr><tr><td>●</td><td><a href="../../model/capabilities/delete.file.host/index.html"><code>delete.file.host</code></a> Delete files anywhere the account can reach</td><td>no</td><td>none (not a control)</td><td>derived</td><td><b>excess</b> (refused)</td></tr><tr><td>●</td><td><a href="../../model/capabilities/read.credential.host/index.html"><code>read.credential.host</code></a> Read credentials stored where it runs</td><td>no</td><td>none (not a control)</td><td>documented</td><td><b>excess</b> (refused)</td></tr><tr><td>●</td><td><a href="../../model/capabilities/read.file.host/index.html"><code>read.file.host</code></a> Read any file the account can reach</td><td>no</td><td>none (not a control)</td><td>derived</td><td><b>excess</b> (refused)</td></tr><tr><td>●</td><td><a href="../../model/capabilities/read.record.history/index.html"><code>read.record.history</code></a> Read a retained record: shell history, past sessions</td><td>no</td><td>none (not a control)</td><td>documented</td><td><b>excess</b> (refused)</td></tr><tr><td>●</td><td><a href="../../model/capabilities/send.endpoint.world/index.html"><code>send.endpoint.world</code></a> Reach any host on the internet</td><td>no</td><td>none (not a control)</td><td>derived</td><td><b>excess</b> (unstated)</td></tr><tr><td>●</td><td><a href="../../model/capabilities/write.file.host/index.html"><code>write.file.host</code></a> Change any file the account can reach</td><td>with-effort</td><td>none (not a control)</td><td>derived</td><td><b>excess</b> (refused)</td></tr><tr><td>●</td><td><a href="../../model/capabilities/write.file.project/index.html"><code>write.file.project</code></a> Change the project it is working on</td><td>with-effort</td><td>none (not a control)</td><td>derived</td><td><b>authorised</b></td></tr><tr><td>●</td><td><a href="../../model/capabilities/write.repository.project/index.html"><code>write.repository.project</code></a> Commit to the repository it was pointed at</td><td>with-effort</td><td>none (not a control)</td><td>derived</td><td><b>authorised</b></td></tr><tr><td>◉</td><td><a href="../../model/capabilities/write.repository.tenant/index.html"><code>write.repository.tenant</code></a> Push to a code host (any branch it can reach)</td><td>with-effort</td><td>expectation (not a control)</td><td>derived</td><td><b>excess</b> (unstated)</td></tr><tr><td>◐</td><td><a href="../../model/capabilities/execute.process.host/index.html"><code>execute.process.host</code></a> Run programs as the account</td><td>with-effort</td><td>setting (not a control)</td><td>derived</td><td><b>authorised</b></td></tr><tr><td>●</td><td><a href="../../model/capabilities/create.schedule.host/index.html"><code>create.schedule.host</code></a> Create something that outlives the turn where it runs (a cron, a service)</td><td>yes</td><td>none (not a control)</td><td>derived</td><td><b>excess</b> (refused)</td></tr><tr><td>●</td><td><a href="../../model/capabilities/read.file.project/index.html"><code>read.file.project</code></a> Read the project it is working on</td><td>yes</td><td>none (not a control)</td><td>derived</td><td><b>authorised</b></td></tr><tr><td>◐</td><td><a href="../../model/capabilities/grant.credential.self/index.html"><code>grant.credential.self</code></a> Change its own permission settings</td><td>yes</td><td>setting (not a control)</td><td>derived</td><td><b>excess</b> (refused)</td></tr></tbody></table></div>
+  <div class="tablewrap"><table><thead><tr><th></th><th>Barrier</th><th>What stands in the way</th><th>Is it a control</th></tr></thead><tbody><tr><td>●</td><td>none</td><td>nothing in the way</td><td>no</td></tr><tr><td>◉</td><td>expectation</td><td>a rule in prose, enforced by nobody</td><td>no</td></tr><tr><td>◐</td><td>setting</td><td>a switch the agent's own account can flip</td><td>no</td></tr><tr><td>○</td><td>boundary</td><td>enforced above the grant, out of the agent's reach</td><td><b>yes</b></td></tr></tbody></table></div>
+  <h2 id="3-the-mandate-elicited">3. The mandate, elicited</h2>
+  <p><b>A coding assistant on my machine.</b> I want it to read and change the project I pointed it at, run the build and the tests, commit to that repository, and fetch the packages and docs it needs. I did not sign up for it reading the rest of my disk, my credentials or my shell history, sending anything to anyone, publishing under my name, changing its own permission settings, or leaving anything behind that runs after it stops.</p>
+  <p>A mandate is elicited rather than measured, in minutes, because the deployer already knows it. This one was not: it is a first draft written to be argued with, authored 2026-09-09 by the site, as a starting point - not measured, not surveyed; the first thing to argue with. It authorises <b>5</b> primitives, refuses <b>11</b> and says nothing either way about <b>7</b>. <a href="../../data/index.html">Propose a change to it</a>.</p>
+  <div class="tablewrap"><table><thead><tr><th>Capability</th><th>What the mandate says about it</th></tr></thead><tbody><tr><td><a href="../../model/capabilities/execute.process.host/index.html"><code>execute.process.host</code></a></td><td>'run my tests' is, on a machine with no sandbox, 'run programs as me' - the want is honest and the consequence is the whole point of the delta</td></tr><tr><td><a href="../../model/capabilities/write.repository.tenant/index.html"><code>write.repository.tenant</code></a></td><td>left unstated on purpose: some people want it to push, some do not, and the mandate should not pretend to know</td></tr><tr><td><a href="../../model/capabilities/send.endpoint.world/index.html"><code>send.endpoint.world</code></a></td><td>unstated: the want is 'the hosts it needs', which is the allowed-list capability; whether the whole internet is acceptable is a real decision</td></tr></tbody></table></div>
+  <h2 id="4-the-delta-computed">4. The delta, computed</h2>
+  <div class="note"><b>This delta was computed when this page was built, from the grant and the mandate, and it is not stored anywhere.</b> A stored delta is a stale claim about somebody's environment, and the environment is the thing that changes.</div>
+  <p><b>Excess: 12.</b> In the grant and not in the mandate. That is the published definition and it is wider than the set the mandate refused outright: <b>10</b> were refused and <b>2</b> were never mentioned. A capability the mandate never mentioned was not authorised, and hiding the split would be the other kind of dishonesty.</p>
+  <p><b>Unbounded excess: 12.</b> The excess whose barrier is one of the first three rows: nothing, a rule somebody wrote down, or a setting the agent's own account could change. None of those bounds anything. Every one of the 12 excess capabilities here is unbounded.</p>
+  <p>The excess is listed as prohibitions below.</p>
+  <p><b>Shortfall: 1.</b> Asked for and cannot: <a href="../../model/capabilities/send.endpoint.allowed/index.html"><code>send.endpoint.allowed</code></a>.</p>
+  <h2 id="the-same-facts-as-a-figure">The same facts, as a figure</h2>
+  <p>The table above is complete and it is the wrong shape for the one question this document exists to answer, which is how much of the right hand side has nothing on the left. <b>A mark with no line reaching it is excess.</b></p>
+  <figure class="gamwrap"><svg class="gam" viewBox="0 0 770 466" role="img" aria-label="The mandate on the left, the grant on the right. 12 capabilities on the right have no line reaching them."><text x="0" y="20" class="gam-h">The mandate</text><text x="0" y="36" class="gam-s">5 authorised</text><text x="470" y="20" class="gam-h">The grant</text><text x="470" y="36" class="gam-s">16 of 23 primitives</text><path class="gam-line" d="M 200 58 C 260 58, 400 256, 460 256"/><text x="194" y="62" class="gam-l">write.file.project</text><path class="gam-line" d="M 200 80 C 260 80, 400 278, 460 278"/><text x="194" y="84" class="gam-l">write.repository.project</text><path class="gam-line" d="M 200 102 C 260 102, 400 322, 460 322"/><text x="194" y="106" class="gam-l">execute.process.host</text><path class="gam-line" d="M 200 124 C 260 124, 400 366, 460 366"/><text x="194" y="128" class="gam-l">read.file.project</text><text x="194" y="150" class="gam-l">send.endpoint.allowed</text><text x="206" y="150" class="gam-x">asked for, cannot</text><circle cx="466" cy="58" r="4.5" fill="#b91c1c"/><text x="478" y="62" class="gam-r gam-e">● authenticate-as.credential.signing *</text><circle cx="466" cy="80" r="4.5" fill="#b91c1c"/><text x="478" y="84" class="gam-r gam-e">● authenticate-as.credential.tenant *</text><circle cx="466" cy="102" r="4.5" fill="#b91c1c"/><text x="478" y="106" class="gam-r gam-e">● create.record.world *</text><circle cx="466" cy="124" r="4.5" fill="#b91c1c"/><text x="478" y="128" class="gam-r gam-e">● delete.file.host *</text><circle cx="466" cy="146" r="4.5" fill="#b91c1c"/><text x="478" y="150" class="gam-r gam-e">● read.credential.host *</text><circle cx="466" cy="168" r="4.5" fill="#b91c1c"/><text x="478" y="172" class="gam-r gam-e">● read.file.host *</text><circle cx="466" cy="190" r="4.5" fill="#b91c1c"/><text x="478" y="194" class="gam-r gam-e">● read.record.history *</text><circle cx="466" cy="212" r="4.5" fill="#b91c1c"/><text x="478" y="216" class="gam-r gam-e">● send.endpoint.world *</text><circle cx="466" cy="234" r="4.5" fill="#b91c1c"/><text x="478" y="238" class="gam-r gam-e">● write.file.host</text><circle cx="466" cy="256" r="4.5" fill="#b91c1c" fill-opacity="0.3"/><text x="478" y="260" class="gam-r">● write.file.project</text><circle cx="466" cy="278" r="4.5" fill="#b91c1c" fill-opacity="0.3"/><text x="478" y="282" class="gam-r">● write.repository.project</text><circle cx="466" cy="300" r="4.5" fill="#b45309"/><text x="478" y="304" class="gam-r gam-e">◉ write.repository.tenant</text><circle cx="466" cy="322" r="4.5" fill="#a16207" fill-opacity="0.3"/><text x="478" y="326" class="gam-r">◐ execute.process.host</text><circle cx="466" cy="344" r="4.5" fill="#b91c1c"/><text x="478" y="348" class="gam-r gam-e">● create.schedule.host</text><circle cx="466" cy="366" r="4.5" fill="#b91c1c" fill-opacity="0.3"/><text x="478" y="370" class="gam-r">● read.file.project</text><circle cx="466" cy="388" r="4.5" fill="#a16207"/><text x="478" y="392" class="gam-r gam-e">◐ grant.credential.self</text><text x="0" y="428" class="gam-k">A line means the mandate asked for it. A mark with no line is excess: 12 here, of which 12 sit at a barrier that is not a control.</text><text x="0" y="443" class="gam-k">The glyph is the barrier. An asterisk means the effect cannot be undone.</text><text x="0" y="458" class="gam-k">There is no score in this figure, and no axis of consequence.</text></svg><figcaption>A coding agent on your own machine, confirmations on: the mandate against the grant. Every fact in this figure is in the table above it.</figcaption></figure>
+  <h2 id="5-the-prohibitions">5. The prohibitions</h2>
+  <p>The enforceable projection of the delta: one sentence per excess capability, each carrying the layer it would be enforced at and whether it is enforced today. <b>12 of 12 are not enforced today.</b> They are sentences, not controls.</p>
+  <div class="tablewrap"><table><thead><tr><th></th><th>Prohibition</th><th>Barrier today</th><th>Enforced today</th><th>Layer a control would sit at</th></tr></thead><tbody><tr><td>●</td><td>The agent must not sign commits with the key it holds. <a href="../../model/capabilities/authenticate-as.credential.signing/index.html"><code>authenticate-as.credential.signing</code></a></td><td>none</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr><tr><td>●</td><td>The agent must not act in accounts with the credentials it holds. <a href="../../model/capabilities/authenticate-as.credential.tenant/index.html"><code>authenticate-as.credential.tenant</code></a></td><td>none</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr><tr><td>●</td><td>The agent must not publish packages, images or pages under the name it holds. <a href="../../model/capabilities/create.record.world/index.html"><code>create.record.world</code></a></td><td>none</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr><tr><td>●</td><td>The agent must not delete files anywhere the account can reach. <a href="../../model/capabilities/delete.file.host/index.html"><code>delete.file.host</code></a></td><td>none</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr><tr><td>●</td><td>The agent must not read credentials stored where it runs. <a href="../../model/capabilities/read.credential.host/index.html"><code>read.credential.host</code></a></td><td>none</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr><tr><td>●</td><td>The agent must not read any file the account can reach. <a href="../../model/capabilities/read.file.host/index.html"><code>read.file.host</code></a></td><td>none</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr><tr><td>●</td><td>The agent must not read a retained record: shell history, past sessions. <a href="../../model/capabilities/read.record.history/index.html"><code>read.record.history</code></a></td><td>none</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr><tr><td>●</td><td>The agent must not reach any host on the internet. <a href="../../model/capabilities/send.endpoint.world/index.html"><code>send.endpoint.world</code></a></td><td>none</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr><tr><td>●</td><td>The agent must not change any file the account can reach. <a href="../../model/capabilities/write.file.host/index.html"><code>write.file.host</code></a></td><td>none</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr><tr><td>◉</td><td>The agent must not push to a code host (any branch it can reach). <a href="../../model/capabilities/write.repository.tenant/index.html"><code>write.repository.tenant</code></a></td><td>expectation</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary (host rule) · setting (hook)</td></tr><tr><td>●</td><td>The agent must not create something that outlives the turn where it runs (a cron, a service). <a href="../../model/capabilities/create.schedule.host/index.html"><code>create.schedule.host</code></a></td><td>none</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr><tr><td>◐</td><td>The agent must not change its own permission settings. <a href="../../model/capabilities/grant.credential.self/index.html"><code>grant.credential.self</code></a></td><td>setting</td><td><b>not enforced</b> (a sentence, not a control)</td><td>boundary</td></tr></tbody></table></div>
+  <div class="note"><b>Why the barrier is on every row.</b> A prohibition shown without its barrier manufactures assurance. All four major model providers stated in their own 2026 words that an instruction at the prompt layer can be bypassed, and the rule underneath is older than any of them: a control bounds a grant only if it is enforced by something the grant does not include. The right hand column is where a control would have to sit, not a recommendation that you buy one.</div>
+  <h2 id="6-the-provenance">6. The provenance</h2>
+  <div class="note"><b>Provenance.</b> 0 of 22 capability rows on this page were measured, meaning seen directly on the thing itself. The other 22 were derived from what the deployment architecturally is, or from the vendor's published documentation. Every row traces to <a href="https://what-can-it-do.games.sgit.ai/map/index.html">the published capability map</a>, retrieved 2026-09-11T13:00:37Z, content hash <code>sha256:d6d4ba40f1fb1f93f66</code>. <a href="../../data/upstream/pack.json">The source bytes</a>.</div>
+  <p><b>No row here was obtained by probing anybody's system.</b> A row is measured only from a system we are entitled to run, or from the vendor's own published documentation. Causing a computer to output data intending unauthorised access is an offence with no damage requirement and no research defence.</p>
+  <h2 id="7-what-this-is-not">7. What this is not</h2>
+  <div class="note"><b>This is not an assessment.</b> Nothing here is an audit, a certification, a compliance assessment or a security review of any named product. It is an illustration of a method, using a published configuration, and every row carries its source, its date and whether it was measured or derived. No adjective is attached to any of it, and there is no score.</div>
+  <div class="note"><b>Validity.</b> This describes the deployment shape as at 11 September 2026. It is not an expiry and it does not mean stale: if the risk changed, the deployment changed, not this document.</div>
+  <h2 id="follow-one-capability-through-the-model">Follow one capability through the model</h2>
+  <p>The fifth graph rule says a path should read as a sentence in the reader's own language, and it is the acceptance test for this model:</p>
+  <p>agent <a href="../../examples/claude-code-cli-confirmations-enabled/index.html"><code>claude-code-cli-confirmations-enabled</code></a> <b>is-granted</b> capability <a href="../../model/capabilities/authenticate-as.credential.signing/index.html"><code>authenticate-as.credential.signing</code></a> <b>bounded-by</b> barrier <a href="../../model/barriers/index.html"><code>none</code></a> <b>which-exceeds</b> mandate <a href="../../model/index.html"><code>coding-assistant-on-my-machine</code></a> <b>and-is</b> undo <a href="../../model/undo/index.html"><code>no</code></a>.</p>
+  <p><a href="../../model/index.html">The four objects</a> · <a href="../../model/capabilities/index.html">The capability grammar</a> · <a href="../../model/barriers/index.html">The barriers</a> · <a href="../../data/profiles/anthropic/claude-code/local-default.json">This shape as JSON</a> · <a href="../../data/mandates/coding-assistant-on-my-machine.json">This mandate as JSON</a></p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.1.0/index.html">v0.1.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../examples/claude-code-cli-confirmations-enabled/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

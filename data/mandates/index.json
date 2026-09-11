@@ -1,0 +1,122 @@
+{
+  "type": "abp/mandates-index/v1",
+  "_what_this_is": "Starting mandates, one per surface. A mandate is what a reasonable person WANTED, stated per capability. None was measured or surveyed: each is a first draft written to be argued with.",
+  "count": 8,
+  "mandates": [
+    {
+      "id": "coding-assistant-on-my-machine",
+      "label": "A coding assistant on my machine",
+      "surface": [
+        "cli"
+      ],
+      "applies_to": [
+        "anthropic/claude-code/local-default",
+        "anthropic/claude-code/local-confirmations-off"
+      ],
+      "want": 5,
+      "do_not_want": 11,
+      "file": "mandates/coding-assistant-on-my-machine.json"
+    },
+    {
+      "id": "coding-assistant-in-a-container",
+      "label": "A coding assistant in a container on the web",
+      "surface": [
+        "agentbox"
+      ],
+      "applies_to": [
+        "anthropic/claude-code-remote/ccr-container"
+      ],
+      "want": 6,
+      "do_not_want": 3,
+      "file": "mandates/coding-assistant-in-a-container.json"
+    },
+    {
+      "id": "desktop-app-with-local-tools",
+      "label": "The desktop app, with local tools switched on",
+      "surface": [
+        "desktop"
+      ],
+      "applies_to": [
+        "anthropic/claude-desktop/default"
+      ],
+      "want": 3,
+      "do_not_want": 6,
+      "file": "mandates/desktop-app-with-local-tools.json"
+    },
+    {
+      "id": "chat-with-connectors",
+      "label": "Chat, with connectors switched on",
+      "surface": [
+        "web"
+      ],
+      "applies_to": [
+        "anthropic/claude-web/connectors-on"
+      ],
+      "want": 3,
+      "do_not_want": 2,
+      "file": "mandates/chat-with-connectors.json"
+    },
+    {
+      "id": "chat-no-connectors",
+      "label": "Chat in the browser, nothing connected",
+      "surface": [
+        "web"
+      ],
+      "applies_to": [
+        "openai/chatgpt-web/default"
+      ],
+      "want": 1,
+      "do_not_want": 14,
+      "file": "mandates/chat-no-connectors.json"
+    },
+    {
+      "id": "ci-job",
+      "label": "A CI job on a hosted runner",
+      "surface": [
+        "ci"
+      ],
+      "applies_to": [
+        "github/actions-runner/ci"
+      ],
+      "want": 5,
+      "do_not_want": 1,
+      "file": "mandates/ci-job.json"
+    },
+    {
+      "id": "browser-extension-i-installed",
+      "label": "A browser extension I installed",
+      "surface": [
+        "extension"
+      ],
+      "applies_to": [
+        "generic/browser-extension/broad-host-permissions"
+      ],
+      "want": 1,
+      "do_not_want": 2,
+      "file": "mandates/browser-extension-i-installed.json"
+    },
+    {
+      "id": "scheduled-job-under-a-service-account",
+      "label": "A scheduled job under a service account",
+      "surface": [
+        "service"
+      ],
+      "applies_to": [
+        "generic/scheduled-job/service-account"
+      ],
+      "want": 4,
+      "do_not_want": 2,
+      "file": "mandates/scheduled-job-under-a-service-account.json"
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Generated from the mandate files.",
+    "licence": "CC BY 4.0"
+  }
+}

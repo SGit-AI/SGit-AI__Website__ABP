@@ -1,0 +1,80 @@
+# Docs
+
+> Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
+
+*Source: <https://abp.sgit.ai/docs/index.html> · site v0.1.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../index.md) / Docs
+
+# Docs
+
+Everything this site was built from, published rather than summarised. **The foundation document is first**: it is the definition of the Agent Behaviour Policy, the home page is derived from it, and where it and anything else here disagree, it wins.
+
+> **This index is generated from the files present in `docs/`, not maintained beside them.** An index that can disagree with its source is a defect. Adding a document to the repository puts it here, in `llms.txt` and in the sitemap with no second edit.
+
+## The briefs
+
+The foundation document first, then the three briefs behind it. Published as written, with their own licence footers intact.
+
+**[Agent Behaviour Policy (ABP): You Know What You Asked For, And You Do Not Know What It Can Do](../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.md)**: version v0.33.70 date 11 September 2026 from Dinis Cruz to Anyone deploying an agent, anyone building one, and anyone who has to sign for one
+[the source bytes](../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do.md)
+
+**[The Behaviour Policy Is A Graph And Every Document Is A Projection: The W3C Has The Vocabulary, And A Prohibition Has Two Lives](../docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever models the graph, whoever builds the renderer, and whoever compiles the prohibitions into something that enforces them
+[the source bytes](../docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives.md)
+
+**[The Behaviour Policy Is The Document The Only Agent Insurer Already Requires: Sell The Correction, And Not The Draft](../docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever names the product, prices it, and stands at the table with it next week
+[the source bytes](../docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft.md)
+
+**[The Prohibitions Are The Exclusions: Your Own Demo Says No Policy Covers The Delta, And The Insurance Act Says How](../docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever plans the ladder from the behaviour policy to everything above it, and whoever talks to an underwriter first
+[the source bytes](../docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how.md)
+
+## The pack
+
+The six numbered documents that settled what this site is, what it must not invent, and the rules it is built under.
+
+**[Start Here](../docs/pack/00__START-HERE/index.md)**: You are building abp.sgit.ai, the site for the Agent Behaviour Policy. This pack is what has been decided, what already exists, and what you must not invent.
+[the source bytes](../docs/pack/00__START-HERE.md)
+
+**[What To Build](../docs/pack/01__WHAT-TO-BUILD/index.md)**: Every site in the network is named for an argument rather than for a function, and there are twenty seven of them. The argument here is not a product name.
+[the source bytes](../docs/pack/01__WHAT-TO-BUILD.md)
+
+**[The Conventions](../docs/pack/02__THE-CONVENTIONS/index.md)**: Three sources govern how this site is built. Read all three before writing code. Where this pack and a source disagree, the source wins and you should say so.
+[the source bytes](../docs/pack/02__THE-CONVENTIONS.md)
+
+**[The ABP Model](../docs/pack/03__THE-ABP-MODEL/index.md)**: The ABP describes. It does not judge. It states what the agent can do, what it was authorised to do, the gap between them, and what stands in the way. It says nothing about whether any of that is acceptable, because acceptability is not in...
+[the source bytes](../docs/pack/03__THE-ABP-MODEL.md)
+
+**[The First Examples](../docs/pack/04__THE-FIRST-EXAMPLES/index.md)**: The memo asks for a few ABPs, from simple to complex, to find out what they look like in practice and how hard they are to make. The answer is that the first five can be derived rather than authored, because the data exists.
+[the source bytes](../docs/pack/04__THE-FIRST-EXAMPLES.md)
+
+**[The Hard Rules](../docs/pack/05__THE-HARD-RULES/index.md)**: Thirteen rules that constrain this site. Each has a source and a reason. Rule 0 sits above the others and rules 1 and 13 are the two most likely to be broken.
+[the source bytes](../docs/pack/05__THE-HARD-RULES.md)
+
+**[The Prompt](../docs/pack/06__THE-PROMPT/index.md)**: Paste this to the agent that builds the site. It is the standard prompt for a new network site, extended with what this one needs.
+[the source bytes](../docs/pack/06__THE-PROMPT.md)
+
+## Inherited guidance
+
+**Link, do not copy.** These are the published sources this site is built under. Where a rule is quoted on a page it is quoted with its source; nothing here is a copy of somebody else's document kept in this repository to go stale.
+
+| Source | Read | What it governs |
+|---|---|---|
+| [The vault and site building guidance](https://sgit.ai/docs/guidance/index.html) | 11 September 2026 | Pick your surface first. Do not build what the platform already has. Publish a read key, never a vault key. Version everything and show the version. Anything rendered must stay one click from the source bytes. |
+| [What the platform site is, for agents](https://sgit.ai/llms.txt) | 11 September 2026 | How the network is organised, and the index every site in it publishes. |
+| [The style guide, with measured compliance](https://coding.sgit.ai/) | 11 September 2026 | Thirty one rules, and honest about its own enforcement: no linters, and four structural guards in the pipeline are the only automated enforcement. |
+| [The five graph rules](https://graphs.sgit.ai/) | 11 September 2026 | They govern the model rather than the styling. This site's reading of them is on [the graph page](../model/graph/index.md). |
+| [The capability map this site's data came from](https://what-can-it-do.games.sgit.ai/map/index.html) | 11 September 2026 | Twenty three primitives, nine profiles, the barrier glyph and the undo class. The ontology this site promoted rather than invented. |
+
+## One document is quoted and never copied
+
+> **The international management standards are not reproduced here, in any form.** Their titles may be named. Adapting, translating or quoting them at length is prohibited, and so is feeding them to a model. Where a mapping is wanted, the European regulation is expressly reusable for commercial purposes including adaptation, and it is the clean source.
+
+[Everything on this site, in one file](../llms-full.txt) · [The index for agents](../llms.txt)
+
+---
+
+*[Site index for agents](../llms.txt) · [HTML version](https://abp.sgit.ai/docs/index.html)*

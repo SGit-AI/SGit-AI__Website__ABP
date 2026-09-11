@@ -1,0 +1,26 @@
+{
+  "type": "abp/provenance/v1",
+  "_what_this_is": "Where every capability row on this site came from, and how much of it was measured. The published map states the ratio and this site does not get to be less careful than the game it took the data from.",
+  "source": "https://what-can-it-do.games.sgit.ai/data/",
+  "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+  "retrieved": "2026-09-11T13:00:37Z",
+  "pack_version": "v0.8.0",
+  "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+  "files_hashed": 27,
+  "verify": "Recompute: sha256 over each .json under upstream/ in path order, hashing the path then the bytes, skipping pack.json. admin/build/promote_data.py does it on every build and refuses to write if it disagrees.",
+  "rows": {
+    "total": 99,
+    "measured": 21,
+    "derived": 78
+  },
+  "measured_means": "A row at the `observed` tier: seen directly, on the thing itself. No row in this pack is at the `measured` tier, which the pack defines as a dated probe with an evidence file. The published headline of 21 of 99 counts the `observed` rows, and so does this site.",
+  "by_tier": {
+    "observed": 21,
+    "inferred": 1,
+    "self-reported": 1,
+    "documented": 13,
+    "derived": 45
+  },
+  "never_tested": "No row here was obtained by probing anybody's system. A row is measured only from a system we are entitled to run, or from the vendor's own published documentation.",
+  "licence": "CC BY 4.0"
+}
