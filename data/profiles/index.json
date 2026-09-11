@@ -1,0 +1,161 @@
+{
+  "type": "abp/profiles-index/v1",
+  "_what_this_is": "The deployment shapes this site holds a grant for. A shape is a product in a setting, not a product: two entries here are the same product with one setting different.",
+  "count": 9,
+  "profiles": [
+    {
+      "id": "anthropic/claude-code-remote/ccr-container",
+      "vendor": "Anthropic",
+      "product": "Claude Code on the web (a remote session container)",
+      "variant": "ccr-container",
+      "surface": "agentbox",
+      "profile_version": "2026-09-05.2",
+      "grant_size": 15,
+      "widest_reach": "tenant",
+      "rows": {
+        "total": 20,
+        "measured": 13,
+        "derived": 7
+      },
+      "file": "profiles/anthropic/claude-code-remote/ccr-container.json"
+    },
+    {
+      "id": "anthropic/claude-code/local-confirmations-off",
+      "vendor": "Anthropic",
+      "product": "Claude Code (the CLI, on your own machine)",
+      "variant": "local-confirmations-off",
+      "surface": "cli",
+      "profile_version": "2026-09-05",
+      "grant_size": 16,
+      "widest_reach": "world",
+      "rows": {
+        "total": 22,
+        "measured": 0,
+        "derived": 22
+      },
+      "file": "profiles/anthropic/claude-code/local-confirmations-off.json"
+    },
+    {
+      "id": "anthropic/claude-code/local-default",
+      "vendor": "Anthropic",
+      "product": "Claude Code (the CLI, on your own machine)",
+      "variant": "local-default",
+      "surface": "cli",
+      "profile_version": "2026-09-05",
+      "grant_size": 16,
+      "widest_reach": "world",
+      "rows": {
+        "total": 22,
+        "measured": 0,
+        "derived": 22
+      },
+      "file": "profiles/anthropic/claude-code/local-default.json"
+    },
+    {
+      "id": "anthropic/claude-desktop/default",
+      "vendor": "Anthropic",
+      "product": "Claude Desktop (a desktop app with local tools)",
+      "variant": "default",
+      "surface": "desktop",
+      "profile_version": "2026-09-05",
+      "grant_size": 10,
+      "widest_reach": "world",
+      "rows": {
+        "total": 11,
+        "measured": 0,
+        "derived": 11
+      },
+      "file": "profiles/anthropic/claude-desktop/default.json"
+    },
+    {
+      "id": "anthropic/claude-web/connectors-on",
+      "vendor": "Anthropic",
+      "product": "Claude (in the browser, with connectors switched on)",
+      "variant": "connectors-on",
+      "surface": "web",
+      "profile_version": "2026-09-05",
+      "grant_size": 5,
+      "widest_reach": "tenant",
+      "rows": {
+        "total": 5,
+        "measured": 0,
+        "derived": 5
+      },
+      "file": "profiles/anthropic/claude-web/connectors-on.json"
+    },
+    {
+      "id": "generic/browser-extension/broad-host-permissions",
+      "vendor": "generic",
+      "product": "A browser extension with broad host permissions",
+      "variant": "broad-host-permissions",
+      "surface": "extension",
+      "profile_version": "2026-09-05",
+      "grant_size": 3,
+      "widest_reach": "world",
+      "rows": {
+        "total": 3,
+        "measured": 0,
+        "derived": 3
+      },
+      "file": "profiles/generic/browser-extension/broad-host-permissions.json"
+    },
+    {
+      "id": "generic/scheduled-job/service-account",
+      "vendor": "generic",
+      "product": "A scheduled job running as a service account",
+      "variant": "service-account",
+      "surface": "service",
+      "profile_version": "2026-09-05",
+      "grant_size": 7,
+      "widest_reach": "world",
+      "rows": {
+        "total": 7,
+        "measured": 0,
+        "derived": 7
+      },
+      "file": "profiles/generic/scheduled-job/service-account.json"
+    },
+    {
+      "id": "github/actions-runner/ci",
+      "vendor": "GitHub",
+      "product": "Actions runner (a hosted CI job)",
+      "variant": "ci",
+      "surface": "ci",
+      "profile_version": "2026-08-26",
+      "grant_size": 8,
+      "widest_reach": "world",
+      "rows": {
+        "total": 8,
+        "measured": 8,
+        "derived": 0
+      },
+      "file": "profiles/github/actions-runner/ci.json"
+    },
+    {
+      "id": "openai/chatgpt-web/default",
+      "vendor": "OpenAI",
+      "product": "ChatGPT (in the browser, no connectors)",
+      "variant": "default",
+      "surface": "web",
+      "profile_version": "2026-09-05",
+      "grant_size": 1,
+      "widest_reach": "project",
+      "rows": {
+        "total": 1,
+        "measured": 0,
+        "derived": 1
+      },
+      "file": "profiles/openai/chatgpt-web/default.json"
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Generated from the profile files.",
+    "licence": "CC BY 4.0"
+  }
+}

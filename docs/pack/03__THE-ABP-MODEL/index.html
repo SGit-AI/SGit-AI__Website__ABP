@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The ABP Model - abp.sgit.ai</title>
+<meta name="description" content="The ABP describes. It does not judge. It states what the agent can do, what it was authorised to do, the gap between them, and what stands in the way. It says nothing about whether any of that is acceptable, because acceptability is not in...">
+<link rel="canonical" href="https://abp.sgit.ai/docs/pack/03__THE-ABP-MODEL/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/docs/pack/03__THE-ABP-MODEL/index.html">
+<meta property="og:title" content="The ABP Model - abp.sgit.ai">
+<meta property="og:description" content="The ABP describes. It does not judge. It states what the agent can do, what it was authorised to do, the gap between them, and what stands in the way. It says nothing about whether any of that is acceptable, because acceptability is not in...">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../../versions/v0.1.0/index.html" title="What changed in v0.1.0, and the commit it was built from">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../model/index.html">The four objects</a>
+      <a class="sl" href="../../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../examples/index.html">All five</a>
+      <a class="sl" href="../../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../../index.html">Home</a> / <a href="../../../docs/index.html">Docs</a> / <a href="../../../docs/index.html#pack">The pack</a> / The ABP Model</p>
+  <h1>The ABP Model</h1>
+  <div class="note"><b>The source bytes.</b> This page is generated from <a href="../../../docs/pack/03__THE-ABP-MODEL.md"><code>docs/pack/03__THE-ABP-MODEL.md</code></a>, which is served unchanged. Anything rendered on this network stays one click from the file it came from.</div>
+  <h2 id="the-abp-is-consequence-agnostic-and-that-is-the-rule-above-e">The ABP is consequence agnostic, and that is the rule above every other rule</h2>
+  <p><b>The ABP describes. It does not judge.</b> It states what the agent can do, what it was authorised to do, the gap between them, and what stands in the way. It says nothing about whether any of that is acceptable, because acceptability is not in the document.</p>
+  <p><b>The same ABP is dangerous in one room and harmless in the next, and nothing about the document changed.</b> The most permissive grant imaginable, running where there are no assets and nothing reachable, is a low risk. The same grant dropped into a production estate is an extreme one. The same grant tomorrow, after somebody connects a database, is a different risk again. <b>Risk is a function of the policy, the assets, the consequences and the date, and the ABP is the one input that does not move.</b></p>
+  <p><b>A policy cannot be dangerous. A deployment can.</b></p>
+  <p><b>Four consequences, and every one is a build decision.</b></p>
+  <p><b>The ABP carries no score.</b> No rating, no traffic light, no risk level, no severity, nowhere on this site. Every buyer will ask for one in the first meeting. <b>The score has a home and it is the risk product</b>, where the assets are known, the risk acceptance workflow exists, and a named professional signs. Putting a score on the ABP is the fastest way to make the document wrong in one of the two rooms.</p>
+  <p><b>The record is what is sold, and the verdict is a service.</b> A description of the grant rots on a known clock: the product releases, the deployment changes. A verdict rots on an unknown one: anything in the environment moves. <b>The record is re-sellable because its clock is visible. The verdict is not, because its clock is not.</b></p>
+  <p><b>A long list is an inventory, not an admission.</b> The ABP asserts that a capability exists, never that a risk is unacceptable. That is materially different from a findings register, and it is worth drafting toward, with the honest caveat that it moves an exposure rather than removing it.</p>
+  <p><b>The correction in the draft and correction sale is factual, not evaluative.</b> Nobody is asked to agree that something is dangerous. They are asked whether their agent can do a thing. That is a conversation you can have with somebody who knows their business better than you do.</p>
+  <p><b>The three part structure this gives the ladder, which the project lead has adopted:</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Part</th><th>What it is</th><th>Who owns it</th><th>Sold as</th></tr></thead><tbody><tr><td><b>The label</b></td><td>The ABP. Describes the capability, context free</td><td>Us</td><td>The first product</td></tr><tr><td><b>The patient record</b></td><td>The twin. The interface to the real environment: assets, tools, data, what is connected</td><td>Us, hooked to the customer's reality</td><td>The first product, with the ABP</td></tr><tr><td><b>The prescription</b></td><td>The risk score and the acceptance. Combines the two and is signed</td><td><b>A named professional who did not sell the first two</b></td><td>The uplift</td></tr></tbody></table></div>
+  <p><b>The third row is a constraint, not a preference.</b> The standing rule is that the people who sell do not sign. So the party that sells the label and the record cannot be the party that prescribes. <b>That is why the sequence separates cleanly.</b></p>
+  <p><b>Every ABP carries a validity statement.</b> Not an expiry meaning stale, but: <em>this describes the deployment shape as at this date; if the risk changed, the deployment changed, not this document.</em> The conformance vault already does this with attestations carrying a tier and an expiry.</p>
+  <p><b>Two places where the principle, taken seriously, corrects our own data.</b></p>
+  <p><b>The undo class is the one column that is not fully context free.</b> Whether deleting a file is reversible depends on backups, snapshots and retention. So <code>undo: no</code> is a claim about the product's published behaviour, and the page says so, and says that the deployment can change it. Otherwise one contextual judgement has been smuggled into a document that claims to hold none.</p>
+  <p><b>No assets does not mean no consequence.</b> It means no consequence to you. An agent with <code>send.endpoint.world</code> and <code>execute.process.host</code> in an empty environment can still reach third parties. That is the sub delegation argument in another form, and it is a reason the consequence model is genuinely hard and genuinely not ours to guess.</p>
+  <p><b>Two known gaps in the model, stated plainly and not decorated.</b></p>
+  <p><b>Quantity is not modelled.</b> The twenty three primitives carry reach, being project, host, tenant, world and self, and they do not carry rate or volume. <code>send.endpoint.world</code> is the same primitive for one request and a million. The temporal operators in the policy language named in the second brief, count within and sum within, are the shape of the fix.</p>
+  <p><b>Interaction between agents is not modelled.</b> Two agents each within mandate can compose into something neither was authorised to do. There is no primitive for it and no page for it.</p>
+  <h2 id="the-label-what-goes-on-the-outside">The label: what goes on the outside</h2>
+  <p><b>The project lead asked for a couple of metrics and a couple of abstraction layers.</b> Two layers, and the graph they are computed from.</p>
+  <p><b>The label</b> is one line, on the outside, for anybody:</p>
+  <div class="tablewrap"><table><thead><tr><th>Field</th><th>Meaning</th></tr></thead><tbody><tr><td><b>Shape</b></td><td>The named deployment, in the product's published words</td></tr><tr><td><b>Grant</b></td><td>N of 23 primitives</td></tr><tr><td><b>Mandate</b></td><td>M primitives</td></tr><tr><td><b>Excess</b></td><td>Capabilities in the grant and not in the mandate. <b>The finding</b></td></tr><tr><td><b>Unbounded excess</b></td><td>Excess capabilities whose barrier is one of the first three rows. <b>The business case</b></td></tr><tr><td><b>Irreversible</b></td><td>Granted capabilities with <code>undo: no</code>, as published</td></tr><tr><td><b>Widest reach</b></td><td>The furthest reach class in the grant</td></tr><tr><td><b>Measured</b></td><td>Rows measured against rows derived</td></tr><tr><td><b>As at</b></td><td>The date and the source version</td></tr></tbody></table></div>
+  <p><b>The two headline numbers are excess and unbounded excess.</b> The first answers the buyer's question, what can it do that I did not ask for. The second is the purchase: every control bought moves a capability from the first three barrier rows to the fourth, and the number goes down. <b>The ratio between them is what a control purchase changes, and it is the only number on the label that a buyer can move.</b></p>
+  <p><b>The leaflet</b> is the full table underneath: every primitive with its barrier, its undo class, its provenance, and the mandate beside it. For the engineer, the auditor and the underwriter.</p>
+  <p><b>Neither carries a score. Both carry the validity line.</b></p>
+  <p><b>Ordering.</b> The default order on every rendering is irreversible first, because reversibility is a property of the action rather than of the context, and stating it as the reason keeps the ordering descriptive. The risk product reorders by consequence, because it knows the consequence.</p>
+  <h2 id="the-four-objects">The four objects</h2>
+  <p>An ABP is not a document. It is four objects, of which the document is a rendering.</p>
+  <div class="tablewrap"><table><thead><tr><th>Object</th><th>How it is obtained</th><th>What it is</th></tr></thead><tbody><tr><td><b>The mandate</b></td><td><b>Elicited</b>, in minutes, because the deployer already knows it</td><td>What the agent is authorised and expected to do</td></tr><tr><td><b>The grant</b></td><td><b>Measured</b>, from the deployment shape and the credentials</td><td>Everything the agent can do</td></tr><tr><td><b>The delta</b></td><td><b>Computed, never stored</b></td><td>The excess authority, and the shortfall</td></tr><tr><td><b>The prohibitions</b></td><td>The enforceable projection of the delta</td><td>The subset a control can bound, each carrying the layer it is enforced at</td></tr></tbody></table></div>
+  <p><b>The order matters and the site should teach it in this order.</b> A grant alone is an inventory and a buyer shrugs at an inventory. A grant with a mandate beside it is a finding. <b>Three hundred and forty things is a shrug. Three hundred and forty things and you authorised twelve is a sale.</b></p>
+  <h2 id="the-capability-grammar-which-exists">The capability grammar, which exists</h2>
+  <p><code>verb.object.reach</code>. Twenty three primitives, published on the map page. Examples in their published wording:</p>
+  <div class="tablewrap"><table><thead><tr><th>Primitive</th><th>Published gloss</th></tr></thead><tbody><tr><td><code>read.file.project</code></td><td>Read the project it is working on</td></tr><tr><td><code>write.file.host</code></td><td>Change any file the account can reach</td></tr><tr><td><code>execute.process.host</code></td><td>Run programs as the account</td></tr><tr><td><code>send.endpoint.world</code></td><td>Reach any host on the internet</td></tr><tr><td><code>read.credential.host</code></td><td>Read credentials stored where it runs</td></tr><tr><td><code>write.repository.tenant</code></td><td>Push to a code host</td></tr><tr><td><code>create.schedule.host</code></td><td>Create something that outlives the turn</td></tr><tr><td><code>read.record.browsing</code></td><td>Read every page you visit</td></tr></tbody></table></div>
+  <p><b>Reach classes:</b> <code>project</code>, <code>host</code>, <code>tenant</code>, <code>world</code>, <code>self</code>.</p>
+  <p><b>This grammar is the action vocabulary for everything else on the site.</b> Do not add a primitive without adding it to the published set, and do not rename one.</p>
+  <h2 id="the-barrier-which-is-the-enforcement-model-and-already-exist">The barrier, which is the enforcement model and already exists</h2>
+  <p>Every capability in a profile carries a barrier glyph. The published wording for what it means:</p>
+  <div class="note">what stands between it and the capability: nothing, a rule somebody wrote down, a setting the agent's own account could change, or a boundary enforced above it that it cannot reach</div>
+  <p><b>Those four are the enforcement layers, and the third and fourth are the whole argument.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Barrier</th><th>Is it a control</th><th>Why</th></tr></thead><tbody><tr><td>Nothing</td><td><b>No</b></td><td>Unbounded</td></tr><tr><td>A rule somebody wrote down</td><td><b>No</b></td><td>A prompt or a prose rule. All four major model providers state in their own 2026 words that instructions at this layer can be bypassed</td></tr><tr><td>A setting the agent's own account could change</td><td><b>No</b></td><td><b>The grant includes the ability to remove the bound</b></td></tr><tr><td>A boundary enforced above it that it cannot reach</td><td><b>Yes</b></td><td>The only row that bounds anything</td></tr></tbody></table></div>
+  <p><b>The third row is the enforcer test of 20 August, published as a glyph before it was named as a rule:</b> a control bounds a grant only if it is enforced by something the grant does not include.</p>
+  <p><b>So every prohibition rendered anywhere on this site carries its barrier.</b> A prohibition displayed without one is a claim the site cannot support, and the assessment product exists to find the ones sitting at the second and third rows.</p>
+  <h2 id="the-undo-class-which-is-the-severity-model">The undo class, which is the severity model</h2>
+  <p>The map already carries it: <code>yes</code>, <code>with-effort</code>, <code>no</code>, with the published note that <b>a capability that cannot be undone is a different kind of thing from one that can</b>.</p>
+  <p><b>Use it as the ordering on every rendering.</b> An ABP that lists prohibitions alphabetically has buried the only ones that matter. Irreversible and unbounded is the first row of every document this site produces.</p>
+  <h2 id="the-graph-rules-which-govern-the-model">The graph rules, which govern the model</h2>
+  <p>Five rules, published at <code>graphs.sgit.ai</code>, and they are not stylistic.</p>
+  <ol><li><b>Every edge is a verb with a distinct inverse.</b> The inverse is not the same edge walked backwards: <code>owned_by</code> and <code>owns</code> have different fan out.</li><li><b>The generic association edge is banned.</b> It constrains nothing and costs fan out.</li><li><b>Never render the whole graph.</b> Render the result of a query.</li><li><b>Rich nodes are acceptable.</b> The blob is a rendering failure, not a modelling one.</li><li><b>If a path does not read as a sentence in the reader's own language, the edges are wrong.</b></li></ol>
+  <p><b>Rule five is the acceptance test for this model, and it is cheap to apply.</b> The path should read:</p>
+  <div class="note">agent <code>claude-code-cli-confirmations-disabled</code> <b>is-granted</b> capability <code>execute.process.host</code> <b>bounded-by</b> barrier <code>a-rule-somebody-wrote-down</code> <b>which-exceeds</b> mandate <code>ship-a-feature</code> <b>and-is</b> undo <code>no</code></div>
+  <p>If a path does not read like that, the edges are wrong and the model changes, not the renderer.</p>
+  <p><b>Rule three is the answer to the memo's wish that every word be hyperlinked.</b> Every word can be a node and no page renders the graph. Each page renders one query: this profile's grant, this mandate's delta, this capability across all profiles.</p>
+  <h2 id="the-five-layers-and-the-tension-nobody-has-stated">The five layers, and the tension nobody has stated</h2>
+  <p>The memo says the book's five layers are what is happening here, and they are, with one complication that must be written down before the renderer is built.</p>
+  <p><b>The book is a five level compression hierarchy</b>, and it states that <b>a class name does not mean the same thing two levels up</b>, because ontologies and taxonomies differ structurally across altitudes.</p>
+  <p><b>The variant rule, in force since August, says every variant renders the same fact set and the diff must be empty.</b></p>
+  <p><b>Those two are in tension and the resolution is precise: the facts are identical across renderings, the classes are not.</b></p>
+  <ul><li><b>The fact set</b> is the leaf assertions: this profile has this capability, at this barrier, with this undo class; this mandate contains these capabilities; therefore this delta. <b>Identical in every rendering. The diff is over these.</b></li><li><b>The classes</b> are how those facts are grouped for a reader: an executive rendering may group by business consequence, an engineer's by reach and barrier. <b>Different at different altitudes, and that is correct rather than a defect.</b></li></ul>
+  <p><b>Write that down as the specification for the fact diff</b>, because the fact diff is the thing that has blocked a promise on each of the last four days, and this is the first statement precise enough to build it from. <b>The diff is over leaf assertions, not over structure.</b></p>
+  <p><b>Keep altitude for stakeholder and depth for detail.</b> That ruling is from 20 August and the layers here are altitudes.</p>
+  <h2 id="the-vocabulary-for-the-interchange-form">The vocabulary for the interchange form</h2>
+  <p>The graph has a W3C vocabulary already, and the second brief in <code>briefs/</code> covers it with its limits. In short: a policy carries permissions, prohibitions and duties; constraints cover time, purpose, count and place; the conflict strategy says <b>prohibitions win</b>; and a policy inherits from a parent, which is how policy for an agent in an environment extends policy for an agent.</p>
+  <p><b>Use it as the interchange vocabulary through a profile that adds these capability primitives as actions. Do not claim it enforces anything, because it does not.</b> The compile target for enforcement is named in the brief.</p>
+  <h2 id="what-the-site-must-never-compute">What the site must never compute</h2>
+  <p><b>The delta is computed and never stored.</b> That is a standing ruling. A stored delta is a stale claim about somebody's environment, and the environment is the thing that changes.</p>
+  <p>This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../../versions/v0.1.0/index.html">v0.1.0</a> · <a href="../../../versions/index.html">all versions</a> · <a href="../../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../../docs/pack/03__THE-ABP-MODEL/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../../model/index.html">The four objects</a>
+    <a href="../../../model/barriers/index.html">The barrier</a>
+    <a href="../../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../../data/index.html">The published vocabulary</a>
+    <a href="../../../model/schema/index.html">The schema</a>
+    <a href="../../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../../docs/index.html">Docs</a>
+    <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

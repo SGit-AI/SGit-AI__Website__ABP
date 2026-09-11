@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What To Build - abp.sgit.ai</title>
+<meta name="description" content="Every site in the network is named for an argument rather than for a function, and there are twenty seven of them. The argument here is not a product name.">
+<link rel="canonical" href="https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.html">
+<meta property="og:title" content="What To Build - abp.sgit.ai">
+<meta property="og:description" content="Every site in the network is named for an argument rather than for a function, and there are twenty seven of them. The argument here is not a product name.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../../versions/v0.1.0/index.html" title="What changed in v0.1.0, and the commit it was built from">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../model/index.html">The four objects</a>
+      <a class="sl" href="../../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../examples/index.html">All five</a>
+      <a class="sl" href="../../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../../index.html">Home</a> / <a href="../../../docs/index.html">Docs</a> / <a href="../../../docs/index.html#pack">The pack</a> / What To Build</p>
+  <h1>What To Build</h1>
+  <div class="note"><b>The source bytes.</b> This page is generated from <a href="../../../docs/pack/01__WHAT-TO-BUILD.md"><code>docs/pack/01__WHAT-TO-BUILD.md</code></a>, which is served unchanged. Anything rendered on this network stays one click from the file it came from.</div>
+  <h2 id="the-argument-this-site-owns">The argument this site owns</h2>
+  <p>Every site in the network is named for an argument rather than for a function, and there are twenty seven of them. <b>The argument here is not a product name.</b></p>
+  <div class="note"><b>You know what you asked for. You do not know what it can do.</b></div>
+  <p>That is the thesis line for the home page. It is the corrected version of the memo of 11 September: the mandate is already understood, implicitly or explicitly, and the grant is not. <b>The site exists to close that gap in public, for free, and the store sells the instance of it.</b></p>
+  <h2 id="build-order">Build order</h2>
+  <p>The standard prompt asks for the pipeline first, and that is right. <b>Nothing below matters if the site does not publish.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>#</th><th>Step</th><th>Done when</th></tr></thead><tbody><tr><td>1</td><td><b>CI pipeline and auto tagging</b>, copied from a sibling site's repository</td><td>A push to <code>dev</code> builds, tags and publishes</td></tr><tr><td>2</td><td><b>Version surface</b>: <code>versions/index.json</code>, a per version file, and the version visible in the chrome as a link</td><td>The chrome shows the current version and it links to that version's own details</td></tr><tr><td>3</td><td><b><code>llms.txt</code> and <code>llms-full.txt</code></b>, generated from the site rather than written</td><td>Every page appears in <code>llms.txt</code></td></tr><tr><td>4</td><td><b>The docs section</b>, using the platform's markdown rendering</td><td>Every document in this pack is readable on the site</td></tr><tr><td>5</td><td><b>The data</b>, promoted from the game's pack into a published schema</td><td><code>data/</code> serves the capabilities, profiles, barriers and undo classes at a stable address with cross origin access</td></tr><tr><td>6</td><td><b>The model pages</b>: what an ABP is, the four objects, the graph</td><td>A reader can follow one capability from a product profile to a mandate to a delta to a prohibition</td></tr><tr><td>7</td><td><b>The examples</b>: five ABPs, derived from the data</td><td>Each example states which of its rows were measured and which were derived</td></tr><tr><td>8</td><td><b>The visualisations</b></td><td>One grant against mandate view that is not a table</td></tr></tbody></table></div>
+  <h2 id="the-site-map">The site map</h2>
+  <pre class="shell">/                        the argument, in one screen, derived from the foundation document
+/what-is-an-abp/         the foundation document, rendered, with each term linked to its node
+/model/                  the graph: capabilities, barriers, undo, the schema
+/examples/               five ABPs, one per deployment shape
+/docs/                   every reference and guidance document, rendered
+/data/                   the JSON, at stable addresses, CORS enabled
+/versions/               the version history
+/llms.txt                generated
+/llms-full.txt           generated</pre>
+  <p><b>Scope by domain and link across.</b> This site says one thing properly. Where an argument belongs to a sister site, link to it rather than restating it: the graph rules to <code>graphs.sgit.ai</code>, the capability map to <code>what-can-it-do.games.sgit.ai</code>, the twin to <code>twins.sgit.ai</code>, the acceptance workflow to <code>risks.sgit.ai</code>, the style rules to <code>coding.sgit.ai</code>.</p>
+  <h2 id="the-docs-section-which-was-asked-for-specifically">The docs section, which was asked for specifically</h2>
+  <p><b>Every reference and guidance document in this pack goes into <code>/docs/</code>, rendered with the markdown rendering already used across the network.</b> Do not write a renderer. The guidance is explicit that markdown viewing, file trees and page layouts are platform provided and must not be rebuilt.</p>
+  <p><b>What goes in it:</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Section</th><th>Contents</th></tr></thead><tbody><tr><td><code>/docs/briefs/</code></td><td>The foundation document first, then the three briefs, all unchanged with their own licence footers intact</td></tr><tr><td><code>/docs/pack/</code></td><td>The six numbered documents of this pack</td></tr><tr><td><code>/docs/model/</code></td><td>The schema and ontology documents you write, as markdown with their JSON twins</td></tr><tr><td><code>/docs/inherited/</code></td><td>Pointers to the guidance you inherited, with the date read. <b>Link, do not copy</b>, except where a rule is quoted</td></tr></tbody></table></div>
+  <p><b>Two conventions from the guidance apply to every page in it.</b> Every page is reachable and machine readable, with a markdown twin and an entry in <code>llms.txt</code>. And anything rendered stays one click from its source bytes, so every rendered document shows a link to the file it came from.</p>
+  <p><b>Indexes are generated from the data they index</b>, so <code>/docs/index</code> is built from the files present rather than maintained by hand. The guidance says an index that can disagree with its source is a defect.</p>
+  <h2 id="the-examples-which-are-the-point">The examples, which are the point</h2>
+  <p>The memo asks for the examples first and it is right, but they should be <b>derived rather than authored</b>. <a href="../../../docs/pack/04__THE-FIRST-EXAMPLES/index.html"><code>04__THE-FIRST-EXAMPLES.md</code></a> gives the five and where each one's rows come from.</p>
+  <p><b>Each example page shows:</b></p>
+  <ol><li><b>The label</b>: the one line on the outside, per <a href="../../../docs/pack/03__THE-ABP-MODEL/index.html"><code>03__THE-ABP-MODEL.md</code></a>, with excess and unbounded excess as the two headline numbers, and no score.</li><li>The named deployment shape, in the product profile's published words.</li><li><b>The grant</b>, as capability primitives, each with its barrier glyph and its undo class, ordered irreversible first and saying that reversibility is a property of the action rather than a severity.</li><li><b>The mandate</b>, as the small set the deployer authorised.</li><li><b>The delta</b>, computed, never stored, shown as excess in one colour and shortfall in the other.</li><li><b>The prohibitions</b>, each carrying the layer it would be enforced at, and each marked as enforced or not enforced today.</li><li><b>The provenance line</b>: how many rows were measured, how many derived, and when.</li><li><b>The validity statement</b>: this describes the deployment shape as at this date; if the risk changed, the deployment changed, not this document.</li></ol>
+  <p><b>That sixth row is not optional.</b> The published map already does it, stating that twenty one of ninety nine rows were measured and the rest derived. <b>An example that hides that is worse than one that has few measured rows.</b></p>
+  <h2 id="the-community-editable-layer">The community editable layer</h2>
+  <p><b>The data files are the shared facts and they live in this repository so that people can propose changes.</b> That is the four layer architecture: the site and its data are the library, and a cloned vault is the instance.</p>
+  <p>Two rules come with it, from 10 September:</p>
+  <p><b>A proposal to a data file carries evidence.</b> Every node taken from a third party site carries a source URL, a retrieval timestamp and a content hash. A proposal that changes a capability row without one is an assertion.</p>
+  <p><b>A consumer pins a version.</b> Anything that computes from these files states which version it computed against. A clone that floats against the latest has no reproducible output.</p>
+  <h2 id="what-not-to-build">What not to build</h2>
+  <ul><li><b>A markdown viewer, a file browser or a page layout engine.</b> Platform provided.</li><li><b>A checkout, a price or a payment link.</b> That is the store.</li><li><b>A new capability ontology.</b> It exists.</li><li><b>A general graph renderer.</b> The graph rules say never render the whole graph, render the result of a query.</li><li><b>An assessment of any named product.</b> See the hard rules.</li></ul>
+  <p>This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../../versions/v0.1.0/index.html">v0.1.0</a> · <a href="../../../versions/index.html">all versions</a> · <a href="../../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../../docs/pack/01__WHAT-TO-BUILD/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../../model/index.html">The four objects</a>
+    <a href="../../../model/barriers/index.html">The barrier</a>
+    <a href="../../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../../data/index.html">The published vocabulary</a>
+    <a href="../../../model/schema/index.html">The schema</a>
+    <a href="../../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../../docs/index.html">Docs</a>
+    <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

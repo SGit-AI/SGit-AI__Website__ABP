@@ -1,0 +1,13 @@
+{
+  "current": "v0.1.0",
+  "_what_this_is": "The version surface. The badge in the site chrome reads `current` from this file, so the badge cannot drift from the tag: the tag is derived from admin/build/version.txt and this file is generated from the same string.",
+  "versions": [
+    {
+      "version": "v0.1.0",
+      "date": "2026-09-11",
+      "title": "the ontology is promoted out of a game and the five examples are derived rather than written",
+      "file": "v0.1.0.json",
+      "page": "v0.1.0/index.html"
+    }
+  ]
+}

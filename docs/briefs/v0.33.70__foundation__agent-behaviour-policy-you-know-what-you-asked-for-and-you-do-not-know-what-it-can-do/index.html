@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agent Behaviour Policy (ABP): You Know What You Asked For, And You Do Not Know What It Can Do - abp.sgit.ai</title>
+<meta name="description" content="version v0.33.70 date 11 September 2026 from Dinis Cruz to Anyone deploying an agent, anyone building one, and anyone who has to sign for one">
+<link rel="canonical" href="https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">
+<meta property="og:title" content="Agent Behaviour Policy (ABP): You Know What You Asked For, And You Do Not Know What It Can Do - abp.sgit.ai">
+<meta property="og:description" content="version v0.33.70 date 11 September 2026 from Dinis Cruz to Anyone deploying an agent, anyone building one, and anyone who has to sign for one">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../../versions/v0.1.0/index.html" title="What changed in v0.1.0, and the commit it was built from">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../model/index.html">The four objects</a>
+      <a class="sl" href="../../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../examples/index.html">All five</a>
+      <a class="sl" href="../../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../docs/index.html">Everything, rendered</a>
+      <a class="sl here" href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../../index.html">Home</a> / <a href="../../../docs/index.html">Docs</a> / <a href="../../../docs/index.html#briefs">The briefs</a> / Agent Behaviour Policy (ABP): You Know What You Asked For, And You Do Not Know What It Can Do</p>
+  <h1>Agent Behaviour Policy (ABP): You Know What You Asked For, And You Do Not Know What It Can Do</h1>
+  <div class="note"><b>The source bytes.</b> This page is generated from <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do.md"><code>docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do.md</code></a>, which is served unchanged. Anything rendered on this network stays one click from the file it came from.</div>
+  <p><b>version</b> v0.33.70 <b>date</b> 11 September 2026 <b>from</b> Dinis Cruz <b>to</b> Anyone deploying an agent, anyone building one, and anyone who has to sign for one</p>
+  <p><b>type</b> Foundation document (the definition and introduction of the Agent Behaviour Policy, written for publication and for feedback)</p>
+  <p><em>This is the document everything else about the ABP stands on. It defines the term, says what an ABP contains and what it deliberately does not, gives one worked example with published numbers, and ends with the questions we would like answered by people who deploy agents for a living. It consolidates three internal briefs written on 11 September 2026 and rulings made on the days before. Everything factual in it carries a source and a date. Where a claim rests on something we measured, it says how much was measured and how much was derived. Nothing in it is a claim about any named product being good or bad, and nothing in it is a score.</em></p>
+  <h2 id="what-this-is">What This Is</h2>
+  <p>The introduction of a document type that does not yet exist in most organisations and should: <b>an Agent Behaviour Policy is a written description, for one agent in one deployment, of four things, being everything the agent can do, which we call the grant, what it was authorised and expected to do, which we call the mandate, the difference between the two, which we call the delta, and what stands between the agent and each capability, which we call the barrier; it is derived from the deployment rather than copied from a template, it is rendered as one line for a decision maker and a full table for an engineer from the same set of facts, and it describes without judging, so it carries no score, because the same ABP is dangerous in one deployment and harmless in another and nothing about the document changed; the reason it exists is a gap that is easy to state and hard to close, which is that most people who deploy an agent know what they asked it to do and almost nobody knows what it can do, and the ABP is the document that puts those two side by side.</b> New here: <b>the definition, the four objects, the barrier as the test of whether anything is actually in the way, the rule that the ABP never judges, and the questions we are asking you.</b></p>
+  <h2 id="the-gap">The Gap</h2>
+  <p><b>You know what you asked for.</b> When somebody deploys an agent, they know the job: draft the reply, fix the build, summarise the ticket, book the travel. That is the mandate, and it is usually clear, whether or not anybody wrote it down.</p>
+  <p><b>You do not know what it can do.</b> The agent runs with an account, on a machine, inside a container or on a desktop, with credentials and network access and a set of tools. Everything those permit is the grant. <b>It is almost never enumerated, and when it is, it is larger than the person who deployed the agent expected.</b></p>
+  <p>We have been measuring this. A published capability map covers nine common deployment shapes across twenty three capability primitives, and a published simulation of one ordinary assistant agent shows the shape of the result: <b>a grant of twelve capabilities, a mandate of four, and eight capabilities inside the agent's reach and outside its authority.</b> That eight is the delta, and in that example twice as many things were possible as were asked for.</p>
+  <p><b>The ABP is the document that puts the grant and the mandate on the same page.</b> That is all it is. That turns out to be a great deal.</p>
+  <h2 id="the-four-objects">The Four Objects</h2>
+  <p>An ABP is not a single list. It is four objects, and the order they are produced in matters.</p>
+  <div class="tablewrap"><table><thead><tr><th>Object</th><th>What it is</th><th>How it is obtained</th></tr></thead><tbody><tr><td><b>The mandate</b></td><td>What the agent is authorised and expected to do</td><td><b>Elicited.</b> In minutes, because the deployer already knows it</td></tr><tr><td><b>The grant</b></td><td>Everything the agent can do</td><td><b>Measured.</b> From the deployment shape: the product, where it runs, with what account, with what credentials</td></tr><tr><td><b>The delta</b></td><td>The difference. Excess where it can and you did not ask; shortfall where you asked and it cannot</td><td><b>Computed.</b> Never stored, because the deployment changes</td></tr><tr><td><b>The barrier</b></td><td>What stands between the agent and each capability</td><td><b>Recorded</b>, per capability, from one of four kinds</td></tr></tbody></table></div>
+  <p><b>The mandate must be captured even though it is already known</b>, because a grant on its own is an inventory, and nobody acts on an inventory. <em>Your agent can do three hundred and forty things</em> is a shrug. <em>Your agent can do three hundred and forty things and you authorised twelve</em> is a finding. The mandate is the edge that gives the grant a shape.</p>
+  <p><b>The delta is computed and never stored.</b> A stored delta is a claim about somebody's environment on a day that has passed. The environment is the thing that changes, so the delta is recomputed from the grant and the mandate every time it is needed.</p>
+  <h2 id="the-barrier-what-is-actually-in-the-way">The Barrier: What Is Actually In The Way</h2>
+  <p>For every capability in the grant, the ABP records what stands between the agent and it. There are four kinds, and the published capability map already uses them:</p>
+  <div class="tablewrap"><table><thead><tr><th>Barrier</th><th>Meaning</th><th>Is anything in the way</th></tr></thead><tbody><tr><td><b>Nothing</b></td><td>The agent can simply do it</td><td>No</td></tr><tr><td><b>A rule somebody wrote down</b></td><td>An instruction in a prompt, a policy document, a line in a configuration the model reads</td><td><b>No.</b> An instruction to the agent is inside the boundary the agent operates in</td></tr><tr><td><b>A setting the agent's own account could change</b></td><td>A configuration the agent has permission to alter</td><td><b>No.</b> The grant includes the ability to remove the barrier</td></tr><tr><td><b>A boundary enforced above it that it cannot reach</b></td><td>A sandbox, a gateway, a tool that is not exposed, a network it cannot see</td><td><b>Yes</b></td></tr></tbody></table></div>
+  <p><b>Only the fourth kind bounds anything.</b> That is not our opinion. All four of the major model providers have said in their own words during 2026 that an instruction at the prompt layer can be bypassed; one of them puts it as <em>the deterministic boundary is what gets hit when everything probabilistic misses.</em> The rule underneath is old and simple: <b>a control bounds a grant only if it is enforced by something the grant does not include.</b></p>
+  <p><b>So an ABP that lists a prohibition without its barrier is making a claim it cannot support.</b> Every prohibition in an ABP carries the kind of barrier behind it, and the honest ones say, for most deployments today, that the barrier is the second kind.</p>
+  <h2 id="one-worked-example-with-published-numbers">One Worked Example, With Published Numbers</h2>
+  <p>The clearest way to see what the ABP does is to change one setting and watch the document change.</p>
+  <p>Take a coding agent that runs on a developer's own machine. The published capability map profiles it twice: <b>once with confirmations enabled, once with confirmations disabled.</b> Same product, same machine, same account. One setting.</p>
+  <p>With confirmations enabled, a capability like <em>run programs as the account</em> has a barrier of the third kind: a setting the agent's own account could change. A person is asked before each action. <b>That is not a control, because the setting can be switched off from inside the grant, and because people approve almost everything they are asked.</b> One provider reports that users approved roughly ninety three per cent of permission prompts.</p>
+  <p>With confirmations disabled, the same capability has a barrier of the first kind: nothing.</p>
+  <p><b>The grant did not change. The mandate did not change. The delta did not change. The barrier on every capability in the delta moved one row.</b> Two ABPs, one line different, and the second one is the one most people are actually running.</p>
+  <p>That is the whole argument in one setting. <b>The ABP is about the deployment, not the product.</b></p>
+  <p><em>The rows behind this example come from the published map, which states that of ninety nine tool capability rows across its set, twenty one were measured and the rest derived. We repeat that ratio rather than hide it.</em></p>
+  <h2 id="it-describes-and-it-does-not-judge">It Describes And It Does Not Judge</h2>
+  <p><b>The ABP carries no verdict and no score.</b> This is the rule that makes it usable, and it takes a moment to see why.</p>
+  <p><b>The same ABP is dangerous in one deployment and harmless in another, and nothing about the document changed.</b> The most permissive grant imaginable, running where there are no assets and nothing reachable, is a low risk. The same grant with a production database attached tomorrow is a high one. The same grant next to a second agent that can act on its outputs is a different risk again. <b>Risk is a function of the ABP, the assets, the consequences and the date. The ABP is the one input that does not move.</b></p>
+  <p><b>A policy cannot be dangerous. A deployment can.</b></p>
+  <p>So there is no rating on an ABP, no traffic light, no risk level. Anybody who wants one will be asked for the other inputs first, because a score without the assets is wrong in one of the two rooms. <b>The score has a home, and it is the risk work that sits above the ABP, where the assets are known and a named person signs.</b> That work exists. It is not this document.</p>
+  <p><b>Three things follow from describing without judging, and each is useful.</b></p>
+  <p><b>A long grant is an inventory, not an admission.</b> An ABP says a capability exists. It never says a risk is unacceptable.</p>
+  <p><b>Correcting a draft is factual.</b> When we hand somebody a draft ABP for their deployment and ask if it is right, we are not asking them to agree that something is dangerous. We are asking whether their agent can do a thing. That is a question you can put to somebody who knows their business better than you do.</p>
+  <p><b>The description keeps.</b> A verdict goes stale whenever anything in the environment moves. A description of the grant goes stale on a visible clock: when the product changes or the deployment does. <b>Every ABP carries a validity statement</b>: <em>this describes the deployment as at this date; if the risk changed, the deployment changed, not this document.</em></p>
+  <h2 id="the-label-and-the-leaflet">The Label And The Leaflet</h2>
+  <p>An ABP is rendered twice from one set of facts.</p>
+  <p><b>The label</b> is one line, for anybody:</p>
+  <div class="tablewrap"><table><thead><tr><th>Field</th><th>Meaning</th></tr></thead><tbody><tr><td>Shape</td><td>The named deployment, in the product's own published words</td></tr><tr><td>Grant</td><td>N of 23 primitives</td></tr><tr><td>Mandate</td><td>M primitives</td></tr><tr><td><b>Excess</b></td><td>In the grant, not in the mandate. <b>The finding</b></td></tr><tr><td><b>Unbounded excess</b></td><td>Excess whose barrier is one of the first three kinds. <b>The purchase</b></td></tr><tr><td>Irreversible</td><td>Granted capabilities that cannot be undone, as published</td></tr><tr><td>Widest reach</td><td>The furthest the agent can reach: its project, its host, its tenant, or the world</td></tr><tr><td>Measured</td><td>Rows measured against rows derived</td></tr><tr><td>As at</td><td>The date and the source version</td></tr></tbody></table></div>
+  <p><b>Two numbers matter.</b> <em>Excess</em> answers the question this document exists for. <em>Unbounded excess</em> is the only number on the label a buyer can move: every real control put in place shifts one capability to the fourth barrier, and the number falls. <b>The gap between the two is the business case for a control, and it contains no verdict.</b></p>
+  <p><b>The leaflet</b> is the full table underneath: every primitive with its barrier, its reversibility, its provenance, and the mandate beside it. For the engineer, the auditor, and anybody who has to price it.</p>
+  <p><b>Both are computed from the same facts, and the facts are identical in both.</b> What differs is how they are grouped, which is a question of who is reading.</p>
+  <h2 id="why-the-mandate-reaches-further-than-your-own-material">Why The Mandate Reaches Further Than Your Own Material</h2>
+  <p>One consequence of writing the mandate down is that it makes visible something most deployments miss.</p>
+  <p><b>A grant you hold over other people's material is not a grant you may pass on.</b> A client sent you a document. A customer gave you access. A colleague shared a folder. Handing an agent the credential that reaches those things is handing on a pass that was issued to you, and in most cases you were not given authority to do that. This is not an analogy. In data protection law it is one sentence: <em>the processor shall not engage another processor without prior specific or general written authorisation of the controller</em>, and the first processor stays liable for the second. In professional confidentiality it is a duty with two exits, legal compulsion or the client's consent, and a regulator wrote on 17 August 2026 that putting client documents into a public model tool is to place them in the public domain. In contract it is the permitted recipients clause of every confidentiality agreement, which names employees and advisers and does not name a model provider.</p>
+  <p><b>The ABP does not decide any of that. It makes the question askable</b>, because the mandate is where you write down whose material the agent is meant to touch, and the grant is where you find out whose material it can.</p>
+  <h2 id="what-an-abp-is-not">What An ABP Is Not</h2>
+  <ul><li><b>Not an acceptable use policy.</b> That governs a person's use of a system. An ABP governs what an agent can and may do. Borrowing the frame imports the wrong subject.</li><li><b>Not a risk assessment.</b> It has no assets in it and no consequences. It is the input to one.</li><li><b>Not a compliance assessment, a certification, an audit or a security review</b> of anything or anybody. It describes a deployment and certifies nobody.</li><li><b>Not a score.</b> See above.</li><li><b>Not a guardrail.</b> It is what guardrails are compiled from. The barrier column tells you which prohibitions are guardrails already and which are sentences.</li><li><b>Not a claim about any product.</b> The capability rows are drawn from published documentation and published measurement, with the source, the date and the measured ratio stated. No adjective is attached to any of them.</li><li><b>Not a template.</b> It is derived from one deployment. A template cannot know what your agent can do.</li></ul>
+  <h2 id="where-it-comes-from">Where It Comes From</h2>
+  <p>We did not invent most of this, and we would rather say so.</p>
+  <p>The four kinds of barrier are already published on our capability map. The vocabulary for expressing permissions, prohibitions and duties with constraints on time, purpose and count has been a W3C recommendation since 2018, and it is in production use in the European data space architectures. The enforcement languages exist: the largest cloud's own agent gateway blocks everything by default and treats any prohibition as overriding any permission, with the reasoning formally verified. The industry's list of the ten agentic application risks, published 9 December 2025, puts tool misuse and privilege abuse at positions two and three, with least privilege and enumerated tool catalogues as the remedies. The United Kingdom's consumer regulator wrote on 9 March 2026 that a business using an agent <em>should be clear about what tasks an AI agent is allowed to perform, what data it can access, and what constraints apply.</em> And at least one underwriter of agents already requires, as a scoping input, a statement of the agent's capabilities, its autonomy level, its data access, the tools it can call and its deployment context, which is an ABP by another name.</p>
+  <p><b>What did not exist was a document that puts all of that on one page for one deployment, derived rather than copied, and honest about what it is not.</b> One company sells a set of editable templates. We are aware of nothing that is derived from the deployment, nothing that carries the barrier, and nothing that refuses to carry a score.</p>
+  <h2 id="what-we-are-asking-you">What We Are Asking You</h2>
+  <p>This is the part we want back.</p>
+  <ol><li><b>Would you correct a draft?</b> If we gave you a draft ABP for your own deployment, derived from its shape, would you tell us where it was wrong? That correction is how the document gets made, and we want to know if the exchange works.</li><li><b>Which capability did you not know about?</b> For the shape you run, which row of the grant was news to you?</li><li><b>Are twenty three primitives enough?</b> We know two things are missing: quantity, since one request and a million are the same primitive today, and interaction between agents, since two agents each within mandate can compose into something neither was authorised to do. What else?</li><li><b>Is the four kind barrier right?</b> Is there a kind of control we have not listed, or one we have placed in the wrong row?</li><li><b>Does no score survive contact with your organisation?</b> Or will somebody upstream insist on a rating before they read it?</li><li><b>Which deployment shape next?</b> We have nine. Which one do you actually run that we have not profiled?</li><li><b>Is Agent Behaviour Policy the right name?</b> We considered and rejected several. If this one fails for you, we would like to know why.</li></ol>
+  <h2 id="honest-tensions">Honest Tensions</h2>
+  <div class="tablewrap"><table><thead><tr><th>Tension</th><th>Note</th></tr></thead><tbody><tr><td>No score</td><td>It keeps the document true in every room, and it is the first thing every reader asks for</td></tr><tr><td>Derived, not templated</td><td>It is the only way the document can be right about your agent, and it means we cannot hand you one without knowing your shape</td></tr><tr><td>Twenty one of ninety nine measured</td><td>It is honest, and it means most rows are derived from documentation rather than observed</td></tr><tr><td>The barrier column</td><td>It makes the document useful, and it makes most current deployments look unbounded, because most prohibitions today are the second kind</td></tr><tr><td>The mandate is already known</td><td>It makes elicitation cheap, and a mandate nobody wrote down is one nobody can be held to</td></tr><tr><td>Describing without judging</td><td>It is what makes the ABP an input to everything above it, and it means the ABP alone tells you nothing about whether to worry</td></tr></tbody></table></div>
+  <h2 id="open-questions">Open Questions</h2>
+  <ol><li>Which name for the deployment shapes, so that two people describing the same setup produce the same ABP?</li><li>What is the smallest grant that still produces a non empty delta, and is that the right first example?</li><li>Who elicits the mandate when the person at the table is not the person who authorised the agent?</li><li>How is quantity added to the primitives without breaking the nine profiles already published?</li><li>What does the validity statement look like when the product updates weekly?</li><li>Does the label work printed, at card size, with nine fields?</li><li>What is the right form for the data files so that people can propose a correction with its evidence attached?</li></ol>
+  <h2 id="relationship-to-previous-briefs">Relationship To Previous Briefs</h2>
+  <p>This document consolidates three briefs of 11 September 2026: one on the product and how it is sold, one on the ABP as a graph with its renderings and its enforcement targets, and one on what sits above it. It inherits the rulings of 10 September on the words that may not be used, and the rule of 20 August that the record is published and the verdict is not. The capability grammar, the nine profiles and the four barriers come from the published capability map and the published simulation, and this document adds nothing to them except a name for the whole.</p>
+  <h2 id="key-claims">Key Claims</h2>
+  <div class="tablewrap"><table><thead><tr><th>#</th><th>Claim</th></tr></thead><tbody><tr><td>1</td><td>Most people who deploy an agent know what they asked it to do, and almost nobody knows what it can do</td></tr><tr><td>2</td><td>An ABP is a written description, for one agent in one deployment, of the grant, the mandate, the delta and the barrier</td></tr><tr><td>3</td><td>The mandate is elicited, the grant is measured, the delta is computed and never stored, and the barrier is recorded per capability</td></tr><tr><td>4</td><td>A grant on its own is an inventory, and the mandate is what turns it into a finding</td></tr><tr><td>5</td><td>There are four kinds of barrier, and only a boundary enforced above the agent that it cannot reach bounds anything</td></tr><tr><td>6</td><td>All four major model providers have said in 2026 that an instruction at the prompt layer can be bypassed, so a prohibition without its barrier is an unsupported claim</td></tr><tr><td>7</td><td>Changing one setting on one product moves every barrier in the delta by one row while the grant, the mandate and the delta stay the same</td></tr><tr><td>8</td><td>The ABP describes and does not judge, because the same document is dangerous in one deployment and harmless in another</td></tr><tr><td>9</td><td>So the ABP carries no score, and the score lives in the risk work above it, where the assets are known and a named person signs</td></tr><tr><td>10</td><td>The label carries two numbers that matter, excess and unbounded excess, and only the second can be moved by buying a control</td></tr><tr><td>11</td><td>A grant you hold over other people's material is not a grant you may pass on, and the ABP is where that question becomes askable</td></tr><tr><td>12</td><td>The parts of this existed already, published, and what did not exist was one page per deployment, derived, with the barrier, and without a score</td></tr></tbody></table></div>
+  <h2 id="sources">Sources</h2>
+  <p>All read 11 September 2026 unless stated.</p>
+  <p><b>The measurements and the vocabulary.</b> The capability map, its nine profiles, twenty three primitives, four barriers, undo classes and its statement that twenty one of ninety nine rows were measured, at https://what-can-it-do.games.sgit.ai/map/index.html, with its mandates and deltas at the same site. The published simulation with a grant of twelve, a mandate of four and a delta of eight at https://sgit.ai/demos/vaults/licence-to-operate/index.html. The graph rules at https://graphs.sgit.ai/.</p>
+  <p><b>That a prompt is not a control.</b> https://www.anthropic.com/engineering/how-we-contain-claude, 25 May 2026, and the approval rate reported at https://www.infoq.com/news/2026/07/anthropic-claude-containment/, 22 July 2026. https://aws.amazon.com/blogs/security/why-policy-in-amazon-bedrock-agentcore-chose-cedar-for-securing-agentic-workflows/, 20 May 2026. https://www.microsoft.com/en-us/security/blog/2026/07/16/least-privilege-for-ai-agents-identity-access-and-tool-binding/, 16 July 2026. The approach paper summarised at https://simonwillison.net/2025/Jun/15/ai-agent-security/, 2025.</p>
+  <p><b>Where it comes from.</b> The rights expression vocabulary at https://www.w3.org/TR/odrl-model/, recommendation of 15 February 2018, and its adoption at https://www.w3.org/blog/2025/w3c-standard-odrl-policy-gaining-industry-adoption, 23 October 2025. The agentic application risk list at https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/, 9 December 2025. The consumer guidance at https://www.gov.uk/government/publications/complying-with-consumer-law-when-using-ai-agents, 9 March 2026. The underwriter's scoping requirements at https://www.aiuc-1.com/scoping. The template offer at https://agentguru.co/.</p>
+  <p><b>The pass you may not hand on.</b> Article 28(2) and 28(4) of the General Data Protection Regulation. The warning notice of 17 August 2026 at https://www.sra.org.uk/.</p>
+  <p>This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../../versions/v0.1.0/index.html">v0.1.0</a> · <a href="../../../versions/index.html">all versions</a> · <a href="../../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../../model/index.html">The four objects</a>
+    <a href="../../../model/barriers/index.html">The barrier</a>
+    <a href="../../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../../data/index.html">The published vocabulary</a>
+    <a href="../../../model/schema/index.html">The schema</a>
+    <a href="../../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../../docs/index.html">Docs</a>
+    <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

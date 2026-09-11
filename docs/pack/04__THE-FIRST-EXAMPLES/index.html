@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The First Examples - abp.sgit.ai</title>
+<meta name="description" content="The memo asks for a few ABPs, from simple to complex, to find out what they look like in practice and how hard they are to make. The answer is that the first five can be derived rather than authored, because the data exists.">
+<link rel="canonical" href="https://abp.sgit.ai/docs/pack/04__THE-FIRST-EXAMPLES/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/docs/pack/04__THE-FIRST-EXAMPLES/index.html">
+<meta property="og:title" content="The First Examples - abp.sgit.ai">
+<meta property="og:description" content="The memo asks for a few ABPs, from simple to complex, to find out what they look like in practice and how hard they are to make. The answer is that the first five can be derived rather than authored, because the data exists.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../../versions/v0.1.0/index.html" title="What changed in v0.1.0, and the commit it was built from">v0.1.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../model/index.html">The four objects</a>
+      <a class="sl" href="../../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../examples/index.html">All five</a>
+      <a class="sl" href="../../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../../index.html">Home</a> / <a href="../../../docs/index.html">Docs</a> / <a href="../../../docs/index.html#pack">The pack</a> / The First Examples</p>
+  <h1>The First Examples</h1>
+  <div class="note"><b>The source bytes.</b> This page is generated from <a href="../../../docs/pack/04__THE-FIRST-EXAMPLES.md"><code>docs/pack/04__THE-FIRST-EXAMPLES.md</code></a>, which is served unchanged. Anything rendered on this network stays one click from the file it came from.</div>
+  <p><b>The memo asks for a few ABPs, from simple to complex, to find out what they look like in practice and how hard they are to make. The answer is that the first five can be derived rather than authored, because the data exists.</b></p>
+  <h2 id="the-seed">The seed</h2>
+  <p><code>what-can-it-do.games.sgit.ai/map/</code> publishes, as JSON at a stable address with cross origin access:</p>
+  <ul><li><b>Twenty three capability primitives</b>, in <code>verb.object.reach</code> form, each with a published gloss.</li><li><b>Nine product profiles</b>, each with a grant expressed as primitives.</li><li><b>A barrier glyph</b> on every profile and capability cell.</li><li><b>An undo class</b> on every capability.</li><li><b>Eight mandates</b>, one per surface, described as what a reasonable person wanted, per setup.</li><li><b>Delta matrices</b>, excess in one colour and shortfall in the other.</li><li><b>A provenance statement</b>: of ninety nine tool capability rows, <b>twenty one were measured and the rest are derived</b>.</li></ul>
+  <p><b>Two pages carry the halves this site needs</b>: <code>/map/mandates/</code> and <code>/map/deltas/</code>.</p>
+  <p><b>So the first ABP is a rendering of data that already passes through a published pipeline.</b> The work is the rendering, the schema and the honesty line, not the research.</p>
+  <h2 id="the-five-in-order-of-difficulty">The five, in order of difficulty</h2>
+  <div class="tablewrap"><table><thead><tr><th>#</th><th>Deployment shape</th><th>Why it is this one</th><th>What is new in it</th></tr></thead><tbody><tr><td><b>1</b></td><td><b>ChatGPT web, no connectors</b></td><td>The smallest grant in the set. A reader who does not believe agents can do much starts here and finds the delta is still not empty</td><td>Establishes the four objects with the fewest moving parts</td></tr><tr><td><b>2</b></td><td><b>Claude Code CLI, confirmations enabled</b></td><td>The confirmation is a barrier, and a reader can see which row it sits on</td><td><b>Introduces the barrier glyph as the argument.</b> A confirmation is the second or third row, not the fourth</td></tr><tr><td><b>3</b></td><td><b>Claude Code CLI, confirmations disabled</b></td><td>The same agent, one setting different, and the delta changes</td><td><b>The environment is the grant.</b> Two documents for one agent, differing in one line, is the clearest possible demonstration</td></tr><tr><td><b>4</b></td><td><b>Browser extension, broad host permissions</b></td><td><code>read.record.browsing</code>, and the mandate nobody wrote down</td><td><b>Introduces other people's data</b>: the pages you visit were not all yours to hand over</td></tr><tr><td><b>5</b></td><td><b>GitHub Actions, hosted runner</b></td><td>A service account, <code>write.repository.tenant</code>, <code>create.schedule.host</code></td><td><b>Introduces persistence and reach beyond the turn</b>, and the irreversible class</td></tr></tbody></table></div>
+  <p><b>Example three is the one to build first if only one gets built.</b> One setting, two documents, a visible difference in the delta. It makes the case that the ABP is about the deployment rather than the product in a way no paragraph can.</p>
+  <h2 id="what-each-example-page-contains">What each example page contains</h2>
+  <ol><li><b>The shape</b>, in the profile's published words.</li><li><b>The grant</b>: primitives, each with barrier and undo, <b>ordered by irreversible and unbounded first</b>.</li><li><b>The mandate</b>: the authorised set, in plain sentences.</li><li><b>The delta</b>: excess and shortfall, computed on the page.</li><li><b>The prohibitions</b>: the enforceable projection, each with the layer it would be enforced at and whether it is enforced today.</li><li><b>The provenance</b>: measured against derived, with the date.</li><li><b>The disclaimer</b>, which is not optional and is covered in <a href="../../../docs/pack/05__THE-HARD-RULES/index.html"><code>05__THE-HARD-RULES.md</code></a>.</li></ol>
+  <h2 id="the-workflow-question-the-memo-actually-asks">The workflow question the memo actually asks</h2>
+  <div class="note">Let's see how hard it is to make one, how fast we can make them.</div>
+  <p><b>Instrument it.</b> Record, for each of the five: how long it took, how many rows were derived rather than measured, how many questions had to be asked of a human, and which step was slowest. <b>Publish that on the site as a table.</b></p>
+  <p>Two reasons. It is the estate's own honesty discipline, measured rather than guessed. And <b>it is the pricing input</b>: the store sells an ABP, and nobody knows yet what one costs to produce.</p>
+  <h2 id="documents-first-then-vaults">Documents first, then vaults</h2>
+  <p>The memo proposes doing both, documents first. That is right and the pack agrees, for a reason worth stating: <b>a document forces the rendering question immediately</b>, and the rendering is where the five layers problem shows up. A vault can hold a graph nobody has successfully rendered for an executive.</p>
+  <p><b>So: five markdown documents with their JSON twins, in this repository, rendered through the docs section. Then the vault, which is the cloneable instance and belongs to the store's side of the boundary.</b></p>
+  <h2 id="the-educational-claim-and-how-to-keep-it-honest">The educational claim, and how to keep it honest</h2>
+  <p>The memo expects the site to be educational because most people do not understand the grants. <b>The evidence supports that as a claim about a gap, and it does not support a claim that a document teaches.</b></p>
+  <p>From 10 September: games beat conventional instruction by about a third of a standard deviation, and by minus 0.12 when they replace training rather than supplement it. <b>The strongest defensible finding is that interactive beats static among the people who finish.</b></p>
+  <p><b>So the site should link to the game rather than reproduce it</b>, and the examples should invite the reader to state a belief before showing them the answer. A page that says <em>before you scroll, write down how many of these twenty three this agent has</em> is doing the same work the game does, at the cost of one sentence.</p>
+  <p>This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../../versions/v0.1.0/index.html">v0.1.0</a> · <a href="../../../versions/index.html">all versions</a> · <a href="../../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../../docs/pack/04__THE-FIRST-EXAMPLES/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../../model/index.html">The four objects</a>
+    <a href="../../../model/barriers/index.html">The barrier</a>
+    <a href="../../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../../data/index.html">The published vocabulary</a>
+    <a href="../../../model/schema/index.html">The schema</a>
+    <a href="../../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../../docs/index.html">Docs</a>
+    <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>
