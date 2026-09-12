@@ -458,26 +458,28 @@ def _versions(root, site, version, version_log):
     own details rather than to a generic changelog. The title is a sentence rather than a
     label: `the data pack becomes a published vocabulary', never `data improvements'.
 
-    THE COMMIT IS READ FROM THE TAG, NOT FROM HEAD, and that is not a detail. The guidance
-    says to record the commit, because a version without one cannot be verified later. Writing
-    `git rev-parse HEAD' into the file makes the build non-deterministic: the release commit
-    cannot contain its own hash, so the file would say one thing when I build it and another
-    when CI rebuilds it, and the staleness check in the pipeline would fail every release. So
-    a version's commit is `git rev-list -n 1 <tag>', which is stable forever once CI has
-    tagged, and a version that is not tagged yet says so in `commit_note' instead of carrying
-    a hash that would be wrong. The rule the estate cares about is that the claim is
-    verifiable, not that a field is populated.
+    THE BUILD DOES NOT READ GIT, AND THAT COST TWO ATTEMPTS TO GET RIGHT.
+
+    The guidance says to record the commit, because a version without one cannot be verified
+    later. Two obvious ways to do that both make the build non-deterministic, and a generated
+    site whose generator produces different bytes in different places is a site whose pages can
+    disagree with their own data:
+
+      · `git rev-parse HEAD' cannot work, because a release commit cannot contain its own hash.
+      · `git rev-list -n 1 <tag>' cannot work either, and this is the subtler one. It resolves
+        on a checkout that has the tags and returns nothing on one that does not, so the same
+        commit built two different files depending on who built it. The release gate caught
+        exactly that on the v0.3.0 push: the tree I committed carried hashes and the tree CI
+        rebuilt carried nulls.
+
+    So the file records HOW TO RESOLVE the commit rather than the commit itself. The tag is the
+    record: CI derives it from `admin/build/version.txt', creates it on the commit whose subject
+    carries the same string, and `git rev-list -n 1 vX.Y.Z' resolves it from then on, for
+    anybody, forever. The claim the guidance cares about is that a version is verifiable, and
+    a stable published resolution method is verifiable in a way a hash that only half the
+    world's checkouts can produce is not. Recorded as a deviation in v0.3.0's notes.
     """
     import json
-    import subprocess
-
-    def commit_of(tag):
-        try:
-            r = subprocess.run(["git", "rev-list", "-n", "1", tag], cwd=root,
-                               capture_output=True, text=True, check=True)
-            return r.stdout.strip() or None
-        except Exception:
-            return None
 
     index = {"current": version,
              "_what_this_is": "The version surface. The badge in the site chrome reads `current` "
@@ -486,14 +488,17 @@ def _versions(root, site, version, version_log):
                               "from the same string.",
              "versions": []}
     for v, date, title, entry in version_log:
-        commit = commit_of(v)
         rec = {"version": v, "date": date, "title": title,
                "summary": entry["summary"],
-               "commit": commit,
-               "commit_note": None if commit else
-                              f"Not tagged yet. This release's commit is the one whose subject "
-                              f"carries `site {v}:`; CI tags it {v} on the release branch, and "
-                              f"`git rev-list -n 1 {v}` resolves it from then on.",
+               "commit": None,
+               "commit_resolves_by": f"git rev-list -n 1 {v}",
+               "commit_note":
+                   f"The tag is the record. CI derives {v} from admin/build/version.txt and "
+                   f"creates it on the commit whose subject carries `site {v}:`, so "
+                   f"`git rev-list -n 1 {v}` resolves it for anybody from then on. The hash is "
+                   f"not written into this file because a release commit cannot contain its own "
+                   f"hash, and reading it back from the tag at build time made the build produce "
+                   f"different bytes on a checkout with tags than on one without.",
                "vault": entry.get("vault"),
                "reconstructed": entry.get("reconstructed", False),
                "changes": entry.get("changes", []),

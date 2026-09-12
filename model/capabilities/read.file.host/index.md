@@ -2,7 +2,7 @@
 
 > Read any file the account can reach. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.2.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.3.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12,7 +12,21 @@ below point at them.*
 
 # `read.file.host`
 
-**Read any file the account can reach.** Verb `read`, object `file`, reach `host`, family `filesystem`. Its effect is **no**: cannot be undone.
+**Read any file the account can reach.** Its effect is **no**: cannot be undone.
+
+## What this id is made of
+
+**This is not a string.** It is [`read`](../../../model/lexicon/verbs/read/index.md)`.`[`file`](../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../model/lexicon/reaches/host/index.md), three nodes joined by three edges, and each of them has an address, a page and a JSON file. Follow any of them and you get the query for that word rather than a definition of it.
+
+| Node | Edge | Reads as |
+|---|---|---|
+| [`read`](../../../model/lexicon/verbs/read/index.md) | `has_verb` | this capability has the verb `read` |
+| [`file`](../../../model/lexicon/objects/file/index.md) | `acts_on` | this capability acts on `file` |
+| [`host`](../../../model/lexicon/reaches/host/index.md) | `reaches` | this capability reaches `host` |
+| [`filesystem`](../../../model/lexicon/families/filesystem/index.md) | `in_family` | this capability is in the `filesystem` family |
+| [`no`](../../../model/undo/index.md) | `has_undo_class` | this capability has the undo class `no` |
+
+> **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `read.file.host` is emerges from the edges traceable from it. The strongest case is [`host`](../../../model/lexicon/reaches/host/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
 ## In 7 of 9 published shapes
 

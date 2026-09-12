@@ -1,0 +1,70 @@
+{
+  "type": "abp/lexicon-node/v1",
+  "id": "reach/host",
+  "node_type": "ReachClass",
+  "label": "host",
+  "gloss": "the machine, container or account it runs as",
+  "_meaning": "A node carries no inherent meaning. What this node IS emerges from the edges below, not from the gloss. The gloss is a convenience for a reader and is never the definition.",
+  "in_capabilities": [
+    "create.schedule.host",
+    "delete.file.host",
+    "execute.process.host",
+    "read.credential.host",
+    "read.file.host",
+    "read.record.browsing",
+    "read.record.history",
+    "write.file.host"
+  ],
+  "count": 8,
+  "unused": false,
+  "unused_note": null,
+  "named_by": [
+    {
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "means": "this container — ephemeral, the vendor's; not your machine"
+    },
+    {
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "means": "your machine, as your user account"
+    },
+    {
+      "shape": "anthropic/claude-code/local-default",
+      "means": "your machine, as your user account"
+    },
+    {
+      "shape": "anthropic/claude-desktop/default",
+      "means": "your machine, as your user account"
+    },
+    {
+      "shape": "anthropic/claude-web/connectors-on",
+      "means": "what the drive connector is scoped to; not your machine"
+    },
+    {
+      "shape": "generic/browser-extension/broad-host-permissions",
+      "means": "your browser — every page, every logged-in site"
+    },
+    {
+      "shape": "generic/scheduled-job/service-account",
+      "means": "the server it runs on, as the service account"
+    },
+    {
+      "shape": "github/actions-runner/ci",
+      "means": "the runner — destroyed after the job; not your machine"
+    },
+    {
+      "shape": "openai/chatgpt-web/default",
+      "means": "the vendor's environment; not your machine"
+    }
+  ],
+  "page": "https://abp.sgit.ai/model/lexicon/reaches/host/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Derived from the published grammar: every capability id is verb.object.reach, and this node is what the id spells with.",
+    "licence": "CC BY 4.0"
+  }
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The lexicon - abp.sgit.ai</title>
+<meta name="description" content="Every word in the capability grammar as a node with its own address, its own JSON and its own page: ten verbs, nine object classes, five reach classes and nine families.">
+<link rel="canonical" href="https://abp.sgit.ai/model/lexicon/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/model/lexicon/index.html">
+<meta property="og:title" content="The lexicon - abp.sgit.ai">
+<meta property="og:description" content="Every word in the capability grammar as a node with its own address, its own JSON and its own page: ten verbs, nine object classes, five reach classes and nine families.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.3.0/index.html" title="What changed in v0.3.0, and the commit it was built from">v0.3.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl here" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../model/index.html">The model</a> / The lexicon</p>
+  <h1>The lexicon</h1>
+  <p class="lead"><b><code>read.file.project</code> is not a string.</b> It is three nodes and three edges, and each of those nodes has an address, a JSON file and a page of its own. This is where they are.</p>
+  <h2 id="what-changed-and-why-it-mattered">What changed, and why it mattered</h2>
+  <div class="note"><b>Until v0.3.0 this site attached the meaning to the node.</b> A primitive was an identifier with a gloss beside it, and the gloss was the definition. That is schema-first thinking dressed in graph syntax: a self-describing node has smuggled the schema back in. Now the gloss is still there and it is no longer the definition. <b>What a primitive means is what its edges reach.</b></div>
+  <h3 id="one-primitive-spelled-out">One primitive, spelled out</h3>
+  <div class="tablewrap"><table><thead><tr><th></th><th>Node</th><th>Edge</th><th>Reads as</th></tr></thead><tbody><tr><td></td><td><a href="../../model/capabilities/read.record.browsing/index.html"><code>read.record.browsing</code></a></td><td></td><td><em>Read every page you visit</em></td></tr><tr><td></td><td><a href="../../model/lexicon/verbs/read/index.html"><code>read</code></a></td><td><code>has_verb</code></td><td>this capability has the verb <code>read</code></td></tr><tr><td></td><td><a href="../../model/lexicon/objects/record/index.html"><code>record</code></a></td><td><code>acts_on</code></td><td>this capability acts on <code>record</code></td></tr><tr><td></td><td><a href="../../model/lexicon/reaches/host/index.html"><code>host</code></a></td><td><code>reaches</code></td><td>this capability reaches <code>host</code></td></tr><tr><td></td><td><a href="../../model/lexicon/families/browser/index.html"><code>browser</code></a></td><td><code>in_family</code></td><td>this capability is in the <code>browser</code> family</td></tr><tr><td></td><td><a href="../../model/undo/index.html"><code>no</code></a></td><td><code>has_undo_class</code></td><td>this capability has the undo class <code>no</code></td></tr></tbody></table></div>
+  <p><b>Each of those is a link because each of those is a node.</b> Follow <a href="../../model/lexicon/reaches/host/index.html"><code>host</code></a> and you get every primitive that reaches that far and, more usefully, what each deployment shape says that reach class actually means. They do not agree, and the page keeps the disagreement rather than averaging it.</p>
+  <h2 id="the-words">The words</h2>
+  <div class="gamegrid"><div class="gamecard"><h3><a href="../../model/lexicon/index.html#verbs">The action half of a primitive</a></h3><p class="sub">Ten verbs. A verb on its own is a word: what `read' means here is whatever the primitives under it reach, which is why this page is a query rather than a definition.</p><div class="foot"><a href="../../model/lexicon/verbs/authenticate-as/index.html"><code>authenticate-as</code></a> · <a href="../../model/lexicon/verbs/create/index.html"><code>create</code></a> · <a href="../../model/lexicon/verbs/delete/index.html"><code>delete</code></a> · <a href="../../model/lexicon/verbs/execute/index.html"><code>execute</code></a> · <a href="../../model/lexicon/verbs/grant/index.html"><code>grant</code></a> · <a href="../../model/lexicon/verbs/read/index.html"><code>read</code></a> · <a href="../../model/lexicon/verbs/receive/index.html"><code>receive</code></a> · <a href="../../model/lexicon/verbs/revoke/index.html"><code>revoke</code></a> · <a href="../../model/lexicon/verbs/send/index.html"><code>send</code></a> · <a href="../../model/lexicon/verbs/write/index.html"><code>write</code></a></div></div><div class="gamecard"><h3><a href="../../model/lexicon/index.html#objects">What a primitive acts on</a></h3><p class="sub">Nine object classes. The same verb against a different object class is a different primitive, and a different conversation.</p><div class="foot"><a href="../../model/lexicon/objects/budget/index.html"><code>budget</code></a> · <a href="../../model/lexicon/objects/credential/index.html"><code>credential</code></a> · <a href="../../model/lexicon/objects/file/index.html"><code>file</code></a> · <a href="../../model/lexicon/objects/message/index.html"><code>message</code></a> · <a href="../../model/lexicon/objects/network-endpoint/index.html"><code>network-endpoint</code></a> · <a href="../../model/lexicon/objects/process/index.html"><code>process</code></a> · <a href="../../model/lexicon/objects/record/index.html"><code>record</code></a> · <a href="../../model/lexicon/objects/repository/index.html"><code>repository</code></a> · <a href="../../model/lexicon/objects/schedule/index.html"><code>schedule</code></a></div></div><div class="gamecard"><h3><a href="../../model/lexicon/index.html#reaches">How far a primitive reaches</a></h3><p class="sub">Five reach classes, and the most contested nodes in the model: what <code>host' and </code>tenant' MEAN is the deployment shape's to say, not the grammar's.</p><div class="foot"><a href="../../model/lexicon/reaches/host/index.html"><code>host</code></a> · <a href="../../model/lexicon/reaches/project/index.html"><code>project</code></a> · <a href="../../model/lexicon/reaches/self/index.html"><code>self</code></a> · <a href="../../model/lexicon/reaches/tenant/index.html"><code>tenant</code></a> · <a href="../../model/lexicon/reaches/world/index.html"><code>world</code></a></div></div><div class="gamecard"><h3><a href="../../model/lexicon/index.html#families">A grouping of primitives for a reader</a></h3><p class="sub">Nine families. A family is an altitude device: it groups facts for a reader and carries none of its own.</p><div class="foot"><a href="../../model/lexicon/families/browser/index.html"><code>browser</code></a> · <a href="../../model/lexicon/families/code/index.html"><code>code</code></a> · <a href="../../model/lexicon/families/communication/index.html"><code>communication</code></a> · <a href="../../model/lexicon/families/filesystem/index.html"><code>filesystem</code></a> · <a href="../../model/lexicon/families/identity/index.html"><code>identity</code></a> · <a href="../../model/lexicon/families/money/index.html"><code>money</code></a> · <a href="../../model/lexicon/families/network/index.html"><code>network</code></a> · <a href="../../model/lexicon/families/process/index.html"><code>process</code></a> · <a href="../../model/lexicon/families/schedule/index.html"><code>schedule</code></a></div></div></div>
+  <div class="note"><b>2 of these words have no primitive under them: <code>receive</code>, <code>revoke</code>. In this graph they mean nothing yet.</b> They are in the published grammar and they are kept and marked rather than dropped, because a node connected to nothing is literally meaningless and saying so is more useful than writing it a definition no edge supports. Adding a primitive that uses one would need a probe. <b>This is a finding about the vocabulary rather than a defect in it</b>, and it is the kind of gap that only becomes visible once the words are nodes.</div>
+  <h2 id="the-rest-of-the-grammar">The rest of the grammar</h2>
+  <div class="tablewrap"><table><thead><tr><th>Address</th><th>What is there</th></tr></thead><tbody><tr><td><a href="../../model/graph/edges/index.html">The edge vocabulary</a></td><td>15 edges, each a verb with a distinct inverse, a stated domain and range, and where it came from. The generic association edge is banned and there is none in this model.</td></tr><tr><td><a href="../../model/graph/formulas/index.html">The node type formulas</a></td><td>13 node types, each a required pattern of paths rather than a label. Run against the graph on every build.</td></tr><tr><td><a href="../../model/graph/layers/index.html">The three layers</a></td><td>How a vault extends this vocabulary for one customer without merging anything, and without asking permission.</td></tr><tr><td><a href="../../model/graph/index.html">The graph rules</a></td><td>The five published rules and what each forces on this model.</td></tr></tbody></table></div>
+  <p><a href="../../data/lexicon/index.json">The lexicon as JSON</a> · <a href="../../data/graph/index.json">The whole graph</a> · <a href="https://graphs.sgit.ai/">Meaning through connectivity</a></p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.3.0/index.html">v0.3.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../model/lexicon/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

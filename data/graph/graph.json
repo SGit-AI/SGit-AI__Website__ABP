@@ -1,0 +1,2457 @@
+{
+  "type": "abp/graph-edges/v1",
+  "_what_this_is": "Every edge instance, flat. Pair it with nodes.json to walk the graph.",
+  "count": 488,
+  "edges": [
+    {
+      "from": "barrier/expectation",
+      "edge": "enforced_by",
+      "to": "enforcer/the-agent-reading-it"
+    },
+    {
+      "from": "barrier/setting",
+      "edge": "enforced_by",
+      "to": "enforcer/the-agents-own-account"
+    },
+    {
+      "from": "barrier/boundary",
+      "edge": "enforced_by",
+      "to": "enforcer/above-the-grant"
+    },
+    {
+      "from": "capability/read.file.project",
+      "edge": "has_verb",
+      "to": "verb/read"
+    },
+    {
+      "from": "capability/read.file.project",
+      "edge": "acts_on",
+      "to": "object/file"
+    },
+    {
+      "from": "capability/read.file.project",
+      "edge": "reaches",
+      "to": "reach/project"
+    },
+    {
+      "from": "capability/read.file.project",
+      "edge": "in_family",
+      "to": "family/filesystem"
+    },
+    {
+      "from": "capability/read.file.project",
+      "edge": "has_undo_class",
+      "to": "undo/yes"
+    },
+    {
+      "from": "capability/write.file.project",
+      "edge": "has_verb",
+      "to": "verb/write"
+    },
+    {
+      "from": "capability/write.file.project",
+      "edge": "acts_on",
+      "to": "object/file"
+    },
+    {
+      "from": "capability/write.file.project",
+      "edge": "reaches",
+      "to": "reach/project"
+    },
+    {
+      "from": "capability/write.file.project",
+      "edge": "in_family",
+      "to": "family/filesystem"
+    },
+    {
+      "from": "capability/write.file.project",
+      "edge": "has_undo_class",
+      "to": "undo/with-effort"
+    },
+    {
+      "from": "capability/read.file.host",
+      "edge": "has_verb",
+      "to": "verb/read"
+    },
+    {
+      "from": "capability/read.file.host",
+      "edge": "acts_on",
+      "to": "object/file"
+    },
+    {
+      "from": "capability/read.file.host",
+      "edge": "reaches",
+      "to": "reach/host"
+    },
+    {
+      "from": "capability/read.file.host",
+      "edge": "in_family",
+      "to": "family/filesystem"
+    },
+    {
+      "from": "capability/read.file.host",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/write.file.host",
+      "edge": "has_verb",
+      "to": "verb/write"
+    },
+    {
+      "from": "capability/write.file.host",
+      "edge": "acts_on",
+      "to": "object/file"
+    },
+    {
+      "from": "capability/write.file.host",
+      "edge": "reaches",
+      "to": "reach/host"
+    },
+    {
+      "from": "capability/write.file.host",
+      "edge": "in_family",
+      "to": "family/filesystem"
+    },
+    {
+      "from": "capability/write.file.host",
+      "edge": "has_undo_class",
+      "to": "undo/with-effort"
+    },
+    {
+      "from": "capability/delete.file.host",
+      "edge": "has_verb",
+      "to": "verb/delete"
+    },
+    {
+      "from": "capability/delete.file.host",
+      "edge": "acts_on",
+      "to": "object/file"
+    },
+    {
+      "from": "capability/delete.file.host",
+      "edge": "reaches",
+      "to": "reach/host"
+    },
+    {
+      "from": "capability/delete.file.host",
+      "edge": "in_family",
+      "to": "family/filesystem"
+    },
+    {
+      "from": "capability/delete.file.host",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/execute.process.host",
+      "edge": "has_verb",
+      "to": "verb/execute"
+    },
+    {
+      "from": "capability/execute.process.host",
+      "edge": "acts_on",
+      "to": "object/process"
+    },
+    {
+      "from": "capability/execute.process.host",
+      "edge": "reaches",
+      "to": "reach/host"
+    },
+    {
+      "from": "capability/execute.process.host",
+      "edge": "in_family",
+      "to": "family/process"
+    },
+    {
+      "from": "capability/execute.process.host",
+      "edge": "has_undo_class",
+      "to": "undo/with-effort"
+    },
+    {
+      "from": "capability/execute.process.self",
+      "edge": "has_verb",
+      "to": "verb/execute"
+    },
+    {
+      "from": "capability/execute.process.self",
+      "edge": "acts_on",
+      "to": "object/process"
+    },
+    {
+      "from": "capability/execute.process.self",
+      "edge": "reaches",
+      "to": "reach/self"
+    },
+    {
+      "from": "capability/execute.process.self",
+      "edge": "in_family",
+      "to": "family/process"
+    },
+    {
+      "from": "capability/execute.process.self",
+      "edge": "has_undo_class",
+      "to": "undo/yes"
+    },
+    {
+      "from": "capability/send.endpoint.allowed",
+      "edge": "has_verb",
+      "to": "verb/send"
+    },
+    {
+      "from": "capability/send.endpoint.allowed",
+      "edge": "acts_on",
+      "to": "object/network-endpoint"
+    },
+    {
+      "from": "capability/send.endpoint.allowed",
+      "edge": "reaches",
+      "to": "reach/tenant"
+    },
+    {
+      "from": "capability/send.endpoint.allowed",
+      "edge": "in_family",
+      "to": "family/network"
+    },
+    {
+      "from": "capability/send.endpoint.allowed",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/send.endpoint.world",
+      "edge": "has_verb",
+      "to": "verb/send"
+    },
+    {
+      "from": "capability/send.endpoint.world",
+      "edge": "acts_on",
+      "to": "object/network-endpoint"
+    },
+    {
+      "from": "capability/send.endpoint.world",
+      "edge": "reaches",
+      "to": "reach/world"
+    },
+    {
+      "from": "capability/send.endpoint.world",
+      "edge": "in_family",
+      "to": "family/network"
+    },
+    {
+      "from": "capability/send.endpoint.world",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/read.credential.host",
+      "edge": "has_verb",
+      "to": "verb/read"
+    },
+    {
+      "from": "capability/read.credential.host",
+      "edge": "acts_on",
+      "to": "object/credential"
+    },
+    {
+      "from": "capability/read.credential.host",
+      "edge": "reaches",
+      "to": "reach/host"
+    },
+    {
+      "from": "capability/read.credential.host",
+      "edge": "in_family",
+      "to": "family/identity"
+    },
+    {
+      "from": "capability/read.credential.host",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/authenticate-as.credential.tenant",
+      "edge": "has_verb",
+      "to": "verb/authenticate-as"
+    },
+    {
+      "from": "capability/authenticate-as.credential.tenant",
+      "edge": "acts_on",
+      "to": "object/credential"
+    },
+    {
+      "from": "capability/authenticate-as.credential.tenant",
+      "edge": "reaches",
+      "to": "reach/tenant"
+    },
+    {
+      "from": "capability/authenticate-as.credential.tenant",
+      "edge": "in_family",
+      "to": "family/identity"
+    },
+    {
+      "from": "capability/authenticate-as.credential.tenant",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/grant.credential.self",
+      "edge": "has_verb",
+      "to": "verb/grant"
+    },
+    {
+      "from": "capability/grant.credential.self",
+      "edge": "acts_on",
+      "to": "object/credential"
+    },
+    {
+      "from": "capability/grant.credential.self",
+      "edge": "reaches",
+      "to": "reach/self"
+    },
+    {
+      "from": "capability/grant.credential.self",
+      "edge": "in_family",
+      "to": "family/identity"
+    },
+    {
+      "from": "capability/grant.credential.self",
+      "edge": "has_undo_class",
+      "to": "undo/yes"
+    },
+    {
+      "from": "capability/send.message.world",
+      "edge": "has_verb",
+      "to": "verb/send"
+    },
+    {
+      "from": "capability/send.message.world",
+      "edge": "acts_on",
+      "to": "object/message"
+    },
+    {
+      "from": "capability/send.message.world",
+      "edge": "reaches",
+      "to": "reach/world"
+    },
+    {
+      "from": "capability/send.message.world",
+      "edge": "in_family",
+      "to": "family/communication"
+    },
+    {
+      "from": "capability/send.message.world",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/read.message.tenant",
+      "edge": "has_verb",
+      "to": "verb/read"
+    },
+    {
+      "from": "capability/read.message.tenant",
+      "edge": "acts_on",
+      "to": "object/message"
+    },
+    {
+      "from": "capability/read.message.tenant",
+      "edge": "reaches",
+      "to": "reach/tenant"
+    },
+    {
+      "from": "capability/read.message.tenant",
+      "edge": "in_family",
+      "to": "family/communication"
+    },
+    {
+      "from": "capability/read.message.tenant",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/write.repository.project",
+      "edge": "has_verb",
+      "to": "verb/write"
+    },
+    {
+      "from": "capability/write.repository.project",
+      "edge": "acts_on",
+      "to": "object/repository"
+    },
+    {
+      "from": "capability/write.repository.project",
+      "edge": "reaches",
+      "to": "reach/project"
+    },
+    {
+      "from": "capability/write.repository.project",
+      "edge": "in_family",
+      "to": "family/code"
+    },
+    {
+      "from": "capability/write.repository.project",
+      "edge": "has_undo_class",
+      "to": "undo/with-effort"
+    },
+    {
+      "from": "capability/write.repository.tenant",
+      "edge": "has_verb",
+      "to": "verb/write"
+    },
+    {
+      "from": "capability/write.repository.tenant",
+      "edge": "acts_on",
+      "to": "object/repository"
+    },
+    {
+      "from": "capability/write.repository.tenant",
+      "edge": "reaches",
+      "to": "reach/tenant"
+    },
+    {
+      "from": "capability/write.repository.tenant",
+      "edge": "in_family",
+      "to": "family/code"
+    },
+    {
+      "from": "capability/write.repository.tenant",
+      "edge": "has_undo_class",
+      "to": "undo/with-effort"
+    },
+    {
+      "from": "capability/authenticate-as.credential.signing",
+      "edge": "has_verb",
+      "to": "verb/authenticate-as"
+    },
+    {
+      "from": "capability/authenticate-as.credential.signing",
+      "edge": "acts_on",
+      "to": "object/credential"
+    },
+    {
+      "from": "capability/authenticate-as.credential.signing",
+      "edge": "reaches",
+      "to": "reach/tenant"
+    },
+    {
+      "from": "capability/authenticate-as.credential.signing",
+      "edge": "in_family",
+      "to": "family/code"
+    },
+    {
+      "from": "capability/authenticate-as.credential.signing",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/create.record.world",
+      "edge": "has_verb",
+      "to": "verb/create"
+    },
+    {
+      "from": "capability/create.record.world",
+      "edge": "acts_on",
+      "to": "object/record"
+    },
+    {
+      "from": "capability/create.record.world",
+      "edge": "reaches",
+      "to": "reach/world"
+    },
+    {
+      "from": "capability/create.record.world",
+      "edge": "in_family",
+      "to": "family/code"
+    },
+    {
+      "from": "capability/create.record.world",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/write.budget.tenant",
+      "edge": "has_verb",
+      "to": "verb/write"
+    },
+    {
+      "from": "capability/write.budget.tenant",
+      "edge": "acts_on",
+      "to": "object/budget"
+    },
+    {
+      "from": "capability/write.budget.tenant",
+      "edge": "reaches",
+      "to": "reach/tenant"
+    },
+    {
+      "from": "capability/write.budget.tenant",
+      "edge": "in_family",
+      "to": "family/money"
+    },
+    {
+      "from": "capability/write.budget.tenant",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/create.schedule.host",
+      "edge": "has_verb",
+      "to": "verb/create"
+    },
+    {
+      "from": "capability/create.schedule.host",
+      "edge": "acts_on",
+      "to": "object/schedule"
+    },
+    {
+      "from": "capability/create.schedule.host",
+      "edge": "reaches",
+      "to": "reach/host"
+    },
+    {
+      "from": "capability/create.schedule.host",
+      "edge": "in_family",
+      "to": "family/schedule"
+    },
+    {
+      "from": "capability/create.schedule.host",
+      "edge": "has_undo_class",
+      "to": "undo/yes"
+    },
+    {
+      "from": "capability/read.record.history",
+      "edge": "has_verb",
+      "to": "verb/read"
+    },
+    {
+      "from": "capability/read.record.history",
+      "edge": "acts_on",
+      "to": "object/record"
+    },
+    {
+      "from": "capability/read.record.history",
+      "edge": "reaches",
+      "to": "reach/host"
+    },
+    {
+      "from": "capability/read.record.history",
+      "edge": "in_family",
+      "to": "family/filesystem"
+    },
+    {
+      "from": "capability/read.record.history",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "capability/create.schedule.tenant",
+      "edge": "has_verb",
+      "to": "verb/create"
+    },
+    {
+      "from": "capability/create.schedule.tenant",
+      "edge": "acts_on",
+      "to": "object/schedule"
+    },
+    {
+      "from": "capability/create.schedule.tenant",
+      "edge": "reaches",
+      "to": "reach/tenant"
+    },
+    {
+      "from": "capability/create.schedule.tenant",
+      "edge": "in_family",
+      "to": "family/schedule"
+    },
+    {
+      "from": "capability/create.schedule.tenant",
+      "edge": "has_undo_class",
+      "to": "undo/yes"
+    },
+    {
+      "from": "capability/read.record.browsing",
+      "edge": "has_verb",
+      "to": "verb/read"
+    },
+    {
+      "from": "capability/read.record.browsing",
+      "edge": "acts_on",
+      "to": "object/record"
+    },
+    {
+      "from": "capability/read.record.browsing",
+      "edge": "reaches",
+      "to": "reach/host"
+    },
+    {
+      "from": "capability/read.record.browsing",
+      "edge": "in_family",
+      "to": "family/browser"
+    },
+    {
+      "from": "capability/read.record.browsing",
+      "edge": "has_undo_class",
+      "to": "undo/no"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.signing"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#authenticate-as.credential.signing",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#authenticate-as.credential.signing",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#delete.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#delete.file.host",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.credential.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.credential.host",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.record.history",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.record.history",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/inferred"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#send.endpoint.allowed",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#send.endpoint.allowed",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#execute.process.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#execute.process.host",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#write.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#write.file.host",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#write.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#write.file.project",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/write.repository.project"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#write.repository.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#write.repository.project",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#write.repository.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#write.repository.tenant",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.file.project",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#create.schedule.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#create.schedule.tenant",
+      "edge": "known_by",
+      "to": "evidence/self-reported"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "grants",
+      "to": "capability/create.schedule.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#create.schedule.host",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#create.schedule.host",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.signing"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#authenticate-as.credential.signing",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#authenticate-as.credential.signing",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#create.record.world",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#create.record.world",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#delete.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#delete.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.credential.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.credential.host",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.record.history",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.record.history",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#send.endpoint.world",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#send.endpoint.world",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#execute.process.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#execute.process.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#write.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#write.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#write.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#write.file.project",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/write.repository.project"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#write.repository.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#write.repository.project",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#write.repository.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/expectation"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#write.repository.tenant",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/create.schedule.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#create.schedule.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#create.schedule.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.file.project",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "grants",
+      "to": "capability/grant.credential.self"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#grant.credential.self",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#grant.credential.self",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.signing"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#authenticate-as.credential.signing",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#authenticate-as.credential.signing",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#create.record.world",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#create.record.world",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#delete.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#delete.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.credential.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.credential.host",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.record.history",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.record.history",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#send.endpoint.world",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#send.endpoint.world",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#write.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#write.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#write.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#write.file.project",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/write.repository.project"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#write.repository.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#write.repository.project",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#write.repository.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/expectation"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#write.repository.tenant",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#execute.process.host",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#execute.process.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/create.schedule.host"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#create.schedule.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#create.schedule.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.file.project",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "grants",
+      "to": "capability/grant.credential.self"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#grant.credential.self",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#grant.credential.self",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "grants",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.credential.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.credential.host",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "grants",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.record.history",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.record.history",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "grants",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#send.endpoint.world",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#send.endpoint.world",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "grants",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#write.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#write.file.project",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "grants",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#execute.process.host",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#execute.process.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "grants",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#write.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#write.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "grants",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.file.project",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "grants",
+      "to": "capability/grant.credential.self"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#grant.credential.self",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#grant.credential.self",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-web/connectors-on",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-web/connectors-on",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-web/connectors-on",
+      "edge": "grants",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#read.message.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#read.message.tenant",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-web/connectors-on",
+      "edge": "grants",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#write.repository.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#write.repository.tenant",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/anthropic/claude-web/connectors-on",
+      "edge": "grants",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#read.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#read.file.project",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/generic/browser-extension/broad-host-permissions",
+      "edge": "grants",
+      "to": "capability/read.record.browsing"
+    },
+    {
+      "from": "granted/generic/browser-extension/broad-host-permissions#read.record.browsing",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/generic/browser-extension/broad-host-permissions#read.record.browsing",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/generic/browser-extension/broad-host-permissions",
+      "edge": "grants",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "granted/generic/browser-extension/broad-host-permissions#send.endpoint.world",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/generic/browser-extension/broad-host-permissions#send.endpoint.world",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/generic/browser-extension/broad-host-permissions",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/generic/browser-extension/broad-host-permissions#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/generic/browser-extension/broad-host-permissions#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/generic/scheduled-job/service-account",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/generic/scheduled-job/service-account",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/generic/scheduled-job/service-account",
+      "edge": "grants",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#send.endpoint.world",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#send.endpoint.world",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/generic/scheduled-job/service-account",
+      "edge": "grants",
+      "to": "capability/write.budget.tenant"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#write.budget.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#write.budget.tenant",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/generic/scheduled-job/service-account",
+      "edge": "grants",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#execute.process.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#execute.process.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/generic/scheduled-job/service-account",
+      "edge": "grants",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#write.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#write.file.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/generic/scheduled-job/service-account",
+      "edge": "grants",
+      "to": "capability/create.schedule.host"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#create.schedule.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#create.schedule.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/github/actions-runner/ci",
+      "edge": "grants",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#delete.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#delete.file.host",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/github/actions-runner/ci",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/github/actions-runner/ci",
+      "edge": "grants",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#send.endpoint.world",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#send.endpoint.world",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/github/actions-runner/ci",
+      "edge": "grants",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#execute.process.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#execute.process.host",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/github/actions-runner/ci",
+      "edge": "grants",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#write.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#write.file.host",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/github/actions-runner/ci",
+      "edge": "grants",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#write.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#write.file.project",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/github/actions-runner/ci",
+      "edge": "grants",
+      "to": "capability/write.repository.project"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#write.repository.project",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#write.repository.project",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/github/actions-runner/ci",
+      "edge": "grants",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#read.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#read.file.project",
+      "edge": "known_by",
+      "to": "evidence/observed"
+    },
+    {
+      "from": "shape/openai/chatgpt-web/default",
+      "edge": "grants",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "granted/openai/chatgpt-web/default#read.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/openai/chatgpt-web/default#read.file.project",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "authorises",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "authorises",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "authorises",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "authorises",
+      "to": "capability/write.repository.project"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "authorises",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/authenticate-as.credential.signing"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/grant.credential.self"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/create.schedule.host"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "withholds",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "mandate/coding-assistant-in-a-container",
+      "edge": "authorises",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "mandate/coding-assistant-in-a-container",
+      "edge": "authorises",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "mandate/coding-assistant-in-a-container",
+      "edge": "authorises",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "mandate/coding-assistant-in-a-container",
+      "edge": "authorises",
+      "to": "capability/write.repository.project"
+    },
+    {
+      "from": "mandate/coding-assistant-in-a-container",
+      "edge": "authorises",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "mandate/coding-assistant-in-a-container",
+      "edge": "authorises",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "mandate/coding-assistant-in-a-container",
+      "edge": "withholds",
+      "to": "capability/authenticate-as.credential.signing"
+    },
+    {
+      "from": "mandate/coding-assistant-in-a-container",
+      "edge": "withholds",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
+      "from": "mandate/coding-assistant-in-a-container",
+      "edge": "withholds",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "mandate/desktop-app-with-local-tools",
+      "edge": "authorises",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "mandate/desktop-app-with-local-tools",
+      "edge": "authorises",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "mandate/desktop-app-with-local-tools",
+      "edge": "authorises",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "mandate/desktop-app-with-local-tools",
+      "edge": "withholds",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "mandate/desktop-app-with-local-tools",
+      "edge": "withholds",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "mandate/desktop-app-with-local-tools",
+      "edge": "withholds",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "mandate/desktop-app-with-local-tools",
+      "edge": "withholds",
+      "to": "capability/grant.credential.self"
+    },
+    {
+      "from": "mandate/desktop-app-with-local-tools",
+      "edge": "withholds",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "mandate/desktop-app-with-local-tools",
+      "edge": "withholds",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "mandate/chat-with-connectors",
+      "edge": "authorises",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "mandate/chat-with-connectors",
+      "edge": "authorises",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "mandate/chat-with-connectors",
+      "edge": "authorises",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "mandate/chat-with-connectors",
+      "edge": "withholds",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "mandate/chat-with-connectors",
+      "edge": "withholds",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "authorises",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/write.budget.tenant"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
+      "from": "mandate/chat-no-connectors",
+      "edge": "withholds",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "mandate/ci-job",
+      "edge": "authorises",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "mandate/ci-job",
+      "edge": "authorises",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "mandate/ci-job",
+      "edge": "authorises",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "mandate/ci-job",
+      "edge": "authorises",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "mandate/ci-job",
+      "edge": "authorises",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "mandate/ci-job",
+      "edge": "withholds",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "mandate/browser-extension-i-installed",
+      "edge": "authorises",
+      "to": "capability/read.record.browsing"
+    },
+    {
+      "from": "mandate/browser-extension-i-installed",
+      "edge": "withholds",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "mandate/browser-extension-i-installed",
+      "edge": "withholds",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "mandate/scheduled-job-under-a-service-account",
+      "edge": "authorises",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "mandate/scheduled-job-under-a-service-account",
+      "edge": "authorises",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "mandate/scheduled-job-under-a-service-account",
+      "edge": "authorises",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "mandate/scheduled-job-under-a-service-account",
+      "edge": "authorises",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "mandate/scheduled-job-under-a-service-account",
+      "edge": "withholds",
+      "to": "capability/write.budget.tenant"
+    },
+    {
+      "from": "mandate/scheduled-job-under-a-service-account",
+      "edge": "withholds",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#authenticate-as.credential.signing",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#create.record.world",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#delete.file.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.credential.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.file.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#read.record.history",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#send.endpoint.world",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#write.file.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#write.repository.tenant",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#create.schedule.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-default#grant.credential.self",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "falls_short_of",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#authenticate-as.credential.signing",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#create.record.world",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#delete.file.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.credential.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.file.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#read.record.history",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#send.endpoint.world",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#write.file.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#write.repository.tenant",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#create.schedule.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "granted/anthropic/claude-code/local-confirmations-off#grant.credential.self",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-on-my-machine"
+    },
+    {
+      "from": "mandate/coding-assistant-on-my-machine",
+      "edge": "falls_short_of",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#authenticate-as.credential.signing",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-in-a-container"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#delete.file.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-in-a-container"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.credential.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-in-a-container"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.file.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-in-a-container"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#read.record.history",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-in-a-container"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-in-a-container"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#write.file.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-in-a-container"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#create.schedule.tenant",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-in-a-container"
+    },
+    {
+      "from": "granted/anthropic/claude-code-remote/ccr-container#create.schedule.host",
+      "edge": "exceeds",
+      "to": "mandate/coding-assistant-in-a-container"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/desktop-app-with-local-tools"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.credential.host",
+      "edge": "exceeds",
+      "to": "mandate/desktop-app-with-local-tools"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.record.history",
+      "edge": "exceeds",
+      "to": "mandate/desktop-app-with-local-tools"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#send.endpoint.world",
+      "edge": "exceeds",
+      "to": "mandate/desktop-app-with-local-tools"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#read.file.host",
+      "edge": "exceeds",
+      "to": "mandate/desktop-app-with-local-tools"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#execute.process.host",
+      "edge": "exceeds",
+      "to": "mandate/desktop-app-with-local-tools"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#write.file.host",
+      "edge": "exceeds",
+      "to": "mandate/desktop-app-with-local-tools"
+    },
+    {
+      "from": "granted/anthropic/claude-desktop/default#grant.credential.self",
+      "edge": "exceeds",
+      "to": "mandate/desktop-app-with-local-tools"
+    },
+    {
+      "from": "mandate/desktop-app-with-local-tools",
+      "edge": "falls_short_of",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/chat-with-connectors"
+    },
+    {
+      "from": "granted/anthropic/claude-web/connectors-on#write.repository.tenant",
+      "edge": "exceeds",
+      "to": "mandate/chat-with-connectors"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#delete.file.host",
+      "edge": "exceeds",
+      "to": "mandate/ci-job"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#read.file.host",
+      "edge": "exceeds",
+      "to": "mandate/ci-job"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#write.file.host",
+      "edge": "exceeds",
+      "to": "mandate/ci-job"
+    },
+    {
+      "from": "granted/github/actions-runner/ci#write.repository.project",
+      "edge": "exceeds",
+      "to": "mandate/ci-job"
+    },
+    {
+      "from": "mandate/ci-job",
+      "edge": "falls_short_of",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "granted/generic/browser-extension/broad-host-permissions#send.endpoint.world",
+      "edge": "exceeds",
+      "to": "mandate/browser-extension-i-installed"
+    },
+    {
+      "from": "granted/generic/browser-extension/broad-host-permissions#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/browser-extension-i-installed"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#send.endpoint.world",
+      "edge": "exceeds",
+      "to": "mandate/scheduled-job-under-a-service-account"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#write.budget.tenant",
+      "edge": "exceeds",
+      "to": "mandate/scheduled-job-under-a-service-account"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#write.file.host",
+      "edge": "exceeds",
+      "to": "mandate/scheduled-job-under-a-service-account"
+    },
+    {
+      "from": "granted/generic/scheduled-job/service-account#create.schedule.host",
+      "edge": "exceeds",
+      "to": "mandate/scheduled-job-under-a-service-account"
+    },
+    {
+      "from": "mandate/scheduled-job-under-a-service-account",
+      "edge": "falls_short_of",
+      "to": "capability/send.endpoint.allowed"
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Built from the published data on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

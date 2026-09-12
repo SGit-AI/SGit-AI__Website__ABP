@@ -1,0 +1,44 @@
+{
+  "type": "abp/graph/v1",
+  "_what_this_is": "The ABP as a graph. Meaning through connectivity: a node carries no inherent meaning, and what a thing IS emerges from the edges traceable from it.",
+  "never_render_the_whole_graph": "Every page on this site renders the result of ONE query. There is no map of everything and there will not be one.",
+  "files": {
+    "nodes": "nodes.json",
+    "edges": "edges.json",
+    "node_types": "node-types.json",
+    "lexicon": "../lexicon/index.json",
+    "bridges": "../bridges/index.json"
+  },
+  "counts": {
+    "nodes": 170,
+    "edges": 488,
+    "edge_types": 15,
+    "node_types": 13
+  },
+  "matched": {
+    "Verb": 10,
+    "ObjectClass": 9,
+    "ReachClass": 5,
+    "Family": 9,
+    "Capability": 23,
+    "DeploymentShape": 9,
+    "GrantedCapability": 81,
+    "Barrier": 4,
+    "Mandate": 8,
+    "Control": 1,
+    "Excess": 53,
+    "UnboundedExcess": 48,
+    "Shortfall": 2
+  },
+  "discipline": "https://graphs.sgit.ai/",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Built from the published data on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

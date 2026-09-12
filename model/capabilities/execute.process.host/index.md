@@ -2,7 +2,7 @@
 
 > Run programs as the account. Reach host, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/execute.process.host/index.html> · site v0.2.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/execute.process.host/index.html> · site v0.3.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12,7 +12,21 @@ below point at them.*
 
 # `execute.process.host`
 
-**Run programs as the account.** Verb `execute`, object `process`, reach `host`, family `process`. Its effect is **with-effort**: undone at a cost.
+**Run programs as the account.** Its effect is **with-effort**: undone at a cost.
+
+## What this id is made of
+
+**This is not a string.** It is [`execute`](../../../model/lexicon/verbs/execute/index.md)`.`[`process`](../../../model/lexicon/objects/process/index.md)`.`[`host`](../../../model/lexicon/reaches/host/index.md), three nodes joined by three edges, and each of them has an address, a page and a JSON file. Follow any of them and you get the query for that word rather than a definition of it.
+
+| Node | Edge | Reads as |
+|---|---|---|
+| [`execute`](../../../model/lexicon/verbs/execute/index.md) | `has_verb` | this capability has the verb `execute` |
+| [`process`](../../../model/lexicon/objects/process/index.md) | `acts_on` | this capability acts on `process` |
+| [`host`](../../../model/lexicon/reaches/host/index.md) | `reaches` | this capability reaches `host` |
+| [`process`](../../../model/lexicon/families/process/index.md) | `in_family` | this capability is in the `process` family |
+| [`with-effort`](../../../model/undo/index.md) | `has_undo_class` | this capability has the undo class `with-effort` |
+
+> **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `execute.process.host` is emerges from the edges traceable from it. The strongest case is [`host`](../../../model/lexicon/reaches/host/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
 ## In 6 of 9 published shapes
 

@@ -2,7 +2,7 @@
 
 > Reach any host on the internet. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.world/index.html> · site v0.2.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.world/index.html> · site v0.3.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12,7 +12,21 @@ below point at them.*
 
 # `send.endpoint.world`
 
-**Reach any host on the internet.** Verb `send`, object `network-endpoint`, reach `world`, family `network`. Its effect is **no**: cannot be undone.
+**Reach any host on the internet.** Its effect is **no**: cannot be undone.
+
+## What this id is made of
+
+**This is not a string.** It is [`send`](../../../model/lexicon/verbs/send/index.md)`.`[`network-endpoint`](../../../model/lexicon/objects/network-endpoint/index.md)`.`[`world`](../../../model/lexicon/reaches/world/index.md), three nodes joined by three edges, and each of them has an address, a page and a JSON file. Follow any of them and you get the query for that word rather than a definition of it.
+
+| Node | Edge | Reads as |
+|---|---|---|
+| [`send`](../../../model/lexicon/verbs/send/index.md) | `has_verb` | this capability has the verb `send` |
+| [`network-endpoint`](../../../model/lexicon/objects/network-endpoint/index.md) | `acts_on` | this capability acts on `network-endpoint` |
+| [`world`](../../../model/lexicon/reaches/world/index.md) | `reaches` | this capability reaches `world` |
+| [`network`](../../../model/lexicon/families/network/index.md) | `in_family` | this capability is in the `network` family |
+| [`no`](../../../model/undo/index.md) | `has_undo_class` | this capability has the undo class `no` |
+
+> **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `send.endpoint.world` is emerges from the edges traceable from it. The strongest case is [`world`](../../../model/lexicon/reaches/world/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
 ## In 6 of 9 published shapes
 

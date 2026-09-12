@@ -1,0 +1,27 @@
+{
+  "type": "abp/lexicon-node/v1",
+  "id": "object/process",
+  "node_type": "ObjectClass",
+  "label": "process",
+  "gloss": null,
+  "_meaning": "A node carries no inherent meaning. What this node IS emerges from the edges below, not from the gloss. The gloss is a convenience for a reader and is never the definition.",
+  "in_capabilities": [
+    "execute.process.host",
+    "execute.process.self"
+  ],
+  "count": 2,
+  "unused": false,
+  "unused_note": null,
+  "named_by": null,
+  "page": "https://abp.sgit.ai/model/lexicon/objects/process/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Derived from the published grammar: every capability id is verb.object.reach, and this node is what the id spells with.",
+    "licence": "CC BY 4.0"
+  }
+}

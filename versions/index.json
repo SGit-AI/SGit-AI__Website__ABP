@@ -1,7 +1,14 @@
 {
-  "current": "v0.2.0",
+  "current": "v0.3.0",
   "_what_this_is": "The version surface. The badge in the site chrome reads `current` from this file, so the badge cannot drift from the tag: the tag is derived from admin/build/version.txt and this file is generated from the same string.",
   "versions": [
+    {
+      "version": "v0.3.0",
+      "date": "2026-09-12",
+      "title": "read, file and project become nodes with their own addresses, and a node type stops being a label and becomes a formula",
+      "file": "v0.3.0.json",
+      "page": "v0.3.0/index.html"
+    },
     {
       "version": "v0.2.0",
       "date": "2026-09-11",

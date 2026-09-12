@@ -1,0 +1,31 @@
+{
+  "type": "abp/bridges/v1",
+  "_what_this_is": "Declared bridges: explicit edges connecting this vocabulary to another at specific points. Owned by whoever declared them and revisable without renegotiating anything. The edge is `similar_to`, it is symmetric, and it is PARTIAL ON PURPOSE.",
+  "why_not_merge": "Merging two vocabularies erases the disagreement, and the disagreement is the finding. Vocabularies are kept intact and connected through anchor nodes. Parties can disagree about meaning while still agreeing about facts, which is the only stable basis for working together.",
+  "not_a_conformance_claim": "A bridge is never `we are compliant with vocabulary X`. That is all or nothing and it is usually a lie by the second field.",
+  "how_to_add_one": "A third party can declare a bridge without touching either node. You do not need our permission and we do not need yours. Open a pull request against this file with a source, a timestamp and a hash.",
+  "count": 1,
+  "bridges": [
+    {
+      "from": "abp.sgit.ai capability grammar",
+      "edge": "similar_to",
+      "to": "what-can-it-do.games.sgit.ai capability primitives",
+      "relation": "identical at the time of promotion, by construction",
+      "note": "This vocabulary was promoted from that one without renaming anything, so the bridge is total rather than partial today. It is declared anyway, because the two will diverge and the bridge is where that will be recorded.",
+      "declared_by": "abp.sgit.ai",
+      "source": "https://what-can-it-do.games.sgit.ai/data/",
+      "retrieved": "2026-09-11T13:00:37Z",
+      "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef"
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The bridge file. One declared bridge today.",
+    "licence": "CC BY 4.0"
+  }
+}

@@ -2,7 +2,7 @@
 
 > The first version of abp.sgit.ai. The capability ontology the ABP needs already existed, published, as the data pack a game reads, so this release promotes it into a schema with a stable address rather than authoring a second one, and derives five worked ABPs from it. Nothing on...
 
-*Source: <https://abp.sgit.ai/versions/v0.1.0/index.html> · site v0.2.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.1.0/index.html> · site v0.3.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -18,7 +18,7 @@ The first version of abp.sgit.ai. The capability ontology the ABP needs already 
 |---|---|
 | Version | `v0.1.0` |
 | Date | 2026-09-11 |
-| Commit | `git rev-list -n 1 v0.1.0`, written into [`versions/v0.1.0.json`](../../versions/v0.1.0.json) once CI has tagged this release. Until then the file says where the hash will come from rather than carrying one that would be wrong. |
+| Commit | **`git rev-list -n 1 v0.1.0`**. The tag is the record: CI derives it from `admin/build/version.txt` and creates it on the commit whose subject carries `site v0.1.0:`. The hash is not written into [`versions/v0.1.0.json`](../../versions/v0.1.0.json), because a release commit cannot contain its own hash and reading it back from the tag made the build produce different bytes on a checkout with tags than on one without. |
 | Reconstructed | no |
 | Machine readable | [`versions/v0.1.0.json`](../../versions/v0.1.0.json) |
 
@@ -31,6 +31,7 @@ The first version of abp.sgit.ai. The capability ontology the ABP needs already 
 - The docs section renders the foundation document, the three briefs and the six pack documents through the same block vocabulary as every other page, with the source bytes of each one click away and an index generated from the files present.
 - The version surface the guidance asks for: versions/index.json with a file and a page per version, the badge in the chrome reading `current' from it and linking to that version's own details rather than to a generic changelog.
 - llms.txt and llms-full.txt are generated from the site, and the gate fails the build if a page in the tree is missing from llms.txt.
+- The version surface stops reading git. Recording the commit by resolving the tag at build time made the build non-deterministic -- it produced hashes on a checkout with tags and nulls on one without -- and the pipeline's own staleness check caught it on this release's first push. The file now records HOW TO RESOLVE the commit, `git rev-list -n 1 vX.Y.Z`, which is stable for anybody forever, and the gate checks that the resolution names this version's own tag. The guidance asks for a version to be verifiable later; a published resolution method is verifiable in a way a hash only half the world's checkouts can produce is not.
 - Five structural guards beyond the house four: every page in llms.txt, no em dash or en dash anywhere outside the promoted data, no score vocabulary anywhere, no forbidden word, and the version surface agreeing with version.txt.
 
 ## What it was built against

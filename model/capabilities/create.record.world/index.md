@@ -2,7 +2,7 @@
 
 > Publish packages, images or pages under the name it holds. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.record.world/index.html> · site v0.2.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.record.world/index.html> · site v0.3.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12,7 +12,21 @@ below point at them.*
 
 # `create.record.world`
 
-**Publish packages, images or pages under the name it holds.** Verb `create`, object `record`, reach `world`, family `code`. Its effect is **no**: cannot be undone.
+**Publish packages, images or pages under the name it holds.** Its effect is **no**: cannot be undone.
+
+## What this id is made of
+
+**This is not a string.** It is [`create`](../../../model/lexicon/verbs/create/index.md)`.`[`record`](../../../model/lexicon/objects/record/index.md)`.`[`world`](../../../model/lexicon/reaches/world/index.md), three nodes joined by three edges, and each of them has an address, a page and a JSON file. Follow any of them and you get the query for that word rather than a definition of it.
+
+| Node | Edge | Reads as |
+|---|---|---|
+| [`create`](../../../model/lexicon/verbs/create/index.md) | `has_verb` | this capability has the verb `create` |
+| [`record`](../../../model/lexicon/objects/record/index.md) | `acts_on` | this capability acts on `record` |
+| [`world`](../../../model/lexicon/reaches/world/index.md) | `reaches` | this capability reaches `world` |
+| [`code`](../../../model/lexicon/families/code/index.md) | `in_family` | this capability is in the `code` family |
+| [`no`](../../../model/undo/index.md) | `has_undo_class` | this capability has the undo class `no` |
+
+> **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `create.record.world` is emerges from the edges traceable from it. The strongest case is [`world`](../../../model/lexicon/reaches/world/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
 ## In 2 of 9 published shapes
 

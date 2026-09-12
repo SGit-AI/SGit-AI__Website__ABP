@@ -1,0 +1,227 @@
+{
+  "type": "abp/lexicon/v1",
+  "_what_this_is": "Every word the capability grammar is spelled with, as a node with its own address. `read.file.project` is not a string: it is three nodes and three edges, and these are the nodes.",
+  "grammar": "verb.object.reach",
+  "counts": {
+    "verbs": 10,
+    "objects": 9,
+    "reaches": 5,
+    "families": 9
+  },
+  "verbs": [
+    {
+      "id": "verb/authenticate-as",
+      "label": "authenticate-as",
+      "count": 2,
+      "file": "lexicon/verbs/authenticate-as.json"
+    },
+    {
+      "id": "verb/create",
+      "label": "create",
+      "count": 3,
+      "file": "lexicon/verbs/create.json"
+    },
+    {
+      "id": "verb/delete",
+      "label": "delete",
+      "count": 1,
+      "file": "lexicon/verbs/delete.json"
+    },
+    {
+      "id": "verb/execute",
+      "label": "execute",
+      "count": 2,
+      "file": "lexicon/verbs/execute.json"
+    },
+    {
+      "id": "verb/grant",
+      "label": "grant",
+      "count": 1,
+      "file": "lexicon/verbs/grant.json"
+    },
+    {
+      "id": "verb/read",
+      "label": "read",
+      "count": 6,
+      "file": "lexicon/verbs/read.json"
+    },
+    {
+      "id": "verb/receive",
+      "label": "receive",
+      "count": 0,
+      "file": "lexicon/verbs/receive.json"
+    },
+    {
+      "id": "verb/revoke",
+      "label": "revoke",
+      "count": 0,
+      "file": "lexicon/verbs/revoke.json"
+    },
+    {
+      "id": "verb/send",
+      "label": "send",
+      "count": 3,
+      "file": "lexicon/verbs/send.json"
+    },
+    {
+      "id": "verb/write",
+      "label": "write",
+      "count": 5,
+      "file": "lexicon/verbs/write.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "object/budget",
+      "label": "budget",
+      "count": 1,
+      "file": "lexicon/objects/budget.json"
+    },
+    {
+      "id": "object/credential",
+      "label": "credential",
+      "count": 4,
+      "file": "lexicon/objects/credential.json"
+    },
+    {
+      "id": "object/file",
+      "label": "file",
+      "count": 5,
+      "file": "lexicon/objects/file.json"
+    },
+    {
+      "id": "object/message",
+      "label": "message",
+      "count": 2,
+      "file": "lexicon/objects/message.json"
+    },
+    {
+      "id": "object/network-endpoint",
+      "label": "network-endpoint",
+      "count": 2,
+      "file": "lexicon/objects/network-endpoint.json"
+    },
+    {
+      "id": "object/process",
+      "label": "process",
+      "count": 2,
+      "file": "lexicon/objects/process.json"
+    },
+    {
+      "id": "object/record",
+      "label": "record",
+      "count": 3,
+      "file": "lexicon/objects/record.json"
+    },
+    {
+      "id": "object/repository",
+      "label": "repository",
+      "count": 2,
+      "file": "lexicon/objects/repository.json"
+    },
+    {
+      "id": "object/schedule",
+      "label": "schedule",
+      "count": 2,
+      "file": "lexicon/objects/schedule.json"
+    }
+  ],
+  "reaches": [
+    {
+      "id": "reach/host",
+      "label": "host",
+      "count": 8,
+      "file": "lexicon/reaches/host.json"
+    },
+    {
+      "id": "reach/project",
+      "label": "project",
+      "count": 3,
+      "file": "lexicon/reaches/project.json"
+    },
+    {
+      "id": "reach/self",
+      "label": "self",
+      "count": 2,
+      "file": "lexicon/reaches/self.json"
+    },
+    {
+      "id": "reach/tenant",
+      "label": "tenant",
+      "count": 7,
+      "file": "lexicon/reaches/tenant.json"
+    },
+    {
+      "id": "reach/world",
+      "label": "world",
+      "count": 3,
+      "file": "lexicon/reaches/world.json"
+    }
+  ],
+  "families": [
+    {
+      "id": "family/browser",
+      "label": "browser",
+      "count": 1,
+      "file": "lexicon/families/browser.json"
+    },
+    {
+      "id": "family/code",
+      "label": "code",
+      "count": 4,
+      "file": "lexicon/families/code.json"
+    },
+    {
+      "id": "family/communication",
+      "label": "communication",
+      "count": 2,
+      "file": "lexicon/families/communication.json"
+    },
+    {
+      "id": "family/filesystem",
+      "label": "filesystem",
+      "count": 6,
+      "file": "lexicon/families/filesystem.json"
+    },
+    {
+      "id": "family/identity",
+      "label": "identity",
+      "count": 3,
+      "file": "lexicon/families/identity.json"
+    },
+    {
+      "id": "family/money",
+      "label": "money",
+      "count": 1,
+      "file": "lexicon/families/money.json"
+    },
+    {
+      "id": "family/network",
+      "label": "network",
+      "count": 2,
+      "file": "lexicon/families/network.json"
+    },
+    {
+      "id": "family/process",
+      "label": "process",
+      "count": 2,
+      "file": "lexicon/families/process.json"
+    },
+    {
+      "id": "family/schedule",
+      "label": "schedule",
+      "count": 2,
+      "file": "lexicon/families/schedule.json"
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Generated from the published capability grammar.",
+    "licence": "CC BY 4.0"
+  }
+}

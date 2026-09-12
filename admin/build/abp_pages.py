@@ -26,6 +26,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import abp  # noqa: E402
+import graph  # noqa: E402
+import lexicon_pages  # noqa: E402
 import shell  # noqa: E402
 
 AS_AT = "11 September 2026"
@@ -427,6 +429,11 @@ def model_pages(D):
                 {"title": "[The undo class](model/undo/index.html)",
                  "sub": "Three classes, and the ordering on every rendering this site produces.",
                  "foot": "A property of the action. Not a severity."},
+                {"title": "[The lexicon](model/lexicon/index.html)",
+                 "sub": "Every word the grammar is spelled with, as a node with its own "
+                        "address: ten verbs, nine object classes, five reach classes, nine "
+                        "families.",
+                 "foot": "`read.file.project` is three nodes, not a string."},
                 {"title": "[The delta](model/delta/index.html)",
                  "sub": "Derived and never authored. Stored with its inputs pinned, recomputed "
                         "when either moves, and never edited by hand.",
@@ -884,6 +891,20 @@ def model_pages(D):
                  "The acceptance test, below. If a path fails it, the model changes and not the "
                  "renderer."],
             ]),
+            ("h2", "Where the rules landed"),
+            ("table", ["Address", "What is there"], [
+                ["[The lexicon](model/lexicon/index.html)",
+                 "Every word the grammar is spelled with, as a node with its own address. "
+                 "`read.file.project` is three nodes and three edges."],
+                ["[The edge vocabulary](model/graph/edges/index.html)",
+                 f"{len(__import__('graph').EDGES)} edges, each a verb with a distinct inverse, "
+                 f"a stated domain and range. No generic association edge."],
+                ["[The node type formulas](model/graph/formulas/index.html)",
+                 "Classification as a required path pattern, run on every build, rather than a "
+                 "label somebody applied."],
+                ["[The three layers](model/graph/layers/index.html)",
+                 "How a customer vault disagrees with this vocabulary without merging anything."],
+            ]),
             ("h2", "The sentence test"),
             ("note", "agent `claude-code-cli-confirmations-disabled` **is-granted** capability "
                      "`execute.process.host` **bounded-by** barrier `a-rule-somebody-wrote-down` "
@@ -1012,9 +1033,30 @@ def _capability_page(c, D):
         ("crumb", "[Home](index.html) / [The model](model/index.html) / "
                   "[The capabilities](model/capabilities/index.html) / " + c["id"]),
         ("h1", f"`{c['id']}`"),
-        ("lead", f"**{c['gloss']}.** Verb `{c['verb']}`, object `{c['object']}`, reach "
-                 f"`{c['reach']}`, family `{c['family']}`. Its effect is **{c['undo']}**: "
-                 f"{UNDO_WORD[c['undo']]}."),
+        ("lead", f"**{c['gloss']}.** Its effect is **{c['undo']}**: {UNDO_WORD[c['undo']]}."),
+        ("h2", "What this id is made of"),
+        ("p", f"**This is not a string.** It is "
+              f"{lexicon_pages.spell(c['id'], D)}, three nodes joined by three edges, and each "
+              f"of them has an address, a page and a JSON file. Follow any of them and you get "
+              f"the query for that word rather than a definition of it."),
+        ("table", ["Node", "Edge", "Reads as"], [
+            [f"[`{c['verb']}`]({lexicon_pages.href('verbs', c['verb'])})", "`has_verb`",
+             f"this capability has the verb `{c['verb']}`"],
+            [f"[`{c['object']}`]({lexicon_pages.href('objects', c['object'])})", "`acts_on`",
+             f"this capability acts on `{c['object']}`"],
+            [f"[`{c['reach']}`]({lexicon_pages.href('reaches', c['reach'])})", "`reaches`",
+             f"this capability reaches `{c['reach']}`"],
+            [f"[`{c['family']}`]({lexicon_pages.href('families', c['family'])})", "`in_family`",
+             f"this capability is in the `{c['family']}` family"],
+            [f"[`{c['undo']}`](model/undo/index.html)", "`has_undo_class`",
+             f"this capability has the undo class `{c['undo']}`"],
+        ]),
+        ("note", f"**The gloss above is a convenience, not the definition.** A node carries no "
+                 f"inherent meaning: what `{c['id']}` is emerges from the edges traceable from "
+                 f"it. The strongest case is "
+                 f"[`{c['reach']}`]({lexicon_pages.href('reaches', c['reach'])}), where the "
+                 f"deployment shapes that use it **do not agree** about what it means, and the "
+                 f"page keeps the disagreement rather than averaging it."),
         ("h2", f"In {len(holders)} of {len(D['profiles'])} published shapes"),
         ("table", ["", "Deployment shape", "Barrier there", "Known by", "Note"], holders)
         if holders else ("p", "No published shape in this set has it."),

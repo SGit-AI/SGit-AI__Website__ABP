@@ -2,7 +2,7 @@
 
 > The four objects an ABP is made of, the grammar they are written in, the barrier that decides whether anything is in the way, and the graph rules that govern all of it.
 
-*Source: <https://abp.sgit.ai/model/index.html> · site v0.2.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/index.html> · site v0.3.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -39,6 +39,9 @@ The enforcer test, published as a glyph before it was named as a rule.
 
 **[The undo class](../model/undo/index.md)**: Three classes, and the ordering on every rendering this site produces.
 A property of the action. Not a severity.
+
+**[The lexicon](../model/lexicon/index.md)**: Every word the grammar is spelled with, as a node with its own address: ten verbs, nine object classes, five reach classes, nine families.
+`read.file.project` is three nodes, not a string.
 
 **[The delta](../model/delta/index.md)**: Derived and never authored. Stored with its inputs pinned, recomputed when either moves, and never edited by hand.
 Corrected on 11 September, in the open.

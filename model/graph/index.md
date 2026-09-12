@@ -2,7 +2,7 @@
 
 > The five published graph rules, what they force on this model, and the sentence test that decides whether the edges are right.
 
-*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.2.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.3.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -21,6 +21,15 @@ An ABP is a graph and every document is a projection of it. The five rules that 
 | **Never render the whole graph. Render the result of a query.** | There is no map of everything on this site. Each page answers one query: this shape's grant, this mandate's delta, this capability across every shape. |
 | **Rich nodes are acceptable.** | A capability node carries its verb, object, reach, undo class and gloss. The blob is a rendering failure, not a modelling one. |
 | **If a path does not read as a sentence in the reader's own language, the edges are wrong.** | The acceptance test, below. If a path fails it, the model changes and not the renderer. |
+
+## Where the rules landed
+
+| Address | What is there |
+|---|---|
+| [The lexicon](../../model/lexicon/index.md) | Every word the grammar is spelled with, as a node with its own address. `read.file.project` is three nodes and three edges. |
+| [The edge vocabulary](../../model/graph/edges/index.md) | 15 edges, each a verb with a distinct inverse, a stated domain and range. No generic association edge. |
+| [The node type formulas](../../model/graph/formulas/index.md) | Classification as a required path pattern, run on every build, rather than a label somebody applied. |
+| [The three layers](../../model/graph/layers/index.md) | How a customer vault disagrees with this vocabulary without merging anything. |
 
 ## The sentence test
 

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The node type formulas - abp.sgit.ai</title>
+<meta name="description" content="A node type is a required pattern of typed, directed paths that a node either matches or does not. Not a label somebody applied. Run against the graph on every build.">
+<link rel="canonical" href="https://abp.sgit.ai/model/graph/formulas/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/model/graph/formulas/index.html">
+<meta property="og:title" content="The node type formulas - abp.sgit.ai">
+<meta property="og:description" content="A node type is a required pattern of typed, directed paths that a node either matches or does not. Not a label somebody applied. Run against the graph on every build.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../../versions/v0.3.0/index.html" title="What changed in v0.3.0, and the commit it was built from">v0.3.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../model/index.html">The four objects</a>
+      <a class="sl" href="../../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl here" href="../../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../examples/index.html">All five</a>
+      <a class="sl" href="../../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../../index.html">Home</a> / <a href="../../../model/index.html">The model</a> / <a href="../../../model/graph/index.html">The graph</a> / The formulas</p>
+  <h1>The node type formulas</h1>
+  <p class="lead"><b>The content of a node does not decide its type. Its paths do.</b> Two nodes with identical text can be different types because their edges differ, and the clearest case in this model is that the same capability is excess on one deployment and authorised on the next, with nothing about the capability changed.</p>
+  <h2 id="the-formulas-and-what-matched-when-this-page-was-built">The formulas, and what matched when this page was built</h2>
+  <div class="tablewrap"><table><thead><tr><th>Type</th><th>What it is</th><th>The formula</th><th>Matched</th></tr></thead><tbody><tr><td><b>Verb</b></td><td>The action half of a primitive, on its own.</td><td><code>[Verb] := a node that is the -verb_of-&gt; at least one [Capability]</code></td><td>10</td></tr><tr><td><b>ObjectClass</b></td><td>What a primitive acts on.</td><td><code>[ObjectClass] := a node that is -acted_on_by-&gt; at least one [Capability]</code></td><td>9</td></tr><tr><td><b>ReachClass</b></td><td>How far a primitive reaches.</td><td><code>[ReachClass] := a node that is -reachable_from-&gt; at least one [Capability]</code></td><td>5</td></tr><tr><td><b>Family</b></td><td>A grouping of primitives for a reader.</td><td><code>[Family] := a node that is the -family_of-&gt; at least one [Capability]</code></td><td>9</td></tr><tr><td><b>Capability</b></td><td>A primitive in the grammar.</td><td><code>[Capability] := a node with a -has_verb-&gt; [Verb] and an -acts_on-&gt; [ObjectClass] and a -reaches-&gt; [ReachClass]</code></td><td>23</td></tr><tr><td><b>DeploymentShape</b></td><td>A product in a setting.</td><td><code>[DeploymentShape] := a node that -grants-&gt; at least one [Capability]</code></td><td>9</td></tr><tr><td><b>GrantedCapability</b></td><td>A capability in a particular shape's grant.</td><td><code>[GrantedCapability] := a [Capability] with an inbound -grants-&gt; from a [DeploymentShape], carrying a -bounded_by-&gt; [Barrier] and a -known_by-&gt; [EvidenceTier]</code></td><td>81</td></tr><tr><td><b>Barrier</b></td><td>What stands between the agent and a capability.</td><td><code>[Barrier] := a node that -bounds-&gt; at least one [GrantedCapability]</code></td><td>4</td></tr><tr><td><b>Control</b></td><td>A barrier that actually bounds anything.</td><td><code>[Control] := a [Barrier] that is -enforced_by-&gt; an [Enforcer] the [Grant] does not include</code></td><td>1</td></tr><tr><td><b>Mandate</b></td><td>What a deployer authorised.</td><td><code>[Mandate] := a node that -authorises-&gt; at least one [Capability]</code></td><td>8</td></tr><tr><td><b>Excess</b></td><td>The finding.</td><td><code>[Excess] := a [GrantedCapability] with NO -authorised_by-&gt; path to the [Mandate] in scope</code></td><td>53</td></tr><tr><td><b>UnboundedExcess</b></td><td>The business case.</td><td><code>[UnboundedExcess] := an [Excess] whose -bounded_by-&gt; [Barrier] is not a [Control]</code></td><td>48</td></tr><tr><td><b>Shortfall</b></td><td>Asked for and cannot.</td><td><code>[Shortfall] := a [Capability] that a [Mandate] -authorises-&gt; and no [DeploymentShape] in scope -grants-&gt;</code></td><td>2</td></tr></tbody></table></div>
+  <h2 id="the-one-that-carries-the-argument">The one that carries the argument</h2>
+  <div class="note"><b><code>[Control] := a [Barrier] that is -enforced_by-&gt; an [Enforcer] the [Grant] does not include.</code></b> Until v0.3.0 this was <code>is_control: true</code> on a barrier, which is a label somebody applied. It is now a path the build walks, and <b>exactly one of the four barriers matches</b>. The release gate fails if that stops being true, because every page on this site is written against it.</div>
+  <div class="tablewrap"><table><thead><tr><th>Barrier</th><th>Enforced by</th><th>Inside the grant</th><th>A control</th></tr></thead><tbody><tr><td><code>none</code></td><td>-</td><td>-</td><td>no</td></tr><tr><td><code>expectation</code></td><td>the agent reading it</td><td>yes</td><td>no</td></tr><tr><td><code>setting</code></td><td>the agent's own account</td><td>yes</td><td>no</td></tr><tr><td><code>boundary</code></td><td>something above the grant</td><td>no</td><td><b>yes</b></td></tr></tbody></table></div>
+  <h2 id="judgment-does-not-disappear">Judgment does not disappear</h2>
+  <p>That is the usual objection and it deserves a direct answer. <b>Somebody still decided that a control must be enforced from outside the grant.</b> What changes is where that decision lives: out of a classifier's head and into a formula that is visible, versioned, inspectable and arguable. <b>You can now disagree with a classification by pointing at a line</b>, which you could not do before.</p>
+  <div class="note"><b>A score is not a node and there is no edge to one.</b> Not a rating, not a risk level, not a severity. Adding one would not be a modelling choice, it would be a verdict, and the same ABP is dangerous in one deployment and harmless in the next. The risk work above this holds the assets, and that is where a score can exist.</div>
+  <p><a href="../../../data/graph/node-types.json">The formulas as JSON</a> · <a href="https://graphs.sgit.ai/v1/depth/index.html">Why classification is a query</a></p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../../versions/v0.3.0/index.html">v0.3.0</a> · <a href="../../../versions/index.html">all versions</a> · <a href="../../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../../model/graph/formulas/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../../model/index.html">The four objects</a>
+    <a href="../../../model/barriers/index.html">The barrier</a>
+    <a href="../../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../../data/index.html">The published vocabulary</a>
+    <a href="../../../model/schema/index.html">The schema</a>
+    <a href="../../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../../docs/index.html">Docs</a>
+    <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

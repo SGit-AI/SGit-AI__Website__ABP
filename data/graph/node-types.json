@@ -1,0 +1,110 @@
+{
+  "type": "abp/node-types/v1",
+  "_what_this_is": "A node type is a REQUIRED PATTERN OF TYPED, DIRECTED PATHS that a node either matches or does not. It is not a label somebody applied. The content of a node does not decide its type; its paths do.",
+  "judgment": "Judgment does not disappear. Somebody still decided that a control must be enforced from outside the grant. What changes is where that decision lives: out of a classifier's head and into a formula that is visible, versioned, inspectable and arguable.",
+  "not_a_node": "A score is not a node and there is no edge to one. Not a rating, not a risk level, not a severity. Adding one would not be a modelling choice, it would be a verdict, and the same ABP is dangerous in one deployment and harmless in the next. The risk work above this holds the assets, and that is where a score can exist.",
+  "count": 13,
+  "node_types": [
+    {
+      "name": "Verb",
+      "is": "The action half of a primitive, on its own.",
+      "formula": "[Verb] := a node that is the -verb_of-> at least one [Capability]",
+      "note": "A verb with no capability under it is a word, not a node in this graph.",
+      "matched": 10
+    },
+    {
+      "name": "ObjectClass",
+      "is": "What a primitive acts on.",
+      "formula": "[ObjectClass] := a node that is -acted_on_by-> at least one [Capability]",
+      "note": null,
+      "matched": 9
+    },
+    {
+      "name": "ReachClass",
+      "is": "How far a primitive reaches.",
+      "formula": "[ReachClass] := a node that is -reachable_from-> at least one [Capability]",
+      "note": "What host, tenant and world MEAN is the deployment shape's to say, not the grammar's, which is why a reach class node carries the shapes that name it rather than a definition.",
+      "matched": 5
+    },
+    {
+      "name": "Family",
+      "is": "A grouping of primitives for a reader.",
+      "formula": "[Family] := a node that is the -family_of-> at least one [Capability]",
+      "note": "A family is an altitude device: it groups facts for a reader and carries none of its own.",
+      "matched": 9
+    },
+    {
+      "name": "Capability",
+      "is": "A primitive in the grammar.",
+      "formula": "[Capability] := a node with a -has_verb-> [Verb] and an -acts_on-> [ObjectClass] and a -reaches-> [ReachClass]",
+      "note": "All three, or it is not a primitive. A specific path, host or mailbox is an INSTANCE of a primitive and never a new one.",
+      "matched": 23
+    },
+    {
+      "name": "DeploymentShape",
+      "is": "A product in a setting.",
+      "formula": "[DeploymentShape] := a node that -grants-> at least one [Capability]",
+      "note": "Not a product. Two shapes here are the same product with one setting different.",
+      "matched": 9
+    },
+    {
+      "name": "GrantedCapability",
+      "is": "A capability in a particular shape's grant.",
+      "formula": "[GrantedCapability] := a [Capability] with an inbound -grants-> from a [DeploymentShape], carrying a -bounded_by-> [Barrier] and a -known_by-> [EvidenceTier]",
+      "note": "THE NODE THAT CARRIES THE BARRIER. The barrier is a property of the capability IN A SHAPE, never of the capability itself, which is the whole reason the ABP is about the deployment rather than the product.",
+      "matched": 81
+    },
+    {
+      "name": "Barrier",
+      "is": "What stands between the agent and a capability.",
+      "formula": "[Barrier] := a node that -bounds-> at least one [GrantedCapability]",
+      "note": null,
+      "matched": 4
+    },
+    {
+      "name": "Control",
+      "is": "A barrier that actually bounds anything.",
+      "formula": "[Control] := a [Barrier] that is -enforced_by-> an [Enforcer] the [Grant] does not include",
+      "note": "THE ENFORCER TEST, AS A FORMULA RATHER THAN A FIELD. Until v0.3.0 this was `is_control: true' on a barrier, which is a label somebody applied. Now it is a path pattern, so you can disagree with the classification by pointing at a line. Exactly one of the four barriers matches, and the site fails to build if that stops being true.",
+      "matched": 1
+    },
+    {
+      "name": "Mandate",
+      "is": "What a deployer authorised.",
+      "formula": "[Mandate] := a node that -authorises-> at least one [Capability]",
+      "note": null,
+      "matched": 8
+    },
+    {
+      "name": "Excess",
+      "is": "The finding.",
+      "formula": "[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope",
+      "note": "A capability the mandate never mentioned was not authorised. Unstated is not permission.",
+      "matched": 53
+    },
+    {
+      "name": "UnboundedExcess",
+      "is": "The business case.",
+      "formula": "[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]",
+      "note": "The only number on the label a buyer can move. Every control bought moves one capability into the fourth barrier and the count falls by one.",
+      "matched": 48
+    },
+    {
+      "name": "Shortfall",
+      "is": "Asked for and cannot.",
+      "formula": "[Shortfall] := a [Capability] that a [Mandate] -authorises-> and no [DeploymentShape] in scope -grants->",
+      "note": null,
+      "matched": 2
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The formulas are run against the graph on every build and the `matched` counts are the result, not fields anybody set.",
+    "licence": "CC BY 4.0"
+  }
+}

@@ -1,0 +1,1269 @@
+{
+  "type": "abp/graph-nodes/v1",
+  "_what_this_is": "Every node, flat, with its type. The same shape of record at every altitude: a verb, a capability, a barrier and a deployment shape are all nodes here. THAT IS THE FRACTAL TEST: if zooming into a node needed a new format or a special case, this would be a hierarchy rather than a graph.",
+  "count": 170,
+  "by_type": {
+    "Barrier": 4,
+    "Capability": 23,
+    "DeploymentShape": 9,
+    "Enforcer": 3,
+    "EvidenceTier": 6,
+    "Family": 9,
+    "GrantedCapability": 81,
+    "Mandate": 8,
+    "ObjectClass": 9,
+    "ReachClass": 5,
+    "UndoClass": 3,
+    "Verb": 10
+  },
+  "nodes": [
+    {
+      "id": "verb/read",
+      "type": "Verb",
+      "label": "read"
+    },
+    {
+      "id": "verb/write",
+      "type": "Verb",
+      "label": "write"
+    },
+    {
+      "id": "verb/create",
+      "type": "Verb",
+      "label": "create"
+    },
+    {
+      "id": "verb/delete",
+      "type": "Verb",
+      "label": "delete"
+    },
+    {
+      "id": "verb/execute",
+      "type": "Verb",
+      "label": "execute"
+    },
+    {
+      "id": "verb/send",
+      "type": "Verb",
+      "label": "send"
+    },
+    {
+      "id": "verb/receive",
+      "type": "Verb",
+      "label": "receive"
+    },
+    {
+      "id": "verb/authenticate-as",
+      "type": "Verb",
+      "label": "authenticate-as"
+    },
+    {
+      "id": "verb/grant",
+      "type": "Verb",
+      "label": "grant"
+    },
+    {
+      "id": "verb/revoke",
+      "type": "Verb",
+      "label": "revoke"
+    },
+    {
+      "id": "object/file",
+      "type": "ObjectClass",
+      "label": "file"
+    },
+    {
+      "id": "object/process",
+      "type": "ObjectClass",
+      "label": "process"
+    },
+    {
+      "id": "object/network-endpoint",
+      "type": "ObjectClass",
+      "label": "network-endpoint"
+    },
+    {
+      "id": "object/credential",
+      "type": "ObjectClass",
+      "label": "credential"
+    },
+    {
+      "id": "object/message",
+      "type": "ObjectClass",
+      "label": "message"
+    },
+    {
+      "id": "object/record",
+      "type": "ObjectClass",
+      "label": "record"
+    },
+    {
+      "id": "object/repository",
+      "type": "ObjectClass",
+      "label": "repository"
+    },
+    {
+      "id": "object/budget",
+      "type": "ObjectClass",
+      "label": "budget"
+    },
+    {
+      "id": "object/schedule",
+      "type": "ObjectClass",
+      "label": "schedule"
+    },
+    {
+      "id": "reach/self",
+      "type": "ReachClass",
+      "label": "self",
+      "gloss": "the agent's own process, sandbox or turn"
+    },
+    {
+      "id": "reach/project",
+      "type": "ReachClass",
+      "label": "project",
+      "gloss": "the working tree or workspace it was pointed at"
+    },
+    {
+      "id": "reach/host",
+      "type": "ReachClass",
+      "label": "host",
+      "gloss": "the machine, container or account it runs as",
+      "named_by": [
+        {
+          "shape": "anthropic/claude-code-remote/ccr-container",
+          "means": "this container — ephemeral, the vendor's; not your machine"
+        },
+        {
+          "shape": "anthropic/claude-code/local-confirmations-off",
+          "means": "your machine, as your user account"
+        },
+        {
+          "shape": "anthropic/claude-code/local-default",
+          "means": "your machine, as your user account"
+        },
+        {
+          "shape": "anthropic/claude-desktop/default",
+          "means": "your machine, as your user account"
+        },
+        {
+          "shape": "anthropic/claude-web/connectors-on",
+          "means": "what the drive connector is scoped to; not your machine"
+        },
+        {
+          "shape": "generic/browser-extension/broad-host-permissions",
+          "means": "your browser — every page, every logged-in site"
+        },
+        {
+          "shape": "generic/scheduled-job/service-account",
+          "means": "the server it runs on, as the service account"
+        },
+        {
+          "shape": "github/actions-runner/ci",
+          "means": "the runner — destroyed after the job; not your machine"
+        },
+        {
+          "shape": "openai/chatgpt-web/default",
+          "means": "the vendor's environment; not your machine"
+        }
+      ]
+    },
+    {
+      "id": "reach/tenant",
+      "type": "ReachClass",
+      "label": "tenant",
+      "gloss": "the organisation's accounts, repositories and services",
+      "named_by": [
+        {
+          "shape": "anthropic/claude-code-remote/ccr-container",
+          "means": "the attached repository and the platform's scoped tokens; not your accounts"
+        },
+        {
+          "shape": "anthropic/claude-code/local-confirmations-off",
+          "means": "your accounts, with the credentials in your home directory"
+        },
+        {
+          "shape": "anthropic/claude-code/local-default",
+          "means": "your accounts, with the credentials in your home directory"
+        },
+        {
+          "shape": "anthropic/claude-desktop/default",
+          "means": "your accounts"
+        },
+        {
+          "shape": "anthropic/claude-web/connectors-on",
+          "means": "the accounts you connected, as you scoped them"
+        },
+        {
+          "shape": "generic/browser-extension/broad-host-permissions",
+          "means": "the sites you are logged into, as you"
+        },
+        {
+          "shape": "generic/scheduled-job/service-account",
+          "means": "whatever the service account's credential opens"
+        },
+        {
+          "shape": "github/actions-runner/ci",
+          "means": "the repository, with the workflow's token"
+        },
+        {
+          "shape": "openai/chatgpt-web/default",
+          "means": "nothing of yours"
+        }
+      ]
+    },
+    {
+      "id": "reach/world",
+      "type": "ReachClass",
+      "label": "world",
+      "gloss": "anything on the internet",
+      "named_by": [
+        {
+          "shape": "anthropic/claude-code-remote/ccr-container",
+          "means": "the hosts the proxy allows"
+        },
+        {
+          "shape": "anthropic/claude-code/local-confirmations-off",
+          "means": "the internet"
+        },
+        {
+          "shape": "anthropic/claude-code/local-default",
+          "means": "the internet"
+        },
+        {
+          "shape": "anthropic/claude-desktop/default",
+          "means": "the internet"
+        },
+        {
+          "shape": "anthropic/claude-web/connectors-on",
+          "means": "the vendor's egress"
+        },
+        {
+          "shape": "generic/browser-extension/broad-host-permissions",
+          "means": "the internet, from your browser"
+        },
+        {
+          "shape": "generic/scheduled-job/service-account",
+          "means": "the internet, from the server"
+        },
+        {
+          "shape": "github/actions-runner/ci",
+          "means": "the internet, unrestricted"
+        },
+        {
+          "shape": "openai/chatgpt-web/default",
+          "means": "the vendor's egress, if browsing is on"
+        }
+      ]
+    },
+    {
+      "id": "family/filesystem",
+      "type": "Family",
+      "label": "filesystem",
+      "gloss": "files and directories"
+    },
+    {
+      "id": "family/process",
+      "type": "Family",
+      "label": "process",
+      "gloss": "programs and their execution"
+    },
+    {
+      "id": "family/network",
+      "type": "Family",
+      "label": "network",
+      "gloss": "endpoints and hosts"
+    },
+    {
+      "id": "family/identity",
+      "type": "Family",
+      "label": "identity",
+      "gloss": "credentials and who the agent can act as"
+    },
+    {
+      "id": "family/communication",
+      "type": "Family",
+      "label": "communication",
+      "gloss": "messages to people"
+    },
+    {
+      "id": "family/code",
+      "type": "Family",
+      "label": "code",
+      "gloss": "repositories and what lands in them"
+    },
+    {
+      "id": "family/money",
+      "type": "Family",
+      "label": "money",
+      "gloss": "budgets and spend"
+    },
+    {
+      "id": "family/schedule",
+      "type": "Family",
+      "label": "schedule",
+      "gloss": "things that outlive the turn"
+    },
+    {
+      "id": "family/browser",
+      "type": "Family",
+      "label": "browser",
+      "gloss": "what a browser extension or automation can see and do in your browser"
+    },
+    {
+      "id": "undo/yes",
+      "type": "UndoClass",
+      "label": "yes",
+      "gloss": "undone by the same actor with no loss"
+    },
+    {
+      "id": "undo/with-effort",
+      "type": "UndoClass",
+      "label": "with-effort",
+      "gloss": "recoverable from a backup, a history or a revert, at a cost"
+    },
+    {
+      "id": "undo/no",
+      "type": "UndoClass",
+      "label": "no",
+      "gloss": "cannot be undone"
+    },
+    {
+      "id": "evidence/derived",
+      "type": "EvidenceTier",
+      "label": "derived",
+      "gloss": "from what the thing architecturally is; a claim until somebody runs the probes"
+    },
+    {
+      "id": "evidence/inferred",
+      "type": "EvidenceTier",
+      "label": "inferred",
+      "gloss": "from another row or another profile, by reasoning rather than by observation"
+    },
+    {
+      "id": "evidence/self-reported",
+      "type": "EvidenceTier",
+      "label": "self-reported",
+      "gloss": "reported by the operator, the harness or the tool itself, without an independent probe"
+    },
+    {
+      "id": "evidence/documented",
+      "type": "EvidenceTier",
+      "label": "documented",
+      "gloss": "the vendor, or a published tool, says so"
+    },
+    {
+      "id": "evidence/measured",
+      "type": "EvidenceTier",
+      "label": "measured",
+      "gloss": "a probe run on an instance, dated, with an evidence file"
+    },
+    {
+      "id": "evidence/observed",
+      "type": "EvidenceTier",
+      "label": "observed",
+      "gloss": "seen directly, on the thing itself, by the thing itself"
+    },
+    {
+      "id": "enforcer/the-agent-reading-it",
+      "type": "Enforcer",
+      "label": "the agent reading it",
+      "inside_the_grant": true
+    },
+    {
+      "id": "enforcer/the-agents-own-account",
+      "type": "Enforcer",
+      "label": "the agent's own account",
+      "inside_the_grant": true
+    },
+    {
+      "id": "enforcer/above-the-grant",
+      "type": "Enforcer",
+      "label": "something above the grant",
+      "inside_the_grant": false
+    },
+    {
+      "id": "barrier/none",
+      "type": "Barrier",
+      "label": "none",
+      "gloss": "nothing in the way",
+      "glyph": "filled circle",
+      "enforcement": "Nothing enforces it."
+    },
+    {
+      "id": "barrier/expectation",
+      "type": "Barrier",
+      "label": "expectation",
+      "gloss": "a rule in prose, enforced by nobody",
+      "glyph": "double circle",
+      "enforcement": "A rule in prose is enforced by the thing it is addressed to."
+    },
+    {
+      "id": "barrier/setting",
+      "type": "Barrier",
+      "label": "setting",
+      "gloss": "a switch the agent's own account can flip",
+      "glyph": "half filled circle",
+      "enforcement": "A setting the agent's own account could change is enforced by that account, which the grant includes."
+    },
+    {
+      "id": "barrier/boundary",
+      "type": "Barrier",
+      "label": "boundary",
+      "gloss": "enforced above the grant, out of the agent's reach",
+      "glyph": "empty circle",
+      "enforcement": "A sandbox, a gateway, a tool that is not exposed, a network it cannot see: enforced by something the grant does not include."
+    },
+    {
+      "id": "capability/read.file.project",
+      "type": "Capability",
+      "label": "read.file.project",
+      "gloss": "Read the project it is working on"
+    },
+    {
+      "id": "capability/write.file.project",
+      "type": "Capability",
+      "label": "write.file.project",
+      "gloss": "Change the project it is working on"
+    },
+    {
+      "id": "capability/read.file.host",
+      "type": "Capability",
+      "label": "read.file.host",
+      "gloss": "Read any file the account can reach"
+    },
+    {
+      "id": "capability/write.file.host",
+      "type": "Capability",
+      "label": "write.file.host",
+      "gloss": "Change any file the account can reach"
+    },
+    {
+      "id": "capability/delete.file.host",
+      "type": "Capability",
+      "label": "delete.file.host",
+      "gloss": "Delete files anywhere the account can reach"
+    },
+    {
+      "id": "capability/execute.process.host",
+      "type": "Capability",
+      "label": "execute.process.host",
+      "gloss": "Run programs as the account"
+    },
+    {
+      "id": "capability/execute.process.self",
+      "type": "Capability",
+      "label": "execute.process.self",
+      "gloss": "Run programs inside its own sandbox only"
+    },
+    {
+      "id": "capability/send.endpoint.allowed",
+      "type": "Capability",
+      "label": "send.endpoint.allowed",
+      "gloss": "Reach a permitted list of hosts"
+    },
+    {
+      "id": "capability/send.endpoint.world",
+      "type": "Capability",
+      "label": "send.endpoint.world",
+      "gloss": "Reach any host on the internet"
+    },
+    {
+      "id": "capability/read.credential.host",
+      "type": "Capability",
+      "label": "read.credential.host",
+      "gloss": "Read credentials stored where it runs"
+    },
+    {
+      "id": "capability/authenticate-as.credential.tenant",
+      "type": "Capability",
+      "label": "authenticate-as.credential.tenant",
+      "gloss": "Act in accounts with the credentials it holds"
+    },
+    {
+      "id": "capability/grant.credential.self",
+      "type": "Capability",
+      "label": "grant.credential.self",
+      "gloss": "Change its own permission settings"
+    },
+    {
+      "id": "capability/send.message.world",
+      "type": "Capability",
+      "label": "send.message.world",
+      "gloss": "Send a message to anyone"
+    },
+    {
+      "id": "capability/read.message.tenant",
+      "type": "Capability",
+      "label": "read.message.tenant",
+      "gloss": "Read mail or chat it is connected to"
+    },
+    {
+      "id": "capability/write.repository.project",
+      "type": "Capability",
+      "label": "write.repository.project",
+      "gloss": "Commit to the repository it was pointed at"
+    },
+    {
+      "id": "capability/write.repository.tenant",
+      "type": "Capability",
+      "label": "write.repository.tenant",
+      "gloss": "Push to a code host (any branch it can reach)"
+    },
+    {
+      "id": "capability/authenticate-as.credential.signing",
+      "type": "Capability",
+      "label": "authenticate-as.credential.signing",
+      "gloss": "Sign commits with the key it holds"
+    },
+    {
+      "id": "capability/create.record.world",
+      "type": "Capability",
+      "label": "create.record.world",
+      "gloss": "Publish packages, images or pages under the name it holds"
+    },
+    {
+      "id": "capability/write.budget.tenant",
+      "type": "Capability",
+      "label": "write.budget.tenant",
+      "gloss": "Spend money or tokens against an account it holds"
+    },
+    {
+      "id": "capability/create.schedule.host",
+      "type": "Capability",
+      "label": "create.schedule.host",
+      "gloss": "Create something that outlives the turn where it runs (a cron, a service)"
+    },
+    {
+      "id": "capability/read.record.history",
+      "type": "Capability",
+      "label": "read.record.history",
+      "gloss": "Read a retained record: shell history, past sessions"
+    },
+    {
+      "id": "capability/create.schedule.tenant",
+      "type": "Capability",
+      "label": "create.schedule.tenant",
+      "gloss": "Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session)"
+    },
+    {
+      "id": "capability/read.record.browsing",
+      "type": "Capability",
+      "label": "read.record.browsing",
+      "gloss": "Read every page you visit"
+    },
+    {
+      "id": "shape/anthropic/claude-code-remote/ccr-container",
+      "type": "DeploymentShape",
+      "label": "Claude Code on the web (a remote session container)",
+      "variant": "ccr-container",
+      "surface": "agentbox",
+      "version": "2026-09-05.2"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#authenticate-as.credential.signing",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.signing in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "authenticate-as.credential.signing"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#delete.file.host",
+      "type": "GrantedCapability",
+      "label": "delete.file.host in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "delete.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#read.record.history",
+      "type": "GrantedCapability",
+      "label": "read.record.history in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "read.record.history"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#send.endpoint.allowed",
+      "type": "GrantedCapability",
+      "label": "send.endpoint.allowed in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "send.endpoint.allowed"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#execute.process.host",
+      "type": "GrantedCapability",
+      "label": "execute.process.host in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "execute.process.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#write.file.host",
+      "type": "GrantedCapability",
+      "label": "write.file.host in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "write.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#write.file.project",
+      "type": "GrantedCapability",
+      "label": "write.file.project in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "write.file.project"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#write.repository.project",
+      "type": "GrantedCapability",
+      "label": "write.repository.project in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "write.repository.project"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#write.repository.tenant",
+      "type": "GrantedCapability",
+      "label": "write.repository.tenant in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "write.repository.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#read.file.project",
+      "type": "GrantedCapability",
+      "label": "read.file.project in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "read.file.project"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#create.schedule.tenant",
+      "type": "GrantedCapability",
+      "label": "create.schedule.tenant in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "create.schedule.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-code-remote/ccr-container#create.schedule.host",
+      "type": "GrantedCapability",
+      "label": "create.schedule.host in ccr-container",
+      "shape": "anthropic/claude-code-remote/ccr-container",
+      "capability": "create.schedule.host"
+    },
+    {
+      "id": "shape/anthropic/claude-code/local-confirmations-off",
+      "type": "DeploymentShape",
+      "label": "Claude Code (the CLI, on your own machine)",
+      "variant": "local-confirmations-off",
+      "surface": "cli",
+      "version": "2026-09-05"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#authenticate-as.credential.signing",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.signing in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "authenticate-as.credential.signing"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#create.record.world",
+      "type": "GrantedCapability",
+      "label": "create.record.world in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "create.record.world"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#delete.file.host",
+      "type": "GrantedCapability",
+      "label": "delete.file.host in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "delete.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#read.record.history",
+      "type": "GrantedCapability",
+      "label": "read.record.history in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "read.record.history"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#send.endpoint.world",
+      "type": "GrantedCapability",
+      "label": "send.endpoint.world in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "send.endpoint.world"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#execute.process.host",
+      "type": "GrantedCapability",
+      "label": "execute.process.host in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "execute.process.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#write.file.host",
+      "type": "GrantedCapability",
+      "label": "write.file.host in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "write.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#write.file.project",
+      "type": "GrantedCapability",
+      "label": "write.file.project in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "write.file.project"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#write.repository.project",
+      "type": "GrantedCapability",
+      "label": "write.repository.project in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "write.repository.project"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#write.repository.tenant",
+      "type": "GrantedCapability",
+      "label": "write.repository.tenant in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "write.repository.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#create.schedule.host",
+      "type": "GrantedCapability",
+      "label": "create.schedule.host in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "create.schedule.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#read.file.project",
+      "type": "GrantedCapability",
+      "label": "read.file.project in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "read.file.project"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-confirmations-off#grant.credential.self",
+      "type": "GrantedCapability",
+      "label": "grant.credential.self in local-confirmations-off",
+      "shape": "anthropic/claude-code/local-confirmations-off",
+      "capability": "grant.credential.self"
+    },
+    {
+      "id": "shape/anthropic/claude-code/local-default",
+      "type": "DeploymentShape",
+      "label": "Claude Code (the CLI, on your own machine)",
+      "variant": "local-default",
+      "surface": "cli",
+      "version": "2026-09-05"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#authenticate-as.credential.signing",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.signing in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "authenticate-as.credential.signing"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#create.record.world",
+      "type": "GrantedCapability",
+      "label": "create.record.world in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "create.record.world"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#delete.file.host",
+      "type": "GrantedCapability",
+      "label": "delete.file.host in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "delete.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#read.record.history",
+      "type": "GrantedCapability",
+      "label": "read.record.history in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "read.record.history"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#send.endpoint.world",
+      "type": "GrantedCapability",
+      "label": "send.endpoint.world in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "send.endpoint.world"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#write.file.host",
+      "type": "GrantedCapability",
+      "label": "write.file.host in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "write.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#write.file.project",
+      "type": "GrantedCapability",
+      "label": "write.file.project in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "write.file.project"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#write.repository.project",
+      "type": "GrantedCapability",
+      "label": "write.repository.project in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "write.repository.project"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#write.repository.tenant",
+      "type": "GrantedCapability",
+      "label": "write.repository.tenant in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "write.repository.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#execute.process.host",
+      "type": "GrantedCapability",
+      "label": "execute.process.host in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "execute.process.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#create.schedule.host",
+      "type": "GrantedCapability",
+      "label": "create.schedule.host in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "create.schedule.host"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#read.file.project",
+      "type": "GrantedCapability",
+      "label": "read.file.project in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "read.file.project"
+    },
+    {
+      "id": "granted/anthropic/claude-code/local-default#grant.credential.self",
+      "type": "GrantedCapability",
+      "label": "grant.credential.self in local-default",
+      "shape": "anthropic/claude-code/local-default",
+      "capability": "grant.credential.self"
+    },
+    {
+      "id": "shape/anthropic/claude-desktop/default",
+      "type": "DeploymentShape",
+      "label": "Claude Desktop (a desktop app with local tools)",
+      "variant": "default",
+      "surface": "desktop",
+      "version": "2026-09-05"
+    },
+    {
+      "id": "granted/anthropic/claude-desktop/default#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in default",
+      "shape": "anthropic/claude-desktop/default",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-desktop/default#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in default",
+      "shape": "anthropic/claude-desktop/default",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/anthropic/claude-desktop/default#read.record.history",
+      "type": "GrantedCapability",
+      "label": "read.record.history in default",
+      "shape": "anthropic/claude-desktop/default",
+      "capability": "read.record.history"
+    },
+    {
+      "id": "granted/anthropic/claude-desktop/default#send.endpoint.world",
+      "type": "GrantedCapability",
+      "label": "send.endpoint.world in default",
+      "shape": "anthropic/claude-desktop/default",
+      "capability": "send.endpoint.world"
+    },
+    {
+      "id": "granted/anthropic/claude-desktop/default#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in default",
+      "shape": "anthropic/claude-desktop/default",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-desktop/default#write.file.project",
+      "type": "GrantedCapability",
+      "label": "write.file.project in default",
+      "shape": "anthropic/claude-desktop/default",
+      "capability": "write.file.project"
+    },
+    {
+      "id": "granted/anthropic/claude-desktop/default#execute.process.host",
+      "type": "GrantedCapability",
+      "label": "execute.process.host in default",
+      "shape": "anthropic/claude-desktop/default",
+      "capability": "execute.process.host"
+    },
+    {
+      "id": "granted/anthropic/claude-desktop/default#write.file.host",
+      "type": "GrantedCapability",
+      "label": "write.file.host in default",
+      "shape": "anthropic/claude-desktop/default",
+      "capability": "write.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-desktop/default#read.file.project",
+      "type": "GrantedCapability",
+      "label": "read.file.project in default",
+      "shape": "anthropic/claude-desktop/default",
+      "capability": "read.file.project"
+    },
+    {
+      "id": "granted/anthropic/claude-desktop/default#grant.credential.self",
+      "type": "GrantedCapability",
+      "label": "grant.credential.self in default",
+      "shape": "anthropic/claude-desktop/default",
+      "capability": "grant.credential.self"
+    },
+    {
+      "id": "shape/anthropic/claude-web/connectors-on",
+      "type": "DeploymentShape",
+      "label": "Claude (in the browser, with connectors switched on)",
+      "variant": "connectors-on",
+      "surface": "web",
+      "version": "2026-09-05"
+    },
+    {
+      "id": "granted/anthropic/claude-web/connectors-on#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in connectors-on",
+      "shape": "anthropic/claude-web/connectors-on",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-web/connectors-on#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in connectors-on",
+      "shape": "anthropic/claude-web/connectors-on",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "granted/anthropic/claude-web/connectors-on#read.message.tenant",
+      "type": "GrantedCapability",
+      "label": "read.message.tenant in connectors-on",
+      "shape": "anthropic/claude-web/connectors-on",
+      "capability": "read.message.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-web/connectors-on#write.repository.tenant",
+      "type": "GrantedCapability",
+      "label": "write.repository.tenant in connectors-on",
+      "shape": "anthropic/claude-web/connectors-on",
+      "capability": "write.repository.tenant"
+    },
+    {
+      "id": "granted/anthropic/claude-web/connectors-on#read.file.project",
+      "type": "GrantedCapability",
+      "label": "read.file.project in connectors-on",
+      "shape": "anthropic/claude-web/connectors-on",
+      "capability": "read.file.project"
+    },
+    {
+      "id": "shape/generic/browser-extension/broad-host-permissions",
+      "type": "DeploymentShape",
+      "label": "A browser extension with broad host permissions",
+      "variant": "broad-host-permissions",
+      "surface": "extension",
+      "version": "2026-09-05"
+    },
+    {
+      "id": "granted/generic/browser-extension/broad-host-permissions#read.record.browsing",
+      "type": "GrantedCapability",
+      "label": "read.record.browsing in broad-host-permissions",
+      "shape": "generic/browser-extension/broad-host-permissions",
+      "capability": "read.record.browsing"
+    },
+    {
+      "id": "granted/generic/browser-extension/broad-host-permissions#send.endpoint.world",
+      "type": "GrantedCapability",
+      "label": "send.endpoint.world in broad-host-permissions",
+      "shape": "generic/browser-extension/broad-host-permissions",
+      "capability": "send.endpoint.world"
+    },
+    {
+      "id": "granted/generic/browser-extension/broad-host-permissions#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in broad-host-permissions",
+      "shape": "generic/browser-extension/broad-host-permissions",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "shape/generic/scheduled-job/service-account",
+      "type": "DeploymentShape",
+      "label": "A scheduled job running as a service account",
+      "variant": "service-account",
+      "surface": "service",
+      "version": "2026-09-05"
+    },
+    {
+      "id": "granted/generic/scheduled-job/service-account#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in service-account",
+      "shape": "generic/scheduled-job/service-account",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/generic/scheduled-job/service-account#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in service-account",
+      "shape": "generic/scheduled-job/service-account",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "granted/generic/scheduled-job/service-account#send.endpoint.world",
+      "type": "GrantedCapability",
+      "label": "send.endpoint.world in service-account",
+      "shape": "generic/scheduled-job/service-account",
+      "capability": "send.endpoint.world"
+    },
+    {
+      "id": "granted/generic/scheduled-job/service-account#write.budget.tenant",
+      "type": "GrantedCapability",
+      "label": "write.budget.tenant in service-account",
+      "shape": "generic/scheduled-job/service-account",
+      "capability": "write.budget.tenant"
+    },
+    {
+      "id": "granted/generic/scheduled-job/service-account#execute.process.host",
+      "type": "GrantedCapability",
+      "label": "execute.process.host in service-account",
+      "shape": "generic/scheduled-job/service-account",
+      "capability": "execute.process.host"
+    },
+    {
+      "id": "granted/generic/scheduled-job/service-account#write.file.host",
+      "type": "GrantedCapability",
+      "label": "write.file.host in service-account",
+      "shape": "generic/scheduled-job/service-account",
+      "capability": "write.file.host"
+    },
+    {
+      "id": "granted/generic/scheduled-job/service-account#create.schedule.host",
+      "type": "GrantedCapability",
+      "label": "create.schedule.host in service-account",
+      "shape": "generic/scheduled-job/service-account",
+      "capability": "create.schedule.host"
+    },
+    {
+      "id": "shape/github/actions-runner/ci",
+      "type": "DeploymentShape",
+      "label": "Actions runner (a hosted CI job)",
+      "variant": "ci",
+      "surface": "ci",
+      "version": "2026-08-26"
+    },
+    {
+      "id": "granted/github/actions-runner/ci#delete.file.host",
+      "type": "GrantedCapability",
+      "label": "delete.file.host in ci",
+      "shape": "github/actions-runner/ci",
+      "capability": "delete.file.host"
+    },
+    {
+      "id": "granted/github/actions-runner/ci#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in ci",
+      "shape": "github/actions-runner/ci",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "granted/github/actions-runner/ci#send.endpoint.world",
+      "type": "GrantedCapability",
+      "label": "send.endpoint.world in ci",
+      "shape": "github/actions-runner/ci",
+      "capability": "send.endpoint.world"
+    },
+    {
+      "id": "granted/github/actions-runner/ci#execute.process.host",
+      "type": "GrantedCapability",
+      "label": "execute.process.host in ci",
+      "shape": "github/actions-runner/ci",
+      "capability": "execute.process.host"
+    },
+    {
+      "id": "granted/github/actions-runner/ci#write.file.host",
+      "type": "GrantedCapability",
+      "label": "write.file.host in ci",
+      "shape": "github/actions-runner/ci",
+      "capability": "write.file.host"
+    },
+    {
+      "id": "granted/github/actions-runner/ci#write.file.project",
+      "type": "GrantedCapability",
+      "label": "write.file.project in ci",
+      "shape": "github/actions-runner/ci",
+      "capability": "write.file.project"
+    },
+    {
+      "id": "granted/github/actions-runner/ci#write.repository.project",
+      "type": "GrantedCapability",
+      "label": "write.repository.project in ci",
+      "shape": "github/actions-runner/ci",
+      "capability": "write.repository.project"
+    },
+    {
+      "id": "granted/github/actions-runner/ci#read.file.project",
+      "type": "GrantedCapability",
+      "label": "read.file.project in ci",
+      "shape": "github/actions-runner/ci",
+      "capability": "read.file.project"
+    },
+    {
+      "id": "shape/openai/chatgpt-web/default",
+      "type": "DeploymentShape",
+      "label": "ChatGPT (in the browser, no connectors)",
+      "variant": "default",
+      "surface": "web",
+      "version": "2026-09-05"
+    },
+    {
+      "id": "granted/openai/chatgpt-web/default#read.file.project",
+      "type": "GrantedCapability",
+      "label": "read.file.project in default",
+      "shape": "openai/chatgpt-web/default",
+      "capability": "read.file.project"
+    },
+    {
+      "id": "mandate/coding-assistant-on-my-machine",
+      "type": "Mandate",
+      "label": "A coding assistant on my machine",
+      "surface": [
+        "cli"
+      ]
+    },
+    {
+      "id": "mandate/coding-assistant-in-a-container",
+      "type": "Mandate",
+      "label": "A coding assistant in a container on the web",
+      "surface": [
+        "agentbox"
+      ]
+    },
+    {
+      "id": "mandate/desktop-app-with-local-tools",
+      "type": "Mandate",
+      "label": "The desktop app, with local tools switched on",
+      "surface": [
+        "desktop"
+      ]
+    },
+    {
+      "id": "mandate/chat-with-connectors",
+      "type": "Mandate",
+      "label": "Chat, with connectors switched on",
+      "surface": [
+        "web"
+      ]
+    },
+    {
+      "id": "mandate/chat-no-connectors",
+      "type": "Mandate",
+      "label": "Chat in the browser, nothing connected",
+      "surface": [
+        "web"
+      ]
+    },
+    {
+      "id": "mandate/ci-job",
+      "type": "Mandate",
+      "label": "A CI job on a hosted runner",
+      "surface": [
+        "ci"
+      ]
+    },
+    {
+      "id": "mandate/browser-extension-i-installed",
+      "type": "Mandate",
+      "label": "A browser extension I installed",
+      "surface": [
+        "extension"
+      ]
+    },
+    {
+      "id": "mandate/scheduled-job-under-a-service-account",
+      "type": "Mandate",
+      "label": "A scheduled job under a service account",
+      "surface": [
+        "service"
+      ]
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Built from the published data on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

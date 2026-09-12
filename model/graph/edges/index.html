@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The edge vocabulary - abp.sgit.ai</title>
+<meta name="description" content="The 15 edges this model is written in, each a verb with a distinct inverse, a stated domain and range, and the sentence it reads as.">
+<link rel="canonical" href="https://abp.sgit.ai/model/graph/edges/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/model/graph/edges/index.html">
+<meta property="og:title" content="The edge vocabulary - abp.sgit.ai">
+<meta property="og:description" content="The 15 edges this model is written in, each a verb with a distinct inverse, a stated domain and range, and the sentence it reads as.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../../versions/v0.3.0/index.html" title="What changed in v0.3.0, and the commit it was built from">v0.3.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../model/index.html">The four objects</a>
+      <a class="sl" href="../../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../../model/graph/index.html">The graph</a>
+      <a class="sl here" href="../../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../examples/index.html">All five</a>
+      <a class="sl" href="../../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../../index.html">Home</a> / <a href="../../../model/index.html">The model</a> / <a href="../../../model/graph/index.html">The graph</a> / The edges</p>
+  <h1>The edge vocabulary</h1>
+  <p class="lead"><b>15 edges.</b> Every one is a verb with a distinct, meaningfully named inverse, and the inverse is not the same edge walked backwards: <code>grants</code> and <code>granted_by</code> have different fan out, and that asymmetry is what stops the graph exploding.</p>
+  <div class="note"><b>The generic association edge is banned, and there is none in this model.</b> It constrains nothing and costs fan out. If you find yourself wanting <code>relates_to</code>, the honest move is a new edge with a sentence, a different sentence for its inverse, and a stated domain and range.</div>
+  <h2 id="reused-from-the-published-set-unchanged">Reused from the published set, unchanged</h2>
+  <p>These are not this site's to rename. They are published at <a href="https://graphs.sgit.ai/v1/grammar/edge-set.html">the network's edge set</a> and reused under their published names.</p>
+  <div class="tablewrap"><table><thead><tr><th>Edge</th><th>Inverse</th><th>Domain</th><th>Range</th><th>Reads as</th></tr></thead><tbody><tr><td><code>grants</code></td><td><code>granted_by</code></td><td><code>DeploymentShape</code></td><td><code>Capability</code></td><td>this deployment shape grants this capability</td></tr><tr><td><code>reaches</code></td><td><code>reachable_from</code></td><td><code>Capability</code></td><td><code>ReachClass</code></td><td>this capability reaches this reach class</td></tr><tr><td><code>similar_to</code></td><td><code>similar_to</code></td><td><code>Node</code></td><td><code>Node</code></td><td>our node is similar to their node</td></tr><tr><td><code>supersedes</code></td><td><code>superseded_by</code></td><td><code>Node</code></td><td><code>Node</code></td><td>this claim supersedes that one</td></tr></tbody></table></div>
+  <h2 id="proposed-here">Proposed here</h2>
+  <p><b>Each one carries a sentence, a different sentence for its inverse, and a stated domain and range</b>, which is the published rule for extending the set. They are marked as proposed here rather than quoted, in the same way the network's own edge set marks nine of its inverses as proposed there.</p>
+  <div class="tablewrap"><table><thead><tr><th>Edge</th><th>Reads as</th><th>Inverse</th><th>Reads as</th><th>Domain</th><th>Range</th></tr></thead><tbody><tr><td><code>has_verb</code></td><td>this capability has the verb read</td><td><code>verb_of</code></td><td>read is the verb of these capabilities</td><td><code>Capability</code></td><td><code>Verb</code></td></tr><tr><td><code>acts_on</code></td><td>this capability acts on files</td><td><code>acted_on_by</code></td><td>files are acted on by these capabilities</td><td><code>Capability</code></td><td><code>ObjectClass</code></td></tr><tr><td><code>in_family</code></td><td>this capability is in the filesystem family</td><td><code>family_of</code></td><td>the filesystem family is the family of these capabilities</td><td><code>Capability</code></td><td><code>Family</code></td></tr><tr><td><code>has_undo_class</code></td><td>this capability has the undo class no</td><td><code>undo_class_of</code></td><td>undo class no is the undo class of these capabilities</td><td><code>Capability</code></td><td><code>UndoClass</code></td></tr><tr><td><code>bounded_by</code></td><td>this granted capability is bounded by this barrier</td><td><code>bounds</code></td><td>this barrier bounds these granted capabilities</td><td><code>GrantedCapability</code></td><td><code>Barrier</code></td></tr><tr><td><code>enforced_by</code></td><td>this barrier is enforced by something above the grant</td><td><code>enforces</code></td><td>this enforcer enforces these barriers</td><td><code>Barrier</code></td><td><code>Enforcer</code></td></tr><tr><td><code>authorises</code></td><td>this mandate authorises this capability</td><td><code>authorised_by</code></td><td>this capability is authorised by this mandate</td><td><code>Mandate</code></td><td><code>Capability</code></td></tr><tr><td><code>withholds</code></td><td>this mandate withholds this capability</td><td><code>withheld_by</code></td><td>this capability is withheld by this mandate</td><td><code>Mandate</code></td><td><code>Capability</code></td></tr><tr><td><code>exceeds</code></td><td>this granted capability exceeds this mandate</td><td><code>exceeded_by</code></td><td>this mandate is exceeded by these granted capabilities</td><td><code>GrantedCapability</code></td><td><code>Mandate</code></td></tr><tr><td><code>falls_short_of</code></td><td>this mandate falls short of this capability it asked for</td><td><code>unmet_by</code></td><td>this capability is unmet by this deployment shape</td><td><code>Mandate</code></td><td><code>Capability</code></td></tr><tr><td><code>known_by</code></td><td>this granted capability is known by observation</td><td><code>evidences</code></td><td>observation evidences these granted capabilities</td><td><code>GrantedCapability</code></td><td><code>EvidenceTier</code></td></tr></tbody></table></div>
+  <h2 id="the-sentence-test">The sentence test</h2>
+  <p><b>If a path does not read as a sentence in the reader's own language, the edges are wrong</b> and the model changes rather than the renderer. Every example page ends with a path built from its own data so the test is applied on every build rather than asserted once here:</p>
+  <div class="note">deployment shape <code>claude-code local-confirmations-off</code> <b>grants</b> capability <code>execute.process.host</code> which <b>has_verb</b> <code>execute</code> and <b>reaches</b> <code>host</code>, <b>bounded_by</b> barrier <code>none</code>, which <b>exceeds</b> mandate <code>a coding assistant on my machine</code>, and <b>has_undo_class</b> <code>with-effort</code>.</div>
+  <p><a href="../../../data/graph/edges.json">The edges as JSON</a> · <a href="../../../model/graph/formulas/index.html">The node type formulas</a></p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../../versions/v0.3.0/index.html">v0.3.0</a> · <a href="../../../versions/index.html">all versions</a> · <a href="../../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../../model/graph/edges/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../../model/index.html">The four objects</a>
+    <a href="../../../model/barriers/index.html">The barrier</a>
+    <a href="../../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../../data/index.html">The published vocabulary</a>
+    <a href="../../../model/schema/index.html">The schema</a>
+    <a href="../../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../../docs/index.html">Docs</a>
+    <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

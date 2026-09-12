@@ -4,7 +4,8 @@
   "title": "the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it",
   "summary": "A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes it useful, because a question about whether a control held throughout a period is a question about a series that a recomputed present cannot answer. The corrected rule is that the delta is DERIVED AND NEVER AUTHORED, which is the harder rule, because it forbids the act rather than the artefact. The release gate's check is inverted to match: it refused any stored delta and now recomputes every one of them.",
   "commit": null,
-  "commit_note": "Not tagged yet. This release's commit is the one whose subject carries `site v0.2.0:`; CI tags it v0.2.0 on the release branch, and `git rev-list -n 1 v0.2.0` resolves it from then on.",
+  "commit_resolves_by": "git rev-list -n 1 v0.2.0",
+  "commit_note": "The tag is the record. CI derives v0.2.0 from admin/build/version.txt and creates it on the commit whose subject carries `site v0.2.0:`, so `git rev-list -n 1 v0.2.0` resolves it for anybody from then on. The hash is not written into this file because a release commit cannot contain its own hash, and reading it back from the tag at build time made the build produce different bytes on a checkout with tags than on one without.",
   "vault": null,
   "reconstructed": false,
   "changes": [

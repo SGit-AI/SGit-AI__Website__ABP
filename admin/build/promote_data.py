@@ -377,6 +377,9 @@ def manifest(built, version, n_deltas):
             "profiles": "profiles/index.json",
             "mandates": "mandates/index.json",
             "deltas": "deltas/index.json",
+            "graph": "graph/index.json",
+            "lexicon": "lexicon/index.json",
+            "bridges": "bridges/index.json",
             "provenance": "provenance.json",
             "upstream": "upstream/pack.json",
         },
@@ -469,15 +472,209 @@ def write_deltas(built, computed_at):
     return index
 
 
+def write_graph(built, computed_at):
+    """The graph, the lexicon and the bridges, as files.
+
+    EVERY WORD IN THE GRAMMAR GETS AN ADDRESS. Until v0.3.0 a verb, an object class and a reach
+    class existed only as substrings of a capability id, which made them unaddressable: nothing
+    could link to `host`, nothing could disagree with it, and a customer vault had nowhere to
+    attach a bridge. A node with no address cannot be argued with, and being argued with is the
+    point of publishing a vocabulary."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import abp  # noqa: E402
+    import graph as G  # noqa: E402
+
+    D = abp.load()
+    g = G.build(D)
+    cls = G.classify(g)
+    prov = lambda note: _provenance(built["pack"], built["content_hash"], note)
+
+    # --- the lexicon, a file per word ---------------------------------------
+    KIND = {"Verb": ("verbs", "has_verb"), "ObjectClass": ("objects", "acts_on"),
+            "ReachClass": ("reaches", "reaches"), "Family": ("family", "in_family")}
+    KIND["Family"] = ("families", "in_family")
+    lex_index = {}
+    for ntype, (folder, edge_name) in KIND.items():
+        rows = []
+        for n in sorted((n for n in g["nodes"].values() if n and n["type"] == ntype),
+                        key=lambda n: n["label"]):
+            caps = sorted(e["from"].split("/", 1)[1]
+                          for e in G.in_edges(g, n["id"], edge_name))
+            rec = {
+                "type": f"abp/lexicon-node/v1",
+                "id": n["id"], "node_type": ntype, "label": n["label"],
+                "gloss": n.get("gloss"),
+                "_meaning": "A node carries no inherent meaning. What this node IS emerges from "
+                            "the edges below, not from the gloss. The gloss is a convenience for "
+                            "a reader and is never the definition.",
+                "in_capabilities": caps,
+                "count": len(caps),
+                # A node connected to nothing is literally meaningless. Two verbs in the
+                # published grammar are in that position, and saying so is more useful than
+                # dropping them or pretending they carry weight.
+                "unused": not caps,
+                "unused_note": (None if caps else
+                                "This word is in the published grammar and no capability "
+                                "primitive uses it. A node connected to nothing is literally "
+                                "meaningless, so this one means nothing yet. It is kept, and "
+                                "marked, because the gap is a finding about the vocabulary "
+                                "rather than a mistake in it: a primitive using this verb "
+                                "would need a probe before it could be added."),
+                "named_by": n.get("named_by"),
+                "page": f"https://abp.sgit.ai/model/lexicon/{folder}/{n['label']}/index.html",
+                "provenance": prov(f"Derived from the published grammar: every capability id is "
+                                   f"verb.object.reach, and this node is what the id spells with."),
+            }
+            (OUT / f"lexicon/{folder}").mkdir(parents=True, exist_ok=True)
+            (OUT / f"lexicon/{folder}/{n['label']}.json").write_text(
+                json.dumps(rec, indent=2, ensure_ascii=False) + "\n")
+            rows.append({"id": n["id"], "label": n["label"], "count": len(caps),
+                         "file": f"lexicon/{folder}/{n['label']}.json"})
+        lex_index[folder] = rows
+
+    (OUT / "lexicon/index.json").write_text(json.dumps({
+        "type": "abp/lexicon/v1",
+        "_what_this_is": "Every word the capability grammar is spelled with, as a node with its "
+                         "own address. `read.file.project` is not a string: it is three nodes "
+                         "and three edges, and these are the nodes.",
+        "grammar": "verb.object.reach",
+        "counts": {k: len(v) for k, v in lex_index.items()},
+        **lex_index,
+        "provenance": prov("Generated from the published capability grammar."),
+    }, indent=2, ensure_ascii=False) + "\n")
+
+    # --- the graph ------------------------------------------------------------
+    (OUT / "graph").mkdir(parents=True, exist_ok=True)
+    (OUT / "graph/edges.json").write_text(json.dumps({
+        "type": "abp/edge-vocabulary/v1",
+        "_what_this_is": "Every edge this model is written in. Each is a verb with a DISTINCT, "
+                         "meaningfully named inverse, a stated domain and range, and the "
+                         "sentence it reads as. The inverse is not the same edge walked "
+                         "backwards: it has different fan out, and that asymmetry is what stops "
+                         "the graph exploding.",
+        "the_banned_edge": "There is no generic association edge in this model and there will "
+                           "not be one. It constrains nothing and costs fan out.",
+        "extending_it": "A new edge needs a sentence, its inverse needs a DIFFERENT sentence, "
+                        "and both need a stated domain and range.",
+        "source": "https://graphs.sgit.ai/v1/grammar/edge-set.html",
+        "count": len(G.EDGES),
+        "edges": G.edge_records(),
+        "provenance": prov("Edges marked `graphs.sgit.ai edge set` are reused under their "
+                           "published names. Edges marked `proposed here` are this site's, and "
+                           "are marked as such rather than presented as settled."),
+    }, indent=2, ensure_ascii=False) + "\n")
+
+    (OUT / "graph/node-types.json").write_text(json.dumps({
+        "type": "abp/node-types/v1",
+        "_what_this_is": "A node type is a REQUIRED PATTERN OF TYPED, DIRECTED PATHS that a "
+                         "node either matches or does not. It is not a label somebody applied. "
+                         "The content of a node does not decide its type; its paths do.",
+        "judgment": "Judgment does not disappear. Somebody still decided that a control must be "
+                    "enforced from outside the grant. What changes is where that decision "
+                    "lives: out of a classifier's head and into a formula that is visible, "
+                    "versioned, inspectable and arguable.",
+        "not_a_node": G.NOT_A_NODE.replace("**", ""),
+        "count": len(G.NODE_TYPES),
+        "node_types": [{"name": n, "is": gl, "formula": f, "note": note,
+                        "matched": len(cls.get(n, [])) if n in cls else None}
+                       for n, gl, f, note in G.NODE_TYPES],
+        "provenance": prov("The formulas are run against the graph on every build and the "
+                           "`matched` counts are the result, not fields anybody set."),
+    }, indent=2, ensure_ascii=False) + "\n")
+
+    (OUT / "graph/nodes.json").write_text(json.dumps({
+        "type": "abp/graph-nodes/v1",
+        "_what_this_is": "Every node, flat, with its type. The same shape of record at every "
+                         "altitude: a verb, a capability, a barrier and a deployment shape are "
+                         "all nodes here. THAT IS THE FRACTAL TEST: if zooming into a node "
+                         "needed a new format or a special case, this would be a hierarchy "
+                         "rather than a graph.",
+        "count": len([n for n in g["nodes"].values() if n]),
+        "by_type": {t: len([n for n in g["nodes"].values() if n and n["type"] == t])
+                    for t in sorted({n["type"] for n in g["nodes"].values() if n})},
+        "nodes": [n for n in g["nodes"].values() if n],
+        "provenance": prov("Built from the published data on every build."),
+    }, indent=2, ensure_ascii=False) + "\n")
+
+    (OUT / "graph/index.json").write_text(json.dumps({
+        "type": "abp/graph/v1",
+        "_what_this_is": "The ABP as a graph. Meaning through connectivity: a node carries no "
+                         "inherent meaning, and what a thing IS emerges from the edges "
+                         "traceable from it.",
+        "never_render_the_whole_graph": "Every page on this site renders the result of ONE "
+                                        "query. There is no map of everything and there will "
+                                        "not be one.",
+        "files": {"nodes": "nodes.json", "edges": "edges.json",
+                  "node_types": "node-types.json", "lexicon": "../lexicon/index.json",
+                  "bridges": "../bridges/index.json"},
+        "counts": {"nodes": len([n for n in g["nodes"].values() if n]),
+                   "edges": len(g["edges"]),
+                   "edge_types": len(G.EDGES), "node_types": len(G.NODE_TYPES)},
+        "matched": {k: len(v) for k, v in cls.items()},
+        "discipline": "https://graphs.sgit.ai/",
+        "provenance": prov("Built from the published data on every build."),
+    }, indent=2, ensure_ascii=False) + "\n")
+    (OUT / "graph/graph.json").write_text(json.dumps({
+        "type": "abp/graph-edges/v1",
+        "_what_this_is": "Every edge instance, flat. Pair it with nodes.json to walk the graph.",
+        "count": len(g["edges"]), "edges": g["edges"],
+        "provenance": prov("Built from the published data on every build."),
+    }, indent=2, ensure_ascii=False) + "\n")
+
+    # --- the bridges ----------------------------------------------------------
+    # Layer 3. It starts with one declared bridge, to the vocabulary this was promoted from,
+    # because a bridge file with nothing in it teaches nobody the shape of one.
+    (OUT / "bridges").mkdir(parents=True, exist_ok=True)
+    (OUT / "bridges/index.json").write_text(json.dumps({
+        "type": "abp/bridges/v1",
+        "_what_this_is": "Declared bridges: explicit edges connecting this vocabulary to "
+                         "another at specific points. Owned by whoever declared them and "
+                         "revisable without renegotiating anything. The edge is `similar_to`, "
+                         "it is symmetric, and it is PARTIAL ON PURPOSE.",
+        "why_not_merge": "Merging two vocabularies erases the disagreement, and the "
+                         "disagreement is the finding. Vocabularies are kept intact and "
+                         "connected through anchor nodes. Parties can disagree about meaning "
+                         "while still agreeing about facts, which is the only stable basis for "
+                         "working together.",
+        "not_a_conformance_claim": "A bridge is never `we are compliant with vocabulary X`. "
+                                   "That is all or nothing and it is usually a lie by the "
+                                   "second field.",
+        "how_to_add_one": "A third party can declare a bridge without touching either node. You "
+                          "do not need our permission and we do not need yours. Open a pull "
+                          "request against this file with a source, a timestamp and a hash.",
+        "count": 1,
+        "bridges": [{
+            "from": "abp.sgit.ai capability grammar",
+            "edge": "similar_to",
+            "to": "what-can-it-do.games.sgit.ai capability primitives",
+            "relation": "identical at the time of promotion, by construction",
+            "note": "This vocabulary was promoted from that one without renaming anything, so "
+                    "the bridge is total rather than partial today. It is declared anyway, "
+                    "because the two will diverge and the bridge is where that will be "
+                    "recorded.",
+            "declared_by": "abp.sgit.ai",
+            "source": SOURCE,
+            "retrieved": RETRIEVED,
+            "content_hash": built["content_hash"],
+        }],
+        "provenance": prov("The bridge file. One declared bridge today."),
+    }, indent=2, ensure_ascii=False) + "\n")
+    return {"nodes": len([n for n in g["nodes"].values() if n]), "edges": len(g["edges"]),
+            "lexicon": sum(len(v) for v in lex_index.values()), "matched": cls}
+
+
 def main():
     version = (ROOT / "admin/build/version.txt").read_text().strip()
     built = build()
     deltas = write_deltas(built, RETRIEVED)
+    gr = write_graph(built, RETRIEVED)
     (OUT / "index.json").write_text(
         json.dumps(manifest(built, version, len(deltas)), indent=2, ensure_ascii=False) + "\n")
     print(f"promote_data: {built['capabilities']['count']} capabilities, "
           f"{len(built['profiles'])} profiles, {len(built['mandates'])} mandates, "
-          f"{len(deltas)} stored deltas, "
+          f"{len(deltas)} stored deltas, {gr['nodes']} nodes and {gr['edges']} "
+          f"edges, {gr['lexicon']} lexicon words, "
           f"{built['provenance']['rows']['measured']} of {built['provenance']['rows']['total']} "
           f"rows measured, {built['content_hash'][:19]}")
 

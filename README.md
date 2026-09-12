@@ -32,9 +32,10 @@ document changed. A policy cannot be dangerous; a deployment can.
 ```
 index.html            the argument, in one screen
 what-is-an-abp/       the foundation document, rendered, with its terms linked to their nodes
-model/                the four objects, the 23 capabilities, the barriers, undo, the delta, the graph, the schema
+model/                the four objects, the capabilities, the lexicon, the barriers, undo, the delta, the graph, the schema
+model/lexicon/        a page per word in the grammar: 10 verbs, 9 object classes, 5 reach classes, 9 families
 examples/             five ABPs, derived from the data rather than authored
-data/                 the published vocabulary as JSON, the stored deltas, and the source bytes under upstream/
+data/                 the published vocabulary as JSON, the graph, the lexicon, the bridges, the stored deltas, and the source bytes under upstream/
 docs/                 every reference document, rendered, one click from its bytes
 versions/             index.json, a file and a page per version
 llms.txt              generated, and every page is in it
@@ -58,6 +59,8 @@ CI fails a push whose committed tree does not match what the generator produces.
 | `admin/build/version.txt` | The version. CI derives the tag from it. |
 | `admin/build/promote_data.py` | Promotes the upstream pack into the published vocabulary. |
 | `admin/build/abp.py` | The model: the label, and the delta that is derived and never authored. |
+| `admin/build/graph.py` | The edge vocabulary, the node type formulas, and the graph builder. |
+| `admin/build/lexicon_pages.py` | A page per word in the grammar, and the grammar pages. |
 | `admin/build/abp_pages.py` | Every page computed from the data. |
 | `admin/build/docs_pages.py` | The docs section. |
 | `admin/build/build_pages.py` | The authored pages, the nav, the footer, the version log. |
@@ -78,6 +81,31 @@ proceed if it disagrees.
 
 **21 of 99 capability rows were measured** and the rest derived. Every page carrying capability
 rows says so.
+
+## The ontology is a graph, not a list of strings
+
+**`read.file.project` is three nodes joined by three edges**, and each of them has an address,
+a JSON file and a page. A node carries no inherent meaning: what a thing IS emerges from the
+edges traceable from it.
+
+- **The lexicon** (`/model/lexicon/`, `data/lexicon/`): every word the grammar is spelled with.
+  The reach class pages are the ones to read, because the nine deployment shapes **disagree**
+  about what `host` means and the page keeps the disagreement rather than averaging it.
+- **The edge vocabulary** (`data/graph/edges.json`): 15 edges, each a verb with a distinct and
+  meaningfully named inverse, a stated domain and a stated range. Four reused from the
+  network's published edge set under their published names, eleven proposed here and marked as
+  such. **There is no generic association edge and there will not be one.**
+- **The node type formulas** (`data/graph/node-types.json`): a node type is a required pattern
+  of typed, directed paths, not a label. `[Control] := a [Barrier] -enforced_by-> an [Enforcer]
+  the [Grant] does not include`. Walked on every build; the gate fails unless exactly one
+  barrier matches.
+- **The three layers** (`/model/graph/layers/`, `data/bridges/`): shared facts owned by nobody,
+  per-party formulas, declared bridges. This is how a customer vault disagrees with this
+  vocabulary **without merging anything and without either side asking permission**.
+
+Two words in the published grammar, `receive` and `revoke`, have no primitive under them. They
+are kept and marked `unused` rather than dropped: a node connected to nothing is literally
+meaningless, and the gap is a finding about the vocabulary rather than a defect in it.
 
 ## Contributing
 

@@ -39,6 +39,43 @@
   <url><loc>https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/examples/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/data/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/verbs/authenticate-as/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/verbs/create/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/verbs/delete/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/verbs/execute/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/verbs/grant/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/verbs/read/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/verbs/receive/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/verbs/revoke/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/verbs/send/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/verbs/write/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/objects/budget/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/objects/credential/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/objects/file/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/objects/message/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/objects/network-endpoint/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/objects/process/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/objects/record/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/objects/repository/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/objects/schedule/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/reaches/host/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/reaches/project/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/reaches/self/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/reaches/world/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/families/browser/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/families/code/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/families/communication/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/families/filesystem/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/families/identity/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/families/money/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/families/network/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/families/process/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/lexicon/families/schedule/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/graph/edges/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/graph/formulas/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/model/graph/layers/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html</loc><priority>0.7</priority></url>
@@ -52,6 +89,7 @@
   <url><loc>https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/versions/v0.3.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.2.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.1.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/index.html</loc><priority>0.7</priority></url>

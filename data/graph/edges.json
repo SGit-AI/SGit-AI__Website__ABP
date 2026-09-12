@@ -1,0 +1,155 @@
+{
+  "type": "abp/edge-vocabulary/v1",
+  "_what_this_is": "Every edge this model is written in. Each is a verb with a DISTINCT, meaningfully named inverse, a stated domain and range, and the sentence it reads as. The inverse is not the same edge walked backwards: it has different fan out, and that asymmetry is what stops the graph exploding.",
+  "the_banned_edge": "There is no generic association edge in this model and there will not be one. It constrains nothing and costs fan out.",
+  "extending_it": "A new edge needs a sentence, its inverse needs a DIFFERENT sentence, and both need a stated domain and range.",
+  "source": "https://graphs.sgit.ai/v1/grammar/edge-set.html",
+  "count": 15,
+  "edges": [
+    {
+      "edge": "grants",
+      "inverse": "granted_by",
+      "domain": "DeploymentShape",
+      "range": "Capability",
+      "reads_as": "this deployment shape grants this capability",
+      "inverse_reads_as": "this capability is granted by this deployment shape",
+      "from": "graphs.sgit.ai edge set"
+    },
+    {
+      "edge": "reaches",
+      "inverse": "reachable_from",
+      "domain": "Capability",
+      "range": "ReachClass",
+      "reads_as": "this capability reaches this reach class",
+      "inverse_reads_as": "this reach class is reachable from this capability",
+      "from": "graphs.sgit.ai edge set"
+    },
+    {
+      "edge": "similar_to",
+      "inverse": "similar_to",
+      "domain": "Node",
+      "range": "Node",
+      "reads_as": "our node is similar to their node",
+      "inverse_reads_as": "symmetric, and partial on purpose",
+      "from": "graphs.sgit.ai anchor nodes"
+    },
+    {
+      "edge": "supersedes",
+      "inverse": "superseded_by",
+      "domain": "Node",
+      "range": "Node",
+      "reads_as": "this claim supersedes that one",
+      "inverse_reads_as": "that claim is superseded by this one",
+      "from": "graphs.sgit.ai, supersede never delete"
+    },
+    {
+      "edge": "has_verb",
+      "inverse": "verb_of",
+      "domain": "Capability",
+      "range": "Verb",
+      "reads_as": "this capability has the verb read",
+      "inverse_reads_as": "read is the verb of these capabilities",
+      "from": "proposed here"
+    },
+    {
+      "edge": "acts_on",
+      "inverse": "acted_on_by",
+      "domain": "Capability",
+      "range": "ObjectClass",
+      "reads_as": "this capability acts on files",
+      "inverse_reads_as": "files are acted on by these capabilities",
+      "from": "proposed here"
+    },
+    {
+      "edge": "in_family",
+      "inverse": "family_of",
+      "domain": "Capability",
+      "range": "Family",
+      "reads_as": "this capability is in the filesystem family",
+      "inverse_reads_as": "the filesystem family is the family of these capabilities",
+      "from": "proposed here"
+    },
+    {
+      "edge": "has_undo_class",
+      "inverse": "undo_class_of",
+      "domain": "Capability",
+      "range": "UndoClass",
+      "reads_as": "this capability has the undo class no",
+      "inverse_reads_as": "undo class no is the undo class of these capabilities",
+      "from": "proposed here"
+    },
+    {
+      "edge": "bounded_by",
+      "inverse": "bounds",
+      "domain": "GrantedCapability",
+      "range": "Barrier",
+      "reads_as": "this granted capability is bounded by this barrier",
+      "inverse_reads_as": "this barrier bounds these granted capabilities",
+      "from": "proposed here"
+    },
+    {
+      "edge": "enforced_by",
+      "inverse": "enforces",
+      "domain": "Barrier",
+      "range": "Enforcer",
+      "reads_as": "this barrier is enforced by something above the grant",
+      "inverse_reads_as": "this enforcer enforces these barriers",
+      "from": "proposed here"
+    },
+    {
+      "edge": "authorises",
+      "inverse": "authorised_by",
+      "domain": "Mandate",
+      "range": "Capability",
+      "reads_as": "this mandate authorises this capability",
+      "inverse_reads_as": "this capability is authorised by this mandate",
+      "from": "proposed here"
+    },
+    {
+      "edge": "withholds",
+      "inverse": "withheld_by",
+      "domain": "Mandate",
+      "range": "Capability",
+      "reads_as": "this mandate withholds this capability",
+      "inverse_reads_as": "this capability is withheld by this mandate",
+      "from": "proposed here"
+    },
+    {
+      "edge": "exceeds",
+      "inverse": "exceeded_by",
+      "domain": "GrantedCapability",
+      "range": "Mandate",
+      "reads_as": "this granted capability exceeds this mandate",
+      "inverse_reads_as": "this mandate is exceeded by these granted capabilities",
+      "from": "proposed here"
+    },
+    {
+      "edge": "falls_short_of",
+      "inverse": "unmet_by",
+      "domain": "Mandate",
+      "range": "Capability",
+      "reads_as": "this mandate falls short of this capability it asked for",
+      "inverse_reads_as": "this capability is unmet by this deployment shape",
+      "from": "proposed here"
+    },
+    {
+      "edge": "known_by",
+      "inverse": "evidences",
+      "domain": "GrantedCapability",
+      "range": "EvidenceTier",
+      "reads_as": "this granted capability is known by observation",
+      "inverse_reads_as": "observation evidences these granted capabilities",
+      "from": "proposed here"
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Edges marked `graphs.sgit.ai edge set` are reused under their published names. Edges marked `proposed here` are this site's, and are marked as such rather than presented as settled.",
+    "licence": "CC BY 4.0"
+  }
+}

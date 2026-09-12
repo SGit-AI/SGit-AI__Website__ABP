@@ -2,7 +2,7 @@
 
 > Read mail or chat it is connected to. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.2.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.3.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12,7 +12,21 @@ below point at them.*
 
 # `read.message.tenant`
 
-**Read mail or chat it is connected to.** Verb `read`, object `message`, reach `tenant`, family `communication`. Its effect is **no**: cannot be undone.
+**Read mail or chat it is connected to.** Its effect is **no**: cannot be undone.
+
+## What this id is made of
+
+**This is not a string.** It is [`read`](../../../model/lexicon/verbs/read/index.md)`.`[`message`](../../../model/lexicon/objects/message/index.md)`.`[`tenant`](../../../model/lexicon/reaches/tenant/index.md), three nodes joined by three edges, and each of them has an address, a page and a JSON file. Follow any of them and you get the query for that word rather than a definition of it.
+
+| Node | Edge | Reads as |
+|---|---|---|
+| [`read`](../../../model/lexicon/verbs/read/index.md) | `has_verb` | this capability has the verb `read` |
+| [`message`](../../../model/lexicon/objects/message/index.md) | `acts_on` | this capability acts on `message` |
+| [`tenant`](../../../model/lexicon/reaches/tenant/index.md) | `reaches` | this capability reaches `tenant` |
+| [`communication`](../../../model/lexicon/families/communication/index.md) | `in_family` | this capability is in the `communication` family |
+| [`no`](../../../model/undo/index.md) | `has_undo_class` | this capability has the undo class `no` |
+
+> **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `read.message.tenant` is emerges from the edges traceable from it. The strongest case is [`tenant`](../../../model/lexicon/reaches/tenant/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
 ## In 1 of 9 published shapes
 

@@ -36,6 +36,11 @@
 //  11. EVERY PAGE IS IN llms.txt. The sibling generates llms.txt from its page list, so it
 //      cannot miss a page the generator knows about -- and nothing fails if a page exists in
 //      the tree that the generator does not.
+//  13. THE GRAPH HOLDS TOGETHER: every edge is a verb with a distinct inverse and a stated
+//      domain and range, no generic association edge exists, every edge instance uses a
+//      declared type and resolves at both ends, EXACTLY ONE BARRIER MATCHES THE [Control]
+//      FORMULA when the formula is walked rather than read off a field, and every word that
+//      appears in a capability id has a node, a JSON file and a page of its own.
 //  12. THE DATA HOLDS TOGETHER: the promoted vocabulary resolves, the upstream bytes hash to
 //      what their manifest says, every profile row names a real capability and a real barrier,
 //      no mandate both wants and refuses the same thing, and EVERY STORED DELTA RECOMPUTES
@@ -101,11 +106,16 @@ if (!read(path.join(ROOT, 'llms.txt')).includes(VERSION)) {
     // A version without its commit cannot be verified later. The guidance says so directly.
     // A version that is not tagged YET cannot carry its own hash -- a release commit cannot
     // contain it -- so it has to say where the hash will come from instead. One of the two.
-    if (!det.commit && !det.commit_note) {
-      errors.push(`versions/${e.file} records neither a commit nor where one will come from`);
+    if (!det.commit && !(det.commit_resolves_by && det.commit_note)) {
+      errors.push(`versions/${e.file} records neither a commit nor how to resolve one`);
     }
     if (det.commit && !/^[0-9a-f]{40}$/.test(det.commit)) {
       errors.push(`versions/${e.file}: "${det.commit}" is not a commit hash`);
+    }
+    // The build must not read git: a checkout with tags and one without have to produce the
+    // same bytes, or the staleness check above fails on every release.
+    if (det.commit_resolves_by && det.commit_resolves_by !== `git rev-list -n 1 ${e.version}`) {
+      errors.push(`versions/${e.file}: commit_resolves_by does not name this version's tag`);
     }
     if (typeof det.reconstructed !== 'boolean') {
       errors.push(`versions/${e.file} does not say whether it was reconstructed`);
@@ -482,6 +492,111 @@ for (const f of files) {
   }
 }());
 
+// --- 13. the graph holds together -----------------------------------------
+// The ontology is the product now, so it gets a gate. Three things matter and each of them is
+// a claim the whole site is written against.
+(function () {
+  const D = path.join(ROOT, 'data');
+  const J = f => { try { return JSON.parse(read(path.join(D, f))); }
+                   catch (e) { errors.push(`data/${f}: ${e.message}`); return null; } };
+  const ev = J('graph/edges.json');
+  const nt = J('graph/node-types.json');
+  const nodes = J('graph/nodes.json');
+  const gr = J('graph/graph.json');
+  const lex = J('lexicon/index.json');
+  if (!ev || !nt || !nodes || !gr || !lex) return;
+
+  // (a) EVERY EDGE IS A VERB WITH A DISTINCT INVERSE, AND THE GENERIC EDGE IS BANNED.
+  // `connected_to` is the generic association edge under its published name. It is in the
+  // network's set as symmetric, and it is exactly the edge that constrains nothing and costs
+  // fan out, so this model may not use one.
+  const declared = new Map();
+  for (const e of ev.edges || []) {
+    for (const k of ['edge', 'inverse', 'domain', 'range', 'reads_as', 'inverse_reads_as', 'from']) {
+      if (!e[k]) errors.push(`data/graph/edges.json: ${e.edge || '(unnamed)'} has no ${k} -- a new edge needs a sentence, its inverse needs a DIFFERENT sentence, and both need a domain and a range`);
+    }
+    if (e.edge === e.inverse && e.edge !== 'similar_to') {
+      errors.push(`data/graph/edges.json: ${e.edge} is its own inverse. The inverse is not the same edge walked backwards: it has different fan out, and that asymmetry is what stops the graph exploding`);
+    }
+    if (e.reads_as && e.reads_as === e.inverse_reads_as) {
+      errors.push(`data/graph/edges.json: ${e.edge} and ${e.inverse} read as the same sentence, so one of them is not doing any work`);
+    }
+    if (/^(relates_to|related_to|associated_with|connected_to|links_to)$/.test(e.edge)) {
+      errors.push(`data/graph/edges.json: "${e.edge}" is a generic association edge. It is banned: it constrains nothing and costs fan out`);
+    }
+    declared.set(e.edge, e);
+  }
+  // Every edge INSTANCE uses a declared edge type. An undeclared edge is a vocabulary nobody
+  // agreed to, appearing in the data.
+  const used = new Set((gr.edges || []).map(e => e.edge));
+  for (const u of used) {
+    if (!declared.has(u)) errors.push(`data/graph/graph.json uses edge "${u}", which is not in the edge vocabulary`);
+  }
+  // Every edge instance resolves at both ends. A dangling edge is a path that cannot be walked.
+  const ids = new Set((nodes.nodes || []).map(n => n.id));
+  for (const e of gr.edges || []) {
+    if (!ids.has(e.from)) errors.push(`data/graph/graph.json: edge ${e.edge} starts at "${e.from}", which is not a node`);
+    if (!ids.has(e.to)) errors.push(`data/graph/graph.json: edge ${e.edge} ends at "${e.to}", which is not a node`);
+  }
+
+  // (b) EXACTLY ONE BARRIER IS A CONTROL, and it is the one enforced from outside the grant.
+  // This is the enforcer test, and every page on this site is written against it. It used to be
+  // a boolean field; it is now a formula, so the gate walks the formula rather than reading the
+  // field, which is the only version of this check worth having.
+  const enforcedBy = new Map((gr.edges || []).filter(e => e.edge === 'enforced_by').map(e => [e.from, e.to]));
+  const node = id => (nodes.nodes || []).find(n => n.id === id);
+  const barriers = (nodes.nodes || []).filter(n => n.type === 'Barrier');
+  const controls = barriers.filter(b => {
+    const enf = enforcedBy.get(b.id);
+    return enf && node(enf) && node(enf).inside_the_grant === false;
+  });
+  if (controls.length !== 1) {
+    errors.push(`data/graph: ${controls.length} barriers match [Control] := a [Barrier] `
+              + `-enforced_by-> an [Enforcer] the [Grant] does not include. Exactly one must. `
+              + `Every page on this site is written against that.`);
+  } else if (controls[0].id !== 'barrier/boundary') {
+    errors.push(`data/graph: the barrier matching [Control] is ${controls[0].id}, not barrier/boundary`);
+  }
+  // And the formula's own declared count has to agree with walking it.
+  const declaredControl = (nt.node_types || []).find(t => t.name === 'Control');
+  if (declaredControl && declaredControl.matched !== controls.length) {
+    errors.push(`data/graph/node-types.json says [Control] matched ${declaredControl.matched}, walking it gives ${controls.length} -- run build_pages.py`);
+  }
+
+  // (c) EVERY WORD IN THE GRAMMAR HAS AN ADDRESS. A node with no address cannot be argued with,
+  // and being argued with is the point of publishing a vocabulary.
+  const caps = J('capabilities.json');
+  if (caps) {
+    const want = {verbs: new Set(), objects: new Set(), reaches: new Set(), families: new Set()};
+    for (const c of caps.capabilities) {
+      want.verbs.add(c.verb); want.objects.add(c.object);
+      want.reaches.add(c.reach); want.families.add(c.family);
+    }
+    for (const [folder, set] of Object.entries(want)) {
+      const have = new Set(((lex[folder]) || []).map(r => r.label));
+      for (const w of set) {
+        if (!have.has(w)) errors.push(`data/lexicon: "${w}" appears in a capability id and has no node of its own`);
+        const f = path.join(D, 'lexicon', folder, `${w}.json`);
+        if (!fs.existsSync(f)) errors.push(`data/lexicon/${folder}/${w}.json does not exist`);
+        const page = path.join(ROOT, 'model', 'lexicon', folder, w, 'index.html');
+        if (!fs.existsSync(page)) errors.push(`model/lexicon/${folder}/${w}/index.html does not exist -- every word in the grammar gets a page`);
+      }
+      // A word with no capability under it is meaningless in this graph. That is allowed --
+      // the published grammar has two -- but it has to be DECLARED, so the gap is a recorded
+      // finding rather than something that crept in.
+      for (const h of have) {
+        if (set.has(h)) continue;
+        const rec = J(`lexicon/${folder}/${h}.json`);
+        if (!rec || rec.unused !== true || !rec.unused_note) {
+          errors.push(`data/lexicon/${folder}/${h}.json: no capability uses "${h}", so it is `
+                    + `meaningless in this graph. That is allowed, but it must be declared: set `
+                    + `unused and say why, so the gap is recorded rather than accidental`);
+        }
+      }
+    }
+  }
+}());
+
 // --- report ---------------------------------------------------------------
 if (errors.length) {
   console.error(`validate: ${errors.length} error(s)`);
@@ -492,4 +607,6 @@ console.log(`validate: OK -- ${VERSION} on ${HOST}, ${htmlFiles.length} pages, `
           + `${mdFiles.length} markdown files, links resolve, every page has a twin and is in `
           + `llms.txt, the version surface agrees with version.txt, no score vocabulary, no `
           + `forbidden word, no em dash outside the promoted data, the upstream bytes hash to `
-          + `their manifest, and every stored delta recomputes from its own inputs`);
+          + `their manifest, every stored delta recomputes from its own inputs, and the `
+          + `graph holds: every edge has a distinct inverse, exactly one barrier walks to `
+          + `[Control], and every word in the grammar has an address`);

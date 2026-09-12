@@ -2,7 +2,7 @@
 
 > Act in accounts with the credentials it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.2.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.3.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12,7 +12,21 @@ below point at them.*
 
 # `authenticate-as.credential.tenant`
 
-**Act in accounts with the credentials it holds.** Verb `authenticate-as`, object `credential`, reach `tenant`, family `identity`. Its effect is **no**: cannot be undone.
+**Act in accounts with the credentials it holds.** Its effect is **no**: cannot be undone.
+
+## What this id is made of
+
+**This is not a string.** It is [`authenticate-as`](../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../model/lexicon/reaches/tenant/index.md), three nodes joined by three edges, and each of them has an address, a page and a JSON file. Follow any of them and you get the query for that word rather than a definition of it.
+
+| Node | Edge | Reads as |
+|---|---|---|
+| [`authenticate-as`](../../../model/lexicon/verbs/authenticate-as/index.md) | `has_verb` | this capability has the verb `authenticate-as` |
+| [`credential`](../../../model/lexicon/objects/credential/index.md) | `acts_on` | this capability acts on `credential` |
+| [`tenant`](../../../model/lexicon/reaches/tenant/index.md) | `reaches` | this capability reaches `tenant` |
+| [`identity`](../../../model/lexicon/families/identity/index.md) | `in_family` | this capability is in the `identity` family |
+| [`no`](../../../model/undo/index.md) | `has_undo_class` | this capability has the undo class `no` |
+
+> **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `authenticate-as.credential.tenant` is emerges from the edges traceable from it. The strongest case is [`tenant`](../../../model/lexicon/reaches/tenant/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
 ## In 7 of 9 published shapes
 
