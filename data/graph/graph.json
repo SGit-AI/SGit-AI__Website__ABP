@@ -1,7 +1,7 @@
 {
   "type": "abp/graph-edges/v1",
   "_what_this_is": "Every edge instance, flat. Pair it with nodes.json to walk the graph.",
-  "count": 488,
+  "count": 658,
   "edges": [
     {
       "from": "barrier/expectation",
@@ -1807,6 +1807,856 @@
       "from": "granted/openai/chatgpt-web/default#read.file.project",
       "edge": "known_by",
       "to": "evidence/derived"
+    },
+    {
+      "from": "product/anthropic/claude-code-remote",
+      "edge": "has_variant",
+      "to": "shape/anthropic/claude-code-remote/ccr-container"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-code-remote/ccr-container#shell-bash"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-code-remote/ccr-container#fetch-webfetch"
+    },
+    {
+      "from": "shape/anthropic/claude-code-remote/ccr-container",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-code-remote/ccr-container#harness-mcp-and-built-in-tools"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.signing"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#harness-mcp-and-built-in-tools",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#fetch-webfetch",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#harness-mcp-and-built-in-tools",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.repository.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#harness-mcp-and-built-in-tools",
+      "edge": "exposes",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#harness-mcp-and-built-in-tools",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#harness-mcp-and-built-in-tools",
+      "edge": "exposes",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-code-remote/ccr-container#shell-bash",
+      "edge": "exposes",
+      "to": "capability/create.schedule.host"
+    },
+    {
+      "from": "product/anthropic/claude-code",
+      "edge": "has_variant",
+      "to": "shape/anthropic/claude-code/local-confirmations-off"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-code/local-confirmations-off#shell-bash"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-code/local-confirmations-off#files-read-edit-write"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-confirmations-off",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-code/local-confirmations-off#fetch-webfetch"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.signing"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#files-read-edit-write",
+      "edge": "exposes",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#files-read-edit-write",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#fetch-webfetch",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#files-read-edit-write",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#files-read-edit-write",
+      "edge": "exposes",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.repository.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/create.schedule.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#files-read-edit-write",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-confirmations-off#shell-bash",
+      "edge": "exposes",
+      "to": "capability/grant.credential.self"
+    },
+    {
+      "from": "product/anthropic/claude-code",
+      "edge": "has_variant",
+      "to": "shape/anthropic/claude-code/local-default"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-code/local-default#shell-bash"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-code/local-default#files-read-edit-write"
+    },
+    {
+      "from": "shape/anthropic/claude-code/local-default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-code/local-default#fetch-webfetch"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.signing"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#files-read-edit-write",
+      "edge": "exposes",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#files-read-edit-write",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#fetch-webfetch",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#files-read-edit-write",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#files-read-edit-write",
+      "edge": "exposes",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.repository.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/create.schedule.host"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#files-read-edit-write",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-code/local-default#shell-bash",
+      "edge": "exposes",
+      "to": "capability/grant.credential.self"
+    },
+    {
+      "from": "product/anthropic/claude-desktop",
+      "edge": "has_variant",
+      "to": "shape/anthropic/claude-desktop/default"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-desktop/default#conversation"
+    },
+    {
+      "from": "shape/anthropic/claude-desktop/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled",
+      "edge": "exposes",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled",
+      "edge": "exposes",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled",
+      "edge": "exposes",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled",
+      "edge": "exposes",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#conversation",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "tool/anthropic/claude-desktop/default#local-files-and-commands-when-enabled",
+      "edge": "exposes",
+      "to": "capability/grant.credential.self"
+    },
+    {
+      "from": "product/anthropic/claude-web",
+      "edge": "has_variant",
+      "to": "shape/anthropic/claude-web/connectors-on"
+    },
+    {
+      "from": "shape/anthropic/claude-web/connectors-on",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-web/connectors-on#conversation-and-uploads"
+    },
+    {
+      "from": "shape/anthropic/claude-web/connectors-on",
+      "edge": "runs_with",
+      "to": "tool/anthropic/claude-web/connectors-on#connectors"
+    },
+    {
+      "from": "tool/anthropic/claude-web/connectors-on#connectors",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-web/connectors-on#connectors",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/anthropic/claude-web/connectors-on#connectors",
+      "edge": "exposes",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-web/connectors-on#connectors",
+      "edge": "exposes",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "tool/anthropic/claude-web/connectors-on#conversation-and-uploads",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "product/generic/browser-extension",
+      "edge": "has_variant",
+      "to": "shape/generic/browser-extension/broad-host-permissions"
+    },
+    {
+      "from": "shape/generic/browser-extension/broad-host-permissions",
+      "edge": "runs_with",
+      "to": "tool/generic/browser-extension/broad-host-permissions#the-extension"
+    },
+    {
+      "from": "tool/generic/browser-extension/broad-host-permissions#the-extension",
+      "edge": "exposes",
+      "to": "capability/read.record.browsing"
+    },
+    {
+      "from": "tool/generic/browser-extension/broad-host-permissions#the-extension",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "tool/generic/browser-extension/broad-host-permissions#the-extension",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "product/generic/scheduled-job",
+      "edge": "has_variant",
+      "to": "shape/generic/scheduled-job/service-account"
+    },
+    {
+      "from": "shape/generic/scheduled-job/service-account",
+      "edge": "runs_with",
+      "to": "tool/generic/scheduled-job/service-account#the-job"
+    },
+    {
+      "from": "tool/generic/scheduled-job/service-account#the-job",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "tool/generic/scheduled-job/service-account#the-job",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/generic/scheduled-job/service-account#the-job",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "tool/generic/scheduled-job/service-account#the-job",
+      "edge": "exposes",
+      "to": "capability/write.budget.tenant"
+    },
+    {
+      "from": "tool/generic/scheduled-job/service-account#the-job",
+      "edge": "exposes",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "tool/generic/scheduled-job/service-account#the-job",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/generic/scheduled-job/service-account#the-job",
+      "edge": "exposes",
+      "to": "capability/create.schedule.host"
+    },
+    {
+      "from": "product/github/actions-runner",
+      "edge": "has_variant",
+      "to": "shape/github/actions-runner/ci"
+    },
+    {
+      "from": "shape/github/actions-runner/ci",
+      "edge": "runs_with",
+      "to": "tool/github/actions-runner/ci#the-job-s-shell"
+    },
+    {
+      "from": "tool/github/actions-runner/ci#the-job-s-shell",
+      "edge": "exposes",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "tool/github/actions-runner/ci#the-job-s-shell",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/github/actions-runner/ci#the-job-s-shell",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "tool/github/actions-runner/ci#the-job-s-shell",
+      "edge": "exposes",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "tool/github/actions-runner/ci#the-job-s-shell",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/github/actions-runner/ci#the-job-s-shell",
+      "edge": "exposes",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "tool/github/actions-runner/ci#the-job-s-shell",
+      "edge": "exposes",
+      "to": "capability/write.repository.project"
+    },
+    {
+      "from": "tool/github/actions-runner/ci#the-job-s-shell",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "product/openai/chatgpt-web",
+      "edge": "has_variant",
+      "to": "shape/openai/chatgpt-web/default"
+    },
+    {
+      "from": "shape/openai/chatgpt-web/default",
+      "edge": "runs_with",
+      "to": "tool/openai/chatgpt-web/default#conversation-and-uploads"
+    },
+    {
+      "from": "tool/openai/chatgpt-web/default#conversation-and-uploads",
+      "edge": "exposes",
+      "to": "capability/read.file.project"
+    },
+    {
+      "from": "setting/read.file.host",
+      "edge": "narrows",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "setting/read.file.host",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/write.file.host",
+      "edge": "narrows",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "setting/write.file.host",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/delete.file.host",
+      "edge": "narrows",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "setting/delete.file.host",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/execute.process.host",
+      "edge": "narrows",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "setting/execute.process.host",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/execute.process.host",
+      "edge": "moves",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "setting/send.endpoint.world",
+      "edge": "narrows",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "setting/send.endpoint.world",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/send.endpoint.allowed",
+      "edge": "narrows",
+      "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "setting/send.endpoint.allowed",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/read.credential.host",
+      "edge": "narrows",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "setting/read.credential.host",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/authenticate-as.credential.tenant",
+      "edge": "narrows",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "setting/authenticate-as.credential.tenant",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/authenticate-as.credential.signing",
+      "edge": "narrows",
+      "to": "capability/authenticate-as.credential.signing"
+    },
+    {
+      "from": "setting/authenticate-as.credential.signing",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/grant.credential.self",
+      "edge": "narrows",
+      "to": "capability/grant.credential.self"
+    },
+    {
+      "from": "setting/grant.credential.self",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/write.repository.tenant",
+      "edge": "narrows",
+      "to": "capability/write.repository.tenant"
+    },
+    {
+      "from": "setting/write.repository.tenant",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/write.repository.tenant",
+      "edge": "moves",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "setting/create.record.world",
+      "edge": "narrows",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "setting/create.record.world",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/send.message.world",
+      "edge": "narrows",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "setting/send.message.world",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/read.message.tenant",
+      "edge": "narrows",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "setting/read.message.tenant",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/write.budget.tenant",
+      "edge": "narrows",
+      "to": "capability/write.budget.tenant"
+    },
+    {
+      "from": "setting/write.budget.tenant",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/create.schedule.host",
+      "edge": "narrows",
+      "to": "capability/create.schedule.host"
+    },
+    {
+      "from": "setting/create.schedule.host",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/read.record.history",
+      "edge": "narrows",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "setting/read.record.history",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/execute.process.self",
+      "edge": "narrows",
+      "to": "capability/execute.process.self"
+    },
+    {
+      "from": "setting/execute.process.self",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/write.file.project",
+      "edge": "narrows",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "setting/write.file.project",
+      "edge": "moves",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "setting/read.record.browsing",
+      "edge": "narrows",
+      "to": "capability/read.record.browsing"
+    },
+    {
+      "from": "setting/read.record.browsing",
+      "edge": "moves",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "setting/anthropic/claude-code/local-confirmations-off~local-default",
+      "edge": "narrows",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "setting/anthropic/claude-code/local-confirmations-off~local-default",
+      "edge": "moves",
+      "to": "barrier/none"
+    },
+    {
+      "from": "setting/anthropic/claude-code/local-confirmations-off~local-default",
+      "edge": "moves",
+      "to": "barrier/setting"
     },
     {
       "from": "mandate/coding-assistant-on-my-machine",

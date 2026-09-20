@@ -381,6 +381,11 @@ for (const f of files) {
       // Every row carries whether anything is actually in the way. A row without it would
       // render a prohibition with no barrier, which manufactures assurance.
       if (typeof r.is_bounded !== 'boolean') errors.push(`data/${e.file}: ${r.capability} does not say whether it is bounded`);
+      // Whose material: this site's own property, null where nobody has stated it and never
+      // guessed. A value outside the declared set is a word, not a value.
+      if (r.material != null && !['own', 'organisation', 'third_party', 'mixed'].includes(r.material)) {
+        errors.push(`data/${e.file}: ${r.capability} says material "${r.material}", which is not own, organisation, third_party or mixed`);
+      }
       if (r.is_bounded !== (r.barrier === 'boundary')) {
         errors.push(`data/${e.file}: ${r.capability} says is_bounded ${r.is_bounded} at barrier "${r.barrier}"`);
       }

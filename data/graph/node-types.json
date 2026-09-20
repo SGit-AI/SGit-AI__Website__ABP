@@ -3,7 +3,7 @@
   "_what_this_is": "A node type is a REQUIRED PATTERN OF TYPED, DIRECTED PATHS that a node either matches or does not. It is not a label somebody applied. The content of a node does not decide its type; its paths do.",
   "judgment": "Judgment does not disappear. Somebody still decided that a control must be enforced from outside the grant. What changes is where that decision lives: out of a classifier's head and into a formula that is visible, versioned, inspectable and arguable.",
   "not_a_node": "A score is not a node and there is no edge to one. Not a rating, not a risk level, not a severity. Adding one would not be a modelling choice, it would be a verdict, and the same ABP is dangerous in one deployment and harmless in the next. The risk work above this holds the assets, and that is where a score can exist.",
-  "count": 13,
+  "count": 16,
   "universes": "Each type names the universe it belongs to, which is a modelling decision made once in universes.py and checked by the gate: a type with no universe is a node nobody owns.",
   "node_types": [
     {
@@ -109,6 +109,30 @@
       "note": null,
       "universe": "u6",
       "matched": 2
+    },
+    {
+      "name": "Product",
+      "is": "A vendor's product, which is not a shape.",
+      "formula": "[Product] := a node that -has_variant-> at least one [DeploymentShape]",
+      "note": "The ABP is about the deployment, not the product. A product is the node two shapes share when they differ by one setting, and nothing on this site is a claim about one.",
+      "universe": "u2",
+      "matched": 8
+    },
+    {
+      "name": "Tool",
+      "is": "What a shape reaches a capability through.",
+      "formula": "[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]",
+      "note": "In the vendor's own words: shell (Bash), the assistant's Gmail connector, REST API: workflows. A tool that exposes nothing is a name and not a node here.",
+      "universe": "u2",
+      "matched": 17
+    },
+    {
+      "name": "Setting",
+      "is": "What moves a barrier.",
+      "formula": "[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]",
+      "note": "Two kinds today, both from published data: the reduction the map publishes per capability, and the setting that distinguishes two variants of one product, derived by diffing their grants. The confirmations flag is the second kind.",
+      "universe": "u2",
+      "matched": 21
     }
   ],
   "provenance": {

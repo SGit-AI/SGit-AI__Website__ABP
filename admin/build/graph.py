@@ -45,6 +45,7 @@ query: this verb's primitives, this reach class's capabilities, this shape's gra
 map of everything and there will not be one.
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -136,6 +137,31 @@ EDGES = [
      "this granted capability is known by observation",
      "observation evidences these granted capabilities",
      "proposed here"),
+    # THE DEPLOYMENT SHAPE UNIVERSE, v0.4.3. A shape used to carry its tools as strings and
+    # nothing about what distinguishes one variant of a product from another. Now the product,
+    # the tool a capability is reached through, and the setting that moves a barrier are nodes,
+    # so that `the confirmations flag moves one barrier and not one number` is a path rather
+    # than a sentence on the home page.
+    ("has_variant", "variant_of", "Product", "DeploymentShape",
+     "this product has this variant",
+     "this variant is a variant of this product",
+     "proposed here"),
+    ("runs_with", "run_by", "DeploymentShape", "Tool",
+     "this shape runs with this tool",
+     "this tool is run by these shapes",
+     "proposed here"),
+    ("exposes", "exposed_by", "Tool", "Capability",
+     "this tool exposes this capability",
+     "this capability is exposed by these tools",
+     "graphs.sgit.ai edge set"),
+    ("moves", "moved_by", "Setting", "Barrier",
+     "this setting moves a capability to this barrier",
+     "this barrier is where these settings move a capability to",
+     "proposed here"),
+    ("narrows", "narrowed_by", "Setting", "Capability",
+     "this setting narrows this capability",
+     "this capability is narrowed by these settings",
+     "proposed here"),
 ]
 
 # ---------------------------------------------------------------------------
@@ -197,6 +223,22 @@ NODE_TYPES = [
     ("Shortfall", "Asked for and cannot.",
      "[Shortfall] := a [Capability] that a [Mandate] -authorises-> and no [DeploymentShape] in "
      "scope -grants->", None),
+    # the deployment shape universe
+    ("Product", "A vendor's product, which is not a shape.",
+     "[Product] := a node that -has_variant-> at least one [DeploymentShape]",
+     "The ABP is about the deployment, not the product. A product is the node two shapes "
+     "share when they differ by one setting, and nothing on this site is a claim about one."),
+    ("Tool", "What a shape reaches a capability through.",
+     "[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one "
+     "[Capability]",
+     "In the vendor's own words: shell (Bash), the assistant's Gmail connector, REST API: "
+     "workflows. A tool that exposes nothing is a name and not a node here."),
+    ("Setting", "What moves a barrier.",
+     "[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at "
+     "least one [Barrier]",
+     "Two kinds today, both from published data: the reduction the map publishes per "
+     "capability, and the setting that distinguishes two variants of one product, derived by "
+     "diffing their grants. The confirmations flag is the second kind."),
 ]
 
 # The one thing in the model that is not a node and must not become one. Stated here because a
@@ -307,6 +349,60 @@ def build(D):
                 nodes[f"reach/{rn}"].setdefault("named_by", []).append(
                     {"shape": pid, "means": meaning})
 
+    # --- the deployment shape universe: products, tools, settings ----------------
+    # A product is the two segments of a shape id that are not the variant. Two shapes with
+    # the same product are the same thing in a different setting, which is the argument.
+    by_product = {}
+    for pid, p in D["profiles"].items():
+        prod = "/".join(pid.split("/")[:2])
+        by_product.setdefault(prod, []).append(pid)
+        node(f"product/{prod}", "Product", p["product"].split(" (")[0], vendor=p.get("vendor"))
+        edge(f"product/{prod}", "has_variant", f"shape/{pid}")
+        # The tools, in the vendor's words, one node per shape: the same string in two shapes
+        # is two exposures, because what `shell (Bash)` reaches depends on where it runs.
+        tools = {}
+        for t in p.get("tools", []):
+            tid = f"tool/{pid}#{_slug(t)}"
+            tools[t] = node(tid, "Tool", t, shape=pid)
+            edge(f"shape/{pid}", "runs_with", tid)
+        for r in p["grant"]:
+            for v in r.get("via") or []:
+                if v not in tools:
+                    tid = f"tool/{pid}#{_slug(v)}"
+                    tools[v] = node(tid, "Tool", v, shape=pid)
+                    edge(f"shape/{pid}", "runs_with", tid)
+                edge(tools[v], "exposes", f"capability/{r['capability']}")
+    # The reductions the map publishes: for each capability, the setting that narrows it and
+    # the barrier it moves to. A reduction that says `none` is not a setting.
+    for cap, red in D["reductions"].items():
+        if not red.get("setting") or red["setting"].startswith("none") \
+                or f"capability/{cap}" not in nodes:
+            continue
+        sid = node(f"setting/{cap}", "Setting", red["setting"], costs=red.get("costs"),
+                   tier_after=red.get("tier_after"), kind="published reduction")
+        edge(sid, "narrows", f"capability/{cap}")
+        for b in sorted(set(re.findall(r"\b(none|expectation|setting|boundary)\b",
+                                       red.get("tier_after") or ""))):
+            edge(sid, "moves", f"barrier/{b}")
+    # The setting that distinguishes two variants of one product: derived by diffing their
+    # grants. Whatever moved between them is what the setting moves.
+    for prod, pids in by_product.items():
+        for i, a in enumerate(sorted(pids)):
+            for b in sorted(pids)[i + 1:]:
+                ga = {r["capability"]: r["barrier"] for r in D["profiles"][a]["grant"]}
+                gb = {r["capability"]: r["barrier"] for r in D["profiles"][b]["grant"]}
+                moved = sorted(c for c in ga if c in gb and ga[c] != gb[c])
+                if not moved:
+                    continue
+                va, vb = a.split("/")[-1], b.split("/")[-1]
+                sid = node(f"setting/{prod}/{va}~{vb}", "Setting",
+                           f"the setting that distinguishes {va} from {vb}",
+                           kind="variant difference", between=[a, b])
+                for c in moved:
+                    edge(sid, "narrows", f"capability/{c}")
+                    edge(sid, "moves", f"barrier/{ga[c]}")
+                    edge(sid, "moves", f"barrier/{gb[c]}")
+
     # --- the mandates --------------------------------------------------------
     for mid, m in D["mandates"].items():
         nid = f"mandate/{mid}"
@@ -367,7 +463,21 @@ def classify(g):
     controls = set(out["Control"])
     out["UnboundedExcess"] = [x for x in out["Excess"] if bounded.get(x) not in controls]
     out["Shortfall"] = sorted({e["to"] for e in g["edges"] if e["edge"] == "falls_short_of"})
+
+    # the deployment shape universe
+    has_variant = {e["from"] for e in g["edges"] if e["edge"] == "has_variant"}
+    out["Product"] = [n["id"] for n in by_type("Product") if n["id"] in has_variant]
+    run_by = {e["to"] for e in g["edges"] if e["edge"] == "runs_with"}
+    exposes = {e["from"] for e in g["edges"] if e["edge"] == "exposes"}
+    out["Tool"] = [n["id"] for n in by_type("Tool") if n["id"] in run_by and n["id"] in exposes]
+    narrows = {e["from"] for e in g["edges"] if e["edge"] == "narrows"}
+    moves = {e["from"] for e in g["edges"] if e["edge"] == "moves"}
+    out["Setting"] = [n["id"] for n in by_type("Setting") if n["id"] in narrows and n["id"] in moves]
     return out
+
+
+def _slug(s):
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
 def out_edges(g, node_id, verb=None):

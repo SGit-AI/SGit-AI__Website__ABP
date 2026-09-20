@@ -37,6 +37,7 @@
       ],
       "control": null,
       "note": "the runner's user with passwordless escalation: every file on the ephemeral machine",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -49,6 +50,7 @@
       ],
       "control": null,
       "note": "the runner's user with passwordless escalation: every file on the ephemeral machine",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -61,6 +63,7 @@
       ],
       "control": null,
       "note": "github.com 200, pypi.org 200, example.com 200 — UNRESTRICTED egress, no proxy",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -73,6 +76,7 @@
       ],
       "control": null,
       "note": "runs as uid 1001; passwordless escalation available (n1a) — programs run as this user and can escalate",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -85,6 +89,7 @@
       ],
       "control": null,
       "note": "the runner's user with passwordless escalation: every file on the ephemeral machine",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -97,6 +102,7 @@
       ],
       "control": null,
       "note": "the checked-out tree at this ref is writable by the job",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -109,6 +115,7 @@
       ],
       "control": "the checkout is writable, but the token is contents:read, so nothing written can leave",
       "note": "the checked-out tree at this ref is writable by the job",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": true
     },
@@ -121,6 +128,7 @@
       ],
       "control": null,
       "note": "the checked-out tree at this ref is readable — including anything a contributor committed by mistake",
+      "material": null,
       "undo": "yes",
       "is_bounded": false
     }

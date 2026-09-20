@@ -49,6 +49,7 @@
       ],
       "control": null,
       "note": "commits are signed with the session's own key, registered as an agent identity in this site's registry (sha256-f9facb4c94da6c19) — not with yours",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -61,6 +62,7 @@
       ],
       "control": null,
       "note": "anything in the container, including the clone; irreversible for the container, and the container is disposable",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -73,6 +75,7 @@
       ],
       "control": null,
       "note": "the credential-shaped paths present are the SESSION'S OWN: its commit-signing key and its vault keystore. No user credential is in the container; presence cannot tell whose a key is, so this is the operator's account",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -85,6 +88,7 @@
       ],
       "control": null,
       "note": "any file in the container — the attached clone, the harness's state, the system. Not your machine's files (the assess tree's 'home: boundary')",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -97,6 +101,7 @@
       ],
       "control": null,
       "note": "the harness's project directory holds this session's own earlier tool outputs; no user shell history exists here",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -110,6 +115,7 @@
       ],
       "control": "the token's scope, set by the platform (in-scope repositories only)",
       "note": "five key-shaped variables and a code-host token — the platform's, scoped to in-scope repositories; it acts as the platform's app, never as you",
+      "material": null,
       "undo": "no",
       "is_bounded": true
     },
@@ -124,6 +130,7 @@
       ],
       "control": "a mandatory egress proxy configured above this process — hosts it refuses are refused with a 403 on the CONNECT; the six hosts probed on 5 September all answered",
       "note": "six of six probed hosts answered through the proxy; a sibling container measured on 4 September had three refused: same product, two policies",
+      "material": null,
       "undo": "no",
       "is_bounded": true
     },
@@ -136,6 +143,7 @@
       ],
       "control": null,
       "note": "root inside the container: every process and file IN THE CONTAINER. The container is the host; your machine is not reachable",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -148,6 +156,7 @@
       ],
       "control": null,
       "note": "a zero-byte file was created and removed in /etc: system configuration of the container is writable",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -160,6 +169,7 @@
       ],
       "control": null,
       "note": "the attached working tree is writable",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -172,6 +182,7 @@
       ],
       "control": null,
       "note": "a repository is attached and writable",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -185,6 +196,7 @@
       ],
       "control": "pre-commit and pre-push hooks in the clone (the mandate hook and the insurance policy) — refuse by exit code, --no-verify passes; no branch rule at the host",
       "note": "the attached repository only (any branch it can reach); branch discipline is the clone's hooks, a setting; no rule at the host",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -198,6 +210,7 @@
       ],
       "control": null,
       "note": "the attached working tree is readable",
+      "material": null,
       "undo": "yes",
       "is_bounded": false
     },
@@ -210,6 +223,7 @@
       ],
       "control": "the platform's routines are the operator's to list and delete",
       "note": "a routine or a scheduled trigger resumes this session or spawns another later: it outlives the container",
+      "material": null,
       "undo": "yes",
       "is_bounded": false
     },
@@ -222,6 +236,7 @@
       ],
       "control": "the container is ephemeral: whatever is scheduled here dies with it",
       "note": "systemctl and /etc/cron.d exist, so a cron can be written — and dies with the container; the real scheduler is the platform's routines, on the harness row",
+      "material": null,
       "undo": "yes",
       "is_bounded": true
     }

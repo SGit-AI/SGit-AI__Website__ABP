@@ -28,6 +28,7 @@
       ],
       "control": null,
       "note": "if commit signing is configured for the account, the agent signs as you",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -40,6 +41,7 @@
       ],
       "control": null,
       "note": "inferred from the credentials the account holds",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -52,6 +54,7 @@
       ],
       "control": null,
       "note": "if a registry token is in the home directory",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -65,6 +68,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -77,6 +81,7 @@
       ],
       "control": null,
       "note": "a published read-only audit tool enumerates exactly this class in a home directory",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -90,6 +95,7 @@
       ],
       "control": null,
       "note": "everything your account can read, because a shell as you reads as you",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -102,6 +108,7 @@
       ],
       "control": null,
       "note": "shell history and the harness's own transcripts",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -115,6 +122,7 @@
       ],
       "control": null,
       "note": "curl reaches the world unless something above the account stops it",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -127,6 +135,7 @@
       ],
       "control": "none — confirmations disabled; the tool runs whatever it decides to run",
       "note": null,
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -140,6 +149,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -153,6 +163,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -165,6 +176,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -177,6 +189,7 @@
       ],
       "control": "branch discipline in prose, if any",
       "note": null,
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -189,6 +202,7 @@
       ],
       "control": null,
       "note": "a shell as you can write a crontab",
+      "material": null,
       "undo": "yes",
       "is_bounded": false
     },
@@ -202,6 +216,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "yes",
       "is_bounded": false
     },
@@ -214,6 +229,7 @@
       ],
       "control": "the settings file is owned by the same account",
       "note": "anything running as you can rewrite the file that turns the prompt off",
+      "material": null,
       "undo": "yes",
       "is_bounded": false
     }

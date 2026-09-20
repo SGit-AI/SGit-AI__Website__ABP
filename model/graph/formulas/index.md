@@ -2,7 +2,7 @@
 
 > A node type is a required pattern of typed, directed paths that a node either matches or does not. Not a label somebody applied. Run against the graph on every build.
 
-*Source: <https://abp.sgit.ai/model/graph/formulas/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/formulas/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -31,6 +31,9 @@ below point at them.*
 | **Excess** | The finding. | `[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope` | 53 |
 | **UnboundedExcess** | The business case. | `[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]` | 48 |
 | **Shortfall** | Asked for and cannot. | `[Shortfall] := a [Capability] that a [Mandate] -authorises-> and no [DeploymentShape] in scope -grants->` | 2 |
+| **Product** | A vendor's product, which is not a shape. | `[Product] := a node that -has_variant-> at least one [DeploymentShape]` | 8 |
+| **Tool** | What a shape reaches a capability through. | `[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]` | 17 |
+| **Setting** | What moves a barrier. | `[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]` | 21 |
 
 ## The one that carries the argument
 

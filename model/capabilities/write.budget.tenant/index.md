@@ -2,7 +2,7 @@
 
 > Spend money or tokens against an account it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.budget.tenant/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.budget.tenant/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -57,7 +57,7 @@ below point at them.*
 |---|---|---|
 | a spend cap at the supplier, set by somebody other than the agent - the supplier has a reason to refuse: it is paying | the work stops when the cap is reached, which is the point | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/write.budget.tenant`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 

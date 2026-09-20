@@ -2,7 +2,7 @@
 
 > The Agent Behaviour Policy: what your agent can do, what you authorised it to do, the gap between them, and what actually stands in the way.
 
-Site version: v0.4.2. Generated from the same content as the HTML pages, so
+Site version: v0.4.3. Generated from the same content as the HTML pages, so
 this file cannot disagree with them.
 
 
@@ -14,7 +14,7 @@ this file cannot disagree with them.
 
 > You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.
 
-*Source: <https://abp.sgit.ai/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -133,7 +133,7 @@ The argument, the model, the examples and the data are published here. **There i
 
 > The foundation document: the definition of the Agent Behaviour Policy, the four objects, the barrier as the test of whether anything is in the way, the rule that it never judges, and the questions we are asking.
 
-*Source: <https://abp.sgit.ai/what-is-an-abp/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/what-is-an-abp/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -370,7 +370,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The four objects an ABP is made of, the grammar they are written in, the barrier that decides whether anything is in the way, and the graph rules that govern all of it.
 
-*Source: <https://abp.sgit.ai/model/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -449,7 +449,7 @@ Each states which rows were measured and which derived.
 
 > verb.object.reach: 23 capability primitives, each with its reach and the undo class of its effect. The action vocabulary for everything else on this site.
 
-*Source: <https://abp.sgit.ai/model/capabilities/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -528,7 +528,7 @@ below point at them.*
 
 > Read the project it is working on. Reach project, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.file.project/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.file.project/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -589,7 +589,7 @@ below point at them.*
 |---|---|---|
 | none: this is what it is for | nothing | none |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/read.file.project`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -606,7 +606,7 @@ below point at them.*
 
 > Change the project it is working on. Reach project, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.file.project/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.file.project/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -665,7 +665,7 @@ below point at them.*
 |---|---|---|
 | a review before merge | a reviewer's time | setting |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/write.file.project`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -682,7 +682,7 @@ below point at them.*
 
 > Read any file the account can reach. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -743,7 +743,7 @@ below point at them.*
 |---|---|---|
 | run the agent in a container with only the project mounted, or under a separate user account | an afternoon, then ongoing friction (container) · days, and it fights you (account) | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/read.file.host`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -760,7 +760,7 @@ below point at them.*
 
 > Change any file the account can reach. Reach host, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.file.host/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.file.host/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -820,7 +820,7 @@ below point at them.*
 |---|---|---|
 | the same container or account; the tool's own directory restriction is a setting anything running as you can step around | as above | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/write.file.host`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -837,7 +837,7 @@ below point at them.*
 
 > Delete files anywhere the account can reach. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/delete.file.host/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/delete.file.host/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -895,7 +895,7 @@ below point at them.*
 |---|---|---|
 | the same container or account; and a backup that the agent cannot reach, because delete at host reach is irreversible | as above, plus a backup outside the grant | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/delete.file.host`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -912,7 +912,7 @@ below point at them.*
 
 > Run programs as the account. Reach host, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/execute.process.host/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/execute.process.host/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -972,7 +972,7 @@ below point at them.*
 |---|---|---|
 | keep the confirmation prompt on for commands, and run in a container: execution survives inside it and stops being execution on your machine | a click per command · an afternoon for the container | setting (prompt) · boundary (container) |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/execute.process.host`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -989,7 +989,7 @@ below point at them.*
 
 > Run programs inside its own sandbox only. Reach self, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/execute.process.self/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/execute.process.self/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1042,7 +1042,7 @@ No published shape in this set has it.
 |---|---|---|
 | already a sandbox; keep it one | nothing | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/execute.process.self`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1059,7 +1059,7 @@ No published shape in this set has it.
 
 > Reach a permitted list of hosts. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.allowed/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.allowed/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1114,7 +1114,7 @@ below point at them.*
 |---|---|---|
 | shorten the list; a host it does not need is a host it can reach | minutes per host, and a failure the first time it needs one you removed | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/send.endpoint.allowed`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1131,7 +1131,7 @@ below point at them.*
 
 > Reach any host on the internet. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.world/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.world/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1191,7 +1191,7 @@ below point at them.*
 |---|---|---|
 | route outbound traffic through an allow-list - the one control the hosted container already has, demonstrated rather than claimed | an hour, if you already have somewhere to put it | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/send.endpoint.world`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1208,7 +1208,7 @@ below point at them.*
 
 > Read credentials stored where it runs. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.credential.host/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.credential.host/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1266,7 +1266,7 @@ below point at them.*
 |---|---|---|
 | keep credentials out of the account the agent runs as: a credential helper, a separate account, or a container without your home mounted | an afternoon, and re-authenticating where the agent needs a credential of its own | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/read.credential.host`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1283,7 +1283,7 @@ below point at them.*
 
 > Act in accounts with the credentials it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1344,7 +1344,7 @@ below point at them.*
 |---|---|---|
 | scoped, short-lived tokens issued to the agent rather than your own; read-only where read is all it needs | an hour per service, and rotation | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/authenticate-as.credential.tenant`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1361,7 +1361,7 @@ below point at them.*
 
 > Change its own permission settings. Reach self, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/grant.credential.self/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/grant.credential.self/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1418,7 +1418,7 @@ below point at them.*
 |---|---|---|
 | settings owned by a different user than the one the agent runs as, or set above the session by the platform | minutes, if the platform supports it; otherwise the separate account | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/grant.credential.self`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1435,7 +1435,7 @@ below point at them.*
 
 > Send a message to anyone. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.message.world/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.message.world/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1488,7 +1488,7 @@ No published shape in this set has it.
 |---|---|---|
 | no mail or chat connector, or a connector that drafts and never sends | you press send | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/send.message.world`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1505,7 +1505,7 @@ No published shape in this set has it.
 
 > Read mail or chat it is connected to. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1560,7 +1560,7 @@ below point at them.*
 |---|---|---|
 | a connector scoped to one folder or label, or none | the agent answers about less | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/read.message.tenant`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1577,7 +1577,7 @@ below point at them.*
 
 > Commit to the repository it was pointed at. Reach project, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.repository.project/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.repository.project/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1635,7 +1635,7 @@ below point at them.*
 |---|---|---|
 | none needed for most work; a review before merge is the control | a reviewer's time | setting |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/write.repository.project`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1652,7 +1652,7 @@ below point at them.*
 
 > Push to a code host (any branch it can reach). Reach tenant, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.repository.tenant/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.repository.tenant/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1710,7 +1710,7 @@ below point at them.*
 |---|---|---|
 | a branch protection rule at the host - the agent cannot edit it - and a pre-push hook in the clone for the earlier, cheaper refusal | minutes; and a review step before anything deploys | boundary (host rule) · setting (hook) |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/write.repository.tenant`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1727,7 +1727,7 @@ below point at them.*
 
 > Sign commits with the key it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.signing/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.signing/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1784,7 +1784,7 @@ below point at them.*
 |---|---|---|
 | a signing key of the agent's own, so its commits are signed as it and not as you (the registry's identity records exist for this) | an hour, and a second key to manage | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/authenticate-as.credential.signing`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1801,7 +1801,7 @@ below point at them.*
 
 > Publish packages, images or pages under the name it holds. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.record.world/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.record.world/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1857,7 +1857,7 @@ below point at them.*
 |---|---|---|
 | no publishing token in the agent's environment; publish from CI with a token the agent does not hold | an afternoon to move the publish step | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/create.record.world`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1874,7 +1874,7 @@ below point at them.*
 
 > Spend money or tokens against an account it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.budget.tenant/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.budget.tenant/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1929,7 +1929,7 @@ below point at them.*
 |---|---|---|
 | a spend cap at the supplier, set by somebody other than the agent - the supplier has a reason to refuse: it is paying | the work stops when the cap is reached, which is the point | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/write.budget.tenant`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -1946,7 +1946,7 @@ below point at them.*
 
 > Create something that outlives the turn where it runs (a cron, a service). Reach host, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.host/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.host/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2004,7 +2004,7 @@ below point at them.*
 |---|---|---|
 | no scheduler in the agent's environment; anything that outlives the turn goes through a person | you create the routine | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/create.schedule.host`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -2021,7 +2021,7 @@ below point at them.*
 
 > Read a retained record: shell history, past sessions. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2079,7 +2079,7 @@ below point at them.*
 |---|---|---|
 | history off, or a fresh environment per task, so the grant is a tree over the present rather than a union over every prior turn | the agent forgets between tasks | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/read.record.history`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -2096,7 +2096,7 @@ below point at them.*
 
 > Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session). Reach tenant, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.tenant/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.tenant/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2160,7 +2160,7 @@ below point at them.*
 
 > Read every page you visit. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.record.browsing/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.record.browsing/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2215,7 +2215,7 @@ below point at them.*
 |---|---|---|
 | grant the extension access on click, or on a list of sites, instead of on all sites; remove the ones you do not use | a click the first time on each site | boundary |
 
-> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess.
+> **This is a published reduction, not a recommendation.** Whether it is worth doing depends on the assets and the consequences, which are not in this document and are not this site's to guess. Since v0.4.3 it is also a node, `setting/read.record.browsing`, in [the deployment shape universe](../../../model/universes/u2/index.md): it **narrows** this capability and **moves** it to the barrier named in the third column, which is the path the prohibitions table's last column is a projection of.
 
 [The capability grammar](../../../model/capabilities/index.md) · [This primitive as JSON](../../../data/capabilities.json)
 
@@ -2232,7 +2232,7 @@ below point at them.*
 
 > Four kinds of thing that can stand between an agent and a capability, and only the fourth bounds anything. The enforcer test, which this estate published as a glyph before it named it as a rule.
 
-*Source: <https://abp.sgit.ai/model/barriers/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/barriers/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2284,7 +2284,7 @@ The glyph system on [the published map](https://what-can-it-do.games.sgit.ai/map
 
 > Three classes of reversibility, the ordering on every rendering this site produces, and the one column that is not fully context free.
 
-*Source: <https://abp.sgit.ai/model/undo/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/undo/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2327,7 +2327,7 @@ An ABP that lists prohibitions alphabetically has buried the only ones that matt
 
 > Derived and never authored: stored with the versions of its inputs, recomputed when either moves, and never edited by hand. Reality is the third input, the history is the business case, and there are three clocks.
 
-*Source: <https://abp.sgit.ai/model/delta/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/delta/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2493,7 +2493,7 @@ The market has a word for a related phenomenon and it is drift. Products announc
 
 > The five published graph rules, what they force on this model, and the sentence test that decides whether the edges are right.
 
-*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2518,7 +2518,7 @@ An ABP is a graph and every document is a projection of it. The five rules that 
 | Address | What is there |
 |---|---|
 | [The lexicon](../../model/lexicon/index.md) | Every word the grammar is spelled with, as a node with its own address. `read.file.project` is three nodes and three edges. |
-| [The edge vocabulary](../../model/graph/edges/index.md) | 15 edges, each a verb with a distinct inverse, a stated domain and range. No generic association edge. |
+| [The edge vocabulary](../../model/graph/edges/index.md) | 20 edges, each a verb with a distinct inverse, a stated domain and range. No generic association edge. |
 | [The node type formulas](../../model/graph/formulas/index.md) | Classification as a required path pattern, run on every build, rather than a label somebody applied. |
 | [The three layers](../../model/graph/layers/index.md) | How a customer vault disagrees with this vocabulary without merging anything. |
 | [The nine universes](../../docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.md) | The map of the ABP onto Fractal Semantic Graphs: one capability row crosses nine universes, each with its own owner and ontology, joined by named edges. A brief at v0.4.0; the universes land one per release after it. |
@@ -2559,7 +2559,7 @@ The W3C has had a rights expression vocabulary since 2018: a policy carries perm
 
 > What is in the published files, what this site added to the data it promoted, and the two rules a consumer and a contributor each have to follow.
 
-*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2595,7 +2595,7 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 
 ## The two rules
 
-> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.4.2`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
+> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.4.3`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
 
 > **A proposal carries evidence.** Every node taken from a third party site carries a source URL, a retrieval timestamp and a content hash. A proposal that changes a capability row without one is an assertion, and this site publishes capability claims about named commercial products.
 
@@ -2614,7 +2614,7 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 
 > An Agent Behaviour Policy for chatGPT (in the browser, no connectors): a grant of 1, a mandate of 1, an excess of 0 and an unbounded excess of 0. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2761,7 +2761,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for claude Code (the CLI, on your own machine): a grant of 16, a mandate of 5, an excess of 12 and an unbounded excess of 12. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2935,7 +2935,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for claude Code (the CLI, on your own machine): a grant of 16, a mandate of 5, an excess of 12 and an unbounded excess of 12. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3109,7 +3109,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for A browser extension with broad host permissions: a grant of 3, a mandate of 1, an excess of 2 and an unbounded excess of 2. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3264,7 +3264,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for actions runner (a hosted CI job): a grant of 8, a mandate of 5, an excess of 4 and an unbounded excess of 3. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3428,7 +3428,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > Five Agent Behaviour Policies, one per deployment shape, derived from published data rather than authored. Each states which of its rows were measured and which were derived, and none carries a score.
 
-*Source: <https://abp.sgit.ai/examples/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3493,7 +3493,7 @@ Nobody knows what an ABP costs to produce, and the store has to price one. So th
 
 > The capabilities, barriers, undo classes, deployment shapes and mandates an ABP is written in, as JSON at stable addresses with cross origin access, with the source bytes they were promoted from.
 
-*Source: <https://abp.sgit.ai/data/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/data/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3505,7 +3505,7 @@ below point at them.*
 
 The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4 barriers**, **3 undo classes**, **9 deployment shapes** and **8 starting mandates**, at stable addresses with cross origin access.
 
-> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.4.2`.
+> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.4.3`.
 
 ## Where it came from, and what that obliges
 
@@ -3587,7 +3587,7 @@ The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4
 
 > Every word in the capability grammar as a node with its own address, its own JSON and its own page: ten verbs, nine object classes, five reach classes and nine families.
 
-*Source: <https://abp.sgit.ai/model/lexicon/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3636,8 +3636,8 @@ below point at them.*
 
 | Address | What is there |
 |---|---|
-| [The edge vocabulary](../../model/graph/edges/index.md) | 15 edges, each a verb with a distinct inverse, a stated domain and range, and where it came from. The generic association edge is banned and there is none in this model. |
-| [The node type formulas](../../model/graph/formulas/index.md) | 13 node types, each a required pattern of paths rather than a label. Run against the graph on every build. |
+| [The edge vocabulary](../../model/graph/edges/index.md) | 20 edges, each a verb with a distinct inverse, a stated domain and range, and where it came from. The generic association edge is banned and there is none in this model. |
+| [The node type formulas](../../model/graph/formulas/index.md) | 16 node types, each a required pattern of paths rather than a label. Run against the graph on every build. |
 | [The three layers](../../model/graph/layers/index.md) | How a vault extends this vocabulary for one customer without merging anything, and without asking permission. |
 | [The graph rules](../../model/graph/index.md) | The five published rules and what each forces on this model. |
 
@@ -3656,7 +3656,7 @@ below point at them.*
 
 > The verb authenticate-as as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/authenticate-as/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/authenticate-as/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3701,7 +3701,7 @@ The verb `authenticate-as`, and every primitive it appears in. **This page is a 
 
 > The verb create as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/create/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/create/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3747,7 +3747,7 @@ The verb `create`, and every primitive it appears in. **This page is a query, no
 
 > The verb delete as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/delete/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/delete/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3791,7 +3791,7 @@ The verb `delete`, and every primitive it appears in. **This page is a query, no
 
 > The verb execute as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/execute/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/execute/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3836,7 +3836,7 @@ The verb `execute`, and every primitive it appears in. **This page is a query, n
 
 > The verb grant as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/grant/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/grant/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3880,7 +3880,7 @@ The verb `grant`, and every primitive it appears in. **This page is a query, not
 
 > The verb read as a node: the 6 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/read/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/read/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3929,7 +3929,7 @@ The verb `read`, and every primitive it appears in. **This page is a query, not 
 
 > The verb receive as a node: the 0 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/receive/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/receive/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3971,7 +3971,7 @@ None. The table below is what this node connects to, and it is empty, which is t
 
 > The verb revoke as a node: the 0 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/revoke/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/revoke/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4013,7 +4013,7 @@ None. The table below is what this node connects to, and it is empty, which is t
 
 > The verb send as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/send/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/send/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4059,7 +4059,7 @@ The verb `send`, and every primitive it appears in. **This page is a query, not 
 
 > The verb write as a node: the 5 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/write/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/write/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4107,7 +4107,7 @@ The verb `write`, and every primitive it appears in. **This page is a query, not
 
 > The object budget as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/budget/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/budget/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4151,7 +4151,7 @@ The object `budget`, and every primitive it appears in. **This page is a query, 
 
 > The object credential as a node: the 4 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/credential/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/credential/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4198,7 +4198,7 @@ The object `credential`, and every primitive it appears in. **This page is a que
 
 > The object file as a node: the 5 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/file/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/file/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4246,7 +4246,7 @@ The object `file`, and every primitive it appears in. **This page is a query, no
 
 > The object message as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/message/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/message/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4291,7 +4291,7 @@ The object `message`, and every primitive it appears in. **This page is a query,
 
 > The object network-endpoint as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/network-endpoint/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/network-endpoint/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4336,7 +4336,7 @@ The object `network-endpoint`, and every primitive it appears in. **This page is
 
 > The object process as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/process/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/process/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4381,7 +4381,7 @@ The object `process`, and every primitive it appears in. **This page is a query,
 
 > The object record as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/record/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/record/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4427,7 +4427,7 @@ The object `record`, and every primitive it appears in. **This page is a query, 
 
 > The object repository as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/repository/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/repository/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4472,7 +4472,7 @@ The object `repository`, and every primitive it appears in. **This page is a que
 
 > The object schedule as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/schedule/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/schedule/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4517,7 +4517,7 @@ The object `schedule`, and every primitive it appears in. **This page is a query
 
 > The reach host as a node: the 8 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/host/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/host/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4586,7 +4586,7 @@ the machine, container or account it runs as
 
 > The reach project as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/project/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/project/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4632,7 +4632,7 @@ the working tree or workspace it was pointed at
 
 > The reach self as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/self/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/self/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4677,7 +4677,7 @@ the agent's own process, sandbox or turn
 
 > The reach tenant as a node: the 7 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4745,7 +4745,7 @@ the organisation's accounts, repositories and services
 
 > The reach world as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/world/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/world/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4809,7 +4809,7 @@ anything on the internet
 
 > The family browser as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/browser/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/browser/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4853,7 +4853,7 @@ what a browser extension or automation can see and do in your browser
 
 > The family code as a node: the 4 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/code/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/code/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4900,7 +4900,7 @@ repositories and what lands in them
 
 > The family communication as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/communication/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/communication/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4945,7 +4945,7 @@ messages to people
 
 > The family filesystem as a node: the 6 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/filesystem/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/filesystem/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4994,7 +4994,7 @@ files and directories
 
 > The family identity as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/identity/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/identity/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5040,7 +5040,7 @@ credentials and who the agent can act as
 
 > The family money as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/money/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/money/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5084,7 +5084,7 @@ budgets and spend
 
 > The family network as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/network/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/network/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5129,7 +5129,7 @@ endpoints and hosts
 
 > The family process as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/process/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/process/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5174,7 +5174,7 @@ programs and their execution
 
 > The family schedule as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/schedule/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/schedule/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5217,9 +5217,9 @@ things that outlive the turn
 
 # The edge vocabulary
 
-> The 15 edges this model is written in, each a verb with a distinct inverse, a stated domain and range, and the sentence it reads as.
+> The 20 edges this model is written in, each a verb with a distinct inverse, a stated domain and range, and the sentence it reads as.
 
-*Source: <https://abp.sgit.ai/model/graph/edges/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/edges/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5229,7 +5229,7 @@ below point at them.*
 
 # The edge vocabulary
 
-**15 edges.** Every one is a verb with a distinct, meaningfully named inverse, and the inverse is not the same edge walked backwards: `grants` and `granted_by` have different fan out, and that asymmetry is what stops the graph exploding.
+**20 edges.** Every one is a verb with a distinct, meaningfully named inverse, and the inverse is not the same edge walked backwards: `grants` and `granted_by` have different fan out, and that asymmetry is what stops the graph exploding.
 
 > **The generic association edge is banned, and there is none in this model.** It constrains nothing and costs fan out. If you find yourself wanting `relates_to`, the honest move is a new edge with a sentence, a different sentence for its inverse, and a stated domain and range.
 
@@ -5243,6 +5243,7 @@ These are not this site's to rename. They are published at [the network's edge s
 | `reaches` | `reachable_from` | `Capability` | `ReachClass` | this capability reaches this reach class |
 | `similar_to` | `similar_to` | `Node` | `Node` | our node is similar to their node |
 | `supersedes` | `superseded_by` | `Node` | `Node` | this claim supersedes that one |
+| `exposes` | `exposed_by` | `Tool` | `Capability` | this tool exposes this capability |
 
 ## Proposed here
 
@@ -5261,6 +5262,10 @@ These are not this site's to rename. They are published at [the network's edge s
 | `exceeds` | this granted capability exceeds this mandate | `exceeded_by` | this mandate is exceeded by these granted capabilities | `GrantedCapability` | `Mandate` |
 | `falls_short_of` | this mandate falls short of this capability it asked for | `unmet_by` | this capability is unmet by this deployment shape | `Mandate` | `Capability` |
 | `known_by` | this granted capability is known by observation | `evidences` | observation evidences these granted capabilities | `GrantedCapability` | `EvidenceTier` |
+| `has_variant` | this product has this variant | `variant_of` | this variant is a variant of this product | `Product` | `DeploymentShape` |
+| `runs_with` | this shape runs with this tool | `run_by` | this tool is run by these shapes | `DeploymentShape` | `Tool` |
+| `moves` | this setting moves a capability to this barrier | `moved_by` | this barrier is where these settings move a capability to | `Setting` | `Barrier` |
+| `narrows` | this setting narrows this capability | `narrowed_by` | this capability is narrowed by these settings | `Setting` | `Capability` |
 
 ## The sentence test
 
@@ -5283,7 +5288,7 @@ These are not this site's to rename. They are published at [the network's edge s
 
 > A node type is a required pattern of typed, directed paths that a node either matches or does not. Not a label somebody applied. Run against the graph on every build.
 
-*Source: <https://abp.sgit.ai/model/graph/formulas/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/formulas/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5312,6 +5317,9 @@ below point at them.*
 | **Excess** | The finding. | `[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope` | 53 |
 | **UnboundedExcess** | The business case. | `[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]` | 48 |
 | **Shortfall** | Asked for and cannot. | `[Shortfall] := a [Capability] that a [Mandate] -authorises-> and no [DeploymentShape] in scope -grants->` | 2 |
+| **Product** | A vendor's product, which is not a shape. | `[Product] := a node that -has_variant-> at least one [DeploymentShape]` | 8 |
+| **Tool** | What a shape reaches a capability through. | `[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]` | 17 |
+| **Setting** | What moves a barrier. | `[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]` | 21 |
 
 ## The one that carries the argument
 
@@ -5345,7 +5353,7 @@ That is the usual objection and it deserves a direct answer. **Somebody still de
 
 > How a customer vault extends this vocabulary without merging anything: shared facts owned by nobody, per-party formulas, and declared bridges. Parties can disagree about meaning while still agreeing about facts.
 
-*Source: <https://abp.sgit.ai/model/graph/layers/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/layers/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5420,7 +5428,7 @@ A customer vault is layers 2 and 3, pointing at layer 1 by address, version and 
 
 > The ABP mapped onto Fractal Semantic Graphs: one capability row walked through nine universes, from the source bytes to a licence condition, each with its own owner and ontology, joined by named edges. Four more named as gaps.
 
-*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5472,7 +5480,7 @@ Nine the walk crosses and four it names. **A status is a claim the gate checks**
 |---|---|---|---|---|---|---|
 | 0 | [The source bytes](../../model/universes/u0/index.md) | down | nobody: the bytes are what they are | partial | 0 of 2 | 3 |
 | 1 | [The grammar](../../model/universes/u1/index.md) | down | abp.sgit.ai, promoted from what-can-it-do.games.sgit.ai and bridged back to it | **live** | 6 of 6 | 6 |
-| 2 | [The deployment shape](../../model/universes/u2/index.md) | across | the vendor's published words, read on a date, with a hash, and never probed | partial | 1 of 7 | 9 |
+| 2 | [The deployment shape](../../model/universes/u2/index.md) | across | the vendor's published words, read on a date, with a hash, and never probed | partial | 4 of 7 | 10 |
 | 3 | [The grant and its evidence](../../model/universes/u3/index.md) | across | whoever observed, or the documentation that was read | one edge deep | 2 of 8 | 7 |
 | 4 | [The enforcement](../../model/universes/u4/index.md) | across | whoever set the control: the vendor, the platform, the deployer or nobody | one edge deep | 3 of 7 | 7 |
 | 5 | [The deployer](../../model/universes/u5/index.md) | across | the deployer, in their own words, and the named person who will correct the draft | partial | 1 of 7 | 9 |
@@ -5496,6 +5504,9 @@ Nine the walk crosses and four it names. **A status is a claim the gate checks**
 | `withholds` | `withheld_by` | [The deployer](../../model/universes/u5/index.md) | [The grammar](../../model/universes/u1/index.md) | this site | live |
 | `exceeds` | `exceeded_by` | [The grant and its evidence](../../model/universes/u3/index.md) | [The deployer](../../model/universes/u5/index.md) | this site | live |
 | `falls_short_of` | `unmet_by` | [The deployer](../../model/universes/u5/index.md) | [The grammar](../../model/universes/u1/index.md) | this site | live |
+| `exposes` | `exposed_by` | [The deployment shape](../../model/universes/u2/index.md) | [The grammar](../../model/universes/u1/index.md) | this site | live |
+| `moves` | `moved_by` | [The deployment shape](../../model/universes/u2/index.md) | [The enforcement](../../model/universes/u4/index.md) | this site | live |
+| `narrows` | `narrowed_by` | [The deployment shape](../../model/universes/u2/index.md) | [The grammar](../../model/universes/u1/index.md) | this site | live |
 
 ## What must not change
 
@@ -5520,7 +5531,7 @@ Nine the walk crosses and four it names. **A status is a claim the gate checks**
 
 > The source bytes, one of the universes an ABP row crosses: owned by nobody: the bytes are what they are, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u0/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u0/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5572,7 +5583,7 @@ Today the provenance block sits on every data file and says the same thing for e
 
 > The grammar, one of the universes an ABP row crosses: owned by abp.sgit.ai, promoted from what-can-it-do.games.sgit.ai and bridged back to it, with its own node types and verbs, sharing only the grammar. Status: live.
 
-*Source: <https://abp.sgit.ai/model/universes/u1/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u1/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5620,6 +5631,8 @@ Each is a verb with a distinct inverse, a stated domain and range, and the sente
 | `authorises` | [The deployer](../../../model/universes/u5/index.md) |
 | `withholds` | [The deployer](../../../model/universes/u5/index.md) |
 | `falls_short_of` | [The deployer](../../../model/universes/u5/index.md) |
+| `exposes` | [The deployment shape](../../../model/universes/u2/index.md) |
+| `narrows` | [The deployment shape](../../../model/universes/u2/index.md) |
 
 ## What the map adds here
 
@@ -5640,7 +5653,7 @@ Two verbs in it, receive and revoke, have nothing under them and are kept as nam
 
 > The deployment shape, one of the universes an ABP row crosses: owned by the vendor's published words, read on a date, with a hash, and never probed, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u2/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u2/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5652,7 +5665,7 @@ below point at them.*
 
 **Owner** the vendor's published words, read on a date, with a hash, and never probed. **Centre of gravity** the setting. **Smallest node** a scope, a flag or a line on a documentation page. **Level** across. **Status** partial.
 
-> A shape today carries its tools, its reach names and the route each row goes through, as strings in a profile file. None of them is a node. This is the first universe where the vocabulary is not this site's: a vendor speaks in scopes, tool names, flags, consent screens and administrator settings, and the ABP keeps them in the vendor's words and draws an edge from each to the primitive it exposes.
+> Since v0.4.3 the product, the tool a capability is reached through and the setting that moves a barrier are nodes, all derived from data that was already published: the tools in the vendor's words, the reductions the map publishes per capability, and the difference between two variants of one product. Scopes, documentation pages and contradictions are not nodes yet, and material is declared on the grammar and valued only where a contributed shape states it. This is the first universe where the vocabulary is not this site's: a vendor speaks in scopes, tool names, flags, consent screens and administrator settings, and the ABP keeps them in the vendor's words and draws an edge from each to the primitive it exposes.
 
 ## Node types
 
@@ -5660,11 +5673,11 @@ A node type is a required pattern of paths, not a label. The ones marked yes are
 
 | Type | Formula | Exists today | Note |
 |---|---|---|---|
-| **Product** | `a node that -has_variant-> at least one [DeploymentShape]` | not yet |  |
+| **Product** | `[Product] := a node that -has_variant-> at least one [DeploymentShape]` | **yes**, 8 matched |  |
 | **DeploymentShape** | `[DeploymentShape] := a node that -grants-> at least one [Capability]` | **yes**, 9 matched |  |
-| **Tool** | `a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]` | not yet |  |
+| **Tool** | `[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]` | **yes**, 17 matched | One node per shape, in the vendor's words, because what shell (Bash) reaches depends on where it runs. |
 | **Scope** | `a node that a [Tool] or [DeploymentShape] is -scoped_by->, in the vendor's own identifier` | not yet |  |
-| **Setting** | `a node that -moves-> a [Barrier] on at least one [GrantedCapability]` | not yet | The confirmations flag is the published case: one Setting node moving one Barrier is what the home page's pair of examples shows. |
+| **Setting** | `[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]` | **yes**, 21 matched | Two kinds, both from published data: the reduction the map publishes per capability, and the setting that distinguishes two variants of one product, derived by diffing their grants. The confirmations flag is the second kind, and it is the path the home page's pair of examples was a sentence about. |
 | **DocumentationPage** | `a [SourceFile] in U0 that a [Shape], [Tool], [Scope] or [Setting] is -documented_at->` | not yet |  |
 | **Contradiction** | `a node where an -advertises-> claim and a -scoped_by-> scope on the same [Product] disagree, both quoted, both dated, published unresolved` | not yet | riskmandate.ai's Lab 01 holds four of these with verbatim quotes and URLs. |
 
@@ -5674,11 +5687,12 @@ Each is a verb with a distinct inverse, a stated domain and range, and the sente
 
 | Edge | Reads as | Inverse | Reads as | Domain | Range | From | Status |
 |---|---|---|---|---|---|---|---|
-| `has_variant` | this product has this variant | `variant_of` | this variant is a variant of this product | `Product` | `DeploymentShape` | proposed here | proposed |
-| `runs_with` | this shape runs with this tool | `run_by` | this tool is run by these shapes | `DeploymentShape` | `Tool` | proposed here | proposed |
-| `exposes` | this tool exposes this capability | `exposed_by` | this capability is exposed by these tools | `Tool` | `Capability` | graphs.sgit.ai edge set | proposed |
+| `has_variant` | this product has this variant | `variant_of` | this variant is a variant of this product | `Product` | `DeploymentShape` | proposed here | live |
+| `runs_with` | this shape runs with this tool | `run_by` | this tool is run by these shapes | `DeploymentShape` | `Tool` | proposed here | live |
+| `exposes` | this tool exposes this capability | `exposed_by` | this capability is exposed by these tools | `Tool` | `Capability` | graphs.sgit.ai edge set | live |
 | `scoped_by` | this tool is scoped by this vendor scope | `scopes` | this scope scopes these tools | `Tool or DeploymentShape` | `Scope` | proposed here | proposed |
-| `moves` | this setting moves this barrier | `moved_by` | this barrier is moved by this setting | `Setting` | `Barrier` | proposed here | proposed |
+| `moves` | this setting moves a capability to this barrier | `moved_by` | this barrier is where these settings move a capability to | `Setting` | `Barrier` | proposed here | live |
+| `narrows` | this setting narrows this capability | `narrowed_by` | this capability is narrowed by these settings | `Setting` | `Capability` | proposed here | live |
 | `documented_at` | this tool is documented at this page, read on this date | `documents` | this page documents these tools | `Shape, Tool, Scope or Setting` | `DocumentationPage` | proposed here | proposed |
 | `advertises` | this product's page advertises this capability | `advertised_by` | this capability is advertised by these products | `Product` | `Capability` | proposed here | proposed |
 | `contradicts` | this advertised claim contradicts this granted scope | `contradicted_by` | this scope is contradicted by this claim | `Contradiction` | `Scope or Capability` | proposed here | proposed |
@@ -5689,6 +5703,9 @@ Each is a verb with a distinct inverse, a stated domain and range, and the sente
 | Leaves along | Into |
 |---|---|
 | `grants` | [The grammar](../../../model/universes/u1/index.md) |
+| `exposes` | [The grammar](../../../model/universes/u1/index.md) |
+| `moves` | [The enforcement](../../../model/universes/u4/index.md) |
+| `narrows` | [The grammar](../../../model/universes/u1/index.md) |
 
 ## What the map adds here
 
@@ -5709,7 +5726,7 @@ The position on a connector that is present and switched off, which is the most 
 
 > The grant and its evidence, one of the universes an ABP row crosses: owned by whoever observed, or the documentation that was read, with its own node types and verbs, sharing only the grammar. Status: one-edge.
 
-*Source: <https://abp.sgit.ai/model/universes/u3/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u3/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5778,7 +5795,7 @@ Lab 07's grant check, eleven of fifteen rows seen present in ordinary work and t
 
 > The enforcement, one of the universes an ABP row crosses: owned by whoever set the control: the vendor, the platform, the deployer or nobody, with its own node types and verbs, sharing only the grammar. Status: one-edge.
 
-*Source: <https://abp.sgit.ai/model/universes/u4/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u4/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5825,6 +5842,7 @@ Each is a verb with a distinct inverse, a stated domain and range, and the sente
 | Arrives along | From |
 |---|---|
 | `bounded_by` | [The grant and its evidence](../../../model/universes/u3/index.md) |
+| `moves` | [The deployment shape](../../../model/universes/u2/index.md) |
 
 ## What the map adds here
 
@@ -5845,7 +5863,7 @@ Lab 06 added the property the 11 September brief did not have: a barrier is peri
 
 > The deployer, one of the universes an ABP row crosses: owned by the deployer, in their own words, and the named person who will correct the draft, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u5/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u5/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5920,7 +5938,7 @@ The interchange form lives here and nowhere else. The W3C rights expression voca
 
 > The derivation, one of the universes an ABP row crosses: owned by the computation, and never a person, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u6/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u6/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5980,7 +5998,7 @@ The gate's twelfth check, which recomputes every stored delta from its pinned in
 
 > The projections, one of the universes an ABP row crosses: owned by the renderer, and the fact diff that has to check it, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u7/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u7/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6040,7 +6058,7 @@ With FactSet as a node and every Projection carrying a projects edge to it, the 
 
 > The licence, the acceptance and the risk, one of the universes an ABP row crosses: owned by riskmandate.ai, with its own node types and verbs, sharing only the grammar. Status: outside.
 
-*Source: <https://abp.sgit.ai/model/universes/u8/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u8/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6096,7 +6114,7 @@ The edges are declared by riskmandate.ai in its vault, pointing at this site's a
 
 > The estate and the twin, one of the universes an ABP row crosses: owned by the customer, through twins.sgit.ai, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u9/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u9/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6143,7 +6161,7 @@ Named so that a twin has an address to attach to. Nothing is behind the name.
 
 > The obligations, one of the universes an ABP row crosses: owned by standards.sgit.ai and the AIUC-1 conformance vault, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u10/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u10/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6189,7 +6207,7 @@ Named so that a standard has an address to attach to.
 
 > The runtime, one of the universes an ABP row crosses: owned by whoever holds the logs: never this site, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u11/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u11/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6236,7 +6254,7 @@ Named so that a log has an address to attach to.
 
 > The estate of agents, one of the universes an ABP row crosses: owned by the organisation, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u12/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u12/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6283,7 +6301,7 @@ Named so that the next brief has an address to write to.
 
 > version v0.33.70 date 11 September 2026 from Dinis Cruz to Anyone deploying an agent, anyone building one, and anyone who has to sign for one
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6510,7 +6528,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever models the graph, whoever builds the renderer, and whoever compiles the prohibitions into something that enforces them
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6737,7 +6755,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7025,7 +7043,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever names the product, prices it, and stands at the table with it next week
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7283,7 +7301,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever plans the ladder from the behaviour policy to everything above it, and whoever talks to an underwriter first
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7531,7 +7549,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.4.0 date 20 September 2026 from The site's agent, for the project lead to Whoever models the ABP graph, whoever builds the pages of abp.sgit.ai, and the teams at riskmandate.ai and store.sgit.ai who render against its data
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8035,7 +8053,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > You are building abp.sgit.ai, the site for the Agent Behaviour Policy. This pack is what has been decided, what already exists, and what you must not invent.
 
-*Source: <https://abp.sgit.ai/docs/pack/00__START-HERE/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/00__START-HERE/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8135,7 +8153,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Every site in the network is named for an argument rather than for a function, and there are twenty seven of them. The argument here is not a product name.
 
-*Source: <https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8253,7 +8271,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Three sources govern how this site is built. Read all three before writing code. Where this pack and a source disagree, the source wins and you should say so.
 
-*Source: <https://abp.sgit.ai/docs/pack/02__THE-CONVENTIONS/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/02__THE-CONVENTIONS/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8354,7 +8372,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The ABP describes. It does not judge. It states what the agent can do, what it was authorised to do, the gap between them, and what stands in the way. It says nothing about whether any of that is acceptable, because acceptability is not in...
 
-*Source: <https://abp.sgit.ai/docs/pack/03__THE-ABP-MODEL/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/03__THE-ABP-MODEL/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8551,7 +8569,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The memo asks for a few ABPs, from simple to complex, to find out what they look like in practice and how hard they are to make. The answer is that the first five can be derived rather than authored, because the data exists.
 
-*Source: <https://abp.sgit.ai/docs/pack/04__THE-FIRST-EXAMPLES/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/04__THE-FIRST-EXAMPLES/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8640,7 +8658,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Thirteen rules that constrain this site. Each has a source and a reason. Rule 0 sits above the others and rules 1 and 13 are the two most likely to be broken.
 
-*Source: <https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8713,7 +8731,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Paste this to the agent that builds the site. It is the standard prompt for a new network site, extended with what this one needs.
 
-*Source: <https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8786,7 +8804,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > date 20 September 2026 from A review produced by ChatGPT at the project lead's request, on the Fractal Semantic Graphs page at sgit.ai and its supporting vaults, and handed to this site for the record to Whoever builds the universes on...
 
-*Source: <https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9033,7 +9051,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
 
-*Source: <https://abp.sgit.ai/docs/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9126,45 +9144,46 @@ External readings of the ideas this site is built on, published as received and 
 
 ------------------------------------------------------------------------
 
-<!-- https://abp.sgit.ai/versions/v0.4.2/index.html -->
+<!-- https://abp.sgit.ai/versions/v0.4.3/index.html -->
 
-# v0.4.2: the fact set is data, the fact diff runs over every published page, and every example ends by crossing nine universes
+# v0.4.3: the product, the tool and the setting become nodes, derived from data already published, and whose material is declared on the grammar
 
-> The projections universe, one release after the map named it. Every projection renders the same fact set and the diff must be empty: a rule in force since August that blocked a promise on four consecutive days in September because the diff did not exist. It exists now, in the...
+> The deployment shape universe, as far as published data takes it. A shape used to carry its tools as strings and nothing about what distinguishes one variant of a product from another. Now a product is a node with its variants, every tool a shape runs with is a node that exposes...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.2/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.3/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
 ---
 
-[Home](../../index.md) / [Versions](../../versions/index.md) / v0.4.2
+[Home](../../index.md) / [Versions](../../versions/index.md) / v0.4.3
 
-# v0.4.2: the fact set is data, the fact diff runs over every published page, and every example ends by crossing nine universes
+# v0.4.3: the product, the tool and the setting become nodes, derived from data already published, and whose material is declared on the grammar
 
-The projections universe, one release after the map named it. Every projection renders the same fact set and the diff must be empty: a rule in force since August that blocked a promise on four consecutive days in September because the diff did not exist. It exists now, in the only form worth having. A fact set is written for every stored delta under data/facts/, the leaf assertions every rendering must agree on, computed and never authored. The release gate then parses the label, the leaflet, the prohibitions and the figure back out of each example's own published markdown twin, as text, and fails the build on a single leaf assertion that differs. The label and the leaflet are now two renderings of one fact set that are checked to carry the same facts rather than asserted to. And every example page ends with its lead row walked across nine universes, built from its own data.
+The deployment shape universe, as far as published data takes it. A shape used to carry its tools as strings and nothing about what distinguishes one variant of a product from another. Now a product is a node with its variants, every tool a shape runs with is a node that exposes the capabilities it reaches, and a setting is a node that narrows a capability and moves it to a barrier. All three are derived from data this site already held: the tools in the vendor's words, the reductions the map publishes per capability, and the difference between two variants of one product, found by diffing their grants. The confirmations flag, which the home page has described in a sentence since v0.1.0, is now a path the build walks. The material property riskmandate.ai asked for is declared on the grammar with its four values, placed on the granted row, and left null on the nine promoted shapes rather than guessed.
 
 | Field | Value |
 |---|---|
-| Version | `v0.4.2` |
+| Version | `v0.4.3` |
 | Date | 2026-09-20 |
-| Commit | **`git rev-list -n 1 v0.4.2`**. The tag is the record: CI derives it from `admin/build/version.txt` and creates it on the commit whose subject carries `site v0.4.2:`. The hash is not written into [`versions/v0.4.2.json`](../../versions/v0.4.2.json), because a release commit cannot contain its own hash and reading it back from the tag made the build produce different bytes on a checkout with tags than on one without. |
+| Commit | **`git rev-list -n 1 v0.4.3`**. The tag is the record: CI derives it from `admin/build/version.txt` and creates it on the commit whose subject carries `site v0.4.3:`. The hash is not written into [`versions/v0.4.3.json`](../../versions/v0.4.3.json), because a release commit cannot contain its own hash and reading it back from the tag made the build produce different bytes on a checkout with tags than on one without. |
 | Reconstructed | no |
-| Machine readable | [`versions/v0.4.2.json`](../../versions/v0.4.2.json) |
+| Machine readable | [`versions/v0.4.3.json`](../../versions/v0.4.3.json) |
 
 ## What changed
 
-- data/facts/index.json and one file per stored delta: what the shape grants at what barrier with what undo class and evidence, the mandate's stance on all 23 primitives, and the excess, unbounded excess, aligned set and shortfall that follow, pinning the same inputs as the delta. Where an example page renders the fact set, the index names the twin the gate parses.
-- The gate's fifteenth check, the fact diff. It runs over the published page and not over the generator: the label's seven numbers, every leaflet row's capability, undo class, barrier, control status, evidence and stance, every prohibition's capability, barrier and enforcement, and the figure's three counts are read back out of the markdown twin and compared with the fact set, both ways. A diff that trusted the generator would be a diff over nothing, because the label and the leaflet come from one call.
-- Every example page ends with its lead row crossed through nine universes as one sentence, built from the page's own profile, mandate and delta, beside the single vocabulary path it already carried, and names the fact set every number on the page is a leaf assertion in.
-- The projections universe's status stays partial and says why: the fact set and the diff exist as files and as a gate check, and neither is a node in the graph yet.
-- The multi format promise that the store could describe and not print is now printable for the five examples, because the guarantee behind it is a build that fails when it is false.
+- Three node type formulas: [Product] has at least one variant; [Tool] is run by a shape and exposes at least one capability; [Setting] narrows at least one capability and moves it to at least one barrier. Walked on every build: 8 products, 17 tools and 21 settings matched at this release.
+- Five edges: has_variant and variant_of, runs_with and run_by, exposes and exposed_by (reused from the network's published set), moves and moved_by, narrows and narrowed_by. Three of them cross a universe boundary and the universes index lists them: exposes and narrows into the grammar, moves into the enforcement.
+- Twenty settings come from the reductions the map publishes, one per capability that has one, each carrying what it costs and the barrier it moves the capability to. One comes from diffing the two variants of the coding agent: the setting that distinguishes confirmations on from confirmations off narrows execute.process.host and moves it between setting and none. That is the argument of the home page as a path rather than a paragraph.
+- A tool is one node per shape, in the vendor's words, because the same string in two shapes is two exposures: what shell (Bash) reaches depends on where it runs.
+- data/capabilities.json declares material: whose material a capability reaches, with the values own, organisation, third_party and mixed, placed on the granted row, marked as this site's own and not the pack's, proposed by riskmandate.ai. Every granted row now carries the field; on the nine promoted shapes it is null, and the gate refuses any value outside the four.
+- The capability pages say that the published reduction is now a setting node, and the deployment shape universe's page lists the three types as existing with their counts. Its status stays partial: scopes, documentation pages and contradictions are not nodes yet.
 
 ## What it was built against
 
-- The pack's model document, for the specification the diff is built from: the facts are the leaf assertions, identical in every rendering; the classes are how a reader groups them, different by altitude, and the diff is over the former.
-- The dev brief of 11 September on the behaviour policy as a graph, for the rule that every projection renders the same fact set with an empty diff, and for the record that the diff had not been built.
-- The v0.4.0 brief, for the projections universe this release fills, and the build order it set out.
+- The v0.4.0 brief, for the deployment shape universe's node types and verbs, of which this release builds the three that published data can support.
+- The reductions in the promoted pack, retrieved 11 September 2026, for twenty of the twenty one settings.
+- riskmandate.ai's Lab 03 of 12 September 2026, for the material property and the lean towards the vocabulary with a per policy override, which this release places on the granted row because the vaults riskmandate.ai has since built put it there.
 
 ## The five verifications against the sibling
 
@@ -9203,6 +9222,53 @@ The published source wins and the disagreement is recorded. **The estate's metho
 
 ---
 
+*[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/versions/v0.4.3/index.html)*
+
+
+------------------------------------------------------------------------
+
+<!-- https://abp.sgit.ai/versions/v0.4.2/index.html -->
+
+# v0.4.2: the fact set is data, the fact diff runs over every published page, and every example ends by crossing nine universes
+
+> The projections universe, one release after the map named it. Every projection renders the same fact set and the diff must be empty: a rule in force since August that blocked a promise on four consecutive days in September because the diff did not exist. It exists now, in the...
+
+*Source: <https://abp.sgit.ai/versions/v0.4.2/index.html> · site v0.4.3 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../index.md) / [Versions](../../versions/index.md) / v0.4.2
+
+# v0.4.2: the fact set is data, the fact diff runs over every published page, and every example ends by crossing nine universes
+
+The projections universe, one release after the map named it. Every projection renders the same fact set and the diff must be empty: a rule in force since August that blocked a promise on four consecutive days in September because the diff did not exist. It exists now, in the only form worth having. A fact set is written for every stored delta under data/facts/, the leaf assertions every rendering must agree on, computed and never authored. The release gate then parses the label, the leaflet, the prohibitions and the figure back out of each example's own published markdown twin, as text, and fails the build on a single leaf assertion that differs. The label and the leaflet are now two renderings of one fact set that are checked to carry the same facts rather than asserted to. And every example page ends with its lead row walked across nine universes, built from its own data.
+
+| Field | Value |
+|---|---|
+| Version | `v0.4.2` |
+| Date | 2026-09-20 |
+| Commit | **`git rev-list -n 1 v0.4.2`**. The tag is the record: CI derives it from `admin/build/version.txt` and creates it on the commit whose subject carries `site v0.4.2:`. The hash is not written into [`versions/v0.4.2.json`](../../versions/v0.4.2.json), because a release commit cannot contain its own hash and reading it back from the tag made the build produce different bytes on a checkout with tags than on one without. |
+| Reconstructed | no |
+| Machine readable | [`versions/v0.4.2.json`](../../versions/v0.4.2.json) |
+
+## What changed
+
+- data/facts/index.json and one file per stored delta: what the shape grants at what barrier with what undo class and evidence, the mandate's stance on all 23 primitives, and the excess, unbounded excess, aligned set and shortfall that follow, pinning the same inputs as the delta. Where an example page renders the fact set, the index names the twin the gate parses.
+- The gate's fifteenth check, the fact diff. It runs over the published page and not over the generator: the label's seven numbers, every leaflet row's capability, undo class, barrier, control status, evidence and stance, every prohibition's capability, barrier and enforcement, and the figure's three counts are read back out of the markdown twin and compared with the fact set, both ways. A diff that trusted the generator would be a diff over nothing, because the label and the leaflet come from one call.
+- Every example page ends with its lead row crossed through nine universes as one sentence, built from the page's own profile, mandate and delta, beside the single vocabulary path it already carried, and names the fact set every number on the page is a leaf assertion in.
+- The projections universe's status stays partial and says why: the fact set and the diff exist as files and as a gate check, and neither is a node in the graph yet.
+- The multi format promise that the store could describe and not print is now printable for the five examples, because the guarantee behind it is a build that fails when it is false.
+
+## What it was built against
+
+- The pack's model document, for the specification the diff is built from: the facts are the leaf assertions, identical in every rendering; the classes are how a reader groups them, different by altitude, and the diff is over the former.
+- The dev brief of 11 September on the behaviour policy as a graph, for the rule that every projection renders the same fact set with an empty diff, and for the record that the diff had not been built.
+- The v0.4.0 brief, for the projections universe this release fills, and the build order it set out.
+
+---
+
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/versions/v0.4.2/index.html)*
 
 
@@ -9214,7 +9280,7 @@ The published source wins and the disagreement is recorded. **The estate's metho
 
 > The map of v0.4.0 becomes files the build reads, pages that render one query, and a gate check. Thirteen universes are authored in admin/build/universes.py, each with its owner, its centre of gravity, its smallest node, its status, its node types and its verbs; the build writes...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.1/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.1/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9262,7 +9328,7 @@ The map of v0.4.0 becomes files the build reads, pages that render one query, an
 
 > A map, and nothing built from it yet. By the zoom test as graphs.sgit.ai now states it, the graph this site holds at v0.3.0 decomposes one vocabulary very well and crosses into another in exactly two places, the reach class disagreement and the bridge to the game. An ABP is a...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.0/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.0/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9309,7 +9375,7 @@ A map, and nothing built from it yet. By the zoom test as graphs.sgit.ai now sta
 
 > The model pages were a projection of nothing. A capability was an identifier with a gloss beside it, which is a self-describing node, which is schema-first thinking dressed in graph syntax: the meaning was attached to the node rather than derived from its edges. This release...
 
-*Source: <https://abp.sgit.ai/versions/v0.3.0/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.3.0/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9357,7 +9423,7 @@ The model pages were a projection of nothing. A capability was an identifier wit
 
 > A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes...
 
-*Source: <https://abp.sgit.ai/versions/v0.2.0/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.2.0/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9405,7 +9471,7 @@ A correction to a rule this site published nine hours earlier, applied in the op
 
 > The first version of abp.sgit.ai. The capability ontology the ABP needs already existed, published, as the data pack a game reads, so this release promotes it into a schema with a stable address rather than authoring a second one, and derives five worked ABPs from it. Nothing on...
 
-*Source: <https://abp.sgit.ai/versions/v0.1.0/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.1.0/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9459,7 +9525,7 @@ The first version of abp.sgit.ai. The capability ontology the ABP needs already 
 
 > Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
-*Source: <https://abp.sgit.ai/versions/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9473,6 +9539,7 @@ Every release of this site. **The badge in the top bar reads `current` from [`ve
 
 | Version | Date | What changed |
 |---|---|---|
+| [v0.4.3](../versions/v0.4.3/index.md) | 2026-09-20 | the product, the tool and the setting become nodes, derived from data already published, and whose material is declared on the grammar |
 | [v0.4.2](../versions/v0.4.2/index.md) | 2026-09-20 | the fact set is data, the fact diff runs over every published page, and every example ends by crossing nine universes |
 | [v0.4.1](../versions/v0.4.1/index.md) | 2026-09-20 | the universes become data with a page each, the walk of one row is built on every build, and the gate checks that every node type is owned |
 | [v0.4.0](../versions/v0.4.0/index.md) | 2026-09-20 | the ABP is mapped onto Fractal Semantic Graphs: one row crosses nine universes and each keeps its own ontology |

@@ -128,6 +128,28 @@ def build():
         "verbs": prim["verbs"], "object_classes": prim["object_classes"],
         "reaches": prim["reaches"], "families": prim["families"],
         "rules": prim["rules"],
+        # THIS SITE'S OWN, and marked as such: not in the pack. Proposed by riskmandate.ai in
+        # its Lab 03 (request 1) because reach answers how far and not whose. A property on a
+        # granted row, never a fourth element of the grammar, because a fourth element
+        # multiplies the primitives and the vocabulary has to stay readable by address.
+        "material": {
+            "_what_this_is": "Whose material a capability reaches, stated on a granted row in a "
+                             "deployment shape. This site's own property, proposed by "
+                             "riskmandate.ai on 12 September 2026 and adopted at v0.4.3; it is "
+                             "not in the pack this grammar was promoted from.",
+            "values": {"own": "the deployer's own material",
+                       "organisation": "the deployer's organisation's material",
+                       "third_party": "other people's material",
+                       "mixed": "other people's material mixed with the deployer's, and no "
+                                "setting the vendor documents makes it otherwise"},
+            "placement": "On the granted row, because it is a property of a capability in a "
+                         "context: a mailbox connector reaches mixed material wherever it is "
+                         "connected. A mandate may override it for one deployment. The nine "
+                         "shapes promoted from the map do not state it, and the value is null "
+                         "on their rows rather than guessed.",
+            "why": "A grant you hold over other people's material is not a grant you may pass "
+                   "on. Reach does not answer whose; this does.",
+        },
         "count": len(caps),
         "capabilities": caps,
         "provenance": prov("Promoted from primitives.json. Field names changed "
@@ -205,7 +227,7 @@ def build():
                 if keep is None or barrier_rank(bt) < barrier_rank(keep["barrier"]):
                     rows[cap] = {"capability": cap, "barrier": bt, "evidence": tier,
                                  "via": [tool["tool"]], "control": r.get("control"),
-                                 "note": r.get("note")}
+                                 "note": r.get("note"), "material": r.get("material")}
                 else:
                     keep["via"].append(tool["tool"])
         cap_undo = {c["id"]: c["undo"] for c in caps}

@@ -44,8 +44,8 @@
       "owner": "the vendor's published words, read on a date, with a hash, and never probed",
       "status": "partial",
       "node_types": 7,
-      "node_types_today": 1,
-      "verbs": 9,
+      "node_types_today": 4,
+      "verbs": 10,
       "file": "universes/u2.json"
     },
     {
@@ -209,6 +209,27 @@
       "edge": "falls_short_of",
       "inverse": "unmet_by",
       "from": "u5",
+      "to": "u1",
+      "owner": "this site"
+    },
+    {
+      "edge": "exposes",
+      "inverse": "exposed_by",
+      "from": "u2",
+      "to": "u1",
+      "owner": "this site"
+    },
+    {
+      "edge": "moves",
+      "inverse": "moved_by",
+      "from": "u2",
+      "to": "u4",
+      "owner": "this site"
+    },
+    {
+      "edge": "narrows",
+      "inverse": "narrowed_by",
+      "from": "u2",
       "to": "u1",
       "owner": "this site"
     }

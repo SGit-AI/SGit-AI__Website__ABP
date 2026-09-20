@@ -2,7 +2,7 @@
 
 > Every word in the capability grammar as a node with its own address, its own JSON and its own page: ten verbs, nine object classes, five reach classes and nine families.
 
-*Source: <https://abp.sgit.ai/model/lexicon/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -51,8 +51,8 @@ below point at them.*
 
 | Address | What is there |
 |---|---|
-| [The edge vocabulary](../../model/graph/edges/index.md) | 15 edges, each a verb with a distinct inverse, a stated domain and range, and where it came from. The generic association edge is banned and there is none in this model. |
-| [The node type formulas](../../model/graph/formulas/index.md) | 13 node types, each a required pattern of paths rather than a label. Run against the graph on every build. |
+| [The edge vocabulary](../../model/graph/edges/index.md) | 20 edges, each a verb with a distinct inverse, a stated domain and range, and where it came from. The generic association edge is banned and there is none in this model. |
+| [The node type formulas](../../model/graph/formulas/index.md) | 16 node types, each a required pattern of paths rather than a label. Run against the graph on every build. |
 | [The three layers](../../model/graph/layers/index.md) | How a vault extends this vocabulary for one customer without merging anything, and without asking permission. |
 | [The graph rules](../../model/graph/index.md) | The five published rules and what each forces on this model. |
 

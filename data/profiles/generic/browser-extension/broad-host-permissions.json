@@ -32,6 +32,7 @@
       ],
       "control": null,
       "note": "'read and change all your data on all websites'",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -44,6 +45,7 @@
       ],
       "control": null,
       "note": "host permissions",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -56,6 +58,7 @@
       ],
       "control": "the site's own session controls",
       "note": "acts inside sites where you have a session, as you",
+      "material": null,
       "undo": "no",
       "is_bounded": false
     }

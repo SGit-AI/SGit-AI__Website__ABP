@@ -50,6 +50,17 @@
     "The set is a starting set and will be wrong at the edges from the first week. A proposed primitive that is a specific thing is an instance; one that is a new verb, object class or reach needs a probe.",
     "A label never says 'your' or 'as you': what host, tenant and world mean is the profile's to say (reach_names), because for an agent in a vendor's container 'host' is the container and 'tenant' is a scoped token, not your machine and not your accounts."
   ],
+  "material": {
+    "_what_this_is": "Whose material a capability reaches, stated on a granted row in a deployment shape. This site's own property, proposed by riskmandate.ai on 12 September 2026 and adopted at v0.4.3; it is not in the pack this grammar was promoted from.",
+    "values": {
+      "own": "the deployer's own material",
+      "organisation": "the deployer's organisation's material",
+      "third_party": "other people's material",
+      "mixed": "other people's material mixed with the deployer's, and no setting the vendor documents makes it otherwise"
+    },
+    "placement": "On the granted row, because it is a property of a capability in a context: a mailbox connector reaches mixed material wherever it is connected. A mandate may override it for one deployment. The nine shapes promoted from the map do not state it, and the value is null on their rows rather than guessed.",
+    "why": "A grant you hold over other people's material is not a grant you may pass on. Reach does not answer whose; this does."
+  },
   "count": 23,
   "capabilities": [
     {

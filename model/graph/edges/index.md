@@ -1,8 +1,8 @@
 # The edge vocabulary
 
-> The 15 edges this model is written in, each a verb with a distinct inverse, a stated domain and range, and the sentence it reads as.
+> The 20 edges this model is written in, each a verb with a distinct inverse, a stated domain and range, and the sentence it reads as.
 
-*Source: <https://abp.sgit.ai/model/graph/edges/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/edges/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12,7 +12,7 @@ below point at them.*
 
 # The edge vocabulary
 
-**15 edges.** Every one is a verb with a distinct, meaningfully named inverse, and the inverse is not the same edge walked backwards: `grants` and `granted_by` have different fan out, and that asymmetry is what stops the graph exploding.
+**20 edges.** Every one is a verb with a distinct, meaningfully named inverse, and the inverse is not the same edge walked backwards: `grants` and `granted_by` have different fan out, and that asymmetry is what stops the graph exploding.
 
 > **The generic association edge is banned, and there is none in this model.** It constrains nothing and costs fan out. If you find yourself wanting `relates_to`, the honest move is a new edge with a sentence, a different sentence for its inverse, and a stated domain and range.
 
@@ -26,6 +26,7 @@ These are not this site's to rename. They are published at [the network's edge s
 | `reaches` | `reachable_from` | `Capability` | `ReachClass` | this capability reaches this reach class |
 | `similar_to` | `similar_to` | `Node` | `Node` | our node is similar to their node |
 | `supersedes` | `superseded_by` | `Node` | `Node` | this claim supersedes that one |
+| `exposes` | `exposed_by` | `Tool` | `Capability` | this tool exposes this capability |
 
 ## Proposed here
 
@@ -44,6 +45,10 @@ These are not this site's to rename. They are published at [the network's edge s
 | `exceeds` | this granted capability exceeds this mandate | `exceeded_by` | this mandate is exceeded by these granted capabilities | `GrantedCapability` | `Mandate` |
 | `falls_short_of` | this mandate falls short of this capability it asked for | `unmet_by` | this capability is unmet by this deployment shape | `Mandate` | `Capability` |
 | `known_by` | this granted capability is known by observation | `evidences` | observation evidences these granted capabilities | `GrantedCapability` | `EvidenceTier` |
+| `has_variant` | this product has this variant | `variant_of` | this variant is a variant of this product | `Product` | `DeploymentShape` |
+| `runs_with` | this shape runs with this tool | `run_by` | this tool is run by these shapes | `DeploymentShape` | `Tool` |
+| `moves` | this setting moves a capability to this barrier | `moved_by` | this barrier is where these settings move a capability to | `Setting` | `Barrier` |
+| `narrows` | this setting narrows this capability | `narrowed_by` | this capability is narrowed by these settings | `Setting` | `Capability` |
 
 ## The sentence test
 

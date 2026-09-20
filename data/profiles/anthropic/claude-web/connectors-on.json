@@ -33,6 +33,7 @@
       ],
       "control": "the connector's scope",
       "note": "a cloud connector acts as you",
+      "material": null,
       "undo": "no",
       "is_bounded": true
     },
@@ -45,6 +46,7 @@
       ],
       "control": "the connector's scope, held by the vendor",
       "note": "a drive connector: your other files, as scoped",
+      "material": null,
       "undo": "no",
       "is_bounded": true
     },
@@ -57,6 +59,7 @@
       ],
       "control": "the connector's scope",
       "note": "a mail or chat connector reads your mail",
+      "material": null,
       "undo": "no",
       "is_bounded": true
     },
@@ -69,6 +72,7 @@
       ],
       "control": "the connector's scope",
       "note": "a code-host connector",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": true
     },
@@ -81,6 +85,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "yes",
       "is_bounded": false
     }

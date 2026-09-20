@@ -10,10 +10,10 @@
     "bridges": "../bridges/index.json"
   },
   "counts": {
-    "nodes": 170,
-    "edges": 488,
-    "edge_types": 15,
-    "node_types": 13
+    "nodes": 216,
+    "edges": 658,
+    "edge_types": 20,
+    "node_types": 16
   },
   "matched": {
     "Verb": 10,
@@ -28,7 +28,10 @@
     "Control": 1,
     "Excess": 53,
     "UnboundedExcess": 48,
-    "Shortfall": 2
+    "Shortfall": 2,
+    "Product": 8,
+    "Tool": 17,
+    "Setting": 21
   },
   "discipline": "https://graphs.sgit.ai/",
   "provenance": {

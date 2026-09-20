@@ -4,7 +4,7 @@
   "the_banned_edge": "There is no generic association edge in this model and there will not be one. It constrains nothing and costs fan out.",
   "extending_it": "A new edge needs a sentence, its inverse needs a DIFFERENT sentence, and both need a stated domain and range.",
   "source": "https://graphs.sgit.ai/v1/grammar/edge-set.html",
-  "count": 15,
+  "count": 20,
   "universes": "Each edge names the universe of its domain and of its range, and `crosses` is true when they differ: a junction edge, the property that turns a set of graphs into a fractal rather than a pile. Computed from the node types, never declared. See universes/index.json.",
   "edges": [
     {
@@ -186,6 +186,66 @@
       "domain_universe": "u3",
       "range_universe": "u3",
       "crosses": false
+    },
+    {
+      "edge": "has_variant",
+      "inverse": "variant_of",
+      "domain": "Product",
+      "range": "DeploymentShape",
+      "reads_as": "this product has this variant",
+      "inverse_reads_as": "this variant is a variant of this product",
+      "from": "proposed here",
+      "domain_universe": "u2",
+      "range_universe": "u2",
+      "crosses": false
+    },
+    {
+      "edge": "runs_with",
+      "inverse": "run_by",
+      "domain": "DeploymentShape",
+      "range": "Tool",
+      "reads_as": "this shape runs with this tool",
+      "inverse_reads_as": "this tool is run by these shapes",
+      "from": "proposed here",
+      "domain_universe": "u2",
+      "range_universe": "u2",
+      "crosses": false
+    },
+    {
+      "edge": "exposes",
+      "inverse": "exposed_by",
+      "domain": "Tool",
+      "range": "Capability",
+      "reads_as": "this tool exposes this capability",
+      "inverse_reads_as": "this capability is exposed by these tools",
+      "from": "graphs.sgit.ai edge set",
+      "domain_universe": "u2",
+      "range_universe": "u1",
+      "crosses": true
+    },
+    {
+      "edge": "moves",
+      "inverse": "moved_by",
+      "domain": "Setting",
+      "range": "Barrier",
+      "reads_as": "this setting moves a capability to this barrier",
+      "inverse_reads_as": "this barrier is where these settings move a capability to",
+      "from": "proposed here",
+      "domain_universe": "u2",
+      "range_universe": "u4",
+      "crosses": true
+    },
+    {
+      "edge": "narrows",
+      "inverse": "narrowed_by",
+      "domain": "Setting",
+      "range": "Capability",
+      "reads_as": "this setting narrows this capability",
+      "inverse_reads_as": "this capability is narrowed by these settings",
+      "from": "proposed here",
+      "domain_universe": "u2",
+      "range_universe": "u1",
+      "crosses": true
     }
   ],
   "provenance": {

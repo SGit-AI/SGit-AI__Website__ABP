@@ -59,7 +59,7 @@ LEVELS = ("down", "across", "up", "beside")
 NODE_TYPE_UNIVERSE = {
     "Verb": "u1", "ObjectClass": "u1", "ReachClass": "u1", "Family": "u1", "UndoClass": "u1",
     "Capability": "u1",
-    "DeploymentShape": "u2",
+    "DeploymentShape": "u2", "Product": "u2", "Tool": "u2", "Setting": "u2",
     "GrantedCapability": "u3", "EvidenceTier": "u3",
     "Barrier": "u4", "Enforcer": "u4", "Control": "u4",
     "Mandate": "u5",
@@ -185,20 +185,28 @@ UNIVERSES = [
         "centre": "the setting",
         "smallest": "a scope, a flag or a line on a documentation page",
         "status": "partial",
-        "status_note": "A shape today carries its tools, its reach names and the route each "
-                       "row goes through, as strings in a profile file. None of them is a node. "
-                       "This is the first universe where the vocabulary is not this site's: a "
+        "status_note": "Since v0.4.3 the product, the tool a capability is reached through and "
+                       "the setting that moves a barrier are nodes, all derived from data that "
+                       "was already published: the tools in the vendor's words, the reductions "
+                       "the map publishes per capability, and the difference between two "
+                       "variants of one product. Scopes, documentation pages and contradictions "
+                       "are not nodes yet, and material is declared on the grammar and valued "
+                       "only where a contributed shape states it. This is the first universe "
+                       "where the vocabulary is not this site's: a "
                        "vendor speaks in scopes, tool names, flags, consent screens and "
                        "administrator settings, and the ABP keeps them in the vendor's words "
                        "and draws an edge from each to the primitive it exposes.",
         "node_types": [
-            _t("Product", "a node that -has_variant-> at least one [DeploymentShape]", False),
+            _t("Product", "[Product] := a node that -has_variant-> at least one [DeploymentShape]", True),
             _t("DeploymentShape", "[DeploymentShape] := a node that -grants-> at least one [Capability]", True),
-            _t("Tool", "a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]", False),
+            _t("Tool", "[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]", True,
+               "One node per shape, in the vendor's words, because what shell (Bash) reaches depends on where it runs."),
             _t("Scope", "a node that a [Tool] or [DeploymentShape] is -scoped_by->, in the vendor's own identifier", False),
-            _t("Setting", "a node that -moves-> a [Barrier] on at least one [GrantedCapability]", False,
-               "The confirmations flag is the published case: one Setting node moving one "
-               "Barrier is what the home page's pair of examples shows."),
+            _t("Setting", "[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]", True,
+               "Two kinds, both from published data: the reduction the map publishes per "
+               "capability, and the setting that distinguishes two variants of one product, "
+               "derived by diffing their grants. The confirmations flag is the second kind, and "
+               "it is the path the home page's pair of examples was a sentence about."),
             _t("DocumentationPage", "a [SourceFile] in U0 that a [Shape], [Tool], [Scope] or [Setting] is -documented_at->", False),
             _t("Contradiction", "a node where an -advertises-> claim and a -scoped_by-> scope on the same "
                "[Product] disagree, both quoted, both dated, published unresolved", False,
@@ -207,19 +215,23 @@ UNIVERSES = [
         "verbs": [
             _v("has_variant", "variant_of", "Product", "DeploymentShape",
                "this product has this variant", "this variant is a variant of this product",
-               "proposed here", "proposed"),
+               "proposed here", "live"),
             _v("runs_with", "run_by", "DeploymentShape", "Tool",
                "this shape runs with this tool", "this tool is run by these shapes",
-               "proposed here", "proposed"),
+               "proposed here", "live"),
             _v("exposes", "exposed_by", "Tool", "Capability",
                "this tool exposes this capability", "this capability is exposed by these tools",
-               "graphs.sgit.ai edge set", "proposed"),
+               "graphs.sgit.ai edge set", "live"),
             _v("scoped_by", "scopes", "Tool or DeploymentShape", "Scope",
                "this tool is scoped by this vendor scope", "this scope scopes these tools",
                "proposed here", "proposed"),
             _v("moves", "moved_by", "Setting", "Barrier",
-               "this setting moves this barrier", "this barrier is moved by this setting",
-               "proposed here", "proposed"),
+               "this setting moves a capability to this barrier",
+               "this barrier is where these settings move a capability to",
+               "proposed here", "live"),
+            _v("narrows", "narrowed_by", "Setting", "Capability",
+               "this setting narrows this capability",
+               "this capability is narrowed by these settings", "proposed here", "live"),
             _v("documented_at", "documents", "Shape, Tool, Scope or Setting", "DocumentationPage",
                "this tool is documented at this page, read on this date",
                "this page documents these tools", "proposed here", "proposed"),

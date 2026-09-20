@@ -2,7 +2,7 @@
 
 > The ABP mapped onto Fractal Semantic Graphs: one capability row walked through nine universes, from the source bytes to a licence condition, each with its own owner and ontology, joined by named edges. Four more named as gaps.
 
-*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -54,7 +54,7 @@ Nine the walk crosses and four it names. **A status is a claim the gate checks**
 |---|---|---|---|---|---|---|
 | 0 | [The source bytes](../../model/universes/u0/index.md) | down | nobody: the bytes are what they are | partial | 0 of 2 | 3 |
 | 1 | [The grammar](../../model/universes/u1/index.md) | down | abp.sgit.ai, promoted from what-can-it-do.games.sgit.ai and bridged back to it | **live** | 6 of 6 | 6 |
-| 2 | [The deployment shape](../../model/universes/u2/index.md) | across | the vendor's published words, read on a date, with a hash, and never probed | partial | 1 of 7 | 9 |
+| 2 | [The deployment shape](../../model/universes/u2/index.md) | across | the vendor's published words, read on a date, with a hash, and never probed | partial | 4 of 7 | 10 |
 | 3 | [The grant and its evidence](../../model/universes/u3/index.md) | across | whoever observed, or the documentation that was read | one edge deep | 2 of 8 | 7 |
 | 4 | [The enforcement](../../model/universes/u4/index.md) | across | whoever set the control: the vendor, the platform, the deployer or nobody | one edge deep | 3 of 7 | 7 |
 | 5 | [The deployer](../../model/universes/u5/index.md) | across | the deployer, in their own words, and the named person who will correct the draft | partial | 1 of 7 | 9 |
@@ -78,6 +78,9 @@ Nine the walk crosses and four it names. **A status is a claim the gate checks**
 | `withholds` | `withheld_by` | [The deployer](../../model/universes/u5/index.md) | [The grammar](../../model/universes/u1/index.md) | this site | live |
 | `exceeds` | `exceeded_by` | [The grant and its evidence](../../model/universes/u3/index.md) | [The deployer](../../model/universes/u5/index.md) | this site | live |
 | `falls_short_of` | `unmet_by` | [The deployer](../../model/universes/u5/index.md) | [The grammar](../../model/universes/u1/index.md) | this site | live |
+| `exposes` | `exposed_by` | [The deployment shape](../../model/universes/u2/index.md) | [The grammar](../../model/universes/u1/index.md) | this site | live |
+| `moves` | `moved_by` | [The deployment shape](../../model/universes/u2/index.md) | [The enforcement](../../model/universes/u4/index.md) | this site | live |
+| `narrows` | `narrowed_by` | [The deployment shape](../../model/universes/u2/index.md) | [The grammar](../../model/universes/u1/index.md) | this site | live |
 
 ## What must not change
 

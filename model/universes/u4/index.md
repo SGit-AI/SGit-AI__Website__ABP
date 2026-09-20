@@ -2,7 +2,7 @@
 
 > The enforcement, one of the universes an ABP row crosses: owned by whoever set the control: the vendor, the platform, the deployer or nobody, with its own node types and verbs, sharing only the grammar. Status: one-edge.
 
-*Source: <https://abp.sgit.ai/model/universes/u4/index.html> · site v0.4.2 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u4/index.html> · site v0.4.3 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -49,6 +49,7 @@ Each is a verb with a distinct inverse, a stated domain and range, and the sente
 | Arrives along | From |
 |---|---|
 | `bounded_by` | [The grant and its evidence](../../../model/universes/u3/index.md) |
+| `moves` | [The deployment shape](../../../model/universes/u2/index.md) |
 
 ## What the map adds here
 

@@ -1105,7 +1105,11 @@ def _capability_page(c, D):
                shell.ascii_safe(red["tier_after"])]]),
             ("note", "**This is a published reduction, not a recommendation.** Whether it is "
                      "worth doing depends on the assets and the consequences, which are not in "
-                     "this document and are not this site's to guess."),
+                     "this document and are not this site's to guess. Since v0.4.3 it is also a "
+                     f"node, `setting/{c['id']}`, in [the deployment shape universe]"
+                     "(model/universes/u2/index.html): it **narrows** this capability and "
+                     "**moves** it to the barrier named in the third column, which is the path "
+                     "the prohibitions table's last column is a projection of."),
         ]
     blocks.append(("p", f"[The capability grammar](model/capabilities/index.html) · "
                         f"[This primitive as JSON](data/capabilities.json)"))

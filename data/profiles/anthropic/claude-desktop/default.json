@@ -27,6 +27,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -39,6 +40,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -51,6 +53,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -63,6 +66,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -75,6 +79,7 @@
       ],
       "control": "the app's folder permission",
       "note": null,
+      "material": null,
       "undo": "no",
       "is_bounded": false
     },
@@ -87,6 +92,7 @@
       ],
       "control": null,
       "note": null,
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -99,6 +105,7 @@
       ],
       "control": "a confirmation prompt",
       "note": "run terminal commands as you",
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -111,6 +118,7 @@
       ],
       "control": "the app's folder permission",
       "note": null,
+      "material": null,
       "undo": "with-effort",
       "is_bounded": false
     },
@@ -124,6 +132,7 @@
       ],
       "control": null,
       "note": "what you paste or attach",
+      "material": null,
       "undo": "yes",
       "is_bounded": false
     },
@@ -136,6 +145,7 @@
       ],
       "control": "the app's own settings file",
       "note": null,
+      "material": null,
       "undo": "yes",
       "is_bounded": false
     }
