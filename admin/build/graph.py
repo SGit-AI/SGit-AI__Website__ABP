@@ -17,11 +17,17 @@ away; it stopped being the definition.
                       -acts_on->   [file]
                       -reaches->   [project]
 
-THE FRACTAL TEST, and it is testable rather than decorative: if zooming into a node needs a new
-format or a special case, the system is hierarchical rather than fractal. So a verb node, a
-capability node, a barrier node and a deployment shape are all THE SAME SHAPE of record, in the
-same node file, obeying the same edge rules. Zoom into any one and it expands into a graph
-obeying identical rules.
+THE FRACTAL TEST, and it is testable rather than decorative. CORRECTED at v0.4.0 to the wording
+graphs.sgit.ai took at v0.6.21: what survives every zoom is the GRAMMAR (every edge a verb with
+an inverse, meaning in connectivity, supersede never delete, provenance kept), and the ONTOLOGY
+is meant to change at every altitude. If zooming in lands you in the same types, the same verbs
+and the same vocabulary all the way down, you have a hierarchy; if it needs a different grammar,
+the claim is false; every zoom that opens a new ontology joined by a named edge to the last is
+the claim working. Until v0.4.0 this docstring stated the first edition's version, one format
+and one schema everywhere, which scores decomposition as fractal. By the corrected test the
+graph this module builds decomposes one vocabulary very well and crosses into another in two
+places (the reach class disagreement and the bridge to the game); the universes its other
+edges point at are mapped in docs/briefs/ and are the work of the releases after this one.
 
 CLASSIFICATION IS A QUERY, NOT A JUDGMENT. Until v0.3.0 a barrier carried `is_control: true`,
 which is a label somebody applied. It is now a FORMULA over paths, in `node-types.json`, and the

@@ -2,7 +2,7 @@
 
 > Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
 
-*Source: <https://abp.sgit.ai/docs/index.html> · site v0.3.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/index.html> · site v0.4.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -34,6 +34,9 @@ The foundation document first, then the three briefs behind it. Published as wri
 
 **[The Prohibitions Are The Exclusions: Your Own Demo Says No Policy Covers The Delta, And The Insurance Act Says How](../docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever plans the ladder from the behaviour policy to everything above it, and whoever talks to an underwriter first
 [the source bytes](../docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how.md)
+
+**[The ABP Is A Fractal Semantic Graph: One Row Crosses Nine Universes, Each Keeps Its Own Ontology, And The Ladder Runs Up To The Estate Of Agents](../docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.md)**: version v0.4.0 date 20 September 2026 from The site's agent, for the project lead to Whoever models the ABP graph, whoever builds the pages of abp.sgit.ai, and the teams at riskmandate.ai and store.sgit.ai who render against its data
+[the source bytes](../docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology.md)
 
 ## The pack
 

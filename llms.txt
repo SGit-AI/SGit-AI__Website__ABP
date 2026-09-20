@@ -2,7 +2,7 @@
 
 > The Agent Behaviour Policy: what your agent can do, what you authorised it to do, the gap between them, and what actually stands in the way.
 
-Site version: v0.3.0
+Site version: v0.4.0
 
 Every page below has a markdown twin generated from the same content as the
 HTML page. Fetch the `.md` and you have the page, without the chrome.
@@ -94,6 +94,7 @@ rating and no risk level anywhere on it, including in the data.
 - [The Delta Is Derived And Never Authored: Storing It Is The Point, And The History Is The Business Case](https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.md): version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published
 - [The Behaviour Policy Is The Document The Only Agent Insurer Already Requires: Sell The Correction, And Not The Draft](https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.md): version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever names the product, prices it, and stands at the table with it next week
 - [The Prohibitions Are The Exclusions: Your Own Demo Says No Policy Covers The Delta, And The Insurance Act Says How](https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.md): version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever plans the ladder from the behaviour policy to everything above it, and whoever talks to an underwriter first
+- [The ABP Is A Fractal Semantic Graph: One Row Crosses Nine Universes, Each Keeps Its Own Ontology, And The Ladder Runs Up To The Estate Of Agents](https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.md): version v0.4.0 date 20 September 2026 from The site's agent, for the project lead to Whoever models the ABP graph, whoever builds the pages of abp.sgit.ai, and the teams at riskmandate.ai and store.sgit.ai who render against its data
 - [Start Here](https://abp.sgit.ai/docs/pack/00__START-HERE/index.md): You are building abp.sgit.ai, the site for the Agent Behaviour Policy. This pack is what has been decided, what already exists, and what you must not invent.
 - [What To Build](https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.md): Every site in the network is named for an argument rather than for a function, and there are twenty seven of them. The argument here is not a product name.
 - [The Conventions](https://abp.sgit.ai/docs/pack/02__THE-CONVENTIONS/index.md): Three sources govern how this site is built. Read all three before writing code. Where this pack and a source disagree, the source wins and you should say so.
@@ -102,6 +103,7 @@ rating and no risk level anywhere on it, including in the data.
 - [The Hard Rules](https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.md): Thirteen rules that constrain this site. Each has a source and a reason. Rule 0 sits above the others and rules 1 and 13 are the two most likely to be broken.
 - [The Prompt](https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.md): Paste this to the agent that builds the site. It is the standard prompt for a new network site, extended with what this one needs.
 - [Docs](https://abp.sgit.ai/docs/index.md): Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
+- [v0.4.0: the ABP is mapped onto Fractal Semantic Graphs: one row crosses nine universes and each keeps its own ontology](https://abp.sgit.ai/versions/v0.4.0/index.md): A map, and nothing built from it yet. By the zoom test as graphs.sgit.ai now states it, the graph this site holds at v0.3.0 decomposes one vocabulary very well and crosses into another in exactly two places, the reach class disagreement and the bridge to the game. An ABP is a...
 - [v0.3.0: read, file and project become nodes with their own addresses, and a node type stops being a label and becomes a formula](https://abp.sgit.ai/versions/v0.3.0/index.md): The model pages were a projection of nothing. A capability was an identifier with a gloss beside it, which is a self-describing node, which is schema-first thinking dressed in graph syntax: the meaning was attached to the node rather than derived from its edges. This release...
 - [v0.2.0: the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it](https://abp.sgit.ai/versions/v0.2.0/index.md): A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes...
 - [v0.1.0: the ontology is promoted out of a game and the five examples are derived rather than written](https://abp.sgit.ai/versions/v0.1.0/index.md): The first version of abp.sgit.ai. The capability ontology the ABP needs already existed, published, as the data pack a game reads, so this release promotes it into a schema with a stable address rather than authoring a second one, and derives five worked ABPs from it. Nothing on...
@@ -114,6 +116,7 @@ rating and no risk level anywhere on it, including in the data.
 
 ## Release history
 
+- [v0.4.0](https://abp.sgit.ai/versions/v0.4.0/index.md) (2026-09-20) the ABP is mapped onto Fractal Semantic Graphs: one row crosses nine universes and each keeps its own ontology
 - [v0.3.0](https://abp.sgit.ai/versions/v0.3.0/index.md) (2026-09-12) read, file and project become nodes with their own addresses, and a node type stops being a label and becomes a formula
 - [v0.2.0](https://abp.sgit.ai/versions/v0.2.0/index.md) (2026-09-11) the delta is derived and never authored, so it is stored with its inputs pinned and the gate recomputes it
 - [v0.1.0](https://abp.sgit.ai/versions/v0.1.0/index.md) (2026-09-11) the ontology is promoted out of a game and the five examples are derived rather than written

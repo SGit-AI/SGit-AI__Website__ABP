@@ -2,7 +2,7 @@
 
 > How a customer vault extends this vocabulary without merging anything: shared facts owned by nobody, per-party formulas, and declared bridges. Parties can disagree about meaning while still agreeing about facts.
 
-*Source: <https://abp.sgit.ai/model/graph/layers/index.html> · site v0.3.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/layers/index.html> · site v0.4.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -58,7 +58,7 @@ A customer vault is layers 2 and 3, pointing at layer 1 by address, version and 
 
 ## Why this is one mechanism rather than two
 
-**Customisation and consolidation are the same operation.** Do not store a consolidated text and maintain it; hold the base plus the amendments and compute the result. A customer's vocabulary is the base plus their amendments, and so is ours, and so is the next customer's. There is no special case for the customer who disagrees, which is the test of whether the model is actually fractal: **if zooming into a node needs a new format or a special case, the system is hierarchical rather than fractal.**
+**Customisation and consolidation are the same operation.** Do not store a consolidated text and maintain it; hold the base plus the amendments and compute the result. A customer's vocabulary is the base plus their amendments, and so is ours, and so is the next customer's. There is no special case for the customer who disagrees, which is the test of whether the model is actually fractal: **the grammar survives every zoom and the ontology does not have to.** A customer's vault is a new ontology joined to this one by a named edge, which is the claim working; a system whose types and verbs are identical all the way down is a hierarchy. (Until v0.4.0 this sentence stated the test the other way round, as one format everywhere; the correction is graphs.sgit.ai's own, taken at its v0.6.21.)
 
 > **The claim that carries this whole page.** Parties can disagree about meaning while still agreeing about facts, **which is the only stable basis for working together.** A customer who cannot accept our definition of a control can still accept that their agent can read every file the account can reach, and that is the sentence the ABP needed them to reach.
 

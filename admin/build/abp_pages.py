@@ -904,6 +904,10 @@ def model_pages(D):
                  "label somebody applied."],
                 ["[The three layers](model/graph/layers/index.html)",
                  "How a customer vault disagrees with this vocabulary without merging anything."],
+                ["[The nine universes](docs/briefs/" + _FSG_BRIEF + "/index.html)",
+                 "The map of the ABP onto Fractal Semantic Graphs: one capability row crosses "
+                 "nine universes, each with its own owner and ontology, joined by named edges. "
+                 "A brief at v0.4.0; the universes land one per release after it."],
             ]),
             ("h2", "The sentence test"),
             ("note", "agent `claude-code-cli-confirmations-disabled` **is-granted** capability "
@@ -1092,6 +1096,8 @@ def _capability_page(c, D):
     }
 
 
+_FSG_BRIEF = ("v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-"
+              "universes-and-each-keeps-its-own-ontology")
 _DELTA_BRIEF = ("v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-"
                 "the-point-and-the-history-is-the-business-case")
 
