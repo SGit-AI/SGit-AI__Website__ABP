@@ -469,15 +469,20 @@ UNIVERSES = [
         "status": "partial",
         "status_note": "The label, the leaflet and the prohibitions exist and are generated "
                        "from one call. AGENTS.md, SKILL.md and LICENCE-TO-OPERATE.md exist in "
-                       "riskmandate.ai's vaults. The fact set is not data and the fact diff, "
-                       "named as the blocker on four consecutive days in September, does not "
-                       "exist. This is the universe where altitude in the 20 August sense "
+                       "riskmandate.ai's vaults. Since v0.4.2 the fact set is a file per "
+                       "stored delta under data/facts/ and the fact diff runs in the release "
+                       "gate: it parses the label, the leaflet, the prohibitions and the "
+                       "figure back out of each example's published twin and fails the build "
+                       "on a single leaf assertion that differs. Neither is a node in the "
+                       "graph yet, which is why the status stays partial. This is the "
+                       "universe where altitude in the 20 August sense "
                        "lives: every projection renders the same fact set for a different "
                        "reader, and the diff over leaf assertions between any two must be empty.",
         "node_types": [
             _t("FactSet", "the leaf assertions of one [DeltaRecord]: this shape grants this capability at this "
                "barrier with this undo class; this mandate authorises these; therefore this excess. Computed, "
-               "never authored", False),
+               "never authored", False,
+               "Exists as a file per stored delta under data/facts/ since v0.4.2, and not yet as a node."),
             _t("Projection", "a node -projects-> one [FactSet], -rendered_for-> one [Audience], with every sentence "
                "-traces_to-> a node", False),
             _t("Audience", "a decision maker, an engineer, an auditor, an underwriter, an agent; the altitude axis", False),
@@ -489,7 +494,9 @@ UNIVERSES = [
                "face that it is a rule in prose, the second barrier, and bounds nothing", False),
             _t("InterchangeDocument", "a [Projection] in the W3C vocabulary through the agent profile; a rule "
                "somebody wrote down until U4 compiles it", False),
-            _t("FactDiff", "a node that -compares-> two [Projection]s over their [FactSet]s and is empty or names the row", False),
+            _t("FactDiff", "a node that -compares-> two [Projection]s over their [FactSet]s and is empty or names the row", False,
+               "Runs as the release gate's fifteenth check since v0.4.2, over the published "
+               "twin of every example, and is not yet a node."),
         ],
         "verbs": [
             _v("projects", "projected_as", "Projection", "FactSet",
@@ -744,26 +751,33 @@ def walk_row(profile, mandate, dlt, cap_id, D, g):
                 if pro else
                 "no prohibition, because the mandate asked for it; the leaflet row and the label count"),
          "licensed_under, up into the licence"),
-        ("u8", (f"a condition of `LICENCE-TO-OPERATE.md` in the behaviour policy vault "
-                f"riskmandate.ai publishes for this shape, beside the thing that enforces it, "
-                f"for an owner who has not yet signed: [{rm}]({RISKMANDATE}{rm})"
+        ("u8", ((f"a condition of `LICENCE-TO-OPERATE.md`" if is_excess else
+                 f"the scope of `LICENCE-TO-OPERATE.md`")
+                + f" in the behaviour policy vault riskmandate.ai publishes for this shape, "
+                + ("beside the thing that enforces it, " if is_excess else "")
+                + f"for an owner who has not yet signed: [{rm}]({RISKMANDATE}{rm})"
                 if rm else "no published licence for this shape yet"),
          "gives_rise_to, further up into risk, which this site never draws"),
     ]
 
     sentence = (
         f"the words `{c['verb']}`, `{c['object']}` and `{c['reach']}` spell a primitive that the "
-        f"shape `{profile['variant']}` grants through {via} as a row known by {row['evidence']}, "
+        f"shape `{profile['variant']}` grants through {via} as a row whose evidence tier is "
+        f"{row['evidence']}, "
         f"bounded by `{row['barrier']}`, which {enforcer} enforces and which is "
         f"{'a control' if is_control else 'not a control'}, which the mandate "
-        f"`{mandate['id']}` left {stance}, so the derivation of "
+        f"`{mandate['id']}` {'asked for' if stance == 'wanted' else 'left ' + stance}, "
+        f"so the derivation of "
         f"{(dlt['computed_at'] or 'this build')[:10]} records it as "
         f"{'unbounded excess' if is_unbounded else 'excess and not unbounded' if is_excess else 'aligned'}"
         + (f", which the leaflet renders as a prohibition that is "
            f"{'enforced today' if pro['enforced_today'] else 'a sentence and not a control today'}"
            if pro else ", which the leaflet renders as an authorised row")
-        + (f", and which the licence in riskmandate.ai's vault for this shape carries as a "
-           f"condition beside its enforcer, for an owner who has not yet signed."
+        + ((f", and which the licence in riskmandate.ai's vault for this shape carries as a "
+            f"condition beside its enforcer, for an owner who has not yet signed."
+            if is_excess else
+            f", and which the licence in riskmandate.ai's vault for this shape carries in its "
+            f"scope, for an owner who has not yet signed.")
            if rm else ", and for which no licence has been published yet."))
     return {"profile": profile["id"], "mandate": mandate["id"], "capability": cap_id,
             "rows": [{"universe": u, "node": n, "edge_leaving": e} for u, n, e in rows],

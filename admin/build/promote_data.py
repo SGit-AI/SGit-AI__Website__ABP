@@ -377,6 +377,7 @@ def manifest(built, version, n_deltas):
             "profiles": "profiles/index.json",
             "mandates": "mandates/index.json",
             "deltas": "deltas/index.json",
+            "facts": "facts/index.json",
             "graph": "graph/index.json",
             "lexicon": "lexicon/index.json",
             "bridges": "bridges/index.json",
@@ -543,6 +544,65 @@ def write_universes(D, g, cls, prov):
         "provenance": prov("Authored in admin/build/universes.py, walked on every build."),
     }, indent=2, ensure_ascii=False) + "\n")
     return recs
+
+
+def write_facts(built, computed_at, examples):
+    """One fact set per stored delta, and an index that names the renderings of each.
+
+    THE DIFF RUNS OVER THE PUBLISHED PAGE. The index records, for every fact set that an
+    example page renders, the markdown twin the gate parses the label, the leaflet, the
+    prohibitions and the figure back out of. A fact set nothing renders is still written,
+    because a consumer rendering it elsewhere needs the same leaf assertions to check against."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import abp  # noqa: E402
+    import facts as F  # noqa: E402
+
+    D = abp.load()
+    rendered = {(pid, mid): slug for slug, pid, mid, *_ in examples}
+    index = []
+    (OUT / "facts").mkdir(parents=True, exist_ok=True)
+    for m in built["mandates"]:
+        for pid in m["applies_to"]:
+            if pid not in D["profiles"]:
+                continue
+            p, md = D["profiles"][pid], D["mandates"][m["id"]]
+            dlt = abp.delta(p, md, D, computed_at)
+            rec = F.fact_set(p, md, dlt, D)
+            slug = f"{pid.replace('/', '__')}__{m['id']}"
+            rec["id"] = slug
+            rec["delta"] = f"deltas/{slug}.json"
+            ex = rendered.get((pid, m["id"]))
+            rec["projections"] = ([
+                {"kind": "label", "rendered_at": f"examples/{ex}/index.md"},
+                {"kind": "leaflet", "rendered_at": f"examples/{ex}/index.md"},
+                {"kind": "prohibitions", "rendered_at": f"examples/{ex}/index.md"},
+                {"kind": "figure", "rendered_at": f"examples/{ex}/index.md"},
+            ] if ex else [])
+            rec["provenance"] = _provenance(built["pack"], built["content_hash"],
+                                            "Derived from the profile and the mandate named "
+                                            "above. Never authored: the gate parses every "
+                                            "rendering back out of its page and diffs it.")
+            (OUT / f"facts/{slug}.json").write_text(
+                json.dumps(rec, indent=2, ensure_ascii=False) + "\n")
+            index.append({"id": slug, "profile": pid, "mandate": m["id"], "example": ex,
+                          "projections": len(rec["projections"]),
+                          "assertions": len(rec["assertions"]), "file": f"facts/{slug}.json"})
+    (OUT / "facts/index.json").write_text(json.dumps({
+        "type": "abp/facts-index/v1",
+        "_what_this_is": "One fact set per stored delta: the leaf assertions every rendering "
+                         "of that ABP must agree on. Where an example page renders one, the "
+                         "index names the markdown twin the release gate parses the label, the "
+                         "leaflet, the prohibitions and the figure back out of, and the build "
+                         "fails on a single leaf assertion that differs. That is the fact diff.",
+        "the_rule": "Every projection renders the same fact set with an empty diff. The facts "
+                    "are the leaf assertions; the classes a reader sees differ by altitude, "
+                    "and that is correct rather than a defect.",
+        "count": len(index), "facts": index,
+        "provenance": _provenance(built["pack"], built["content_hash"],
+                                  "Generated from the profiles and the mandates."),
+    }, indent=2, ensure_ascii=False) + "\n")
+    return index
 
 
 def write_graph(built, computed_at):
@@ -754,6 +814,10 @@ def main():
     version = (ROOT / "admin/build/version.txt").read_text().strip()
     built = build()
     deltas = write_deltas(built, RETRIEVED)
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import abp_pages  # noqa: E402
+    write_facts(built, RETRIEVED, abp_pages.EXAMPLES)
     gr = write_graph(built, RETRIEVED)
     (OUT / "index.json").write_text(
         json.dumps(manifest(built, version, len(deltas)), indent=2, ensure_ascii=False) + "\n")

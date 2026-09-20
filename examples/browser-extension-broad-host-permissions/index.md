@@ -2,7 +2,7 @@
 
 > An Agent Behaviour Policy for A browser extension with broad host permissions: a grant of 3, a mandate of 1, an excess of 2 and an unbounded excess of 2. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/index.html> · site v0.4.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/index.html> · site v0.4.2 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -134,7 +134,15 @@ The fifth graph rule says a path should read as a sentence in the reader's own l
 
 agent [`browser-extension-broad-host-permissions`](../../examples/browser-extension-broad-host-permissions/index.md) **is-granted** capability [`send.endpoint.world`](../../model/capabilities/send.endpoint.world/index.md) **bounded-by** barrier [`none`](../../model/barriers/index.md) **which-exceeds** mandate [`browser-extension-i-installed`](../../model/index.md) **and-is** undo [`no`](../../model/undo/index.md).
 
-[The four objects](../../model/index.md) · [The capability grammar](../../model/capabilities/index.md) · [The barriers](../../model/barriers/index.md) · [This shape as JSON](../../data/profiles/generic/browser-extension/broad-host-permissions.json) · [This mandate as JSON](../../data/mandates/browser-extension-i-installed.json)
+### The same row, across nine universes
+
+That path stays inside one vocabulary. The same row also crosses nine worlds, each owned by a different party and each with its own ontology, and the fifth rule holds across them too. Built from this page's own data on every build; [what the universes are](../../model/universes/index.md).
+
+> The words `send`, `network-endpoint` and `world` spell a primitive that the shape `broad-host-permissions` grants through the extension as a row whose evidence tier is documented, bounded by `none`, which nothing enforces and which is not a control, which the mandate `browser-extension-i-installed` left refused, so the derivation of 2026-09-11 records it as unbounded excess, which the leaflet renders as a prohibition that is a sentence and not a control today, and which the licence in riskmandate.ai's vault for this shape carries as a condition beside its enforcer, for an owner who has not yet signed.
+
+> **Every number on this page is a leaf assertion in one fact set**, at [`/data/facts/generic__browser-extension__broad-host-permissions__browser-extension-i-installed.json`](../../data/facts/generic__browser-extension__broad-host-permissions__browser-extension-i-installed.json), and the release gate parses the label, the leaflet, the prohibitions and the figure back out of this page's markdown twin and fails the build on a single one that differs. The label and the leaflet are two renderings of one fact set, and that is checked rather than asserted.
+
+[The four objects](../../model/index.md) · [The capability grammar](../../model/capabilities/index.md) · [The barriers](../../model/barriers/index.md) · [This shape as JSON](../../data/profiles/generic/browser-extension/broad-host-permissions.json) · [This mandate as JSON](../../data/mandates/browser-extension-i-installed.json) · [The fact set](../../data/facts/generic__browser-extension__broad-host-permissions__browser-extension-i-installed.json)
 
 ---
 

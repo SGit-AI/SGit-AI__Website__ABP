@@ -2,7 +2,7 @@
 
 > An Agent Behaviour Policy for chatGPT (in the browser, no connectors): a grant of 1, a mandate of 1, an excess of 0 and an unbounded excess of 0. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.4.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.4.2 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -126,7 +126,15 @@ The fifth graph rule says a path should read as a sentence in the reader's own l
 
 agent [`chatgpt-web-no-connectors`](../../examples/chatgpt-web-no-connectors/index.md) **is-granted** capability [`read.file.project`](../../model/capabilities/read.file.project/index.md) **bounded-by** barrier [`none`](../../model/barriers/index.md) **which-exceeds** mandate [`chat-no-connectors`](../../model/index.md) **and-is** undo [`yes`](../../model/undo/index.md).
 
-[The four objects](../../model/index.md) · [The capability grammar](../../model/capabilities/index.md) · [The barriers](../../model/barriers/index.md) · [This shape as JSON](../../data/profiles/openai/chatgpt-web/default.json) · [This mandate as JSON](../../data/mandates/chat-no-connectors.json)
+### The same row, across nine universes
+
+That path stays inside one vocabulary. The same row also crosses nine worlds, each owned by a different party and each with its own ontology, and the fifth rule holds across them too. Built from this page's own data on every build; [what the universes are](../../model/universes/index.md).
+
+> The words `read`, `file` and `project` spell a primitive that the shape `default` grants through conversation and uploads as a row whose evidence tier is derived, bounded by `none`, which nothing enforces and which is not a control, which the mandate `chat-no-connectors` asked for, so the derivation of 2026-09-11 records it as aligned, which the leaflet renders as an authorised row, and which the licence in riskmandate.ai's vault for this shape carries in its scope, for an owner who has not yet signed.
+
+> **Every number on this page is a leaf assertion in one fact set**, at [`/data/facts/openai__chatgpt-web__default__chat-no-connectors.json`](../../data/facts/openai__chatgpt-web__default__chat-no-connectors.json), and the release gate parses the label, the leaflet, the prohibitions and the figure back out of this page's markdown twin and fails the build on a single one that differs. The label and the leaflet are two renderings of one fact set, and that is checked rather than asserted.
+
+[The four objects](../../model/index.md) · [The capability grammar](../../model/capabilities/index.md) · [The barriers](../../model/barriers/index.md) · [This shape as JSON](../../data/profiles/openai/chatgpt-web/default.json) · [This mandate as JSON](../../data/mandates/chat-no-connectors.json) · [The fact set](../../data/facts/openai__chatgpt-web__default__chat-no-connectors.json)
 
 ---
 

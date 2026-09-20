@@ -2,7 +2,7 @@
 
 > The projections, one of the universes an ABP row crosses: owned by the renderer, and the fact diff that has to check it, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u7/index.html> · site v0.4.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u7/index.html> · site v0.4.2 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 **Owner** the renderer, and the fact diff that has to check it. **Centre of gravity** the fact set. **Smallest node** one rendered sentence that traces to one node. **Level** across. **Status** partial.
 
-> The label, the leaflet and the prohibitions exist and are generated from one call. AGENTS.md, SKILL.md and LICENCE-TO-OPERATE.md exist in riskmandate.ai's vaults. The fact set is not data and the fact diff, named as the blocker on four consecutive days in September, does not exist. This is the universe where altitude in the 20 August sense lives: every projection renders the same fact set for a different reader, and the diff over leaf assertions between any two must be empty.
+> The label, the leaflet and the prohibitions exist and are generated from one call. AGENTS.md, SKILL.md and LICENCE-TO-OPERATE.md exist in riskmandate.ai's vaults. Since v0.4.2 the fact set is a file per stored delta under data/facts/ and the fact diff runs in the release gate: it parses the label, the leaflet, the prohibitions and the figure back out of each example's published twin and fails the build on a single leaf assertion that differs. Neither is a node in the graph yet, which is why the status stays partial. This is the universe where altitude in the 20 August sense lives: every projection renders the same fact set for a different reader, and the diff over leaf assertions between any two must be empty.
 
 ## Node types
 
@@ -22,7 +22,7 @@ A node type is a required pattern of paths, not a label. The ones marked yes are
 
 | Type | Formula | Exists today | Note |
 |---|---|---|---|
-| **FactSet** | `the leaf assertions of one [DeltaRecord]: this shape grants this capability at this barrier with this undo class; this mandate authorises these; therefore this excess. Computed, never authored` | not yet |  |
+| **FactSet** | `the leaf assertions of one [DeltaRecord]: this shape grants this capability at this barrier with this undo class; this mandate authorises these; therefore this excess. Computed, never authored` | not yet | Exists as a file per stored delta under data/facts/ since v0.4.2, and not yet as a node. |
 | **Projection** | `a node -projects-> one [FactSet], -rendered_for-> one [Audience], with every sentence -traces_to-> a node` | not yet |  |
 | **Audience** | `a decision maker, an engineer, an auditor, an underwriter, an agent; the altitude axis` | not yet |  |
 | **Label** | `a [Projection] with nine fields and no score` | not yet |  |
@@ -30,7 +30,7 @@ A node type is a required pattern of paths, not a label. The ones marked yes are
 | **Prohibition** | `a [Projection] of one [Excess] row as a sentence, carrying its barrier today and the layer a control would sit at; -compiles_to-> a [CompiledRule] in U4` | not yet |  |
 | **AgentFile** | `a [Projection] -rendered_for-> the agent itself: AGENTS.md, SKILL.md; honest on its own face that it is a rule in prose, the second barrier, and bounds nothing` | not yet |  |
 | **InterchangeDocument** | `a [Projection] in the W3C vocabulary through the agent profile; a rule somebody wrote down until U4 compiles it` | not yet |  |
-| **FactDiff** | `a node that -compares-> two [Projection]s over their [FactSet]s and is empty or names the row` | not yet |  |
+| **FactDiff** | `a node that -compares-> two [Projection]s over their [FactSet]s and is empty or names the row` | not yet | Runs as the release gate's fifteenth check since v0.4.2, over the published twin of every example, and is not yet a node. |
 
 ## Verbs
 

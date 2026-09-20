@@ -2,7 +2,7 @@
 
 > The ABP mapped onto Fractal Semantic Graphs: one capability row walked through nine universes, from the source bytes to a licence condition, each with its own owner and ontology, joined by named edges. Four more named as gaps.
 
-*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.4.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.4.2 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -42,7 +42,7 @@ The row is `authenticate-as.credential.tenant` in the shape `anthropic/claude-co
 
 ### Read as one sentence
 
-> The words `authenticate-as`, `credential` and `tenant` spell a primitive that the shape `ccr-container` grants through shell (Bash), harness (MCP and built-in tools) as a row known by inferred, bounded by `boundary`, which something above the grant enforces and which is a control, which the mandate `coding-assistant-in-a-container` left unstated, so the derivation of 2026-09-11 records it as excess and not unbounded, which the leaflet renders as a prohibition that is enforced today, and which the licence in riskmandate.ai's vault for this shape carries as a condition beside its enforcer, for an owner who has not yet signed.
+> The words `authenticate-as`, `credential` and `tenant` spell a primitive that the shape `ccr-container` grants through shell (Bash), harness (MCP and built-in tools) as a row whose evidence tier is inferred, bounded by `boundary`, which something above the grant enforces and which is a control, which the mandate `coding-assistant-in-a-container` left unstated, so the derivation of 2026-09-11 records it as excess and not unbounded, which the leaflet renders as a prohibition that is enforced today, and which the licence in riskmandate.ai's vault for this shape carries as a condition beside its enforcer, for an owner who has not yet signed.
 
 That is the fifth graph rule applied across nine vocabularies rather than within one: every clause is a node this site holds or an edge somebody has declared, and if the sentence stops reading as one, the edges are wrong and the model changes rather than the renderer.
 

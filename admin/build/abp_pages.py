@@ -29,6 +29,7 @@ import abp  # noqa: E402
 import graph  # noqa: E402
 import lexicon_pages  # noqa: E402
 import shell  # noqa: E402
+import universes  # noqa: E402
 
 AS_AT = "11 September 2026"
 # The second of the three clocks. An ABP is exactly as fresh as the twin, and
@@ -349,17 +350,33 @@ def example_page(slug, profile_id, mandate_id, name, why, note, D):
     lead_row = (abp.order(dlt["unbounded_excess"], D) or abp.order(dlt["excess"], D)
                 or abp.order(p["grant"], D))[0]
     lc = D["by_id"][lead_row["capability"]]
+    nine = universes.walk_row(p, m, abp.delta(p, m, D, computed_at=D["provenance"]["retrieved"]),
+                              lead_row["capability"], D, graph.build(D))
+    slug_id = f"{profile_id.replace('/', '__')}__{mandate_id}"
     blocks += [
         ("p", f"agent [`{slug}`]({example_href(slug)}) **is-granted** capability "
               f"[`{lc['id']}`]({cap_href(lc['id'])}) **bounded-by** barrier "
               f"[`{lead_row['barrier']}`](model/barriers/index.html) **which-exceeds** mandate "
               f"[`{m['id']}`](model/index.html) **and-is** undo "
               f"[`{lc['undo']}`](model/undo/index.html)."),
+        ("h3", "The same row, across nine universes"),
+        ("p", "That path stays inside one vocabulary. The same row also crosses nine worlds, "
+              "each owned by a different party and each with its own ontology, and the fifth "
+              "rule holds across them too. Built from this page's own data on every build; "
+              "[what the universes are](model/universes/index.html)."),
+        ("note", shell.ascii_safe(nine["sentence"][0].upper() + nine["sentence"][1:])),
+        ("note", "**Every number on this page is a leaf assertion in one fact set**, at "
+                 f"[`/data/facts/{slug_id}.json`](data/facts/{slug_id}.json), and the release "
+                 "gate parses the label, the leaflet, the prohibitions and the figure back out "
+                 "of this page's markdown twin and fails the build on a single one that "
+                 "differs. The label and the leaflet are two renderings of one fact set, and "
+                 "that is checked rather than asserted."),
         ("p", f"[The four objects](model/index.html) · "
               f"[The capability grammar](model/capabilities/index.html) · "
               f"[The barriers](model/barriers/index.html) · "
               f"[This shape as JSON](data/profiles/{profile_id}.json) · "
-              f"[This mandate as JSON](data/mandates/{mandate_id}.json)"),
+              f"[This mandate as JSON](data/mandates/{mandate_id}.json) · "
+              f"[The fact set](data/facts/{slug_id}.json)"),
     ]
     return {
         "title": name,

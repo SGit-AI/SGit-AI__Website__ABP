@@ -1,0 +1,99 @@
+{
+  "type": "abp/facts-index/v1",
+  "_what_this_is": "One fact set per stored delta: the leaf assertions every rendering of that ABP must agree on. Where an example page renders one, the index names the markdown twin the release gate parses the label, the leaflet, the prohibitions and the figure back out of, and the build fails on a single leaf assertion that differs. That is the fact diff.",
+  "the_rule": "Every projection renders the same fact set with an empty diff. The facts are the leaf assertions; the classes a reader sees differ by altitude, and that is correct rather than a defect.",
+  "count": 9,
+  "facts": [
+    {
+      "id": "anthropic__claude-code__local-default__coding-assistant-on-my-machine",
+      "profile": "anthropic/claude-code/local-default",
+      "mandate": "coding-assistant-on-my-machine",
+      "example": "claude-code-cli-confirmations-enabled",
+      "projections": 4,
+      "assertions": 68,
+      "file": "facts/anthropic__claude-code__local-default__coding-assistant-on-my-machine.json"
+    },
+    {
+      "id": "anthropic__claude-code__local-confirmations-off__coding-assistant-on-my-machine",
+      "profile": "anthropic/claude-code/local-confirmations-off",
+      "mandate": "coding-assistant-on-my-machine",
+      "example": "claude-code-cli-confirmations-disabled",
+      "projections": 4,
+      "assertions": 68,
+      "file": "facts/anthropic__claude-code__local-confirmations-off__coding-assistant-on-my-machine.json"
+    },
+    {
+      "id": "anthropic__claude-code-remote__ccr-container__coding-assistant-in-a-container",
+      "profile": "anthropic/claude-code-remote/ccr-container",
+      "mandate": "coding-assistant-in-a-container",
+      "example": null,
+      "projections": 0,
+      "assertions": 60,
+      "file": "facts/anthropic__claude-code-remote__ccr-container__coding-assistant-in-a-container.json"
+    },
+    {
+      "id": "anthropic__claude-desktop__default__desktop-app-with-local-tools",
+      "profile": "anthropic/claude-desktop/default",
+      "mandate": "desktop-app-with-local-tools",
+      "example": null,
+      "projections": 0,
+      "assertions": 52,
+      "file": "facts/anthropic__claude-desktop__default__desktop-app-with-local-tools.json"
+    },
+    {
+      "id": "anthropic__claude-web__connectors-on__chat-with-connectors",
+      "profile": "anthropic/claude-web/connectors-on",
+      "mandate": "chat-with-connectors",
+      "example": null,
+      "projections": 0,
+      "assertions": 33,
+      "file": "facts/anthropic__claude-web__connectors-on__chat-with-connectors.json"
+    },
+    {
+      "id": "openai__chatgpt-web__default__chat-no-connectors",
+      "profile": "openai/chatgpt-web/default",
+      "mandate": "chat-no-connectors",
+      "example": "chatgpt-web-no-connectors",
+      "projections": 4,
+      "assertions": 25,
+      "file": "facts/openai__chatgpt-web__default__chat-no-connectors.json"
+    },
+    {
+      "id": "github__actions-runner__ci__ci-job",
+      "profile": "github/actions-runner/ci",
+      "mandate": "ci-job",
+      "example": "github-actions-hosted-runner",
+      "projections": 4,
+      "assertions": 43,
+      "file": "facts/github__actions-runner__ci__ci-job.json"
+    },
+    {
+      "id": "generic__browser-extension__broad-host-permissions__browser-extension-i-installed",
+      "profile": "generic/browser-extension/broad-host-permissions",
+      "mandate": "browser-extension-i-installed",
+      "example": "browser-extension-broad-host-permissions",
+      "projections": 4,
+      "assertions": 31,
+      "file": "facts/generic__browser-extension__broad-host-permissions__browser-extension-i-installed.json"
+    },
+    {
+      "id": "generic__scheduled-job__service-account__scheduled-job-under-a-service-account",
+      "profile": "generic/scheduled-job/service-account",
+      "mandate": "scheduled-job-under-a-service-account",
+      "example": null,
+      "projections": 0,
+      "assertions": 42,
+      "file": "facts/generic__scheduled-job__service-account__scheduled-job-under-a-service-account.json"
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Generated from the profiles and the mandates.",
+    "licence": "CC BY 4.0"
+  }
+}

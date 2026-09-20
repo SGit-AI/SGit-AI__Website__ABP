@@ -45,6 +45,10 @@
 //      node type names a universe, every junction is computed from the edge vocabulary and
 //      listed, a `live' status means every declared type is in the graph, and the walk
 //      crosses nine universes over a row the shape actually grants.
+//  15. THE FACT DIFF (v0.4.2): every projection renders the same fact set with an empty diff.
+//      The label, the leaflet, the prohibitions and the figure are parsed back out of each
+//      example's published markdown twin and compared, leaf assertion by leaf assertion,
+//      with data/facts/. One row that differs fails the build.
 //  12. THE DATA HOLDS TOGETHER: the promoted vocabulary resolves, the upstream bytes hash to
 //      what their manifest says, every profile row names a real capability and a real barrier,
 //      no mandate both wants and refuses the same thing, and EVERY STORED DELTA RECOMPUTES
@@ -723,6 +727,152 @@ for (const f of files) {
   }
 }());
 
+// --- 15. the fact diff -------------------------------------------------------
+// EVERY PROJECTION RENDERS THE SAME FACT SET, AND THE DIFF MUST BE EMPTY. In force since
+// August, named as the blocker on four consecutive days in September, built at v0.4.2. The
+// pack's specification: the diff is over LEAF ASSERTIONS, not over structure. The classes a
+// reader sees differ by altitude and the facts do not.
+//
+// THE DIFF RUNS OVER THE PUBLISHED PAGE, NOT THE GENERATOR. For every fact set that an example
+// renders, this parses the label, the leaflet, the prohibitions and the figure back out of the
+// example's own markdown twin, as text, and compares each leaf assertion with data/facts/. A
+// diff that trusted the generator's intermediate would be a diff over nothing, because the
+// label and the leaflet are produced from one call and could only disagree with the fact set
+// if the call did. Parsing the rendered text is what makes the label and the leaflet two
+// renderings that are CHECKED to carry the same facts rather than asserted to.
+(function () {
+  const D = path.join(ROOT, 'data');
+  const J = f => { try { return JSON.parse(read(path.join(D, f))); }
+                   catch (e) { errors.push(`data/${f}: ${e.message}`); return null; } };
+  const fidx = J('facts/index.json');
+  const caps = J('capabilities.json');
+  const didx = J('deltas/index.json');
+  if (!fidx || !caps || !didx) return;
+  const deltaIds = new Set((didx.deltas || []).map(d => d.id));
+  const cap = /\[`([^`]+)`\]/;
+  const cell = row => row.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(c => c.trim());
+  const section = (lines, start, stop) => {
+    const i = lines.findIndex(l => l.startsWith(start));
+    if (i < 0) return null;
+    let j = lines.findIndex((l, k) => k > i && l.startsWith(stop));
+    if (j < 0) j = lines.length;
+    return lines.slice(i, j);
+  };
+  const numIn = (rows, field) => {
+    const r = rows.find(l => l.startsWith(`| ${field} |`));
+    if (!r) return null;
+    const m = cell(r)[1].match(/\*\*([^*]+)\*\*/);
+    return m ? m[1] : null;
+  };
+  let checked = 0;
+  for (const e of fidx.facts || []) {
+    const f = J(e.file); if (!f) continue;
+    // A fact set pins the same inputs as the delta it is built from, and names a delta that exists.
+    if (!deltaIds.has(f.id)) errors.push(`data/${e.file}: names delta ${f.id}, which is not in deltas/index.json`);
+    const d = J(`deltas/${f.id}.json`);
+    if (d) {
+      for (const k of ['grant_version', 'mandate_version', 'pack_version', 'computed_by']) {
+        if (f.pinned[k] !== d[k]) errors.push(`data/${e.file}: pins ${k} ${f.pinned[k]}, the delta pins ${d[k]}`);
+      }
+      const facts = kind => f.assertions.filter(a => a.kind === kind).map(a => a.capability);
+      for (const k of ['excess', 'unbounded_excess', 'shortfall', 'aligned']) {
+        const a = facts(k), b = d[k] || [];
+        if (a.length !== b.length || a.some((x, i) => x !== b[i])) {
+          errors.push(`data/${e.file}: the ${k} assertions [${a.join(', ')}] differ from the delta's [${b.join(', ')}]`);
+        }
+      }
+    }
+    const stanceOf = Object.fromEntries(f.assertions.filter(a => a.kind === 'stance').map(a => [a.capability, a.stance]));
+    if (Object.keys(stanceOf).length !== caps.count) errors.push(`data/${e.file}: takes a stance on ${Object.keys(stanceOf).length} primitives, there are ${caps.count}`);
+    const grants = f.assertions.filter(a => a.kind === 'grants');
+    const grantOf = Object.fromEntries(grants.map(a => [a.capability, a]));
+    const excess = new Set(f.assertions.filter(a => a.kind === 'excess').map(a => a.capability));
+    if (grants.length !== f.counts.grant) errors.push(`data/${e.file}: counts.grant says ${f.counts.grant}, there are ${grants.length} grants assertions`);
+
+    const pages = new Set((f.projections || []).map(p => p.rendered_at));
+    for (const rel of pages) {
+      const file = path.join(ROOT, rel);
+      if (!fs.existsSync(file)) { errors.push(`data/${e.file}: rendered at ${rel}, which does not exist`); continue; }
+      const lines = read(file).split('\n');
+      const where = `${rel} against data/${e.file}`;
+      checked++;
+
+      // THE LABEL. Nine fields, seven of them numbers or a reach class.
+      const label = section(lines, '## The label', '## 1.');
+      if (!label) { errors.push(`${where}: no label section`); continue; }
+      const expectLabel = {
+        'Grant': `${f.counts.grant} of ${f.counts.primitives} primitives`,
+        'Mandate': `${f.counts.mandate} primitives`,
+        'Excess': String(f.counts.excess),
+        'Unbounded excess': String(f.counts.unbounded_excess),
+        'Irreversible': String(f.counts.irreversible),
+        'Widest reach': String(f.counts.widest_reach),
+        'Measured': `${f.counts.measured} of ${f.counts.rows} rows`,
+      };
+      for (const [k, v] of Object.entries(expectLabel)) {
+        const got = numIn(label, k);
+        if (got !== v) errors.push(`${where}: the label says ${k} is "${got}", the fact set says "${v}"`);
+      }
+
+      // THE LEAFLET. Every granted row, with its undo class, its barrier, its evidence and the
+      // mandate's stance, parsed out of the table and compared row by row, both ways.
+      const leaflet = section(lines, '## 2. The grant', '## 3.');
+      if (!leaflet) { errors.push(`${where}: no grant section`); continue; }
+      const rows = leaflet.filter(l => /^\| [^|]* \| \[`/.test(l)).map(cell);
+      const seen = new Set();
+      for (const r of rows) {
+        const id = (r[1].match(cap) || [])[1];
+        if (!id) continue;
+        seen.add(id);
+        const a = grantOf[id];
+        if (!a) { errors.push(`${where}: the leaflet has a row for ${id} and the fact set does not grant it`); continue; }
+        if (r[2] !== a.undo) errors.push(`${where}: the leaflet says ${id} has undo "${r[2]}", the fact set says "${a.undo}"`);
+        const barrier = r[3].split(' ')[0];
+        if (barrier !== a.barrier) errors.push(`${where}: the leaflet says ${id} is at barrier "${barrier}", the fact set says "${a.barrier}"`);
+        if (/\(not a control\)/.test(r[3]) === a.is_control) errors.push(`${where}: the leaflet and the fact set disagree on whether ${id}'s barrier is a control`);
+        if (r[4] !== a.evidence) errors.push(`${where}: the leaflet says ${id} is known by "${r[4]}", the fact set says "${a.evidence}"`);
+        const st = r[5] || '';
+        const stance = /authorised/.test(st) ? 'wanted' : /refused/.test(st) ? 'refused' : /unstated/.test(st) ? 'unstated' : null;
+        if (stance !== stanceOf[id]) errors.push(`${where}: the leaflet says the mandate's stance on ${id} is "${stance}", the fact set says "${stanceOf[id]}"`);
+        if ((stance !== 'wanted') !== excess.has(id)) errors.push(`${where}: ${id} is ${excess.has(id) ? '' : 'not '}excess in the fact set and the leaflet renders it as ${st}`);
+      }
+      for (const id of Object.keys(grantOf)) {
+        if (!seen.has(id)) errors.push(`${where}: the fact set grants ${id} and the leaflet has no row for it`);
+      }
+
+      // THE PROHIBITIONS. One per excess row, at the same barrier, enforced iff a control.
+      const pro = section(lines, '## 5. The prohibitions', '## 6.');
+      if (!pro) { errors.push(`${where}: no prohibitions section`); continue; }
+      const prows = pro.filter(l => /^\| [^|]* \| The agent must not/.test(l)).map(cell);
+      const pseen = new Set();
+      for (const r of prows) {
+        const id = (r[1].match(cap) || [])[1];
+        if (!id) continue;
+        pseen.add(id);
+        if (!excess.has(id)) errors.push(`${where}: a prohibition is rendered for ${id}, which is not excess in the fact set`);
+        const a = grantOf[id];
+        if (a && r[2] !== a.barrier) errors.push(`${where}: the prohibition for ${id} carries barrier "${r[2]}", the fact set says "${a.barrier}"`);
+        if (a && /\*\*enforced\*\*/.test(r[3]) !== a.is_control) errors.push(`${where}: the prohibition for ${id} says ${r[3]}, the fact set says its barrier is ${a.is_control ? '' : 'not '}a control`);
+      }
+      for (const id of excess) if (!pseen.has(id)) errors.push(`${where}: ${id} is excess in the fact set and no prohibition is rendered for it`);
+
+      // THE FIGURE. Its caption in the twin carries three counts.
+      const fig = lines.find(l => l.includes('marks on the grant side have no line reaching them'));
+      if (!fig) errors.push(`${where}: no figure caption`);
+      else {
+        const m = fig.match(/\*\*(\d+) marks on the grant side[^*]*\*\*, of which (\d+) sit at a barrier that is not a control(?:, and (\d+) on the mandate side reach nothing)?/);
+        if (!m) errors.push(`${where}: the figure caption does not carry its counts in the expected form`);
+        else {
+          if (+m[1] !== f.counts.excess) errors.push(`${where}: the figure says ${m[1]} excess, the fact set says ${f.counts.excess}`);
+          if (+m[2] !== f.counts.unbounded_excess) errors.push(`${where}: the figure says ${m[2]} unbounded, the fact set says ${f.counts.unbounded_excess}`);
+          if ((+m[3] || 0) !== f.counts.shortfall) errors.push(`${where}: the figure says ${m[3] || 0} shortfall, the fact set says ${f.counts.shortfall}`);
+        }
+      }
+    }
+  }
+  if (checked === 0) errors.push('data/facts/index.json names no rendered projection, so the fact diff checked nothing -- run build_pages.py');
+}());
+
 // --- report ---------------------------------------------------------------
 if (errors.length) {
   console.error(`validate: ${errors.length} error(s)`);
@@ -737,4 +887,6 @@ console.log(`validate: OK -- ${VERSION} on ${HOST}, ${htmlFiles.length} pages, `
           + `graph holds: every edge has a distinct inverse, exactly one barrier walks to `
           + `[Control], every word in the grammar has an address, and the universes hold: `
           + `every node type is owned, every junction is computed and listed, and the walk `
-          + `crosses nine universes over a row the shape grants`);
+          + `crosses nine universes over a row the shape grants; and the fact diff is empty: every `
+          + `label, leaflet, prohibition and figure parsed back out of its published page carries `
+          + `the leaf assertions of its fact set`);

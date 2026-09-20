@@ -8,13 +8,13 @@
   "centre": "the fact set",
   "smallest": "one rendered sentence that traces to one node",
   "status": "partial",
-  "status_note": "The label, the leaflet and the prohibitions exist and are generated from one call. AGENTS.md, SKILL.md and LICENCE-TO-OPERATE.md exist in riskmandate.ai's vaults. The fact set is not data and the fact diff, named as the blocker on four consecutive days in September, does not exist. This is the universe where altitude in the 20 August sense lives: every projection renders the same fact set for a different reader, and the diff over leaf assertions between any two must be empty.",
+  "status_note": "The label, the leaflet and the prohibitions exist and are generated from one call. AGENTS.md, SKILL.md and LICENCE-TO-OPERATE.md exist in riskmandate.ai's vaults. Since v0.4.2 the fact set is a file per stored delta under data/facts/ and the fact diff runs in the release gate: it parses the label, the leaflet, the prohibitions and the figure back out of each example's published twin and fails the build on a single leaf assertion that differs. Neither is a node in the graph yet, which is why the status stays partial. This is the universe where altitude in the 20 August sense lives: every projection renders the same fact set for a different reader, and the diff over leaf assertions between any two must be empty.",
   "node_types": [
     {
       "name": "FactSet",
       "formula": "the leaf assertions of one [DeltaRecord]: this shape grants this capability at this barrier with this undo class; this mandate authorises these; therefore this excess. Computed, never authored",
       "exists_today": false,
-      "note": null,
+      "note": "Exists as a file per stored delta under data/facts/ since v0.4.2, and not yet as a node.",
       "matched": null
     },
     {
@@ -70,7 +70,7 @@
       "name": "FactDiff",
       "formula": "a node that -compares-> two [Projection]s over their [FactSet]s and is empty or names the row",
       "exists_today": false,
-      "note": null,
+      "note": "Runs as the release gate's fifteenth check since v0.4.2, over the published twin of every example, and is not yet a node.",
       "matched": null
     }
   ],

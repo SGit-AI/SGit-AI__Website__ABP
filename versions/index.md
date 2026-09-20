@@ -2,7 +2,7 @@
 
 > Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
-*Source: <https://abp.sgit.ai/versions/index.html> · site v0.4.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/index.html> · site v0.4.2 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -16,6 +16,7 @@ Every release of this site. **The badge in the top bar reads `current` from [`ve
 
 | Version | Date | What changed |
 |---|---|---|
+| [v0.4.2](../versions/v0.4.2/index.md) | 2026-09-20 | the fact set is data, the fact diff runs over every published page, and every example ends by crossing nine universes |
 | [v0.4.1](../versions/v0.4.1/index.md) | 2026-09-20 | the universes become data with a page each, the walk of one row is built on every build, and the gate checks that every node type is owned |
 | [v0.4.0](../versions/v0.4.0/index.md) | 2026-09-20 | the ABP is mapped onto Fractal Semantic Graphs: one row crosses nine universes and each keeps its own ontology |
 | [v0.3.0](../versions/v0.3.0/index.md) | 2026-09-12 | read, file and project become nodes with their own addresses, and a node type stops being a label and becomes a formula |

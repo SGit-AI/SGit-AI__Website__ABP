@@ -2,7 +2,7 @@
 
 > An Agent Behaviour Policy for actions runner (a hosted CI job): a grant of 8, a mandate of 5, an excess of 4 and an unbounded excess of 3. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html> · site v0.4.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html> · site v0.4.2 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -143,7 +143,15 @@ The fifth graph rule says a path should read as a sentence in the reader's own l
 
 agent [`github-actions-hosted-runner`](../../examples/github-actions-hosted-runner/index.md) **is-granted** capability [`delete.file.host`](../../model/capabilities/delete.file.host/index.md) **bounded-by** barrier [`none`](../../model/barriers/index.md) **which-exceeds** mandate [`ci-job`](../../model/index.md) **and-is** undo [`no`](../../model/undo/index.md).
 
-[The four objects](../../model/index.md) · [The capability grammar](../../model/capabilities/index.md) · [The barriers](../../model/barriers/index.md) · [This shape as JSON](../../data/profiles/github/actions-runner/ci.json) · [This mandate as JSON](../../data/mandates/ci-job.json)
+### The same row, across nine universes
+
+That path stays inside one vocabulary. The same row also crosses nine worlds, each owned by a different party and each with its own ontology, and the fifth rule holds across them too. Built from this page's own data on every build; [what the universes are](../../model/universes/index.md).
+
+> The words `delete`, `file` and `host` spell a primitive that the shape `ci` grants through the job's shell as a row whose evidence tier is observed, bounded by `none`, which nothing enforces and which is not a control, which the mandate `ci-job` left unstated, so the derivation of 2026-09-11 records it as unbounded excess, which the leaflet renders as a prohibition that is a sentence and not a control today, and which the licence in riskmandate.ai's vault for this shape carries as a condition beside its enforcer, for an owner who has not yet signed.
+
+> **Every number on this page is a leaf assertion in one fact set**, at [`/data/facts/github__actions-runner__ci__ci-job.json`](../../data/facts/github__actions-runner__ci__ci-job.json), and the release gate parses the label, the leaflet, the prohibitions and the figure back out of this page's markdown twin and fails the build on a single one that differs. The label and the leaflet are two renderings of one fact set, and that is checked rather than asserted.
+
+[The four objects](../../model/index.md) · [The capability grammar](../../model/capabilities/index.md) · [The barriers](../../model/barriers/index.md) · [This shape as JSON](../../data/profiles/github/actions-runner/ci.json) · [This mandate as JSON](../../data/mandates/ci-job.json) · [The fact set](../../data/facts/github__actions-runner__ci__ci-job.json)
 
 ---
 

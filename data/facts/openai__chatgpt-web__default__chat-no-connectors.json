@@ -1,0 +1,184 @@
+{
+  "type": "abp/facts/v1",
+  "_what_this_is": "The leaf assertions every rendering of this ABP must agree on: what the shape grants, at what barrier, with what undo class and evidence; what stance the mandate takes on every primitive; and the excess, the unbounded excess, the aligned set and the shortfall that follow. The classes a reader sees are not here, because they differ by altitude and the facts do not.",
+  "computed_never_authored": "No field here is writable by a person. It is derived from the profile and the mandate it pins, and the release gate parses every rendering of it back out of the published page and fails on a single leaf assertion that differs.",
+  "profile": "openai/chatgpt-web/default",
+  "mandate": "chat-no-connectors",
+  "pinned": {
+    "grant_version": "2026-09-05",
+    "mandate_version": "2026-09-09",
+    "pack_version": "v0.8.0",
+    "computed_by": "abp.delta/v1"
+  },
+  "counts": {
+    "primitives": 23,
+    "grant": 1,
+    "mandate": 1,
+    "excess": 0,
+    "unbounded_excess": 0,
+    "shortfall": 0,
+    "irreversible": 0,
+    "widest_reach": "project",
+    "measured": 0,
+    "rows": 1
+  },
+  "assertions": [
+    {
+      "kind": "grants",
+      "capability": "read.file.project",
+      "barrier": "none",
+      "undo": "yes",
+      "evidence": "derived",
+      "is_control": false
+    },
+    {
+      "kind": "stance",
+      "capability": "authenticate-as.credential.signing",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "authenticate-as.credential.tenant",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "create.record.world",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "create.schedule.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "create.schedule.tenant",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "delete.file.host",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "execute.process.host",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "execute.process.self",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "grant.credential.self",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.credential.host",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.file.host",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.file.project",
+      "stance": "wanted"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.message.tenant",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.record.browsing",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.record.history",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "send.endpoint.allowed",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "send.endpoint.world",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "send.message.world",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.budget.tenant",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.file.host",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.file.project",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.repository.project",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.repository.tenant",
+      "stance": "refused"
+    },
+    {
+      "kind": "aligned",
+      "capability": "read.file.project"
+    }
+  ],
+  "id": "openai__chatgpt-web__default__chat-no-connectors",
+  "delta": "deltas/openai__chatgpt-web__default__chat-no-connectors.json",
+  "projections": [
+    {
+      "kind": "label",
+      "rendered_at": "examples/chatgpt-web-no-connectors/index.md"
+    },
+    {
+      "kind": "leaflet",
+      "rendered_at": "examples/chatgpt-web-no-connectors/index.md"
+    },
+    {
+      "kind": "prohibitions",
+      "rendered_at": "examples/chatgpt-web-no-connectors/index.md"
+    },
+    {
+      "kind": "figure",
+      "rendered_at": "examples/chatgpt-web-no-connectors/index.md"
+    }
+  ],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Derived from the profile and the mandate named above. Never authored: the gate parses every rendering back out of its page and diffs it.",
+    "licence": "CC BY 4.0"
+  }
+}

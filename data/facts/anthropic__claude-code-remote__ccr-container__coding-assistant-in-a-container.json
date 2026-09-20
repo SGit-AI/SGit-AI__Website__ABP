@@ -1,0 +1,363 @@
+{
+  "type": "abp/facts/v1",
+  "_what_this_is": "The leaf assertions every rendering of this ABP must agree on: what the shape grants, at what barrier, with what undo class and evidence; what stance the mandate takes on every primitive; and the excess, the unbounded excess, the aligned set and the shortfall that follow. The classes a reader sees are not here, because they differ by altitude and the facts do not.",
+  "computed_never_authored": "No field here is writable by a person. It is derived from the profile and the mandate it pins, and the release gate parses every rendering of it back out of the published page and fails on a single leaf assertion that differs.",
+  "profile": "anthropic/claude-code-remote/ccr-container",
+  "mandate": "coding-assistant-in-a-container",
+  "pinned": {
+    "grant_version": "2026-09-05.2",
+    "mandate_version": "2026-09-09",
+    "pack_version": "v0.8.0",
+    "computed_by": "abp.delta/v1"
+  },
+  "counts": {
+    "primitives": 23,
+    "grant": 15,
+    "mandate": 6,
+    "excess": 9,
+    "unbounded_excess": 7,
+    "shortfall": 0,
+    "irreversible": 7,
+    "widest_reach": "tenant",
+    "measured": 13,
+    "rows": 20
+  },
+  "assertions": [
+    {
+      "kind": "grants",
+      "capability": "authenticate-as.credential.signing",
+      "barrier": "none",
+      "undo": "no",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "delete.file.host",
+      "barrier": "none",
+      "undo": "no",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "read.credential.host",
+      "barrier": "none",
+      "undo": "no",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "read.file.host",
+      "barrier": "none",
+      "undo": "no",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "read.record.history",
+      "barrier": "none",
+      "undo": "no",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "authenticate-as.credential.tenant",
+      "barrier": "boundary",
+      "undo": "no",
+      "evidence": "inferred",
+      "is_control": true
+    },
+    {
+      "kind": "grants",
+      "capability": "send.endpoint.allowed",
+      "barrier": "boundary",
+      "undo": "no",
+      "evidence": "observed",
+      "is_control": true
+    },
+    {
+      "kind": "grants",
+      "capability": "execute.process.host",
+      "barrier": "none",
+      "undo": "with-effort",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "write.file.host",
+      "barrier": "none",
+      "undo": "with-effort",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "write.file.project",
+      "barrier": "none",
+      "undo": "with-effort",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "write.repository.project",
+      "barrier": "none",
+      "undo": "with-effort",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "write.repository.tenant",
+      "barrier": "setting",
+      "undo": "with-effort",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "read.file.project",
+      "barrier": "none",
+      "undo": "yes",
+      "evidence": "observed",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "create.schedule.tenant",
+      "barrier": "setting",
+      "undo": "yes",
+      "evidence": "self-reported",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "create.schedule.host",
+      "barrier": "boundary",
+      "undo": "yes",
+      "evidence": "observed",
+      "is_control": true
+    },
+    {
+      "kind": "stance",
+      "capability": "authenticate-as.credential.signing",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "authenticate-as.credential.tenant",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "create.record.world",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "create.schedule.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "create.schedule.tenant",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "delete.file.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "execute.process.host",
+      "stance": "wanted"
+    },
+    {
+      "kind": "stance",
+      "capability": "execute.process.self",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "grant.credential.self",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.credential.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.file.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.file.project",
+      "stance": "wanted"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.message.tenant",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.record.browsing",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.record.history",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "send.endpoint.allowed",
+      "stance": "wanted"
+    },
+    {
+      "kind": "stance",
+      "capability": "send.endpoint.world",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "send.message.world",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.budget.tenant",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.file.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.file.project",
+      "stance": "wanted"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.repository.project",
+      "stance": "wanted"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.repository.tenant",
+      "stance": "wanted"
+    },
+    {
+      "kind": "excess",
+      "capability": "authenticate-as.credential.signing"
+    },
+    {
+      "kind": "excess",
+      "capability": "delete.file.host"
+    },
+    {
+      "kind": "excess",
+      "capability": "read.credential.host"
+    },
+    {
+      "kind": "excess",
+      "capability": "read.file.host"
+    },
+    {
+      "kind": "excess",
+      "capability": "read.record.history"
+    },
+    {
+      "kind": "excess",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "kind": "excess",
+      "capability": "write.file.host"
+    },
+    {
+      "kind": "excess",
+      "capability": "create.schedule.tenant"
+    },
+    {
+      "kind": "excess",
+      "capability": "create.schedule.host"
+    },
+    {
+      "kind": "unbounded_excess",
+      "capability": "authenticate-as.credential.signing"
+    },
+    {
+      "kind": "unbounded_excess",
+      "capability": "delete.file.host"
+    },
+    {
+      "kind": "unbounded_excess",
+      "capability": "read.credential.host"
+    },
+    {
+      "kind": "unbounded_excess",
+      "capability": "read.file.host"
+    },
+    {
+      "kind": "unbounded_excess",
+      "capability": "read.record.history"
+    },
+    {
+      "kind": "unbounded_excess",
+      "capability": "write.file.host"
+    },
+    {
+      "kind": "unbounded_excess",
+      "capability": "create.schedule.tenant"
+    },
+    {
+      "kind": "aligned",
+      "capability": "send.endpoint.allowed"
+    },
+    {
+      "kind": "aligned",
+      "capability": "execute.process.host"
+    },
+    {
+      "kind": "aligned",
+      "capability": "write.file.project"
+    },
+    {
+      "kind": "aligned",
+      "capability": "write.repository.project"
+    },
+    {
+      "kind": "aligned",
+      "capability": "write.repository.tenant"
+    },
+    {
+      "kind": "aligned",
+      "capability": "read.file.project"
+    }
+  ],
+  "id": "anthropic__claude-code-remote__ccr-container__coding-assistant-in-a-container",
+  "delta": "deltas/anthropic__claude-code-remote__ccr-container__coding-assistant-in-a-container.json",
+  "projections": [],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Derived from the profile and the mandate named above. Never authored: the gate parses every rendering back out of its page and diffs it.",
+    "licence": "CC BY 4.0"
+  }
+}
