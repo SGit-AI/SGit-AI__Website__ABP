@@ -3,7 +3,7 @@
   "_what_this_is": "Stored deltas, one per deployment shape and mandate pair. DERIVED AND NEVER AUTHORED: each record pins the version of both inputs and the time and code version that produced it, so it can be recomputed and compared rather than taken on trust. A delta that carries no inputs is the stale claim the earlier `never stored` wording was afraid of.",
   "correction": "The foundation document of 11 September 2026 says the delta is computed and never stored. That was corrected the same day: the delta is derived and never authored. The correction and what follows from it are in the dev brief of 11 September in /docs/briefs/.",
   "never_authored": "No field in any of these records is writable by a person. The way to change a delta is to change a grant or a mandate, and recompute.",
-  "count": 9,
+  "count": 16,
   "deltas": [
     {
       "id": "anthropic__claude-code__local-default__coding-assistant-on-my-machine",
@@ -148,6 +148,118 @@
         "aligned": 3
       },
       "file": "deltas/generic__scheduled-job__service-account__scheduled-job-under-a-service-account.json"
+    },
+    {
+      "id": "google__gmail__readonly-connector__reader-on-my-mailbox",
+      "profile": "google/gmail/readonly-connector",
+      "mandate": "reader-on-my-mailbox",
+      "grant_version": "2026-09-15",
+      "mandate_version": "2026-09-15",
+      "computed_at": "2026-09-20T17:23:43Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 3,
+        "unbounded_excess": 2,
+        "shortfall": 0,
+        "aligned": 1
+      },
+      "file": "deltas/google__gmail__readonly-connector__reader-on-my-mailbox.json"
+    },
+    {
+      "id": "anthropic__gmail-connector__default__read-and-draft-never-send",
+      "profile": "anthropic/gmail-connector/default",
+      "mandate": "read-and-draft-never-send",
+      "grant_version": "2026-09-16",
+      "mandate_version": "2026-09-16",
+      "computed_at": "2026-09-20T17:23:43Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 5,
+        "unbounded_excess": 4,
+        "shortfall": 0,
+        "aligned": 1
+      },
+      "file": "deltas/anthropic__gmail-connector__default__read-and-draft-never-send.json"
+    },
+    {
+      "id": "google__drive__readonly-connector__reader-on-my-drive",
+      "profile": "google/drive/readonly-connector",
+      "mandate": "reader-on-my-drive",
+      "grant_version": "2026-09-15",
+      "mandate_version": "2026-09-15",
+      "computed_at": "2026-09-20T17:23:43Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 2,
+        "unbounded_excess": 1,
+        "shortfall": 0,
+        "aligned": 1
+      },
+      "file": "deltas/google__drive__readonly-connector__reader-on-my-drive.json"
+    },
+    {
+      "id": "anthropic__microsoft-365-connector__default__search-our-tenant-read-only",
+      "profile": "anthropic/microsoft-365-connector/default",
+      "mandate": "search-our-tenant-read-only",
+      "grant_version": "2026-09-15",
+      "mandate_version": "2026-09-15",
+      "computed_at": "2026-09-20T17:23:43Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 3,
+        "unbounded_excess": 1,
+        "shortfall": 0,
+        "aligned": 2
+      },
+      "file": "deltas/anthropic__microsoft-365-connector__default__search-our-tenant-read-only.json"
+    },
+    {
+      "id": "dropbox__mcp-server__default__find-and-read-my-files",
+      "profile": "dropbox/mcp-server/default",
+      "mandate": "find-and-read-my-files",
+      "grant_version": "2026-09-15",
+      "mandate_version": "2026-09-15",
+      "computed_at": "2026-09-20T17:23:43Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 4,
+        "unbounded_excess": 0,
+        "shortfall": 0,
+        "aligned": 1
+      },
+      "file": "deltas/dropbox__mcp-server__default__find-and-read-my-files.json"
+    },
+    {
+      "id": "google__workspace-mcp__default__assistant-over-my-workspace",
+      "profile": "google/workspace-mcp/default",
+      "mandate": "assistant-over-my-workspace",
+      "grant_version": "2026-09-15",
+      "mandate_version": "2026-09-15",
+      "computed_at": "2026-09-20T17:23:43Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 4,
+        "unbounded_excess": 1,
+        "shortfall": 0,
+        "aligned": 2
+      },
+      "file": "deltas/google__workspace-mcp__default__assistant-over-my-workspace.json"
+    },
+    {
+      "id": "n8n__self-hosted__owner-api-key__sandbox-build-one-agent-workflow",
+      "profile": "n8n/self-hosted/owner-api-key",
+      "mandate": "sandbox-build-one-agent-workflow",
+      "grant_version": "2026-09-13",
+      "mandate_version": "2026-09-13",
+      "computed_at": "2026-09-20T17:23:43Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 4,
+        "unbounded_excess": 4,
+        "shortfall": 0,
+        "aligned": 4
+      },
+      "file": "deltas/n8n__self-hosted__owner-api-key__sandbox-build-one-agent-workflow.json"
     }
   ],
   "provenance": {

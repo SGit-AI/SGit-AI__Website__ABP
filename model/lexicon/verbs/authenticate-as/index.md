@@ -2,7 +2,7 @@
 
 > The verb authenticate-as as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/authenticate-as/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/authenticate-as/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,8 +22,8 @@ The verb `authenticate-as`, and every primitive it appears in. **This page is a 
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`authenticate-as.credential.signing`](../../../../model/capabilities/authenticate-as.credential.signing/index.md) | Sign commits with the key it holds | [`authenticate-as`](../../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 3 of 9 |
-| [`authenticate-as.credential.tenant`](../../../../model/capabilities/authenticate-as.credential.tenant/index.md) | Act in accounts with the credentials it holds | [`authenticate-as`](../../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 7 of 9 |
+| [`authenticate-as.credential.signing`](../../../../model/capabilities/authenticate-as.credential.signing/index.md) | Sign commits with the key it holds | [`authenticate-as`](../../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 3 of 16 |
+| [`authenticate-as.credential.tenant`](../../../../model/capabilities/authenticate-as.credential.tenant/index.md) | Act in accounts with the credentials it holds | [`authenticate-as`](../../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 14 of 16 |
 
 ## How this node connects
 

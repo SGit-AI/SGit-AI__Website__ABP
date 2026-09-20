@@ -1,0 +1,211 @@
+{
+  "type": "abp/facts/v1",
+  "_what_this_is": "The leaf assertions every rendering of this ABP must agree on: what the shape grants, at what barrier, with what undo class and evidence; what stance the mandate takes on every primitive; and the excess, the unbounded excess, the aligned set and the shortfall that follow. The classes a reader sees are not here, because they differ by altitude and the facts do not.",
+  "computed_never_authored": "No field here is writable by a person. It is derived from the profile and the mandate it pins, and the release gate parses every rendering of it back out of the published page and fails on a single leaf assertion that differs.",
+  "profile": "google/gmail/readonly-connector",
+  "mandate": "reader-on-my-mailbox",
+  "pinned": {
+    "grant_version": "2026-09-15",
+    "mandate_version": "2026-09-15",
+    "pack_version": "v0.8.0",
+    "computed_by": "abp.delta/v1"
+  },
+  "counts": {
+    "primitives": 23,
+    "grant": 4,
+    "mandate": 1,
+    "excess": 3,
+    "unbounded_excess": 2,
+    "shortfall": 0,
+    "irreversible": 4,
+    "widest_reach": "tenant",
+    "measured": 0,
+    "rows": 4
+  },
+  "assertions": [
+    {
+      "kind": "grants",
+      "capability": "read.credential.host",
+      "barrier": "none",
+      "undo": "no",
+      "evidence": "inferred",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "read.record.history",
+      "barrier": "none",
+      "undo": "no",
+      "evidence": "inferred",
+      "is_control": false
+    },
+    {
+      "kind": "grants",
+      "capability": "authenticate-as.credential.tenant",
+      "barrier": "boundary",
+      "undo": "no",
+      "evidence": "documented",
+      "is_control": true
+    },
+    {
+      "kind": "grants",
+      "capability": "read.message.tenant",
+      "barrier": "boundary",
+      "undo": "no",
+      "evidence": "documented",
+      "is_control": true
+    },
+    {
+      "kind": "stance",
+      "capability": "authenticate-as.credential.signing",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "authenticate-as.credential.tenant",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "create.record.world",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "create.schedule.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "create.schedule.tenant",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "delete.file.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "execute.process.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "execute.process.self",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "grant.credential.self",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.credential.host",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.file.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.file.project",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.message.tenant",
+      "stance": "wanted"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.record.browsing",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "read.record.history",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "send.endpoint.allowed",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "send.endpoint.world",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "send.message.world",
+      "stance": "refused"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.budget.tenant",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.file.host",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.file.project",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.repository.project",
+      "stance": "unstated"
+    },
+    {
+      "kind": "stance",
+      "capability": "write.repository.tenant",
+      "stance": "unstated"
+    },
+    {
+      "kind": "excess",
+      "capability": "read.credential.host"
+    },
+    {
+      "kind": "excess",
+      "capability": "read.record.history"
+    },
+    {
+      "kind": "excess",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "kind": "unbounded_excess",
+      "capability": "read.credential.host"
+    },
+    {
+      "kind": "unbounded_excess",
+      "capability": "read.record.history"
+    },
+    {
+      "kind": "aligned",
+      "capability": "read.message.tenant"
+    }
+  ],
+  "id": "google__gmail__readonly-connector__reader-on-my-mailbox",
+  "delta": "deltas/google__gmail__readonly-connector__reader-on-my-mailbox.json",
+  "projections": [],
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Derived from the profile and the mandate named above. Never authored: the gate parses every rendering back out of its page and diffs it.",
+    "licence": "CC BY 4.0"
+  }
+}

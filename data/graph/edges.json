@@ -4,7 +4,7 @@
   "the_banned_edge": "There is no generic association edge in this model and there will not be one. It constrains nothing and costs fan out.",
   "extending_it": "A new edge needs a sentence, its inverse needs a DIFFERENT sentence, and both need a stated domain and range.",
   "source": "https://graphs.sgit.ai/v1/grammar/edge-set.html",
-  "count": 20,
+  "count": 22,
   "universes": "Each edge names the universe of its domain and of its range, and `crosses` is true when they differ: a junction edge, the property that turns a set of graphs into a fractal rather than a pile. Computed from the node types, never declared. See universes/index.json.",
   "edges": [
     {
@@ -242,6 +242,30 @@
       "range": "Capability",
       "reads_as": "this setting narrows this capability",
       "inverse_reads_as": "this capability is narrowed by these settings",
+      "from": "proposed here",
+      "domain_universe": "u2",
+      "range_universe": "u1",
+      "crosses": true
+    },
+    {
+      "edge": "scoped_by",
+      "inverse": "scopes",
+      "domain": "DeploymentShape",
+      "range": "Scope",
+      "reads_as": "this shape is scoped by this vendor scope",
+      "inverse_reads_as": "this scope scopes these shapes",
+      "from": "proposed here",
+      "domain_universe": "u2",
+      "range_universe": "u2",
+      "crosses": false
+    },
+    {
+      "edge": "permits",
+      "inverse": "permitted_by",
+      "domain": "Scope",
+      "range": "Capability",
+      "reads_as": "this scope permits this capability",
+      "inverse_reads_as": "this capability is permitted by these scopes",
       "from": "proposed here",
       "domain_universe": "u2",
       "range_universe": "u1",

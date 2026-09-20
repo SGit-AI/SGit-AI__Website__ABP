@@ -2,7 +2,7 @@
 
 > The verb execute as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/execute/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/execute/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,8 +22,8 @@ The verb `execute`, and every primitive it appears in. **This page is a query, n
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`execute.process.host`](../../../../model/capabilities/execute.process.host/index.md) | Run programs as the account | [`execute`](../../../../model/lexicon/verbs/execute/index.md)`.`[`process`](../../../../model/lexicon/objects/process/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | with-effort | 6 of 9 |
-| [`execute.process.self`](../../../../model/capabilities/execute.process.self/index.md) | Run programs inside its own sandbox only | [`execute`](../../../../model/lexicon/verbs/execute/index.md)`.`[`process`](../../../../model/lexicon/objects/process/index.md)`.`[`self`](../../../../model/lexicon/reaches/self/index.md) | yes | 0 of 9 |
+| [`execute.process.host`](../../../../model/capabilities/execute.process.host/index.md) | Run programs as the account | [`execute`](../../../../model/lexicon/verbs/execute/index.md)`.`[`process`](../../../../model/lexicon/objects/process/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | with-effort | 7 of 16 |
+| [`execute.process.self`](../../../../model/capabilities/execute.process.self/index.md) | Run programs inside its own sandbox only | [`execute`](../../../../model/lexicon/verbs/execute/index.md)`.`[`process`](../../../../model/lexicon/objects/process/index.md)`.`[`self`](../../../../model/lexicon/reaches/self/index.md) | yes | 0 of 16 |
 
 ## How this node connects
 

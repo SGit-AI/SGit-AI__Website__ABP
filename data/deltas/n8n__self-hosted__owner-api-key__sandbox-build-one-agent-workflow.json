@@ -1,0 +1,55 @@
+{
+  "type": "abp/delta/v1",
+  "profile": "n8n/self-hosted/owner-api-key",
+  "mandate": "sandbox-build-one-agent-workflow",
+  "grant_version": "2026-09-13",
+  "mandate_version": "2026-09-13",
+  "pack_version": "v0.8.0",
+  "computed_at": "2026-09-20T17:23:43Z",
+  "computed_by": "abp.delta/v1",
+  "excess": [
+    "authenticate-as.credential.tenant",
+    "read.credential.host",
+    "send.endpoint.world",
+    "execute.process.host"
+  ],
+  "excess_refused": [
+    "read.credential.host",
+    "send.endpoint.world"
+  ],
+  "excess_unstated": [
+    "authenticate-as.credential.tenant",
+    "execute.process.host"
+  ],
+  "unbounded_excess": [
+    "authenticate-as.credential.tenant",
+    "read.credential.host",
+    "send.endpoint.world",
+    "execute.process.host"
+  ],
+  "shortfall": [],
+  "aligned": [
+    "read.record.history",
+    "write.budget.tenant",
+    "write.file.project",
+    "create.schedule.tenant"
+  ],
+  "derived_never_authored": "No field in this record is writable by a person. The way to change a delta is to change a grant or a mandate, and then recompute.",
+  "counts": {
+    "excess": 4,
+    "unbounded_excess": 4,
+    "shortfall": 0,
+    "aligned": 4
+  },
+  "id": "n8n__self-hosted__owner-api-key__sandbox-build-one-agent-workflow",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Derived from the grant and the mandate named above. Never authored: no field here is writable by a person, and the release gate recomputes it.",
+    "licence": "CC BY 4.0"
+  }
+}

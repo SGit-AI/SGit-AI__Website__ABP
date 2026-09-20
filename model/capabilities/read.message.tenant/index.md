@@ -2,7 +2,7 @@
 
 > Read mail or chat it is connected to. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,11 +28,15 @@ below point at them.*
 
 > **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `read.message.tenant` is emerges from the edges traceable from it. The strongest case is [`tenant`](../../../model/lexicon/reaches/tenant/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
-## In 1 of 9 published shapes
+## In 5 of 16 published shapes
 
-|  | Deployment shape | Barrier there | Known by | Note |
-|---|---|---|---|---|
-| ○ | Claude (in the browser, with connectors switched on) | boundary | derived | a mail or chat connector reads your mail |
+|  | Deployment shape | Barrier there | Known by | Whose material | Note |
+|---|---|---|---|---|---|
+| ○ | Claude (in the browser, with connectors switched on) | boundary | derived | not stated | a mail or chat connector reads your mail |
+| ○ | Claude, with the Gmail connector enabled *(contributed by riskmandate.ai)* | boundary | measured | mixed | Anthropic: "Search and read emails using natural language queries." "Access email metadata, including attachment metadata (not attachment content)." Google's reference: "Read data: Search emails, retrieve threads, and list labels." Read carries no per-action approval prompt on Anthropic's page; the prompt sentence sits under send, reply and forward. Measured 2026-09-16: asked to read the inbox and name the top messages, Claude returned ten threads with sender, subject and date, after "Loaded tools, used Gmail integration". |
+| ○ | Claude's Microsoft 365 connector (Outlook, SharePoint, OneDrive, Teams) *(contributed by riskmandate.ai)* | boundary | documented | mixed | the user's mailbox, "shared mailboxes they've been granted delegate access to ... including full access and folder-level delegation", and Teams chats. Shared-mailbox access is stated as read-only via Mail.Read.Shared. |
+| ○ | An assistant connected to a personal Gmail mailbox with gmail.readonly *(contributed by riskmandate.ai)* | boundary | documented | mixed | gmail.readonly - "View your email messages and settings." The only scope that excludes bodies, gmail.metadata, "cannot read a message". There is no scope that filters by sender, label or date. |
+| ○ | The Google Workspace MCP servers (Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat) *(contributed by riskmandate.ai)* | boundary | documented | mixed | gmail.readonly - "View your email messages and settings." Every message and the settings. No Gmail scope filters by sender, label or date; the only narrower one, gmail.metadata, cannot return a body. |
 
 |  | Barrier | What stands in the way | Is it a control |
 |---|---|---|---|
@@ -45,9 +49,9 @@ below point at them.*
 
 | The mandate says | Which mandates |
 |---|---|
-| **authorised** | Chat, with connectors switched on |
+| **authorised** | Chat, with connectors switched on, A reader on my mailbox, Find things in the inbox, draft replies, never send, Search our tenant, read-only, An assistant over my Workspace, reading |
 | **refused** | Chat in the browser, nothing connected |
-| **unstated** | A coding assistant on my machine, A coding assistant in a container on the web, The desktop app, with local tools switched on, A CI job on a hosted runner, A browser extension I installed, A scheduled job under a service account |
+| **unstated** | A coding assistant on my machine, A coding assistant in a container on the web, The desktop app, with local tools switched on, A CI job on a hosted runner, A browser extension I installed, A scheduled job under a service account, A reader on my drive, Find and read my files, A sandbox: build and run one AI-agent workflow |
 
 **Unstated is not authorised.** A mandate that never mentioned a capability did not authorise it, and the delta on every example page counts it as excess and says which kind it was.
 

@@ -162,6 +162,17 @@ EDGES = [
      "this setting narrows this capability",
      "this capability is narrowed by these settings",
      "proposed here"),
+    # v0.4.4: a connector shape reaches a capability through a scope in the vendor's own
+    # identifier, gmail.readonly, drive.file, which is not a tool. It is kept in the
+    # vendor's word and given its own node type rather than filed as a tool.
+    ("scoped_by", "scopes", "DeploymentShape", "Scope",
+     "this shape is scoped by this vendor scope",
+     "this scope scopes these shapes",
+     "proposed here"),
+    ("permits", "permitted_by", "Scope", "Capability",
+     "this scope permits this capability",
+     "this capability is permitted by these scopes",
+     "proposed here"),
 ]
 
 # ---------------------------------------------------------------------------
@@ -233,6 +244,12 @@ NODE_TYPES = [
      "[Capability]",
      "In the vendor's own words: shell (Bash), the assistant's Gmail connector, REST API: "
      "workflows. A tool that exposes nothing is a name and not a node here."),
+    ("Scope", "A vendor's own identifier for what a consent permits.",
+     "[Scope] := a node that a [DeploymentShape] is -scoped_by-> and that -permits-> at least "
+     "one [Capability]",
+     "In the vendor's word, never translated: gmail.readonly is the node, and what it "
+     "permits is the edge. The connector shapes contributed by riskmandate.ai reach most of "
+     "their rows this way."),
     ("Setting", "What moves a barrier.",
      "[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at "
      "least one [Barrier]",
@@ -365,13 +382,24 @@ def build(D):
             tid = f"tool/{pid}#{_slug(t)}"
             tools[t] = node(tid, "Tool", t, shape=pid)
             edge(f"shape/{pid}", "runs_with", tid)
+        scopes = {}
         for r in p["grant"]:
             for v in r.get("via") or []:
-                if v not in tools:
+                if v in tools:
+                    edge(tools[v], "exposes", f"capability/{r['capability']}")
+                elif " " not in v:
+                    # A route with no space in it is a scope in the vendor's identifier,
+                    # gmail.readonly or drive.file, and not a tool.
+                    if v not in scopes:
+                        sid = f"scope/{pid}#{_slug(v)}"
+                        scopes[v] = node(sid, "Scope", v, shape=pid)
+                        edge(f"shape/{pid}", "scoped_by", sid)
+                    edge(scopes[v], "permits", f"capability/{r['capability']}")
+                else:
                     tid = f"tool/{pid}#{_slug(v)}"
                     tools[v] = node(tid, "Tool", v, shape=pid)
                     edge(f"shape/{pid}", "runs_with", tid)
-                edge(tools[v], "exposes", f"capability/{r['capability']}")
+                    edge(tools[v], "exposes", f"capability/{r['capability']}")
     # The reductions the map publishes: for each capability, the setting that narrows it and
     # the barrier it moves to. A reduction that says `none` is not a setting.
     for cap, red in D["reductions"].items():
@@ -470,6 +498,9 @@ def classify(g):
     run_by = {e["to"] for e in g["edges"] if e["edge"] == "runs_with"}
     exposes = {e["from"] for e in g["edges"] if e["edge"] == "exposes"}
     out["Tool"] = [n["id"] for n in by_type("Tool") if n["id"] in run_by and n["id"] in exposes]
+    scoped = {e["to"] for e in g["edges"] if e["edge"] == "scoped_by"}
+    permits = {e["from"] for e in g["edges"] if e["edge"] == "permits"}
+    out["Scope"] = [n["id"] for n in by_type("Scope") if n["id"] in scoped and n["id"] in permits]
     narrows = {e["from"] for e in g["edges"] if e["edge"] == "narrows"}
     moves = {e["from"] for e in g["edges"] if e["edge"] == "moves"}
     out["Setting"] = [n["id"] for n in by_type("Setting") if n["id"] in narrows and n["id"] in moves]

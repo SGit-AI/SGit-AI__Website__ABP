@@ -54,6 +54,34 @@
     {
       "shape": "openai/chatgpt-web/default",
       "means": "the vendor's environment; not your machine"
+    },
+    {
+      "shape": "google/gmail/readonly-connector",
+      "means": "the mailbox itself, as a store: every message and the account's mail settings"
+    },
+    {
+      "shape": "anthropic/gmail-connector/default",
+      "means": "the mailbox itself: every message and thread, labels, filters and saved drafts, and attachment metadata — never attachment content"
+    },
+    {
+      "shape": "google/drive/readonly-connector",
+      "means": "the Drive as a store: every file owned by or shared to the user"
+    },
+    {
+      "shape": "anthropic/microsoft-365-connector/default",
+      "means": "SharePoint sites and OneDrive files the user can already open — searched tenant-wide"
+    },
+    {
+      "shape": "dropbox/mcp-server/default",
+      "means": "the Dropbox account as a store — and for a team user, \"the usage and quota for the entire team\""
+    },
+    {
+      "shape": "google/workspace-mcp/default",
+      "means": "the Google account's Drive and mailbox — every file owned by or shared to the user; not your machine"
+    },
+    {
+      "shape": "n8n/self-hosted/owner-api-key",
+      "means": "the instance itself: its accounts, its credential store, its execution records"
     }
   ],
   "page": "https://abp.sgit.ai/model/lexicon/reaches/host/index.html",

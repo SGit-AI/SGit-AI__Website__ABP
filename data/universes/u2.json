@@ -8,35 +8,35 @@
   "centre": "the setting",
   "smallest": "a scope, a flag or a line on a documentation page",
   "status": "partial",
-  "status_note": "Since v0.4.3 the product, the tool a capability is reached through and the setting that moves a barrier are nodes, all derived from data that was already published: the tools in the vendor's words, the reductions the map publishes per capability, and the difference between two variants of one product. Scopes, documentation pages and contradictions are not nodes yet, and material is declared on the grammar and valued only where a contributed shape states it. This is the first universe where the vocabulary is not this site's: a vendor speaks in scopes, tool names, flags, consent screens and administrator settings, and the ABP keeps them in the vendor's words and draws an edge from each to the primitive it exposes.",
+  "status_note": "Since v0.4.3 the product, the tool a capability is reached through and the setting that moves a barrier are nodes, all derived from data that was already published: the tools in the vendor's words, the reductions the map publishes per capability, and the difference between two variants of one product. Since v0.4.4 seven shapes contributed by riskmandate.ai are promoted here with their provenance, their scopes are nodes in the vendor's own identifier, and material is valued on every row they state it on. Documentation pages and contradictions are carried as data on the profile and are not nodes yet. This is the first universe where the vocabulary is not this site's: a vendor speaks in scopes, tool names, flags, consent screens and administrator settings, and the ABP keeps them in the vendor's words and draws an edge from each to the primitive it exposes.",
   "node_types": [
     {
       "name": "Product",
       "formula": "[Product] := a node that -has_variant-> at least one [DeploymentShape]",
       "exists_today": true,
       "note": null,
-      "matched": 8
+      "matched": 15
     },
     {
       "name": "DeploymentShape",
       "formula": "[DeploymentShape] := a node that -grants-> at least one [Capability]",
       "exists_today": true,
       "note": null,
-      "matched": 9
+      "matched": 16
     },
     {
       "name": "Tool",
       "formula": "[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]",
       "exists_today": true,
       "note": "One node per shape, in the vendor's words, because what shell (Bash) reaches depends on where it runs.",
-      "matched": 17
+      "matched": 64
     },
     {
       "name": "Scope",
-      "formula": "a node that a [Tool] or [DeploymentShape] is -scoped_by->, in the vendor's own identifier",
-      "exists_today": false,
-      "note": null,
-      "matched": null
+      "formula": "[Scope] := a node that a [DeploymentShape] is -scoped_by-> and that -permits-> at least one [Capability]",
+      "exists_today": true,
+      "note": "In the vendor's word, never translated. The connector shapes contributed by riskmandate.ai at v0.4.4 reach most of their rows through one.",
+      "matched": 9
     },
     {
       "name": "Setting",
@@ -94,12 +94,22 @@
     {
       "edge": "scoped_by",
       "inverse": "scopes",
-      "domain": "Tool or DeploymentShape",
+      "domain": "DeploymentShape",
       "range": "Scope",
-      "reads_as": "this tool is scoped by this vendor scope",
-      "inverse_reads_as": "this scope scopes these tools",
+      "reads_as": "this shape is scoped by this vendor scope",
+      "inverse_reads_as": "this scope scopes these shapes",
       "from": "proposed here",
-      "status": "proposed"
+      "status": "live"
+    },
+    {
+      "edge": "permits",
+      "inverse": "permitted_by",
+      "domain": "Scope",
+      "range": "Capability",
+      "reads_as": "this scope permits this capability",
+      "inverse_reads_as": "this capability is permitted by these scopes",
+      "from": "proposed here",
+      "status": "live"
     },
     {
       "edge": "moves",
@@ -185,6 +195,12 @@
     {
       "edge": "narrows",
       "inverse": "narrowed_by",
+      "to": "u1",
+      "status": "live"
+    },
+    {
+      "edge": "permits",
+      "inverse": "permitted_by",
       "to": "u1",
       "status": "live"
     }

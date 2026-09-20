@@ -87,6 +87,48 @@ def _hash_upstream():
     return "sha256:" + h.hexdigest(), len(files)
 
 
+CONTRIB = OUT / "contributed/riskmandate"
+
+
+def _hash_contributed(manifest):
+    """The contributed bytes, hashed the way the upstream pack is: path then bytes, in path
+    order, skipping the manifest. Per file as well, because a profile pins the hash of the
+    one file it was promoted from."""
+    per_file = {}
+    h = hashlib.sha256()
+    for f in sorted(manifest["files"], key=lambda f: f["path"].split("/")):
+        b = (CONTRIB / f["path"]).read_bytes()
+        per_file[f["path"]] = hashlib.sha256(b).hexdigest()
+        if per_file[f["path"]] != f["sha256"]:
+            raise SystemExit(f"data/contributed/riskmandate/{f['path']} does not hash to what "
+                             f"the manifest says -- the bytes were edited after the fetch")
+        h.update(f["path"].encode())
+        h.update(b)
+    got = "sha256:" + h.hexdigest()
+    if got != manifest["content_hash"]:
+        raise SystemExit(f"data/contributed/riskmandate does not hash to what its manifest says: "
+                         f"{got} vs {manifest['content_hash']}")
+    return per_file
+
+
+def _contributed_provenance(manifest, entry, path, per_file, note):
+    """Provenance for a row that came from a contributor rather than from the map. Same
+    fields a consumer reads on every other file, so nothing downstream has a special case,
+    plus who contributed it and the contributor's own provenance carried whole."""
+    return {
+        "source": next(f["url"] for f in manifest["files"] if f["path"] == path),
+        "source_page": entry["page"],
+        "retrieved": manifest["retrieved"],
+        "pack_version": None,
+        "content_hash": "sha256:" + per_file[path],
+        "verbatim_bytes": f"contributed/riskmandate/{path}",
+        "contributed_by": manifest["contributor"],
+        "contributed_manifest": "contributed/riskmandate/manifest.json",
+        "note": note,
+        "licence": LICENCE,
+    }
+
+
 def _provenance(pack, content_hash, note):
     return {
         "source": SOURCE,
@@ -293,9 +335,107 @@ def build():
                           "do_not_want": len(m["do_not_want"]),
                           "file": f"mandates/{m['id']}.json"})
 
+    # --- contributed shapes ------------------------------------------------------
+    # THE INTAKE PATH. A shape proposed to this site carries its source, its retrieval time
+    # and its hash, the gate checks them as it checks every profile, and the contributor's
+    # vault then pins this site's version of the shape rather than its own copy. Nothing is
+    # merged: the contributor's own provenance block travels whole, its evidence tiers are
+    # kept as stated, and its extra fields (contradictions, research needed, what the grammar
+    # cannot say) are carried rather than dropped, because they are the finding.
+    n_upstream = len(profiles)
+    contributed_rows = {"total": 0, "measured": 0}
+    cman = json.loads((CONTRIB / "manifest.json").read_text())
+    per_file = _hash_contributed(cman)
+    cap_undo = {c["id"]: c["undo"] for c in caps}
+    for entry in cman["shapes"]:
+        g = json.loads((CONTRIB / entry["grant"]).read_text())
+        grant = []
+        for r in g["grant"]:
+            if r["capability"] not in cap_undo:
+                raise SystemExit(f"{entry['grant']}: {r['capability']} is not in the grammar")
+            grant.append({"capability": r["capability"], "barrier": r["barrier"],
+                          "evidence": r["evidence"], "via": list(r.get("via") or []),
+                          "control": r.get("control"), "note": r.get("note"),
+                          "material": r.get("material"),
+                          "undo": cap_undo[r["capability"]],
+                          "is_bounded": IS_CONTROL[r["barrier"]][0]})
+        grant.sort(key=lambda r: (["no", "with-effort", "yes"].index(r["undo"]),
+                                  barrier_rank(r["barrier"]), r["capability"]))
+        measured = sum(1 for r in grant if r["evidence"] in MEASURED_TIERS)
+        contributed_rows["total"] += len(grant)
+        contributed_rows["measured"] += measured
+        prof = {
+            "type": "abp/profile/v1",
+            "id": g["id"], "vendor": g.get("vendor") or g["id"].split("/")[0],
+            "product": g["product"], "variant": g["variant"], "surface": g["surface"],
+            "profile_version": g["profile_version"],
+            "description": g["description"],
+            "reach_names": g.get("reach_names", {}),
+            "not_reachable": g.get("not_reachable", []),
+            "tools": list(g.get("tools", [])),
+            "grant": grant,
+            "grant_size": len(grant),
+            "irreversible": [r["capability"] for r in grant if r["undo"] == "no"],
+            "unbounded": [r["capability"] for r in grant if not r["is_bounded"]],
+            "widest_reach": widest([r["capability"] for r in grant], caps),
+            "rows": {"total": len(grant), "measured": measured,
+                     "derived": len(grant) - measured},
+            "sources": g.get("sources", []),
+            "contradictions": g.get("contradictions", []),
+            "research_needed": g.get("research_needed", []),
+            "not_in_grammar": g.get("not_in_grammar", []),
+            "contributed": {"by": cman["contributor"], "vault_page": entry["page"],
+                            "vocabulary_pinned_by_contributor": entry.get("vocabulary_pinned"),
+                            "their_provenance": g.get("provenance")},
+            "not_an_assessment": "This describes a deployment shape a contributor documented "
+                                 "or measured. It is not an assessment, an audit, a "
+                                 "certification or a security review of any named product, "
+                                 "and it carries no adjective and no score.",
+            "provenance": _contributed_provenance(
+                cman, entry, entry["grant"], per_file,
+                f"Contributed by {cman['contributor']}, promoted from {entry['grant']} without "
+                f"renaming anything. The evidence tier on every row is the contributor's; "
+                f"`is_bounded` is recomputed here from the barrier; `undo` is the grammar's. "
+                f"The contributor's contradictions, research needed and what the grammar "
+                f"cannot say are carried whole."),
+        }
+        profiles.append(prof)
+        index_rows.append({k: prof[k] for k in (
+            "id", "vendor", "product", "variant", "surface", "profile_version",
+            "grant_size", "widest_reach", "rows")} | {"file": f"profiles/{g['id']}.json",
+                                                     "contributed_by": cman["contributor"]})
+        src = json.loads((CONTRIB / entry["mandate"]).read_text())
+        m = {
+            "type": "abp/mandate/v1",
+            "id": src["id"], "label": src["label"], "surface": src["surface"],
+            "applies_to": src["applies_to"],
+            "status": src.get("status", "starting-point"),
+            "authored": src.get("authored"), "authored_by": src.get("authored_by"),
+            "description": src["description"],
+            "want": src.get("want", []), "do_not_want": src.get("do_not_want", []),
+            "unstated": sorted(c["id"] for c in caps
+                               if c["id"] not in src.get("want", [])
+                               and c["id"] not in src.get("do_not_want", [])),
+            "notes": src.get("notes", {}),
+            "provenance": _contributed_provenance(
+                cman, entry, entry["mandate"], per_file,
+                f"Contributed by {cman['contributor']}, promoted from {entry['mandate']}. "
+                f"`unstated` is recomputed here. A mandate is elicited, not measured: this is "
+                f"the contributor's first draft, written to be argued with."),
+        }
+        mandates.append(m)
+        midx_rows.append({"id": m["id"], "label": m["label"], "surface": m["surface"],
+                          "applies_to": m["applies_to"], "want": len(m["want"]),
+                          "do_not_want": len(m["do_not_want"]),
+                          "file": f"mandates/{m['id']}.json",
+                          "contributed_by": cman["contributor"]})
+
     # --- totals --------------------------------------------------------------
-    total_rows = sum(p["rows"]["total"] for p in profiles)
-    total_measured = sum(p["rows"]["measured"] for p in profiles)
+    # The headline stays the map's own: 21 of 99. A contributed row is counted beside it,
+    # never folded into it, because the two were obtained differently and a reader is
+    # entitled to know which is which.
+    total_rows = sum(p["rows"]["total"] for p in profiles[:n_upstream])
+    total_measured = sum(p["rows"]["measured"] for p in profiles[:n_upstream])
     provenance = {
         "type": "abp/provenance/v1",
         "_what_this_is": "Where every capability row on this site came from, and how much of it "
@@ -316,10 +456,28 @@ def build():
                           "row in this pack is at the `measured` tier, which the pack defines as a "
                           "dated probe with an evidence file. The published headline of 21 of 99 "
                           "counts the `observed` rows, and so does this site.",
-        "by_tier": tier_counts(profiles),
+        "by_tier": tier_counts(profiles[:n_upstream]),
         "never_tested": "No row here was obtained by probing anybody's system. A row is measured "
                         "only from a system we are entitled to run, or from the vendor's own "
                         "published documentation.",
+        "contributed": {
+            "_what_this_is": "Rows contributed by a consumer of this data and promoted here, "
+                             "counted beside the map's rows and never folded into them.",
+            "contributor": cman["contributor"],
+            "manifest": "contributed/riskmandate/manifest.json",
+            "retrieved": cman["retrieved"],
+            "content_hash": cman["content_hash"],
+            "shapes": len(cman["shapes"]),
+            "rows": {"total": contributed_rows["total"],
+                     "measured": contributed_rows["measured"],
+                     "derived": contributed_rows["total"] - contributed_rows["measured"]},
+            "by_tier": tier_counts(profiles[n_upstream:]),
+            "measured_means": "The contributor's own tier, kept as stated: `measured` rows "
+                              "come from a dated probe of an instance an early user was "
+                              "entitled to run, and the write up is the evidence file the "
+                              "contributor holds. This site did not observe them and does not "
+                              "raise a tier it did not observe.",
+        },
         "licence": LICENCE,
     }
 
@@ -404,6 +562,7 @@ def manifest(built, version, n_deltas):
             "lexicon": "lexicon/index.json",
             "bridges": "bridges/index.json",
             "universes": "universes/index.json",
+            "contributed": "contributed/riskmandate/manifest.json",
             "provenance": "provenance.json",
             "upstream": "upstream/pack.json",
         },
@@ -416,6 +575,8 @@ def manifest(built, version, n_deltas):
             "deltas": n_deltas,
             "universes": 13,
             "rows": built["provenance"]["rows"],
+            "contributed": {"shapes": built["provenance"]["contributed"]["shapes"],
+                            "rows": built["provenance"]["contributed"]["rows"]},
         },
         "the_delta": "Derived and never authored. Stored under deltas/, each record pinning the "
                      "version of both inputs and the time and code version that produced it. No "
@@ -452,7 +613,8 @@ def write_deltas(built, computed_at):
         for pid in m["applies_to"]:
             if pid not in D["profiles"]:
                 continue
-            rec = abp.delta(D["profiles"][pid], D["mandates"][m["id"]], D, computed_at)
+            rec = abp.delta(D["profiles"][pid], D["mandates"][m["id"]], D,
+                            m["provenance"]["retrieved"])
             # The stored record carries the capability ids, not the whole grant row: the row
             # lives in the profile and duplicating it here would create a second place for it
             # to be wrong.
@@ -589,7 +751,7 @@ def write_facts(built, computed_at, examples):
             if pid not in D["profiles"]:
                 continue
             p, md = D["profiles"][pid], D["mandates"][m["id"]]
-            dlt = abp.delta(p, md, D, computed_at)
+            dlt = abp.delta(p, md, D, m["provenance"]["retrieved"])
             rec = F.fact_set(p, md, dlt, D)
             slug = f"{pid.replace('/', '__')}__{m['id']}"
             rec["id"] = slug

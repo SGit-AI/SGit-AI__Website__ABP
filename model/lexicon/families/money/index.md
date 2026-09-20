@@ -2,7 +2,7 @@
 
 > The family money as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/money/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/money/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,7 +22,7 @@ budgets and spend
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`write.budget.tenant`](../../../../model/capabilities/write.budget.tenant/index.md) | Spend money or tokens against an account it holds | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`budget`](../../../../model/lexicon/objects/budget/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 1 of 9 |
+| [`write.budget.tenant`](../../../../model/capabilities/write.budget.tenant/index.md) | Spend money or tokens against an account it holds | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`budget`](../../../../model/lexicon/objects/budget/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 2 of 16 |
 
 ## How this node connects
 

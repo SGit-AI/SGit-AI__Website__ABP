@@ -13,7 +13,12 @@
   "count": 3,
   "unused": false,
   "unused_note": null,
-  "named_by": null,
+  "named_by": [
+    {
+      "shape": "n8n/self-hosted/owner-api-key",
+      "means": "the workflows on the instance — the thing the key was given to build"
+    }
+  ],
   "page": "https://abp.sgit.ai/model/lexicon/reaches/project/index.html",
   "provenance": {
     "source": "https://what-can-it-do.games.sgit.ai/data/",

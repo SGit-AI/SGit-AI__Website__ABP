@@ -1,21 +1,22 @@
 {
   "type": "abp/graph-nodes/v1",
   "_what_this_is": "Every node, flat, with its type. The same shape of record at every altitude: a verb, a capability, a barrier and a deployment shape are all nodes here. That is the GRAMMAR surviving every zoom, which is the mechanism and not the claim: the claim is that a node opens into a world with its own ontology, joined by a named edge, and which universe each type belongs to is in universes/index.json. (Until v0.4.1 this field stated the first edition's test, one format everywhere, which scores decomposition as fractal.)",
-  "count": 216,
+  "count": 369,
   "by_type": {
     "Barrier": 4,
     "Capability": 23,
-    "DeploymentShape": 9,
+    "DeploymentShape": 16,
     "Enforcer": 3,
     "EvidenceTier": 6,
     "Family": 9,
-    "GrantedCapability": 81,
-    "Mandate": 8,
+    "GrantedCapability": 118,
+    "Mandate": 15,
     "ObjectClass": 9,
-    "Product": 8,
+    "Product": 15,
     "ReachClass": 5,
+    "Scope": 9,
     "Setting": 21,
-    "Tool": 17,
+    "Tool": 103,
     "UndoClass": 3,
     "Verb": 10
   },
@@ -125,7 +126,13 @@
       "id": "reach/project",
       "type": "ReachClass",
       "label": "project",
-      "gloss": "the working tree or workspace it was pointed at"
+      "gloss": "the working tree or workspace it was pointed at",
+      "named_by": [
+        {
+          "shape": "n8n/self-hosted/owner-api-key",
+          "means": "the workflows on the instance — the thing the key was given to build"
+        }
+      ]
     },
     {
       "id": "reach/host",
@@ -168,6 +175,34 @@
         {
           "shape": "openai/chatgpt-web/default",
           "means": "the vendor's environment; not your machine"
+        },
+        {
+          "shape": "google/gmail/readonly-connector",
+          "means": "the mailbox itself, as a store: every message and the account's mail settings"
+        },
+        {
+          "shape": "anthropic/gmail-connector/default",
+          "means": "the mailbox itself: every message and thread, labels, filters and saved drafts, and attachment metadata — never attachment content"
+        },
+        {
+          "shape": "google/drive/readonly-connector",
+          "means": "the Drive as a store: every file owned by or shared to the user"
+        },
+        {
+          "shape": "anthropic/microsoft-365-connector/default",
+          "means": "SharePoint sites and OneDrive files the user can already open — searched tenant-wide"
+        },
+        {
+          "shape": "dropbox/mcp-server/default",
+          "means": "the Dropbox account as a store — and for a team user, \"the usage and quota for the entire team\""
+        },
+        {
+          "shape": "google/workspace-mcp/default",
+          "means": "the Google account's Drive and mailbox — every file owned by or shared to the user; not your machine"
+        },
+        {
+          "shape": "n8n/self-hosted/owner-api-key",
+          "means": "the instance itself: its accounts, its credential store, its execution records"
         }
       ]
     },
@@ -212,6 +247,34 @@
         {
           "shape": "openai/chatgpt-web/default",
           "means": "nothing of yours"
+        },
+        {
+          "shape": "google/gmail/readonly-connector",
+          "means": "the Google account the consent was given for"
+        },
+        {
+          "shape": "anthropic/gmail-connector/default",
+          "means": "the Google account the consent was given for"
+        },
+        {
+          "shape": "google/drive/readonly-connector",
+          "means": "the Google account the consent was given for"
+        },
+        {
+          "shape": "anthropic/microsoft-365-connector/default",
+          "means": "the Microsoft Entra tenant the administrator consented for; the user's mailbox, shared mailboxes they are delegated to, and Teams chats"
+        },
+        {
+          "shape": "dropbox/mcp-server/default",
+          "means": "the Dropbox account or team the app was authorised for"
+        },
+        {
+          "shape": "google/workspace-mcp/default",
+          "means": "the Google account the consent was given for, and the Workspace domain it belongs to"
+        },
+        {
+          "shape": "n8n/self-hosted/owner-api-key",
+          "means": "the platform as an account holder: activation, schedules, the model credential it spends against"
         }
       ]
     },
@@ -256,6 +319,34 @@
         {
           "shape": "openai/chatgpt-web/default",
           "means": "the vendor's egress, if browsing is on"
+        },
+        {
+          "shape": "google/gmail/readonly-connector",
+          "means": "not granted by this scope"
+        },
+        {
+          "shape": "anthropic/gmail-connector/default",
+          "means": "anyone Claude replies to or forwards a message to"
+        },
+        {
+          "shape": "google/drive/readonly-connector",
+          "means": "not granted by this scope"
+        },
+        {
+          "shape": "anthropic/microsoft-365-connector/default",
+          "means": "anyone reachable by mail from the user's address"
+        },
+        {
+          "shape": "dropbox/mcp-server/default",
+          "means": "anyone who holds a shared link or a file-request URL"
+        },
+        {
+          "shape": "google/workspace-mcp/default",
+          "means": "anyone reachable by mail from that account"
+        },
+        {
+          "shape": "n8n/self-hosted/owner-api-key",
+          "means": "any host an outbound node can be pointed at — accepted on creation; what the platform's own server can reach was not tested"
         }
       ]
     },
@@ -1195,6 +1286,321 @@
       "capability": "read.file.project"
     },
     {
+      "id": "shape/google/gmail/readonly-connector",
+      "type": "DeploymentShape",
+      "label": "An assistant connected to a personal Gmail mailbox with gmail.readonly",
+      "variant": "readonly-connector",
+      "surface": "connector",
+      "version": "2026-09-15"
+    },
+    {
+      "id": "granted/google/gmail/readonly-connector#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in readonly-connector",
+      "shape": "google/gmail/readonly-connector",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/google/gmail/readonly-connector#read.record.history",
+      "type": "GrantedCapability",
+      "label": "read.record.history in readonly-connector",
+      "shape": "google/gmail/readonly-connector",
+      "capability": "read.record.history"
+    },
+    {
+      "id": "granted/google/gmail/readonly-connector#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in readonly-connector",
+      "shape": "google/gmail/readonly-connector",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/google/gmail/readonly-connector#read.message.tenant",
+      "type": "GrantedCapability",
+      "label": "read.message.tenant in readonly-connector",
+      "shape": "google/gmail/readonly-connector",
+      "capability": "read.message.tenant"
+    },
+    {
+      "id": "shape/anthropic/gmail-connector/default",
+      "type": "DeploymentShape",
+      "label": "Claude, with the Gmail connector enabled",
+      "variant": "default",
+      "surface": "web",
+      "version": "2026-09-16"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/default#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in default",
+      "shape": "anthropic/gmail-connector/default",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/default#read.record.history",
+      "type": "GrantedCapability",
+      "label": "read.record.history in default",
+      "shape": "anthropic/gmail-connector/default",
+      "capability": "read.record.history"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/default#send.message.world",
+      "type": "GrantedCapability",
+      "label": "send.message.world in default",
+      "shape": "anthropic/gmail-connector/default",
+      "capability": "send.message.world"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/default#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in default",
+      "shape": "anthropic/gmail-connector/default",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/default#read.message.tenant",
+      "type": "GrantedCapability",
+      "label": "read.message.tenant in default",
+      "shape": "anthropic/gmail-connector/default",
+      "capability": "read.message.tenant"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/default#create.schedule.tenant",
+      "type": "GrantedCapability",
+      "label": "create.schedule.tenant in default",
+      "shape": "anthropic/gmail-connector/default",
+      "capability": "create.schedule.tenant"
+    },
+    {
+      "id": "shape/google/drive/readonly-connector",
+      "type": "DeploymentShape",
+      "label": "An assistant connected to a personal Google Drive with drive.readonly",
+      "variant": "readonly-connector",
+      "surface": "connector",
+      "version": "2026-09-15"
+    },
+    {
+      "id": "granted/google/drive/readonly-connector#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in readonly-connector",
+      "shape": "google/drive/readonly-connector",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/google/drive/readonly-connector#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in readonly-connector",
+      "shape": "google/drive/readonly-connector",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/google/drive/readonly-connector#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in readonly-connector",
+      "shape": "google/drive/readonly-connector",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "shape/anthropic/microsoft-365-connector/default",
+      "type": "DeploymentShape",
+      "label": "Claude's Microsoft 365 connector (Outlook, SharePoint, OneDrive, Teams)",
+      "variant": "default",
+      "surface": "web",
+      "version": "2026-09-15"
+    },
+    {
+      "id": "granted/anthropic/microsoft-365-connector/default#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in default",
+      "shape": "anthropic/microsoft-365-connector/default",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/anthropic/microsoft-365-connector/default#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in default",
+      "shape": "anthropic/microsoft-365-connector/default",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/anthropic/microsoft-365-connector/default#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in default",
+      "shape": "anthropic/microsoft-365-connector/default",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "granted/anthropic/microsoft-365-connector/default#read.message.tenant",
+      "type": "GrantedCapability",
+      "label": "read.message.tenant in default",
+      "shape": "anthropic/microsoft-365-connector/default",
+      "capability": "read.message.tenant"
+    },
+    {
+      "id": "granted/anthropic/microsoft-365-connector/default#send.message.world",
+      "type": "GrantedCapability",
+      "label": "send.message.world in default",
+      "shape": "anthropic/microsoft-365-connector/default",
+      "capability": "send.message.world"
+    },
+    {
+      "id": "shape/dropbox/mcp-server/default",
+      "type": "DeploymentShape",
+      "label": "The official Dropbox MCP server",
+      "variant": "default",
+      "surface": "mcp",
+      "version": "2026-09-15"
+    },
+    {
+      "id": "granted/dropbox/mcp-server/default#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in default",
+      "shape": "dropbox/mcp-server/default",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/dropbox/mcp-server/default#create.record.world",
+      "type": "GrantedCapability",
+      "label": "create.record.world in default",
+      "shape": "dropbox/mcp-server/default",
+      "capability": "create.record.world"
+    },
+    {
+      "id": "granted/dropbox/mcp-server/default#delete.file.host",
+      "type": "GrantedCapability",
+      "label": "delete.file.host in default",
+      "shape": "dropbox/mcp-server/default",
+      "capability": "delete.file.host"
+    },
+    {
+      "id": "granted/dropbox/mcp-server/default#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in default",
+      "shape": "dropbox/mcp-server/default",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "granted/dropbox/mcp-server/default#write.file.host",
+      "type": "GrantedCapability",
+      "label": "write.file.host in default",
+      "shape": "dropbox/mcp-server/default",
+      "capability": "write.file.host"
+    },
+    {
+      "id": "shape/google/workspace-mcp/default",
+      "type": "DeploymentShape",
+      "label": "The Google Workspace MCP servers (Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat)",
+      "variant": "default",
+      "surface": "mcp",
+      "version": "2026-09-15"
+    },
+    {
+      "id": "granted/google/workspace-mcp/default#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in default",
+      "shape": "google/workspace-mcp/default",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/google/workspace-mcp/default#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in default",
+      "shape": "google/workspace-mcp/default",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/google/workspace-mcp/default#read.file.host",
+      "type": "GrantedCapability",
+      "label": "read.file.host in default",
+      "shape": "google/workspace-mcp/default",
+      "capability": "read.file.host"
+    },
+    {
+      "id": "granted/google/workspace-mcp/default#read.message.tenant",
+      "type": "GrantedCapability",
+      "label": "read.message.tenant in default",
+      "shape": "google/workspace-mcp/default",
+      "capability": "read.message.tenant"
+    },
+    {
+      "id": "granted/google/workspace-mcp/default#send.message.world",
+      "type": "GrantedCapability",
+      "label": "send.message.world in default",
+      "shape": "google/workspace-mcp/default",
+      "capability": "send.message.world"
+    },
+    {
+      "id": "granted/google/workspace-mcp/default#write.file.host",
+      "type": "GrantedCapability",
+      "label": "write.file.host in default",
+      "shape": "google/workspace-mcp/default",
+      "capability": "write.file.host"
+    },
+    {
+      "id": "shape/n8n/self-hosted/owner-api-key",
+      "type": "DeploymentShape",
+      "label": "A self-hosted n8n instance, reached with an owner-scoped API key",
+      "variant": "owner-api-key",
+      "surface": "api",
+      "version": "2026-09-13"
+    },
+    {
+      "id": "granted/n8n/self-hosted/owner-api-key#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in owner-api-key",
+      "shape": "n8n/self-hosted/owner-api-key",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/n8n/self-hosted/owner-api-key#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in owner-api-key",
+      "shape": "n8n/self-hosted/owner-api-key",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/n8n/self-hosted/owner-api-key#read.record.history",
+      "type": "GrantedCapability",
+      "label": "read.record.history in owner-api-key",
+      "shape": "n8n/self-hosted/owner-api-key",
+      "capability": "read.record.history"
+    },
+    {
+      "id": "granted/n8n/self-hosted/owner-api-key#send.endpoint.world",
+      "type": "GrantedCapability",
+      "label": "send.endpoint.world in owner-api-key",
+      "shape": "n8n/self-hosted/owner-api-key",
+      "capability": "send.endpoint.world"
+    },
+    {
+      "id": "granted/n8n/self-hosted/owner-api-key#write.budget.tenant",
+      "type": "GrantedCapability",
+      "label": "write.budget.tenant in owner-api-key",
+      "shape": "n8n/self-hosted/owner-api-key",
+      "capability": "write.budget.tenant"
+    },
+    {
+      "id": "granted/n8n/self-hosted/owner-api-key#execute.process.host",
+      "type": "GrantedCapability",
+      "label": "execute.process.host in owner-api-key",
+      "shape": "n8n/self-hosted/owner-api-key",
+      "capability": "execute.process.host"
+    },
+    {
+      "id": "granted/n8n/self-hosted/owner-api-key#write.file.project",
+      "type": "GrantedCapability",
+      "label": "write.file.project in owner-api-key",
+      "shape": "n8n/self-hosted/owner-api-key",
+      "capability": "write.file.project"
+    },
+    {
+      "id": "granted/n8n/self-hosted/owner-api-key#create.schedule.tenant",
+      "type": "GrantedCapability",
+      "label": "create.schedule.tenant in owner-api-key",
+      "shape": "n8n/self-hosted/owner-api-key",
+      "capability": "create.schedule.tenant"
+    },
+    {
       "id": "product/anthropic/claude-code-remote",
       "type": "Product",
       "label": "Claude Code on the web",
@@ -1343,6 +1749,618 @@
       "type": "Tool",
       "label": "conversation and uploads",
       "shape": "openai/chatgpt-web/default"
+    },
+    {
+      "id": "product/google/gmail",
+      "type": "Product",
+      "label": "An assistant connected to a personal Gmail mailbox with gmail.readonly",
+      "vendor": "Google (the scope); the assistant's vendor holds the token"
+    },
+    {
+      "id": "tool/google/gmail/readonly-connector#the-assistant-s-gmail-connector",
+      "type": "Tool",
+      "label": "the assistant's Gmail connector",
+      "shape": "google/gmail/readonly-connector"
+    },
+    {
+      "id": "scope/google/gmail/readonly-connector#gmail-readonly",
+      "type": "Scope",
+      "label": "gmail.readonly",
+      "shape": "google/gmail/readonly-connector"
+    },
+    {
+      "id": "tool/google/gmail/readonly-connector#the-oauth-consent",
+      "type": "Tool",
+      "label": "the OAuth consent",
+      "shape": "google/gmail/readonly-connector"
+    },
+    {
+      "id": "product/anthropic/gmail-connector",
+      "type": "Product",
+      "label": "Claude, with the Gmail connector enabled",
+      "vendor": "Google (the MCP server at gmailmcp.googleapis.com, and the account); Anthropic (Claude, the client, the directory listing and the approval prompt)"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#send-email-message-the-display-name-in-the-approval-prompt-the-tool-s-own-name-was-not-shown",
+      "type": "Tool",
+      "label": "Send email message (the display name in the approval prompt; the tool's own name was not shown)",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#search-threads",
+      "type": "Tool",
+      "label": "search_threads",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#get-thread",
+      "type": "Tool",
+      "label": "get_thread",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#get-message",
+      "type": "Tool",
+      "label": "get_message",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#list-drafts",
+      "type": "Tool",
+      "label": "list_drafts",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#create-draft",
+      "type": "Tool",
+      "label": "create_draft",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#list-labels",
+      "type": "Tool",
+      "label": "list_labels",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#create-label",
+      "type": "Tool",
+      "label": "create_label",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#delete-label",
+      "type": "Tool",
+      "label": "delete_label",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#label-message",
+      "type": "Tool",
+      "label": "label_message",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#label-thread",
+      "type": "Tool",
+      "label": "label_thread",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#unlabel-message",
+      "type": "Tool",
+      "label": "unlabel_message",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#unlabel-thread",
+      "type": "Tool",
+      "label": "unlabel_thread",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#list-filters",
+      "type": "Tool",
+      "label": "list_filters",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#create-filter",
+      "type": "Tool",
+      "label": "create_filter",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#reply",
+      "type": "Tool",
+      "label": "reply",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#forward",
+      "type": "Tool",
+      "label": "forward",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#mark-message-spam",
+      "type": "Tool",
+      "label": "mark_message_spam",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#mark-thread-spam",
+      "type": "Tool",
+      "label": "mark_thread_spam",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#apply-sensitive-message-truncated-in-the-directory-listing",
+      "type": "Tool",
+      "label": "apply_sensitive_message… (truncated in the directory listing)",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#apply-sensitive-thread-truncated-in-the-directory-listing",
+      "type": "Tool",
+      "label": "apply_sensitive_thread… (truncated in the directory listing)",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#and-more-behind-the-listing-s-show-all-not-expanded-in-the-capture",
+      "type": "Tool",
+      "label": "…and more behind the listing's \"Show all\", not expanded in the capture",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#list-filters-listed-the-agent-reported-no-such-tool-see-contradictions",
+      "type": "Tool",
+      "label": "list_filters (listed; the agent reported no such tool — see contradictions)",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#send-email-message",
+      "type": "Tool",
+      "label": "Send email message",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/default#sign-in-with-google-claude-for-gmail",
+      "type": "Tool",
+      "label": "Sign in with Google — \"Claude for Gmail\"",
+      "shape": "anthropic/gmail-connector/default"
+    },
+    {
+      "id": "product/google/drive",
+      "type": "Product",
+      "label": "An assistant connected to a personal Google Drive with drive.readonly",
+      "vendor": "Google (the scope); the assistant's vendor holds the token"
+    },
+    {
+      "id": "tool/google/drive/readonly-connector#the-assistant-s-drive-connector",
+      "type": "Tool",
+      "label": "the assistant's Drive connector",
+      "shape": "google/drive/readonly-connector"
+    },
+    {
+      "id": "scope/google/drive/readonly-connector#drive-readonly",
+      "type": "Scope",
+      "label": "drive.readonly",
+      "shape": "google/drive/readonly-connector"
+    },
+    {
+      "id": "tool/google/drive/readonly-connector#the-oauth-consent",
+      "type": "Tool",
+      "label": "the OAuth consent",
+      "shape": "google/drive/readonly-connector"
+    },
+    {
+      "id": "product/anthropic/microsoft-365-connector",
+      "type": "Product",
+      "label": "Claude's Microsoft 365 connector",
+      "vendor": "Anthropic"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#sharepoint-search",
+      "type": "Tool",
+      "label": "sharepoint_search",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#sharepoint-folder-search",
+      "type": "Tool",
+      "label": "sharepoint_folder_search",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-email-search",
+      "type": "Tool",
+      "label": "outlook_email_search",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-calendar-search",
+      "type": "Tool",
+      "label": "outlook_calendar_search",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#find-meeting-availability",
+      "type": "Tool",
+      "label": "find_meeting_availability",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#chat-message-search",
+      "type": "Tool",
+      "label": "chat_message_search",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#read-resource",
+      "type": "Tool",
+      "label": "read_resource",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-send-mail",
+      "type": "Tool",
+      "label": "outlook_send_mail",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-forward-mail",
+      "type": "Tool",
+      "label": "outlook_forward_mail",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-send-draft",
+      "type": "Tool",
+      "label": "outlook_send_draft",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-trash-thread",
+      "type": "Tool",
+      "label": "outlook_trash_thread",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-untrash-thread",
+      "type": "Tool",
+      "label": "outlook_untrash_thread",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-batch-delete-messages",
+      "type": "Tool",
+      "label": "outlook_batch_delete_messages",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-create-draft",
+      "type": "Tool",
+      "label": "outlook_create_draft",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-create-reply-draft",
+      "type": "Tool",
+      "label": "outlook_create_reply_draft",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-create-reply-all-draft",
+      "type": "Tool",
+      "label": "outlook_create_reply_all_draft",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#outlook-update-draft",
+      "type": "Tool",
+      "label": "outlook_update_draft",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "tool/anthropic/microsoft-365-connector/default#oauth-2-0-on-behalf-of",
+      "type": "Tool",
+      "label": "OAuth 2.0 On-Behalf-Of",
+      "shape": "anthropic/microsoft-365-connector/default"
+    },
+    {
+      "id": "product/dropbox/mcp-server",
+      "type": "Product",
+      "label": "The official Dropbox MCP server",
+      "vendor": "Dropbox"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#listfolder",
+      "type": "Tool",
+      "label": "ListFolder",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#getfilemetadata",
+      "type": "Tool",
+      "label": "GetFileMetadata",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#getfilecontent",
+      "type": "Tool",
+      "label": "GetFileContent",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#getusageandquota",
+      "type": "Tool",
+      "label": "GetUsageAndQuota",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#search",
+      "type": "Tool",
+      "label": "Search",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#createfolder",
+      "type": "Tool",
+      "label": "CreateFolder",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#createfile",
+      "type": "Tool",
+      "label": "CreateFile",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#createsharedlink",
+      "type": "Tool",
+      "label": "CreateSharedLink",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#whoami",
+      "type": "Tool",
+      "label": "WhoAmI",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#copy",
+      "type": "Tool",
+      "label": "Copy",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#move",
+      "type": "Tool",
+      "label": "Move",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#delete",
+      "type": "Tool",
+      "label": "Delete",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#checkjobstatus",
+      "type": "Tool",
+      "label": "CheckJobStatus",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#downloadlink",
+      "type": "Tool",
+      "label": "DownloadLink",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#listsharedlinks",
+      "type": "Tool",
+      "label": "ListSharedLinks",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#getsharedlinkmetadata",
+      "type": "Tool",
+      "label": "GetSharedLinkMetadata",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#createfilerequest",
+      "type": "Tool",
+      "label": "CreateFileRequest",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#getfilerequest",
+      "type": "Tool",
+      "label": "GetFileRequest",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#listfilerequests",
+      "type": "Tool",
+      "label": "ListFileRequests",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "tool/dropbox/mcp-server/default#the-oauth-app",
+      "type": "Tool",
+      "label": "the OAuth app",
+      "shape": "dropbox/mcp-server/default"
+    },
+    {
+      "id": "product/google/workspace-mcp",
+      "type": "Product",
+      "label": "The Google Workspace MCP servers",
+      "vendor": "Google"
+    },
+    {
+      "id": "tool/google/workspace-mcp/default#gmail-mcp-server",
+      "type": "Tool",
+      "label": "Gmail MCP server",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "tool/google/workspace-mcp/default#drive-mcp-server",
+      "type": "Tool",
+      "label": "Drive MCP server",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "tool/google/workspace-mcp/default#docs-sheets-and-slides-mcp-servers",
+      "type": "Tool",
+      "label": "Docs, Sheets and Slides MCP servers",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "tool/google/workspace-mcp/default#calendar-mcp-server",
+      "type": "Tool",
+      "label": "Calendar MCP server",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "tool/google/workspace-mcp/default#chat-mcp-server",
+      "type": "Tool",
+      "label": "Chat MCP server",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "scope/google/workspace-mcp/default#gmail-readonly",
+      "type": "Scope",
+      "label": "gmail.readonly",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "scope/google/workspace-mcp/default#drive-readonly",
+      "type": "Scope",
+      "label": "drive.readonly",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "tool/google/workspace-mcp/default#the-oauth-consent",
+      "type": "Tool",
+      "label": "the OAuth consent",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "scope/google/workspace-mcp/default#gmail-compose",
+      "type": "Scope",
+      "label": "gmail.compose",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "scope/google/workspace-mcp/default#drive-file",
+      "type": "Scope",
+      "label": "drive.file",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "scope/google/workspace-mcp/default#documents",
+      "type": "Scope",
+      "label": "documents",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "scope/google/workspace-mcp/default#spreadsheets",
+      "type": "Scope",
+      "label": "spreadsheets",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "scope/google/workspace-mcp/default#presentations",
+      "type": "Scope",
+      "label": "presentations",
+      "shape": "google/workspace-mcp/default"
+    },
+    {
+      "id": "product/n8n/self-hosted",
+      "type": "Product",
+      "label": "A self-hosted n8n instance, reached with an owner-scoped API key",
+      "vendor": "n8n (self-hosted)"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#the-rest-api-owner-scoped-key",
+      "type": "Tool",
+      "label": "the REST API, owner-scoped key",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#the-platform-s-mcp-interface",
+      "type": "Tool",
+      "label": "the platform's MCP interface",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#the-platform-ui-by-the-deployer",
+      "type": "Tool",
+      "label": "the platform UI, by the deployer",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#the-owner-scoped-api-key",
+      "type": "Tool",
+      "label": "the owner-scoped API key",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#the-mcp-interface-list-credentials",
+      "type": "Tool",
+      "label": "the MCP interface: list credentials",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#rest-api-credentials-blocked-at-the-investigator-s-gateway",
+      "type": "Tool",
+      "label": "REST API: credentials (blocked at the investigator's gateway)",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#rest-api-executions",
+      "type": "Tool",
+      "label": "REST API: executions",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#rest-api-an-outbound-http-node-on-creation",
+      "type": "Tool",
+      "label": "REST API: an outbound-HTTP node on creation",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#the-ai-agent-workflow-against-a-real-model-credential",
+      "type": "Tool",
+      "label": "the AI Agent workflow, against a real model credential",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#a-code-node-not-created",
+      "type": "Tool",
+      "label": "a Code node, not created",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#rest-api-workflows",
+      "type": "Tool",
+      "label": "REST API: workflows",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#rest-api-activate",
+      "type": "Tool",
+      "label": "REST API: activate",
+      "shape": "n8n/self-hosted/owner-api-key"
+    },
+    {
+      "id": "tool/n8n/self-hosted/owner-api-key#the-mcp-interface-publish",
+      "type": "Tool",
+      "label": "the MCP interface: publish",
+      "shape": "n8n/self-hosted/owner-api-key"
     },
     {
       "id": "setting/read.file.host",
@@ -1576,6 +2594,62 @@
       "label": "A scheduled job under a service account",
       "surface": [
         "service"
+      ]
+    },
+    {
+      "id": "mandate/reader-on-my-mailbox",
+      "type": "Mandate",
+      "label": "A reader on my mailbox",
+      "surface": [
+        "connector"
+      ]
+    },
+    {
+      "id": "mandate/read-and-draft-never-send",
+      "type": "Mandate",
+      "label": "Find things in the inbox, draft replies, never send",
+      "surface": [
+        "web"
+      ]
+    },
+    {
+      "id": "mandate/reader-on-my-drive",
+      "type": "Mandate",
+      "label": "A reader on my drive",
+      "surface": [
+        "connector"
+      ]
+    },
+    {
+      "id": "mandate/search-our-tenant-read-only",
+      "type": "Mandate",
+      "label": "Search our tenant, read-only",
+      "surface": [
+        "web"
+      ]
+    },
+    {
+      "id": "mandate/find-and-read-my-files",
+      "type": "Mandate",
+      "label": "Find and read my files",
+      "surface": [
+        "mcp"
+      ]
+    },
+    {
+      "id": "mandate/assistant-over-my-workspace",
+      "type": "Mandate",
+      "label": "An assistant over my Workspace, reading",
+      "surface": [
+        "mcp"
+      ]
+    },
+    {
+      "id": "mandate/sandbox-build-one-agent-workflow",
+      "type": "Mandate",
+      "label": "A sandbox: build and run one AI-agent workflow",
+      "surface": [
+        "api"
       ]
     }
   ],

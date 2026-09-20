@@ -49,6 +49,34 @@
     {
       "shape": "openai/chatgpt-web/default",
       "means": "the vendor's egress, if browsing is on"
+    },
+    {
+      "shape": "google/gmail/readonly-connector",
+      "means": "not granted by this scope"
+    },
+    {
+      "shape": "anthropic/gmail-connector/default",
+      "means": "anyone Claude replies to or forwards a message to"
+    },
+    {
+      "shape": "google/drive/readonly-connector",
+      "means": "not granted by this scope"
+    },
+    {
+      "shape": "anthropic/microsoft-365-connector/default",
+      "means": "anyone reachable by mail from the user's address"
+    },
+    {
+      "shape": "dropbox/mcp-server/default",
+      "means": "anyone who holds a shared link or a file-request URL"
+    },
+    {
+      "shape": "google/workspace-mcp/default",
+      "means": "anyone reachable by mail from that account"
+    },
+    {
+      "shape": "n8n/self-hosted/owner-api-key",
+      "means": "any host an outbound node can be pointed at — accepted on creation; what the platform's own server can reach was not tested"
     }
   ],
   "page": "https://abp.sgit.ai/model/lexicon/reaches/world/index.html",

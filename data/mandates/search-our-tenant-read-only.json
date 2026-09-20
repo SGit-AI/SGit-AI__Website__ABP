@@ -1,0 +1,60 @@
+{
+  "type": "abp/mandate/v1",
+  "id": "search-our-tenant-read-only",
+  "label": "Search our tenant, read-only",
+  "surface": [
+    "web"
+  ],
+  "applies_to": [
+    "anthropic/microsoft-365-connector/default"
+  ],
+  "status": "starting-point",
+  "authored": "2026-09-15",
+  "authored_by": "the site, as a starting point — not measured, not surveyed; the first thing to argue with",
+  "description": "We connected Claude to Microsoft 365 so people could search their mail, their chats and SharePoint. Reading is what we wanted. Nobody asked for it to send mail or post in Teams as them, and the administrator who consented read the page when it said read-only.",
+  "want": [
+    "read.message.tenant",
+    "read.file.host"
+  ],
+  "do_not_want": [
+    "send.message.world",
+    "read.credential.host"
+  ],
+  "unstated": [
+    "authenticate-as.credential.signing",
+    "authenticate-as.credential.tenant",
+    "create.record.world",
+    "create.schedule.host",
+    "create.schedule.tenant",
+    "delete.file.host",
+    "execute.process.host",
+    "execute.process.self",
+    "grant.credential.self",
+    "read.file.project",
+    "read.record.browsing",
+    "read.record.history",
+    "send.endpoint.allowed",
+    "send.endpoint.world",
+    "write.budget.tenant",
+    "write.file.host",
+    "write.file.project",
+    "write.repository.project",
+    "write.repository.tenant"
+  ],
+  "notes": {
+    "send.message.world": "refused; bounded by Mail.Send, which only the administrator can revoke",
+    "read.file.host": "wanted — and tenant-wide, which is more than anybody pictured"
+  },
+  "provenance": {
+    "source": "https://riskmandate.ai/vaults/claude-m365-connector/data/mandate.json",
+    "source_page": "https://riskmandate.ai/abp-vault-claude-m365-connector.html",
+    "retrieved": "2026-09-20T17:23:43Z",
+    "pack_version": null,
+    "content_hash": "sha256:f37d357f8ec497265227166798ed45ad6bdfe74b630ec9bdf52e85ea5ba24285",
+    "verbatim_bytes": "contributed/riskmandate/claude-m365-connector/mandate.json",
+    "contributed_by": "riskmandate.ai",
+    "contributed_manifest": "contributed/riskmandate/manifest.json",
+    "note": "Contributed by riskmandate.ai, promoted from claude-m365-connector/mandate.json. `unstated` is recomputed here. A mandate is elicited, not measured: this is the contributor's first draft, written to be argued with.",
+    "licence": "CC BY 4.0"
+  }
+}

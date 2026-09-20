@@ -15,7 +15,7 @@
       "formula": "[GrantedCapability] := a [Capability] with an inbound -grants-> from a [DeploymentShape], carrying a -bounded_by-> [Barrier] and a -known_by-> [EvidenceTier]",
       "exists_today": true,
       "note": null,
-      "matched": 81
+      "matched": 118
     },
     {
       "name": "EvidenceTier",

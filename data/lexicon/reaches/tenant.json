@@ -53,6 +53,34 @@
     {
       "shape": "openai/chatgpt-web/default",
       "means": "nothing of yours"
+    },
+    {
+      "shape": "google/gmail/readonly-connector",
+      "means": "the Google account the consent was given for"
+    },
+    {
+      "shape": "anthropic/gmail-connector/default",
+      "means": "the Google account the consent was given for"
+    },
+    {
+      "shape": "google/drive/readonly-connector",
+      "means": "the Google account the consent was given for"
+    },
+    {
+      "shape": "anthropic/microsoft-365-connector/default",
+      "means": "the Microsoft Entra tenant the administrator consented for; the user's mailbox, shared mailboxes they are delegated to, and Teams chats"
+    },
+    {
+      "shape": "dropbox/mcp-server/default",
+      "means": "the Dropbox account or team the app was authorised for"
+    },
+    {
+      "shape": "google/workspace-mcp/default",
+      "means": "the Google account the consent was given for, and the Workspace domain it belongs to"
+    },
+    {
+      "shape": "n8n/self-hosted/owner-api-key",
+      "means": "the platform as an account holder: activation, schedules, the model credential it spends against"
     }
   ],
   "page": "https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html",

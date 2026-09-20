@@ -1,0 +1,60 @@
+{
+  "type": "abp/mandate/v1",
+  "id": "find-and-read-my-files",
+  "label": "Find and read my files",
+  "surface": [
+    "mcp"
+  ],
+  "applies_to": [
+    "dropbox/mcp-server/default"
+  ],
+  "status": "starting-point",
+  "authored": "2026-09-15",
+  "authored_by": "the site, as a starting point — not measured, not surveyed; the first thing to argue with",
+  "description": "I connected Dropbox so the assistant could find and read my files. I did not want it creating links anyone can open, and I did not want it deleting or moving anything.",
+  "want": [
+    "read.file.host"
+  ],
+  "do_not_want": [
+    "delete.file.host",
+    "create.record.world",
+    "write.file.host"
+  ],
+  "unstated": [
+    "authenticate-as.credential.signing",
+    "authenticate-as.credential.tenant",
+    "create.schedule.host",
+    "create.schedule.tenant",
+    "execute.process.host",
+    "execute.process.self",
+    "grant.credential.self",
+    "read.credential.host",
+    "read.file.project",
+    "read.message.tenant",
+    "read.record.browsing",
+    "read.record.history",
+    "send.endpoint.allowed",
+    "send.endpoint.world",
+    "send.message.world",
+    "write.budget.tenant",
+    "write.file.project",
+    "write.repository.project",
+    "write.repository.tenant"
+  ],
+  "notes": {
+    "create.record.world": "refused; the scope grants it, and the eight come together",
+    "delete.file.host": "refused; recoverable for a while, on some plans"
+  },
+  "provenance": {
+    "source": "https://riskmandate.ai/vaults/dropbox-mcp/data/mandate.json",
+    "source_page": "https://riskmandate.ai/abp-vault-dropbox-mcp.html",
+    "retrieved": "2026-09-20T17:23:43Z",
+    "pack_version": null,
+    "content_hash": "sha256:5a69b3a7375b24b27c9fa78e9a3b25a8494aa2bbabb3bda34aa8e0b4bd32dcfc",
+    "verbatim_bytes": "contributed/riskmandate/dropbox-mcp/mandate.json",
+    "contributed_by": "riskmandate.ai",
+    "contributed_manifest": "contributed/riskmandate/manifest.json",
+    "note": "Contributed by riskmandate.ai, promoted from dropbox-mcp/mandate.json. `unstated` is recomputed here. A mandate is elicited, not measured: this is the contributor's first draft, written to be argued with.",
+    "licence": "CC BY 4.0"
+  }
+}

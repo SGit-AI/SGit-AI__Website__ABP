@@ -2,7 +2,7 @@
 
 > The object file as a node: the 5 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/file/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/file/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,11 +22,11 @@ The object `file`, and every primitive it appears in. **This page is a query, no
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`delete.file.host`](../../../../model/capabilities/delete.file.host/index.md) | Delete files anywhere the account can reach | [`delete`](../../../../model/lexicon/verbs/delete/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 4 of 9 |
-| [`read.file.host`](../../../../model/capabilities/read.file.host/index.md) | Read any file the account can reach | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 7 of 9 |
-| [`read.file.project`](../../../../model/capabilities/read.file.project/index.md) | Read the project it is working on | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | yes | 7 of 9 |
-| [`write.file.host`](../../../../model/capabilities/write.file.host/index.md) | Change any file the account can reach | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | with-effort | 6 of 9 |
-| [`write.file.project`](../../../../model/capabilities/write.file.project/index.md) | Change the project it is working on | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 5 of 9 |
+| [`delete.file.host`](../../../../model/capabilities/delete.file.host/index.md) | Delete files anywhere the account can reach | [`delete`](../../../../model/lexicon/verbs/delete/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 5 of 16 |
+| [`read.file.host`](../../../../model/capabilities/read.file.host/index.md) | Read any file the account can reach | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 11 of 16 |
+| [`read.file.project`](../../../../model/capabilities/read.file.project/index.md) | Read the project it is working on | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | yes | 7 of 16 |
+| [`write.file.host`](../../../../model/capabilities/write.file.host/index.md) | Change any file the account can reach | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | with-effort | 8 of 16 |
+| [`write.file.project`](../../../../model/capabilities/write.file.project/index.md) | Change the project it is working on | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 6 of 16 |
 
 ## How this node connects
 

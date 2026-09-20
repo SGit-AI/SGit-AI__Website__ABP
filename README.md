@@ -35,7 +35,7 @@ what-is-an-abp/       the foundation document, rendered, with its terms linked t
 model/                the four objects, the capabilities, the lexicon, the barriers, undo, the delta, the graph, the schema
 model/lexicon/        a page per word in the grammar: 10 verbs, 9 object classes, 5 reach classes, 9 families
 examples/             five ABPs, derived from the data rather than authored
-data/                 the published vocabulary as JSON, the graph, the lexicon, the bridges, the stored deltas, and the source bytes under upstream/
+data/                 the published vocabulary as JSON, the graph, the lexicon, the bridges, the universes, the stored deltas and fact sets, the source bytes under upstream/ and the contributed bytes under contributed/
 docs/                 every reference document, rendered, one click from its bytes
 versions/             index.json, a file and a page per version
 llms.txt              generated, and every page is in it
@@ -50,7 +50,7 @@ python3 admin/build/build_pages.py    # regenerates every page, twin, llms.txt, 
 node admin/build/validate.js          # the release gate
 ```
 
-**Nothing under `model/`, `examples/`, `data/` (except `upstream/`), `docs/*/`, `versions/`,
+**Nothing under `model/`, `examples/`, `data/` (except `upstream/` and `contributed/`, which are fetched bytes, never edited), `docs/*/`, `versions/`,
 `llms.txt`, `sitemap.xml`, `robots.txt` or `CNAME` is edited by hand.** They are generated, and
 CI fails a push whose committed tree does not match what the generator produces.
 
@@ -70,8 +70,12 @@ CI fails a push whose committed tree does not match what the generator produces.
 ## The data
 
 `data/` is the published vocabulary: 23 capability primitives in `verb.object.reach` form, four
-barriers, three undo classes, seven evidence tiers, nine deployment shapes and eight starting
-mandates, plus the stored deltas, at stable addresses with cross origin access.
+barriers, three undo classes, seven evidence tiers, sixteen deployment shapes and fifteen
+starting mandates, plus the stored deltas and fact sets, at stable addresses with cross origin
+access. Nine of the shapes were promoted from the capability map and seven were contributed by
+riskmandate.ai and promoted from `data/contributed/riskmandate/`, where the bytes as fetched
+sit unchanged with a hash per file; the two sets are counted beside each other and never
+folded together.
 
 **It was not authored here.** It is promoted from the capability map published at
 [what-can-it-do.games.sgit.ai](https://what-can-it-do.games.sgit.ai/map/index.html), pack
@@ -89,7 +93,7 @@ a JSON file and a page. A node carries no inherent meaning: what a thing IS emer
 edges traceable from it.
 
 - **The lexicon** (`/model/lexicon/`, `data/lexicon/`): every word the grammar is spelled with.
-  The reach class pages are the ones to read, because the nine deployment shapes **disagree**
+  The reach class pages are the ones to read, because the deployment shapes **disagree**
   about what `host` means and the page keeps the disagreement rather than averaging it.
 - **The edge vocabulary** (`data/graph/edges.json`): 15 edges, each a verb with a distinct and
   meaningfully named inverse, a stated domain and a stated range. Four reused from the

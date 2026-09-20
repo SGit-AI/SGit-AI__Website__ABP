@@ -2,7 +2,7 @@
 
 > The capabilities, barriers, undo classes, deployment shapes and mandates an ABP is written in, as JSON at stable addresses with cross origin access, with the source bytes they were promoted from.
 
-*Source: <https://abp.sgit.ai/data/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/data/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12,9 +12,9 @@ below point at them.*
 
 # The data
 
-The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4 barriers**, **3 undo classes**, **9 deployment shapes** and **8 starting mandates**, at stable addresses with cross origin access.
+The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4 barriers**, **3 undo classes**, **16 deployment shapes** and **15 starting mandates**, at stable addresses with cross origin access.
 
-> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.4.3`.
+> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.4.4`.
 
 ## Where it came from, and what that obliges
 
@@ -55,12 +55,13 @@ The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4
 | [`/data/lexicon/index.json`](../data/lexicon/index.json) | lexicon |
 | [`/data/bridges/index.json`](../data/bridges/index.json) | bridges |
 | [`/data/universes/index.json`](../data/universes/index.json) | universes |
+| [`/data/contributed/riskmandate/manifest.json`](../data/contributed/riskmandate/manifest.json) | contributed |
 | [`/data/provenance.json`](../data/provenance.json) | provenance |
 | [`/data/upstream/pack.json`](../data/upstream/pack.json) | upstream |
 
 ## The deltas, which are here on purpose
 
-**9 stored deltas**, one per deployment shape and mandate pair, at [`/data/deltas/index.json`](../data/deltas/index.json). Derived and never authored. Stored under deltas/, each record pinning the version of both inputs and the time and code version that produced it. No field in one is writable by a person: change a grant or a mandate and recompute. Corrected from `computed and never stored` on 11 September 2026; the brief is in /docs/briefs/. [What that means and why it changed](../model/delta/index.md).
+**16 stored deltas**, one per deployment shape and mandate pair, at [`/data/deltas/index.json`](../data/deltas/index.json). Derived and never authored. Stored under deltas/, each record pinning the version of both inputs and the time and code version that produced it. No field in one is writable by a person: change a grant or a mandate and recompute. Corrected from `computed and never stored` on 11 September 2026; the brief is in /docs/briefs/. [What that means and why it changed](../model/delta/index.md).
 
 > **The release gate recomputes every stored delta on every build** from the profile and the mandate it names, and fails on a single row of disagreement. That is how a machine holds `never authored': the rule forbids the act rather than the artefact, and a hand edited delta is a fiction nothing downstream could detect.
 
@@ -70,6 +71,24 @@ The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4
 |---|---|
 | **A score** | There is no score, rating, traffic light, risk level or severity in this pack or anywhere on this site. A score is a verdict and the ABP describes without judging. |
 | **A consequence** | A delta crossing a threshold is a record. What follows from it is a policy somebody set in advance, and it is not in this pack. |
+
+## The contributed shapes, and the intake path
+
+**7 deployment shapes were contributed by riskmandate.ai** and promoted here at v0.4.4, which is the answer to the second of the three requests it published against this site: under the three layers a shape is a layer one fact, owned by nobody, and it belongs at the address every consumer reads. The bytes as fetched sit under [`/data/contributed/riskmandate/`](../data/contributed/riskmandate/manifest.json), never edited, with a hash per file and a hash over all of them that the build and the gate both recompute. Each promoted profile pins the hash of the one file it came from, carries the contributor's own provenance block whole, and keeps the contributor's contradictions, research needed and what the grammar cannot say, because those are the finding.
+
+| Shape | Rows | Measured | Widest reach | The contributor's page |
+|---|---|---|---|---|
+| `google/gmail/readonly-connector` | 4 | 0 of 4 | tenant | [abp-vault-gmail-readonly.html](https://riskmandate.ai/abp-vault-gmail-readonly.html) |
+| `anthropic/gmail-connector/default` | 6 | 4 of 6 | world | [abp-vault-claude-gmail-connector.html](https://riskmandate.ai/abp-vault-claude-gmail-connector.html) |
+| `google/drive/readonly-connector` | 3 | 0 of 3 | tenant | [abp-vault-google-drive-readonly.html](https://riskmandate.ai/abp-vault-google-drive-readonly.html) |
+| `anthropic/microsoft-365-connector/default` | 5 | 0 of 5 | world | [abp-vault-claude-m365-connector.html](https://riskmandate.ai/abp-vault-claude-m365-connector.html) |
+| `dropbox/mcp-server/default` | 5 | 0 of 5 | world | [abp-vault-dropbox-mcp.html](https://riskmandate.ai/abp-vault-dropbox-mcp.html) |
+| `google/workspace-mcp/default` | 6 | 0 of 6 | world | [abp-vault-google-workspace-mcp.html](https://riskmandate.ai/abp-vault-google-workspace-mcp.html) |
+| `n8n/self-hosted/owner-api-key` | 8 | 7 of 8 | world | [abp-vault-n8n-owner-api-key.html](https://riskmandate.ai/abp-vault-n8n-owner-api-key.html) |
+
+> **The tier is the contributor's and this site did not raise it.** 11 of 37 contributed rows are at the contributor's measured tier, from a dated probe of an instance an early user was entitled to run, with the write up held by the contributor as the evidence file. The rest were read from vendor documentation on a date and quoted. Nothing was probed by this site, and the rows are counted beside the map's 99 rather than folded into them, because the two were obtained differently.
+
+**The intake path is the same for anybody.** A proposed shape is a `abp/profile/v1` file and a mandate that applies to it, fetched from an address the proposer publishes, held here as the bytes fetched with their hash, and promoted without renaming anything. Every capability id has to be one of the 23; a row that needs a new verb, object class or reach is a proposal to the grammar and needs a probe, and the contributor's `not_in_grammar` field is where that is recorded rather than forced.
 
 ## Proposing a change
 

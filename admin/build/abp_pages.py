@@ -95,19 +95,37 @@ EXAMPLES = [
 # shared blocks
 # ---------------------------------------------------------------------------
 
-def provenance_block(rows, extra=""):
+def provenance_block(rows, extra="", scope="site"):
     """The line that is not optional. The published map states that 21 of its 99 rows were
     measured and the rest derived; a page that hides the ratio is asserting what the map is
-    careful to qualify."""
-    return ("note",
-            f"**Provenance.** {rows['measured']} of {rows['total']} capability rows on this page "
+    careful to qualify.
+
+    Since v0.4.4 a page that carries rows from every shape (`scope="site"`) also carries
+    the contributed rows' own line, because a reader is entitled to know which rows came
+    from the map and which from a contributor, and the two were obtained differently. A
+    page about one promoted shape (`scope="shape"`) carries only the map's line, because
+    every row on it is the map's."""
+    prov = load()["provenance"]
+    text = (f"**Provenance.** {rows['measured']} of {rows['total']} capability rows "
+            f"{'from the published map ' if scope == 'site' else 'on this page '}"
             f"were measured, meaning seen directly on the thing itself. The other "
             f"{rows['derived']} were derived from what the deployment architecturally is, or "
-            f"from the vendor's published documentation. Every row traces to "
+            f"from the vendor's published documentation. "
+            f"{'Those rows trace' if scope == 'site' else 'Every row traces'} to "
             f"[the published capability map]({MAP}), retrieved "
-            f"{shell.ascii_safe(load()['provenance']['retrieved'])}, content hash "
-            f"`{load()['provenance']['content_hash'][:26]}`. "
-            f"[The source bytes](data/upstream/pack.json)." + (" " + extra if extra else ""))
+            f"{shell.ascii_safe(prov['retrieved'])}, content hash "
+            f"`{prov['content_hash'][:26]}`. "
+            f"[The source bytes](data/upstream/pack.json).")
+    c = prov.get("contributed")
+    if scope == "site" and c and c["rows"]["total"]:
+        text += (f" **A further {c['rows']['total']} rows across {c['shapes']} shapes were "
+                 f"contributed by {c['contributor']}**, {c['rows']['measured']} of them at the "
+                 f"contributor's measured tier and {c['rows']['derived']} read from vendor "
+                 f"documentation on a date; this site did not observe any of them and keeps "
+                 f"the tier as stated. Retrieved {shell.ascii_safe(c['retrieved'])}, content "
+                 f"hash `{c['content_hash'][:26]}`. "
+                 f"[The contributed bytes](data/contributed/riskmandate/manifest.json).")
+    return ("note", text + (" " + extra if extra else ""))
 
 
 def _lower_first(s):
@@ -326,7 +344,7 @@ def example_page(slug, profile_id, mandate_id, name, why, note, D):
                  "is where a control would have to sit, not a recommendation that you buy one."),
 
         ("h2", "6. The provenance"),
-        provenance_block(p["rows"]),
+        provenance_block(p["rows"], scope="shape"),
         ("p", "**No row here was obtained by probing anybody's system.** A row is measured only "
               "from a system we are entitled to run, or from the vendor's own published "
               "documentation. Causing a computer to output data intending unauthorised access "
@@ -1008,6 +1026,12 @@ def model_pages(D):
                 ["[`/data/provenance.json`](data/provenance.json)", "`abp/provenance/v1`",
                  "Where every row came from, how many were measured, and the content hash to "
                  "verify against."],
+                ["[`/data/contributed/riskmandate/`](data/contributed/riskmandate/manifest.json)",
+                 "`abp/contributed-manifest/v1`",
+                 "Seven deployment shapes contributed by riskmandate.ai: the bytes as fetched, "
+                 "unchanged, with a hash per file and a hash over all of them. Promoted into "
+                 "`profiles/` and `mandates/` with their provenance, and counted beside the "
+                 "map's rows rather than folded into them."],
                 ["[`/data/upstream/`](data/upstream/pack.json)", "the source pack",
                  "The bytes as fetched, unchanged. Anything rendered stays one click from its "
                  "source bytes."],
@@ -1046,10 +1070,14 @@ def _capability_page(c, D):
     for pid, p in sorted(D["profiles"].items()):
         row = next((r for r in p["grant"] if r["capability"] == c["id"]), None)
         if row:
-            holders.append([GLYPH[row["barrier"]], f"{shell.ascii_safe(p['product'])}",
+            holders.append([GLYPH[row["barrier"]],
+                            f"{shell.ascii_safe(p['product'])}"
+                            + (f" *(contributed by {p['contributed']['by']})*"
+                               if p.get("contributed") else ""),
                             row["barrier"] + ("" if D["is_control"][row["barrier"]]
                                               else " (not a control)"),
                             row["evidence"],
+                            row.get("material") or "not stated",
                             shell.ascii_safe(row.get("note") or "")])
     wants = [m for m in D["mandates"].values() if c["id"] in m["want"]]
     refuses = [m for m in D["mandates"].values() if c["id"] in m["do_not_want"]]
@@ -1084,7 +1112,8 @@ def _capability_page(c, D):
                  f"deployment shapes that use it **do not agree** about what it means, and the "
                  f"page keeps the disagreement rather than averaging it."),
         ("h2", f"In {len(holders)} of {len(D['profiles'])} published shapes"),
-        ("table", ["", "Deployment shape", "Barrier there", "Known by", "Note"], holders)
+        ("table", ["", "Deployment shape", "Barrier there", "Known by", "Whose material",
+                   "Note"], holders)
         if holders else ("p", "No published shape in this set has it."),
         barrier_legend(),
         ("h2", "What the starting mandates say about it"),
@@ -1243,7 +1272,7 @@ def examples_pages(D):
             ("note", COST_NOTE),
             ("h2", "What none of these is"),
             ("note", abp.NOT_AN_ASSESSMENT),
-            provenance_block(total),
+            provenance_block(total, scope="shape"),
         ]}
     return pages
 
@@ -1319,6 +1348,40 @@ def data_page(D):
                 ["**A score**", shell.ascii_safe(man["not_here"]["score"])],
                 ["**A consequence**", shell.ascii_safe(man["not_here"]["consequence"])],
             ]),
+            ("h2", "The contributed shapes, and the intake path"),
+            ("p", f"**{prov['contributed']['shapes']} deployment shapes were contributed by "
+                  f"{prov['contributed']['contributor']}** and promoted here at v0.4.4, which "
+                  f"is the answer to the second of the three requests it published against "
+                  f"this site: under the three layers a shape is a layer one fact, owned by "
+                  f"nobody, and it belongs at the address every consumer reads. The bytes as "
+                  f"fetched sit under [`/data/contributed/riskmandate/`]"
+                  f"(data/contributed/riskmandate/manifest.json), never edited, with a hash "
+                  f"per file and a hash over all of them that the build and the gate both "
+                  f"recompute. Each promoted profile pins the hash of the one file it came "
+                  f"from, carries the contributor's own provenance block whole, and keeps "
+                  f"the contributor's contradictions, research needed and what the grammar "
+                  f"cannot say, because those are the finding."),
+            ("table", ["Shape", "Rows", "Measured", "Widest reach", "The contributor's page"],
+             [[f"`{p['id']}`", str(p["grant_size"]),
+               f"{p['rows']['measured']} of {p['rows']['total']}", p["widest_reach"] or "none",
+               f"[{p['contributed']['vault_page'].rsplit('/', 1)[-1]}]({p['contributed']['vault_page']})"]
+              for p in D["profiles"].values() if p.get("contributed")]),
+            ("note", "**The tier is the contributor's and this site did not raise it.** "
+                     f"{prov['contributed']['rows']['measured']} of "
+                     f"{prov['contributed']['rows']['total']} contributed rows are at the "
+                     f"contributor's measured tier, from a dated probe of an instance an early "
+                     f"user was entitled to run, with the write up held by the contributor as "
+                     f"the evidence file. The rest were read from vendor documentation on a "
+                     f"date and quoted. Nothing was probed by this site, and the rows are "
+                     f"counted beside the map's {prov['rows']['total']} rather than folded "
+                     f"into them, because the two were obtained differently."),
+            ("p", "**The intake path is the same for anybody.** A proposed shape is a "
+                  "`abp/profile/v1` file and a mandate that applies to it, fetched from an "
+                  "address the proposer publishes, held here as the bytes fetched with their "
+                  "hash, and promoted without renaming anything. Every capability id has to "
+                  "be one of the 23; a row that needs a new verb, object class or reach is a "
+                  "proposal to the grammar and needs a probe, and the contributor's "
+                  "`not_in_grammar` field is where that is recorded rather than forced."),
             ("h2", "Proposing a change"),
             ("p", "**The data files are the shared facts and they live in this repository so "
                   "that people can propose changes.** The site and its data are the library; a "

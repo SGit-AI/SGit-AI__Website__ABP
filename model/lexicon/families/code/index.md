@@ -2,7 +2,7 @@
 
 > The family code as a node: the 4 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/code/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/code/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,10 +22,10 @@ repositories and what lands in them
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`authenticate-as.credential.signing`](../../../../model/capabilities/authenticate-as.credential.signing/index.md) | Sign commits with the key it holds | [`authenticate-as`](../../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 3 of 9 |
-| [`create.record.world`](../../../../model/capabilities/create.record.world/index.md) | Publish packages, images or pages under the name it holds | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`record`](../../../../model/lexicon/objects/record/index.md)`.`[`world`](../../../../model/lexicon/reaches/world/index.md) | no | 2 of 9 |
-| [`write.repository.project`](../../../../model/capabilities/write.repository.project/index.md) | Commit to the repository it was pointed at | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 4 of 9 |
-| [`write.repository.tenant`](../../../../model/capabilities/write.repository.tenant/index.md) | Push to a code host (any branch it can reach) | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | with-effort | 4 of 9 |
+| [`authenticate-as.credential.signing`](../../../../model/capabilities/authenticate-as.credential.signing/index.md) | Sign commits with the key it holds | [`authenticate-as`](../../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 3 of 16 |
+| [`create.record.world`](../../../../model/capabilities/create.record.world/index.md) | Publish packages, images or pages under the name it holds | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`record`](../../../../model/lexicon/objects/record/index.md)`.`[`world`](../../../../model/lexicon/reaches/world/index.md) | no | 3 of 16 |
+| [`write.repository.project`](../../../../model/capabilities/write.repository.project/index.md) | Commit to the repository it was pointed at | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 4 of 16 |
+| [`write.repository.tenant`](../../../../model/capabilities/write.repository.tenant/index.md) | Push to a code host (any branch it can reach) | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | with-effort | 4 of 16 |
 
 ## How this node connects
 

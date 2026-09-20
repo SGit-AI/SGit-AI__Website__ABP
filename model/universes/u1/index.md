@@ -2,7 +2,7 @@
 
 > The grammar, one of the universes an ABP row crosses: owned by abp.sgit.ai, promoted from what-can-it-do.games.sgit.ai and bridged back to it, with its own node types and verbs, sharing only the grammar. Status: live.
 
-*Source: <https://abp.sgit.ai/model/universes/u1/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u1/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -52,6 +52,7 @@ Each is a verb with a distinct inverse, a stated domain and range, and the sente
 | `falls_short_of` | [The deployer](../../../model/universes/u5/index.md) |
 | `exposes` | [The deployment shape](../../../model/universes/u2/index.md) |
 | `narrows` | [The deployment shape](../../../model/universes/u2/index.md) |
+| `permits` | [The deployment shape](../../../model/universes/u2/index.md) |
 
 ## What the map adds here
 

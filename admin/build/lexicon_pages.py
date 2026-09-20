@@ -442,7 +442,7 @@ def _layers_page(D, g, cls):
                 ["Their bridges to our vocabulary, and to any other",
                  "Any merged vocabulary, because there is none"],
                 ["Their deployment shapes, measured from their own estate",
-                 "The nine published shapes, which are read from here"],
+                 f"The {len(D['profiles'])} published shapes, which are read from here"],
                 ["Their stored deltas, derived and never authored",
                  "Anything they authored by hand into a delta"],
             ]),

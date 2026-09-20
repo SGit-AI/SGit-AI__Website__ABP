@@ -352,6 +352,31 @@ for (const f of files) {
     }
   }
 
+  // THE CONTRIBUTED BYTES hash to what their manifest says, per file and over all of them,
+  // the same way the upstream pack does. A contributed row whose bytes moved after the fetch
+  // is a claim about a named commercial product with no provenance behind it.
+  const cdir = path.join(D, 'contributed', 'riskmandate');
+  const cman = fs.existsSync(path.join(cdir, 'manifest.json')) ? J('contributed/riskmandate/manifest.json') : null;
+  const contributedHash = {};
+  if (cman) {
+    const h = crypto.createHash('sha256');
+    const list = (cman.files || []).slice().sort((a, b) => { const pa = a.path.split('/'), pb = b.path.split('/');
+      for (let i = 0; i < Math.min(pa.length, pb.length); i++) if (pa[i] !== pb[i]) return pa[i] < pb[i] ? -1 : 1;
+      return pa.length - pb.length; });
+    for (const f of list) {
+      const fp = path.join(cdir, f.path);
+      if (!fs.existsSync(fp)) { errors.push(`data/contributed/riskmandate/${f.path} is in the manifest and not on disk`); continue; }
+      const b = fs.readFileSync(fp);
+      const got = crypto.createHash('sha256').update(b).digest('hex');
+      contributedHash[f.path] = got;
+      if (got !== f.sha256) errors.push(`data/contributed/riskmandate/${f.path} hashes to ${got.slice(0, 12)}..., the manifest says ${String(f.sha256).slice(0, 12)}... -- the contributed bytes were edited after the fetch`);
+      h.update(f.path); h.update(b);
+    }
+    const all = 'sha256:' + h.digest('hex');
+    if (all !== cman.content_hash) errors.push(`data/contributed/riskmandate hashes to ${all.slice(0, 22)}..., its manifest says ${String(cman.content_hash).slice(0, 22)}...`);
+    for (const k of ['contributor', 'retrieved', 'licence']) if (!cman[k]) errors.push(`data/contributed/riskmandate/manifest.json has no ${k}`);
+  }
+
   const caps = J('capabilities.json');
   const bars = J('barriers.json');
   const undo = J('undo-classes.json');
@@ -395,6 +420,20 @@ for (const f of files) {
       errors.push(`data/${e.file}: a capability claim about a named commercial product with no `
                 + `source URL, retrieval timestamp and content hash is an assertion`);
     }
+    // A contributed profile pins the hash of the one file it was promoted from, and that
+    // file is on disk under contributed/ with that hash. Same for its mandate, below.
+    if (p.provenance && p.provenance.contributed_by) {
+      const vb = String(p.provenance.verbatim_bytes || '').replace(/^contributed\/riskmandate\//, '');
+      const want = 'sha256:' + (contributedHash[vb] || '');
+      if (!contributedHash[vb]) errors.push(`data/${e.file}: contributed, and its verbatim bytes ${p.provenance.verbatim_bytes} are not in the contributed manifest`);
+      else if (want !== p.provenance.content_hash) errors.push(`data/${e.file}: pins ${p.provenance.content_hash.slice(0, 22)}..., the contributed file hashes to ${want.slice(0, 22)}...`);
+      if (p.provenance.retrieved !== (cman || {}).retrieved) errors.push(`data/${e.file}: contributed, and its retrieval time is not the manifest's`);
+      if (e.contributed_by !== p.provenance.contributed_by) errors.push(`data/profiles/index.json: ${e.id} does not say who contributed it`);
+    }
+  }
+  if (pidx && cman) {
+    const nc = pidx.profiles.filter(x => x.contributed_by).length;
+    if (nc !== (cman.shapes || []).length) errors.push(`data/profiles/index.json: ${nc} contributed profiles, the manifest names ${(cman.shapes || []).length} shapes`);
   }
 
   const midx = J('mandates/index.json');
@@ -408,6 +447,11 @@ for (const f of files) {
     }
     const n = (m.want || []).length + (m.do_not_want || []).length + (m.unstated || []).length;
     if (n !== caps.count) errors.push(`data/${e.file}: covers ${n} capabilities, there are ${caps.count}`);
+    if (m.provenance && m.provenance.contributed_by) {
+      const vb = String(m.provenance.verbatim_bytes || '').replace(/^contributed\/riskmandate\//, '');
+      if (!contributedHash[vb]) errors.push(`data/${e.file}: contributed, and its verbatim bytes are not in the contributed manifest`);
+      else if ('sha256:' + contributedHash[vb] !== m.provenance.content_hash) errors.push(`data/${e.file}: pins a hash the contributed file does not have`);
+    }
   }
 
   // THE DELTA IS DERIVED AND NEVER AUTHORED.

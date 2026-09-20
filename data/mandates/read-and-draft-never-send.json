@@ -1,0 +1,61 @@
+{
+  "type": "abp/mandate/v1",
+  "id": "read-and-draft-never-send",
+  "label": "Find things in the inbox, draft replies, never send",
+  "surface": [
+    "web"
+  ],
+  "applies_to": [
+    "anthropic/gmail-connector/default"
+  ],
+  "status": "starting-point",
+  "authored": "2026-09-16",
+  "authored_by": "the site, as a starting point — not measured, not surveyed; the first thing to argue with",
+  "description": "We connected Gmail to Claude so it could find things in the inbox, answer questions about it, and draft replies for a person to send themselves. Reading is what was wanted. Nobody asked it to send mail as them — Google's own consent screen already permits it, and only the per-action approval prompt stands between the two.",
+  "want": [
+    "read.message.tenant"
+  ],
+  "do_not_want": [
+    "send.message.world",
+    "read.credential.host",
+    "create.schedule.tenant"
+  ],
+  "unstated": [
+    "authenticate-as.credential.signing",
+    "authenticate-as.credential.tenant",
+    "create.record.world",
+    "create.schedule.host",
+    "delete.file.host",
+    "execute.process.host",
+    "execute.process.self",
+    "grant.credential.self",
+    "read.file.host",
+    "read.file.project",
+    "read.record.browsing",
+    "read.record.history",
+    "send.endpoint.allowed",
+    "send.endpoint.world",
+    "write.budget.tenant",
+    "write.file.host",
+    "write.file.project",
+    "write.repository.project",
+    "write.repository.tenant"
+  ],
+  "notes": {
+    "send.message.world": "refused; bounded today only by the approval prompt, which is a setting and not a boundary — an org owner can remove it",
+    "read.message.tenant": "wanted — and reads every message the account can already read, which is more than most people picture when they say \"read my mail\"",
+    "create.schedule.tenant": "refused; a filter is a rule that keeps acting on mail after the chat ends, and nobody asked for one"
+  },
+  "provenance": {
+    "source": "https://riskmandate.ai/vaults/claude-gmail-connector/data/mandate.json",
+    "source_page": "https://riskmandate.ai/abp-vault-claude-gmail-connector.html",
+    "retrieved": "2026-09-20T17:23:43Z",
+    "pack_version": null,
+    "content_hash": "sha256:cf7e3c1e8af38979099b193e9c98a502924e8d4f11cc6079c8c1d9573b2534b3",
+    "verbatim_bytes": "contributed/riskmandate/claude-gmail-connector/mandate.json",
+    "contributed_by": "riskmandate.ai",
+    "contributed_manifest": "contributed/riskmandate/manifest.json",
+    "note": "Contributed by riskmandate.ai, promoted from claude-gmail-connector/mandate.json. `unstated` is recomputed here. A mandate is elicited, not measured: this is the contributor's first draft, written to be argued with.",
+    "licence": "CC BY 4.0"
+  }
+}

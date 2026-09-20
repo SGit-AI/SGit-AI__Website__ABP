@@ -1,7 +1,14 @@
 {
-  "current": "v0.4.3",
+  "current": "v0.4.4",
   "_what_this_is": "The version surface. The badge in the site chrome reads `current` from this file, so the badge cannot drift from the tag: the tag is derived from admin/build/version.txt and this file is generated from the same string.",
   "versions": [
+    {
+      "version": "v0.4.4",
+      "date": "2026-09-20",
+      "title": "seven shapes contributed by riskmandate.ai are promoted with their provenance, a vendor scope becomes a node, and the intake path is the same for anybody",
+      "file": "v0.4.4.json",
+      "page": "v0.4.4/index.html"
+    },
     {
       "version": "v0.4.3",
       "date": "2026-09-20",

@@ -2,7 +2,7 @@
 
 > The deployment shape, one of the universes an ABP row crosses: owned by the vendor's published words, read on a date, with a hash, and never probed, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u2/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u2/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 **Owner** the vendor's published words, read on a date, with a hash, and never probed. **Centre of gravity** the setting. **Smallest node** a scope, a flag or a line on a documentation page. **Level** across. **Status** partial.
 
-> Since v0.4.3 the product, the tool a capability is reached through and the setting that moves a barrier are nodes, all derived from data that was already published: the tools in the vendor's words, the reductions the map publishes per capability, and the difference between two variants of one product. Scopes, documentation pages and contradictions are not nodes yet, and material is declared on the grammar and valued only where a contributed shape states it. This is the first universe where the vocabulary is not this site's: a vendor speaks in scopes, tool names, flags, consent screens and administrator settings, and the ABP keeps them in the vendor's words and draws an edge from each to the primitive it exposes.
+> Since v0.4.3 the product, the tool a capability is reached through and the setting that moves a barrier are nodes, all derived from data that was already published: the tools in the vendor's words, the reductions the map publishes per capability, and the difference between two variants of one product. Since v0.4.4 seven shapes contributed by riskmandate.ai are promoted here with their provenance, their scopes are nodes in the vendor's own identifier, and material is valued on every row they state it on. Documentation pages and contradictions are carried as data on the profile and are not nodes yet. This is the first universe where the vocabulary is not this site's: a vendor speaks in scopes, tool names, flags, consent screens and administrator settings, and the ABP keeps them in the vendor's words and draws an edge from each to the primitive it exposes.
 
 ## Node types
 
@@ -22,10 +22,10 @@ A node type is a required pattern of paths, not a label. The ones marked yes are
 
 | Type | Formula | Exists today | Note |
 |---|---|---|---|
-| **Product** | `[Product] := a node that -has_variant-> at least one [DeploymentShape]` | **yes**, 8 matched |  |
-| **DeploymentShape** | `[DeploymentShape] := a node that -grants-> at least one [Capability]` | **yes**, 9 matched |  |
-| **Tool** | `[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]` | **yes**, 17 matched | One node per shape, in the vendor's words, because what shell (Bash) reaches depends on where it runs. |
-| **Scope** | `a node that a [Tool] or [DeploymentShape] is -scoped_by->, in the vendor's own identifier` | not yet |  |
+| **Product** | `[Product] := a node that -has_variant-> at least one [DeploymentShape]` | **yes**, 15 matched |  |
+| **DeploymentShape** | `[DeploymentShape] := a node that -grants-> at least one [Capability]` | **yes**, 16 matched |  |
+| **Tool** | `[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]` | **yes**, 64 matched | One node per shape, in the vendor's words, because what shell (Bash) reaches depends on where it runs. |
+| **Scope** | `[Scope] := a node that a [DeploymentShape] is -scoped_by-> and that -permits-> at least one [Capability]` | **yes**, 9 matched | In the vendor's word, never translated. The connector shapes contributed by riskmandate.ai at v0.4.4 reach most of their rows through one. |
 | **Setting** | `[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]` | **yes**, 21 matched | Two kinds, both from published data: the reduction the map publishes per capability, and the setting that distinguishes two variants of one product, derived by diffing their grants. The confirmations flag is the second kind, and it is the path the home page's pair of examples was a sentence about. |
 | **DocumentationPage** | `a [SourceFile] in U0 that a [Shape], [Tool], [Scope] or [Setting] is -documented_at->` | not yet |  |
 | **Contradiction** | `a node where an -advertises-> claim and a -scoped_by-> scope on the same [Product] disagree, both quoted, both dated, published unresolved` | not yet | riskmandate.ai's Lab 01 holds four of these with verbatim quotes and URLs. |
@@ -39,7 +39,8 @@ Each is a verb with a distinct inverse, a stated domain and range, and the sente
 | `has_variant` | this product has this variant | `variant_of` | this variant is a variant of this product | `Product` | `DeploymentShape` | proposed here | live |
 | `runs_with` | this shape runs with this tool | `run_by` | this tool is run by these shapes | `DeploymentShape` | `Tool` | proposed here | live |
 | `exposes` | this tool exposes this capability | `exposed_by` | this capability is exposed by these tools | `Tool` | `Capability` | graphs.sgit.ai edge set | live |
-| `scoped_by` | this tool is scoped by this vendor scope | `scopes` | this scope scopes these tools | `Tool or DeploymentShape` | `Scope` | proposed here | proposed |
+| `scoped_by` | this shape is scoped by this vendor scope | `scopes` | this scope scopes these shapes | `DeploymentShape` | `Scope` | proposed here | live |
+| `permits` | this scope permits this capability | `permitted_by` | this capability is permitted by these scopes | `Scope` | `Capability` | proposed here | live |
 | `moves` | this setting moves a capability to this barrier | `moved_by` | this barrier is where these settings move a capability to | `Setting` | `Barrier` | proposed here | live |
 | `narrows` | this setting narrows this capability | `narrowed_by` | this capability is narrowed by these settings | `Setting` | `Capability` | proposed here | live |
 | `documented_at` | this tool is documented at this page, read on this date | `documents` | this page documents these tools | `Shape, Tool, Scope or Setting` | `DocumentationPage` | proposed here | proposed |
@@ -55,6 +56,7 @@ Each is a verb with a distinct inverse, a stated domain and range, and the sente
 | `exposes` | [The grammar](../../../model/universes/u1/index.md) |
 | `moves` | [The enforcement](../../../model/universes/u4/index.md) |
 | `narrows` | [The grammar](../../../model/universes/u1/index.md) |
+| `permits` | [The grammar](../../../model/universes/u1/index.md) |
 
 ## What the map adds here
 

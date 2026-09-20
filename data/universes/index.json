@@ -44,8 +44,8 @@
       "owner": "the vendor's published words, read on a date, with a hash, and never probed",
       "status": "partial",
       "node_types": 7,
-      "node_types_today": 4,
-      "verbs": 10,
+      "node_types_today": 5,
+      "verbs": 11,
       "file": "universes/u2.json"
     },
     {
@@ -229,6 +229,13 @@
     {
       "edge": "narrows",
       "inverse": "narrowed_by",
+      "from": "u2",
+      "to": "u1",
+      "owner": "this site"
+    },
+    {
+      "edge": "permits",
+      "inverse": "permitted_by",
       "from": "u2",
       "to": "u1",
       "owner": "this site"

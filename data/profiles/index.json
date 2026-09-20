@@ -1,7 +1,7 @@
 {
   "type": "abp/profiles-index/v1",
   "_what_this_is": "The deployment shapes this site holds a grant for. A shape is a product in a setting, not a product: two entries here are the same product with one setting different.",
-  "count": 9,
+  "count": 16,
   "profiles": [
     {
       "id": "anthropic/claude-code-remote/ccr-container",
@@ -146,6 +146,125 @@
         "derived": 1
       },
       "file": "profiles/openai/chatgpt-web/default.json"
+    },
+    {
+      "id": "google/gmail/readonly-connector",
+      "vendor": "Google (the scope); the assistant's vendor holds the token",
+      "product": "An assistant connected to a personal Gmail mailbox with gmail.readonly",
+      "variant": "readonly-connector",
+      "surface": "connector",
+      "profile_version": "2026-09-15",
+      "grant_size": 4,
+      "widest_reach": "tenant",
+      "rows": {
+        "total": 4,
+        "measured": 0,
+        "derived": 4
+      },
+      "file": "profiles/google/gmail/readonly-connector.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "anthropic/gmail-connector/default",
+      "vendor": "Google (the MCP server at gmailmcp.googleapis.com, and the account); Anthropic (Claude, the client, the directory listing and the approval prompt)",
+      "product": "Claude, with the Gmail connector enabled",
+      "variant": "default",
+      "surface": "web",
+      "profile_version": "2026-09-16",
+      "grant_size": 6,
+      "widest_reach": "world",
+      "rows": {
+        "total": 6,
+        "measured": 4,
+        "derived": 2
+      },
+      "file": "profiles/anthropic/gmail-connector/default.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "google/drive/readonly-connector",
+      "vendor": "Google (the scope); the assistant's vendor holds the token",
+      "product": "An assistant connected to a personal Google Drive with drive.readonly",
+      "variant": "readonly-connector",
+      "surface": "connector",
+      "profile_version": "2026-09-15",
+      "grant_size": 3,
+      "widest_reach": "tenant",
+      "rows": {
+        "total": 3,
+        "measured": 0,
+        "derived": 3
+      },
+      "file": "profiles/google/drive/readonly-connector.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "anthropic/microsoft-365-connector/default",
+      "vendor": "Anthropic",
+      "product": "Claude's Microsoft 365 connector (Outlook, SharePoint, OneDrive, Teams)",
+      "variant": "default",
+      "surface": "web",
+      "profile_version": "2026-09-15",
+      "grant_size": 5,
+      "widest_reach": "world",
+      "rows": {
+        "total": 5,
+        "measured": 0,
+        "derived": 5
+      },
+      "file": "profiles/anthropic/microsoft-365-connector/default.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "dropbox/mcp-server/default",
+      "vendor": "Dropbox",
+      "product": "The official Dropbox MCP server",
+      "variant": "default",
+      "surface": "mcp",
+      "profile_version": "2026-09-15",
+      "grant_size": 5,
+      "widest_reach": "world",
+      "rows": {
+        "total": 5,
+        "measured": 0,
+        "derived": 5
+      },
+      "file": "profiles/dropbox/mcp-server/default.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "google/workspace-mcp/default",
+      "vendor": "Google",
+      "product": "The Google Workspace MCP servers (Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat)",
+      "variant": "default",
+      "surface": "mcp",
+      "profile_version": "2026-09-15",
+      "grant_size": 6,
+      "widest_reach": "world",
+      "rows": {
+        "total": 6,
+        "measured": 0,
+        "derived": 6
+      },
+      "file": "profiles/google/workspace-mcp/default.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "n8n/self-hosted/owner-api-key",
+      "vendor": "n8n (self-hosted)",
+      "product": "A self-hosted n8n instance, reached with an owner-scoped API key",
+      "variant": "owner-api-key",
+      "surface": "api",
+      "profile_version": "2026-09-13",
+      "grant_size": 8,
+      "widest_reach": "world",
+      "rows": {
+        "total": 8,
+        "measured": 7,
+        "derived": 1
+      },
+      "file": "profiles/n8n/self-hosted/owner-api-key.json",
+      "contributed_by": "riskmandate.ai"
     }
   ],
   "provenance": {

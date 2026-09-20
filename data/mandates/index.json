@@ -1,7 +1,7 @@
 {
   "type": "abp/mandates-index/v1",
   "_what_this_is": "Starting mandates, one per surface. A mandate is what a reasonable person WANTED, stated per capability. None was measured or surveyed: each is a first draft written to be argued with.",
-  "count": 8,
+  "count": 15,
   "mandates": [
     {
       "id": "coding-assistant-on-my-machine",
@@ -107,6 +107,104 @@
       "want": 4,
       "do_not_want": 2,
       "file": "mandates/scheduled-job-under-a-service-account.json"
+    },
+    {
+      "id": "reader-on-my-mailbox",
+      "label": "A reader on my mailbox",
+      "surface": [
+        "connector"
+      ],
+      "applies_to": [
+        "google/gmail/readonly-connector"
+      ],
+      "want": 1,
+      "do_not_want": 2,
+      "file": "mandates/reader-on-my-mailbox.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "read-and-draft-never-send",
+      "label": "Find things in the inbox, draft replies, never send",
+      "surface": [
+        "web"
+      ],
+      "applies_to": [
+        "anthropic/gmail-connector/default"
+      ],
+      "want": 1,
+      "do_not_want": 3,
+      "file": "mandates/read-and-draft-never-send.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "reader-on-my-drive",
+      "label": "A reader on my drive",
+      "surface": [
+        "connector"
+      ],
+      "applies_to": [
+        "google/drive/readonly-connector"
+      ],
+      "want": 1,
+      "do_not_want": 3,
+      "file": "mandates/reader-on-my-drive.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "search-our-tenant-read-only",
+      "label": "Search our tenant, read-only",
+      "surface": [
+        "web"
+      ],
+      "applies_to": [
+        "anthropic/microsoft-365-connector/default"
+      ],
+      "want": 2,
+      "do_not_want": 2,
+      "file": "mandates/search-our-tenant-read-only.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "find-and-read-my-files",
+      "label": "Find and read my files",
+      "surface": [
+        "mcp"
+      ],
+      "applies_to": [
+        "dropbox/mcp-server/default"
+      ],
+      "want": 1,
+      "do_not_want": 3,
+      "file": "mandates/find-and-read-my-files.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "assistant-over-my-workspace",
+      "label": "An assistant over my Workspace, reading",
+      "surface": [
+        "mcp"
+      ],
+      "applies_to": [
+        "google/workspace-mcp/default"
+      ],
+      "want": 2,
+      "do_not_want": 3,
+      "file": "mandates/assistant-over-my-workspace.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "sandbox-build-one-agent-workflow",
+      "label": "A sandbox: build and run one AI-agent workflow",
+      "surface": [
+        "api"
+      ],
+      "applies_to": [
+        "n8n/self-hosted/owner-api-key"
+      ],
+      "want": 4,
+      "do_not_want": 2,
+      "file": "mandates/sandbox-build-one-agent-workflow.json",
+      "contributed_by": "riskmandate.ai"
     }
   ],
   "provenance": {

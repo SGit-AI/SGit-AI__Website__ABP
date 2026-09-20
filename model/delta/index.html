@@ -23,7 +23,7 @@
   <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
   <span class="stage-pill">the free library</span>
-  <a class="ver" href="../../versions/v0.4.3/index.html" title="What changed in v0.4.3, and the commit it was built from">v0.4.3</a>
+  <a class="ver" href="../../versions/v0.4.4/index.html" title="What changed in v0.4.4, and the commit it was built from">v0.4.4</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
@@ -86,7 +86,7 @@
   <h3 id="the-stored-record">The stored record</h3>
   <div class="tablewrap"><table><thead><tr><th>Field</th><th>Why</th></tr></thead><tbody><tr><td><code>grant_version</code></td><td>The input, pinned</td></tr><tr><td><code>mandate_version</code></td><td>The input, pinned</td></tr><tr><td><code>pack_version</code></td><td>The published vocabulary it was computed against</td></tr><tr><td><code>computed_at</code></td><td>When</td></tr><tr><td><code>computed_by</code></td><td>Which version of the computation, because the computation is code and code changes</td></tr><tr><td><code>excess</code></td><td>Capabilities in the grant and not in the mandate</td></tr><tr><td><code>unbounded_excess</code></td><td>Excess whose barrier is one of the first three kinds</td></tr><tr><td><code>shortfall</code></td><td>Capabilities in the mandate and not in the grant</td></tr></tbody></table></div>
   <div class="note"><b>No field in that record is writable by a person. The way to change a delta is to change a grant or a mandate.</b> So the release gate does not take the stored records on trust: it <b>recomputes every one of them</b> from the profile and the mandate it names and fails on a single row of disagreement. That check is a few lines, because the computation is a set difference, and it is a set difference because the grant and the mandate are held as graphs with a schema rather than as prose. <b>That is the underlying capability.</b> All of this can be done by hand today and almost nobody does it.</div>
-  <p><b>9 stored deltas</b>, one per deployment shape and mandate pair: <a href="../../data/deltas/index.json"><code>/data/deltas/index.json</code></a>.</p>
+  <p><b>16 stored deltas</b>, one per deployment shape and mandate pair: <a href="../../data/deltas/index.json"><code>/data/deltas/index.json</code></a>.</p>
   <h2 id="reality-is-the-third-input">Reality is the third input</h2>
   <p>The grant is a model of what the agent can do. The mandate is a statement of what somebody meant. <b>Both are interpretations, and both improve.</b> The customer says what they actually meant, and the mandate sharpens. Somebody discovers a capability nobody had listed, and the grant grows.</p>
   <div class="tablewrap"><table><thead><tr><th>What is observed</th><th>What it tells you</th></tr></thead><tbody><tr><td>Something happened that is not in the grant</td><td><b>The grant was incomplete.</b> Add the capability</td></tr><tr><td>Something was blocked that the grant said was possible</td><td><b>A barrier was missed</b>, or recorded at the wrong kind. Correct it</td></tr><tr><td>Something in the mandate never happens</td><td>Either the mandate is aspirational, or the capability is missing and the shortfall is real</td></tr><tr><td>Something happens repeatedly that is in the grant and not in the mandate</td><td><b>The mandate is wrong, or the deployment is.</b> This is the only row where the observation does not say which</td></tr></tbody></table></div>
@@ -128,7 +128,7 @@
     <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
     <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
     <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
-    <p class="verline">site <a href="../../versions/v0.4.3/index.html">v0.4.3</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../model/delta/index.md">this page as markdown</a></p>
+    <p class="verline">site <a href="../../versions/v0.4.4/index.html">v0.4.4</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../model/delta/index.md">this page as markdown</a></p>
   </div>
   <div>
     <h4>The argument</h4>

@@ -2,7 +2,7 @@
 
 > The five published graph rules, what they force on this model, and the sentence test that decides whether the edges are right.
 
-*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -27,7 +27,7 @@ An ABP is a graph and every document is a projection of it. The five rules that 
 | Address | What is there |
 |---|---|
 | [The lexicon](../../model/lexicon/index.md) | Every word the grammar is spelled with, as a node with its own address. `read.file.project` is three nodes and three edges. |
-| [The edge vocabulary](../../model/graph/edges/index.md) | 20 edges, each a verb with a distinct inverse, a stated domain and range. No generic association edge. |
+| [The edge vocabulary](../../model/graph/edges/index.md) | 22 edges, each a verb with a distinct inverse, a stated domain and range. No generic association edge. |
 | [The node type formulas](../../model/graph/formulas/index.md) | Classification as a required path pattern, run on every build, rather than a label somebody applied. |
 | [The three layers](../../model/graph/layers/index.md) | How a customer vault disagrees with this vocabulary without merging anything. |
 | [The nine universes](../../docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.md) | The map of the ABP onto Fractal Semantic Graphs: one capability row crosses nine universes, each with its own owner and ontology, joined by named edges. A brief at v0.4.0; the universes land one per release after it. |

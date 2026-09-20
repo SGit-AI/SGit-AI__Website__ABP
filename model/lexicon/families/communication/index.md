@@ -2,7 +2,7 @@
 
 > The family communication as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/communication/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/communication/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,8 +22,8 @@ messages to people
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`read.message.tenant`](../../../../model/capabilities/read.message.tenant/index.md) | Read mail or chat it is connected to | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`message`](../../../../model/lexicon/objects/message/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 1 of 9 |
-| [`send.message.world`](../../../../model/capabilities/send.message.world/index.md) | Send a message to anyone | [`send`](../../../../model/lexicon/verbs/send/index.md)`.`[`message`](../../../../model/lexicon/objects/message/index.md)`.`[`world`](../../../../model/lexicon/reaches/world/index.md) | no | 0 of 9 |
+| [`read.message.tenant`](../../../../model/capabilities/read.message.tenant/index.md) | Read mail or chat it is connected to | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`message`](../../../../model/lexicon/objects/message/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 5 of 16 |
+| [`send.message.world`](../../../../model/capabilities/send.message.world/index.md) | Send a message to anyone | [`send`](../../../../model/lexicon/verbs/send/index.md)`.`[`message`](../../../../model/lexicon/objects/message/index.md)`.`[`world`](../../../../model/lexicon/reaches/world/index.md) | no | 3 of 16 |
 
 ## How this node connects
 

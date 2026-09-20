@@ -1,0 +1,60 @@
+{
+  "type": "abp/mandate/v1",
+  "id": "assistant-over-my-workspace",
+  "label": "An assistant over my Workspace, reading",
+  "surface": [
+    "mcp"
+  ],
+  "applies_to": [
+    "google/workspace-mcp/default"
+  ],
+  "status": "starting-point",
+  "authored": "2026-09-15",
+  "authored_by": "the site, as a starting point — not measured, not surveyed; the first thing to argue with",
+  "description": "I wanted it to search my mail, find files and tell me what is on my calendar. I did not want it sending mail or changing documents; I asked for a reader.",
+  "want": [
+    "read.message.tenant",
+    "read.file.host"
+  ],
+  "do_not_want": [
+    "send.message.world",
+    "write.file.host",
+    "read.credential.host"
+  ],
+  "unstated": [
+    "authenticate-as.credential.signing",
+    "authenticate-as.credential.tenant",
+    "create.record.world",
+    "create.schedule.host",
+    "create.schedule.tenant",
+    "delete.file.host",
+    "execute.process.host",
+    "execute.process.self",
+    "grant.credential.self",
+    "read.file.project",
+    "read.record.browsing",
+    "read.record.history",
+    "send.endpoint.allowed",
+    "send.endpoint.world",
+    "write.budget.tenant",
+    "write.file.project",
+    "write.repository.project",
+    "write.repository.tenant"
+  ],
+  "notes": {
+    "send.message.world": "refused: the setup page says \"create draft emails\" and I took that at face value",
+    "read.credential.host": "refused, and nothing enforces it: the mailbox is where the codes arrive"
+  },
+  "provenance": {
+    "source": "https://riskmandate.ai/vaults/google-workspace-mcp/data/mandate.json",
+    "source_page": "https://riskmandate.ai/abp-vault-google-workspace-mcp.html",
+    "retrieved": "2026-09-20T17:23:43Z",
+    "pack_version": null,
+    "content_hash": "sha256:5ed0313e72177e3ebcda3b0433128300e6ce0f5c138c852edb2465fcbb203ea9",
+    "verbatim_bytes": "contributed/riskmandate/google-workspace-mcp/mandate.json",
+    "contributed_by": "riskmandate.ai",
+    "contributed_manifest": "contributed/riskmandate/manifest.json",
+    "note": "Contributed by riskmandate.ai, promoted from google-workspace-mcp/mandate.json. `unstated` is recomputed here. A mandate is elicited, not measured: this is the contributor's first draft, written to be argued with.",
+    "licence": "CC BY 4.0"
+  }
+}

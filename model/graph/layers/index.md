@@ -2,7 +2,7 @@
 
 > How a customer vault extends this vocabulary without merging anything: shared facts owned by nobody, per-party formulas, and declared bridges. Parties can disagree about meaning while still agreeing about facts.
 
-*Source: <https://abp.sgit.ai/model/graph/layers/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/layers/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -16,7 +16,7 @@ below point at them.*
 
 ## Layer 1: shared facts, owned by nobody
 
-The factual graph, published here: **23 capability primitives**, **10 verbs**, **9 object classes**, **5 reach classes**, **4 barriers**, **9 deployment shapes** and what each one grants. **Nobody has to agree about what any of it means to agree that it is the case.**
+The factual graph, published here: **23 capability primitives**, **10 verbs**, **9 object classes**, **5 reach classes**, **4 barriers**, **16 deployment shapes** and what each one grants. **Nobody has to agree about what any of it means to agree that it is the case.**
 
 > **This layer is free, public, versioned and hash verified, and it stays that way.** It lives at [`/data/`](../../../data/index.md) with cross origin access, so a vault reads it over the network rather than forking it. A consumer pins a version, because a clone that floats against the latest has no reproducible output.
 
@@ -51,7 +51,7 @@ A customer vault is layers 2 and 3, pointing at layer 1 by address, version and 
 | Their mandates, in their own words | The capability primitives, which are read from here |
 | Their formulas, including their own definition of a control | Our formulas, which are read from here |
 | Their bridges to our vocabulary, and to any other | Any merged vocabulary, because there is none |
-| Their deployment shapes, measured from their own estate | The nine published shapes, which are read from here |
+| Their deployment shapes, measured from their own estate | The 16 published shapes, which are read from here |
 | Their stored deltas, derived and never authored | Anything they authored by hand into a delta |
 
 > **And the version they pinned.** Anything computing from these files states which version it computed against, so a delta produced in the vault in March can be recomputed in September and the difference attributed to the right side. That is the same rule the [stored deltas](../../../model/delta/index.md) follow here.

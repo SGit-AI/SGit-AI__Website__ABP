@@ -2,7 +2,7 @@
 
 > The grant and its evidence, one of the universes an ABP row crosses: owned by whoever observed, or the documentation that was read, with its own node types and verbs, sharing only the grammar. Status: one-edge.
 
-*Source: <https://abp.sgit.ai/model/universes/u3/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u3/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,7 +22,7 @@ A node type is a required pattern of paths, not a label. The ones marked yes are
 
 | Type | Formula | Exists today | Note |
 |---|---|---|---|
-| **GrantedCapability** | `[GrantedCapability] := a [Capability] with an inbound -grants-> from a [DeploymentShape], carrying a -bounded_by-> [Barrier] and a -known_by-> [EvidenceTier]` | **yes**, 81 matched |  |
+| **GrantedCapability** | `[GrantedCapability] := a [Capability] with an inbound -grants-> from a [DeploymentShape], carrying a -bounded_by-> [Barrier] and a -known_by-> [EvidenceTier]` | **yes**, 118 matched |  |
 | **EvidenceTier** | `a node that -evidences-> at least one [GrantedCapability]` | **yes** |  |
 | **Observation** | `a node -observed_on-> an [Instance] on a date, -backed_by-> an [EvidenceFile], that -evidences-> at least one [GrantedCapability]` | not yet |  |
 | **Instance** | `a running deployment of a [DeploymentShape] that somebody was entitled to run` | not yet | Named so that every observation states whose system it was and that we were entitled to run it. Never probe anybody's system. |

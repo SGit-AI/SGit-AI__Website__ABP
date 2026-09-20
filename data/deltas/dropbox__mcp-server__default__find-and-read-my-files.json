@@ -1,0 +1,47 @@
+{
+  "type": "abp/delta/v1",
+  "profile": "dropbox/mcp-server/default",
+  "mandate": "find-and-read-my-files",
+  "grant_version": "2026-09-15",
+  "mandate_version": "2026-09-15",
+  "pack_version": "v0.8.0",
+  "computed_at": "2026-09-20T17:23:43Z",
+  "computed_by": "abp.delta/v1",
+  "excess": [
+    "authenticate-as.credential.tenant",
+    "create.record.world",
+    "delete.file.host",
+    "write.file.host"
+  ],
+  "excess_refused": [
+    "create.record.world",
+    "delete.file.host",
+    "write.file.host"
+  ],
+  "excess_unstated": [
+    "authenticate-as.credential.tenant"
+  ],
+  "unbounded_excess": [],
+  "shortfall": [],
+  "aligned": [
+    "read.file.host"
+  ],
+  "derived_never_authored": "No field in this record is writable by a person. The way to change a delta is to change a grant or a mandate, and then recompute.",
+  "counts": {
+    "excess": 4,
+    "unbounded_excess": 0,
+    "shortfall": 0,
+    "aligned": 1
+  },
+  "id": "dropbox__mcp-server__default__find-and-read-my-files",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Derived from the grant and the mandate named above. Never authored: no field here is writable by a person, and the release gate recomputes it.",
+    "licence": "CC BY 4.0"
+  }
+}

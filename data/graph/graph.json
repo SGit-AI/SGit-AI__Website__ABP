@@ -1,7 +1,7 @@
 {
   "type": "abp/graph-edges/v1",
   "_what_this_is": "Every edge instance, flat. Pair it with nodes.json to walk the graph.",
-  "count": 658,
+  "count": 993,
   "edges": [
     {
       "from": "barrier/expectation",
@@ -1809,6 +1809,561 @@
       "to": "evidence/derived"
     },
     {
+      "from": "shape/google/gmail/readonly-connector",
+      "edge": "grants",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#read.credential.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#read.credential.host",
+      "edge": "known_by",
+      "to": "evidence/inferred"
+    },
+    {
+      "from": "shape/google/gmail/readonly-connector",
+      "edge": "grants",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#read.record.history",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#read.record.history",
+      "edge": "known_by",
+      "to": "evidence/inferred"
+    },
+    {
+      "from": "shape/google/gmail/readonly-connector",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/google/gmail/readonly-connector",
+      "edge": "grants",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#read.message.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#read.message.tenant",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "grants",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#read.credential.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#read.credential.host",
+      "edge": "known_by",
+      "to": "evidence/inferred"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "grants",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#read.record.history",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#read.record.history",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "grants",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#send.message.world",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#send.message.world",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "grants",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#read.message.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#read.message.tenant",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "grants",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#create.schedule.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/setting"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#create.schedule.tenant",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/google/drive/readonly-connector",
+      "edge": "grants",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "granted/google/drive/readonly-connector#read.credential.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/google/drive/readonly-connector#read.credential.host",
+      "edge": "known_by",
+      "to": "evidence/inferred"
+    },
+    {
+      "from": "shape/google/drive/readonly-connector",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/google/drive/readonly-connector#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/google/drive/readonly-connector#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/google/drive/readonly-connector",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/google/drive/readonly-connector#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/google/drive/readonly-connector#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "grants",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#read.credential.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#read.credential.host",
+      "edge": "known_by",
+      "to": "evidence/inferred"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "grants",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#read.message.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#read.message.tenant",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "grants",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#send.message.world",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#send.message.world",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "grants",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#create.record.world",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#create.record.world",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "grants",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#delete.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#delete.file.host",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "grants",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#write.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#write.file.host",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "grants",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#read.credential.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#read.credential.host",
+      "edge": "known_by",
+      "to": "evidence/inferred"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "grants",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#read.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#read.file.host",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "grants",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#read.message.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#read.message.tenant",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "grants",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#send.message.world",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#send.message.world",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "grants",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#write.file.host",
+      "edge": "bounded_by",
+      "to": "barrier/boundary"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#write.file.host",
+      "edge": "known_by",
+      "to": "evidence/documented"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "grants",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#authenticate-as.credential.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#authenticate-as.credential.tenant",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "grants",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#read.credential.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#read.credential.host",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "grants",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#read.record.history",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#read.record.history",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "grants",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#send.endpoint.world",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#send.endpoint.world",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "grants",
+      "to": "capability/write.budget.tenant"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#write.budget.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#write.budget.tenant",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "grants",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#execute.process.host",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#execute.process.host",
+      "edge": "known_by",
+      "to": "evidence/derived"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "grants",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#write.file.project",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#write.file.project",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "grants",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#create.schedule.tenant",
+      "edge": "bounded_by",
+      "to": "barrier/none"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#create.schedule.tenant",
+      "edge": "known_by",
+      "to": "evidence/measured"
+    },
+    {
       "from": "product/anthropic/claude-code-remote",
       "edge": "has_variant",
       "to": "shape/anthropic/claude-code-remote/ccr-container"
@@ -2434,6 +2989,851 @@
       "to": "capability/read.file.project"
     },
     {
+      "from": "product/google/gmail",
+      "edge": "has_variant",
+      "to": "shape/google/gmail/readonly-connector"
+    },
+    {
+      "from": "shape/google/gmail/readonly-connector",
+      "edge": "runs_with",
+      "to": "tool/google/gmail/readonly-connector#the-assistant-s-gmail-connector"
+    },
+    {
+      "from": "shape/google/gmail/readonly-connector",
+      "edge": "scoped_by",
+      "to": "scope/google/gmail/readonly-connector#gmail-readonly"
+    },
+    {
+      "from": "scope/google/gmail/readonly-connector#gmail-readonly",
+      "edge": "permits",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "scope/google/gmail/readonly-connector#gmail-readonly",
+      "edge": "permits",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "shape/google/gmail/readonly-connector",
+      "edge": "runs_with",
+      "to": "tool/google/gmail/readonly-connector#the-oauth-consent"
+    },
+    {
+      "from": "tool/google/gmail/readonly-connector#the-oauth-consent",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "scope/google/gmail/readonly-connector#gmail-readonly",
+      "edge": "permits",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "product/anthropic/gmail-connector",
+      "edge": "has_variant",
+      "to": "shape/anthropic/gmail-connector/default"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#send-email-message-the-display-name-in-the-approval-prompt-the-tool-s-own-name-was-not-shown"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#search-threads"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#get-thread"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#get-message"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#list-drafts"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#create-draft"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#list-labels"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#create-label"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#delete-label"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#label-message"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#label-thread"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#unlabel-message"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#unlabel-thread"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#list-filters"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#create-filter"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#reply"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#forward"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#mark-message-spam"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#mark-thread-spam"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#apply-sensitive-message-truncated-in-the-directory-listing"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#apply-sensitive-thread-truncated-in-the-directory-listing"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#and-more-behind-the-listing-s-show-all-not-expanded-in-the-capture"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#search-threads",
+      "edge": "exposes",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#get-message",
+      "edge": "exposes",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#list-labels",
+      "edge": "exposes",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#get-thread",
+      "edge": "exposes",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#list-filters-listed-the-agent-reported-no-such-tool-see-contradictions"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#list-filters-listed-the-agent-reported-no-such-tool-see-contradictions",
+      "edge": "exposes",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#send-email-message"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#send-email-message",
+      "edge": "exposes",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#reply",
+      "edge": "exposes",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#forward",
+      "edge": "exposes",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "shape/anthropic/gmail-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/gmail-connector/default#sign-in-with-google-claude-for-gmail"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#sign-in-with-google-claude-for-gmail",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#search-threads",
+      "edge": "exposes",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#get-thread",
+      "edge": "exposes",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#get-message",
+      "edge": "exposes",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#list-drafts",
+      "edge": "exposes",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "tool/anthropic/gmail-connector/default#create-filter",
+      "edge": "exposes",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
+      "from": "product/google/drive",
+      "edge": "has_variant",
+      "to": "shape/google/drive/readonly-connector"
+    },
+    {
+      "from": "shape/google/drive/readonly-connector",
+      "edge": "runs_with",
+      "to": "tool/google/drive/readonly-connector#the-assistant-s-drive-connector"
+    },
+    {
+      "from": "shape/google/drive/readonly-connector",
+      "edge": "scoped_by",
+      "to": "scope/google/drive/readonly-connector#drive-readonly"
+    },
+    {
+      "from": "scope/google/drive/readonly-connector#drive-readonly",
+      "edge": "permits",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "shape/google/drive/readonly-connector",
+      "edge": "runs_with",
+      "to": "tool/google/drive/readonly-connector#the-oauth-consent"
+    },
+    {
+      "from": "tool/google/drive/readonly-connector#the-oauth-consent",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "scope/google/drive/readonly-connector#drive-readonly",
+      "edge": "permits",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "product/anthropic/microsoft-365-connector",
+      "edge": "has_variant",
+      "to": "shape/anthropic/microsoft-365-connector/default"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#sharepoint-search"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#sharepoint-folder-search"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-email-search"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-calendar-search"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#find-meeting-availability"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#chat-message-search"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#read-resource"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-send-mail"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-forward-mail"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-send-draft"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-trash-thread"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-untrash-thread"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-batch-delete-messages"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-create-draft"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-create-reply-draft"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-create-reply-all-draft"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#outlook-update-draft"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#outlook-email-search",
+      "edge": "exposes",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#read-resource",
+      "edge": "exposes",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "shape/anthropic/microsoft-365-connector/default",
+      "edge": "runs_with",
+      "to": "tool/anthropic/microsoft-365-connector/default#oauth-2-0-on-behalf-of"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#oauth-2-0-on-behalf-of",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#sharepoint-search",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#sharepoint-folder-search",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#read-resource",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#outlook-email-search",
+      "edge": "exposes",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#chat-message-search",
+      "edge": "exposes",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#read-resource",
+      "edge": "exposes",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#outlook-send-mail",
+      "edge": "exposes",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#outlook-forward-mail",
+      "edge": "exposes",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "tool/anthropic/microsoft-365-connector/default#outlook-send-draft",
+      "edge": "exposes",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "product/dropbox/mcp-server",
+      "edge": "has_variant",
+      "to": "shape/dropbox/mcp-server/default"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#listfolder"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#getfilemetadata"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#getfilecontent"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#getusageandquota"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#search"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#createfolder"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#createfile"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#createsharedlink"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#whoami"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#copy"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#move"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#delete"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#checkjobstatus"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#downloadlink"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#listsharedlinks"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#getsharedlinkmetadata"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#createfilerequest"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#getfilerequest"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#listfilerequests"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#whoami",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "shape/dropbox/mcp-server/default",
+      "edge": "runs_with",
+      "to": "tool/dropbox/mcp-server/default#the-oauth-app"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#the-oauth-app",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#createsharedlink",
+      "edge": "exposes",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#createfilerequest",
+      "edge": "exposes",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#delete",
+      "edge": "exposes",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#getfilecontent",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#search",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#listfolder",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#downloadlink",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#getfilemetadata",
+      "edge": "exposes",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#createfile",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#createfolder",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#copy",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "tool/dropbox/mcp-server/default#move",
+      "edge": "exposes",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "product/google/workspace-mcp",
+      "edge": "has_variant",
+      "to": "shape/google/workspace-mcp/default"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "runs_with",
+      "to": "tool/google/workspace-mcp/default#gmail-mcp-server"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "runs_with",
+      "to": "tool/google/workspace-mcp/default#drive-mcp-server"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "runs_with",
+      "to": "tool/google/workspace-mcp/default#docs-sheets-and-slides-mcp-servers"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "runs_with",
+      "to": "tool/google/workspace-mcp/default#calendar-mcp-server"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "runs_with",
+      "to": "tool/google/workspace-mcp/default#chat-mcp-server"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "scoped_by",
+      "to": "scope/google/workspace-mcp/default#gmail-readonly"
+    },
+    {
+      "from": "scope/google/workspace-mcp/default#gmail-readonly",
+      "edge": "permits",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "scoped_by",
+      "to": "scope/google/workspace-mcp/default#drive-readonly"
+    },
+    {
+      "from": "scope/google/workspace-mcp/default#drive-readonly",
+      "edge": "permits",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "runs_with",
+      "to": "tool/google/workspace-mcp/default#the-oauth-consent"
+    },
+    {
+      "from": "tool/google/workspace-mcp/default#the-oauth-consent",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "scope/google/workspace-mcp/default#drive-readonly",
+      "edge": "permits",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "scope/google/workspace-mcp/default#gmail-readonly",
+      "edge": "permits",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "scoped_by",
+      "to": "scope/google/workspace-mcp/default#gmail-compose"
+    },
+    {
+      "from": "scope/google/workspace-mcp/default#gmail-compose",
+      "edge": "permits",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "scoped_by",
+      "to": "scope/google/workspace-mcp/default#drive-file"
+    },
+    {
+      "from": "scope/google/workspace-mcp/default#drive-file",
+      "edge": "permits",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "scoped_by",
+      "to": "scope/google/workspace-mcp/default#documents"
+    },
+    {
+      "from": "scope/google/workspace-mcp/default#documents",
+      "edge": "permits",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "scoped_by",
+      "to": "scope/google/workspace-mcp/default#spreadsheets"
+    },
+    {
+      "from": "scope/google/workspace-mcp/default#spreadsheets",
+      "edge": "permits",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "shape/google/workspace-mcp/default",
+      "edge": "scoped_by",
+      "to": "scope/google/workspace-mcp/default#presentations"
+    },
+    {
+      "from": "scope/google/workspace-mcp/default#presentations",
+      "edge": "permits",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "product/n8n/self-hosted",
+      "edge": "has_variant",
+      "to": "shape/n8n/self-hosted/owner-api-key"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#the-rest-api-owner-scoped-key"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#the-platform-s-mcp-interface"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#the-platform-ui-by-the-deployer"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#the-owner-scoped-api-key"
+    },
+    {
+      "from": "tool/n8n/self-hosted/owner-api-key#the-owner-scoped-api-key",
+      "edge": "exposes",
+      "to": "capability/authenticate-as.credential.tenant"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#the-mcp-interface-list-credentials"
+    },
+    {
+      "from": "tool/n8n/self-hosted/owner-api-key#the-mcp-interface-list-credentials",
+      "edge": "exposes",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#rest-api-credentials-blocked-at-the-investigator-s-gateway"
+    },
+    {
+      "from": "tool/n8n/self-hosted/owner-api-key#rest-api-credentials-blocked-at-the-investigator-s-gateway",
+      "edge": "exposes",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#rest-api-executions"
+    },
+    {
+      "from": "tool/n8n/self-hosted/owner-api-key#rest-api-executions",
+      "edge": "exposes",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#rest-api-an-outbound-http-node-on-creation"
+    },
+    {
+      "from": "tool/n8n/self-hosted/owner-api-key#rest-api-an-outbound-http-node-on-creation",
+      "edge": "exposes",
+      "to": "capability/send.endpoint.world"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#the-ai-agent-workflow-against-a-real-model-credential"
+    },
+    {
+      "from": "tool/n8n/self-hosted/owner-api-key#the-ai-agent-workflow-against-a-real-model-credential",
+      "edge": "exposes",
+      "to": "capability/write.budget.tenant"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#a-code-node-not-created"
+    },
+    {
+      "from": "tool/n8n/self-hosted/owner-api-key#a-code-node-not-created",
+      "edge": "exposes",
+      "to": "capability/execute.process.host"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#rest-api-workflows"
+    },
+    {
+      "from": "tool/n8n/self-hosted/owner-api-key#rest-api-workflows",
+      "edge": "exposes",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#rest-api-activate"
+    },
+    {
+      "from": "tool/n8n/self-hosted/owner-api-key#rest-api-activate",
+      "edge": "exposes",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
+      "from": "shape/n8n/self-hosted/owner-api-key",
+      "edge": "runs_with",
+      "to": "tool/n8n/self-hosted/owner-api-key#the-mcp-interface-publish"
+    },
+    {
+      "from": "tool/n8n/self-hosted/owner-api-key#the-mcp-interface-publish",
+      "edge": "exposes",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
       "from": "setting/read.file.host",
       "edge": "narrows",
       "to": "capability/read.file.host"
@@ -3004,6 +4404,156 @@
       "to": "capability/send.endpoint.world"
     },
     {
+      "from": "mandate/reader-on-my-mailbox",
+      "edge": "authorises",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "mandate/reader-on-my-mailbox",
+      "edge": "withholds",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "mandate/reader-on-my-mailbox",
+      "edge": "withholds",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "mandate/read-and-draft-never-send",
+      "edge": "authorises",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "mandate/read-and-draft-never-send",
+      "edge": "withholds",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "mandate/read-and-draft-never-send",
+      "edge": "withholds",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "mandate/read-and-draft-never-send",
+      "edge": "withholds",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
+      "from": "mandate/reader-on-my-drive",
+      "edge": "authorises",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "mandate/reader-on-my-drive",
+      "edge": "withholds",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "mandate/reader-on-my-drive",
+      "edge": "withholds",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "mandate/reader-on-my-drive",
+      "edge": "withholds",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "mandate/search-our-tenant-read-only",
+      "edge": "authorises",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "mandate/search-our-tenant-read-only",
+      "edge": "authorises",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "mandate/search-our-tenant-read-only",
+      "edge": "withholds",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "mandate/search-our-tenant-read-only",
+      "edge": "withholds",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "mandate/find-and-read-my-files",
+      "edge": "authorises",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "mandate/find-and-read-my-files",
+      "edge": "withholds",
+      "to": "capability/delete.file.host"
+    },
+    {
+      "from": "mandate/find-and-read-my-files",
+      "edge": "withholds",
+      "to": "capability/create.record.world"
+    },
+    {
+      "from": "mandate/find-and-read-my-files",
+      "edge": "withholds",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "mandate/assistant-over-my-workspace",
+      "edge": "authorises",
+      "to": "capability/read.message.tenant"
+    },
+    {
+      "from": "mandate/assistant-over-my-workspace",
+      "edge": "authorises",
+      "to": "capability/read.file.host"
+    },
+    {
+      "from": "mandate/assistant-over-my-workspace",
+      "edge": "withholds",
+      "to": "capability/send.message.world"
+    },
+    {
+      "from": "mandate/assistant-over-my-workspace",
+      "edge": "withholds",
+      "to": "capability/write.file.host"
+    },
+    {
+      "from": "mandate/assistant-over-my-workspace",
+      "edge": "withholds",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "mandate/sandbox-build-one-agent-workflow",
+      "edge": "authorises",
+      "to": "capability/write.file.project"
+    },
+    {
+      "from": "mandate/sandbox-build-one-agent-workflow",
+      "edge": "authorises",
+      "to": "capability/create.schedule.tenant"
+    },
+    {
+      "from": "mandate/sandbox-build-one-agent-workflow",
+      "edge": "authorises",
+      "to": "capability/write.budget.tenant"
+    },
+    {
+      "from": "mandate/sandbox-build-one-agent-workflow",
+      "edge": "authorises",
+      "to": "capability/read.record.history"
+    },
+    {
+      "from": "mandate/sandbox-build-one-agent-workflow",
+      "edge": "withholds",
+      "to": "capability/read.credential.host"
+    },
+    {
+      "from": "mandate/sandbox-build-one-agent-workflow",
+      "edge": "withholds",
+      "to": "capability/send.endpoint.world"
+    },
+    {
       "from": "granted/anthropic/claude-code/local-default#authenticate-as.credential.signing",
       "edge": "exceeds",
       "to": "mandate/coding-assistant-on-my-machine"
@@ -3292,6 +4842,131 @@
       "from": "mandate/scheduled-job-under-a-service-account",
       "edge": "falls_short_of",
       "to": "capability/send.endpoint.allowed"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#read.credential.host",
+      "edge": "exceeds",
+      "to": "mandate/reader-on-my-mailbox"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#read.record.history",
+      "edge": "exceeds",
+      "to": "mandate/reader-on-my-mailbox"
+    },
+    {
+      "from": "granted/google/gmail/readonly-connector#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/reader-on-my-mailbox"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#read.credential.host",
+      "edge": "exceeds",
+      "to": "mandate/read-and-draft-never-send"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#read.record.history",
+      "edge": "exceeds",
+      "to": "mandate/read-and-draft-never-send"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#send.message.world",
+      "edge": "exceeds",
+      "to": "mandate/read-and-draft-never-send"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/read-and-draft-never-send"
+    },
+    {
+      "from": "granted/anthropic/gmail-connector/default#create.schedule.tenant",
+      "edge": "exceeds",
+      "to": "mandate/read-and-draft-never-send"
+    },
+    {
+      "from": "granted/google/drive/readonly-connector#read.credential.host",
+      "edge": "exceeds",
+      "to": "mandate/reader-on-my-drive"
+    },
+    {
+      "from": "granted/google/drive/readonly-connector#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/reader-on-my-drive"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#read.credential.host",
+      "edge": "exceeds",
+      "to": "mandate/search-our-tenant-read-only"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/search-our-tenant-read-only"
+    },
+    {
+      "from": "granted/anthropic/microsoft-365-connector/default#send.message.world",
+      "edge": "exceeds",
+      "to": "mandate/search-our-tenant-read-only"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/find-and-read-my-files"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#create.record.world",
+      "edge": "exceeds",
+      "to": "mandate/find-and-read-my-files"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#delete.file.host",
+      "edge": "exceeds",
+      "to": "mandate/find-and-read-my-files"
+    },
+    {
+      "from": "granted/dropbox/mcp-server/default#write.file.host",
+      "edge": "exceeds",
+      "to": "mandate/find-and-read-my-files"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#read.credential.host",
+      "edge": "exceeds",
+      "to": "mandate/assistant-over-my-workspace"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/assistant-over-my-workspace"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#send.message.world",
+      "edge": "exceeds",
+      "to": "mandate/assistant-over-my-workspace"
+    },
+    {
+      "from": "granted/google/workspace-mcp/default#write.file.host",
+      "edge": "exceeds",
+      "to": "mandate/assistant-over-my-workspace"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#authenticate-as.credential.tenant",
+      "edge": "exceeds",
+      "to": "mandate/sandbox-build-one-agent-workflow"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#read.credential.host",
+      "edge": "exceeds",
+      "to": "mandate/sandbox-build-one-agent-workflow"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#send.endpoint.world",
+      "edge": "exceeds",
+      "to": "mandate/sandbox-build-one-agent-workflow"
+    },
+    {
+      "from": "granted/n8n/self-hosted/owner-api-key#execute.process.host",
+      "edge": "exceeds",
+      "to": "mandate/sandbox-build-one-agent-workflow"
     }
   ],
   "provenance": {

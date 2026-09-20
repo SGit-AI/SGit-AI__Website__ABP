@@ -2,7 +2,7 @@
   "type": "abp/facts-index/v1",
   "_what_this_is": "One fact set per stored delta: the leaf assertions every rendering of that ABP must agree on. Where an example page renders one, the index names the markdown twin the release gate parses the label, the leaflet, the prohibitions and the figure back out of, and the build fails on a single leaf assertion that differs. That is the fact diff.",
   "the_rule": "Every projection renders the same fact set with an empty diff. The facts are the leaf assertions; the classes a reader sees differ by altitude, and that is correct rather than a defect.",
-  "count": 9,
+  "count": 16,
   "facts": [
     {
       "id": "anthropic__claude-code__local-default__coding-assistant-on-my-machine",
@@ -84,6 +84,69 @@
       "projections": 0,
       "assertions": 42,
       "file": "facts/generic__scheduled-job__service-account__scheduled-job-under-a-service-account.json"
+    },
+    {
+      "id": "google__gmail__readonly-connector__reader-on-my-mailbox",
+      "profile": "google/gmail/readonly-connector",
+      "mandate": "reader-on-my-mailbox",
+      "example": null,
+      "projections": 0,
+      "assertions": 33,
+      "file": "facts/google__gmail__readonly-connector__reader-on-my-mailbox.json"
+    },
+    {
+      "id": "anthropic__gmail-connector__default__read-and-draft-never-send",
+      "profile": "anthropic/gmail-connector/default",
+      "mandate": "read-and-draft-never-send",
+      "example": null,
+      "projections": 0,
+      "assertions": 39,
+      "file": "facts/anthropic__gmail-connector__default__read-and-draft-never-send.json"
+    },
+    {
+      "id": "google__drive__readonly-connector__reader-on-my-drive",
+      "profile": "google/drive/readonly-connector",
+      "mandate": "reader-on-my-drive",
+      "example": null,
+      "projections": 0,
+      "assertions": 30,
+      "file": "facts/google__drive__readonly-connector__reader-on-my-drive.json"
+    },
+    {
+      "id": "anthropic__microsoft-365-connector__default__search-our-tenant-read-only",
+      "profile": "anthropic/microsoft-365-connector/default",
+      "mandate": "search-our-tenant-read-only",
+      "example": null,
+      "projections": 0,
+      "assertions": 34,
+      "file": "facts/anthropic__microsoft-365-connector__default__search-our-tenant-read-only.json"
+    },
+    {
+      "id": "dropbox__mcp-server__default__find-and-read-my-files",
+      "profile": "dropbox/mcp-server/default",
+      "mandate": "find-and-read-my-files",
+      "example": null,
+      "projections": 0,
+      "assertions": 33,
+      "file": "facts/dropbox__mcp-server__default__find-and-read-my-files.json"
+    },
+    {
+      "id": "google__workspace-mcp__default__assistant-over-my-workspace",
+      "profile": "google/workspace-mcp/default",
+      "mandate": "assistant-over-my-workspace",
+      "example": null,
+      "projections": 0,
+      "assertions": 36,
+      "file": "facts/google__workspace-mcp__default__assistant-over-my-workspace.json"
+    },
+    {
+      "id": "n8n__self-hosted__owner-api-key__sandbox-build-one-agent-workflow",
+      "profile": "n8n/self-hosted/owner-api-key",
+      "mandate": "sandbox-build-one-agent-workflow",
+      "example": null,
+      "projections": 0,
+      "assertions": 43,
+      "file": "facts/n8n__self-hosted__owner-api-key__sandbox-build-one-agent-workflow.json"
     }
   ],
   "provenance": {

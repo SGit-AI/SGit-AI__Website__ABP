@@ -1,0 +1,214 @@
+{
+  "type": "abp/contributed-manifest/v1",
+  "_what_this_is": "Deployment shapes contributed by a consumer of this site's data, held here as the bytes that were fetched, never edited. riskmandate.ai built these seven behaviour policy vaults against this site's v0.3.0 vocabulary, from vendor documentation read and quoted on a date, and in one case from a dated probe of an instance an early user was entitled to run. Under the three layers they are layer one facts, owned by nobody, and belong at the address every consumer reads; promoting them here is what riskmandate.ai's Lab 03 request 2 asked for. Their vaults pin this site's version of each shape from the release that carries it.",
+  "contributor": "riskmandate.ai",
+  "contributor_index": "https://riskmandate.ai/vaults/index.json",
+  "requested_at": "https://riskmandate.ai/lab-abp-requests.html",
+  "retrieved": "2026-09-20T17:23:43Z",
+  "retrieved_by": "abp.sgit.ai's build session, with curl, over the site's public HTTPS endpoint",
+  "licence": "CC BY 4.0, as each file's own provenance block states",
+  "never_tested_here": "Nothing was probed by this site. The rows are the contributor's, on the evidence tier the contributor states, and this site does not raise a tier it did not observe.",
+  "verify": "Recompute: sha256 over each file under contributed/riskmandate/ in path order, hashing the path then the bytes, skipping manifest.json. The build and the gate both do, and refuse to proceed if it disagrees.",
+  "content_hash": "sha256:70d1a4609d27f6954589b862a9ecbe33f14a1218786eb506c2215de49bc46361",
+  "files_hashed": 21,
+  "shapes": [
+    {
+      "slug": "gmail-readonly",
+      "shape": "google/gmail/readonly-connector",
+      "vault": "gmail-readonly",
+      "page": "https://riskmandate.ai/abp-vault-gmail-readonly.html",
+      "grant": "gmail-readonly/grant.json",
+      "mandate": "gmail-readonly/mandate.json",
+      "vault_record": "gmail-readonly/vault.json",
+      "vocabulary_pinned": "v0.3.0"
+    },
+    {
+      "slug": "claude-gmail-connector",
+      "shape": "anthropic/gmail-connector/default",
+      "vault": "claude-gmail-connector",
+      "page": "https://riskmandate.ai/abp-vault-claude-gmail-connector.html",
+      "grant": "claude-gmail-connector/grant.json",
+      "mandate": "claude-gmail-connector/mandate.json",
+      "vault_record": "claude-gmail-connector/vault.json",
+      "vocabulary_pinned": "v0.3.0"
+    },
+    {
+      "slug": "google-drive-readonly",
+      "shape": "google/drive/readonly-connector",
+      "vault": "google-drive-readonly",
+      "page": "https://riskmandate.ai/abp-vault-google-drive-readonly.html",
+      "grant": "google-drive-readonly/grant.json",
+      "mandate": "google-drive-readonly/mandate.json",
+      "vault_record": "google-drive-readonly/vault.json",
+      "vocabulary_pinned": "v0.3.0"
+    },
+    {
+      "slug": "claude-m365-connector",
+      "shape": "anthropic/microsoft-365-connector/default",
+      "vault": "claude-m365-connector",
+      "page": "https://riskmandate.ai/abp-vault-claude-m365-connector.html",
+      "grant": "claude-m365-connector/grant.json",
+      "mandate": "claude-m365-connector/mandate.json",
+      "vault_record": "claude-m365-connector/vault.json",
+      "vocabulary_pinned": "v0.3.0"
+    },
+    {
+      "slug": "dropbox-mcp",
+      "shape": "dropbox/mcp-server/default",
+      "vault": "dropbox-mcp",
+      "page": "https://riskmandate.ai/abp-vault-dropbox-mcp.html",
+      "grant": "dropbox-mcp/grant.json",
+      "mandate": "dropbox-mcp/mandate.json",
+      "vault_record": "dropbox-mcp/vault.json",
+      "vocabulary_pinned": "v0.3.0"
+    },
+    {
+      "slug": "google-workspace-mcp",
+      "shape": "google/workspace-mcp/default",
+      "vault": "google-workspace-mcp",
+      "page": "https://riskmandate.ai/abp-vault-google-workspace-mcp.html",
+      "grant": "google-workspace-mcp/grant.json",
+      "mandate": "google-workspace-mcp/mandate.json",
+      "vault_record": "google-workspace-mcp/vault.json",
+      "vocabulary_pinned": "v0.3.0"
+    },
+    {
+      "slug": "n8n-owner-api-key",
+      "shape": "n8n/self-hosted/owner-api-key",
+      "vault": "n8n-owner-api-key",
+      "page": "https://riskmandate.ai/abp-vault-n8n-owner-api-key.html",
+      "grant": "n8n-owner-api-key/grant.json",
+      "mandate": "n8n-owner-api-key/mandate.json",
+      "vault_record": "n8n-owner-api-key/vault.json",
+      "vocabulary_pinned": "v0.3.0"
+    }
+  ],
+  "files": [
+    {
+      "path": "claude-gmail-connector/grant.json",
+      "url": "https://riskmandate.ai/vaults/claude-gmail-connector/data/grant.json",
+      "sha256": "a0d50c78ad9902349fe243e815e61217baae75132b682b140dcb67bbed4c1957",
+      "bytes": 20883
+    },
+    {
+      "path": "claude-gmail-connector/mandate.json",
+      "url": "https://riskmandate.ai/vaults/claude-gmail-connector/data/mandate.json",
+      "sha256": "cf7e3c1e8af38979099b193e9c98a502924e8d4f11cc6079c8c1d9573b2534b3",
+      "bytes": 2234
+    },
+    {
+      "path": "claude-gmail-connector/vault.json",
+      "url": "https://riskmandate.ai/vaults/claude-gmail-connector/vault.json",
+      "sha256": "76063bb942f463e80db5bdbc258c54f5841eed4c88d9fe6edcabfb48ff348ab4",
+      "bytes": 1828
+    },
+    {
+      "path": "claude-m365-connector/grant.json",
+      "url": "https://riskmandate.ai/vaults/claude-m365-connector/data/grant.json",
+      "sha256": "222b0a04c2833a18417d81975626efcef56617085474f03373dfbe21e97e831b",
+      "bytes": 10970
+    },
+    {
+      "path": "claude-m365-connector/mandate.json",
+      "url": "https://riskmandate.ai/vaults/claude-m365-connector/data/mandate.json",
+      "sha256": "f37d357f8ec497265227166798ed45ad6bdfe74b630ec9bdf52e85ea5ba24285",
+      "bytes": 1896
+    },
+    {
+      "path": "claude-m365-connector/vault.json",
+      "url": "https://riskmandate.ai/vaults/claude-m365-connector/vault.json",
+      "sha256": "c600e93af81317d3b2c894308763835840823d420107dcccf415003aa4cfebf2",
+      "bytes": 943
+    },
+    {
+      "path": "dropbox-mcp/grant.json",
+      "url": "https://riskmandate.ai/vaults/dropbox-mcp/data/grant.json",
+      "sha256": "90b9428222dc4a272b338184a20f28dc9ec15ccb935c9fd5af92719610719794",
+      "bytes": 8238
+    },
+    {
+      "path": "dropbox-mcp/mandate.json",
+      "url": "https://riskmandate.ai/vaults/dropbox-mcp/data/mandate.json",
+      "sha256": "5a69b3a7375b24b27c9fa78e9a3b25a8494aa2bbabb3bda34aa8e0b4bd32dcfc",
+      "bytes": 1752
+    },
+    {
+      "path": "dropbox-mcp/vault.json",
+      "url": "https://riskmandate.ai/vaults/dropbox-mcp/vault.json",
+      "sha256": "ef74d17c55df6fd6b58f851524e090aeff1e4f46f896ec373298a34524e0c424",
+      "bytes": 897
+    },
+    {
+      "path": "gmail-readonly/grant.json",
+      "url": "https://riskmandate.ai/vaults/gmail-readonly/data/grant.json",
+      "sha256": "dd46e249191d0362aec640c8da04feceb20bd5dca2882ecad88749d276354378",
+      "bytes": 6180
+    },
+    {
+      "path": "gmail-readonly/mandate.json",
+      "url": "https://riskmandate.ai/vaults/gmail-readonly/data/mandate.json",
+      "sha256": "02dce502a341fb1a3a5f8b8ac7fc776c86b350274ec1cf700c762e62c53ae8b2",
+      "bytes": 1819
+    },
+    {
+      "path": "gmail-readonly/vault.json",
+      "url": "https://riskmandate.ai/vaults/gmail-readonly/vault.json",
+      "sha256": "6373a4fb051a5f9df0d2b7683772b487047ad1f10d0a5b526aed90246bfdb276",
+      "bytes": 936
+    },
+    {
+      "path": "google-drive-readonly/grant.json",
+      "url": "https://riskmandate.ai/vaults/google-drive-readonly/data/grant.json",
+      "sha256": "7719b67163fe4bfda2d5c89de34b114be3ef0e6d15d0bd6104eccd364624cfbf",
+      "bytes": 6110
+    },
+    {
+      "path": "google-drive-readonly/mandate.json",
+      "url": "https://riskmandate.ai/vaults/google-drive-readonly/data/mandate.json",
+      "sha256": "cfe8d653b41c1c0d3efd4797a90617405393f821f7ae71777d2e22cda7fc4ae2",
+      "bytes": 1819
+    },
+    {
+      "path": "google-drive-readonly/vault.json",
+      "url": "https://riskmandate.ai/vaults/google-drive-readonly/vault.json",
+      "sha256": "46379039d9cec8ee12a5eba520ff8e79df75bc2dc0a56ebd34353d18f57a9120",
+      "bytes": 941
+    },
+    {
+      "path": "google-workspace-mcp/grant.json",
+      "url": "https://riskmandate.ai/vaults/google-workspace-mcp/data/grant.json",
+      "sha256": "4352221640d51df7dba42e3693401fe59f8cf56dfefce05249ff8b8bbe57c2e4",
+      "bytes": 9930
+    },
+    {
+      "path": "google-workspace-mcp/mandate.json",
+      "url": "https://riskmandate.ai/vaults/google-workspace-mcp/data/mandate.json",
+      "sha256": "5ed0313e72177e3ebcda3b0433128300e6ce0f5c138c852edb2465fcbb203ea9",
+      "bytes": 1814
+    },
+    {
+      "path": "google-workspace-mcp/vault.json",
+      "url": "https://riskmandate.ai/vaults/google-workspace-mcp/vault.json",
+      "sha256": "1989a3575caa4ac8e64b50bbb79b75c755a555e43e2cd742a81c9b2e6ee7f59e",
+      "bytes": 929
+    },
+    {
+      "path": "n8n-owner-api-key/grant.json",
+      "url": "https://riskmandate.ai/vaults/n8n-owner-api-key/data/grant.json",
+      "sha256": "2beb2ba3dd5223074f7163c0ffd1c5c1001c661ee92cdf45fa3a05cebe2738e7",
+      "bytes": 11153
+    },
+    {
+      "path": "n8n-owner-api-key/mandate.json",
+      "url": "https://riskmandate.ai/vaults/n8n-owner-api-key/data/mandate.json",
+      "sha256": "633151c548abeaf7f396981322763371f6688d578387a8599639e4988c8c9357",
+      "bytes": 2358
+    },
+    {
+      "path": "n8n-owner-api-key/vault.json",
+      "url": "https://riskmandate.ai/vaults/n8n-owner-api-key/vault.json",
+      "sha256": "798ac710f017423f4201e2abb373fc4adbd8b5e21ef214be6ebbe4d75592d7c2",
+      "bytes": 1046
+    }
+  ]
+}

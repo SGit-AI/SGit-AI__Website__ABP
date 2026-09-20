@@ -2,7 +2,7 @@
 
 > Sign commits with the key it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.signing/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.signing/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,13 +28,13 @@ below point at them.*
 
 > **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `authenticate-as.credential.signing` is emerges from the edges traceable from it. The strongest case is [`tenant`](../../../model/lexicon/reaches/tenant/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
-## In 3 of 9 published shapes
+## In 3 of 16 published shapes
 
-|  | Deployment shape | Barrier there | Known by | Note |
-|---|---|---|---|---|
-| ● | Claude Code on the web (a remote session container) | none (not a control) | observed | commits are signed with the session's own key, registered as an agent identity in this site's registry (sha256-f9facb4c94da6c19) - not with yours |
-| ● | Claude Code (the CLI, on your own machine) | none (not a control) | documented | if commit signing is configured for the account, the agent signs as you |
-| ● | Claude Code (the CLI, on your own machine) | none (not a control) | documented | if commit signing is configured for the account, the agent signs as you |
+|  | Deployment shape | Barrier there | Known by | Whose material | Note |
+|---|---|---|---|---|---|
+| ● | Claude Code on the web (a remote session container) | none (not a control) | observed | not stated | commits are signed with the session's own key, registered as an agent identity in this site's registry (sha256-f9facb4c94da6c19) - not with yours |
+| ● | Claude Code (the CLI, on your own machine) | none (not a control) | documented | not stated | if commit signing is configured for the account, the agent signs as you |
+| ● | Claude Code (the CLI, on your own machine) | none (not a control) | documented | not stated | if commit signing is configured for the account, the agent signs as you |
 
 |  | Barrier | What stands in the way | Is it a control |
 |---|---|---|---|
@@ -49,7 +49,7 @@ below point at them.*
 |---|---|
 | **authorised** | none |
 | **refused** | A coding assistant on my machine, A coding assistant in a container on the web |
-| **unstated** | The desktop app, with local tools switched on, Chat, with connectors switched on, Chat in the browser, nothing connected, A CI job on a hosted runner, A browser extension I installed, A scheduled job under a service account |
+| **unstated** | The desktop app, with local tools switched on, Chat, with connectors switched on, Chat in the browser, nothing connected, A CI job on a hosted runner, A browser extension I installed, A scheduled job under a service account, A reader on my mailbox, Find things in the inbox, draft replies, never send, A reader on my drive, Search our tenant, read-only, Find and read my files, An assistant over my Workspace, reading, A sandbox: build and run one AI-agent workflow |
 
 **Unstated is not authorised.** A mandate that never mentioned a capability did not authorise it, and the delta on every example page counts it as excess and says which kind it was.
 

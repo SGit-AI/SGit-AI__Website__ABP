@@ -2,7 +2,7 @@
 
 > Change any file the account can reach. Reach host, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.file.host/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.file.host/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,16 +28,18 @@ below point at them.*
 
 > **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `write.file.host` is emerges from the edges traceable from it. The strongest case is [`host`](../../../model/lexicon/reaches/host/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
-## In 6 of 9 published shapes
+## In 8 of 16 published shapes
 
-|  | Deployment shape | Barrier there | Known by | Note |
-|---|---|---|---|---|
-| ● | Claude Code on the web (a remote session container) | none (not a control) | observed | a zero-byte file was created and removed in /etc: system configuration of the container is writable |
-| ● | Claude Code (the CLI, on your own machine) | none (not a control) | derived |  |
-| ● | Claude Code (the CLI, on your own machine) | none (not a control) | derived |  |
-| ◐ | Claude Desktop (a desktop app with local tools) | setting (not a control) | derived |  |
-| ● | A scheduled job running as a service account | none (not a control) | derived |  |
-| ● | Actions runner (a hosted CI job) | none (not a control) | observed | the runner's user with passwordless escalation: every file on the ephemeral machine |
+|  | Deployment shape | Barrier there | Known by | Whose material | Note |
+|---|---|---|---|---|---|
+| ● | Claude Code on the web (a remote session container) | none (not a control) | observed | not stated | a zero-byte file was created and removed in /etc: system configuration of the container is writable |
+| ● | Claude Code (the CLI, on your own machine) | none (not a control) | derived | not stated |  |
+| ● | Claude Code (the CLI, on your own machine) | none (not a control) | derived | not stated |  |
+| ◐ | Claude Desktop (a desktop app with local tools) | setting (not a control) | derived | not stated |  |
+| ○ | The official Dropbox MCP server *(contributed by riskmandate.ai)* | boundary | documented | mixed | Copy "can recreate a deleted file or replace an existing file at the destination path"; Move renames or moves files and folders; CreateFile writes up to 5 MB of inline content. |
+| ● | A scheduled job running as a service account | none (not a control) | derived | not stated |  |
+| ● | Actions runner (a hosted CI job) | none (not a control) | observed | not stated | the runner's user with passwordless escalation: every file on the ephemeral machine |
+| ○ | The Google Workspace MCP servers (Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat) *(contributed by riskmandate.ai)* | boundary | documented | mixed | drive.file creates new files or modifies files the user opened with the app; the Docs, Sheets and Slides servers each ask for the full write scope for their document type beside the read-only one. What "full" includes is open, below. |
 
 |  | Barrier | What stands in the way | Is it a control |
 |---|---|---|---|
@@ -51,8 +53,8 @@ below point at them.*
 | The mandate says | Which mandates |
 |---|---|
 | **authorised** | none |
-| **refused** | A coding assistant on my machine, The desktop app, with local tools switched on, Chat in the browser, nothing connected |
-| **unstated** | A coding assistant in a container on the web, Chat, with connectors switched on, A CI job on a hosted runner, A browser extension I installed, A scheduled job under a service account |
+| **refused** | A coding assistant on my machine, The desktop app, with local tools switched on, Chat in the browser, nothing connected, A reader on my drive, Find and read my files, An assistant over my Workspace, reading |
+| **unstated** | A coding assistant in a container on the web, Chat, with connectors switched on, A CI job on a hosted runner, A browser extension I installed, A scheduled job under a service account, A reader on my mailbox, Find things in the inbox, draft replies, never send, Search our tenant, read-only, A sandbox: build and run one AI-agent workflow |
 
 **Unstated is not authorised.** A mandate that never mentioned a capability did not authorise it, and the delta on every example page counts it as excess and says which kind it was.
 

@@ -3,7 +3,7 @@
   "_what_this_is": "A node type is a REQUIRED PATTERN OF TYPED, DIRECTED PATHS that a node either matches or does not. It is not a label somebody applied. The content of a node does not decide its type; its paths do.",
   "judgment": "Judgment does not disappear. Somebody still decided that a control must be enforced from outside the grant. What changes is where that decision lives: out of a classifier's head and into a formula that is visible, versioned, inspectable and arguable.",
   "not_a_node": "A score is not a node and there is no edge to one. Not a rating, not a risk level, not a severity. Adding one would not be a modelling choice, it would be a verdict, and the same ABP is dangerous in one deployment and harmless in the next. The risk work above this holds the assets, and that is where a score can exist.",
-  "count": 16,
+  "count": 17,
   "universes": "Each type names the universe it belongs to, which is a modelling decision made once in universes.py and checked by the gate: a type with no universe is a node nobody owns.",
   "node_types": [
     {
@@ -52,7 +52,7 @@
       "formula": "[DeploymentShape] := a node that -grants-> at least one [Capability]",
       "note": "Not a product. Two shapes here are the same product with one setting different.",
       "universe": "u2",
-      "matched": 9
+      "matched": 16
     },
     {
       "name": "GrantedCapability",
@@ -60,7 +60,7 @@
       "formula": "[GrantedCapability] := a [Capability] with an inbound -grants-> from a [DeploymentShape], carrying a -bounded_by-> [Barrier] and a -known_by-> [EvidenceTier]",
       "note": "THE NODE THAT CARRIES THE BARRIER. The barrier is a property of the capability IN A SHAPE, never of the capability itself, which is the whole reason the ABP is about the deployment rather than the product.",
       "universe": "u3",
-      "matched": 81
+      "matched": 118
     },
     {
       "name": "Barrier",
@@ -84,7 +84,7 @@
       "formula": "[Mandate] := a node that -authorises-> at least one [Capability]",
       "note": null,
       "universe": "u5",
-      "matched": 8
+      "matched": 15
     },
     {
       "name": "Excess",
@@ -92,7 +92,7 @@
       "formula": "[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope",
       "note": "A capability the mandate never mentioned was not authorised. Unstated is not permission.",
       "universe": "u6",
-      "matched": 53
+      "matched": 78
     },
     {
       "name": "UnboundedExcess",
@@ -100,7 +100,7 @@
       "formula": "[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]",
       "note": "The only number on the label a buyer can move. Every control bought moves one capability into the fourth barrier and the count falls by one.",
       "universe": "u6",
-      "matched": 48
+      "matched": 61
     },
     {
       "name": "Shortfall",
@@ -116,7 +116,7 @@
       "formula": "[Product] := a node that -has_variant-> at least one [DeploymentShape]",
       "note": "The ABP is about the deployment, not the product. A product is the node two shapes share when they differ by one setting, and nothing on this site is a claim about one.",
       "universe": "u2",
-      "matched": 8
+      "matched": 15
     },
     {
       "name": "Tool",
@@ -124,7 +124,15 @@
       "formula": "[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]",
       "note": "In the vendor's own words: shell (Bash), the assistant's Gmail connector, REST API: workflows. A tool that exposes nothing is a name and not a node here.",
       "universe": "u2",
-      "matched": 17
+      "matched": 64
+    },
+    {
+      "name": "Scope",
+      "is": "A vendor's own identifier for what a consent permits.",
+      "formula": "[Scope] := a node that a [DeploymentShape] is -scoped_by-> and that -permits-> at least one [Capability]",
+      "note": "In the vendor's word, never translated: gmail.readonly is the node, and what it permits is the edge. The connector shapes contributed by riskmandate.ai reach most of their rows this way.",
+      "universe": "u2",
+      "matched": 9
     },
     {
       "name": "Setting",

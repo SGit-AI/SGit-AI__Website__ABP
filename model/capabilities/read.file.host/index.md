@@ -2,7 +2,7 @@
 
 > Read any file the account can reach. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.4.3 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.4.4 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,17 +28,21 @@ below point at them.*
 
 > **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `read.file.host` is emerges from the edges traceable from it. The strongest case is [`host`](../../../model/lexicon/reaches/host/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
-## In 7 of 9 published shapes
+## In 11 of 16 published shapes
 
-|  | Deployment shape | Barrier there | Known by | Note |
-|---|---|---|---|---|
-| ● | Claude Code on the web (a remote session container) | none (not a control) | observed | any file in the container - the attached clone, the harness's state, the system. Not your machine's files (the assess tree's 'home: boundary') |
-| ● | Claude Code (the CLI, on your own machine) | none (not a control) | derived | everything your account can read, because a shell as you reads as you |
-| ● | Claude Code (the CLI, on your own machine) | none (not a control) | derived | everything your account can read, because a shell as you reads as you |
-| ◐ | Claude Desktop (a desktop app with local tools) | setting (not a control) | derived |  |
-| ○ | Claude (in the browser, with connectors switched on) | boundary | derived | a drive connector: your other files, as scoped |
-| ● | A scheduled job running as a service account | none (not a control) | derived |  |
-| ● | Actions runner (a hosted CI job) | none (not a control) | observed | the runner's user with passwordless escalation: every file on the ephemeral machine |
+|  | Deployment shape | Barrier there | Known by | Whose material | Note |
+|---|---|---|---|---|---|
+| ● | Claude Code on the web (a remote session container) | none (not a control) | observed | not stated | any file in the container - the attached clone, the harness's state, the system. Not your machine's files (the assess tree's 'home: boundary') |
+| ● | Claude Code (the CLI, on your own machine) | none (not a control) | derived | not stated | everything your account can read, because a shell as you reads as you |
+| ● | Claude Code (the CLI, on your own machine) | none (not a control) | derived | not stated | everything your account can read, because a shell as you reads as you |
+| ◐ | Claude Desktop (a desktop app with local tools) | setting (not a control) | derived | not stated |  |
+| ○ | Claude (in the browser, with connectors switched on) | boundary | derived | not stated | a drive connector: your other files, as scoped |
+| ○ | Claude's Microsoft 365 connector (Outlook, SharePoint, OneDrive, Teams) *(contributed by riskmandate.ai)* | boundary | documented | mixed | "SharePoint search requires Sites.Read.All permission. Site-specific permissioning (using *.Selected permissions) is not supported because the underlying search is tenant-wide." Everything the user can already open, across the tenant. |
+| ○ | The official Dropbox MCP server *(contributed by riskmandate.ai)* | boundary | documented | mixed | "Extract text from PDFs, Word documents, and other text representable files"; "Search files and folders by name or content". Everything the account can open, team folders included. |
+| ● | A scheduled job running as a service account | none (not a control) | derived | not stated |  |
+| ● | Actions runner (a hosted CI job) | none (not a control) | observed | not stated | the runner's user with passwordless escalation: every file on the ephemeral machine |
+| ○ | An assistant connected to a personal Google Drive with drive.readonly *(contributed by riskmandate.ai)* | boundary | documented | mixed | drive.readonly - "View and download all your Drive files." The default corpus of a listing is "files owned by or shared to the user"; whether shared drives are included is open, below. |
+| ○ | The Google Workspace MCP servers (Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat) *(contributed by riskmandate.ai)* | boundary | documented | mixed | drive.readonly - "View and download all your Drive files." A Drive listing's default corpus is "files owned by or shared to the user": everything any colleague, client or counterparty ever shared. |
 
 |  | Barrier | What stands in the way | Is it a control |
 |---|---|---|---|
@@ -51,9 +55,9 @@ below point at them.*
 
 | The mandate says | Which mandates |
 |---|---|
-| **authorised** | Chat, with connectors switched on, A scheduled job under a service account |
+| **authorised** | Chat, with connectors switched on, A scheduled job under a service account, A reader on my drive, Search our tenant, read-only, Find and read my files, An assistant over my Workspace, reading |
 | **refused** | A coding assistant on my machine, Chat in the browser, nothing connected |
-| **unstated** | A coding assistant in a container on the web, The desktop app, with local tools switched on, A CI job on a hosted runner, A browser extension I installed |
+| **unstated** | A coding assistant in a container on the web, The desktop app, with local tools switched on, A CI job on a hosted runner, A browser extension I installed, A reader on my mailbox, Find things in the inbox, draft replies, never send, A sandbox: build and run one AI-agent workflow |
 
 **Unstated is not authorised.** A mandate that never mentioned a capability did not authorise it, and the delta on every example page counts it as excess and says which kind it was.
 
