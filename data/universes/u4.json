@@ -1,0 +1,149 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u4",
+  "n": 4,
+  "name": "The enforcement",
+  "level": "across",
+  "owner": "whoever set the control: the vendor, the platform, the deployer or nobody",
+  "centre": "the enforcer",
+  "smallest": "one configuration line at one layer, set by one party, on one date",
+  "status": "one-edge",
+  "status_note": "Four barriers, three enforcers, one Control formula that the gate walks on every build. The formula is the most important thing on the site and it lands in a world with three nodes. The dev brief of 11 September on the prohibition's two lives wrote most of this universe's vocabulary and it was never made into nodes.",
+  "node_types": [
+    {
+      "name": "Barrier",
+      "formula": "[Barrier] := a node that -bounds-> at least one [GrantedCapability]",
+      "exists_today": true,
+      "note": null,
+      "matched": 4
+    },
+    {
+      "name": "Enforcer",
+      "formula": "a node that -enforces-> at least one [Barrier], -set_by-> a [Party], -at_layer-> a [Layer]",
+      "exists_today": true,
+      "note": "Three today, with only inside_the_grant on each. Party and Layer are the change.",
+      "matched": null
+    },
+    {
+      "name": "Control",
+      "formula": "[Control] := a [Barrier] that is -enforced_by-> an [Enforcer] the [Grant] does not include",
+      "exists_today": true,
+      "note": "Does not change, and gains a second reading: with Party and removable_by as nodes and edges, does not include becomes a path, walked one universe further.",
+      "matched": 1
+    },
+    {
+      "name": "Layer",
+      "formula": "one of prompt, tool schema, client rule, gateway, sandbox; a node a [Layer] is -above-> or -below-> another",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Party",
+      "formula": "the vendor, the platform, the deployer, the administrator, the agent's own account, or nobody",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "EvidencedControl",
+      "formula": "a [Control] whose [Enforcer] is -backed_by-> an [Observation] in U3",
+      "exists_today": false,
+      "note": "The regulated customer's stricter formula from the three layers page, now writable beside ours without touching ours.",
+      "matched": null
+    },
+    {
+      "name": "CompiledRule",
+      "formula": "a node that a [Prohibition] in U7 -compiles_to->, in a named target language, that -passes-> a shadowed permit analysis",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    }
+  ],
+  "verbs": [
+    {
+      "edge": "enforced_by",
+      "inverse": "enforces",
+      "domain": "Barrier",
+      "range": "Enforcer",
+      "reads_as": "this barrier is enforced by something above the grant",
+      "inverse_reads_as": "this enforcer enforces these barriers",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "set_by",
+      "inverse": "sets",
+      "domain": "Enforcer",
+      "range": "Party",
+      "reads_as": "this enforcer was set by this party",
+      "inverse_reads_as": "this party sets these enforcers",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "at_layer",
+      "inverse": "layer_of",
+      "domain": "Enforcer",
+      "range": "Layer",
+      "reads_as": "this enforcer sits at the gateway layer",
+      "inverse_reads_as": "the gateway layer is the layer of these enforcers",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "removable_by",
+      "inverse": "can_remove",
+      "domain": "Enforcer",
+      "range": "Party",
+      "reads_as": "this enforcer can be removed by this party",
+      "inverse_reads_as": "this party can remove these enforcers",
+      "from": "proposed here; the enforcer test as an edge",
+      "status": "proposed"
+    },
+    {
+      "edge": "expires_on",
+      "inverse": "expiry_of",
+      "domain": "Enforcer",
+      "range": "Date",
+      "reads_as": "this enforcer is good until this date, or has no stated expiry",
+      "inverse_reads_as": "this date is the expiry of these enforcers",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "compiles_to",
+      "inverse": "compiled_from",
+      "domain": "Prohibition",
+      "range": "CompiledRule",
+      "reads_as": "this prohibition compiles to this rule",
+      "inverse_reads_as": "this rule is compiled from this prohibition",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "defeated_by",
+      "inverse": "defeats",
+      "domain": "Barrier",
+      "range": "Observation",
+      "reads_as": "this barrier was defeated in this observation",
+      "inverse_reads_as": "this observation defeats this barrier",
+      "from": "graphs.sgit.ai edge set",
+      "status": "proposed"
+    }
+  ],
+  "adds": "Lab 06 added the property the 11 September brief did not have: a barrier is perishable, and a classifier that refuses a probe today is a barrier with no row and no expiry. The five layers become nodes so that the leaflet's rightmost column, the layer a control would sit at, stops being a string.",
+  "junctions_live": [],
+  "page": "https://abp.sgit.ai/model/universes/u4/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

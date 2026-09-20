@@ -1,0 +1,132 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u1",
+  "n": 1,
+  "name": "The grammar",
+  "level": "down",
+  "owner": "abp.sgit.ai, promoted from what-can-it-do.games.sgit.ai and bridged back to it",
+  "centre": "the primitive",
+  "smallest": "the word",
+  "status": "live",
+  "status_note": "Complete for what it is: 10 verbs, 9 object classes, 5 reach classes, 9 families, 3 undo classes, 23 primitives, 33 word nodes with their own addresses. Nothing is added to it by the map except one property, material, and that is deliberate: the grammar is the shared layer that everybody reads by address and nobody forks, so it has to stay small.",
+  "node_types": [
+    {
+      "name": "Verb",
+      "formula": "[Verb] := a node that is the -verb_of-> at least one [Capability]",
+      "exists_today": true,
+      "note": null,
+      "matched": 10
+    },
+    {
+      "name": "ObjectClass",
+      "formula": "[ObjectClass] := a node that is -acted_on_by-> at least one [Capability]",
+      "exists_today": true,
+      "note": null,
+      "matched": 9
+    },
+    {
+      "name": "ReachClass",
+      "formula": "[ReachClass] := a node that is -reachable_from-> at least one [Capability]",
+      "exists_today": true,
+      "note": null,
+      "matched": 5
+    },
+    {
+      "name": "Family",
+      "formula": "[Family] := a node that is the -family_of-> at least one [Capability]",
+      "exists_today": true,
+      "note": null,
+      "matched": 9
+    },
+    {
+      "name": "UndoClass",
+      "formula": "a node that is the -undo_class_of-> at least one [Capability]",
+      "exists_today": true,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Capability",
+      "formula": "[Capability] := a node with a -has_verb-> [Verb] and an -acts_on-> [ObjectClass] and a -reaches-> [ReachClass]",
+      "exists_today": true,
+      "note": "Gains one property, material, with the values own, organisation, third_party and mixed: whose material a capability reaches. A property, never a fourth element of the grammar. The default lives here; the override lives on the mandate in U5.",
+      "matched": 23
+    }
+  ],
+  "verbs": [
+    {
+      "edge": "has_verb",
+      "inverse": "verb_of",
+      "domain": "Capability",
+      "range": "Verb",
+      "reads_as": "this capability has the verb read",
+      "inverse_reads_as": "read is the verb of these capabilities",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "acts_on",
+      "inverse": "acted_on_by",
+      "domain": "Capability",
+      "range": "ObjectClass",
+      "reads_as": "this capability acts on files",
+      "inverse_reads_as": "files are acted on by these capabilities",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "reaches",
+      "inverse": "reachable_from",
+      "domain": "Capability",
+      "range": "ReachClass",
+      "reads_as": "this capability reaches this reach class",
+      "inverse_reads_as": "this reach class is reachable from this capability",
+      "from": "graphs.sgit.ai edge set",
+      "status": "live"
+    },
+    {
+      "edge": "in_family",
+      "inverse": "family_of",
+      "domain": "Capability",
+      "range": "Family",
+      "reads_as": "this capability is in the filesystem family",
+      "inverse_reads_as": "the filesystem family is the family of these capabilities",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "has_undo_class",
+      "inverse": "undo_class_of",
+      "domain": "Capability",
+      "range": "UndoClass",
+      "reads_as": "this capability has the undo class no",
+      "inverse_reads_as": "undo class no is the undo class of these capabilities",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "similar_to",
+      "inverse": "similar_to",
+      "domain": "Node",
+      "range": "Node",
+      "reads_as": "our node is similar to their node",
+      "inverse_reads_as": "symmetric, and partial on purpose",
+      "from": "graphs.sgit.ai anchor nodes",
+      "status": "live"
+    }
+  ],
+  "adds": "Two verbs in it, receive and revoke, have nothing under them and are kept as named absences. The grammar is the fixed point of the whole map: what every other universe attaches to by address, and what none of them may change.",
+  "junctions_live": [],
+  "page": "https://abp.sgit.ai/model/universes/u1/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u12",
+  "n": 12,
+  "name": "The estate of agents",
+  "level": "up",
+  "owner": "the organisation",
+  "centre": "one agent's output as another's input",
+  "smallest": "one delegation from one agent to another",
+  "status": "gap",
+  "status_note": "The second gap the foundation document names, and the fractal claim running upward: an ABP of ABPs is the same shape one level up, with the composed grant as its grant. Nothing on the site says more than one sentence about it today, and this is the second sentence.",
+  "node_types": [],
+  "verbs": [
+    {
+      "edge": "acts_on_output_of",
+      "inverse": "output_acted_on_by",
+      "domain": "Instance",
+      "range": "Instance",
+      "reads_as": "this agent acts on the output of that agent",
+      "inverse_reads_as": "that agent's output is acted on by this agent",
+      "from": "proposed here",
+      "status": "gap"
+    },
+    {
+      "edge": "delegates_to",
+      "inverse": "delegated_by",
+      "domain": "Instance",
+      "range": "Instance",
+      "reads_as": "this agent delegates to that agent",
+      "inverse_reads_as": "that agent is delegated to by this agent",
+      "from": "proposed here",
+      "status": "gap"
+    },
+    {
+      "edge": "composes_into",
+      "inverse": "composed_from",
+      "domain": "Instance",
+      "range": "Capability",
+      "reads_as": "these two agents compose into this capability neither mandate authorised",
+      "inverse_reads_as": "this capability is composed from these two agents",
+      "from": "proposed here",
+      "status": "gap"
+    }
+  ],
+  "adds": "Named so that the next brief has an address to write to.",
+  "junctions_live": [],
+  "page": "https://abp.sgit.ai/model/universes/u12/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

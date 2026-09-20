@@ -2,7 +2,7 @@
 
 > The four objects an ABP is made of, the grammar they are written in, the barrier that decides whether anything is in the way, and the graph rules that govern all of it.
 
-*Source: <https://abp.sgit.ai/model/index.html> · site v0.4.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/index.html> · site v0.4.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -48,6 +48,9 @@ Corrected on 11 September, in the open.
 
 **[The graph](../model/graph/index.md)**: Five rules that govern the model rather than the styling.
 Rule five is the acceptance test and it is cheap to apply.
+
+**[The universes](../model/universes/index.md)**: One capability row walked through nine worlds, from the source bytes to a licence condition, each with its own owner and ontology.
+An ABP is a junction object. This is Fractal Semantic Graphs applied to it.
 
 **[The schema](../model/schema/index.md)**: What is in the published files, and what a consumer has to state.
 A consumer pins a version.

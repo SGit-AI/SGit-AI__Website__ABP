@@ -5,6 +5,7 @@
   "extending_it": "A new edge needs a sentence, its inverse needs a DIFFERENT sentence, and both need a stated domain and range.",
   "source": "https://graphs.sgit.ai/v1/grammar/edge-set.html",
   "count": 15,
+  "universes": "Each edge names the universe of its domain and of its range, and `crosses` is true when they differ: a junction edge, the property that turns a set of graphs into a fractal rather than a pile. Computed from the node types, never declared. See universes/index.json.",
   "edges": [
     {
       "edge": "grants",
@@ -13,7 +14,10 @@
       "range": "Capability",
       "reads_as": "this deployment shape grants this capability",
       "inverse_reads_as": "this capability is granted by this deployment shape",
-      "from": "graphs.sgit.ai edge set"
+      "from": "graphs.sgit.ai edge set",
+      "domain_universe": "u2",
+      "range_universe": "u1",
+      "crosses": true
     },
     {
       "edge": "reaches",
@@ -22,7 +26,10 @@
       "range": "ReachClass",
       "reads_as": "this capability reaches this reach class",
       "inverse_reads_as": "this reach class is reachable from this capability",
-      "from": "graphs.sgit.ai edge set"
+      "from": "graphs.sgit.ai edge set",
+      "domain_universe": "u1",
+      "range_universe": "u1",
+      "crosses": false
     },
     {
       "edge": "similar_to",
@@ -31,7 +38,10 @@
       "range": "Node",
       "reads_as": "our node is similar to their node",
       "inverse_reads_as": "symmetric, and partial on purpose",
-      "from": "graphs.sgit.ai anchor nodes"
+      "from": "graphs.sgit.ai anchor nodes",
+      "domain_universe": "any",
+      "range_universe": "any",
+      "crosses": false
     },
     {
       "edge": "supersedes",
@@ -40,7 +50,10 @@
       "range": "Node",
       "reads_as": "this claim supersedes that one",
       "inverse_reads_as": "that claim is superseded by this one",
-      "from": "graphs.sgit.ai, supersede never delete"
+      "from": "graphs.sgit.ai, supersede never delete",
+      "domain_universe": "any",
+      "range_universe": "any",
+      "crosses": false
     },
     {
       "edge": "has_verb",
@@ -49,7 +62,10 @@
       "range": "Verb",
       "reads_as": "this capability has the verb read",
       "inverse_reads_as": "read is the verb of these capabilities",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u1",
+      "range_universe": "u1",
+      "crosses": false
     },
     {
       "edge": "acts_on",
@@ -58,7 +74,10 @@
       "range": "ObjectClass",
       "reads_as": "this capability acts on files",
       "inverse_reads_as": "files are acted on by these capabilities",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u1",
+      "range_universe": "u1",
+      "crosses": false
     },
     {
       "edge": "in_family",
@@ -67,7 +86,10 @@
       "range": "Family",
       "reads_as": "this capability is in the filesystem family",
       "inverse_reads_as": "the filesystem family is the family of these capabilities",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u1",
+      "range_universe": "u1",
+      "crosses": false
     },
     {
       "edge": "has_undo_class",
@@ -76,7 +98,10 @@
       "range": "UndoClass",
       "reads_as": "this capability has the undo class no",
       "inverse_reads_as": "undo class no is the undo class of these capabilities",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u1",
+      "range_universe": "u1",
+      "crosses": false
     },
     {
       "edge": "bounded_by",
@@ -85,7 +110,10 @@
       "range": "Barrier",
       "reads_as": "this granted capability is bounded by this barrier",
       "inverse_reads_as": "this barrier bounds these granted capabilities",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u3",
+      "range_universe": "u4",
+      "crosses": true
     },
     {
       "edge": "enforced_by",
@@ -94,7 +122,10 @@
       "range": "Enforcer",
       "reads_as": "this barrier is enforced by something above the grant",
       "inverse_reads_as": "this enforcer enforces these barriers",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u4",
+      "range_universe": "u4",
+      "crosses": false
     },
     {
       "edge": "authorises",
@@ -103,7 +134,10 @@
       "range": "Capability",
       "reads_as": "this mandate authorises this capability",
       "inverse_reads_as": "this capability is authorised by this mandate",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u5",
+      "range_universe": "u1",
+      "crosses": true
     },
     {
       "edge": "withholds",
@@ -112,7 +146,10 @@
       "range": "Capability",
       "reads_as": "this mandate withholds this capability",
       "inverse_reads_as": "this capability is withheld by this mandate",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u5",
+      "range_universe": "u1",
+      "crosses": true
     },
     {
       "edge": "exceeds",
@@ -121,7 +158,10 @@
       "range": "Mandate",
       "reads_as": "this granted capability exceeds this mandate",
       "inverse_reads_as": "this mandate is exceeded by these granted capabilities",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u3",
+      "range_universe": "u5",
+      "crosses": true
     },
     {
       "edge": "falls_short_of",
@@ -130,7 +170,10 @@
       "range": "Capability",
       "reads_as": "this mandate falls short of this capability it asked for",
       "inverse_reads_as": "this capability is unmet by this deployment shape",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u5",
+      "range_universe": "u1",
+      "crosses": true
     },
     {
       "edge": "known_by",
@@ -139,7 +182,10 @@
       "range": "EvidenceTier",
       "reads_as": "this granted capability is known by observation",
       "inverse_reads_as": "observation evidences these granted capabilities",
-      "from": "proposed here"
+      "from": "proposed here",
+      "domain_universe": "u3",
+      "range_universe": "u3",
+      "crosses": false
     }
   ],
   "provenance": {

@@ -2,7 +2,7 @@
 
 > version v0.4.0 date 20 September 2026 from The site's agent, for the project lead to Whoever models the ABP graph, whoever builds the pages of abp.sgit.ai, and the teams at riskmandate.ai and store.sgit.ai who render against its data
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html> · site v0.4.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html> · site v0.4.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -75,21 +75,23 @@ This site and the Fractal Semantic Graphs page use the word altitude for differe
 
 ## The Map: One Row, Nine Universes
 
+> **Corrected at v0.4.1, and the correction is recorded here rather than applied quietly.** As first published, the walk below stood on `send.endpoint.world` and said the shape *exposes it through its fetch tool and grants it as a row known by documentation, bounded by a boundary that an egress proxy enforces*. The shape does not grant that row: it grants `send.endpoint.allowed` at that barrier, and the mandate asked for it, so the path would never have reached a prohibition. The row the data walks is `authenticate-as.credential.tenant`, which is excess and bounded, and the table and the sentence below now say so. The walk itself is built from the published data on every build at [/model/universes/](../../../model/universes/index.md), which is how this mistake was found and why it cannot recur. Two statuses in the universe sections further down also moved, from live to partial, when the status became a gate check: the source bytes are per file rather than per node, and the derivation's records are files rather than nodes. The prose there stands as written; the data at `/data/universes/` is the record.
+
 The map is not a picture of everything, because the third graph rule forbids one. It is one query, run against one row of one published example, and it is the query every example page should end with once the universes exist. The row is send.endpoint.world in the shape anthropic/claude-code-remote/ccr-container, which is the shape this site is built from and the shape riskmandate.ai delivered its first vault for.
 
 | Level | Universe | The node the walk is standing on | The edge that leaves it | Owner of the universe |
 |---|---|---|---|---|
-| down | **U0 The source bytes** | the byte range in upstream/primitives.json, and its hash sha256:d6d4ba40 | hashed_from, up into the grammar | nobody: the bytes are what they are |
-| down | **U1 The grammar** | send, network-endpoint, world; and the primitive send.endpoint.world they spell | granted_by, across into the shape | abp.sgit.ai, promoted from the game |
-| across | **U2 The deployment shape** | the shape ccr-container, its tool fetch (WebFetch), its setting egress proxy, the vendor page that documents it | exposes, into the grant | the vendor's published words, read on a date |
-| across | **U3 The grant and its evidence** | the granted row, known_by derived, observed on no instance, dated 5 September | bounded_by, into enforcement | whoever measured, or the documentation |
-| across | **U4 The enforcement** | the barrier boundary, enforced_by the egress proxy, at the gateway layer, set by the platform, perishable | withheld_by or authorised_by, into the deployer's world | whoever set the control: here the vendor |
-| across | **U5 The deployer** | the mandate coding-assistant-in-a-container, which wanted send.endpoint.allowed and left send.endpoint.world unstated; the person who will correct it | derived_into, into the derivation | the deployer, in their own words |
-| across | **U6 The derivation** | the stored delta, computed 11 September by abp.delta/v1, pinning profile 2026-09-05.2 and mandate 2026-09-09, with the row in excess | projected_as, into the projections | the computation: never a person |
-| across | **U7 The projections** | the prohibition *the agent must not reach any host on the internet*, at barrier boundary, enforced today, rendered on the leaflet and in AGENTS.md | licensed_under, up into the licence | the renderer, and the fact diff that checks it |
-| up | **U8 The licence, the acceptance and the risk** | condition four of LICENCE-TO-OPERATE.md in vault ruj286tr, beside the thing that enforces it; the owner who will sign; the interval | gives_rise_to, further up into risk, which this site never draws | riskmandate.ai |
+| down | **U0 The source bytes** | the row for the primitive in upstream/primitives.json, and its hash sha256:d6d4ba40, retrieved 11 September | hashed_from, up into the grammar | nobody: the bytes are what they are |
+| down | **U1 The grammar** | authenticate-as, credential, tenant; and the primitive authenticate-as.credential.tenant they spell, undo no | granted_by, across into the shape | abp.sgit.ai, promoted from the game |
+| across | **U2 The deployment shape** | the shape ccr-container, profile version 2026-09-05.2, through its shell and its harness tools, in a container that is the vendor's | grants, into the grant | the vendor's published words, read on a date |
+| across | **U3 The grant and its evidence** | the granted row, known by inference, with the note that the token's scope is set by the platform | bounded_by, into enforcement | whoever measured, or the documentation |
+| across | **U4 The enforcement** | the barrier boundary, enforced by something above the grant, which is a control | withheld_by or authorised_by, into the deployer's world | whoever set the control: here the platform |
+| across | **U5 The deployer** | the mandate coding-assistant-in-a-container, authored 9 September, which left this capability unstated; the person who will correct it | derived_into, into the derivation | the deployer, in their own words |
+| across | **U6 The derivation** | the stored delta, computed 11 September by abp.delta/v1, pinning profile 2026-09-05.2 and mandate 2026-09-09, with the row in excess and not unbounded | projected_as, into the projections | the computation: never a person |
+| across | **U7 The projections** | the prohibition *the agent must not act in accounts with the credentials it holds*, at barrier boundary, enforced today, rendered on the leaflet and in AGENTS.md | licensed_under, up into the licence | the renderer, and the fact diff that checks it |
+| up | **U8 The licence, the acceptance and the risk** | a condition of LICENCE-TO-OPERATE.md in vault ruj286tr, beside the token scope that enforces it; the owner who will sign; the interval | gives_rise_to, further up into risk, which this site never draws | riskmandate.ai |
 
-Read as one sentence, which is the fifth graph rule and the acceptance test: **the word send, with network-endpoint and world, spells a primitive that the shape ccr-container exposes through its fetch tool and grants as a row known by documentation, bounded by a boundary that an egress proxy enforces at the gateway layer and the vendor set, which the mandate a coding assistant in a container left unstated, so the derivation of 11 September records it as excess and not unbounded, which the leaflet renders as a prohibition that is enforced today, and which the licence in vault ruj286tr carries as a condition beside its enforcer, for an owner who has not yet signed.**
+Read as one sentence, which is the fifth graph rule and the acceptance test: **the words authenticate-as, credential and tenant spell a primitive that the shape ccr-container grants through its shell and its harness as a row known by inference, bounded by a boundary that the token's scope enforces and the platform set, which the mandate a coding assistant in a container left unstated, so the derivation of 11 September records it as excess and not unbounded, which the leaflet renders as a prohibition that is enforced today, and which the licence in vault ruj286tr carries as a condition beside its enforcer, for an owner who has not yet signed.**
 
 Nine universes, nine vocabularies, one grammar, one traversal. That sentence is the whole argument of this brief, and every clause of it is a node this site can hold or an edge it can declare.
 

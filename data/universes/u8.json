@@ -1,0 +1,105 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u8",
+  "n": 8,
+  "name": "The licence, the acceptance and the risk",
+  "level": "up",
+  "owner": "riskmandate.ai",
+  "centre": "the named person and the date it comes back",
+  "smallest": "one condition beside the thing that enforces it",
+  "status": "outside",
+  "status_note": "Exists on riskmandate.ai as a template file in every published vault, unissued, and as the acceptance mechanism the Risk Graph Explorer and the browser isolation vaults already run. This site never holds it. It holds the anchor nodes the licence points at, and it declares the edges that cross into it. The score has a home and this is its address.",
+  "node_types": [
+    {
+      "name": "LicenceToOperate",
+      "formula": "-licensed_under-> one [Mandate] in U5 and one [DeltaRecord] in U6, -pinned_to-> a [GrantVersion] and a pack version, -issued_by-> an [Owner], -valid_until-> a date",
+      "exists_today": false,
+      "note": "Owned there. The organisation is the authority, the behaviour policy is the instrument, the agent is the licensee.",
+      "matched": null
+    },
+    {
+      "name": "Condition",
+      "formula": "-enforced_by-> an [Enforcer] in U4, or beside the admission that nothing enforces it",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Acceptance",
+      "formula": "-accepted_by-> a named person for an interval; no deny button",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Risk",
+      "formula": "-arises_from-> an [Excess] row in U6; the first node with assets in it, and the first place a score can exist",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Threshold",
+      "formula": "what a [Crossing] in U6 crosses; set here, in advance, and never by the ABP",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    }
+  ],
+  "verbs": [
+    {
+      "edge": "licensed_under",
+      "inverse": "licenses",
+      "domain": "LicenceToOperate",
+      "range": "Mandate or DeltaRecord",
+      "reads_as": "this licence is issued under this behaviour policy",
+      "inverse_reads_as": "this behaviour policy licenses this agent",
+      "from": "riskmandate.ai",
+      "status": "declared there"
+    },
+    {
+      "edge": "pinned_to",
+      "inverse": "pins",
+      "domain": "LicenceToOperate",
+      "range": "GrantVersion",
+      "reads_as": "this licence is pinned to this grant version",
+      "inverse_reads_as": "this grant version pins these licences",
+      "from": "riskmandate.ai",
+      "status": "declared there"
+    },
+    {
+      "edge": "enforces_condition",
+      "inverse": "condition_of",
+      "domain": "Enforcer",
+      "range": "Condition",
+      "reads_as": "this enforcer enforces this condition of the licence",
+      "inverse_reads_as": "this condition is enforced by this enforcer, or by nothing",
+      "from": "riskmandate.ai",
+      "status": "declared there"
+    },
+    {
+      "edge": "arises_from",
+      "inverse": "gives_rise_to",
+      "domain": "Risk",
+      "range": "Excess",
+      "reads_as": "this risk arises from this excess row",
+      "inverse_reads_as": "this excess row gives rise to this risk",
+      "from": "graphs.sgit.ai edge set",
+      "status": "never drawn here"
+    }
+  ],
+  "adds": "The edges are declared by riskmandate.ai in its vault, pointing at this site's addresses by version and hash, which is the three layers construction working as designed: their formulas, their bridges, our facts, and nothing merged.",
+  "junctions_live": [],
+  "page": "https://abp.sgit.ai/model/universes/u8/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

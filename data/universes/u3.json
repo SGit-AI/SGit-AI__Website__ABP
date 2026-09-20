@@ -1,0 +1,169 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u3",
+  "n": 3,
+  "name": "The grant and its evidence",
+  "level": "across",
+  "owner": "whoever observed, or the documentation that was read",
+  "centre": "the observation",
+  "smallest": "one probe result on one instance on one date",
+  "status": "one-edge",
+  "status_note": "Every granted row carries an evidence tier and the tier is a node. Nothing is behind the tier: no observation, no probe run, no date. The GrantedCapability node stays what it is, the node that carries the barrier, because the barrier is a property of a capability in a shape and never of the capability itself.",
+  "node_types": [
+    {
+      "name": "GrantedCapability",
+      "formula": "[GrantedCapability] := a [Capability] with an inbound -grants-> from a [DeploymentShape], carrying a -bounded_by-> [Barrier] and a -known_by-> [EvidenceTier]",
+      "exists_today": true,
+      "note": null,
+      "matched": 81
+    },
+    {
+      "name": "EvidenceTier",
+      "formula": "a node that -evidences-> at least one [GrantedCapability]",
+      "exists_today": true,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Observation",
+      "formula": "a node -observed_on-> an [Instance] on a date, -backed_by-> an [EvidenceFile], that -evidences-> at least one [GrantedCapability]",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Instance",
+      "formula": "a running deployment of a [DeploymentShape] that somebody was entitled to run",
+      "exists_today": false,
+      "note": "Named so that every observation states whose system it was and that we were entitled to run it. Never probe anybody's system.",
+      "matched": null
+    },
+    {
+      "name": "SelfReport",
+      "formula": "an [Observation] made by the agent about its own grant, from inside the shape; it stays a claim until a log held outside the agent agrees",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "EvidenceFile",
+      "formula": "a [SourceFile] in U0",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Refusal",
+      "formula": "an [Observation] that a probe was stopped before it ran, by something above the session; a barrier the grant has no row for",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Measured",
+      "formula": "a [GrantedCapability] with a -measured_by-> path to an [Observation] whose [Instance] was one we were entitled to run",
+      "exists_today": false,
+      "note": "Measured today is a headline, 21 of 99, counted from the observed tier. With observations as nodes it becomes a query run on every build, per row, with a date.",
+      "matched": null
+    }
+  ],
+  "verbs": [
+    {
+      "edge": "known_by",
+      "inverse": "evidences",
+      "domain": "GrantedCapability",
+      "range": "EvidenceTier",
+      "reads_as": "this granted capability is known by observation",
+      "inverse_reads_as": "observation evidences these granted capabilities",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "bounded_by",
+      "inverse": "bounds",
+      "domain": "GrantedCapability",
+      "range": "Barrier",
+      "reads_as": "this granted capability is bounded by this barrier",
+      "inverse_reads_as": "this barrier bounds these granted capabilities",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "observed_on",
+      "inverse": "hosted",
+      "domain": "Observation",
+      "range": "Instance",
+      "reads_as": "this observation was made on this instance",
+      "inverse_reads_as": "this instance hosted these observations",
+      "from": "graphs.sgit.ai edge set",
+      "status": "proposed"
+    },
+    {
+      "edge": "backed_by",
+      "inverse": "backs",
+      "domain": "Observation",
+      "range": "EvidenceFile",
+      "reads_as": "this observation is backed by this file",
+      "inverse_reads_as": "this file backs these observations",
+      "from": "graphs.sgit.ai edge set",
+      "status": "proposed"
+    },
+    {
+      "edge": "measured_by",
+      "inverse": "measures",
+      "domain": "GrantedCapability",
+      "range": "Observation",
+      "reads_as": "this row was measured by this observation",
+      "inverse_reads_as": "this observation measures these rows",
+      "from": "graphs.sgit.ai edge set",
+      "status": "proposed"
+    },
+    {
+      "edge": "contradicts",
+      "inverse": "contradicted_by",
+      "domain": "Observation",
+      "range": "Observation",
+      "reads_as": "this observation contradicts that one",
+      "inverse_reads_as": "that observation is contradicted by this one",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "stopped_by",
+      "inverse": "stopped",
+      "domain": "Refusal",
+      "range": "Enforcer",
+      "reads_as": "this probe was stopped by this enforcer",
+      "inverse_reads_as": "this enforcer stopped these probes",
+      "from": "proposed here",
+      "status": "proposed"
+    }
+  ],
+  "adds": "Lab 07's grant check, eleven of fifteen rows seen present in ordinary work and two probe batches refused by the platform's own classifier, is a SelfReport and two Refusals, and both node types are named here because that check has already happened and had nowhere to go. The calibration loop on the delta page becomes an edge somebody adds rather than a paragraph.",
+  "junctions_live": [
+    {
+      "edge": "bounded_by",
+      "inverse": "bounds",
+      "to": "u4",
+      "status": "live"
+    },
+    {
+      "edge": "exceeds",
+      "inverse": "exceeded_by",
+      "to": "u5",
+      "status": "live"
+    }
+  ],
+  "page": "https://abp.sgit.ai/model/universes/u3/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

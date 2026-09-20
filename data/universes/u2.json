@@ -1,0 +1,176 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u2",
+  "n": 2,
+  "name": "The deployment shape",
+  "level": "across",
+  "owner": "the vendor's published words, read on a date, with a hash, and never probed",
+  "centre": "the setting",
+  "smallest": "a scope, a flag or a line on a documentation page",
+  "status": "partial",
+  "status_note": "A shape today carries its tools, its reach names and the route each row goes through, as strings in a profile file. None of them is a node. This is the first universe where the vocabulary is not this site's: a vendor speaks in scopes, tool names, flags, consent screens and administrator settings, and the ABP keeps them in the vendor's words and draws an edge from each to the primitive it exposes.",
+  "node_types": [
+    {
+      "name": "Product",
+      "formula": "a node that -has_variant-> at least one [DeploymentShape]",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "DeploymentShape",
+      "formula": "[DeploymentShape] := a node that -grants-> at least one [Capability]",
+      "exists_today": true,
+      "note": null,
+      "matched": 9
+    },
+    {
+      "name": "Tool",
+      "formula": "a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Scope",
+      "formula": "a node that a [Tool] or [DeploymentShape] is -scoped_by->, in the vendor's own identifier",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Setting",
+      "formula": "a node that -moves-> a [Barrier] on at least one [GrantedCapability]",
+      "exists_today": false,
+      "note": "The confirmations flag is the published case: one Setting node moving one Barrier is what the home page's pair of examples shows.",
+      "matched": null
+    },
+    {
+      "name": "DocumentationPage",
+      "formula": "a [SourceFile] in U0 that a [Shape], [Tool], [Scope] or [Setting] is -documented_at->",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Contradiction",
+      "formula": "a node where an -advertises-> claim and a -scoped_by-> scope on the same [Product] disagree, both quoted, both dated, published unresolved",
+      "exists_today": false,
+      "note": "riskmandate.ai's Lab 01 holds four of these with verbatim quotes and URLs.",
+      "matched": null
+    }
+  ],
+  "verbs": [
+    {
+      "edge": "has_variant",
+      "inverse": "variant_of",
+      "domain": "Product",
+      "range": "DeploymentShape",
+      "reads_as": "this product has this variant",
+      "inverse_reads_as": "this variant is a variant of this product",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "runs_with",
+      "inverse": "run_by",
+      "domain": "DeploymentShape",
+      "range": "Tool",
+      "reads_as": "this shape runs with this tool",
+      "inverse_reads_as": "this tool is run by these shapes",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "exposes",
+      "inverse": "exposed_by",
+      "domain": "Tool",
+      "range": "Capability",
+      "reads_as": "this tool exposes this capability",
+      "inverse_reads_as": "this capability is exposed by these tools",
+      "from": "graphs.sgit.ai edge set",
+      "status": "proposed"
+    },
+    {
+      "edge": "scoped_by",
+      "inverse": "scopes",
+      "domain": "Tool or DeploymentShape",
+      "range": "Scope",
+      "reads_as": "this tool is scoped by this vendor scope",
+      "inverse_reads_as": "this scope scopes these tools",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "moves",
+      "inverse": "moved_by",
+      "domain": "Setting",
+      "range": "Barrier",
+      "reads_as": "this setting moves this barrier",
+      "inverse_reads_as": "this barrier is moved by this setting",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "documented_at",
+      "inverse": "documents",
+      "domain": "Shape, Tool, Scope or Setting",
+      "range": "DocumentationPage",
+      "reads_as": "this tool is documented at this page, read on this date",
+      "inverse_reads_as": "this page documents these tools",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "advertises",
+      "inverse": "advertised_by",
+      "domain": "Product",
+      "range": "Capability",
+      "reads_as": "this product's page advertises this capability",
+      "inverse_reads_as": "this capability is advertised by these products",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "contradicts",
+      "inverse": "contradicted_by",
+      "domain": "Contradiction",
+      "range": "Scope or Capability",
+      "reads_as": "this advertised claim contradicts this granted scope",
+      "inverse_reads_as": "this scope is contradicted by this claim",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "grants",
+      "inverse": "granted_by",
+      "domain": "DeploymentShape",
+      "range": "Capability",
+      "reads_as": "this deployment shape grants this capability",
+      "inverse_reads_as": "this capability is granted by this deployment shape",
+      "from": "graphs.sgit.ai edge set",
+      "status": "live"
+    }
+  ],
+  "adds": "The position on a connector that is present and switched off, which is the most common state in any real estate. The enforcer test decides it: if the switch is inside the agent's grant, the capability is in the grant at barrier setting, one click away, and the label counts it; if the switch is outside the grant, the capability is not in the grant, and the estate in U9 records it as one setting away. No new barrier kind and no new label field. The seven shapes riskmandate.ai has already built are layer one facts and belong at this address, through an intake path that carries their provenance.",
+  "junctions_live": [
+    {
+      "edge": "grants",
+      "inverse": "granted_by",
+      "to": "u1",
+      "status": "live"
+    }
+  ],
+  "page": "https://abp.sgit.ai/model/universes/u2/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

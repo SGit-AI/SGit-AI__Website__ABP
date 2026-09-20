@@ -1,0 +1,59 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u11",
+  "n": 11,
+  "name": "The runtime",
+  "level": "beside",
+  "owner": "whoever holds the logs: never this site",
+  "centre": "the tool call",
+  "smallest": "one call in one turn of one session",
+  "status": "gap",
+  "status_note": "The ABP is before the action and this universe is after it. Quantity lives here, which is the first gap the foundation document names: counts within an interval, sums within an interval, the licence to operate simulation's per turn cost, and behaviour drift. The two are joined by exactly the edges that make drift and excess different measurements.",
+  "node_types": [],
+  "verbs": [
+    {
+      "edge": "instance_of",
+      "inverse": "instanced_by",
+      "domain": "ToolCall",
+      "range": "Capability",
+      "reads_as": "this call is an instance of this capability",
+      "inverse_reads_as": "this capability is instanced by these calls",
+      "from": "proposed here",
+      "status": "gap"
+    },
+    {
+      "edge": "observed_in",
+      "inverse": "observed",
+      "domain": "ToolCall",
+      "range": "Session",
+      "reads_as": "this call was observed in this session",
+      "inverse_reads_as": "this session observed these calls",
+      "from": "proposed here",
+      "status": "gap"
+    },
+    {
+      "edge": "drifted_from",
+      "inverse": "drifted_by",
+      "domain": "Session",
+      "range": "Mandate",
+      "reads_as": "this session drifted from this mandate",
+      "inverse_reads_as": "this mandate was drifted from by this session",
+      "from": "proposed here",
+      "status": "gap"
+    }
+  ],
+  "adds": "Named so that a log has an address to attach to.",
+  "junctions_live": [],
+  "page": "https://abp.sgit.ai/model/universes/u11/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

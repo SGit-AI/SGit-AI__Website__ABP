@@ -37,6 +37,10 @@ SECTIONS = [
                              "Published as written, with their own licence footers intact."),
     ("pack", "The pack", "The six numbered documents that settled what this site is, what it "
                          "must not invent, and the rules it is built under."),
+    ("research", "The research", "External readings of the ideas this site is built on, "
+                                 "published as received and followed by this site's reading of "
+                                 "each: what the reading changes here, what it does not, and "
+                                 "every reference resolved on the day."),
 ]
 FOUNDATION = "v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do"
 

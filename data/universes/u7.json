@@ -1,0 +1,133 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u7",
+  "n": 7,
+  "name": "The projections",
+  "level": "across",
+  "owner": "the renderer, and the fact diff that has to check it",
+  "centre": "the fact set",
+  "smallest": "one rendered sentence that traces to one node",
+  "status": "partial",
+  "status_note": "The label, the leaflet and the prohibitions exist and are generated from one call. AGENTS.md, SKILL.md and LICENCE-TO-OPERATE.md exist in riskmandate.ai's vaults. The fact set is not data and the fact diff, named as the blocker on four consecutive days in September, does not exist. This is the universe where altitude in the 20 August sense lives: every projection renders the same fact set for a different reader, and the diff over leaf assertions between any two must be empty.",
+  "node_types": [
+    {
+      "name": "FactSet",
+      "formula": "the leaf assertions of one [DeltaRecord]: this shape grants this capability at this barrier with this undo class; this mandate authorises these; therefore this excess. Computed, never authored",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Projection",
+      "formula": "a node -projects-> one [FactSet], -rendered_for-> one [Audience], with every sentence -traces_to-> a node",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Audience",
+      "formula": "a decision maker, an engineer, an auditor, an underwriter, an agent; the altitude axis",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Label",
+      "formula": "a [Projection] with nine fields and no score",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Leaflet",
+      "formula": "a [Projection] with every row",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Prohibition",
+      "formula": "a [Projection] of one [Excess] row as a sentence, carrying its barrier today and the layer a control would sit at; -compiles_to-> a [CompiledRule] in U4",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "AgentFile",
+      "formula": "a [Projection] -rendered_for-> the agent itself: AGENTS.md, SKILL.md; honest on its own face that it is a rule in prose, the second barrier, and bounds nothing",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "InterchangeDocument",
+      "formula": "a [Projection] in the W3C vocabulary through the agent profile; a rule somebody wrote down until U4 compiles it",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "FactDiff",
+      "formula": "a node that -compares-> two [Projection]s over their [FactSet]s and is empty or names the row",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    }
+  ],
+  "verbs": [
+    {
+      "edge": "projects",
+      "inverse": "projected_as",
+      "domain": "Projection",
+      "range": "FactSet",
+      "reads_as": "this rendering projects this fact set",
+      "inverse_reads_as": "this fact set is projected as these renderings",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "rendered_for",
+      "inverse": "reads",
+      "domain": "Projection",
+      "range": "Audience",
+      "reads_as": "this rendering is for this reader",
+      "inverse_reads_as": "this reader reads these renderings",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "traces_to",
+      "inverse": "rendered_in",
+      "domain": "Sentence",
+      "range": "Node",
+      "reads_as": "this sentence traces to this node",
+      "inverse_reads_as": "this node is rendered in these sentences",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "compares",
+      "inverse": "compared_by",
+      "domain": "FactDiff",
+      "range": "Projection",
+      "reads_as": "this diff compares these two renderings",
+      "inverse_reads_as": "these renderings are compared by this diff",
+      "from": "proposed here",
+      "status": "proposed"
+    }
+  ],
+  "adds": "With FactSet as a node and every Projection carrying a projects edge to it, the diff is a set comparison over one node's edges, and the gate can run it on every build across the label, the leaflet, the prohibitions and the agent files. The multi audience promise on the store becomes printable the release this ships.",
+  "junctions_live": [],
+  "page": "https://abp.sgit.ai/model/universes/u7/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

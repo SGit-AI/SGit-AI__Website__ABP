@@ -2,7 +2,7 @@
 
 > Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
 
-*Source: <https://abp.sgit.ai/docs/index.html> · site v0.4.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/index.html> · site v0.4.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -62,6 +62,13 @@ The six numbered documents that settled what this site is, what it must not inve
 
 **[The Prompt](../docs/pack/06__THE-PROMPT/index.md)**: Paste this to the agent that builds the site. It is the standard prompt for a new network site, extended with what this one needs.
 [the source bytes](../docs/pack/06__THE-PROMPT.md)
+
+## The research
+
+External readings of the ideas this site is built on, published as received and followed by this site's reading of each: what the reading changes here, what it does not, and every reference resolved on the day.
+
+**[An External Review Of Fractal Semantic Graphs Against The Prior Work: Distributed Logics, Named Graphs, Ontology Alignment, Federation And Provenance](../docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.md)**: date 20 September 2026 from A review produced by ChatGPT at the project lead's request, on the Fractal Semantic Graphs page at sgit.ai and its supporting vaults, and handed to this site for the record to Whoever builds the universes on...
+[the source bytes](../docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work.md)
 
 ## Inherited guidance
 

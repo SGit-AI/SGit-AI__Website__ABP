@@ -41,6 +41,10 @@
 //      declared type and resolves at both ends, EXACTLY ONE BARRIER MATCHES THE [Control]
 //      FORMULA when the formula is walked rather than read off a field, and every word that
 //      appears in a capability id has a node, a JSON file and a page of its own.
+//  14. THE UNIVERSES HOLD TOGETHER (v0.4.1): every universe has an owner and a status, every
+//      node type names a universe, every junction is computed from the edge vocabulary and
+//      listed, a `live' status means every declared type is in the graph, and the walk
+//      crosses nine universes over a row the shape actually grants.
 //  12. THE DATA HOLDS TOGETHER: the promoted vocabulary resolves, the upstream bytes hash to
 //      what their manifest says, every profile row names a real capability and a real barrier,
 //      no mandate both wants and refuses the same thing, and EVERY STORED DELTA RECOMPUTES
@@ -597,6 +601,128 @@ for (const f of files) {
   }
 }());
 
+// --- 14. the universes hold together ---------------------------------------
+// The ABP is mapped onto Fractal Semantic Graphs at v0.4.1: one row crosses nine universes,
+// each with its own owner and ontology, and four more are named as gaps. Four things are
+// claims the whole map is written against, and each is cheap to check.
+//   (a) EVERY UNIVERSE HAS AN OWNER AND A STATUS from the declared set. A world nobody owns
+//       is a merge waiting to happen, and a status is a claim about what exists.
+//   (b) EVERY NODE TYPE NAMES A UNIVERSE THAT EXISTS. A type with no universe is a node
+//       nobody owns.
+//   (c) A JUNCTION IS COMPUTED, NOT DECLARED: an edge crosses when the universes of its domain
+//       and range differ, and every one that crosses is listed in universes/index.json with
+//       the universes the edge vocabulary gives it. No junction is a generic association edge.
+//   (d) THE STATUS IS TRUE: a `live` universe has every node type it declares in the graph;
+//       a `gap` declares none; and a universe that declares node types marked exists_today
+//       has them in node-types.json or nodes.json.
+//   (e) THE WALK IS COMPLETE: nine rows, one per universe u0 to u8, over a row the named
+//       profile grants and a mandate that applies to it, and the sentence names the row.
+(function () {
+  const D = path.join(ROOT, 'data');
+  const J = f => { try { return JSON.parse(read(path.join(D, f))); }
+                   catch (e) { errors.push(`data/${f}: ${e.message}`); return null; } };
+  const idx = J('universes/index.json');
+  const nt = J('graph/node-types.json');
+  const ev = J('graph/edges.json');
+  const nodes = J('graph/nodes.json');
+  if (!idx || !nt || !ev || !nodes) return;
+  const STATUSES = new Set(['live', 'partial', 'one-edge', 'outside', 'gap']);
+  const LEVELS = new Set(['down', 'across', 'up', 'beside']);
+  const ids = new Set();
+  const files = {};
+  for (const u of idx.universes || []) {
+    ids.add(u.id);
+    if (!u.owner) errors.push(`data/universes/index.json: ${u.id} has no owner -- a world nobody owns is a merge waiting to happen`);
+    if (!STATUSES.has(u.status)) errors.push(`data/universes/index.json: ${u.id} has status "${u.status}", which is not one of live, partial, one-edge, outside, gap`);
+    if (!LEVELS.has(u.level)) errors.push(`data/universes/index.json: ${u.id} has level "${u.level}", which is not one of down, across, up, beside`);
+    const f = J(u.file); if (!f) continue;
+    files[u.id] = f;
+    if (f.id !== u.id) errors.push(`data/${u.file}: id "${f.id}" does not match the index`);
+    const page = path.join(ROOT, 'model', 'universes', u.id, 'index.html');
+    if (!fs.existsSync(page)) errors.push(`model/universes/${u.id}/index.html does not exist -- every universe gets a page`);
+  }
+  if (ids.size !== (idx.count || 0)) errors.push(`data/universes/index.json: count says ${idx.count}, the list has ${ids.size}`);
+
+  // (b) every node type names a universe that exists
+  const typeUniverse = {};
+  for (const t of nt.node_types || []) {
+    if (!t.universe || !ids.has(t.universe)) {
+      errors.push(`data/graph/node-types.json: ${t.name} names universe "${t.universe}", which does not exist -- a type with no universe is a node nobody owns`);
+    }
+    typeUniverse[t.name] = t.universe;
+  }
+  // The types that exist as nodes without a formula (EvidenceTier, UndoClass, Enforcer) are
+  // placed by the universes file rather than by node-types.json.
+  const byTypeInGraph = nodes.by_type || {};
+  const placed = new Set(Object.keys(typeUniverse));
+  for (const u of Object.values(files)) for (const t of u.node_types || []) if (t.exists_today) placed.add(t.name);
+  for (const t of Object.keys(byTypeInGraph)) {
+    if (!placed.has(t)) errors.push(`data/graph/nodes.json has nodes of type ${t} and no universe claims that type`);
+  }
+
+  // (c) junctions are computed and listed
+  const listed = new Map((idx.junctions_live || []).map(j => [j.edge, j]));
+  for (const e of ev.edges || []) {
+    const a = e.domain_universe, b = e.range_universe;
+    const crosses = a && b && a !== 'any' && b !== 'any' && a !== b;
+    if (crosses !== !!e.crosses) errors.push(`data/graph/edges.json: ${e.edge} says crosses=${e.crosses}, its universes are ${a} and ${b}`);
+    if (crosses) {
+      const j = listed.get(e.edge);
+      if (!j) errors.push(`data/universes/index.json: ${e.edge} crosses from ${a} to ${b} and is not listed as a junction`);
+      else if (j.from !== a || j.to !== b) errors.push(`data/universes/index.json: junction ${e.edge} listed as ${j.from} to ${j.to}, the edge vocabulary says ${a} to ${b}`);
+      else if (!j.owner) errors.push(`data/universes/index.json: junction ${e.edge} has no owner -- an edge is an assertion by somebody`);
+      if (/^(relates_to|related_to|associated_with|connected_to|links_to)$/.test(e.edge)) {
+        errors.push(`data/universes/index.json: junction "${e.edge}" is a generic association edge, which is banned`);
+      }
+    }
+  }
+  for (const j of listed.values()) {
+    if (!(ev.edges || []).some(e => e.edge === j.edge && e.crosses)) {
+      errors.push(`data/universes/index.json lists ${j.edge} as a live junction and the edge vocabulary does not cross with it`);
+    }
+  }
+
+  // (d) the status is true
+  const graphTypes = new Set(Object.keys(byTypeInGraph));
+  for (const [id, u] of Object.entries(files)) {
+    const types = u.node_types || [];
+    const here = types.filter(t => t.exists_today);
+    for (const t of here) {
+      const inGraph = graphTypes.has(t.name) || (nt.node_types || []).some(x => x.name === t.name);
+      if (!inGraph) errors.push(`data/universes/${id}.json: ${t.name} is marked exists_today and neither nodes.json nor node-types.json has it`);
+    }
+    if (u.status === 'live' && (types.length === 0 || here.length !== types.length)) {
+      errors.push(`data/universes/${id}.json: status live, but ${types.length - here.length} of its node types do not exist yet -- live means every type it declares is in the graph`);
+    }
+    if (u.status === 'gap' && types.length) errors.push(`data/universes/${id}.json: status gap, but it declares node types -- a gap has nothing behind the name`);
+    if (u.status === 'outside' && here.length) errors.push(`data/universes/${id}.json: status outside, but it claims node types exist here -- this site holds only the anchors`);
+    for (const v of u.verbs || []) {
+      for (const k of ['edge', 'inverse', 'domain', 'range', 'reads_as', 'inverse_reads_as', 'from', 'status']) {
+        if (!v[k]) errors.push(`data/universes/${id}.json: verb ${v.edge || '(unnamed)'} has no ${k}`);
+      }
+      if (v.edge === v.inverse && v.edge !== 'similar_to') errors.push(`data/universes/${id}.json: ${v.edge} is its own inverse`);
+      if (v.reads_as && v.reads_as === v.inverse_reads_as) errors.push(`data/universes/${id}.json: ${v.edge} and ${v.inverse} read as the same sentence`);
+      if (v.status === 'live' && !(ev.edges || []).some(e => e.edge === v.edge)) {
+        errors.push(`data/universes/${id}.json: ${v.edge} is marked live and is not in the edge vocabulary`);
+      }
+    }
+  }
+
+  // (e) the walk is complete and true to the data
+  const w = idx.walk || {};
+  const want = ['u0', 'u1', 'u2', 'u3', 'u4', 'u5', 'u6', 'u7', 'u8'];
+  const got = (w.rows || []).map(r => r.universe);
+  if (got.join(',') !== want.join(',')) errors.push(`data/universes/index.json: the walk crosses [${got.join(', ')}], not the nine universes u0 to u8 in order`);
+  const prof = w.profile && J(`profiles/${w.profile}.json`);
+  const man = w.mandate && J(`mandates/${w.mandate}.json`);
+  if (!prof || !man) errors.push('data/universes/index.json: the walk names a profile or a mandate that does not exist');
+  else {
+    if (!(prof.grant || []).some(r => r.capability === w.capability)) errors.push(`data/universes/index.json: the walk stands on ${w.capability}, which ${w.profile} does not grant`);
+    if (!(man.applies_to || []).includes(w.profile)) errors.push(`data/universes/index.json: the walk's mandate ${w.mandate} does not apply to ${w.profile}`);
+    if (!w.sentence || !w.sentence.includes(prof.variant)) errors.push('data/universes/index.json: the walk sentence does not name the shape it walks');
+  }
+}());
+
 // --- report ---------------------------------------------------------------
 if (errors.length) {
   console.error(`validate: ${errors.length} error(s)`);
@@ -609,4 +735,6 @@ console.log(`validate: OK -- ${VERSION} on ${HOST}, ${htmlFiles.length} pages, `
           + `forbidden word, no em dash outside the promoted data, the upstream bytes hash to `
           + `their manifest, every stored delta recomputes from its own inputs, and the `
           + `graph holds: every edge has a distinct inverse, exactly one barrier walks to `
-          + `[Control], and every word in the grammar has an address`);
+          + `[Control], every word in the grammar has an address, and the universes hold: `
+          + `every node type is owned, every junction is computed and listed, and the walk `
+          + `crosses nine universes over a row the shape grants`);

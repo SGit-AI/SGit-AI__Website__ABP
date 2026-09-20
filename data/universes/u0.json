@@ -1,0 +1,74 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u0",
+  "n": 0,
+  "name": "The source bytes",
+  "level": "down",
+  "owner": "nobody: the bytes are what they are",
+  "centre": "the hash",
+  "smallest": "a byte range in a file that was fetched on a date",
+  "status": "partial",
+  "status_note": "Every promoted file carries its source, its retrieval time and its content hash, and the build refuses to run if the bytes disagree with their manifest. Per file today; per node is the change.",
+  "node_types": [
+    {
+      "name": "SourceFile",
+      "formula": "a node with a -fetched_from-> [URL] and a -hashes_to-> [Digest]",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "ByteRange",
+      "formula": "a node -inside-> a [SourceFile] with a stated offset and length",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    }
+  ],
+  "verbs": [
+    {
+      "edge": "fetched_from",
+      "inverse": "serves",
+      "domain": "SourceFile",
+      "range": "URL",
+      "reads_as": "this file was fetched from this address on this date",
+      "inverse_reads_as": "this address served this file",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "hashes_to",
+      "inverse": "digest_of",
+      "domain": "SourceFile",
+      "range": "Digest",
+      "reads_as": "this file hashes to this digest",
+      "inverse_reads_as": "this digest is the digest of this file",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "hashed_from",
+      "inverse": "grounds",
+      "domain": "Node",
+      "range": "ByteRange",
+      "reads_as": "this node was read from these bytes",
+      "inverse_reads_as": "these bytes ground this node",
+      "from": "proposed here; the AIUC-1 vault calls its version anchors",
+      "status": "proposed"
+    }
+  ],
+  "adds": "Today the provenance block sits on every data file and says the same thing for every row in it. The Regulation Graph ends every chain in a hash of the retrieved bytes, per node. The per row version is what riskmandate.ai asked for in its Lab 03, request three, and it belongs here: a row's evidence is a node in U3 that is hashed_from a byte range in U0.",
+  "junctions_live": [],
+  "page": "https://abp.sgit.ai/model/universes/u0/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

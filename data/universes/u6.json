@@ -1,0 +1,136 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u6",
+  "n": 6,
+  "name": "The derivation",
+  "level": "across",
+  "owner": "the computation, and never a person",
+  "centre": "the pinned input",
+  "smallest": "one stored record with its inputs, its time and the version of the code that produced it",
+  "status": "partial",
+  "status_note": "Nine stored deltas, each pinning the profile version, the mandate version, the pack version, the time and abp.delta/v1, recomputed by the gate on every build. What is missing is the series, the trigger and the crossing. No field on any node here is authored: a Trigger is received, a Crossing is computed, a Series is appended.",
+  "node_types": [
+    {
+      "name": "Excess",
+      "formula": "[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope",
+      "exists_today": true,
+      "note": null,
+      "matched": 53
+    },
+    {
+      "name": "UnboundedExcess",
+      "formula": "[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]",
+      "exists_today": true,
+      "note": null,
+      "matched": 48
+    },
+    {
+      "name": "Shortfall",
+      "formula": "[Shortfall] := a [Capability] that a [Mandate] -authorises-> and no [DeploymentShape] in scope -grants->",
+      "exists_today": true,
+      "note": null,
+      "matched": 2
+    },
+    {
+      "name": "DeltaRecord",
+      "formula": "a node -derived_from-> exactly one [GrantVersion] and exactly one [MandateVersion], -computed_by-> one [Computation], with an excess, an unbounded excess and a shortfall set; no field writable by a person",
+      "exists_today": false,
+      "note": "Exists as a file under data/deltas/ and not yet as a node in the graph.",
+      "matched": null
+    },
+    {
+      "name": "Computation",
+      "formula": "a version of the code: abp.delta/v1 today",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Series",
+      "formula": "the ordered set of [DeltaRecord]s for one shape and one mandate, each -supersedes-> the last",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Trigger",
+      "formula": "an event that -causes_recompute-> of a [Series]: a credential change, a token claims change, an assurance level change, a device compliance change; a new observation in U3; a corrected mandate in U5; a new pack version in U1",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Crossing",
+      "formula": "a [DeltaRecord] whose count -crosses-> a [Threshold] somebody set in advance; a record, never a verdict",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    }
+  ],
+  "verbs": [
+    {
+      "edge": "exceeds",
+      "inverse": "exceeded_by",
+      "domain": "GrantedCapability",
+      "range": "Mandate",
+      "reads_as": "this granted capability exceeds this mandate",
+      "inverse_reads_as": "this mandate is exceeded by these granted capabilities",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "derived_from",
+      "inverse": "derived_into",
+      "domain": "DeltaRecord",
+      "range": "GrantVersion or MandateVersion",
+      "reads_as": "this record was derived from these pinned inputs",
+      "inverse_reads_as": "these inputs were derived into this record",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "computed_by",
+      "inverse": "computed",
+      "domain": "DeltaRecord",
+      "range": "Computation",
+      "reads_as": "this record was computed by this version of the code",
+      "inverse_reads_as": "this version of the code computed these records",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "causes_recompute",
+      "inverse": "recomputed_on",
+      "domain": "Trigger",
+      "range": "Series",
+      "reads_as": "this event caused this series to recompute",
+      "inverse_reads_as": "this series was recomputed on this event",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "crosses",
+      "inverse": "crossed_by",
+      "domain": "DeltaRecord",
+      "range": "Threshold",
+      "reads_as": "this record crosses this threshold",
+      "inverse_reads_as": "this threshold is crossed by these records",
+      "from": "proposed here",
+      "status": "proposed"
+    }
+  ],
+  "adds": "The gate's twelfth check, which recomputes every stored delta from its pinned inputs, extends to the series without a new idea: every record in a series recomputes, and a series with a gap in its supersedes chain fails the build. Lab 07's history folder, one entry per recompute, is the live instance of Series and it exists in riskmandate.ai's vault today.",
+  "junctions_live": [],
+  "page": "https://abp.sgit.ai/model/universes/u6/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u5",
+  "n": 5,
+  "name": "The deployer",
+  "level": "across",
+  "owner": "the deployer, in their own words, and the named person who will correct the draft",
+  "centre": "the job",
+  "smallest": "one sentence somebody said about one capability on one date",
+  "status": "partial",
+  "status_note": "Eight starting mandates exist, each a want list, a refuse list and an unstated list over the 23 primitives, with a description and per capability notes in prose. The person, the job, the purpose and whose material are not nodes. This is the universe where customisation and consolidation are one mechanism: a customer's mandate is written in their vocabulary and attaches to the grammar by authorises and withholds and to nothing else.",
+  "node_types": [
+    {
+      "name": "Mandate",
+      "formula": "[Mandate] := a node that -authorises-> at least one [Capability]",
+      "exists_today": true,
+      "note": null,
+      "matched": 8
+    },
+    {
+      "name": "Deployer",
+      "formula": "an [Organisation] or [Person] that -issued-> at least one [Mandate]",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Owner",
+      "formula": "a [Person] that -corrected-> or -signed-> a [Mandate]; never a team and never a function",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Job",
+      "formula": "a node a [Mandate] -is_for->, in the deployer's words: draft the reply, fix the build",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Expectation",
+      "formula": "one row of a [Mandate]: a [Capability] with a stance of wanted, refused or unstated, -said_by-> a [Person] on a date",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "MaterialOverride",
+      "formula": "a node on a [Mandate] that -overrides-> the material value of one [Capability] from U1, with its authority recorded and the default kept visible",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    },
+    {
+      "name": "Correction",
+      "formula": "a [Mandate] that -supersedes-> an earlier one; the sale, on riskmandate.ai's own account",
+      "exists_today": false,
+      "note": null,
+      "matched": null
+    }
+  ],
+  "verbs": [
+    {
+      "edge": "authorises",
+      "inverse": "authorised_by",
+      "domain": "Mandate",
+      "range": "Capability",
+      "reads_as": "this mandate authorises this capability",
+      "inverse_reads_as": "this capability is authorised by this mandate",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "withholds",
+      "inverse": "withheld_by",
+      "domain": "Mandate",
+      "range": "Capability",
+      "reads_as": "this mandate withholds this capability",
+      "inverse_reads_as": "this capability is withheld by this mandate",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "falls_short_of",
+      "inverse": "unmet_by",
+      "domain": "Mandate",
+      "range": "Capability",
+      "reads_as": "this mandate falls short of this capability it asked for",
+      "inverse_reads_as": "this capability is unmet by this deployment shape",
+      "from": "this site",
+      "status": "live"
+    },
+    {
+      "edge": "is_for",
+      "inverse": "served_by",
+      "domain": "Mandate",
+      "range": "Job",
+      "reads_as": "this mandate is for this job",
+      "inverse_reads_as": "this job is served by these mandates",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "issued",
+      "inverse": "issued_by",
+      "domain": "Deployer",
+      "range": "Mandate",
+      "reads_as": "this deployer issued this mandate",
+      "inverse_reads_as": "this mandate was issued by this deployer",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "said_by",
+      "inverse": "said",
+      "domain": "Expectation",
+      "range": "Person",
+      "reads_as": "this expectation was said by this person on this date",
+      "inverse_reads_as": "this person said these expectations",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "corrected",
+      "inverse": "corrected_by",
+      "domain": "Person",
+      "range": "Mandate",
+      "reads_as": "this person corrected this mandate",
+      "inverse_reads_as": "this mandate was corrected by this person",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "overrides",
+      "inverse": "overridden_by",
+      "domain": "MaterialOverride",
+      "range": "Capability",
+      "reads_as": "this mandate overrides whose material this capability reaches",
+      "inverse_reads_as": "this capability's material is overridden by this mandate",
+      "from": "proposed here",
+      "status": "proposed"
+    },
+    {
+      "edge": "supersedes",
+      "inverse": "superseded_by",
+      "domain": "Node",
+      "range": "Node",
+      "reads_as": "this claim supersedes that one",
+      "inverse_reads_as": "that claim is superseded by this one",
+      "from": "graphs.sgit.ai, supersede never delete",
+      "status": "live"
+    }
+  ],
+  "adds": "The interchange form lives here and nowhere else. The W3C rights expression vocabulary, with permission, prohibition and duty, constraints, a conflict strategy in which prohibitions win, and inheritance, is a projection of U5 and U6 written out in U7, and it is never claimed to enforce anything, because enforcement is U4. An ODRL Policy is a scoped term in this universe's lexicon; the instrument with bands, a ceiling and a premium on the licence to operate demonstration is a scoped term in U8's; the behaviour policy is the root.",
+  "junctions_live": [
+    {
+      "edge": "authorises",
+      "inverse": "authorised_by",
+      "to": "u1",
+      "status": "live"
+    },
+    {
+      "edge": "withholds",
+      "inverse": "withheld_by",
+      "to": "u1",
+      "status": "live"
+    },
+    {
+      "edge": "falls_short_of",
+      "inverse": "unmet_by",
+      "to": "u1",
+      "status": "live"
+    }
+  ],
+  "page": "https://abp.sgit.ai/model/universes/u5/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

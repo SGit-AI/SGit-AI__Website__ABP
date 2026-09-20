@@ -1,0 +1,59 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u9",
+  "n": 9,
+  "name": "The estate and the twin",
+  "level": "beside",
+  "owner": "the customer, through twins.sgit.ai",
+  "centre": "this machine, this account, this repository attached to this session",
+  "smallest": "one connector present and switched off; one credential in one home directory",
+  "status": "gap",
+  "status_note": "The one the delta page already named: this site has no twin connected to anything and its label says so. It resolves what host, tenant and world mean for one instance, which is the reach class disagreement made per estate; it holds one_setting_away for a capability whose switch is outside the grant; it carries synchronised_at for the second of the three clocks; and it holds a MaterialOverride when the estate knows whose material it is.",
+  "node_types": [],
+  "verbs": [
+    {
+      "edge": "instantiates",
+      "inverse": "instantiated_by",
+      "domain": "Instance",
+      "range": "DeploymentShape",
+      "reads_as": "this instance instantiates this shape",
+      "inverse_reads_as": "this shape is instantiated by these instances",
+      "from": "proposed here",
+      "status": "gap"
+    },
+    {
+      "edge": "one_setting_away",
+      "inverse": "one_setting_from",
+      "domain": "Instance",
+      "range": "Capability",
+      "reads_as": "this estate is one setting away from this capability",
+      "inverse_reads_as": "this capability is one setting from this estate",
+      "from": "proposed here",
+      "status": "gap"
+    },
+    {
+      "edge": "synchronised_at",
+      "inverse": "synchronised",
+      "domain": "Instance",
+      "range": "Date",
+      "reads_as": "this twin was last synchronised at this date",
+      "inverse_reads_as": "this date is when the twin synchronised",
+      "from": "proposed here",
+      "status": "gap"
+    }
+  ],
+  "adds": "Named so that a twin has an address to attach to. Nothing is behind the name.",
+  "junctions_live": [],
+  "page": "https://abp.sgit.ai/model/universes/u9/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

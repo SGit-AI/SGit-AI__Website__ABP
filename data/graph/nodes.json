@@ -1,6 +1,6 @@
 {
   "type": "abp/graph-nodes/v1",
-  "_what_this_is": "Every node, flat, with its type. The same shape of record at every altitude: a verb, a capability, a barrier and a deployment shape are all nodes here. THAT IS THE FRACTAL TEST: if zooming into a node needed a new format or a special case, this would be a hierarchy rather than a graph.",
+  "_what_this_is": "Every node, flat, with its type. The same shape of record at every altitude: a verb, a capability, a barrier and a deployment shape are all nodes here. That is the GRAMMAR surviving every zoom, which is the mechanism and not the claim: the claim is that a node opens into a world with its own ontology, joined by a named edge, and which universe each type belongs to is in universes/index.json. (Until v0.4.1 this field stated the first edition's test, one format everywhere, which scores decomposition as fractal.)",
   "count": 170,
   "by_type": {
     "Barrier": 4,

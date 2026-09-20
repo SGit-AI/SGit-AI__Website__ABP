@@ -1,0 +1,281 @@
+{
+  "type": "abp/universes/v1",
+  "_what_this_is": "The ABP mapped onto Fractal Semantic Graphs. One capability row crosses nine universes, from the source bytes to a licence condition, and each universe keeps its own owner, node types and verbs, sharing only the grammar. Four more are named as gaps so that a twin, a standard, a log or an estate of agents has an address to attach to.",
+  "levels": "Levels run up and down, to the byte and to the estate of agents. Universes run across. The four objects of an ABP are neighbours and never a stack.",
+  "altitude": "Altitude keeps its 20 August sense on this site: a rendering of the same facts for a different reader. It lives inside u7 and is never a different world.",
+  "statuses": {
+    "live": "its node types exist in the graph today",
+    "partial": "some of them do",
+    "one-edge": "an edge reaches into it and finds no vocabulary yet",
+    "outside": "another site owns it; this site holds the anchor nodes its edges point at",
+    "gap": "named so the next release has an address; nothing behind it"
+  },
+  "count": 13,
+  "universes": [
+    {
+      "id": "u0",
+      "n": 0,
+      "name": "The source bytes",
+      "level": "down",
+      "owner": "nobody: the bytes are what they are",
+      "status": "partial",
+      "node_types": 2,
+      "node_types_today": 0,
+      "verbs": 3,
+      "file": "universes/u0.json"
+    },
+    {
+      "id": "u1",
+      "n": 1,
+      "name": "The grammar",
+      "level": "down",
+      "owner": "abp.sgit.ai, promoted from what-can-it-do.games.sgit.ai and bridged back to it",
+      "status": "live",
+      "node_types": 6,
+      "node_types_today": 6,
+      "verbs": 6,
+      "file": "universes/u1.json"
+    },
+    {
+      "id": "u2",
+      "n": 2,
+      "name": "The deployment shape",
+      "level": "across",
+      "owner": "the vendor's published words, read on a date, with a hash, and never probed",
+      "status": "partial",
+      "node_types": 7,
+      "node_types_today": 1,
+      "verbs": 9,
+      "file": "universes/u2.json"
+    },
+    {
+      "id": "u3",
+      "n": 3,
+      "name": "The grant and its evidence",
+      "level": "across",
+      "owner": "whoever observed, or the documentation that was read",
+      "status": "one-edge",
+      "node_types": 8,
+      "node_types_today": 2,
+      "verbs": 7,
+      "file": "universes/u3.json"
+    },
+    {
+      "id": "u4",
+      "n": 4,
+      "name": "The enforcement",
+      "level": "across",
+      "owner": "whoever set the control: the vendor, the platform, the deployer or nobody",
+      "status": "one-edge",
+      "node_types": 7,
+      "node_types_today": 3,
+      "verbs": 7,
+      "file": "universes/u4.json"
+    },
+    {
+      "id": "u5",
+      "n": 5,
+      "name": "The deployer",
+      "level": "across",
+      "owner": "the deployer, in their own words, and the named person who will correct the draft",
+      "status": "partial",
+      "node_types": 7,
+      "node_types_today": 1,
+      "verbs": 9,
+      "file": "universes/u5.json"
+    },
+    {
+      "id": "u6",
+      "n": 6,
+      "name": "The derivation",
+      "level": "across",
+      "owner": "the computation, and never a person",
+      "status": "partial",
+      "node_types": 8,
+      "node_types_today": 3,
+      "verbs": 5,
+      "file": "universes/u6.json"
+    },
+    {
+      "id": "u7",
+      "n": 7,
+      "name": "The projections",
+      "level": "across",
+      "owner": "the renderer, and the fact diff that has to check it",
+      "status": "partial",
+      "node_types": 9,
+      "node_types_today": 0,
+      "verbs": 4,
+      "file": "universes/u7.json"
+    },
+    {
+      "id": "u8",
+      "n": 8,
+      "name": "The licence, the acceptance and the risk",
+      "level": "up",
+      "owner": "riskmandate.ai",
+      "status": "outside",
+      "node_types": 5,
+      "node_types_today": 0,
+      "verbs": 4,
+      "file": "universes/u8.json"
+    },
+    {
+      "id": "u9",
+      "n": 9,
+      "name": "The estate and the twin",
+      "level": "beside",
+      "owner": "the customer, through twins.sgit.ai",
+      "status": "gap",
+      "node_types": 0,
+      "node_types_today": 0,
+      "verbs": 3,
+      "file": "universes/u9.json"
+    },
+    {
+      "id": "u10",
+      "n": 10,
+      "name": "The obligations",
+      "level": "beside",
+      "owner": "standards.sgit.ai and the AIUC-1 conformance vault",
+      "status": "gap",
+      "node_types": 0,
+      "node_types_today": 0,
+      "verbs": 2,
+      "file": "universes/u10.json"
+    },
+    {
+      "id": "u11",
+      "n": 11,
+      "name": "The runtime",
+      "level": "beside",
+      "owner": "whoever holds the logs: never this site",
+      "status": "gap",
+      "node_types": 0,
+      "node_types_today": 0,
+      "verbs": 3,
+      "file": "universes/u11.json"
+    },
+    {
+      "id": "u12",
+      "n": 12,
+      "name": "The estate of agents",
+      "level": "up",
+      "owner": "the organisation",
+      "status": "gap",
+      "node_types": 0,
+      "node_types_today": 0,
+      "verbs": 3,
+      "file": "universes/u12.json"
+    }
+  ],
+  "junctions_live": [
+    {
+      "edge": "grants",
+      "inverse": "granted_by",
+      "from": "u2",
+      "to": "u1",
+      "owner": "this site"
+    },
+    {
+      "edge": "bounded_by",
+      "inverse": "bounds",
+      "from": "u3",
+      "to": "u4",
+      "owner": "this site"
+    },
+    {
+      "edge": "authorises",
+      "inverse": "authorised_by",
+      "from": "u5",
+      "to": "u1",
+      "owner": "this site"
+    },
+    {
+      "edge": "withholds",
+      "inverse": "withheld_by",
+      "from": "u5",
+      "to": "u1",
+      "owner": "this site"
+    },
+    {
+      "edge": "exceeds",
+      "inverse": "exceeded_by",
+      "from": "u3",
+      "to": "u5",
+      "owner": "this site"
+    },
+    {
+      "edge": "falls_short_of",
+      "inverse": "unmet_by",
+      "from": "u5",
+      "to": "u1",
+      "owner": "this site"
+    }
+  ],
+  "walk": {
+    "profile": "anthropic/claude-code-remote/ccr-container",
+    "mandate": "coding-assistant-in-a-container",
+    "capability": "authenticate-as.credential.tenant",
+    "rows": [
+      {
+        "universe": "u0",
+        "node": "the row for `authenticate-as.credential.tenant` in `data/upstream/primitives.json`, hash `sha256:d6d4ba40f1fb1f9`, retrieved 2026-09-11T13:00:37Z",
+        "edge_leaving": "hashed_from, up into the grammar"
+      },
+      {
+        "universe": "u1",
+        "node": "the words `authenticate-as`, `credential` and `tenant`, and the primitive `authenticate-as.credential.tenant` they spell, undo `no`",
+        "edge_leaving": "granted_by, across into the shape"
+      },
+      {
+        "universe": "u2",
+        "node": "the shape `anthropic/claude-code-remote/ccr-container`, variant `ccr-container`, profile version `2026-09-05.2`, through shell (Bash), harness (MCP and built-in tools)",
+        "edge_leaving": "grants, into the grant"
+      },
+      {
+        "universe": "u3",
+        "node": "the granted row, known by `inferred`, with the note: the token's scope, set by the platform (in-scope repositories only)",
+        "edge_leaving": "bounded_by, into the enforcement"
+      },
+      {
+        "universe": "u4",
+        "node": "the barrier `boundary`, enforced by something above the grant, which is a control",
+        "edge_leaving": "authorised_by or withheld_by, into the deployer's world"
+      },
+      {
+        "universe": "u5",
+        "node": "the mandate `coding-assistant-in-a-container`, authored 2026-09-09, which left this capability **unstated**",
+        "edge_leaving": "derived_into, into the derivation"
+      },
+      {
+        "universe": "u6",
+        "node": "the stored delta computed 2026-09-11T13:00:37Z by `abp.delta/v1`, pinning grant `2026-09-05.2` and mandate `2026-09-09`, with this row in **excess** and not unbounded",
+        "edge_leaving": "projected_as, into the projections"
+      },
+      {
+        "universe": "u7",
+        "node": "the prohibition *The agent must not act in accounts with the credentials it holds.*, at barrier `boundary`, **enforced today**",
+        "edge_leaving": "licensed_under, up into the licence"
+      },
+      {
+        "universe": "u8",
+        "node": "a condition of `LICENCE-TO-OPERATE.md` in the behaviour policy vault riskmandate.ai publishes for this shape, beside the thing that enforces it, for an owner who has not yet signed: [abp-vault-claude-code-web.html](https://riskmandate.ai/abp-vault-claude-code-web.html)",
+        "edge_leaving": "gives_rise_to, further up into risk, which this site never draws"
+      }
+    ],
+    "sentence": "the words `authenticate-as`, `credential` and `tenant` spell a primitive that the shape `ccr-container` grants through shell (Bash), harness (MCP and built-in tools) as a row known by inferred, bounded by `boundary`, which something above the grant enforces and which is a control, which the mandate `coding-assistant-in-a-container` left unstated, so the derivation of 2026-09-11 records it as excess and not unbounded, which the leaflet renders as a prohibition that is enforced today, and which the licence in riskmandate.ai's vault for this shape carries as a condition beside its enforcer, for an owner who has not yet signed."
+  },
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "definition": "https://sgit.ai/demos/fractal-graphs/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "Authored in admin/build/universes.py, walked on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

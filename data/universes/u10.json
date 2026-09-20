@@ -1,0 +1,49 @@
+{
+  "type": "abp/universe/v1",
+  "id": "u10",
+  "n": 10,
+  "name": "The obligations",
+  "level": "beside",
+  "owner": "standards.sgit.ai and the AIUC-1 conformance vault",
+  "centre": "the provision",
+  "smallest": "one article, one control of a standard, one line of guidance",
+  "status": "gap",
+  "status_note": "A bridge: the foundation document already cites the consumer guidance of 9 March 2026, the processor rule in Article 28 and the agent standard in prose; the change is that a citation becomes an anchor node with a constructible URL. Never a conformance claim.",
+  "node_types": [],
+  "verbs": [
+    {
+      "edge": "cites",
+      "inverse": "cited_by",
+      "domain": "Mandate or Prohibition",
+      "range": "Provision",
+      "reads_as": "this mandate cites this provision",
+      "inverse_reads_as": "this provision is cited by these mandates",
+      "from": "proposed here",
+      "status": "gap"
+    },
+    {
+      "edge": "crosswalks_to",
+      "inverse": "crosswalked_from",
+      "domain": "Control of a standard",
+      "range": "Capability",
+      "reads_as": "this control crosswalks to this capability",
+      "inverse_reads_as": "this capability is crosswalked from this control",
+      "from": "the AIUC-1 vault",
+      "status": "gap"
+    }
+  ],
+  "adds": "Named so that a standard has an address to attach to.",
+  "junctions_live": [],
+  "page": "https://abp.sgit.ai/model/universes/u10/index.html",
+  "brief": "https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html",
+  "provenance": {
+    "source": "https://what-can-it-do.games.sgit.ai/data/",
+    "source_page": "https://what-can-it-do.games.sgit.ai/map/index.html",
+    "retrieved": "2026-09-11T13:00:37Z",
+    "pack_version": "v0.8.0",
+    "content_hash": "sha256:d6d4ba40f1fb1f93f660687e4787ac10c2e1835efeb3929a4c8ad62cee8897ef",
+    "verbatim_bytes": "upstream/",
+    "note": "The universe is authored in admin/build/universes.py; the matched counts and the live junctions are computed from the graph on every build.",
+    "licence": "CC BY 4.0"
+  }
+}

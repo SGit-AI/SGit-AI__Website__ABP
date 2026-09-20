@@ -380,6 +380,7 @@ def manifest(built, version, n_deltas):
             "graph": "graph/index.json",
             "lexicon": "lexicon/index.json",
             "bridges": "bridges/index.json",
+            "universes": "universes/index.json",
             "provenance": "provenance.json",
             "upstream": "upstream/pack.json",
         },
@@ -390,6 +391,7 @@ def manifest(built, version, n_deltas):
             "profiles": len(built["profiles"]),
             "mandates": len(built["mandates"]),
             "deltas": n_deltas,
+            "universes": 13,
             "rows": built["provenance"]["rows"],
         },
         "the_delta": "Derived and never authored. Stored under deltas/, each record pinning the "
@@ -472,6 +474,77 @@ def write_deltas(built, computed_at):
     return index
 
 
+def write_universes(D, g, cls, prov):
+    """The universes as files: an index carrying the walk of one row, and one file per
+    universe carrying its owner, its status, its node types with their matched counts, its
+    verbs, and the edges that leave it.
+
+    THE MAP IS DATA SO THAT NOTHING QUOTES IT. The dev brief of 20 September 2026 draws the
+    map in prose; these files are what the pages render and what the gate checks, and the
+    walk in the index is rebuilt from the published profiles, mandates and deltas on every
+    build, so the sentence on the page cannot drift from the rows it is made of."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import universes as U  # noqa: E402
+
+    (OUT / "universes").mkdir(parents=True, exist_ok=True)
+    recs = U.records(cls)
+    cross = [e for e in U.crossings() if e["crosses"]]
+    for u in recs:
+        leaving = [{"edge": e["edge"], "inverse": e["inverse"], "to": e["range_universe"],
+                    "status": "live"}
+                   for e in cross if e["domain_universe"] == u["id"]]
+        rec = {
+            "type": "abp/universe/v1",
+            **u,
+            "junctions_live": leaving,
+            "page": f"https://abp.sgit.ai/model/universes/{u['id']}/index.html",
+            "brief": f"https://abp.sgit.ai/docs/briefs/{U.BRIEF}/index.html",
+            "provenance": prov("The universe is authored in admin/build/universes.py; the "
+                               "matched counts and the live junctions are computed from the "
+                               "graph on every build."),
+        }
+        (OUT / f"universes/{u['id']}.json").write_text(
+            json.dumps(rec, indent=2, ensure_ascii=False) + "\n")
+
+    (OUT / "universes/index.json").write_text(json.dumps({
+        "type": "abp/universes/v1",
+        "_what_this_is": "The ABP mapped onto Fractal Semantic Graphs. One capability row "
+                         "crosses nine universes, from the source bytes to a licence "
+                         "condition, and each universe keeps its own owner, node types and "
+                         "verbs, sharing only the grammar. Four more are named as gaps so "
+                         "that a twin, a standard, a log or an estate of agents has an "
+                         "address to attach to.",
+        "levels": "Levels run up and down, to the byte and to the estate of agents. "
+                  "Universes run across. The four objects of an ABP are neighbours and "
+                  "never a stack.",
+        "altitude": "Altitude keeps its 20 August sense on this site: a rendering of the same "
+                    "facts for a different reader. It lives inside u7 and is never a "
+                    "different world.",
+        "statuses": {"live": "its node types exist in the graph today",
+                     "partial": "some of them do",
+                     "one-edge": "an edge reaches into it and finds no vocabulary yet",
+                     "outside": "another site owns it; this site holds the anchor nodes "
+                                "its edges point at",
+                     "gap": "named so the next release has an address; nothing behind it"},
+        "count": len(recs),
+        "universes": [{"id": u["id"], "n": u["n"], "name": u["name"], "level": u["level"],
+                       "owner": u["owner"], "status": u["status"],
+                       "node_types": len(u["node_types"]),
+                       "node_types_today": sum(1 for t in u["node_types"] if t["exists_today"]),
+                       "verbs": len(u["verbs"]),
+                       "file": f"universes/{u['id']}.json"} for u in recs],
+        "junctions_live": [{"edge": e["edge"], "inverse": e["inverse"],
+                            "from": e["domain_universe"], "to": e["range_universe"],
+                            "owner": "this site"} for e in cross],
+        "walk": U.walk(D, g),
+        "brief": f"https://abp.sgit.ai/docs/briefs/{U.BRIEF}/index.html",
+        "definition": U.FSG_PAGE,
+        "provenance": prov("Authored in admin/build/universes.py, walked on every build."),
+    }, indent=2, ensure_ascii=False) + "\n")
+    return recs
+
+
 def write_graph(built, computed_at):
     """The graph, the lexicon and the bridges, as files.
 
@@ -484,11 +557,13 @@ def write_graph(built, computed_at):
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import abp  # noqa: E402
     import graph as G  # noqa: E402
+    import universes as U  # noqa: E402
 
     D = abp.load()
     g = G.build(D)
     cls = G.classify(g)
     prov = lambda note: _provenance(built["pack"], built["content_hash"], note)
+    write_universes(D, g, cls, prov)
 
     # --- the lexicon, a file per word ---------------------------------------
     KIND = {"Verb": ("verbs", "has_verb"), "ObjectClass": ("objects", "acts_on"),
@@ -559,7 +634,11 @@ def write_graph(built, computed_at):
                         "and both need a stated domain and range.",
         "source": "https://graphs.sgit.ai/v1/grammar/edge-set.html",
         "count": len(G.EDGES),
-        "edges": G.edge_records(),
+        "universes": "Each edge names the universe of its domain and of its range, and "
+                     "`crosses` is true when they differ: a junction edge, the property that "
+                     "turns a set of graphs into a fractal rather than a pile. Computed from "
+                     "the node types, never declared. See universes/index.json.",
+        "edges": U.crossings(),
         "provenance": prov("Edges marked `graphs.sgit.ai edge set` are reused under their "
                            "published names. Edges marked `proposed here` are this site's, and "
                            "are marked as such rather than presented as settled."),
@@ -576,7 +655,11 @@ def write_graph(built, computed_at):
                     "versioned, inspectable and arguable.",
         "not_a_node": G.NOT_A_NODE.replace("**", ""),
         "count": len(G.NODE_TYPES),
+        "universes": "Each type names the universe it belongs to, which is a modelling "
+                     "decision made once in universes.py and checked by the gate: a type "
+                     "with no universe is a node nobody owns.",
         "node_types": [{"name": n, "is": gl, "formula": f, "note": note,
+                        "universe": U.universe_of_type(n),
                         "matched": len(cls.get(n, [])) if n in cls else None}
                        for n, gl, f, note in G.NODE_TYPES],
         "provenance": prov("The formulas are run against the graph on every build and the "
@@ -587,9 +670,12 @@ def write_graph(built, computed_at):
         "type": "abp/graph-nodes/v1",
         "_what_this_is": "Every node, flat, with its type. The same shape of record at every "
                          "altitude: a verb, a capability, a barrier and a deployment shape are "
-                         "all nodes here. THAT IS THE FRACTAL TEST: if zooming into a node "
-                         "needed a new format or a special case, this would be a hierarchy "
-                         "rather than a graph.",
+                         "all nodes here. That is the GRAMMAR surviving every zoom, which is "
+                         "the mechanism and not the claim: the claim is that a node opens into "
+                         "a world with its own ontology, joined by a named edge, and which "
+                         "universe each type belongs to is in universes/index.json. (Until "
+                         "v0.4.1 this field stated the first edition's test, one format "
+                         "everywhere, which scores decomposition as fractal.)",
         "count": len([n for n in g["nodes"].values() if n]),
         "by_type": {t: len([n for n in g["nodes"].values() if n and n["type"] == t])
                     for t in sorted({n["type"] for n in g["nodes"].values() if n})},

@@ -441,6 +441,11 @@ def model_pages(D):
                 {"title": "[The graph](model/graph/index.html)",
                  "sub": "Five rules that govern the model rather than the styling.",
                  "foot": "Rule five is the acceptance test and it is cheap to apply."},
+                {"title": "[The universes](model/universes/index.html)",
+                 "sub": "One capability row walked through nine worlds, from the source bytes "
+                        "to a licence condition, each with its own owner and ontology.",
+                 "foot": "An ABP is a junction object. This is Fractal Semantic Graphs "
+                         "applied to it."},
                 {"title": "[The schema](model/schema/index.html)",
                  "sub": "What is in the published files, and what a consumer has to state.",
                  "foot": "A consumer pins a version."},
