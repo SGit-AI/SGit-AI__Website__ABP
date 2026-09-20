@@ -629,3 +629,35 @@ main.doc pre.shell{overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
 .gam .gam-k{font-size:10.5px;fill:var(--dim)}
 .gam .gam-line{fill:none;stroke:var(--line2);stroke-width:1.4}
 .gamwrap figcaption{margin-top:.7rem;font-size:.8rem;color:var(--dim)}
+
+/* ---------- article figures ----------
+   Two jobs, one stylesheet. A DIAGRAM shows a mechanism: boxes, named edges, and the
+   sentence the path reads as. A CHART shows change across the releases, as small multiples
+   with one series each, because the measures have different scales and a second y axis
+   would be a lie about both. The two chart colours are the only ones in the file chosen by
+   a validator rather than by eye: teal #0b8f80 and the house amber #b45309 pass the
+   lightness band, the chroma floor, colour-vision separation, the normal-vision floor and
+   contrast against both surfaces. Text never wears them: identity comes from the mark. */
+:root{ --fig-a:#0b8f80; --fig-b:#b45309; }
+figure.fig{margin:1.6rem 0;padding:1rem .9rem .2rem;border:1px solid var(--line);border-radius:12px;
+  background:var(--panel);box-shadow:var(--shadow)}
+figure.fig svg{display:block;width:100%;height:auto}
+figure.fig figcaption{font-size:.8rem;line-height:1.6;color:var(--dim);padding:.7rem .2rem .8rem}
+.fig .ft{font-size:12.5px;fill:var(--fg)}
+.fig .fb{font-size:12.5px;fill:var(--fg);font-weight:700}
+.fig .fd{font-size:11px;fill:var(--dim)}
+.fig .fm{font-size:11px;fill:var(--fg);font-family:var(--mono)}
+.fig .fmd{font-size:10.5px;fill:var(--dim);font-family:var(--mono)}
+.fig .fk{font-size:10.5px;fill:var(--dim2);font-style:italic}
+.fig .fh{font-size:13px;fill:var(--fg);font-weight:700;letter-spacing:.01em}
+.fig .box{fill:var(--panel2);stroke:var(--line2);stroke-width:1}
+.fig .box-a{fill:#effaf7;stroke:var(--fig-a);stroke-width:1.2}
+.fig .box-b{fill:#fdf6ed;stroke:var(--fig-b);stroke-width:1.2}
+.fig .box-x{fill:var(--panel);stroke:var(--line2);stroke-width:1;stroke-dasharray:4 3}
+.fig .edge{fill:none;stroke:var(--line2);stroke-width:1.4}
+.fig .edge-a{fill:none;stroke:var(--fig-a);stroke-width:1.6}
+.fig .rule{stroke:var(--line);stroke-width:1}
+.fig .grid{stroke:var(--line);stroke-width:1}
+.fig .ser{fill:none;stroke:var(--fig-a);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.fig .dot{fill:var(--fig-a);stroke:var(--panel);stroke-width:2}
+.fig .barA{fill:var(--fig-a)} .fig .barB{fill:var(--fig-b)}

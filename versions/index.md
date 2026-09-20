@@ -2,7 +2,7 @@
 
 > Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
-*Source: <https://abp.sgit.ai/versions/index.html> · site v0.4.4 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/index.html> · site v0.5.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -16,6 +16,7 @@ Every release of this site. **The badge in the top bar reads `current` from [`ve
 
 | Version | Date | What changed |
 |---|---|---|
+| [v0.5.0](../versions/v0.5.0/index.md) | 2026-09-20 | the releases get one article each, with the screenshots taken from the tag each one names rather than from today's site |
 | [v0.4.4](../versions/v0.4.4/index.md) | 2026-09-20 | seven shapes contributed by riskmandate.ai are promoted with their provenance, a vendor scope becomes a node, and the intake path is the same for anybody |
 | [v0.4.3](../versions/v0.4.3/index.md) | 2026-09-20 | the product, the tool and the setting become nodes, derived from data already published, and whose material is declared on the grammar |
 | [v0.4.2](../versions/v0.4.2/index.md) | 2026-09-20 | the fact set is data, the fact diff runs over every published page, and every example ends by crossing nine universes |

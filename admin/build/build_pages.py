@@ -37,6 +37,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import abp  # noqa: E402
 import abp_pages  # noqa: E402
+import articles  # noqa: E402
 import docs_pages  # noqa: E402
 import graph  # noqa: E402
 import lexicon_pages  # noqa: E402
@@ -110,6 +111,10 @@ NAV = [
         ("A browser extension", "examples/browser-extension-broad-host-permissions/index.html"),
         ("A hosted CI runner", "examples/github-actions-hosted-runner/index.html"),
     ], ("examples/",)),
+    ("Articles", "articles/index.html",
+     [("One per release", "articles/index.html")]
+     + [(v, "articles/" + slug + "/index.html") for slug, v, *_ in articles.ARTICLES],
+     ("articles/",)),
     ("Data", "data/index.html", [], ("data/",)),
     ("Docs", "docs/index.html", [
         ("Everything, rendered", "docs/index.html"),
@@ -149,6 +154,59 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.5.0", "2026-09-20",
+     "the releases get one article each, with the screenshots taken from the tag each one "
+     "names rather than from today's site",
+     {
+       "summary":
+         "The version surface says what changed, in the release's own words, and it is "
+         "deliberately terse. Nothing on this site said why. This release adds an articles "
+         "section: one article per release from v0.1.0 to v0.4.4, each explaining what the "
+         "release changed, what it cost, and what it did not settle. Every screenshot in them "
+         "was captured from a checkout of the tag it names, so an article about the eleventh "
+         "of September shows the site as it stood on the eleventh of September, badge and "
+         "all. Ten diagrams carry the mechanisms a screenshot cannot show, and one chart "
+         "carries the four measures across the eight releases.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "Nine pages at /articles/: an index generated from the article register, and eight "
+         "articles, one per release. Each states its version and date, links to that "
+         "version's own record, and ends with the pages it is about rather than restating "
+         "them.",
+         "Twenty seven screenshots under assets/articles/, every one captured from a detached "
+         "worktree of the tag it names and carrying that version and the capture date in its "
+         "own caption. Nothing was retouched or staged, and the method is four commands, so "
+         "the figures are reproducible rather than trusted.",
+         "Ten figures in admin/build/figures.py, each with a described equivalent for the "
+         "markdown twin so a reader of the twin is not sent to the page to find out what the "
+         "picture said. Nine are diagrams of a mechanism: the four objects, the enforcer "
+         "test, a string becoming three nodes, the zoom test in two halves, the nine "
+         "universes, the fact diff, the confirmations flag as a path, the intake path, and "
+         "where the sixteen shapes came from.",
+         "One chart, as small multiples: pages, nodes, edges and gate checks across the eight "
+         "releases, one series per panel because the four measures have different scales and "
+         "a single axis carrying two of them would say something untrue about both. Its two "
+         "colours were chosen by a validator rather than by eye and pass the lightness band, "
+         "the chroma floor, colour-vision separation, the normal-vision floor and contrast "
+         "against both surfaces; the house teal failed the chroma floor and was snapped to "
+         "the nearest passing step.",
+         "The articles are held to every rule the rest of the site is: no score, no adjective "
+         "about a named product, pure ASCII, and the same forbidden words. Two of them were "
+         "caught by the gate while this release was being written, one of them a stray "
+         "non-ASCII character in a figure.",
+       ],
+       "basis": [
+         "The eight release tags in this repository, which are what the screenshots were "
+         "taken from and what the chart's numbers were counted from.",
+         "The version records under versions/, which the articles explain rather than "
+         "restate, and which win where an article and a record disagree.",
+         "The visualisation guidance this estate follows for charts: pick the form before the "
+         "colour, never two y axes, validate a categorical palette with a runnable check "
+         "rather than by eye, and label selectively.",
+       ],
+     }),
     ("v0.4.4", "2026-09-20",
      "seven shapes contributed by riskmandate.ai are promoted with their provenance, a vendor "
      "scope becomes a node, and the intake path is the same for anybody",
@@ -1143,7 +1201,7 @@ def main():
     cls = graph.classify(g)
     pages = {"index.html": home(D), "what-is-an-abp/index.html": what_is_an_abp(D)}
     for source in (abp_pages.pages(D), lexicon_pages.pages(D, g, cls),
-                   universe_pages.pages(D, g, cls), docs_pages.pages(),
+                   universe_pages.pages(D, g, cls), articles.pages(), docs_pages.pages(),
                    version_pages()):
         clash = set(source) & set(pages)
         if clash:

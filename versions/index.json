@@ -1,7 +1,14 @@
 {
-  "current": "v0.4.4",
+  "current": "v0.5.0",
   "_what_this_is": "The version surface. The badge in the site chrome reads `current` from this file, so the badge cannot drift from the tag: the tag is derived from admin/build/version.txt and this file is generated from the same string.",
   "versions": [
+    {
+      "version": "v0.5.0",
+      "date": "2026-09-20",
+      "title": "the releases get one article each, with the screenshots taken from the tag each one names rather than from today's site",
+      "file": "v0.5.0.json",
+      "page": "v0.5.0/index.html"
+    },
     {
       "version": "v0.4.4",
       "date": "2026-09-20",

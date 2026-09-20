@@ -34,6 +34,7 @@ index.html            the argument, in one screen
 what-is-an-abp/       the foundation document, rendered, with its terms linked to their nodes
 model/                the four objects, the capabilities, the lexicon, the barriers, undo, the delta, the graph, the schema
 model/lexicon/        a page per word in the grammar: 10 verbs, 9 object classes, 5 reach classes, 9 families
+articles/             one article per release, with the screenshots taken from that release's own tag
 examples/             five ABPs, derived from the data rather than authored
 data/                 the published vocabulary as JSON, the graph, the lexicon, the bridges, the universes, the stored deltas and fact sets, the source bytes under upstream/ and the contributed bytes under contributed/
 docs/                 every reference document, rendered, one click from its bytes
@@ -50,7 +51,7 @@ python3 admin/build/build_pages.py    # regenerates every page, twin, llms.txt, 
 node admin/build/validate.js          # the release gate
 ```
 
-**Nothing under `model/`, `examples/`, `data/` (except `upstream/` and `contributed/`, which are fetched bytes, never edited), `docs/*/`, `versions/`,
+**Nothing under `model/`, `articles/`, `examples/`, `data/` (except `upstream/` and `contributed/`, which are fetched bytes, never edited), `docs/*/`, `versions/`,
 `llms.txt`, `sitemap.xml`, `robots.txt` or `CNAME` is edited by hand.** They are generated, and
 CI fails a push whose committed tree does not match what the generator produces.
 
@@ -63,6 +64,8 @@ CI fails a push whose committed tree does not match what the generator produces.
 | `admin/build/lexicon_pages.py` | A page per word in the grammar, and the grammar pages. |
 | `admin/build/abp_pages.py` | Every page computed from the data. |
 | `admin/build/docs_pages.py` | The docs section. |
+| `admin/build/articles.py` | One article per release, and the register the index is generated from. |
+| `admin/build/figures.py` | The article figures: nine diagrams and one chart, each with a markdown equivalent. |
 | `admin/build/build_pages.py` | The authored pages, the nav, the footer, the version log. |
 | `admin/build/shell.py` | One block list, two surfaces: the page and its markdown twin. |
 | `admin/build/validate.js` | The release gate. A failure means no tag and no publish. |
