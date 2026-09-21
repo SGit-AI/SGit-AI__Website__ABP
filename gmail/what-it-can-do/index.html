@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Step 1: what it can already do - abp.sgit.ai</title>
+<meta name="description" content="Four prompts that make your own assistant enumerate its mailbox tools, what each one reaches, which of them you could undo, and which lines it is inferring rather than reading.">
+<link rel="canonical" href="https://abp.sgit.ai/gmail/what-it-can-do/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/gmail/what-it-can-do/index.html">
+<meta property="og:title" content="Step 1: what it can already do - abp.sgit.ai">
+<meta property="og:description" content="Four prompts that make your own assistant enumerate its mailbox tools, what each one reaches, which of them you could undo, and which lines it is inferring rather than reading.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.6.0/index.html" title="What changed in v0.6.0, and the commit it was built from">v0.6.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../gmail/index.html">Your mailbox<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../gmail/index.html">The walkthrough</a>
+      <a class="sl here" href="../../gmail/what-it-can-do/index.html">Step 1: What it can already do</a>
+      <a class="sl" href="../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a>
+      <a class="sl" href="../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a>
+      <a class="sl" href="../../gmail/what-a-prompt-cannot-do/index.html">Step 4: What a prompt cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../articles/index.html">One per release</a>
+      <a class="sl" href="../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../gmail/index.html">Your mailbox</a> / Step 1</p>
+  <h1>Step 1: what it can already do</h1>
+  <p class="lead"><b>You are going to ask it, rather than read a table.</b> Your assistant can see its own mailbox tools, and it is the only party here that knows what it has already done in your mail. Four prompts, shortest first, and about five minutes.</p>
+  <div class="tablewrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><b>The objective</b></td><td>Ask your own assistant to enumerate its mailbox tools, what each one reaches, and which of them you could undo.</td></tr><tr><td><b>Next</b></td><td><a href="../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a></td></tr><tr><td><b>All four steps</b></td><td><a href="../../gmail/index.html">The walkthrough</a></td></tr></tbody></table></div>
+  <div class="note"><b>What you gain from this page.</b> A written list of every mailbox tool your assistant holds, sorted with the hardest thing to undo at the top, with every line marked as read from a tool description or inferred. You will use that list on all three pages that follow, so keep the answer.</div>
+  <h2 id="start-with-one-line">Start with one line</h2>
+  <p>Paste this into the assistant you have connected to your mail. If you do nothing else on this site, do this.</p>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt 1</span><b>The tool list</b><span class="psub">One question, ten seconds to read the answer. Most people have never seen this list.</span></figcaption><pre class="ptext">List every tool you have available for my mail, by name, with one line each on what it
+does. Mark any that can change something rather than only read.</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <p>Two things usually happen. The list is longer than expected, and some of the names on it are not things anybody asked for. Neither is a fault in the product: a connector is a bundle, and you took the bundle.</p>
+  <h2 id="then-ask-what-it-has-already-done">Then ask what it has already done</h2>
+  <p>This is the question a published table can never answer, and the reason this walkthrough is prompts rather than documentation. Part four matters most: what it cannot tell you about its own access is the part you have to go outside the chat to check.</p>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt 2</span><b>Four parts, and the fourth is the point</b><span class="psub">What it has done, what it could do now, what it cannot do and why, and what it cannot tell you.</span></figcaption><pre class="ptext">Before we go further I want an account of your access to my mailbox, in four parts.
+
+1. WHAT YOU HAVE ALREADY DONE. Every action you have taken in my mailbox in our
+   conversations: what you read, what you wrote, what you changed. If you cannot see
+   earlier sessions, say so plainly and tell me what you can see.
+
+2. WHAT YOU COULD DO RIGHT NOW, without asking me for anything further.
+
+3. WHAT YOU CANNOT DO, and for each one say whether it is because no tool exists, because
+   the permission was never granted, or because you have decided not to.
+
+4. WHAT YOU CANNOT TELL ME about your own access. This is the part I care most about.
+
+Do not reassure me, and do not tell me what is typical. Where you are inferring rather
+than reading a tool description, write INFERRED at the end of the line.</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <h2 id="then-the-table-you-will-keep">Then the table you will keep</h2>
+  <p>The columns are chosen so the answer can be argued with. <b>Reversibility is the one ordering this site permits</b>, because it is a property of the action rather than a judgement about it.</p>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt 3</span><b>Every tool, with reach, undo and blast radius</b><span class="psub">The long one. Keep the answer: steps two and three both build on it.</span></figcaption><pre class="ptext">Now put every mail tool you have into one table, one row per tool, with these columns.
+
+  TOOL          the name you call it by
+  READS/WRITES  read only, or changes something
+  REACH         only my own mailbox, anything in my whole account, or something that
+                leaves for another person
+  UNDO          can I put it back exactly as it was, and how long do I have
+  BLAST RADIUS  the most a single call could touch, at the top end, not the typical case
+  PERSISTS      does the effect stop when this chat ends, or keep running afterwards
+  EVIDENCE      TOOL if you are reading a tool description, INFERRED if you are guessing
+
+Sort the table so the hardest thing to undo is at the top. Do not rank the rows by how
+serious you think each one is: I am not asking you for a verdict, I am asking you for the
+properties.</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt 4</span><b>Where to check the answer</b><span class="psub">Separates what it read from what it guessed, and names the screens you can verify each line against.</span></figcaption><pre class="ptext">Two more questions about that table.
+
+1. Which rows did you fill in from a tool description you can actually see, and which did
+   you fill in from what you know about mail systems in general? Separate the two lists.
+
+2. What would I have to open outside this conversation to check your answer: a consent
+   screen, an account settings page, an administration console, a log? Name the exact
+   page for each thing you told me, and say what I should expect to find there.</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <h2 id="what-to-look-for-in-the-answer">What to look for in the answer</h2>
+  <ul><li><b>A tool you did not know existed.</b> Filters, labels, spam marking and forwarding are all commonly in the bundle. Write down the ones that surprise you; they are the first entries in step two's third list.</li><li><b>A row where UNDO says no.</b> Sending is the obvious one. It is not the only one: a message marked as spam, a filter created, a label removed from four hundred threads.</li><li><b>A row where PERSISTS says the effect outlives the chat.</b> A filter keeps acting on mail that arrives next week. Nothing in the conversation reminds you it is there.</li><li><b>Any line marked INFERRED.</b> That is the assistant telling you where its own account of itself is a guess, which is exactly what you asked it for.</li><li><b>A refusal that turns out to be a preference.</b> If it says it will not do something, ask which of the four barriers is stopping it. Step three teaches the four names; step four explains why the difference decides everything.</li></ul>
+  <h2 id="something-to-check-the-answer-against">Something to check the answer against</h2>
+  <p>This site publishes a measured profile for one common version of this shape, so you have a second account to compare yours with. It names <b>22 tools</b>, <b>6 of the 23 capability primitives</b>, <b>4 things it cannot reach</b>, and <b>5 places where the published sources disagree with each other</b>. It also records <b>4 capabilities the grammar has no word for</b> (drafts, labels, trash, and two tool names truncated in the listing) and <b>6 open questions</b> that were left open rather than filled in.</p>
+  <div class="note"><b>If your assistant's answer disagrees with the published profile, neither one is automatically right.</b> The profile was read on a date from two vendors' own pages and measured in one session; your deployment is a different date and possibly a different build. A disagreement is a thing to check on the consent screen, not an error to resolve in the chat.</div>
+  <p><a href="../../examples/index.html">The rows, in full</a> &amp;#183; <a href="../../data/profiles/anthropic/gmail-connector/default.json">The profile as JSON</a> &amp;#183; <a href="https://riskmandate.ai/abp-vault-claude-gmail-connector.html">The same shape rendered live from a vault</a></p>
+  <div class="note"><b>Where the numbers on this page come from.</b> The published profile for <code>anthropic/gmail-connector/default</code>, which this site did not measure: it was contributed by riskmandate.ai, read from the two vendors' own pages and measured in one session on 16 September 2026. <b>4 of 6 rows were seen on the thing itself</b> and the rest were read from documentation. The evidence tier on every row is the contributor's and this site did not raise it. <a href="../../examples/index.html">The rows</a>, <a href="../../data/profiles/anthropic/gmail-connector/default.json">the profile as JSON</a>, <a href="../../data/contributed/riskmandate/manifest.json">the contributed bytes</a>.</div>
+  <div class="tablewrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><b>The objective</b></td><td>Ask your own assistant to enumerate its mailbox tools, what each one reaches, and which of them you could undo.</td></tr><tr><td><b>Next</b></td><td><a href="../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a></td></tr><tr><td><b>All four steps</b></td><td><a href="../../gmail/index.html">The walkthrough</a></td></tr></tbody></table></div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.6.0/index.html">v0.6.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../gmail/what-it-can-do/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+<script src="../../assets/copy.js" defer></script>
+</body>
+</html>

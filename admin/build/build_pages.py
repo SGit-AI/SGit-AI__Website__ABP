@@ -39,6 +39,7 @@ import abp  # noqa: E402
 import abp_pages  # noqa: E402
 import articles  # noqa: E402
 import docs_pages  # noqa: E402
+import gmail_pages  # noqa: E402
 import graph  # noqa: E402
 import lexicon_pages  # noqa: E402
 import universe_pages  # noqa: E402
@@ -111,6 +112,10 @@ NAV = [
         ("A browser extension", "examples/browser-extension-broad-host-permissions/index.html"),
         ("A hosted CI runner", "examples/github-actions-hosted-runner/index.html"),
     ], ("examples/",)),
+    ("Your mailbox", "gmail/index.html",
+     [("The walkthrough", "gmail/index.html")]
+     + [(f"{tag}: {name}", rel) for rel, tag, name, _ in gmail_pages.STEPS],
+     ("gmail/",)),
     ("Articles", "articles/index.html",
      [("One per release", "articles/index.html")]
      + [(v, "articles/" + slug + "/index.html") for slug, v, *_ in articles.ARTICLES],
@@ -126,6 +131,7 @@ NAV = [
 FOOTER = [
     ("The argument", [
         ("&#8594; What is an ABP", "what-is-an-abp/index.html"),
+        ("Your mailbox, in four steps", "gmail/index.html"),
         ("The four objects", "model/index.html"),
         ("The barrier", "model/barriers/index.html"),
         ("Five worked examples", "examples/index.html"),
@@ -154,6 +160,64 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.6.0", "2026-09-21",
+     "a walkthrough for somebody who has connected an assistant to their own mailbox: four "
+     "pages, thirteen prompts, and a fourth page that says what a prompt cannot do",
+     {
+       "summary":
+         "Everything on this site so far was written for a reader who already believes the "
+         "argument. This release adds the door: a section at /gmail/ for somebody who "
+         "connected an assistant to their mail, has never seen the list of what that gave it, "
+         "and can be handed one link. It does not give them a table to read. It gives them "
+         "thirteen prompts to paste into their own session, because an assistant is the only "
+         "party in the room that can see its whole tool surface at once and the only one that "
+         "knows what it has already done in that mailbox. Step one enumerates the grant, step "
+         "two elicits the mandate by having the assistant draft it so the reader can correct "
+         "it, step three writes the behaviour policy, and step four says plainly that what "
+         "they have written is an expectation rather than a control, which is the page the "
+         "section would be dishonest without.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "Five pages at /gmail/: a hub and four steps. Each step opens with its objective and "
+         "what the reader gains, carries the prompts to paste, says what to look for in the "
+         "answer, and ends with the step before and the step after, so the sequence can be "
+         "walked without going back to the hub.",
+         "Thirteen prompts, ordered shortest first on every page. They run from one line "
+         "listing the mailbox tools to a full Agent Behaviour Policy in the four object "
+         "shape, and the last two ask the assistant to grade its own document against the "
+         "four barriers and then say what would have to exist outside it for each expectation "
+         "to become a boundary.",
+         "A prompt block in the block vocabulary: a figure with a tag, a title, one line on "
+         "what it produces, the text in a monospaced block, and a copy button. The markdown "
+         "twin renders it as a fenced block, so an agent reading the twin gets the prompt "
+         "rather than a description of it, and assets/copy.js is injected only on the pages "
+         "that have one.",
+         "Two figures: the four layers stacked between a mail platform's scopes and what a "
+         "person meant, and what the approval prompt names at the moment it asks against what "
+         "it leaves out. Both have described equivalents in the twin.",
+         "Every number in the section is computed from the profile for "
+         "anthropic/gmail-connector/default, which riskmandate.ai contributed and this site "
+         "did not measure: the tool count, the grant size, the contradictions, the "
+         "capabilities the grammar has no word for, the open questions, and the rows of the "
+         "gap with nothing in the way. The provenance note on the hub and on the steps says "
+         "how many rows were seen on the thing itself.",
+         "The seven briefs from the mailbox pack, published under docs/briefs/ and rendered "
+         "by the same docs path as everything else, so the section can cite the argument it "
+         "rests on rather than restating it.",
+       ],
+       "basis": [
+         "The measured profile contributed by riskmandate.ai and promoted at v0.4.4, which "
+         "is why this section could be written as computed numbers rather than as prose.",
+         "Two properties of the layer underneath, both from the pack: a connector attaches "
+         "to the account rather than to the conversation, so what was consented to once holds "
+         "in every session afterwards; and no mail scope separates drafting from sending, so "
+         "the commonest rule anybody writes cannot be expressed as a permission at all.",
+         "The rule that every prohibition carries its barrier, which is what forced step four "
+         "to be a page rather than a footnote.",
+       ],
+     }),
     ("v0.5.1", "2026-09-21",
      "the articles run newest first, carry their version in the title, and link to the "
      "release before and after them",
@@ -861,6 +925,11 @@ def home(D):
                      "difference between the two, and what actually stands in the way. It is "
                      "derived from the deployment rather than copied from a template. **It "
                      "describes and it does not judge, so it carries no score.**"),
+            ("note", "**If you have connected an assistant to your own mailbox, start there "
+                     "rather than here.** Four steps and thirteen prompts you paste into your "
+                     "own session, which produce all four objects below for a deployment you "
+                     "actually run, in about twenty minutes: [your mailbox, and what you gave "
+                     "it](gmail/index.html)."),
 
             ("h2", "The gap"),
             ("p", "**You know what you asked for.** Draft the reply, fix the build, summarise "
@@ -953,6 +1022,11 @@ def home(D):
 
             ("h2", "What is here"),
             ("cards", [
+                {"title": "[Your mailbox, and what you gave it](gmail/index.html)",
+                 "sub": "Four steps and thirteen prompts, run against your own deployment: what "
+                        "it can already do, what you actually asked for, the behaviour policy, "
+                        "and what a prompt cannot do.",
+                 "foot": "Start here if you have connected one to your mail."},
                 {"title": "[What an ABP is](what-is-an-abp/index.html)",
                  "sub": "The foundation document: the definition, the four objects, the barrier, "
                         "one worked example with published numbers, and the questions we would "
@@ -1245,7 +1319,8 @@ def main():
     cls = graph.classify(g)
     pages = {"index.html": home(D), "what-is-an-abp/index.html": what_is_an_abp(D)}
     for source in (abp_pages.pages(D), lexicon_pages.pages(D, g, cls),
-                   universe_pages.pages(D, g, cls), articles.pages(), docs_pages.pages(),
+                   universe_pages.pages(D, g, cls), gmail_pages.pages(D),
+                   articles.pages(), docs_pages.pages(),
                    version_pages()):
         clash = set(source) & set(pages)
         if clash:

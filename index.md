@@ -2,7 +2,7 @@
 
 > You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.
 
-*Source: <https://abp.sgit.ai/index.html> · site v0.5.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/index.html> · site v0.6.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -11,6 +11,8 @@ below point at them.*
 # You know what you asked for. You do not know what it can do.
 
 An **Agent Behaviour Policy** is a written description, for one agent in one deployment, of everything it can do, what it was authorised to do, the difference between the two, and what actually stands in the way. It is derived from the deployment rather than copied from a template. **It describes and it does not judge, so it carries no score.**
+
+> **If you have connected an assistant to your own mailbox, start there rather than here.** Four steps and thirteen prompts you paste into your own session, which produce all four objects below for a deployment you actually run, in about twenty minutes: [your mailbox, and what you gave it](gmail/index.md).
 
 ## The gap
 
@@ -67,6 +69,9 @@ The clearest way to see what an ABP does is to change one setting and watch the 
 > **A policy cannot be dangerous. A deployment can.** So there is no rating on an ABP, no traffic light and no risk level, anywhere on this site or in its data. Every reader asks for one. **The score has a home and it is [the risk work above this](https://risks.sgit.ai/)**, where the assets are known and a named person signs. The people who sell do not sign, which is why the two are separate products and not two sections of one.
 
 ## What is here
+
+**[Your mailbox, and what you gave it](gmail/index.md)**: Four steps and thirteen prompts, run against your own deployment: what it can already do, what you actually asked for, the behaviour policy, and what a prompt cannot do.
+Start here if you have connected one to your mail.
 
 **[What an ABP is](what-is-an-abp/index.md)**: The foundation document: the definition, the four objects, the barrier, one worked example with published numbers, and the questions we would like answered.
 This is the document, rendered. Not a summary of it.

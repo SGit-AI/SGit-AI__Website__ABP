@@ -588,3 +588,127 @@ def intake_path():
                "and they are published at the address every consumer reads. The loop closes "
                "when the contributor's vault pins this site's version of the shape rather "
                "than holding its own copy")
+
+
+def _wrap(text, width):
+    """Break a note into lines at word boundaries.
+
+    SVG DOES NOT WRAP TEXT, so every figure that carries a sentence has to decide where the
+    line ends. Slicing at a character count is the obvious way and it splits words down the
+    middle, which is how `so it is the union' became `so i / t is the union' in one figure.
+    This is the boring correct version.
+    """
+    lines, cur = [], ""
+    for word in text.split():
+        if cur and len(cur) + 1 + len(word) > width:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = f"{cur} {word}".strip()
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def mail_layers():
+    """The four things stacked between a mail platform's scopes and what a person meant."""
+    rows = [
+        ("What the platform's scopes permit", "fixed, coarse, and the same for everybody",
+         "no scope can be bounded by label, correspondent, thread, topic or sensitivity",
+         "box"),
+        ("What the connector surfaces", "the tools, which grow as the product grows",
+         "attached to the account rather than to this conversation, so it is the union of "
+         "everything ever consented", "box"),
+        ("What you actually want", "the job, and how your mailbox is organised",
+         "the only layer that knows your unread set is a task list, and the only one nobody "
+         "has written down", "box-a"),
+        ("What your organisation requires", "and what the law requires of you",
+         "other people's correspondence is in there, and you were not given authority to pass "
+         "it on", "box-a"),
+    ]
+    body = [DEFS,
+            '<text x="24" y="22" class="fh">Four layers between a mailbox and what somebody '
+            'meant</text>',
+            '<text x="24" y="40" class="fk">the top two are the grant, the bottom two are the '
+            'mandate, and the gap between them is the finding</text>']
+    for i, (t, sub, note, cls) in enumerate(rows):
+        y = 62 + i * 78
+        body += [
+            f'<rect x="24" y="{y}" width="430" height="60" rx="9" class="{cls}"/>',
+            f'<text x="42" y="{y + 24}" class="fb">{t}</text>',
+            f'<text x="42" y="{y + 43}" class="fd">{sub}</text>',
+        ]
+        for j, line in enumerate(_wrap(note, 58)):
+            body.append(f'<text x="474" y="{y + 20 + j * 18}" class="ft">{line}</text>')
+        if i < 3:
+            body.append(f'<path d="M 239 {y + 60} L 239 {y + 78}" class="edge"/>')
+    top = 62
+    bot = 62 + 4 * 78 - 18
+    body += [
+        f'<path d="M 12 {top} L 6 {top} L 6 {top + 138} L 12 {top + 138}" class="edge"/>',
+        f'<path d="M 12 {top + 156} L 6 {top + 156} L 6 {bot} L 12 {bot}" class="edge"/>',
+        f'<text x="24" y="{bot + 40}" class="ft"><tspan class="fb">The gap between the top two '
+        f'and the bottom two is the delta</tspan>, and nobody writes it: it is derived</text>',
+        f'<text x="24" y="{bot + 58}" class="ft">from the two sides and recomputed when either '
+        f'of them moves.</text>',
+        f'<text x="24" y="{bot + 80}" class="fd">An Agent Behaviour Policy is the document '
+        f'that puts all four on one page for one agent in one deployment.</text>',
+    ]
+    return fig(_svg("".join(body), 452),
+               "The top two layers are somebody else's and they only ever grow. The bottom "
+               "two are yours and they are usually unwritten, which is why the gap is "
+               "invisible until somebody writes them down.",
+               "A figure here in the page: four layers stacked between a mailbox and what "
+               "somebody meant. What the platform's scopes permit, which is fixed and coarse "
+               "and cannot be bounded by label, correspondent, thread, topic or sensitivity. "
+               "What the connector surfaces, which is attached to the account rather than to "
+               "one conversation and is the union of everything ever consented. What you "
+               "actually want, including how your mailbox is organised. And what your "
+               "organisation and the law require. The top two are the grant, the bottom two "
+               "are the mandate, and the gap between them is the delta")
+
+
+def consent_moment():
+    """What the approval prompt names, and what it does not, at the moment it asks."""
+    names = ["the class of action", "that something is about to happen", "a yes and a no"]
+    missing = ["which message or thread", "how many items", "who the correspondent is",
+               "whether you can undo it", "whether the label is one you built in 2019",
+               "whether this is one step of forty"]
+    body = [DEFS,
+            '<text x="24" y="22" class="fh">What the approval prompt asks, and what it '
+            'leaves out</text>',
+            '<text x="24" y="40" class="fk">it arrives at the moment you know least about '
+            'the thing you are approving</text>',
+            '<rect x="24" y="60" width="420" height="34" rx="8" class="box-a"/>',
+            '<text x="40" y="82" class="fb">What it tells you</text>']
+    for i, n in enumerate(names):
+        body.append(f'<text x="40" y="{116 + i * 22}" class="ft">{n}</text>')
+    body += ['<rect x="496" y="60" width="440" height="34" rx="8" class="box"/>',
+             '<text x="512" y="82" class="fb">What it does not</text>']
+    for i, n in enumerate(missing):
+        body.append(f'<text x="512" y="{116 + i * 22}" class="fd">{n}</text>')
+    y = 116 + 6 * 22 + 12
+    body += [
+        f'<rect x="24" y="{y}" width="912" height="66" rx="10" class="box-x"/>',
+        f'<text x="42" y="{y + 26}" class="ft"><tspan class="fb">So the question it appears '
+        f'to ask is not the question it asks.</tspan> It appears to ask whether this action, '
+        f'on this object, is acceptable.</text>',
+        f'<text x="42" y="{y + 46}" class="ft">It asks whether you still want the thing you '
+        f'asked for thirty seconds ago, and that question has one answer.</text>',
+        f'<text x="24" y="{y + 100}" class="fd">Every one of the six on the right is available '
+        f'to the software at the moment it asks. This is a design gap rather than a data '
+        f'gap.</text>',
+    ]
+    return fig(_svg("".join(body), y + 124),
+               "Approving is a formality rather than a decision, and a formality that produces "
+               "a record of your agreement. Turning the prompt off removes the formality and "
+               "changes nothing about the grant.",
+               "A figure here in the page: on the left, what an approval prompt tells you, "
+               "being the class of action, that something is about to happen, and a yes and a "
+               "no. On the right, what it does not tell you: which message or thread, how "
+               "many items, who the correspondent is, whether you can undo it, whether the "
+               "label is one you built years ago, and whether this is one step of forty. So "
+               "it appears to ask whether this action on this object is acceptable, and it "
+               "actually asks whether you still want the thing you asked for thirty seconds "
+               "ago, which has one answer. All six of the missing items are available to the "
+               "software at the moment it asks")

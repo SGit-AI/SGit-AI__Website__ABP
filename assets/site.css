@@ -661,3 +661,26 @@ figure.fig figcaption{font-size:.8rem;line-height:1.6;color:var(--dim);padding:.
 .fig .ser{fill:none;stroke:var(--fig-a);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
 .fig .dot{fill:var(--fig-a);stroke:var(--panel);stroke-width:2}
 .fig .barA{fill:var(--fig-a)} .fig .barB{fill:var(--fig-b)}
+
+/* ---------- prompt blocks ----------
+   A prompt is content that leaves the page: it is written to be pasted into somebody
+   else's session. So it reads as a quotable object rather than as a code sample, carries
+   what it is for above it, and offers to put itself on the clipboard. The text stays
+   selectable whether or not the script loads. */
+figure.prompt{margin:1.5rem 0;border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;background:var(--panel);box-shadow:var(--shadow);overflow:hidden}
+figure.prompt figcaption{padding:.75rem .95rem .1rem;display:block}
+figure.prompt figcaption .ptag{display:inline-block;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--accent-dk);background:var(--panel2);
+  border:1px solid var(--line);border-radius:999px;padding:.12rem .55rem;margin-right:.55rem}
+figure.prompt figcaption b{font-size:.98rem;color:#101114}
+figure.prompt figcaption .psub{display:block;margin:.35rem 0 .1rem;font-size:.86rem;color:var(--dim)}
+pre.ptext{margin:.7rem .95rem .2rem;padding:.9rem 1rem;background:var(--panel2);
+  border:1px solid var(--line);border-radius:10px;font-size:.83rem;line-height:1.6;
+  white-space:pre-wrap;overflow-wrap:anywhere;color:#24343f;max-height:30rem;overflow-y:auto}
+button.pcopy{margin:.55rem .95rem .9rem;padding:.42rem .85rem;font:inherit;font-size:.82rem;
+  color:var(--accent-dk);background:var(--panel);border:1px solid var(--line2);
+  border-radius:8px;cursor:pointer}
+button.pcopy:hover{background:var(--panel2)}
+button.pcopy.ok{color:#fff;background:var(--accent);border-color:var(--accent)}
+@media print{button.pcopy{display:none}pre.ptext{max-height:none}}

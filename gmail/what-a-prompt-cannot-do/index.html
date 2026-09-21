@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Step 4: what a prompt cannot do - abp.sgit.ai</title>
+<meta name="description" content="The document you wrote in step three is an expectation rather than a control. Why that is the honest reading, why it is still worth writing, and what would actually bound the behaviour.">
+<link rel="canonical" href="https://abp.sgit.ai/gmail/what-a-prompt-cannot-do/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/gmail/what-a-prompt-cannot-do/index.html">
+<meta property="og:title" content="Step 4: what a prompt cannot do - abp.sgit.ai">
+<meta property="og:description" content="The document you wrote in step three is an expectation rather than a control. Why that is the honest reading, why it is still worth writing, and what would actually bound the behaviour.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.6.0/index.html" title="What changed in v0.6.0, and the commit it was built from">v0.6.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../gmail/index.html">Your mailbox<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../gmail/index.html">The walkthrough</a>
+      <a class="sl" href="../../gmail/what-it-can-do/index.html">Step 1: What it can already do</a>
+      <a class="sl" href="../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a>
+      <a class="sl" href="../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a>
+      <a class="sl here" href="../../gmail/what-a-prompt-cannot-do/index.html">Step 4: What a prompt cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../articles/index.html">One per release</a>
+      <a class="sl" href="../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../gmail/index.html">Your mailbox</a> / Step 4</p>
+  <h1>Step 4: what a prompt cannot do</h1>
+  <p class="lead"><b>A walkthrough that ended at step three would be selling you an expectation as a control.</b> So this page is not a disclaimer at the bottom of the last one. It is the page that says what you have got, what you have not, and what the difference is made of.</p>
+  <div class="tablewrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><b>The objective</b></td><td>What you have written down is an expectation rather than a control. Why it is still worth writing, and what would actually bound it.</td></tr><tr><td><b>Before this</b></td><td><a href="../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a></td></tr><tr><td><b>All four steps</b></td><td><a href="../../gmail/index.html">The walkthrough</a></td></tr></tbody></table></div>
+  <div class="note"><b>What you gain from this page.</b> An honest reading of your own document, produced by the assistant it is addressed to, plus the list of what would have to exist outside the conversation for each line of it to hold.</div>
+  <h2 id="the-four-barriers-and-only-one-of-them-is-a-control">The four barriers, and only one of them is a control</h2>
+  <p>This is the whole model, and it is one sentence: <b>a control bounds what something can do only if it is enforced by something that thing's own access does not include.</b> Walk the test rather than reading it off a label.</p>
+  <figure class="fig"><svg class="fig" viewBox="0 0 960 290" role="img" preserveAspectRatio="xMidYMid meet"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d5d0c2"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0b8f80"/></marker></defs><text x="24" y="22" class="fh">Four kinds of barrier, and the one line that decides</text><text x="24" y="40" class="fk">a control bounds a grant only if it is enforced by something the grant does not include</text><rect x="24" y="62" width="330" height="34" rx="8" class="box"/><text x="40" y="77" class="fm">none</text><text x="40" y="90" class="fd">nothing is in the way</text><path d="M 360 79 L 452 79" class="edge" marker-end="url(#ah)"/><text x="406.0" y="74.0" text-anchor="middle" class="fmd">enforced_by</text><rect x="458" y="62" width="250" height="34" rx="8" class="box"/><text x="583" y="83" text-anchor="middle" class="ft">-</text><text x="730" y="83" class="fd">inside the grant</text><rect x="24" y="106" width="330" height="34" rx="8" class="box"/><text x="40" y="121" class="fm">expectation</text><text x="40" y="134" class="fd">a rule in prose</text><path d="M 360 123 L 452 123" class="edge" marker-end="url(#ah)"/><text x="406.0" y="118.0" text-anchor="middle" class="fmd">enforced_by</text><rect x="458" y="106" width="250" height="34" rx="8" class="box"/><text x="583" y="127" text-anchor="middle" class="ft">the agent reading it</text><text x="730" y="127" class="fd">inside the grant</text><rect x="24" y="150" width="330" height="34" rx="8" class="box"/><text x="40" y="165" class="fm">setting</text><text x="40" y="178" class="fd">a switch the account can flip</text><path d="M 360 167 L 452 167" class="edge" marker-end="url(#ah)"/><text x="406.0" y="162.0" text-anchor="middle" class="fmd">enforced_by</text><rect x="458" y="150" width="250" height="34" rx="8" class="box"/><text x="583" y="171" text-anchor="middle" class="ft">the agent's own account</text><text x="730" y="171" class="fd">inside the grant</text><rect x="24" y="194" width="330" height="34" rx="8" class="box-a"/><text x="40" y="209" class="fm">boundary</text><text x="40" y="222" class="fd">enforced above the grant</text><path d="M 360 211 L 452 211" class="edge" marker-end="url(#ah)"/><text x="406.0" y="206.0" text-anchor="middle" class="fmd">enforced_by</text><rect x="458" y="194" width="250" height="34" rx="8" class="box-a"/><text x="583" y="215" text-anchor="middle" class="ft">something above the grant</text><text x="730" y="215" class="fb">outside the grant</text><line x1="716" y1="52" x2="716" y2="186" class="rule" stroke-dasharray="4 3"/><rect x="24" y="244" width="684" height="30" rx="8" class="box-x"/><text x="40" y="264" class="ft">Only the fourth row bounds anything, and the site fails to build if that stops being true.</text></svg><figcaption>The test is not an opinion about the four rows. It is a path: follow enforced_by and ask whether the thing at the other end is inside the grant. Three of the four are, which is why three of the four bound nothing.</figcaption></figure>
+  <div class="tablewrap"><table><thead><tr><th>Barrier</th><th>What it is</th><th>Where your document lands</th></tr></thead><tbody><tr><td>Nothing</td><td>no obstacle at all</td><td>the capability is simply there and reachable</td></tr><tr><td>Expectation</td><td>a rule somebody wrote down</td><td><b>this is where a rule typed into a prompt lands</b>, along with a handbook, a guideline and an acceptable use clause</td></tr><tr><td>Setting</td><td>a switch that is on, which the holder's own account could change</td><td>an approval prompt that can be turned off by the account it protects is this, not the row below</td></tr><tr><td>Boundary</td><td>enforced outside the thing it bounds, and not removable by asking</td><td>a permission never granted, an administrator lock somebody else owns, a step another party has to take</td></tr></tbody></table></div>
+  <p>So the document you wrote in step three is the second row. It is a real thing, it changes behaviour most of the time, and <b>it is not what stops the action</b>. Anyone who tells you otherwise is selling you the fourth row at the price of the second.</p>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt 12</span><b>Grade your own document</b><span class="psub">Have the assistant mark every clause with the one thing that would actually stop it, and answer three questions without softening them.</span></figcaption><pre class="ptext">Take the document we wrote and mark every clause in it with the one thing that would
+actually stop you from breaking it, using the four names: NOTHING, EXPECTATION, SETTING,
+BOUNDARY.
+
+Then answer three questions, without softening them.
+
+  1. How many clauses are held by nothing except your own compliance?
+  2. Which clauses would survive a message written specifically to talk you out of them?
+  3. If you broke a clause, what record would exist outside this conversation that I
+     could find it in?</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <h2 id="why-it-is-still-worth-writing">Why it is still worth writing</h2>
+  <ul><li><b>It is the only artefact that names your intent.</b> The permissions are the vendor's, the tools are the vendor's, the scopes are the platform's. The sentence that says you did not want mail sent as you is yours and exists nowhere else.</li><li><b>It moves where responsibility lands.</b> Unstated is not authorised, but it is also not refused. An instruction given and departed from is a different situation from one that was never given.</li><li><b>It is the specification for the control you have not bought yet.</b> Every EXPECTATION line is a statement of what a boundary would have to enforce. You cannot buy or configure one until somebody has written that line.</li><li><b>It survives the session.</b> The conversation does not, and the next one starts with the same grant and none of the context.</li></ul>
+  <h2 id="three-things-about-the-layer-underneath">Three things about the layer underneath</h2>
+  <h3 id="what-you-consented-to-once-applies-everywhere-afterwards">What you consented to once applies everywhere afterwards</h3>
+  <p>A connector attaches to your account rather than to one conversation. <b>The permission set is the union of everything you have ever agreed to</b>, and consent screens are written to be agreed to once. There is no per conversation narrowing to go back to: a session that only needed to read your mail holds whatever the widest moment held.</p>
+  <figure class="fig"><svg class="fig" viewBox="0 0 960 384" role="img" preserveAspectRatio="xMidYMid meet"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d5d0c2"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0b8f80"/></marker></defs><text x="24" y="22" class="fh">What the approval prompt asks, and what it leaves out</text><text x="24" y="40" class="fk">it arrives at the moment you know least about the thing you are approving</text><rect x="24" y="60" width="420" height="34" rx="8" class="box-a"/><text x="40" y="82" class="fb">What it tells you</text><text x="40" y="116" class="ft">the class of action</text><text x="40" y="138" class="ft">that something is about to happen</text><text x="40" y="160" class="ft">a yes and a no</text><rect x="496" y="60" width="440" height="34" rx="8" class="box"/><text x="512" y="82" class="fb">What it does not</text><text x="512" y="116" class="fd">which message or thread</text><text x="512" y="138" class="fd">how many items</text><text x="512" y="160" class="fd">who the correspondent is</text><text x="512" y="182" class="fd">whether you can undo it</text><text x="512" y="204" class="fd">whether the label is one you built in 2019</text><text x="512" y="226" class="fd">whether this is one step of forty</text><rect x="24" y="260" width="912" height="66" rx="10" class="box-x"/><text x="42" y="286" class="ft"><tspan class="fb">So the question it appears to ask is not the question it asks.</tspan> It appears to ask whether this action, on this object, is acceptable.</text><text x="42" y="306" class="ft">It asks whether you still want the thing you asked for thirty seconds ago, and that question has one answer.</text><text x="24" y="360" class="fd">Every one of the six on the right is available to the software at the moment it asks. This is a design gap rather than a data gap.</text></svg><figcaption>Approving is a formality rather than a decision, and a formality that produces a record of your agreement. Turning the prompt off removes the formality and changes nothing about the grant.</figcaption></figure>
+  <p>The approval prompt in front of an action names the class of action and that something is about to happen. It does not usually name which message, how many, whose, whether you can undo it, or whether this is one step of forty. It is a decision point that carries <b>the responsibility of a decision and the information of a notification</b>.</p>
+  <h3 id="the-scopes-are-coarser-than-any-rule-you-would-write">The scopes are coarser than any rule you would write</h3>
+  <p>No mail scope can be bounded by label, correspondent, thread, topic or sensitivity. Every finer distinction you want has to be invented above the interface, which is exactly what step three was. And the tiers do not line up with the distinctions people care about: <b>there is no scope that lets an assistant draft without also letting it send</b>, so the commonest rule anybody writes cannot be expressed as a permission at all.</p>
+  <h3 id="a-setting-is-not-a-boundary-and-this-shape-has-2-of-them">A setting is not a boundary, and this shape has 2 of them</h3>
+  <p>In the measured profile for this shape, <b>2 of 6 capabilities are held by a setting rather than by a boundary</b>, and the approval prompt is one of them: the vendor's own documentation says it is on by default and can be turned off. <b>4 capabilities in the gap have nothing in the way that counts as a control</b>, out of 5 in the gap altogether. That number is the only one on the label a buyer can move, and it moves by one for every capability that gains a real boundary.</p>
+  <div class="note"><b>None of this is an assessment of any named product, and no adjective on this page attaches to one.</b> The rows above are a published deployment shape read from two vendors' own pages on a date, with the barrier on each row recorded by walking the enforcer test rather than by judging the product. Where the sources disagree with each other, the disagreement is published rather than resolved.</div>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt 13</span><b>What would actually bound it</b><span class="psub">The last one. Turns every expectation into a statement of the control it would take, and names who would have to run it.</span></figcaption><pre class="ptext">Last one. If I wanted each of the EXPECTATION clauses in that document to become a
+BOUNDARY, what would have to exist, and who would have to run it?
+
+For each clause, name the specific thing: a permission that is never granted, a setting
+an administrator locks so I cannot change it back, an approval step that somebody other
+than me owns, a log kept outside you that somebody else reads. Where nothing available to
+me today would do it, say that nothing available today would do it, and do not offer me a
+rule as a substitute.</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <h2 id="where-to-go-from-here">Where to go from here</h2>
+  <div class="gamegrid"><div class="gamecard"><h3><a href="../../model/index.html">The four objects</a></h3><p class="sub">The mandate, the grant, the gap and the barrier, defined.</p><div class="foot">the model</div></div><div class="gamecard"><h3><a href="../../model/barriers/index.html">The four barriers</a></h3><p class="sub">The enforcer test, walked, with the one row that is a control.</p><div class="foot">the model</div></div><div class="gamecard"><h3><a href="../../examples/index.html">The worked examples</a></h3><p class="sub">Every measured shape on this site, row by row, with its evidence.</p><div class="foot">the data</div></div><div class="gamecard"><h3><a href="https://riskmandate.ai/abp-vault-claude-gmail-connector.html">This shape, live from a vault</a></h3><p class="sub">The same profile rendered by riskmandate.ai from the vault it came from.</p><div class="foot">riskmandate.ai</div></div></div>
+  <p>The briefs behind this section: <a href="../../docs/briefs/v0.33.71__arch-brief__no-gmail-scope-lets-an-agent-draft-without-letting-it-send/index.html">no mail scope lets an agent draft without letting it send</a> &amp;#183; <a href="../../docs/briefs/v0.33.71__strategy-brief__the-consent-dialog-is-an-accountability-transfer-rather-than-a-decision/index.html">the consent dialog is an accountability transfer rather than a decision</a> &amp;#183; <a href="../../docs/index.html#briefs">all seven</a></p>
+  <div class="note"><b>Where the numbers on this page come from.</b> The published profile for <code>anthropic/gmail-connector/default</code>, which this site did not measure: it was contributed by riskmandate.ai, read from the two vendors' own pages and measured in one session on 16 September 2026. <b>4 of 6 rows were seen on the thing itself</b> and the rest were read from documentation. The evidence tier on every row is the contributor's and this site did not raise it. <a href="../../examples/index.html">The rows</a>, <a href="../../data/profiles/anthropic/gmail-connector/default.json">the profile as JSON</a>, <a href="../../data/contributed/riskmandate/manifest.json">the contributed bytes</a>.</div>
+  <div class="tablewrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><b>The objective</b></td><td>What you have written down is an expectation rather than a control. Why it is still worth writing, and what would actually bound it.</td></tr><tr><td><b>Before this</b></td><td><a href="../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a></td></tr><tr><td><b>All four steps</b></td><td><a href="../../gmail/index.html">The walkthrough</a></td></tr></tbody></table></div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.6.0/index.html">v0.6.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../gmail/what-a-prompt-cannot-do/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+<script src="../../assets/copy.js" defer></script>
+</body>
+</html>

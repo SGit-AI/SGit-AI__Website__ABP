@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Consent Dialog Is An Accountability Transfer Rather Than A Decision: The User Is Asked At The Moment They Know Least, And The Irreversible Gmail Action Sits In Google&#x27;s Least Guarded Tier - abp.sgit.ai</title>
+<meta name="description" content="version v0.33.71 date 19 September 2026 from Human (project lead) to Strategy, the Agent Behaviour Policy team, the RiskMandate product owner, whoever builds the first grant viewer">
+<link rel="canonical" href="https://abp.sgit.ai/docs/briefs/v0.33.71__strategy-brief__the-consent-dialog-is-an-accountability-transfer-rather-than-a-decision/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/docs/briefs/v0.33.71__strategy-brief__the-consent-dialog-is-an-accountability-transfer-rather-than-a-decision/index.html">
+<meta property="og:title" content="The Consent Dialog Is An Accountability Transfer Rather Than A Decision: The User Is Asked At The Moment They Know Least, And The Irreversible Gmail Action Sits In Google&#x27;s Least Guarded Tier - abp.sgit.ai">
+<meta property="og:description" content="version v0.33.71 date 19 September 2026 from Human (project lead) to Strategy, the Agent Behaviour Policy team, the RiskMandate product owner, whoever builds the first grant viewer">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../../versions/v0.6.0/index.html" title="What changed in v0.6.0, and the commit it was built from">v0.6.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../model/index.html">The four objects</a>
+      <a class="sl" href="../../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../examples/index.html">All five</a>
+      <a class="sl" href="../../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../gmail/index.html">Your mailbox<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../gmail/index.html">The walkthrough</a>
+      <a class="sl" href="../../../gmail/what-it-can-do/index.html">Step 1: What it can already do</a>
+      <a class="sl" href="../../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a>
+      <a class="sl" href="../../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a>
+      <a class="sl" href="../../../gmail/what-a-prompt-cannot-do/index.html">Step 4: What a prompt cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../articles/index.html">One per release</a>
+      <a class="sl" href="../../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../../articles/one-article-per-release/index.html">v0.5.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../../index.html">Home</a> / <a href="../../../docs/index.html">Docs</a> / <a href="../../../docs/index.html#briefs">The briefs</a> / The Consent Dialog Is An Accountability Transfer Rather Than A Decision: The User Is Asked At The Moment They Know Least, And The Irreversible Gmail Action Sits In Google's Least Guarded Tier</p>
+  <h1>The Consent Dialog Is An Accountability Transfer Rather Than A Decision: The User Is Asked At The Moment They Know Least, And The Irreversible Gmail Action Sits In Google's Least Guarded Tier</h1>
+  <div class="note"><b>The source bytes.</b> This page is generated from <a href="../../../docs/briefs/v0.33.71__strategy-brief__the-consent-dialog-is-an-accountability-transfer-rather-than-a-decision.md"><code>docs/briefs/v0.33.71__strategy-brief__the-consent-dialog-is-an-accountability-transfer-rather-than-a-decision.md</code></a>, which is served unchanged. Anything rendered on this network stays one click from the file it came from.</div>
+  <p><b>version</b> v0.33.71 <b>date</b> 19 September 2026 <b>from</b> Human (project lead) <b>to</b> Strategy, the Agent Behaviour Policy team, the RiskMandate product owner, whoever builds the first grant viewer</p>
+  <p><b>type</b> Strategy brief</p>
+  <p><em>Written from a memo recorded while using an assistant to operate a live mailbox, in which the project lead was asked repeatedly to authorise label creation, message moves and label deletion, and observed that at the moment of asking he could not see which message, which thread or which topic the action concerned, so the only honest answers were allow and disallow and neither was a decision. Four things were checked rather than accepted before anything was written: Google's published Gmail scope list and its three sensitivity tiers, read on 19 September 2026; whether a deleted label can be recovered; the assistant vendor's own description of how the mailbox connector asks for approval; and the current state of the published Agent Behaviour Policy page, which has moved since it was last read here and now shows 16 example policies, 118 capability rows, 32 measured on the thing itself and 28 open questions. Limitations: the behaviour of the approval prompt is the project lead's direct observation and the vendor's documentation does not describe what the prompt displays, so the claim about what the user can see at that moment is testimony supported by the absence of any documented contrary mechanism rather than a reading of the interface's source; no interface was instrumented; the mapping of Gmail actions onto the capability grammar is derived here and has not been reviewed by the model's authors; and the commercial argument in the last two sections is an argument, not a forecast.</em></p>
+  <h2 id="what-this-is">What This Is</h2>
+  <p>A failure of consent design that the estate's existing model already explains, and the reason it is the fastest route to a customer this quarter: <b>the memo observes that an assistant operating a live mailbox asks for authorisation at exactly the moment the user has least information, since the prompt names an action class such as creating a label, moving a message or deleting a label but not the message, the thread, the correspondent, the topic or the count, so the user is choosing between allowing a category and refusing the task they just asked for, which is not a decision but a formality; the memo names the deeper problem precisely, that this is not oversight for the purpose of deciding, it is oversight for the purpose of locating somebody to blame, and the person located has neither the information nor the means to have chosen otherwise; three checks make the case sharper than the memo does, the first being that Google's scope catalogue offers no way to bound access by label, correspondent, thread, topic or sensitivity, so the grant is all or nothing across the whole mailbox and the assistant's approval prompt is the only thing standing between a broad grant and an arbitrary action; the second being that deleting a label cannot be undone and no route exists to recover one, while the messages survive, so the destruction is of the user's filing system rather than of their mail, which is years of information design and is precisely the asset the estate's own work has been calling the missing node; and the third, which is the finding that should lead any customer conversation, that Google classifies the scope permitting label edits as non sensitive, its lowest tier, while sending a single email is sensitive and reading mail is restricted, so the one irreversible action against the user's information architecture sits in the tier that attracts the least scrutiny from the platform; mapped into the capability grammar the estate publishes, the mailbox grant resolves to a handful of primitives at tenant reach, the approval prompt is a barrier in form and an expectation in effect because habituation removes its binding force, and the delta between what the connector can do and what the user intends is unusually cheap to produce because the grant side is machine readable from the scope strings; and the commercial consequence is that the estate can ship, this month, a description of a grant that every prospective customer already holds, produced automatically, carrying no verdict, which is the published method applied to the one system everybody has open.</b> New contributions: <b>the scope tier inversion as the headline fact; label deletion classified against the model's undo classes and against the asset work of 16 September; the approval prompt classified against the four barriers and the enforcer test; the moral crumple zone named with its literature and tied to the statutory language on automation bias; the specification of what a prompt would have to carry to be a decision, with the finding that most of it is available at prompt time; the placement of a mailbox behaviour policy on the right side of the enforcer test, which rules out the version that is easiest to build; and the why now argument stated as a derived artefact rather than as a new control.</b></p>
+  <h2 id="the-prompt-arrives-at-the-moment-of-minimum-information">The Prompt Arrives At The Moment Of Minimum Information</h2>
+  <p><b>The memo's core observation is an information ordering problem and it is worth stating precisely.</b> The user issues a task in natural language. The assistant decomposes it into operations against a mailbox. Each operation raises a prompt naming an action class. The user answers.</p>
+  <p><b>At that moment the user knows the task they asked for and nothing about the operation.</b> Not which message, not which thread, not which correspondent, not how many items, not whether the label about to be removed holds four messages or four thousand, not whether the label is one created five minutes ago by this same session or one the user built in 2019.</p>
+  <p><b>So the question the prompt actually poses is not the question it appears to pose.</b> It appears to ask whether this action, on this object, is acceptable. It in fact asks whether the user still wants the task they asked for thirty seconds ago. <b>That question has one answer, and a user who gives any other answer is abandoning the work rather than exercising judgement.</b></p>
+  <p><b>The vendor's own documentation is consistent with this and does not close it.</b> It states that approval is required before sending, replying and forwarding by default, and that on team and enterprise plans an owner may let members run those without asking each time. It does not describe what the prompt displays. <b>The absence is the point: nothing in the documented model promises the user the object of the action, because the approval is modelled per action class rather than per object.</b></p>
+  <p><b>And the option that looks like a fix makes it worse.</b> Turning approvals off removes a formality and changes nothing about the grant. Turning them on and clicking through, which is what actually happens, preserves the formality and creates a record that the user agreed.</p>
+  <h2 id="google-s-tiers-put-the-irreversible-action-in-the-least-guar">Google's Tiers Put The Irreversible Action In The Least Guarded Class</h2>
+  <p><b>This is the fact to lead with, and it was not in the memo.</b> Google sorts Gmail scopes into three sensitivity tiers, and the tier determines how much scrutiny an application faces before it may hold the scope.</p>
+  <div class="tablewrap"><table><thead><tr><th>Scope</th><th>Google's description</th><th>Tier</th></tr></thead><tbody><tr><td><code>gmail.labels</code></td><td>"See and edit your email labels."</td><td><b>Non sensitive</b></td></tr><tr><td><code>gmail.send</code></td><td>"Send email on your behalf."</td><td>Sensitive</td></tr><tr><td><code>gmail.readonly</code></td><td>"View your email messages and settings."</td><td>Restricted</td></tr><tr><td><code>gmail.modify</code></td><td>"Read, compose, and send emails from your Gmail account."</td><td>Restricted</td></tr><tr><td><code>gmail.settings.basic</code></td><td>"See, edit, create, or change your email settings and filters."</td><td>Restricted</td></tr><tr><td>The full mailbox scope, <code>mail.google.com/</code></td><td>"Read, compose, send, and permanently delete all your email from Gmail."</td><td>Restricted</td></tr></tbody></table></div>
+  <p><b>Deleting a label cannot be undone.</b> The action removes the label and strips it from every message that carried it, the messages themselves survive, and there is no recovery path. <b>So the single irreversible, unrecoverable action available against a user's own organisation of their mail is reachable through the lowest tier in the catalogue</b>, while sending one email that the recipient can read and delete sits a tier above it, and reading mail sits two tiers above.</p>
+  <p><b>The reason for the inversion is visible once stated.</b> The tiers are sorted by exposure of message content, which is a privacy model. Label structure carries no message content, so it scores low. <b>But the harm here is not disclosure, it is destruction of the user's own work, and a privacy model does not see it at all.</b> This is the same gap the estate has been describing for months in other words: a grant classified by what it reveals rather than by what it can undo.</p>
+  <p><b>Two further facts complete the picture and both were checked.</b> First, <code>gmail.modify</code> explicitly cannot permanently delete past the trash, which means the platform does model reversibility somewhere, just not for labels. Second, and this is the memo's own claim confirmed, <b>there is no scope in the catalogue that can be bounded by label, correspondent, thread, topic or sensitivity.</b> The grant is the whole mailbox or none of it. Every finer distinction the user might want has to be invented above the interface, because the interface offers no place to express it.</p>
+  <h2 id="what-the-grant-says-in-the-model-s-own-grammar">What The Grant Says In The Model's Own Grammar</h2>
+  <p><b>The estate already has the vocabulary for this and the mapping is short.</b> Using the published capability grammar of verb, object class and reach, a mailbox connector at the common scope resolves to roughly this.</p>
+  <div class="tablewrap"><table><thead><tr><th>Operation</th><th>Capability</th><th>Reach</th><th>Reversible</th></tr></thead><tbody><tr><td>Read a message</td><td><code>read.message.tenant</code></td><td>The whole mailbox</td><td>Not applicable, and not undoable once read</td></tr><tr><td>Apply or remove a label on a message</td><td><code>write.record.tenant</code></td><td>The whole mailbox</td><td>Yes, if the prior state was recorded</td></tr><tr><td>Create a label</td><td><code>create.record.tenant</code></td><td>The whole mailbox</td><td>Yes, by deleting it</td></tr><tr><td>Delete a label</td><td><code>delete.record.tenant</code></td><td>The whole mailbox</td><td><b>No. No recovery path exists</b></td></tr><tr><td>Move to trash</td><td><code>delete.message.tenant</code></td><td>The whole mailbox</td><td>Yes, for a bounded period</td></tr><tr><td>Permanently delete</td><td><code>delete.message.tenant</code></td><td>The whole mailbox</td><td><b>No</b>, and requires the broadest scope</td></tr><tr><td>Send</td><td><code>send.message.world</code></td><td>Anyone reachable by mail</td><td>No</td></tr></tbody></table></div>
+  <p><b>Two things fall out that the memo did not have.</b></p>
+  <p><b>The reach column is constant.</b> Every row says the whole mailbox, because that is what the scope strings grant. In the published model a reach of tenant is already the second widest value available, and the mailbox case has no mechanism to narrow it. <b>A grant with a uniform reach is a grant with no internal structure, which is exactly why no useful prompt can be written against it.</b></p>
+  <p><b>And the reversibility column is not constant</b>, which is where the model earns its keep. The published policy carries undo classes for precisely this distinction, and the mailbox grant contains two rows at the severe end sitting beside five that are recoverable. <b>A consent design that treats those seven rows identically is not a consent design, it is a formality applied uniformly.</b></p>
+  <h2 id="the-prompt-is-a-boundary-in-form-and-an-expectation-in-effec">The Prompt Is A Boundary In Form And An Expectation In Effect</h2>
+  <p><b>The published model carries four barrier kinds and collapses three of them into one display bucket</b>, with a rule in prose, a setting and nothing at all grouped as unbounded excess, and only a boundary named as the control. <b>The approval prompt is the interesting case because it appears to be a boundary and behaves like the bucket above it.</b></p>
+  <p><b>In form it is a boundary.</b> The action does not proceed without the click. The enforcement sits in the host rather than in the agent, the agent cannot remove it, and by the estate's own enforcer test, that a control bounds a grant only if it is enforced by something the grant does not include, it qualifies.</p>
+  <p><b>In effect it is an expectation</b>, because the information required to answer it is absent and the cost of refusing is the task. A gate whose only stable answer is yes is a gate in the way a turnstile with no ticket check is a turnstile. <b>The binding force of a barrier depends on the possibility of a no, and a no that abandons the user's own request is not available in practice.</b></p>
+  <p><b>This is a genuine gap in the published taxonomy and the brief recommends against patching it with a fifth barrier.</b> The four kinds describe what stands in the way. What is missing is orthogonal: whether the person or system at the barrier has what they need to act on it. <b>The cleaner fix is a second field on a boundary row recording whether the decision is informed, with the values being informed, uninformed and automatic</b>, which keeps the barrier taxonomy intact and makes the mailbox case describable without inventing a category.</p>
+  <h2 id="this-has-a-name-and-a-literature">This Has A Name And A Literature</h2>
+  <p><b>The memo's sharpest sentence is that this is oversight for accountability rather than oversight for decision making, and that the human is being made answerable for something they do not control. That is a named phenomenon.</b></p>
+  <p><b>The moral crumple zone</b>, described by Madeleine Clare Elish, is the region of a human and machine system that absorbs responsibility when the system as a whole fails, protecting the integrity of the technical system at the expense of the nearest human operator. The human is positioned as the responsible party in a configuration that gives them neither the information nor the time to have acted otherwise. <b>A per action consent prompt with no object named is a textbook instance: the click is the crumple zone.</b></p>
+  <p><b>The statutory language has already moved to meet this.</b> The European regulation on artificial intelligence requires that oversight be effective, and specifically that the person overseeing be enabled to "properly understand the relevant capacities and limitations" of the system and to "remain aware of the possible tendency of automatically relying or over-relying on the output" of it, a tendency the text names as automation bias. <b>The requirement is not that a human clicks. It is that the human can oversee.</b> A consent flow that produces clicks without understanding satisfies the form of the requirement and fails its stated aim, and that distinction is now written into law rather than only into design commentary.</p>
+  <p><b>And the habituation result closes it.</b> A warning shown often enough to become routine stops being read; the finding is old, repeatedly replicated, and describes a user who has answered nine identical prompts in one session precisely. <b>Nine prompts in a session is not nine decisions. It is one decision made at the first prompt and eight repetitions of it.</b></p>
+  <h2 id="what-a-prompt-would-have-to-carry-to-be-a-decision">What A Prompt Would Have To Carry To Be A Decision</h2>
+  <p><b>The useful question is not whether prompts are bad. It is what a prompt would need to contain</b>, and the answer is short enough to be a specification.</p>
+  <p><b>The object, named.</b> Not "create a label" but which label, and where it will sit in the existing tree.</p>
+  <p><b>The blast radius, counted.</b> Not "delete a label" but that this label carries 412 messages going back to March 2019, and that the label will be stripped from all of them.</p>
+  <p><b>The reversibility, stated plainly.</b> Whether the action can be undone, by what means, and for how long. This is the field the user most needs and the one no current prompt carries.</p>
+  <p><b>The provenance of the object.</b> Whether the thing being modified was created by this session or predates it. <b>An agent deleting a label it created two minutes ago is tidying up. An agent deleting a label the user created in 2019 is destroying an asset. The same prompt is shown for both.</b></p>
+  <p><b>And the relation to the task.</b> Which part of the user's instruction this operation serves, so the user can see whether the decomposition matches their intent.</p>
+  <p><b>The finding that matters commercially is that all five are available at prompt time.</b> The label name is in the call. The message count is one query. The reversibility is a property of the operation and is known in advance. The provenance is derivable from the session's own history. The relation to the task is the agent's own plan. <b>Nothing here requires new access, which means the gap is a design gap rather than a data gap, and design gaps are cheap to close and easy to demonstrate.</b></p>
+  <h2 id="where-a-mailbox-behaviour-policy-can-live-and-where-it-canno">Where A Mailbox Behaviour Policy Can Live, And Where It Cannot</h2>
+  <p><b>The memo proposes that the user define what they want, that a document be generated, and that the assistant be asked to enforce it. The last step is where the estate's own rules bite, and they bite hard enough to determine the product.</b></p>
+  <p><b>A behaviour policy handed to the assistant as text in its session is an expectation.</b> The assistant is asked to comply and generally will. It is not enforced by anything the grant does not include, because the grant includes the assistant. By the enforcer test it is not a control, and the estate has spent months insisting on exactly this distinction in other people's products. <b>It cannot now sell the same thing to itself.</b></p>
+  <p><b>Three placements are available and only two of them are controls.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Placement</th><th>What enforces it</th><th>Barrier kind</th><th>Buildable now</th></tr></thead><tbody><tr><td>Text in the assistant's session</td><td>The assistant's cooperation</td><td>Expectation</td><td>Yes, today</td></tr><tr><td>A broker between the assistant and the mail interface</td><td>The broker, which the assistant cannot bypass</td><td>Boundary</td><td>Yes, with work</td></tr><tr><td>Narrower scopes at authorisation</td><td>The platform</td><td>Boundary, but coarse</td><td>Only where a narrower scope exists, which for labels it does not</td></tr></tbody></table></div>
+  <p><b>The third row is worth reading twice.</b> Even the platform's own enforcement cannot express most of what a user would want, because the catalogue has no scope for a subset of a mailbox. <b>So the broker is not one option among three. It is the only placement that can express a rule such as never touch labels created before this year, or never let a message from one correspondent group acquire a label belonging to another.</b></p>
+  <p><b>This produces the honest product sequence rather than the convenient one.</b> Version one describes. It does not enforce, it does not claim to, and it says so on its face. Version two brokers. <b>Selling version one as a control would be the single fastest way to lose the argument the estate has been winning.</b></p>
+  <h2 id="why-now-and-what-ships-first">Why Now, And What Ships First</h2>
+  <p><b>The memo asks the right commercial question, which is why anybody would buy this today rather than eventually, and the mailbox answers it better than anything else the estate has tried.</b></p>
+  <p><b>Everybody already has the grant.</b> There is no pilot to arrange, no integration to fund and no hypothetical to explain. The prospective customer connected an assistant to their mail this month and has been clicking prompts ever since.</p>
+  <p><b>The grant side is machine readable.</b> The scope strings are published, the capability rows follow from them mechanically, and the estate has a standing ruling that the delta is derived and never authored. <b>For a mailbox, the derivation is complete: the grant column can be generated from the authorisation, and the only thing the human supplies is the mandate, which is the part they actually have opinions about.</b></p>
+  <p><b>And the artefact carries no verdict</b>, which is the method the estate already publishes. It says here is what your connector can do, here is what you said you intended, here is the gap, and here is what is actually enforcing each line, which for most lines is nothing. <b>No score, no grade, no adjective about the vendor. The record, published; the judgement, left with the reader.</b></p>
+  <p><b>So the first shippable thing is a grant viewer for a mailbox</b>, small enough to be a single page, produced from the scope strings the user can read off their own account settings, with the mandate captured through a short set of choices and the delta derived. It is the lowest rung of the existing ladder, it needs no broker, and it is true.</p>
+  <p><b>The second thing is the object level prompt as a demonstration rather than a product.</b> Take the five fields above, render a prompt that carries them for one operation class, and put it beside the one the user sees today. <b>The comparison is the sales argument and it takes an afternoon.</b></p>
+  <h2 id="the-policies-worth-writing-first">The Policies Worth Writing First</h2>
+  <p><b>The memo names three and each maps onto a capability row, which is a good sign that the vocabulary fits.</b></p>
+  <p><b>Labels created before a given date are read only.</b> The single highest value rule available, because it bounds the only irreversible row in the grant and costs the user nothing they want.</p>
+  <p><b>Correspondent groups do not cross.</b> The memo's example of multiple mail streams arriving in one mailbox that must not be mixed. This is a rule about which records may acquire which labels, and it is the one that most clearly cannot be expressed in any platform scope.</p>
+  <p><b>Named topics are not read.</b> The hardest of the three, because enforcing it requires classifying a message before reading it, which a broker can only do on metadata. <b>Worth stating as an intent even where enforcement is partial, provided the artefact says which part is enforced and which part is an expectation.</b></p>
+  <p><b>A fourth is missing from the memo and belongs at the top of the list.</b> Bulk operations above a threshold are a different kind of act from single ones. A rule that any operation touching more than some number of messages requires an informed confirmation carrying the count is the cheapest real protection in the set, and it is the one that would have changed the session the memo was recorded during.</p>
+  <h2 id="what-this-does-not-try-to-be">What This Does Not Try To Be</h2>
+  <p><b>It is not a criticism of one vendor's connector.</b> The prompt design described here is close to universal across assistants and mail platforms, and the scope catalogue that makes it necessary is the platform's, not the assistant's.</p>
+  <p><b>It is not a security assessment of any product.</b> No interface was instrumented, no traffic was captured, and the description of the prompt's contents rests on the project lead's direct observation.</p>
+  <p><b>It is not a specification for the broker.</b> The broker is argued to be the only placement that can carry a real barrier, and its design is left to an architecture brief.</p>
+  <p><b>It is not a legal opinion.</b> The statutory text is quoted because it names automation bias in the same terms the memo reaches for, not because a conclusion about any product's obligations follows.</p>
+  <p><b>And it does not claim the description tier is a control.</b> It claims the opposite, twice, deliberately.</p>
+  <h2 id="honest-tensions">Honest Tensions</h2>
+  <p><b>The most sellable version of this is the one the estate's own rules forbid.</b> A document handed to the assistant that makes it behave better is easy to build, demonstrates beautifully, and is an expectation. Every commercial instinct will push towards shipping it and calling it a policy layer with enforcement. The discipline of saying it describes rather than enforces will cost deals and is the reason the method is worth anything.</p>
+  <p><b>An informed prompt is a better prompt and it is still a prompt.</b> Adding five fields raises the quality of each decision and does nothing about the ninth one in a session. Habituation is a property of frequency, not of content, so the design has to reduce the number of prompts as well as improve them, and the two goals pull against each other.</p>
+  <p><b>Bounding labels by age protects the user's history and obstructs the tidying they asked for.</b> The rule that is most clearly right is also the one most likely to be switched off in week two, and a rule that gets switched off is worse than no rule because it leaves a record of a decision to disable it.</p>
+  <p><b>The grant viewer's honesty is also its weakness as a first sale.</b> An artefact whose main finding is that almost nothing is enforcing almost anything is accurate, useful and slightly demoralising, and it invites the response that nothing can be done. The demonstration prompt exists to answer that response and has to ship alongside it.</p>
+  <p><b>And the scope tier finding is an argument about Google's model that Google would defend.</b> Their tiers sort by content exposure and do so coherently. The claim here is that content exposure is the wrong axis for an agent that acts, not that the tiers are wrong for the purpose they were designed for, and the brief should be read that way when it is put in front of anybody.</p>
+  <h2 id="open-questions">Open Questions</h2>
+  <p><b>Does any mail platform offer scope narrower than the mailbox?</b> The Gmail catalogue does not. Whether another does, and what its shape is, decides whether the broker is universal or a workaround for one platform.</p>
+  <p><b>What does the approval prompt actually carry, field by field?</b> This should be captured from the interface rather than from memory before it appears in any customer facing document.</p>
+  <p><b>Is a deleted label recoverable through any administrative or export route?</b> The user facing answer is no. Whether an enterprise administrator, a vault export or a takeout archive preserves label membership in a form that could be replayed has not been checked, and it changes the undo classification.</p>
+  <p><b>Where does the broker sit, and what does it cost in latency?</b> A gate on every mail operation is a gate on the assistant's working speed, and if it is slow it will be removed.</p>
+  <p><b>How is the mandate captured without asking the user forty questions?</b> The grant derives itself. The mandate does not, and the quality of the whole artefact depends on making that capture short.</p>
+  <p><b>And does the informed field belong on the barrier row or on the operation?</b> The recommendation here is the barrier row. The counter argument is that informedness varies by object rather than by barrier, which would put it on the operation and make the model larger.</p>
+  <h2 id="relationship-to-previous-briefs">Relationship To Previous Briefs</h2>
+  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Document</th><th>Relationship</th></tr></thead><tbody><tr><td>8 Sep and earlier</td><td>The Agent Behaviour Policy model and its published page</td><td>Supplies the capability grammar, the four barrier kinds, the undo classes and the rule that a boundary is the only control; now at 118 capability rows with 32 measured, up from the figures last read here</td></tr><tr><td>11 Sep</td><td>The ruling that the delta is derived and never authored</td><td>The mailbox is the cleanest case yet, since the grant column can be generated from the scope strings</td></tr><tr><td>12 Sep</td><td>The brief establishing that every routable address is in the grant</td><td>Same argument one layer up: the grant is what the interface permits, not what the operator intends</td></tr><tr><td>15 Sep</td><td>The four level offering</td><td>The grant viewer is a candidate for the lowest rung, since it is small, automatic and needs no engagement</td></tr><tr><td>16 Sep</td><td>The brief naming the asset as the missing node</td><td>A label set is an asset, and label deletion is the case that shows why consequence cannot be derived without one</td></tr><tr><td>19 Sep</td><td>The two briefs of this version on state and documentation</td><td>Share the enforcer test reasoning used here to place the behaviour policy</td></tr></tbody></table></div>
+  <h2 id="key-claims">Key Claims</h2>
+  <div class="tablewrap"><table><thead><tr><th>#</th><th>Claim</th></tr></thead><tbody><tr><td>1</td><td>The approval prompt arrives at the moment the user has least information, naming an action class without the object, the count, the provenance or the reversibility</td></tr><tr><td>2</td><td>Its only stable answer is yes, because refusing abandons the task the user just asked for, so it records agreement rather than eliciting a decision</td></tr><tr><td>3</td><td>Google classifies the scope permitting label edits as non sensitive, its lowest tier, while sending one email is sensitive and reading mail is restricted</td></tr><tr><td>4</td><td>Deleting a label cannot be undone and no recovery route exists, while the messages survive, so what is destroyed is the user's information design</td></tr><tr><td>5</td><td>The scope tiers sort by exposure of message content, which is a privacy model and cannot see destruction of the user's own work</td></tr><tr><td>6</td><td>No Gmail scope can be bounded by label, correspondent, thread, topic or sensitivity, so every finer distinction must be invented above the interface</td></tr><tr><td>7</td><td>Mapped to the published grammar, every mailbox row has the same reach and differing reversibility, and a consent design that treats them identically is a formality</td></tr><tr><td>8</td><td>The prompt is a boundary in form and an expectation in effect, which argues for an informed field on the barrier row rather than a fifth barrier kind</td></tr><tr><td>9</td><td>The configuration is a moral crumple zone, and the statutory text on human oversight already names the automation bias that makes it fail</td></tr><tr><td>10</td><td>The five fields a prompt would need are all available at prompt time, so this is a design gap rather than a data gap</td></tr><tr><td>11</td><td>A behaviour policy handed to the assistant as session text is an expectation and not a control, and only a broker can carry a boundary here</td></tr><tr><td>12</td><td>The first shippable artefact is a derived grant viewer that describes and does not enforce, and selling it as a control would forfeit the argument the estate has been winning</td></tr></tbody></table></div>
+  <h2 id="sources">Sources</h2>
+  <ul><li>Google's published Gmail API OAuth scope catalogue with its non sensitive, sensitive and restricted tiers and the verbatim scope descriptions, read 19 September 2026. https://developers.google.com/workspace/gmail/api/auth/scopes</li><li>University of Michigan information technology knowledge base on Google Mail label deletion, for the statement that the action cannot be undone and that there is no way to recover a label after deletion. https://teamdynamix.umich.edu/TDClient/30/Portal/KB/Article/10854/Can-I-Recover-Deleted-Labels-in-Google-Mail</li><li>The assistant vendor's help documentation on the Google Workspace connectors, read for the default approval behaviour and the team and enterprise override, and for the absence of any description of the prompt's contents. https://support.claude.com/en/articles/10166901-use-google-workspace-connectors</li><li>The published Agent Behaviour Policy page, read 19 September 2026 for the capability grammar, the barrier display buckets, the rule that only a boundary is a control, and the current counts of policies, rows, measurements and open questions. https://riskmandate.ai/agent-behaviour-policy.html</li><li>Madeleine Clare Elish, "Moral Crumple Zones: Cautionary Tales in Human-Robot Interaction", Engaging Science, Technology, and Society, for the concept of the human operator who absorbs responsibility for a system they could not have controlled. https://estsjournal.org/index.php/ests/article/view/260</li><li>Article 14 of the European regulation on artificial intelligence, for the requirement of effective oversight and the naming of automation bias. https://artificialintelligenceact.eu/article/14/</li><li>The project lead's voice memo of 19 September 2026, for the session in which the prompts were observed and for the three candidate policies</li></ul>
+  <p>This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../../versions/v0.6.0/index.html">v0.6.0</a> · <a href="../../../versions/index.html">all versions</a> · <a href="../../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../../docs/briefs/v0.33.71__strategy-brief__the-consent-dialog-is-an-accountability-transfer-rather-than-a-decision/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../../model/index.html">The four objects</a>
+    <a href="../../../model/barriers/index.html">The barrier</a>
+    <a href="../../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../../data/index.html">The published vocabulary</a>
+    <a href="../../../model/schema/index.html">The schema</a>
+    <a href="../../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../../docs/index.html">Docs</a>
+    <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

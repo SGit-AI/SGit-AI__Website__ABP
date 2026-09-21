@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Split Does Not Break The Trifecta, The Schema Does: A Closed Vocabulary At The Boundary Is The Control, And The Orchestrator Should Not Hold The Mailbox - abp.sgit.ai</title>
+<meta name="description" content="version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, whoever writes the command line tool and the vault application">
+<link rel="canonical" href="https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-split-does-not-break-the-trifecta-the-schema-does/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-split-does-not-break-the-trifecta-the-schema-does/index.html">
+<meta property="og:title" content="The Split Does Not Break The Trifecta, The Schema Does: A Closed Vocabulary At The Boundary Is The Control, And The Orchestrator Should Not Hold The Mailbox - abp.sgit.ai">
+<meta property="og:description" content="version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, whoever writes the command line tool and the vault application">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../../versions/v0.6.0/index.html" title="What changed in v0.6.0, and the commit it was built from">v0.6.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../model/index.html">The four objects</a>
+      <a class="sl" href="../../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../examples/index.html">All five</a>
+      <a class="sl" href="../../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../gmail/index.html">Your mailbox<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../gmail/index.html">The walkthrough</a>
+      <a class="sl" href="../../../gmail/what-it-can-do/index.html">Step 1: What it can already do</a>
+      <a class="sl" href="../../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a>
+      <a class="sl" href="../../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a>
+      <a class="sl" href="../../../gmail/what-a-prompt-cannot-do/index.html">Step 4: What a prompt cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../articles/index.html">One per release</a>
+      <a class="sl" href="../../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../../articles/one-article-per-release/index.html">v0.5.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../../index.html">Home</a> / <a href="../../../docs/index.html">Docs</a> / <a href="../../../docs/index.html#briefs">The briefs</a> / The Split Does Not Break The Trifecta, The Schema Does: A Closed Vocabulary At The Boundary Is The Control, And The Orchestrator Should Not Hold The Mailbox</p>
+  <h1>The Split Does Not Break The Trifecta, The Schema Does: A Closed Vocabulary At The Boundary Is The Control, And The Orchestrator Should Not Hold The Mailbox</h1>
+  <div class="note"><b>The source bytes.</b> This page is generated from <a href="../../../docs/briefs/v0.33.71__arch-brief__the-split-does-not-break-the-trifecta-the-schema-does.md"><code>docs/briefs/v0.33.71__arch-brief__the-split-does-not-break-the-trifecta-the-schema-does.md</code></a>, which is served unchanged. Anything rendered on this network stays one click from the file it came from.</div>
+  <p><b>version</b> v0.33.71 <b>date</b> 20 September 2026 <b>from</b> Human (project lead) <b>to</b> Architecture, the Agent Behaviour Policy team, whoever writes the command line tool and the vault application</p>
+  <p><b>type</b> Architecture brief</p>
+  <p><em>Second of 20 September on the exposed mailbox, following the brief that established that no scope permits drafting without permitting sending. This one responds to a proposed architecture: three classes of execution environment, of which the first and the third are combined, with an orchestrating session holding the mailbox connector and a sequence of stateless model calls holding none, a state machine in the vault describing the control flow, a behaviour policy at two altitudes, every request and response written to an append only vault for provenance, a command line tool in Python living in a vault, and a second vault holding the data and a representation of the mailbox with a visual application over it. Two platform facts were checked on 20 September 2026 because the design turns on them: whether schema conformance can be enforced on a model response rather than validated after the fact, and what the calls actually cost. Limitations: nothing was built or measured; the cost figures are arithmetic over assumed token counts and are labelled as such; the claim about what the orchestrating session can be prevented from doing is reasoning from the published permission model rather than from a test, and the one hour test named in the previous brief still has not been run.</em></p>
+  <h2 id="what-this-is">What This Is</h2>
+  <p>A proposed architecture, one structural correction that decides whether it works, and the platform feature that makes the correction enforceable: <b>the memo separates three classes of execution environment, being a full session with connectors that can read, decide and act and is therefore the most exposed thing in the estate, an interface driven agent wired to tools whose outputs feed back into its own reasoning, and a single stateless call to a model with no tools at all where an injection can land in the answer but has nothing to act with, and it proposes building the mailbox workflow out of the first and the third while avoiding the second, with the stateless calls doing every piece of work that touches hostile text and the session doing only orchestration over structured results, a state machine in the vault expressing the control flow, a behaviour policy at both the individual action altitude and the whole workflow altitude, and every request and response written to an append only vault so that nothing is unexplainable after the fact; the classification is correct and the third class is genuinely different in kind, because safety there is a property of the deployment rather than of the model, which is the estate's own ruling of 12 September arriving as an architecture; but the split alone does not break the trifecta, because the moment the stateless call's output is read by the session that holds the mailbox and the ability to send, the three conditions have reassembled across the boundary rather than inside one agent, and an attacker who cannot act directly can still write the text that the acting component reads; the correction is therefore that the boundary must carry a closed vocabulary rather than free text, and the platform now enforces exactly that, since a response can be constrained by a JSON schema during decoding rather than validated afterwards, which means enumerated fields, booleans, numbers and identifiers are genuinely bounded while any open string field remains attacker influenced and must never enter the orchestrating context; the state machine is a real control only if something other than the orchestrator enforces it, so it belongs to the command line tool rather than to the session that is supposed to follow it; the same argument applied to the mailbox itself says the orchestrator should not hold the connector at all, because a session holding the union of read, draft and send with a document telling it what to do is an expectation, whereas a session that can only reach the mailbox through a tool that validates transitions is bounded by something it does not contain; the append only log delivers real provenance of the pipeline and does not deliver explanation of a decision, and it has a property nobody has named, which is that it is a store of attacker authored text that something will later read, making it both the forensic record and a re-injection surface that needs a handling rule; the representation of the mailbox in the second vault is worth more as a test harness than as a visualisation, because the whole pipeline can be exercised against it with no mailbox credential in existence; and the arithmetic says this costs on the order of two pence a message, which removes cost as a reason not to build it.</b> New contributions: <b>the three classes re-cut on the axis that actually determines exposure; the trifecta reassembling across the boundary as the failure mode the split does not address; constrained decoding identified as the enforcement mechanism and the closed against open field distinction that follows; the state machine relocated to the tool so that it becomes a boundary; the connector moved off the orchestrator with the trade stated; the two behaviour policy altitudes given their scopes; the log named as untrusted content with a handling rule; the representation reframed as the test harness; a costed model; and a build order whose first step proves the boundary before anything touches real mail.</b></p>
+  <h2 id="the-three-environments-re-cut-on-the-axis-that-matters">The Three Environments, Re-Cut On The Axis That Matters</h2>
+  <p><b>The memo's three classes are real and the boundary between them is not the product. It is two independent properties.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Class</th><th>Holds tools</th><th>Output re-enters its own context</th><th>What an injection achieves</th></tr></thead><tbody><tr><td>Session with connectors</td><td>Yes</td><td>Yes</td><td>Acts immediately, and can keep acting</td></tr><tr><td>Interface agent with tools</td><td>Yes</td><td>Yes</td><td>The same, with the tool set the builder chose</td></tr><tr><td>Single stateless call</td><td><b>No</b></td><td><b>No</b></td><td>Writes something into its own answer, and stops</td></tr></tbody></table></div>
+  <p><b>The memo's second class is not a separate danger from the first, it is the same danger under the builder's control</b>, which is worth saying because a reader might conclude the interface is more dangerous than the session. It is not. It is more configurable, and the estate's whole argument is that configuration is where the barrier lives.</p>
+  <p><b>The third class is genuinely different in kind and the reason is worth stating precisely.</b> A stateless call with no tools cannot act because there is nothing to act with, not because the model resisted anything. The model may be fully persuaded by the injection and produce exactly the output the attacker wanted. <b>It has nowhere to put it.</b> That is the 12 September ruling in architectural form: a refusal is a property of the model and a deployment with no tools is a property of the deployment, and only the second is a barrier.</p>
+  <h2 id="the-split-alone-does-not-break-the-trifecta">The Split Alone Does Not Break The Trifecta</h2>
+  <p><b>This is the correction, and it is the one thing that decides whether the architecture holds.</b></p>
+  <p><b>The three conditions are private data, exposure to untrusted content, and the ability to communicate externally.</b> In the memo's design, the stateless call has the second and neither of the others. The orchestrating session has the first and the third. <b>Neither agent has all three, and the system does.</b></p>
+  <p><b>The path is the boundary.</b> The stateless call reads hostile text and writes a result. The orchestrator reads that result and acts on the mailbox. So an attacker who cannot reach the tools directly can still write text that influences the output that the tool holder reads. <b>The trifecta has not been broken, it has been stretched across a join</b>, and a join is only a barrier if something constrains what crosses it.</p>
+  <p><b>This is precisely the failure the dual component pattern was designed to prevent, and the way it prevents it is the part usually left out.</b> The privileged component is not supposed to receive the quarantined component's prose. It is supposed to receive references and symbols that stand for content it never sees. The formal version of the same idea tags every value and checks the tag at the tool call. <b>In both cases the protection is in what is allowed to cross, not in the fact that there are two components.</b></p>
+  <p><b>So the question for this architecture is not how many environments there are. It is what the schema at the boundary permits.</b></p>
+  <h2 id="constrained-decoding-makes-the-boundary-enforceable-for-some">Constrained Decoding Makes The Boundary Enforceable, For Some Fields</h2>
+  <p><b>The platform now supplies the mechanism, and this was checked today.</b> A response can be constrained to a JSON schema during generation rather than parsed and validated afterwards. The documentation describes the result as guaranteed to be schema compliant, always valid, type safe, with required fields present and no retries needed for schema violations. It works with no tools attached and each request stands alone, which is exactly the third class above.</p>
+  <p><b>That changes what the boundary is made of, and it does so unevenly.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Field kind</th><th>Constrained by the decoder?</th><th>Attacker influence</th><th>May the orchestrator read it</th></tr></thead><tbody><tr><td>Enumerated value, such as a classification from a fixed list</td><td><b>Yes.</b> The output cannot be a value outside the list</td><td>Choice among the listed values only</td><td><b>Yes</b></td></tr><tr><td>Boolean</td><td><b>Yes</b></td><td>Which of two</td><td><b>Yes</b></td></tr><tr><td>Number with a stated range</td><td><b>Yes</b></td><td>The value within the range</td><td><b>Yes</b></td></tr><tr><td>Identifier matching a pattern, such as a message reference</td><td><b>Yes</b>, if the pattern is tight</td><td>Which known object</td><td><b>Yes</b></td></tr><tr><td>Free string, such as a summary or a proposed reply</td><td><b>Shape only.</b> Any text at all is schema valid</td><td><b>Total</b></td><td><b>No</b></td></tr></tbody></table></div>
+  <p><b>So the rule for the schema is short and it is the design.</b> The orchestrator reads only closed fields. Every open string goes to the vault and to a human, and never into the context of the thing holding the mailbox. <b>A drafted reply is not a value the orchestrator reads, it is an object the orchestrator moves by reference.</b></p>
+  <p><b>One consequence worth stating plainly.</b> The moment somebody adds a <code>reason</code> string to the schema so the orchestrator can log why a decision was made, the boundary is gone and nothing will announce it. That field will be proposed within a week of the pipeline working, and the answer is that the reason is written to the vault under the same identifier and is read by people, not by the orchestrator.</p>
+  <h2 id="the-state-machine-is-a-control-only-if-something-else-enforc">The State Machine Is A Control Only If Something Else Enforces It</h2>
+  <p><b>The memo's control flow instinct is right and the estate's own enforcer test decides where it lives.</b></p>
+  <p><b>A state machine the orchestrator is told to follow is an expectation.</b> The orchestrator holds the tools. Nothing prevents it taking a transition the machine does not contain, and if it has been influenced it will not report that it did.</p>
+  <p><b>A state machine the command line tool enforces is a boundary.</b> The tool validates every requested transition against the machine held in the vault, refuses anything not permitted from the current state, and writes both the request and the refusal to the log. The orchestrator asks; the tool decides.</p>
+  <p><b>That makes the tool the enforcement point and gives it three jobs rather than one:</b> it validates transitions, it holds the credentials, and it writes the record. <b>The orchestrator's job shrinks to choosing which permitted transition to request next, which is the action selector pattern and is the most constrained thing in the catalogue.</b></p>
+  <p><b>A practical note on the machine itself.</b> One machine per action type, as the memo proposes, is right, and each should name its permitted transitions, its terminal states, the schema for each boundary crossing, and the behaviour policy identifier that governs it. Held in the vault, versioned, and referenced by hash in every log entry, so a run can be replayed against the exact machine that governed it.</p>
+  <h2 id="the-orchestrator-should-not-hold-the-mailbox">The Orchestrator Should Not Hold The Mailbox</h2>
+  <p><b>The memo identifies the crux and then accepts it: the session must hold the union of every right the workflow needs, because there is no way to give it less. That is true while the connector is attached to the session. It stops being true if the connector is not there.</b></p>
+  <p><b>Move the mailbox credential to the tool.</b> The tool holds a read authorisation and, separately, a send authorisation. The orchestrator holds neither and reaches the mailbox only by asking the tool for a transition the machine permits. <b>Then the union problem dissolves, because the session's grant no longer contains the mailbox at all.</b></p>
+  <p><b>This is the same move as yesterday's, applied one layer up.</b> Drafts left the mailbox because no scope could separate drafting from sending. The connector leaves the session because no setting can separate reading from acting. In both cases the platform offered no barrier and the answer was to remove the capability rather than to constrain it.</p>
+  <p><b>The trade is real and the memo's preference is understandable.</b> Keeping the connector on the session is less work, keeps the data inside one vendor, and makes the first version possible in a day. Moving it to the tool means writing the mailbox access, handling authorisation refresh, and losing the convenience of asking in plain language. <b>The honest framing is that version one may keep the connector and must then describe itself as an expectation, and version two moves it and can describe itself as a boundary.</b> What must not happen is version one describing itself as version two.</p>
+  <h2 id="two-altitudes-of-behaviour-policy-and-what-each-bounds">Two Altitudes Of Behaviour Policy, And What Each Bounds</h2>
+  <p><b>The memo proposes a policy per action and a policy over the whole workflow, and notes this is a good example of altitudes. It is, and the two bound different things.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Altitude</th><th>Subject</th><th>What it states</th><th>Enforced by</th></tr></thead><tbody><tr><td>Action</td><td>One stateless call</td><td>Model, no tools, maximum tokens, the exact output schema, timeout, what is logged, what may cross the boundary</td><td>The tool, which constructs the call</td></tr><tr><td>Workflow</td><td>The whole run</td><td>Which transitions exist, which credentials the tool holds, which reaches are permitted, what requires a human, the daily volume ceiling</td><td>The tool, which validates against the machine</td></tr></tbody></table></div>
+  <p><b>The delta between them is derivable and nobody authors it</b>, which keeps the 11 September ruling intact: the action policy's grant is the call's configuration, the workflow policy's grant is the tool's credentials, and the mandate at each altitude is what the machine permits.</p>
+  <p><b>One thing the workflow altitude should carry that the memo does not mention: a ceiling.</b> A run that proposes to act on four hundred messages when the usual number is nine is the signature of something having gone wrong, whether by injection or by a bad day. A stated volume ceiling per run, enforced by the tool, is the cheapest protection in the design and it is the bulk operation rule from Friday in a different setting.</p>
+  <h2 id="the-log-is-untrusted-content">The Log Is Untrusted Content</h2>
+  <p><b>Writing every request and response to an append only vault is the right decision and it creates an object nobody has named.</b></p>
+  <p><b>The log contains attacker authored text, on purpose.</b> That is what makes it useful for forensics. It also means that anything which later reads the log is reading hostile input, and the natural readers of a log are a summarising agent, a daily report generator, and an application that renders it.</p>
+  <p><b>Three handling rules follow and they are cheap.</b></p>
+  <p><b>The log is read as data and never replayed into a context that holds tools.</b> A daily report over the log is produced by a stateless call with the same discipline as the pipeline itself, and its output is closed fields plus references.</p>
+  <p><b>The application renders log content as inert text.</b> It runs in a sandboxed frame with an opaque origin, which handles a large part of this, and it should still treat every stored string as text rather than markup, and it must not fetch remote resources named in stored content. <b>Automatic fetching of a remote image named in attacker text is the exact mechanism of the exploit cited in yesterday's brief.</b></p>
+  <p><b>And the log has a retention position</b>, because it holds other people's correspondence. Yesterday's brief raised this for the message store and it applies with more force to a store that also captures everything a model said about it.</p>
+  <h2 id="what-provenance-actually-buys">What Provenance Actually Buys</h2>
+  <p><b>The memo claims complete provenance and complete explainability. The first is earned and the second is not, and the distinction is worth keeping because the estate sells the difference.</b></p>
+  <p><b>What the log gives is a complete record of the pipeline</b>: every input, every output, every transition requested, every transition refused, against a versioned machine, in an append only store where a correction supersedes rather than overwrites. That is genuinely strong and very few systems have it.</p>
+  <p><b>What it does not give is an explanation of a decision.</b> Recording that a model was shown this and answered that does not say why, and a reconstruction offered later is a new model output rather than a retrieved reason. <b>The honest claim is that every action is attributable and reproducible, not that it is explained.</b> Attributable and reproducible is the stronger claim commercially anyway, because it is the one an auditor can check.</p>
+  <p><b>One addition makes the record substantially more useful for almost nothing.</b> Record the machine's hash, the schema's hash, the behaviour policy identifiers at both altitudes, and the model identifier with every entry. <b>Then a run can be replayed exactly, and a change in behaviour can be attributed to a change in the machine, the schema, the behaviour policy or the model, which is four hypotheses eliminated by four fields.</b></p>
+  <h2 id="the-representation-is-the-test-harness">The Representation Is The Test Harness</h2>
+  <p><b>The memo describes a representation of the mailbox in the data vault with an application over it, framed as visualisation. It is worth more than that.</b></p>
+  <p><b>With a representation, the entire pipeline can be exercised with no mailbox credential in existence.</b> Load it with real messages and with deliberately hostile ones, run every state machine end to end, and inspect what the orchestrator was asked to do. <b>Nothing can escape, because nothing is connected.</b></p>
+  <p><b>That makes it the place the evaluation set lives.</b> Every injection attempt the published address receives becomes a case in the harness, and the pipeline is re-run against the whole set whenever a schema, a machine or a model changes. This is the only mechanism in the design that will tell the estate whether a change made things worse, and it costs nothing to build because the representation is already proposed.</p>
+  <p><b>It is also the demonstration.</b> A visitor can run the pipeline against the representation, see the log fill, and read the record, without connecting anything of their own. That is the missing free rung from this morning's brief, in the hardest case the estate has.</p>
+  <p><b>On the word for it: use the data vault or the sample mailbox.</b> The word twin is already doing two jobs in this week's memos and this is the third.</p>
+  <h2 id="what-it-costs">What It Costs</h2>
+  <p><b>Arithmetic, with the assumptions stated, at the current published prices for the mid tier model of two dollars per million input tokens and ten per million output.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Call</th><th>Input</th><th>Output</th><th>Cost</th></tr></thead><tbody><tr><td>Classify and extract</td><td>2,500</td><td>500</td><td>$0.0100</td></tr><tr><td>Injection check</td><td>2,000</td><td>150</td><td>$0.0055</td></tr><tr><td>Propose actions</td><td>1,800</td><td>400</td><td>$0.0076</td></tr><tr><td><b>Per message</b></td><td></td><td></td><td><b>$0.023</b></td></tr></tbody></table></div>
+  <p><b>So one hundred messages costs about two dollars and thirty cents, and a thousand about twenty three dollars.</b> The asynchronous interface halves both, and the smaller model halves them again, so a thousand messages processed in batches on the cheaper model lands near six dollars. <b>Cost is not a reason to avoid this design, and the token overhead reported for the comparable published system, of roughly three times, is already inside these numbers because the three calls are the overhead.</b></p>
+  <p><b>The figure worth watching is not the total but the per message ceiling</b>, because a message with a large attachment or a long thread will cost many times the median and an attacker controls the length of what they send. <b>A maximum input size per message, enforced by the tool, belongs next to the volume ceiling.</b></p>
+  <h2 id="build-order">Build Order</h2>
+  <p><b>Five steps, and the first proves the thing the architecture depends on.</b></p>
+  <p><b>One. The boundary, alone.</b> A schema with only closed fields, a stateless call constrained to it, and a fixture of twenty hostile messages. Confirm that no enumerated field ever takes a value outside its list. This is an afternoon and it either validates the design or ends it.</p>
+  <p><b>Two. The tool, with no mailbox.</b> Python command line, the machine held in the vault, transitions validated, everything logged with the four hashes. Runs entirely against the sample mailbox.</p>
+  <p><b>Three. The application over the log.</b> Status, the run history, refusals, the daily report. Inert rendering, no remote fetching.</p>
+  <p><b>Four. Read only against the real mailbox.</b> The tool holds a read authorisation. Nothing is written anywhere except the vault. Run it for a week and compare what it proposed against what the project lead would have done.</p>
+  <p><b>Five. The send path, narrow.</b> A send authorisation held by the tool, one action type permitted, a volume ceiling, and the personal lane delivering drafts to a human who sends them himself.</p>
+  <p><b>The one hour test from yesterday's brief is a prerequisite for step four and has still not been run:</b> whether two separate mailbox authorisations, one read and one send, can be held cleanly in the environment the estate actually uses.</p>
+  <h2 id="what-this-does-not-try-to-be">What This Does Not Try To Be</h2>
+  <p><b>It is not an implementation.</b> Schemas, state machines and the tool's interface are described. None is specified to the point of being buildable without further design.</p>
+  <p><b>It is not a measurement.</b> The cost model is arithmetic over assumed token counts and the token counts are guesses.</p>
+  <p><b>It is not a test of the platform's permission model.</b> The claim that the orchestrator cannot be given less than the union while the connector is attached is reasoning from the published model, not from an experiment.</p>
+  <p><b>It is not a security review of the vault application.</b> The rendering rules are stated as requirements, not verified against the current implementation.</p>
+  <p><b>And it does not claim the architecture resists a determined adversary.</b> It claims the architecture bounds what a successful injection can reach, which is smaller and checkable.</p>
+  <h2 id="honest-tensions">Honest Tensions</h2>
+  <p><b>The closed field rule is correct and it will be eroded by ordinary good intentions.</b> Every person who works on this will at some point want the orchestrator to see a summary, a reason or a subject line, and each request will be reasonable. There is no technical alarm for this, only a schema review, and schema reviews get skipped.</p>
+  <p><b>Moving the connector to the tool is the right architecture and the wrong first version.</b> Keeping it on the session gets something working this week and produces an expectation; moving it costs real work and produces a boundary. Both are defensible and only one of them can be described as a control.</p>
+  <p><b>The log makes the system auditable and also makes it a target.</b> A complete record of a mailbox's traffic plus every model interaction over it is a more attractive object than the mailbox alone, and it sits in a vault whose read key is a string.</p>
+  <p><b>Constrained decoding guarantees the shape and not the truth.</b> A classification field is bounded to its list and can still be the wrong member of that list, chosen because an attacker asked for it. The schema stops an injection from expanding the space of outcomes; it does not stop it from picking one.</p>
+  <p><b>And the whole design depends on the stateless calls being genuinely stateless.</b> The moment somebody adds caching, a conversation identifier, or a second message to the same call to save money, the third class has quietly become the second, and the saving that motivated it will be a few cents.</p>
+  <h2 id="open-questions">Open Questions</h2>
+  <p><b>Does the enumerated field hold under adversarial pressure in practice?</b> Constrained decoding guarantees the value is in the list. Whether the chosen member is reliably correct under a message engineered to mislead is an empirical question and is step one.</p>
+  <p><b>Where does the tool run when the orchestrator is a hosted session?</b> A command line tool held in a vault is executed by something. Whether that is the project lead's machine, a scheduled cloud job, or a session with code execution changes the credential story completely and is unresolved.</p>
+  <p><b>How does the tool hold the mailbox authorisation, and where does the refresh token live?</b> The vault has a mechanism for holding a key, which the memo notes. Whether that is appropriate for a live authorisation with refresh has not been examined.</p>
+  <p><b>What is the retention period for the log, and who can action a deletion request against it?</b> Unanswered, and an obligation.</p>
+  <p><b>Should the daily report be produced by a stateless call or written by the tool from the closed fields?</b> The second needs no model at all and cannot be injected. The first reads better. The second is probably right and the first will be built.</p>
+  <p><b>And does the sample mailbox get published?</b> As a demonstration it is the best asset in this design. As a published artefact it tells an attacker exactly which classifications the pipeline uses.</p>
+  <h2 id="relationship-to-previous-briefs">Relationship To Previous Briefs</h2>
+  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Document</th><th>Relationship</th></tr></thead><tbody><tr><td>12 Sep</td><td>The correction that a guardrail is a property of one deployment rather than of the model</td><td>The stateless class is that ruling as an architecture: safety from having no tools, not from refusing</td></tr><tr><td>11 Sep</td><td>The ruling that the delta is derived and never authored</td><td>Preserved at both policy altitudes, where the grant is the call's configuration and the tool's credentials</td></tr><tr><td>19 Sep</td><td>The brief on the inbox persona</td><td>Supplies the bulk operation ceiling, which reappears here as the volume ceiling per run</td></tr><tr><td>20 Sep</td><td>The brief on the behaviour policy as a fractal</td><td>Supplies the two altitudes and the rule that the barrier kind is a property of the layer</td></tr><tr><td>20 Sep</td><td>The brief on the mailbox pipeline, immediately prior</td><td>Established the draft and send scope identity; this brief applies the same move one layer up to the connector</td></tr></tbody></table></div>
+  <h2 id="key-claims">Key Claims</h2>
+  <div class="tablewrap"><table><thead><tr><th>#</th><th>Claim</th></tr></thead><tbody><tr><td>1</td><td>A stateless call with no tools is safe because it has nothing to act with, not because the model resisted, which makes it a property of the deployment</td></tr><tr><td>2</td><td>Splitting the work across two environments does not break the trifecta, because the three conditions reassemble across the boundary between them</td></tr><tr><td>3</td><td>The protection is in what is allowed to cross the boundary, not in the existence of the boundary</td></tr><tr><td>4</td><td>The platform can constrain a response to a schema during decoding, with no tools attached, which makes the boundary enforceable rather than merely validated</td></tr><tr><td>5</td><td>Constrained decoding bounds enumerated, boolean, numeric and pattern matched fields, and does nothing for free strings, which remain fully attacker influenced</td></tr><tr><td>6</td><td>The orchestrator must read only closed fields, and every open string goes to the vault and to a person</td></tr><tr><td>7</td><td>A state machine the orchestrator is told to follow is an expectation; one the tool enforces is a boundary</td></tr><tr><td>8</td><td>While the connector is attached to the session, the session holds the union of every right, so the connector should move to the tool</td></tr><tr><td>9</td><td>The log is a store of attacker authored text and is therefore both the forensic record and a re-injection surface needing a handling rule</td></tr><tr><td>10</td><td>The record delivers attribution and reproducibility rather than explanation, and four hashes per entry make a run replayable</td></tr><tr><td>11</td><td>The sample mailbox is the test harness and the demonstration, and the whole pipeline can be exercised against it with no credential in existence</td></tr><tr><td>12</td><td>The pipeline costs about two pence a message at current prices, halving on the asynchronous interface, so cost is not a reason not to build it</td></tr></tbody></table></div>
+  <h2 id="sources">Sources</h2>
+  <ul><li>The platform's structured outputs documentation, read 20 September 2026 for constrained decoding, the schema conformance guarantees, and the confirmation that it works with no tools attached and each request standing alone. https://platform.claude.com/docs/en/build-with-claude/structured-outputs</li><li>The platform's published pricing, read 20 September 2026 for the per million token input and output rates used in the cost model, the caching multipliers and the asynchronous discount. https://platform.claude.com/docs/en/about-claude/pricing</li><li>Simon Willison, for the three conditions used throughout, and for the dual component pattern in which the privileged side receives references rather than content. https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/</li><li>Debenedetti and others, "Defeating Prompt Injections by Design", for control and data flow separation, tagging values and checking at the tool call, and the reported token overhead. https://arxiv.org/abs/2503.18813</li><li>Beurer-Kellner and others, "Design Patterns for Securing LLM Agents against Prompt Injections", for the action selector and plan then execute patterns the orchestrator is reduced to. https://arxiv.org/abs/2506.08837</li><li>Reddy and Gujral, "EchoLeak", for the automatic remote fetch step that the rendering rule is written against. https://arxiv.org/abs/2509.10540</li><li>The project lead's voice memo of 20 September 2026, for the three environment classes, the state machine proposal, the two policy altitudes, the vault in vault arrangement, the command line tool and the provenance claim</li></ul>
+  <p>This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../../versions/v0.6.0/index.html">v0.6.0</a> · <a href="../../../versions/index.html">all versions</a> · <a href="../../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../../docs/briefs/v0.33.71__arch-brief__the-split-does-not-break-the-trifecta-the-schema-does/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../../model/index.html">The four objects</a>
+    <a href="../../../model/barriers/index.html">The barrier</a>
+    <a href="../../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../../data/index.html">The published vocabulary</a>
+    <a href="../../../model/schema/index.html">The schema</a>
+    <a href="../../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../../docs/index.html">Docs</a>
+    <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

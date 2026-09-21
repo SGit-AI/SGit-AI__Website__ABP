@@ -1,0 +1,204 @@
+# The Behaviour Policy Is Already A Fractal And The Overlay Is Already Published: The Customer Authors Formulas And Bridges And Never Deltas, And The Barrier Weakens With Every Layer Above The Platform
+
+> version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, the owners of abp.sgit.ai, graphs.sgit.ai and standards.sgit.ai, whoever builds the indexes
+
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-behaviour-policy-is-already-a-fractal-and-the-overlay-is-already-published/index.html> · site v0.6.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../../index.md) / [Docs](../../../docs/index.md) / [The briefs](../../../docs/index.md#briefs) / The Behaviour Policy Is Already A Fractal And The Overlay Is Already Published: The Customer Authors Formulas And Bridges And Never Deltas, And The Barrier Weakens With Every Layer Above The Platform
+
+# The Behaviour Policy Is Already A Fractal And The Overlay Is Already Published: The Customer Authors Formulas And Bridges And Never Deltas, And The Barrier Weakens With Every Layer Above The Platform
+
+> **The source bytes.** This page is generated from [`docs/briefs/v0.33.71__arch-brief__the-behaviour-policy-is-already-a-fractal-and-the-overlay-is-already-published.md`](../../../docs/briefs/v0.33.71__arch-brief__the-behaviour-policy-is-already-a-fractal-and-the-overlay-is-already-published.md), which is served unchanged. Anything rendered on this network stays one click from the file it came from.
+
+**version** v0.33.71 **date** 20 September 2026 **from** Human (project lead) **to** Architecture, the Agent Behaviour Policy team, the owners of abp.sgit.ai, graphs.sgit.ai and standards.sgit.ai, whoever builds the indexes
+
+**type** Architecture brief
+
+*Written the morning after the fractal semantic graphs page was published and read here in full, from a memo asking two things: whether the behaviour policy is itself a fractal in the sense that page defines, and how the behaviour policy gets used, meaning how a customer takes the published ontology, keeps most of it, overrides some of it, and ends up with something that is theirs without forking what is shared. Three sites were read on 20 September 2026 before writing: abp.sgit.ai for its objects, its model pages, its five worked examples and its stated position on customisation; graphs.sgit.ai for the three layer model and its rule on adding an edge without touching a node; and the fractal page for the definition and the test. Limitations: the sites were read through a fetch and summarise tool, so a reported absence, in particular the statement that abp.sgit.ai has no customisation layer and does not link standards.sgit.ai, is that tool's finding and should be confirmed against the raw pages; risks.sgit.ai is referenced by abp.sgit.ai and was not read; nothing was executed; and the rules of engagement in the second half are proposed, not adopted.*
+
+## What This Is
+
+The behaviour policy tested against the definition it sits under, and the mechanism for using it located in the estate's own publications: **the memo argues that the behaviour policy can be explained through the fractal, because it already has multiple altitudes each with its own representation and vocabulary, being the business statement of the intent, the technical statement of the capabilities, the elements a policy touches, the agent as a runtime, and the targets it reaches as environments of their own; that a customer's version of it is close to a twin of that customer's reality, built by design so the customer defines their own variations and, more importantly, declares what they override in the ontology the estate provides, since nobody needs a whole new ontology and most will happily reuse half to nine tenths of what is published while the remaining fraction is what makes it theirs; that this is not a feature but the way the whole thing is built, because meaning is connectivity and customer specific metadata is just more graph; that it draws the line between open source and proprietary cleanly, the shared mappings living in the open under a permissive licence and the customer's world living in the customer's vault; that every standard defines its own taxonomy and uses it, so the estate's job is to publish each standard's ontology and the bridges between them on the standards site and let the behaviour policies consume them; that the mail connector case is a ladder of ontologies in its own right, from the platform's scopes through the vendor's connector, the model, the layers on top, the standard that connects, and the prompt text down to the schema; and that all of this needs rules of engagement, indexes and references on the behaviour policy site so every page says where the next piece of the puzzle is. Six things were found on reading the sites. First, the behaviour policy passes the test the fractal page sets, since following an edge out of a policy object lands in a world with a different vocabulary and its own enforcer, which is the jump the page says distinguishes a fractal from a hierarchy. Second, the mail stack is not merely a ladder of ontologies but a ladder of enforcers, and the barrier kind at each layer is a property of the layer, which produces a pattern the estate has not stated: the only boundaries are at the bottom, next to the platform, and every layer above it weakens to an expectation, so the further a control sits from the platform the less it binds. Third, the overlay the memo asks for is already published, as the three layer model on the graphs site, being shared facts owned by nobody, per party formulas, and declared bridges, with the rule that a third party adds a mapping edge without touching either node; but the behaviour policy site states that it has no customisation layer and that a policy is derived from one deployment and is not a template, so the mechanism and the object sit on two sites that do not point at each other. Fourth, those two statements are compatible once the rule is written down, which is that the customer authors formulas and bridges and never deltas, so the vocabulary is shared and reused, the overrides are declared edges, and the delta stays derived on both sides of the line. Fifth, the open and proprietary line falls exactly where the vault wall is, which is the library and instance ruling of 4 September restated, and the standards site that should feed the vocabulary is not linked from the behaviour policy site at all. And sixth, the word twin has been asked to mean two different things in one week, a representation here and an actor in the tool site memo, and it should be given one job before it reaches a page.** New contributions: **the fractal test applied to the behaviour policy object and passed; the ladder of enforcers with the barrier kind as a property of the layer and the monotone weakening it produces; the location of the overlay mechanism on the graphs site and the disconnection from the behaviour policy site; the rule that reconciles not a template with reuse most of it; the open line placed at the vault wall; the two meanings of twin separated; eight proposed rules of engagement for the behaviour policy site; and the discipline that a cross site link is an edge and therefore carries a verb.**
+
+## The Behaviour Policy Passes The Test For The Word
+
+**The fractal page sets one test: a graph is fractal rather than merely deep if, on one of its links, you leave the vocabulary you were in and arrive in another world that is still a semantic graph.** A register with ten thousand well named edges is not fractal. A register whose fact node opens into the security operations world is.
+
+**Apply that to a behaviour policy and it passes on the first edge.** A policy row says an agent holds `send.message.world` behind a barrier of kind `setting`. Follow the capability node down and you are in the platform's own world: the scope catalogue, its three sensitivity tiers, the call that carries a thousand identifiers, a vocabulary the behaviour policy did not write and does not own. Follow the barrier node and you are in the vendor's product: approval prompts, team and enterprise overrides, a vocabulary of tools rather than scopes. Follow the mandate node up and you are in the business: a role, an intent, a sentence somebody signed. **Four vocabularies, one path, no adapter, which is the page's definition word for word.**
+
+**The altitudes the memo lists are already visible on the behaviour policy site in outline.** The business statement of intent is the mandate. The technical statement of capability is the grant, in the twenty three primitive grammar. The elements a policy touches are the object classes and reaches. The agent as a runtime is the profile. The targets are the reaches, each of which is a world of its own. **What the site does not yet say is that these are altitudes in the fractal sense, each with its own ontology and its own owner, and that the behaviour policy is the thing that holds edges between them.** Saying so is a paragraph and it makes the two sites one argument.
+
+## The Mail Stack Is A Ladder Of Enforcers
+
+**The memo's worked example is the mail connector, and laying it out as the fractal page lays out the risk register produces a table the estate has not published.**
+
+| Layer | Its vocabulary | Who enforces it | Barrier kind |
+|---|---|---|---|
+| The platform | Scopes, sensitivity tiers, system labels, batch limits | The platform, outside everything above | **Boundary** |
+| The vendor's connector | Tools, approval prompts, the enterprise override | The vendor's product, outside the model | Boundary in form, expectation in effect |
+| The model | Refusals and guardrails | The model itself | Expectation |
+| Skills and instructions | The behaviour the operator asked for in text | The model's cooperation | Expectation |
+| The standard that connects | Controls and crosswalks | Nobody, it describes | None |
+| The prompt | The user's sentence | Nobody | None |
+| The schema | The shape the text must take | The parser | Setting |
+
+**Every row is a world with its own ontology, and the estate has already said this about each one separately.** The 12 September correction established that a guardrail is a property of one deployment and not of the model, which places the model row. The 19 September brief on the consent dialog placed the connector row. Yesterday's brief on the inbox placed the platform row down to the system label. **The memo's contribution is to stack them, and the stack shows something none of the rows showed alone.**
+
+## The Barrier Weakens With Every Layer Above The Platform
+
+**Read the last column top to bottom.** Boundary. Boundary in form. Expectation. Expectation. None. None. Setting, and that last one bounds the shape of the text rather than the reach of the agent.
+
+**The only true boundaries in the stack sit at the bottom, adjacent to the platform, and the estate's own enforcer test explains why.** A control bounds a grant only if it is enforced by something the grant does not include. The platform is not included in the grant; it issues the grant. The vendor's product sits outside the model and can refuse to forward a call. Everything above that is either the model's own cooperation, which the grant includes, or text, which enforces nothing. **So the barrier kind is not a property of the control. It is a property of the layer the control lives in**, and the layers are ordered.
+
+**This produces a rule worth stating on the behaviour policy site in one sentence: the further a control sits from the platform, the less it binds.** Not because the people who write skills are careless but because the layer they write in has no enforcer. A behaviour policy delivered as a prompt sits at the top of this ladder and is an expectation for structural reasons that no amount of good drafting changes.
+
+**And it gives the barrier position field, proposed on 12 September, its meaning.** Position is the layer. Two policies with the same barrier kind at different layers are not the same policy, and the delta should say which layer each barrier is at, because that is what a buyer will ask when the barrier fails.
+
+## The Overlay Is Already Published, On The Other Site
+
+**The memo asks for a way for a customer to reuse most of the published ontology and override the rest, by declaring what they change rather than by forking.** That mechanism exists and is published, and it is not on the behaviour policy site.
+
+**The graphs site states it as three layers.** Shared facts, owned by nobody: the observable states that parties need not interpret identically to acknowledge. Per party formulas: each stakeholder applies its own rules to those shared nodes and gets its own answers. Declared bridges: explicit edges connecting one party's formula to another's at a stated point, such as one party's material mapped to another's reportable under stated conditions. And the operative rule, quoted: **"a third party can add a mapping edge without touching either node."** The site is explicit that vocabularies are made compatible rather than merged, and that this is why an ontology of ontologies is needed.
+
+**That is the customer overlay, exactly.** The shared facts are the published vocabulary: the twenty three primitives, the four barrier kinds, the undo classes, the object classes and reaches. The per party formula is the customer's classification: what counts as a record in their estate, which mandate template applies to which role, what their threshold for a bulk operation is. The declared bridges are the customer's overrides: this primitive maps to that internal control, this standard's crosswalk is taken and that one is not.
+
+**But the behaviour policy site says, in the summary read here, that no customisation layer exists, that a policy is derived from one deployment, and that it is not a template.** If that reading is accurate, the estate has published the object on one site and the mechanism for extending it on another, and neither page points at the other. **The fix is not new design. It is one section on the behaviour policy site that says the overlay is the three layer model, and one link.**
+
+## The Customer Authors Formulas And Bridges, Never Deltas
+
+**The two statements look contradictory and are not, once the rule that separates them is written down.**
+
+**Not a template means the delta is derived from one deployment and is never authored.** That is the ruling of 11 September and it stands. Nobody, including the customer, writes a delta.
+
+**Reuse most of it means the vocabulary and the mappings are shared, and the customer changes a fraction by declaration.** That is the three layer model and it stands too.
+
+**The rule that holds both is: the customer authors formulas and bridges, and never deltas.** A formula is theirs to write, because it is their classification of shared facts. A bridge is theirs to declare, because it is their statement of how their vocabulary meets somebody else's. The delta is not theirs to write, because it is computed from the grant and the mandate, and if the customer's formulas change the grant's classification, the delta re-derives. **The customer's overrides move the inputs. They never touch the output.**
+
+**This is also what makes the override safe to publish.** A bridge is an edge with a verb and a provenance. It can be shown, versioned, argued with and superseded, which is the graphs site's own list of what a formula must be. A hand edited delta could be none of those things, which is why the ruling forbids it.
+
+## The Open Line Falls Where The Vault Wall Is
+
+**The memo places the open source material and the proprietary material on opposite sides of a line and asks where the line is.** The estate already answered this on 4 September: the library is free and the instance is paid. The fractal work sharpens the answer to a physical location.
+
+**Everything on the shared side is a graph anyone can read.** Each standard defines its own taxonomy and uses it, which the memo notes and the fractal page confirms with the AIUC-1 vault, where the standard's controls are a graph of 2,788 nodes. The mappings between standards are declared bridges, and once one party has mapped a risk to a control in a widely used standard, everybody else's mapping is the same edge, because they are all following the same text. **So the shared side is large, repetitive across customers, and licensed permissively, which is exactly the profile of something that should be published once.**
+
+**Everything on the customer's side is a formula or a bridge, and it lives in the customer's vault.** That is not a licensing decision layered on top of the architecture. It is where the vault wall already is. The customer's world is encrypted with a key the estate does not hold, and the shared world is a static site with a machine readable index. **The open line is the boundary of the ciphertext.**
+
+**One wiring gap follows.** The memo's flow is that the standards site publishes each standard's ontology and the bridges between them, and the behaviour policy site consumes them. On the reading taken here the behaviour policy site does not link the standards site at all, and the standards site states in capitals that zero crosswalks exist between any two instruments, with the crosswalks that do exist living in the AIUC-1 vault instead. **So the flow the memo describes is the right flow and none of its three legs is connected today.**
+
+## Two Meanings Of Twin In One Week
+
+**The memo calls the customer's overlay almost a digital twin, a representation of the customer's reality.** Yesterday's tool site memo used the same word for the primitive that performs actions and triggers connections, which is an actor. **A representation and an actor are different things, and a term that means both will be misread in the direction the reader already expects.**
+
+**The 4 September ruling is not to coin a noun and to name for the buyer's question.** Digital twin is a borrowed noun with a settled meaning in engineering, where it is a simulation kept in step with a physical asset, which is closer to the memo's first sense than its second. **The recommendation is to use the graphs site's own word for the first sense, which is the customer's formula layer, and to find a plain word for the second before it appears on a page.** Neither needs the word twin.
+
+## Rules Of Engagement For The Behaviour Policy Site
+
+**The memo asks to start defining them. Eight are proposed, and five of them are already rulings elsewhere in the estate, restated for this site.**
+
+| # | Rule | Where it comes from |
+|---|---|---|
+| 1 | The vocabulary is shared, permissively licensed, and published once | The library and instance ruling, 4 September |
+| 2 | The customer authors formulas and bridges, and never deltas | This brief, reconciling 11 September with the three layer model |
+| 3 | An override is a declared edge, never an edit to a shared node | The graphs site's rule on adding a mapping edge without touching either node |
+| 4 | Every layer names its enforcer, and the barrier kind is a property of the layer | This brief, from the enforcer test |
+| 5 | Standards are consumed from the standards site, not copied into the behaviour policy site | The memo's flow, not yet wired |
+| 6 | The record is published and never the verdict | Standing, already on the site |
+| 7 | Named gaps are listed and unnamed ones are not allowed to exist | The fractal page's own closing rule |
+| 8 | Every page says where the next piece is, and the link carries a verb | The next section |
+
+**Rules 2, 4 and 8 are new. The rest are consolidation.** Consolidation is worth doing because a reader of the behaviour policy site currently has to have read four other sites to know the rules it operates under, and the memo is right that the site is going to be the place these materials live.
+
+## Links Are Edges, So Name The Verb
+
+**The memo asks for indexes and references so everything can be hyperlinked, with the principle that each page tells you where to find the next piece.** The fractal page already does part of this: every page has a markdown twin, the vault list is machine readable, and the grammar is published for agents.
+
+**What the estate has not applied is its own first rule to its own links.** A hyperlink between two sites is an edge. An edge whose only label is see also, or related, or more here, is the banned verb applied to a website. **If the grammar is that an edge is a verb with an inverse, then a cross site link should say what the target is to the source**: the behaviour policy site consumes vocabulary from the standards site; the standards site is consumed by the behaviour policy site. The graphs site defines the grammar the behaviour policy site is written in; the behaviour policy site is written in the grammar the graphs site defines.
+
+**This is not decoration. It is what makes an index navigable by an agent.** An agent following a link labelled see also learns nothing about why it went there. An agent following a link labelled defines the grammar for knows what it will find and whether it needs it. **The index the memo wants is the set of these edges, and it can be generated from them rather than written.**
+
+**A short verb set for the network is enough to start**: defines, is defined by; consumes, is consumed by; instantiates, is instantiated by; enforces, is enforced by; supersedes, is superseded by; evidences, is evidenced by. Six pairs, all already in use on one site or another, applied to the links between them.
+
+## What This Does Not Try To Be
+
+**It is not the rules of engagement.** Eight are proposed as a starting list, three of them new, and adopting them is the project lead's decision.
+
+**It is not a specification of the overlay.** The three layer model is located and the reconciling rule is stated. The file format for a customer's formulas and bridges is not designed here.
+
+**It is not a claim about what the behaviour policy site says at the byte level.** Two of its findings, that no customisation layer exists and that the standards site is not linked, come through a summarising tool and should be checked on the raw page before anything is changed.
+
+**It is not the usage brief.** The memo says a separate memo on making a policy easy to work is coming, and this document leaves that ground alone.
+
+**And it is not a critique of the word twin beyond noting that it is doing two jobs.**
+
+## Honest Tensions
+
+**The ladder of enforcers is clean and the real stack is not.** A vendor's product can call the platform through more than one path, a model can be routed through a proxy that adds a real boundary, and a skill can be enforced by a hook rather than by cooperation. The monotone weakening is the default shape and not a law, and the site should say default rather than always.
+
+**Reuse most of it is a claim about customers the estate has not yet had.** The published policies are derived from five deployments the estate chose. Whether a customer's overrides land at a tenth or at half is unknown, and if it is half, the shared side is smaller than the memo hopes and the open line is less clean.
+
+**Consolidating rules onto the behaviour policy site duplicates them.** Five of the eight are rulings that live elsewhere. Restating them creates a second copy that can drift, which is the documentation defect found on 19 September in another part of the estate. The mitigation is to state each one as a link with a verb rather than as a restatement, which is rule 8 applied to rules 1 to 7.
+
+**Typed links cost more to write than see also, and most pages will be written in a hurry.** The verb set is short, but a discipline that is applied to nine pages out of ten produces an index with holes in it, and an index with holes is worse for an agent than no index because it looks complete.
+
+**And placing the open line at the vault wall makes the customer's overrides invisible to the estate by construction.** That is correct for the customer and it means the estate will never see which parts of its vocabulary get overridden most, which is the signal it would most like to have for improving the shared side.
+
+## Open Questions
+
+**Does the behaviour policy site actually say no customisation layer exists, or did the summarising tool infer it?** This decides whether the fix is one section or one sentence.
+
+**What is the file format for a customer's formulas and bridges inside their vault?** The graphs site describes the layer and the behaviour policy site describes the objects. Neither describes how a bridge is written down.
+
+**Where does the barrier position live in the published schema today?** It was proposed on 12 September. Whether the data files carry it decides whether the ladder of enforcers can be computed or only drawn.
+
+**Which site owns the verb set for cross site links?** The graphs site owns the grammar. Whether it also owns the network's link vocabulary, or the behaviour policy site does, or the hub does, is a naming decision with the same shape as the tool site one.
+
+**What is risks.sgit.ai?** The behaviour policy site refers to it as the place a named person signs. It was not read and it may be the site where the overlay actually lands.
+
+**And can the shared side learn from overrides it cannot see?** An aggregate signal, such as which primitives are most often bridged, would improve the vocabulary and would require the customer to publish something. Whether any customer would is unknown.
+
+## Relationship To Previous Briefs
+
+| Date | Document | Relationship |
+|---|---|---|
+| 4 Sep | The library and instance ruling, and the ruling against coining a noun | The open line placed at the vault wall is the first restated; the twin question is the second applied |
+| 11 Sep | The ruling that the delta is derived and never authored | Preserved and reconciled with reuse by the rule that the customer authors formulas and bridges only |
+| 12 Sep | The brief on every routable address being in the grant, with barrier position and expiry fields | The position field is given its meaning as the layer in the ladder of enforcers |
+| 12 Sep | The correction that a guardrail is a property of one deployment and not of the model | Places the model row in the ladder |
+| 19 Sep | The two mailbox briefs of that day | Place the connector row and the platform row; this brief stacks them |
+| 19 Sep | The fractal semantic graphs page, read 20 September | Supplies the test the behaviour policy is checked against, and the three layer model on its sibling site |
+
+## Key Claims
+
+| # | Claim |
+|---|---|
+| 1 | The behaviour policy passes the fractal test on its first edge, because following a capability, a barrier or a mandate lands in a world with a different vocabulary and a different owner |
+| 2 | The mail stack is a ladder of enforcers, and each layer has its own ontology and its own barrier kind |
+| 3 | The barrier kind is a property of the layer, not of the control, and the layers are ordered |
+| 4 | The only true boundaries sit adjacent to the platform, and every layer above weakens to an expectation, so the further a control sits from the platform the less it binds |
+| 5 | The overlay the memo asks for is the graphs site's three layer model, published with the rule that a mapping edge is added without touching either node |
+| 6 | The behaviour policy site, on the reading taken here, states that no customisation layer exists and does not link the standards site, so object and mechanism sit on two unconnected sites |
+| 7 | Not a template and reuse most of it are reconciled by one rule: the customer authors formulas and bridges, and never deltas |
+| 8 | The open line falls where the vault wall is, which is the library and instance ruling given a physical location |
+| 9 | The memo's flow from the standards site to the behaviour policy site has none of its legs connected today, and the standards site states that zero crosswalks exist |
+| 10 | The word twin has been given two meanings in one week, a representation and an actor, and should be given one job or none |
+| 11 | Eight rules of engagement are proposed, of which three are new and five consolidate existing rulings |
+| 12 | A cross site link is an edge, so it should carry a verb, and the index the memo wants can be generated from those verbs rather than written |
+
+## Sources
+
+- The Agent Behaviour Policy site, read 20 September 2026 for the four objects, the model pages, the five worked deployments, the statement on customisation and templates, the reference to risks.sgit.ai, and the contribution route. https://abp.sgit.ai/
+- The graphs site's depth page, read for the three layer model, the rule on adding a mapping edge without touching either node, and the requirement that formulas be visible, versioned, inspectable and arguable. https://graphs.sgit.ai/v1/depth/index.html
+- The fractal semantic graphs page, read 19 and 20 September 2026 for the definition, the test for the word, the ladder, the AIUC-1 numbers and the closing rule on named gaps. https://sgit.ai/demos/fractal-graphs/index.html
+- The standards site, as characterised on the fractal page, for the statement that one instrument is modelled and that zero crosswalks exist between instruments. https://standards.sgit.ai/
+- The project lead's voice memo of 20 September 2026, for the altitudes within the behaviour policy, the reuse and override argument, the open and proprietary line, the mail stack as a ladder, and the request for rules, indexes and references
+
+This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+---
+
+*[Site index for agents](../../../llms.txt) · [HTML version](https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-behaviour-policy-is-already-a-fractal-and-the-overlay-is-already-published/index.html)*

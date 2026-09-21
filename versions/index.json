@@ -1,7 +1,14 @@
 {
-  "current": "v0.5.1",
+  "current": "v0.6.0",
   "_what_this_is": "The version surface. The badge in the site chrome reads `current` from this file, so the badge cannot drift from the tag: the tag is derived from admin/build/version.txt and this file is generated from the same string.",
   "versions": [
+    {
+      "version": "v0.6.0",
+      "date": "2026-09-21",
+      "title": "a walkthrough for somebody who has connected an assistant to their own mailbox: four pages, thirteen prompts, and a fourth page that says what a prompt cannot do",
+      "file": "v0.6.0.json",
+      "page": "v0.6.0/index.html"
+    },
     {
       "version": "v0.5.1",
       "date": "2026-09-21",

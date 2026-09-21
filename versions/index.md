@@ -2,7 +2,7 @@
 
 > Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
-*Source: <https://abp.sgit.ai/versions/index.html> · site v0.5.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/index.html> · site v0.6.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -16,6 +16,7 @@ Every release of this site. **The badge in the top bar reads `current` from [`ve
 
 | Version | Date | What changed |
 |---|---|---|
+| [v0.6.0](../versions/v0.6.0/index.md) | 2026-09-21 | a walkthrough for somebody who has connected an assistant to their own mailbox: four pages, thirteen prompts, and a fourth page that says what a prompt cannot do |
 | [v0.5.1](../versions/v0.5.1/index.md) | 2026-09-21 | the articles run newest first, carry their version in the title, and link to the release before and after them |
 | [v0.5.0](../versions/v0.5.0/index.md) | 2026-09-20 | the releases get one article each, with the screenshots taken from the tag each one names rather than from today's site |
 | [v0.4.4](../versions/v0.4.4/index.md) | 2026-09-20 | seven shapes contributed by riskmandate.ai are promoted with their provenance, a vendor scope becomes a node, and the intake path is the same for anybody |

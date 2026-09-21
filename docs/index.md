@@ -2,7 +2,7 @@
 
 > Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
 
-*Source: <https://abp.sgit.ai/docs/index.html> · site v0.5.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/index.html> · site v0.6.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -34,6 +34,27 @@ The foundation document first, then the three briefs behind it. Published as wri
 
 **[The Prohibitions Are The Exclusions: Your Own Demo Says No Policy Covers The Delta, And The Insurance Act Says How](../docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.md)**: version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever plans the ladder from the behaviour policy to everything above it, and whoever talks to an underwriter first
 [the source bytes](../docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how.md)
+
+**[No Gmail Scope Lets An Agent Draft Without Letting It Send: The Drafts Have To Leave The Mailbox, And The Trifecta Is Broken By Credential Rather Than By Classifier](../docs/briefs/v0.33.71__arch-brief__no-gmail-scope-lets-an-agent-draft-without-letting-it-send/index.md)**: version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, whoever builds the inbound pipeline for the published address, and legal
+[the source bytes](../docs/briefs/v0.33.71__arch-brief__no-gmail-scope-lets-an-agent-draft-without-letting-it-send.md)
+
+**[The Behaviour Policy Is Already A Fractal And The Overlay Is Already Published: The Customer Authors Formulas And Bridges And Never Deltas, And The Barrier Weakens With Every Layer Above The Platform](../docs/briefs/v0.33.71__arch-brief__the-behaviour-policy-is-already-a-fractal-and-the-overlay-is-already-published/index.md)**: version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, the owners of abp.sgit.ai, graphs.sgit.ai and standards.sgit.ai, whoever builds the indexes
+[the source bytes](../docs/briefs/v0.33.71__arch-brief__the-behaviour-policy-is-already-a-fractal-and-the-overlay-is-already-published.md)
+
+**[The Split Does Not Break The Trifecta, The Schema Does: A Closed Vocabulary At The Boundary Is The Control, And The Orchestrator Should Not Hold The Mailbox](../docs/briefs/v0.33.71__arch-brief__the-split-does-not-break-the-trifecta-the-schema-does/index.md)**: version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, whoever writes the command line tool and the vault application
+[the source bytes](../docs/briefs/v0.33.71__arch-brief__the-split-does-not-break-the-trifecta-the-schema-does.md)
+
+**[The Transition Demotes An Imperative To A Proposition: The Ontology Bounds The Space And Never The Choice, And A Requested Action Is Not An Authorised One](../docs/briefs/v0.33.71__arch-brief__the-transition-demotes-an-imperative-to-a-proposition/index.md)**: version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, the graph grammar owners, whoever builds the extraction stage
+[the source bytes](../docs/briefs/v0.33.71__arch-brief__the-transition-demotes-an-imperative-to-a-proposition.md)
+
+**[The Twin Of The Interface Is The Grant In Machine Readable Form: Three Twins Are Needed Rather Than One, And The Mandate Check Becomes A Traversal Between Them](../docs/briefs/v0.33.71__arch-brief__the-twin-of-the-interface-is-the-grant-in-machine-readable-form/index.md)**: version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, and whoever builds the first mailbox vault
+[the source bytes](../docs/briefs/v0.33.71__arch-brief__the-twin-of-the-interface-is-the-grant-in-machine-readable-form.md)
+
+**[Marking Everything Read Destroys This User And Breaks Nothing: The Grant Cannot Tell Filing From Erasing A Task List, And The Control Is A Snapshot Rather Than A Prompt](../docs/briefs/v0.33.71__strategy-brief__marking-everything-read-destroys-this-user-and-breaks-nothing/index.md)**: version v0.33.71 date 19 September 2026 from Human (project lead) to Strategy, the Agent Behaviour Policy team, the RiskMandate product owner, whoever takes the skills site
+[the source bytes](../docs/briefs/v0.33.71__strategy-brief__marking-everything-read-destroys-this-user-and-breaks-nothing.md)
+
+**[The Consent Dialog Is An Accountability Transfer Rather Than A Decision: The User Is Asked At The Moment They Know Least, And The Irreversible Gmail Action Sits In Google's Least Guarded Tier](../docs/briefs/v0.33.71__strategy-brief__the-consent-dialog-is-an-accountability-transfer-rather-than-a-decision/index.md)**: version v0.33.71 date 19 September 2026 from Human (project lead) to Strategy, the Agent Behaviour Policy team, the RiskMandate product owner, whoever builds the first grant viewer
+[the source bytes](../docs/briefs/v0.33.71__strategy-brief__the-consent-dialog-is-an-accountability-transfer-rather-than-a-decision.md)
 
 **[The ABP Is A Fractal Semantic Graph: One Row Crosses Nine Universes, Each Keeps Its Own Ontology, And The Ladder Runs Up To The Estate Of Agents](../docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.md)**: version v0.4.0 date 20 September 2026 from The site's agent, for the project lead to Whoever models the ABP graph, whoever builds the pages of abp.sgit.ai, and the teams at riskmandate.ai and store.sgit.ai who render against its data
 [the source bytes](../docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology.md)

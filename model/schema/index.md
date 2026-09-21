@@ -2,7 +2,7 @@
 
 > What is in the published files, what this site added to the data it promoted, and the two rules a consumer and a contributor each have to follow.
 
-*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.5.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.6.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -39,7 +39,7 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 
 ## The two rules
 
-> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.5.1`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
+> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.6.0`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
 
 > **A proposal carries evidence.** Every node taken from a third party site carries a source URL, a retrieval timestamp and a content hash. A proposal that changes a capability row without one is an assertion, and this site publishes capability claims about named commercial products.
 

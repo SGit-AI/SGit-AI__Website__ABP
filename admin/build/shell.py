@@ -148,6 +148,21 @@ def render_html(blocks, up):
             out.append(f'<div class="disclose">{inline_html(args[0], up)}</div>')
         elif kind == "pre":
             out.append(f'<pre class="shell">{html.escape(args[0])}</pre>')
+        elif kind == "prompt":
+            # A PROMPT IS CONTENT THAT LEAVES THE PAGE. It is written to be pasted into
+            # somebody else's session, so it gets a copy button, a stated purpose, and a
+            # heading a reader can scan for. The twin renders the same text in a fenced
+            # block: a reader of the markdown must be able to use the prompt without
+            # visiting the page, which is the same rule every other block here follows.
+            cfg = args[0]
+            body_txt = html.escape(cfg["text"])
+            out.append(
+                f'<figure class="prompt"><figcaption><span class="ptag">{cfg["tag"]}</span>'
+                f'<b>{inline_html(cfg["title"], up)}</b>'
+                f'<span class="psub">{inline_html(cfg["what"], up)}</span></figcaption>'
+                f'<pre class="ptext">{body_txt}</pre>'
+                f'<button class="pcopy" type="button" data-copy>Copy this prompt</button>'
+                f'</figure>')
         elif kind == "table":
             head = "".join(f"<th>{inline_html(h, up)}</th>" for h in args[0])
             rows = "".join(
@@ -195,6 +210,10 @@ def render_md(blocks, up):
             out.append("> " + inline_md(args[0], up).replace("\n", "\n> "))
         elif kind == "pre":
             out.append("```\n" + args[0] + "\n```")
+        elif kind == "prompt":
+            cfg = args[0]
+            out.append(f'**{cfg["tag"]}: {strip(cfg["title"])}.** {strip(cfg["what"])}\n\n'
+                       + "```\n" + cfg["text"] + "\n```")
         elif kind == "table":
             head = "| " + " | ".join(args[0]) + " |"
             rule = "|" + "|".join("---" for _ in args[0]) + "|"
@@ -369,6 +388,8 @@ def write_site(root, site, nav, footer, pages, version, version_log):
         needs_embed = any(b[0] == "embed" for b in blocks)
         scripts = (f'<script src="{up}assets/vault-app-embed.js" defer></script>\n'
                    if needs_embed else "")
+        if any(b[0] == "prompt" for b in blocks):
+            scripts += f'<script src="{up}assets/copy.js" defer></script>\n'
         title = f'{page["title"]} - {site["host"]}' if rel != "index.html" else page["title"]
         out = PAGE.format(
             title=html.escape(title, quote=True),

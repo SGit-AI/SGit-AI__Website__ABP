@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Twin Of The Interface Is The Grant In Machine Readable Form: Three Twins Are Needed Rather Than One, And The Mandate Check Becomes A Traversal Between Them - abp.sgit.ai</title>
+<meta name="description" content="version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, and whoever builds the first mailbox vault">
+<link rel="canonical" href="https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-twin-of-the-interface-is-the-grant-in-machine-readable-form/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-twin-of-the-interface-is-the-grant-in-machine-readable-form/index.html">
+<meta property="og:title" content="The Twin Of The Interface Is The Grant In Machine Readable Form: Three Twins Are Needed Rather Than One, And The Mandate Check Becomes A Traversal Between Them - abp.sgit.ai">
+<meta property="og:description" content="version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, and whoever builds the first mailbox vault">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../../versions/v0.6.0/index.html" title="What changed in v0.6.0, and the commit it was built from">v0.6.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../model/index.html">The four objects</a>
+      <a class="sl" href="../../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../examples/index.html">All five</a>
+      <a class="sl" href="../../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../gmail/index.html">Your mailbox<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../gmail/index.html">The walkthrough</a>
+      <a class="sl" href="../../../gmail/what-it-can-do/index.html">Step 1: What it can already do</a>
+      <a class="sl" href="../../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a>
+      <a class="sl" href="../../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a>
+      <a class="sl" href="../../../gmail/what-a-prompt-cannot-do/index.html">Step 4: What a prompt cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../articles/index.html">One per release</a>
+      <a class="sl" href="../../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../../articles/one-article-per-release/index.html">v0.5.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../../index.html">Home</a> / <a href="../../../docs/index.html">Docs</a> / <a href="../../../docs/index.html#briefs">The briefs</a> / The Twin Of The Interface Is The Grant In Machine Readable Form: Three Twins Are Needed Rather Than One, And The Mandate Check Becomes A Traversal Between Them</p>
+  <h1>The Twin Of The Interface Is The Grant In Machine Readable Form: Three Twins Are Needed Rather Than One, And The Mandate Check Becomes A Traversal Between Them</h1>
+  <div class="note"><b>The source bytes.</b> This page is generated from <a href="../../../docs/briefs/v0.33.71__arch-brief__the-twin-of-the-interface-is-the-grant-in-machine-readable-form.md"><code>docs/briefs/v0.33.71__arch-brief__the-twin-of-the-interface-is-the-grant-in-machine-readable-form.md</code></a>, which is served unchanged. Anything rendered on this network stays one click from the file it came from.</div>
+  <p><b>version</b> v0.33.71 <b>date</b> 20 September 2026 <b>from</b> Human (project lead) <b>to</b> Architecture, the Agent Behaviour Policy team, and whoever builds the first mailbox vault</p>
+  <p><b>type</b> Architecture brief</p>
+  <p><em>Sixth of the mailbox series, written as part of the handover pack for a session that will build the first working vault. The memo of 20 September asks for twins to be used inside the semantic graphs and, separately, for a twin of the mail platform's interface and a twin of the assistant's connector to that interface. This brief settles what a twin is here, argues that three are needed rather than two, and identifies what a twin actually buys, which is larger than a test harness. Limitations: no twin has been built; the field lists below are sketched from the interface facts established in the four earlier mailbox briefs and are not a complete reading of the platform's reference; the connector's tool surface has not been enumerated against a live deployment and that enumeration is the first task in the build order; and the word twin is used here in one of the two senses it has been given this week, with the other sense left needing a name.</em></p>
+  <h2 id="what-this-is">What This Is</h2>
+  <p>Three representations, what each is for, and the join that makes the mandate computable: <b>the memo asks for a twin of the mail platform's programming interface and a twin of the assistant's connector to it, and notes that twins will also be used inside the semantic graphs; settling the word first, a twin here is a modelled representation of a system that the estate does not control, written in the estate's own grammar, kept in step with the original and carrying the date and source of every claim, which is the sense the engineering world already gives the term and is not the sense used in the tool site memo of 19 September, where a twin was an actor that performs actions, so the second sense still needs a different word before either reaches a page; three twins are needed rather than the two the memo names, being the platform interface, the assistant's connector, and the mailbox itself, because they sit at three different layers of the enforcer ladder and carry three different barrier kinds; the first of these is worth more than a test harness, because a complete twin of the interface is the grant in machine readable form, so the grant column of a behaviour policy can be derived from it rather than authored, which is the ruling of 11 September satisfied by construction rather than by discipline; the second is where the interesting gap lives, since a connector typically exposes fewer capabilities than its authorisation grants, and the difference between what the scopes permit and what the tools offer is a real if weak barrier that nobody currently records; the third is the sample mailbox already argued for, whose value is that the whole pipeline can be exercised and attacked with no credential in existence; and the payoff that justifies building all three is that the mandate check stops being a rule engine and becomes a traversal, because a requested action in the message universe can be joined by a named edge to a method in the interface universe, and from there to the scope it requires, the reach it has and whether it can be undone, which means the question of whether an agent may do a thing is answered by walking a graph rather than by consulting prose.</b> New contributions: <b>the word settled in one sense with the other left open; three twins rather than two, each mapped to a layer of the enforcer ladder; the twin of the interface identified as the grant itself, which changes what it is for; the connector gap named as an unrecorded barrier; the mandate check expressed as a traversal with the joining edges given; a staleness discipline, since a twin of something you do not control is wrong the moment the original changes; and the minimum viable version of each twin for the first build.</b></p>
+  <h2 id="what-a-twin-is-here-and-what-it-is-not">What A Twin Is Here, And What It Is Not</h2>
+  <p><b>A twin is a modelled representation of a system the estate does not control, written in the estate's own grammar, kept in step with the original, with every claim carrying its source and the date it was last verified.</b></p>
+  <p><b>It is not a copy, a mock or a stub.</b> A mock imitates behaviour for a test. A twin describes a system so that questions can be asked of the description. The distinction matters because the first thing anybody will try to build is a mock, and a mock cannot answer the question this design needs answered, which is what the real thing permits.</p>
+  <p><b>And it is not the other thing the word was used for this week.</b> The memo of 19 September used twin for the primitive that performs actions and triggers connections, which is an actor. A representation and an actor are different objects and the term cannot carry both. <b>The recommendation stands: keep twin for the representation, since that matches the settled engineering meaning, and find a plain word for the actor before either appears on a page.</b></p>
+  <h2 id="three-twins-not-two-because-there-are-three-layers">Three Twins, Not Two, Because There Are Three Layers</h2>
+  <p><b>The ladder of enforcers established on 20 September says the barrier kind is a property of the layer. Each twin describes one layer and inherits its barrier kind.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Twin</th><th>What it models</th><th>Whose enforcement</th><th>Barrier kind at that layer</th></tr></thead><tbody><tr><td><b>Interface twin</b></td><td>The mail platform's programming interface: scopes, methods, objects, limits, reversibility</td><td>The platform, which is outside everything above it</td><td><b>Boundary</b></td></tr><tr><td><b>Connector twin</b></td><td>The assistant's tool surface over that interface: which tools exist, what each calls, what triggers a prompt</td><td>The vendor's product, outside the model</td><td>Boundary in form, expectation in effect</td></tr><tr><td><b>Mailbox twin</b></td><td>One user's actual mail, labels, threads and read state, as data</td><td>Nobody. It is the subject, not a control</td><td>Not applicable</td></tr></tbody></table></div>
+  <p><b>The memo names the first two. The third has already been argued for</b> as the sample mailbox that lets the pipeline be exercised with no credential in existence, and it belongs in the same family because it is built the same way and lives in the same vault.</p>
+  <h2 id="the-interface-twin-is-the-grant">The Interface Twin Is The Grant</h2>
+  <p><b>This is the finding that changes what the twin is for.</b></p>
+  <p><b>A behaviour policy has four objects: the grant, the mandate, the delta and the barrier. The grant is everything the agent can do, and the standing ruling is that the delta is derived and never authored.</b> For that derivation to be honest the grant must itself be derived, and until now the grant has been assembled by reading documentation and writing rows.</p>
+  <p><b>A complete twin of the interface removes that step.</b> If the twin holds every scope with its sensitivity tier, every method with the scopes it requires, the object class it touches, the reach it has and whether its effect can be undone, then the grant for a given authorisation is a query: <b>which methods are reachable with the scopes this deployment holds.</b> Nobody writes the rows. The rows fall out.</p>
+  <p><b>Shape of it, in the estate's own grammar.</b> Nodes are typed, edges are verbs with inverses, properties carry data and never meaning.</p>
+  <pre class="shell">(Scope  id=gmail.labels  tier=non-sensitive)
+(Scope  id=gmail.send    tier=sensitive)
+(Scope  id=gmail.modify  tier=restricted)
+
+(Method id=labels.delete)
+   --requires_scope--&gt;  (Scope gmail.labels)
+   --mutates--&gt;         (ObjectClass Label)
+   --has_reach--&gt;       (Reach tenant)
+   --undo_class--&gt;      (Undo none)          # no recovery path exists
+
+(Method id=messages.batchModify)
+   --requires_scope--&gt;  (Scope gmail.modify)
+   --mutates--&gt;         (ObjectClass Message)
+   --bounded_by--&gt;      (Limit ids_per_request=1000)
+   --returns--&gt;         (Response empty)     # no receipt
+
+(Method id=drafts.create)  --requires_scope--&gt; (Scope gmail.compose)
+(Method id=drafts.send)    --requires_scope--&gt; (Scope gmail.compose)</pre>
+  <p><b>Those last two lines are the whole reason to build this.</b> The finding that no scope permits drafting without permitting sending took a direct reading of two reference pages to establish. In a twin it is a one line query: which pairs of methods share a required scope while differing in consequence. <b>A twin turns a finding that had to be noticed into a finding that can be asked for.</b></p>
+  <p><b>Minimum viable interface twin, for the first build:</b> the seven or eight scopes with their tiers, the dozen methods this workflow can reach, and for each method the scope, object class, reach, undo class and any hard limit. Perhaps sixty nodes. Every one carrying the reference page it came from and the date it was read.</p>
+  <h2 id="the-connector-twin-is-where-the-unrecorded-gap-lives">The Connector Twin Is Where The Unrecorded Gap Lives</h2>
+  <p><b>The interface twin says what the platform permits. The connector twin says what the assistant is actually offered, and the two are not the same.</b></p>
+  <p><b>A connector typically exposes fewer capabilities than its authorisation grants.</b> The scopes may permit label deletion while the tool surface offers no delete tool. That difference is a real constraint on what can happen, it is enforced by the vendor's product rather than by the model, and <b>nobody currently records it anywhere.</b></p>
+  <p><b>So the connector twin has its own node type and one important edge back to the first twin.</b></p>
+  <pre class="shell">(Tool id=send_email  surfaced_by=connector)
+   --invokes--&gt;          (Method messages.send)
+   --gated_by--&gt;         (Approval per-action  default=on  overridable_by=workspace-owner)
+   --prompt_shows--&gt;     (Field action_class)   # and not the object, the count or the reversibility
+
+(Scope gmail.labels) --granted_but_unreachable--&gt; (Gap no-tool-surfaces-label-deletion)</pre>
+  <p><b>Three things fall out of that and each is useful on its own.</b></p>
+  <p><b>The unreachable set is a barrier worth naming.</b> Capabilities the authorisation grants and the tool surface does not offer are bounded by the vendor's product. Weak, because a product update can surface a tool tomorrow, and real today. <b>It should appear in a behaviour policy as a barrier with a stated expiry, which is what the barrier expiry field proposed on 12 September was for.</b></p>
+  <p><b>The approval gate becomes a property rather than a claim.</b> Which tools prompt, what the prompt displays, and who can turn it off are fields, so the finding that the prompt names an action class and not its object stops being an observation in a brief and becomes a value in a graph.</p>
+  <p><b>And the delta between the two twins is computable.</b> What the scopes permit, minus what the tools offer, is the gap a platform update could close without anybody being told.</p>
+  <p><b>Minimum viable connector twin:</b> enumerate the tools the connector actually surfaces in a live deployment, map each to a method in the interface twin, and record the approval behaviour of each. <b>This enumeration has not been done and it is the first task in the build order</b>, because everything downstream depends on knowing what the tool surface actually is rather than what the documentation implies.</p>
+  <h2 id="the-mandate-check-becomes-a-traversal">The Mandate Check Becomes A Traversal</h2>
+  <p><b>This is the payoff, and it is what makes the twins worth the effort rather than merely tidy.</b></p>
+  <p><b>The previous brief established that a message becomes a graph in which a request is a proposition: <code>(Message) --requests--&gt; (RequestedAction)</code>.</b> The twins supply the other side. One joining edge connects the two universes:</p>
+  <pre class="shell">(RequestedAction class=resend-credential)
+   --would_require--&gt;  (Method messages.send)</pre>
+  <p><b>With that edge in place, the questions a mandate has to answer are all traversals.</b></p>
+  <div class="tablewrap"><table><thead><tr><th>Question</th><th>The walk</th></tr></thead><tbody><tr><td>What would this request actually do?</td><td><code>RequestedAction -&gt; would_require -&gt; Method -&gt; mutates -&gt; ObjectClass</code></td></tr><tr><td>Do we even hold the authorisation?</td><td><code>Method -&gt; requires_scope -&gt; Scope</code>, then test membership in the granted set</td></tr><tr><td>How far does it reach?</td><td><code>Method -&gt; has_reach -&gt; Reach</code></td></tr><tr><td>Could we undo it?</td><td><code>Method -&gt; undo_class -&gt; Undo</code></td></tr><tr><td>Is a person required?</td><td><code>RequestedAction -&gt; authorised_by -&gt; MandateClause</code>, or the absence of one</td></tr><tr><td>Is anything actually stopping it?</td><td><code>Method -&gt; bounded_by -&gt; Barrier</code>, and its kind and layer</td></tr></tbody></table></div>
+  <p><b>Which means the behaviour policy stops being prose that a component is asked to honour and becomes a set of edges a validator checks.</b> That is the difference between an expectation and something a tool can enforce, which is the test this series keeps returning to.</p>
+  <p><b>And it makes the delta per message rather than per deployment.</b> The published model computes a delta for an agent in a deployment. With the twins joined, every inbound message produces its own small delta: here is what it asked for, here is what that would require, here is what you authorised, here is the difference. <b>That is a far more sellable artefact than a static table, and it only exists because two universes were joined by a named edge.</b></p>
+  <h2 id="a-twin-of-something-you-do-not-control-is-wrong-the-moment-i">A Twin Of Something You Do Not Control Is Wrong The Moment It Changes</h2>
+  <p><b>The honest half. A twin drifts, silently, because the original is not obliged to tell anybody.</b></p>
+  <p><b>Every node carries its provenance and its verification date.</b> The reference page it came from, the date it was read, and a hash of the retrieved bytes where the source is stable enough to hash. The regulation graph in the published estate does exactly this and ends every provenance chain in a hash of the retrieved bytes; the same discipline applies here for the same reason.</p>
+  <p><b>Every twin carries a staleness statement on its face.</b> Verified on this date, against these sources, and here is what has not been checked since.</p>
+  <p><b>Corrections supersede rather than overwrite</b>, which is the published grammar rule, and it matters more here than anywhere else in the estate: when a scope's behaviour changes, the old node is what every prior decision was made against, and deleting it destroys the record of why those decisions looked right.</p>
+  <p><b>And a twin states what it does not model.</b> Rate limits not measured, error behaviours not enumerated, undocumented endpoints not represented. <b>A twin that does not list its own gaps will be trusted for things it cannot answer</b>, which is the failure mode of every model of an external system.</p>
+  <h2 id="where-the-twins-live">Where The Twins Live</h2>
+  <p><b>One vault, three directories, because they version together and are read together.</b></p>
+  <pre class="shell">twins/
+  interface/     scopes, methods, objects, limits, undo classes
+  connector/     tools, approvals, the granted-but-unreachable set
+  mailbox/       the sample mailbox: messages, labels, threads, read state
+  PROVENANCE.md  what was read, when, and what has not been checked since</pre>
+  <p><b>The mailbox twin is the one that must never contain real correspondence.</b> It is going to be attacked deliberately, published as a demonstration, and read by people who are not the mailbox's owner. Synthetic content, shaped like the real thing.</p>
+  <h2 id="build-order-for-the-twins">Build Order For The Twins</h2>
+  <p><b>One. Enumerate the connector's actual tool surface.</b> In a live deployment, list every tool the assistant is offered, and for each, the approval behaviour observed. This is the only step that cannot be done from documentation and everything else depends on it.</p>
+  <p><b>Two. Build the interface twin for the methods those tools reach</b>, plus the methods the scopes permit and no tool surfaces, because that set is the gap.</p>
+  <p><b>Three. Compute the grant from it</b> and compare against a grant written by hand. If the two differ, the twin is incomplete and the difference names what is missing.</p>
+  <p><b>Four. Build a small mailbox twin</b>, twenty synthetic messages including five hostile ones.</p>
+  <p><b>Five. Join the universes</b>, add <code>would_require</code> edges from a handful of requested action classes to methods, and answer the six traversal questions above by query rather than by reading.</p>
+  <h2 id="what-this-does-not-try-to-be">What This Does Not Try To Be</h2>
+  <p><b>It is not the twins.</b> Fragments are given to make the shape concrete; the field sets are sketches and the first real version will differ.</p>
+  <p><b>It is not a complete reading of the platform's reference.</b> The facts used here come from the four earlier mailbox briefs, each of which read specific pages for specific questions.</p>
+  <p><b>It is not a claim that the connector twin can be built from documentation.</b> It says the opposite: the tool surface must be enumerated from a running deployment.</p>
+  <p><b>It is not a model of the assistant itself.</b> The model layer is an expectation and modelling it would suggest otherwise.</p>
+  <p><b>And it does not settle the second meaning of the word.</b> It uses one and flags the other.</p>
+  <h2 id="honest-tensions">Honest Tensions</h2>
+  <p><b>A twin is a second copy of a truth somebody else owns, and second copies drift.</b> The provenance and staleness discipline detects drift rather than preventing it, and the detection only works if somebody re-reads the sources on a rhythm nobody has set.</p>
+  <p><b>The interface twin makes the grant derivable and makes it look more authoritative than it is.</b> A query result feels like a measurement. It is a query over a hand-built model of somebody else's system, and the confidence it projects is not the confidence it earns.</p>
+  <p><b>The connector gap is real today and expires without notice.</b> Recording a barrier whose basis is that no tool exists yet invites a behaviour policy to claim protection that a product update removes silently. The expiry field exists for exactly this and will be left empty by whoever is in a hurry.</p>
+  <p><b>Three twins is three things to maintain for a workflow that currently handles one mailbox.</b> The argument for building all three now is that the joins are the point and two twins do not join to anything. The argument against is that this is a great deal of modelling before a single message has been processed, and it is a fair argument.</p>
+  <p><b>And the mandate-as-traversal design is elegant in a way that should be suspected.</b> Every question becoming a graph walk is satisfying, and satisfaction is not evidence. The first time a real mandate needs a condition that is not expressible as an edge, the design will acquire a rule engine beside the graph, and the honest thing is to expect that rather than to resist it.</p>
+  <h2 id="open-questions">Open Questions</h2>
+  <p><b>Can the connector's tool surface be enumerated reliably, or does it vary by account and plan?</b> If it varies, the connector twin is per deployment rather than shared, which changes what can be published.</p>
+  <p><b>Where does <code>would_require</code> come from?</b> Somebody has to state that a requested action class maps to a method. That mapping is authored, which makes it the one hand-written link in an otherwise derived chain, and it deserves the same review as a taxonomy.</p>
+  <p><b>How often should a twin be re-verified?</b> Nobody has set a rhythm. Monthly is a guess.</p>
+  <p><b>Should the interface twin be published?</b> It is a useful, vendor-neutral, permissively licensed description of what a mail connector can do, which is a gap nobody fills. It also hands an attacker a map.</p>
+  <p><b>And does the mailbox twin need to be realistic to be useful?</b> Synthetic content is safe and may not exercise the extraction vocabulary the way real mail does, which would make the coverage measurement optimistic.</p>
+  <h2 id="relationship-to-previous-briefs">Relationship To Previous Briefs</h2>
+  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Document</th><th>Relationship</th></tr></thead><tbody><tr><td>11 Sep</td><td>The ruling that the delta is derived and never authored</td><td>Satisfied by construction here: the grant is a query over the interface twin</td></tr><tr><td>12 Sep</td><td>The brief adding barrier position and expiry fields</td><td>The connector gap is a barrier with an expiry, which is what that field was for</td></tr><tr><td>19 Sep</td><td>The two mailbox briefs</td><td>Supply the scope tiers, the label undo class and the batch limits that populate the interface twin</td></tr><tr><td>20 Sep</td><td>The mailbox pipeline brief</td><td>Established the sample mailbox as the harness, which is the third twin here</td></tr><tr><td>20 Sep</td><td>The split and the schema brief</td><td>Its closed boundary is what the twins give a vocabulary to</td></tr><tr><td>20 Sep</td><td>The universe transitions brief</td><td>Supplies the message universe that the twins join to by a single named edge</td></tr></tbody></table></div>
+  <h2 id="key-claims">Key Claims</h2>
+  <div class="tablewrap"><table><thead><tr><th>#</th><th>Claim</th></tr></thead><tbody><tr><td>1</td><td>A twin is a representation of a system the estate does not control, kept in step and carrying provenance, and is not a mock</td></tr><tr><td>2</td><td>The word is being used in two senses this week, a representation and an actor, and only the first is used here</td></tr><tr><td>3</td><td>Three twins are needed rather than two: the interface, the connector and the mailbox, matching three layers of the enforcer ladder</td></tr><tr><td>4</td><td>A complete interface twin is the grant in machine readable form, so the grant is queried rather than authored</td></tr><tr><td>5</td><td>The finding that drafting and sending share a scope becomes a one line query in a twin rather than something that had to be noticed</td></tr><tr><td>6</td><td>A connector usually exposes fewer capabilities than its authorisation grants, and that unreachable set is an unrecorded barrier with an expiry</td></tr><tr><td>7</td><td>What the prompt displays becomes a field in the connector twin rather than an observation in a brief</td></tr><tr><td>8</td><td>One joining edge, from a requested action to a method, turns the mandate check into a traversal</td></tr><tr><td>9</td><td>The delta becomes per message rather than per deployment, which is a more sellable artefact than a static table</td></tr><tr><td>10</td><td>A twin of an external system drifts silently, so every node carries provenance and every twin carries a staleness statement and its own gaps</td></tr><tr><td>11</td><td>The mailbox twin must be synthetic, because it will be attacked deliberately and published as a demonstration</td></tr><tr><td>12</td><td>The connector tool surface cannot be enumerated from documentation and must be read off a live deployment, which is the first build task</td></tr></tbody></table></div>
+  <h2 id="sources">Sources</h2>
+  <ul><li>The four earlier mailbox briefs of 19 and 20 September 2026, for the scope tiers, the identity of the draft and send scopes, the label undo class, the batch limits and the approval behaviour, each of which cites the platform reference page it was read from</li><li>The published fractal semantic graphs page, for the definition of a universe, the altitude vocabulary and the provenance discipline that ends every chain in a hash. https://sgit.ai/demos/fractal-graphs/index.html</li><li>The published grammar, for edges as verbs with inverses, properties carrying data and never meaning, and supersede never delete. https://graphs.sgit.ai/v1/grammar/index.html</li><li>The Agent Behaviour Policy site, for the four objects and the rule that the delta is derived. https://abp.sgit.ai/</li><li>The project lead's voice memo of 20 September 2026, for the request for twins of the interface and the connector and for their use inside the graphs</li></ul>
+  <p>This document is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).</p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../../versions/v0.6.0/index.html">v0.6.0</a> · <a href="../../../versions/index.html">all versions</a> · <a href="../../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../../docs/briefs/v0.33.71__arch-brief__the-twin-of-the-interface-is-the-grant-in-machine-readable-form/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../../model/index.html">The four objects</a>
+    <a href="../../../model/barriers/index.html">The barrier</a>
+    <a href="../../../examples/index.html">Five worked examples</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../../data/index.html">The published vocabulary</a>
+    <a href="../../../model/schema/index.html">The schema</a>
+    <a href="../../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../../docs/index.html">Docs</a>
+    <a href="../../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>
