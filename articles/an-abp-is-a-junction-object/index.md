@@ -2,7 +2,7 @@
 
 > Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
 
-*Source: <https://abp.sgit.ai/articles/an-abp-is-a-junction-object/index.html> · site v0.6.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/an-abp-is-a-junction-object/index.html> · site v0.6.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
 
-> **This is the article for release v0.4.0, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.0's own release record](../../versions/v0.4.0/index.md). It is release 4 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.1](../../articles/nine-universes-as-data/index.md), or back to [v0.3.0](../../articles/three-nodes-and-three-edges/index.md).
+> **This is the article for release v0.4.0, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.0's own release record](../../versions/v0.4.0/index.md). It is release 4 of 10 on this site. Every screenshot below was captured from a checkout of the `v0.4.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.1](../../articles/nine-universes-as-data/index.md), or back to [v0.3.0](../../articles/three-nodes-and-three-edges/index.md).
 
 ## A test this site had been quoting backwards
 

@@ -2,7 +2,7 @@
 
 > Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
 
-*Source: <https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html> · site v0.6.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html> · site v0.6.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
 
-> **This is the article for release v0.3.0, published 12 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.3.0's own release record](../../versions/v0.3.0/index.md). It is release 3 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.3.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.0](../../articles/an-abp-is-a-junction-object/index.md), or back to [v0.2.0](../../articles/a-rule-corrected-nine-hours-later/index.md).
+> **This is the article for release v0.3.0, published 12 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.3.0's own release record](../../versions/v0.3.0/index.md). It is release 3 of 10 on this site. Every screenshot below was captured from a checkout of the `v0.3.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.0](../../articles/an-abp-is-a-junction-object/index.md), or back to [v0.2.0](../../articles/a-rule-corrected-nine-hours-later/index.md).
 
 ## The model pages were a projection of nothing
 

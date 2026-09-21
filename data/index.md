@@ -2,7 +2,7 @@
 
 > The capabilities, barriers, undo classes, deployment shapes and mandates an ABP is written in, as JSON at stable addresses with cross origin access, with the source bytes they were promoted from.
 
-*Source: <https://abp.sgit.ai/data/index.html> · site v0.6.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/data/index.html> · site v0.6.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4 barriers**, **3 undo classes**, **16 deployment shapes** and **15 starting mandates**, at stable addresses with cross origin access.
 
-> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.6.0`.
+> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.6.1`.
 
 ## Where it came from, and what that obliges
 

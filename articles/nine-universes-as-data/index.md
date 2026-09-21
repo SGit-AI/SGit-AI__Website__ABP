@@ -2,7 +2,7 @@
 
 > A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
 
-*Source: <https://abp.sgit.ai/articles/nine-universes-as-data/index.html> · site v0.6.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/nine-universes-as-data/index.html> · site v0.6.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
 
-> **This is the article for release v0.4.1, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.1's own release record](../../versions/v0.4.1/index.md). It is release 5 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.1` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.2](../../articles/the-fact-diff-reads-the-published-page/index.md), or back to [v0.4.0](../../articles/an-abp-is-a-junction-object/index.md).
+> **This is the article for release v0.4.1, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.1's own release record](../../versions/v0.4.1/index.md). It is release 5 of 10 on this site. Every screenshot below was captured from a checkout of the `v0.4.1` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.2](../../articles/the-fact-diff-reads-the-published-page/index.md), or back to [v0.4.0](../../articles/an-abp-is-a-junction-object/index.md).
 
 ## A map in prose is a claim
 

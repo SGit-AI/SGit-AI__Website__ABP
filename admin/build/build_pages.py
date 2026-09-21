@@ -160,6 +160,35 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.6.1", "2026-09-21",
+     "the mailbox walkthrough gets its article, with six figures captured from the v0.6.0 tag",
+     {
+       "summary":
+         "One article per release is the rule, so the release that added the walkthrough gets "
+         "one. It covers why a section aimed at somebody who does not yet believe the argument "
+         "had to be prompts rather than a table, why the prompt became a block in the "
+         "vocabulary rather than raw markup on four pages, and why the fourth page is the "
+         "reason the other three are allowed to exist. Six screenshots, all captured from a "
+         "checkout of the v0.6.0 tag on the day it shipped.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "An article for v0.6.0, the tenth in the section, with six screenshots and the two "
+         "figures the walkthrough itself carries. It ends, as every article does, on what the "
+         "release did not settle: nothing in the walkthrough is measured by this site, the "
+         "published shape is one deployment on one date, and there is no way to check whether "
+         "the document a reader writes was kept to.",
+         "The screenshot helper takes the capture date rather than reading one module "
+         "constant, because these figures were captured a day after the first eight releases' "
+         "were and a caption that said otherwise would be the small lie the section exists to "
+         "avoid.",
+       ],
+       "basis": [
+         "The v0.6.0 tag, checked out into a detached worktree and served locally, which is "
+         "the same method every other article's figures were captured with.",
+       ],
+     }),
     ("v0.6.0", "2026-09-21",
      "a walkthrough for somebody who has connected an assistant to their own mailbox: four "
      "pages, thirteen prompts, and a fourth page that says what a prompt cannot do",
