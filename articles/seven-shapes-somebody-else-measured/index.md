@@ -1,8 +1,8 @@
-# Seven deployment shapes somebody else measured, promoted with their provenance intact
+# v0.4.4: Seven deployment shapes somebody else measured, promoted with their provenance intact
 
 > A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
 
-*Source: <https://abp.sgit.ai/articles/seven-shapes-somebody-else-measured/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/seven-shapes-somebody-else-measured/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10,11 +10,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.4.4
 
-# Seven deployment shapes somebody else measured, promoted with their provenance intact
+# v0.4.4: Seven deployment shapes somebody else measured, promoted with their provenance intact
 
 A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
 
-**v0.4.4**, 20 September 2026. [v0.4.4's own release record](../../versions/v0.4.4/index.md).
+> **This is the article for release v0.4.4, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.4's own release record](../../versions/v0.4.4/index.md). It is release 8 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.4` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.5.0](../../articles/one-article-per-release/index.md), or back to [v0.4.3](../../articles/the-confirmations-flag-as-a-path/index.md).
 
 ## Somebody else did the work first
 
@@ -95,6 +95,14 @@ So `gmail.readonly` is a node in the vendor's word, never translated, joined to 
 *The same argument, four releases and one contributed intake later. The heading has not changed since v0.1.0, which is the point: the releases added evidence and mechanism underneath a claim that stayed still. (abp.sgit.ai at v0.4.4, captured 20 September 2026 from a checkout of the v0.4.4 tag.)*
 
 [The data layer](../../data/index.md) &#183; [The contributed manifest](../../data/contributed/riskmandate/manifest.json) &#183; [The deployment shape universe](../../model/universes/u2/index.md) &#183; [v0.4.4's own release record](../../versions/v0.4.4/index.md)
+
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it](../../articles/the-confirmations-flag-as-a-path/index.md) |
+| **Newer** | [v0.5.0: The releases get one article each, and the screenshots come from the tag rather than from today's site](../../articles/one-article-per-release/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
 
 ---
 

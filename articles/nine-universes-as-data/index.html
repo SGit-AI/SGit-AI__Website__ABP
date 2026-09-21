@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The map became files, pages and a gate check, and the walk is rebuilt on every build - abp.sgit.ai</title>
+<title>v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build - abp.sgit.ai</title>
 <meta name="description" content="A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.">
 <link rel="canonical" href="https://abp.sgit.ai/articles/nine-universes-as-data/index.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="abp.sgit.ai">
 <meta property="og:url" content="https://abp.sgit.ai/articles/nine-universes-as-data/index.html">
-<meta property="og:title" content="The map became files, pages and a gate check, and the walk is rebuilt on every build - abp.sgit.ai">
+<meta property="og:title" content="v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build - abp.sgit.ai">
 <meta property="og:description" content="A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.">
 <meta name="twitter:card" content="summary">
 <link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
@@ -23,7 +23,7 @@
   <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
   <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
   <span class="stage-pill">the free library</span>
-  <a class="ver" href="../../versions/v0.5.0/index.html" title="What changed in v0.5.0, and the commit it was built from">v0.5.0</a>
+  <a class="ver" href="../../versions/v0.5.1/index.html" title="What changed in v0.5.1, and the commit it was built from">v0.5.1</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
   <div class="nav-items">
     <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
@@ -67,6 +67,7 @@
       <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
       <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
       <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
       </div>
     </div>
     <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
@@ -85,9 +86,9 @@
 
 <main class="doc">
   <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../articles/index.html">Articles</a> / v0.4.1</p>
-  <h1>The map became files, pages and a gate check, and the walk is rebuilt on every build</h1>
+  <h1>v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build</h1>
   <p class="lead">A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.</p>
-  <p><b>v0.4.1</b>, 20 September 2026. <a href="../../versions/v0.4.1/index.html">v0.4.1's own release record</a>.</p>
+  <div class="note"><b>This is the article for release v0.4.1, published 20 September 2026.</b> Every release of this site gets one, and it explains what that release changed and why rather than restating <a href="../../versions/v0.4.1/index.html">v0.4.1's own release record</a>. It is release 5 of 9 on this site. Every screenshot below was captured from a checkout of the <code>v0.4.1</code> tag, so it shows the site as it stood at that release and not as it stands today. Read on to <a href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>, or back to <a href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>.</div>
   <h2 id="a-map-in-prose-is-a-claim">A map in prose is a claim</h2>
   <p>v0.4.0 drew the map in a brief. A brief is a document, and a document cannot be checked. <b>This release turns the map into files the build reads, pages that render one query, and a check that refuses to publish a world nobody owns.</b></p>
   <p>Thirteen universes are authored once, in one module, each with its owner, its centre of gravity, its smallest node, its status, its node types and its verbs. The build writes one file per universe and an index that carries the walk.</p>
@@ -119,6 +120,8 @@ validate: 3 error(s)
   <figure class="shot"><img src="../../assets/articles/v041-research-refs.png" alt="A table of twenty four references with the address each was resolved at and its status" loading="lazy" decoding="async"><figcaption>The review arrived with its citation markers stripped by the paste, so every reference was located and fetched on the day. Three resolved to a publisher that refused an unauthenticated fetch, which is a fact about the publisher; one vendor page had moved; one paper could not be located at all, and the table says so.<span class="attr">abp.sgit.ai at v0.4.1, captured 20 September 2026 from a checkout of the v0.4.1 tag. Unretouched.</span></figcaption></figure>
   <div class="note"><b>The review's sharpest point is taken and is not yet built.</b> A bridge that says <em>same individual</em> is not a bridge that says <em>approximate match</em>, and a client that follows an edge without knowing which of those it is has not interpreted it. Every junction and every declared bridge should carry a kind. That is written down as the next change rather than quietly added to the data, because the map is published and changing it silently is the thing this site keeps refusing to do.</div>
   <p><a href="../../model/universes/index.html">The universes</a> &amp;#183; <a href="../../data/universes/index.json">The universes as JSON</a> &amp;#183; <a href="../../docs/index.html#research">The research note</a> &amp;#183; <a href="../../versions/v0.4.1/index.html">v0.4.1's own release record</a></p>
+  <h2 id="read-the-sequence">Read the sequence</h2>
+  <div class="tablewrap"><table><thead><tr><th>Direction</th><th>The release</th></tr></thead><tbody><tr><td><b>Older</b></td><td><a href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for</a></td></tr><tr><td><b>Newer</b></td><td><a href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page</a></td></tr><tr><td><b>All of them</b></td><td><a href="../../articles/index.html">One article per release</a></td></tr></tbody></table></div>
 </main>
 
 <footer class="site"><div class="cols">
@@ -127,7 +130,7 @@ validate: 3 error(s)
     <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
     <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
     <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
-    <p class="verline">site <a href="../../versions/v0.5.0/index.html">v0.5.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../articles/nine-universes-as-data/index.md">this page as markdown</a></p>
+    <p class="verline">site <a href="../../versions/v0.5.1/index.html">v0.5.1</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../articles/nine-universes-as-data/index.md">this page as markdown</a></p>
   </div>
   <div>
     <h4>The argument</h4>

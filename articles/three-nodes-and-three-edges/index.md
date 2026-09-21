@@ -1,8 +1,8 @@
-# read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax
+# v0.3.0: read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax
 
 > Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
 
-*Source: <https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10,11 +10,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.3.0
 
-# read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax
+# v0.3.0: read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax
 
 Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
 
-**v0.3.0**, 12 September 2026. [v0.3.0's own release record](../../versions/v0.3.0/index.md).
+> **This is the article for release v0.3.0, published 12 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.3.0's own release record](../../versions/v0.3.0/index.md). It is release 3 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.3.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.0](../../articles/an-abp-is-a-junction-object/index.md), or back to [v0.2.0](../../articles/a-rule-corrected-nine-hours-later/index.md).
 
 ## The model pages were a projection of nothing
 
@@ -75,6 +75,14 @@ A thirteenth check arrived with the graph, and it found something immediately: *
 > **They are kept and marked rather than dropped.** A node connected to nothing is literally meaningless, so those two words mean nothing in this graph yet, and saying so is more useful than writing them a definition no edge supports. It is a finding about the vocabulary rather than a defect in it, and it is the kind of gap that only becomes visible once the words are nodes.
 
 [The lexicon](../../model/lexicon/index.md) &#183; [The edge vocabulary](../../model/graph/edges/index.md) &#183; [The node type formulas](../../model/graph/formulas/index.md) &#183; [The three layers](../../model/graph/layers/index.md) &#183; [v0.3.0's own release record](../../versions/v0.3.0/index.md)
+
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.2.0: A rule this site published in the morning was wrong by the afternoon, and the correction is on the page](../../articles/a-rule-corrected-nine-hours-later/index.md) |
+| **Newer** | [v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for](../../articles/an-abp-is-a-junction-object/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
 
 ---
 

@@ -2,7 +2,7 @@
 
 > The Agent Behaviour Policy: what your agent can do, what you authorised it to do, the gap between them, and what actually stands in the way.
 
-Site version: v0.5.0. Generated from the same content as the HTML pages, so
+Site version: v0.5.1. Generated from the same content as the HTML pages, so
 this file cannot disagree with them.
 
 
@@ -14,7 +14,7 @@ this file cannot disagree with them.
 
 > You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.
 
-*Source: <https://abp.sgit.ai/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -133,7 +133,7 @@ The argument, the model, the examples and the data are published here. **There i
 
 > The foundation document: the definition of the Agent Behaviour Policy, the four objects, the barrier as the test of whether anything is in the way, the rule that it never judges, and the questions we are asking.
 
-*Source: <https://abp.sgit.ai/what-is-an-abp/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/what-is-an-abp/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -370,7 +370,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The four objects an ABP is made of, the grammar they are written in, the barrier that decides whether anything is in the way, and the graph rules that govern all of it.
 
-*Source: <https://abp.sgit.ai/model/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -449,7 +449,7 @@ Each states which rows were measured and which derived.
 
 > verb.object.reach: 23 capability primitives, each with its reach and the undo class of its effect. The action vocabulary for everything else on this site.
 
-*Source: <https://abp.sgit.ai/model/capabilities/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -528,7 +528,7 @@ below point at them.*
 
 > Read the project it is working on. Reach project, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.file.project/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.file.project/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -606,7 +606,7 @@ below point at them.*
 
 > Change the project it is working on. Reach project, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.file.project/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.file.project/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -683,7 +683,7 @@ below point at them.*
 
 > Read any file the account can reach. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -765,7 +765,7 @@ below point at them.*
 
 > Change any file the account can reach. Reach host, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.file.host/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.file.host/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -844,7 +844,7 @@ below point at them.*
 
 > Delete files anywhere the account can reach. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/delete.file.host/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/delete.file.host/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -920,7 +920,7 @@ below point at them.*
 
 > Run programs as the account. Reach host, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/execute.process.host/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/execute.process.host/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -998,7 +998,7 @@ below point at them.*
 
 > Run programs inside its own sandbox only. Reach self, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/execute.process.self/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/execute.process.self/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1068,7 +1068,7 @@ No published shape in this set has it.
 
 > Reach a permitted list of hosts. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.allowed/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.allowed/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1140,7 +1140,7 @@ below point at them.*
 
 > Reach any host on the internet. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.world/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.world/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1218,7 +1218,7 @@ below point at them.*
 
 > Read credentials stored where it runs. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.credential.host/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.credential.host/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1299,7 +1299,7 @@ below point at them.*
 
 > Act in accounts with the credentials it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1384,7 +1384,7 @@ below point at them.*
 
 > Change its own permission settings. Reach self, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/grant.credential.self/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/grant.credential.self/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1458,7 +1458,7 @@ below point at them.*
 
 > Send a message to anyone. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.message.world/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.message.world/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1532,7 +1532,7 @@ below point at them.*
 
 > Read mail or chat it is connected to. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1608,7 +1608,7 @@ below point at them.*
 
 > Commit to the repository it was pointed at. Reach project, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.repository.project/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.repository.project/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1683,7 +1683,7 @@ below point at them.*
 
 > Push to a code host (any branch it can reach). Reach tenant, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.repository.tenant/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.repository.tenant/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1758,7 +1758,7 @@ below point at them.*
 
 > Sign commits with the key it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.signing/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.signing/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1832,7 +1832,7 @@ below point at them.*
 
 > Publish packages, images or pages under the name it holds. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.record.world/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.record.world/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1906,7 +1906,7 @@ below point at them.*
 
 > Spend money or tokens against an account it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.budget.tenant/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.budget.tenant/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1979,7 +1979,7 @@ below point at them.*
 
 > Create something that outlives the turn where it runs (a cron, a service). Reach host, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.host/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.host/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2054,7 +2054,7 @@ below point at them.*
 
 > Read a retained record: shell history, past sessions. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2132,7 +2132,7 @@ below point at them.*
 
 > Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session). Reach tenant, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.tenant/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.tenant/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2198,7 +2198,7 @@ below point at them.*
 
 > Read every page you visit. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.record.browsing/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.record.browsing/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2270,7 +2270,7 @@ below point at them.*
 
 > Four kinds of thing that can stand between an agent and a capability, and only the fourth bounds anything. The enforcer test, which this estate published as a glyph before it named it as a rule.
 
-*Source: <https://abp.sgit.ai/model/barriers/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/barriers/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2322,7 +2322,7 @@ The glyph system on [the published map](https://what-can-it-do.games.sgit.ai/map
 
 > Three classes of reversibility, the ordering on every rendering this site produces, and the one column that is not fully context free.
 
-*Source: <https://abp.sgit.ai/model/undo/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/undo/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2365,7 +2365,7 @@ An ABP that lists prohibitions alphabetically has buried the only ones that matt
 
 > Derived and never authored: stored with the versions of its inputs, recomputed when either moves, and never edited by hand. Reality is the third input, the history is the business case, and there are three clocks.
 
-*Source: <https://abp.sgit.ai/model/delta/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/delta/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2531,7 +2531,7 @@ The market has a word for a related phenomenon and it is drift. Products announc
 
 > The five published graph rules, what they force on this model, and the sentence test that decides whether the edges are right.
 
-*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2597,7 +2597,7 @@ The W3C has had a rights expression vocabulary since 2018: a policy carries perm
 
 > What is in the published files, what this site added to the data it promoted, and the two rules a consumer and a contributor each have to follow.
 
-*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2634,7 +2634,7 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 
 ## The two rules
 
-> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.5.0`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
+> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.5.1`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
 
 > **A proposal carries evidence.** Every node taken from a third party site carries a source URL, a retrieval timestamp and a content hash. A proposal that changes a capability row without one is an assertion, and this site publishes capability claims about named commercial products.
 
@@ -2653,7 +2653,7 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 
 > An Agent Behaviour Policy for chatGPT (in the browser, no connectors): a grant of 1, a mandate of 1, an excess of 0 and an unbounded excess of 0. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2800,7 +2800,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for claude Code (the CLI, on your own machine): a grant of 16, a mandate of 5, an excess of 12 and an unbounded excess of 12. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2974,7 +2974,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for claude Code (the CLI, on your own machine): a grant of 16, a mandate of 5, an excess of 12 and an unbounded excess of 12. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3148,7 +3148,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for A browser extension with broad host permissions: a grant of 3, a mandate of 1, an excess of 2 and an unbounded excess of 2. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3303,7 +3303,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for actions runner (a hosted CI job): a grant of 8, a mandate of 5, an excess of 4 and an unbounded excess of 3. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3467,7 +3467,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > Five Agent Behaviour Policies, one per deployment shape, derived from published data rather than authored. Each states which of its rows were measured and which were derived, and none carries a score.
 
-*Source: <https://abp.sgit.ai/examples/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3532,7 +3532,7 @@ Nobody knows what an ABP costs to produce, and the store has to price one. So th
 
 > The capabilities, barriers, undo classes, deployment shapes and mandates an ABP is written in, as JSON at stable addresses with cross origin access, with the source bytes they were promoted from.
 
-*Source: <https://abp.sgit.ai/data/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/data/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3544,7 +3544,7 @@ below point at them.*
 
 The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4 barriers**, **3 undo classes**, **16 deployment shapes** and **15 starting mandates**, at stable addresses with cross origin access.
 
-> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.5.0`.
+> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.5.1`.
 
 ## Where it came from, and what that obliges
 
@@ -3645,7 +3645,7 @@ The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4
 
 > Every word in the capability grammar as a node with its own address, its own JSON and its own page: ten verbs, nine object classes, five reach classes and nine families.
 
-*Source: <https://abp.sgit.ai/model/lexicon/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3714,7 +3714,7 @@ below point at them.*
 
 > The verb authenticate-as as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/authenticate-as/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/authenticate-as/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3759,7 +3759,7 @@ The verb `authenticate-as`, and every primitive it appears in. **This page is a 
 
 > The verb create as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/create/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/create/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3805,7 +3805,7 @@ The verb `create`, and every primitive it appears in. **This page is a query, no
 
 > The verb delete as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/delete/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/delete/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3849,7 +3849,7 @@ The verb `delete`, and every primitive it appears in. **This page is a query, no
 
 > The verb execute as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/execute/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/execute/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3894,7 +3894,7 @@ The verb `execute`, and every primitive it appears in. **This page is a query, n
 
 > The verb grant as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/grant/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/grant/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3938,7 +3938,7 @@ The verb `grant`, and every primitive it appears in. **This page is a query, not
 
 > The verb read as a node: the 6 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/read/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/read/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3987,7 +3987,7 @@ The verb `read`, and every primitive it appears in. **This page is a query, not 
 
 > The verb receive as a node: the 0 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/receive/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/receive/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4029,7 +4029,7 @@ None. The table below is what this node connects to, and it is empty, which is t
 
 > The verb revoke as a node: the 0 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/revoke/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/revoke/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4071,7 +4071,7 @@ None. The table below is what this node connects to, and it is empty, which is t
 
 > The verb send as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/send/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/send/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4117,7 +4117,7 @@ The verb `send`, and every primitive it appears in. **This page is a query, not 
 
 > The verb write as a node: the 5 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/write/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/write/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4165,7 +4165,7 @@ The verb `write`, and every primitive it appears in. **This page is a query, not
 
 > The object budget as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/budget/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/budget/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4209,7 +4209,7 @@ The object `budget`, and every primitive it appears in. **This page is a query, 
 
 > The object credential as a node: the 4 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/credential/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/credential/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4256,7 +4256,7 @@ The object `credential`, and every primitive it appears in. **This page is a que
 
 > The object file as a node: the 5 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/file/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/file/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4304,7 +4304,7 @@ The object `file`, and every primitive it appears in. **This page is a query, no
 
 > The object message as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/message/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/message/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4349,7 +4349,7 @@ The object `message`, and every primitive it appears in. **This page is a query,
 
 > The object network-endpoint as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/network-endpoint/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/network-endpoint/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4394,7 +4394,7 @@ The object `network-endpoint`, and every primitive it appears in. **This page is
 
 > The object process as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/process/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/process/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4439,7 +4439,7 @@ The object `process`, and every primitive it appears in. **This page is a query,
 
 > The object record as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/record/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/record/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4485,7 +4485,7 @@ The object `record`, and every primitive it appears in. **This page is a query, 
 
 > The object repository as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/repository/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/repository/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4530,7 +4530,7 @@ The object `repository`, and every primitive it appears in. **This page is a que
 
 > The object schedule as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/schedule/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/schedule/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4575,7 +4575,7 @@ The object `schedule`, and every primitive it appears in. **This page is a query
 
 > The reach host as a node: the 8 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/host/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/host/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4651,7 +4651,7 @@ the machine, container or account it runs as
 
 > The reach project as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/project/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/project/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4707,7 +4707,7 @@ the working tree or workspace it was pointed at
 
 > The reach self as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/self/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/self/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4752,7 +4752,7 @@ the agent's own process, sandbox or turn
 
 > The reach tenant as a node: the 7 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4827,7 +4827,7 @@ the organisation's accounts, repositories and services
 
 > The reach world as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/world/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/world/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4898,7 +4898,7 @@ anything on the internet
 
 > The family browser as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/browser/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/browser/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4942,7 +4942,7 @@ what a browser extension or automation can see and do in your browser
 
 > The family code as a node: the 4 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/code/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/code/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4989,7 +4989,7 @@ repositories and what lands in them
 
 > The family communication as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/communication/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/communication/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5034,7 +5034,7 @@ messages to people
 
 > The family filesystem as a node: the 6 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/filesystem/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/filesystem/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5083,7 +5083,7 @@ files and directories
 
 > The family identity as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/identity/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/identity/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5129,7 +5129,7 @@ credentials and who the agent can act as
 
 > The family money as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/money/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/money/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5173,7 +5173,7 @@ budgets and spend
 
 > The family network as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/network/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/network/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5218,7 +5218,7 @@ endpoints and hosts
 
 > The family process as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/process/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/process/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5263,7 +5263,7 @@ programs and their execution
 
 > The family schedule as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/schedule/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/schedule/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5308,7 +5308,7 @@ things that outlive the turn
 
 > The 22 edges this model is written in, each a verb with a distinct inverse, a stated domain and range, and the sentence it reads as.
 
-*Source: <https://abp.sgit.ai/model/graph/edges/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/edges/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5379,7 +5379,7 @@ These are not this site's to rename. They are published at [the network's edge s
 
 > A node type is a required pattern of typed, directed paths that a node either matches or does not. Not a label somebody applied. Run against the graph on every build.
 
-*Source: <https://abp.sgit.ai/model/graph/formulas/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/formulas/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5445,7 +5445,7 @@ That is the usual objection and it deserves a direct answer. **Somebody still de
 
 > How a customer vault extends this vocabulary without merging anything: shared facts owned by nobody, per-party formulas, and declared bridges. Parties can disagree about meaning while still agreeing about facts.
 
-*Source: <https://abp.sgit.ai/model/graph/layers/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/layers/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5520,7 +5520,7 @@ A customer vault is layers 2 and 3, pointing at layer 1 by address, version and 
 
 > The ABP mapped onto Fractal Semantic Graphs: one capability row walked through nine universes, from the source bytes to a licence condition, each with its own owner and ontology, joined by named edges. Four more named as gaps.
 
-*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5624,7 +5624,7 @@ Nine the walk crosses and four it names. **A status is a claim the gate checks**
 
 > The source bytes, one of the universes an ABP row crosses: owned by nobody: the bytes are what they are, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u0/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u0/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5676,7 +5676,7 @@ Today the provenance block sits on every data file and says the same thing for e
 
 > The grammar, one of the universes an ABP row crosses: owned by abp.sgit.ai, promoted from what-can-it-do.games.sgit.ai and bridged back to it, with its own node types and verbs, sharing only the grammar. Status: live.
 
-*Source: <https://abp.sgit.ai/model/universes/u1/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u1/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5747,7 +5747,7 @@ Two verbs in it, receive and revoke, have nothing under them and are kept as nam
 
 > The deployment shape, one of the universes an ABP row crosses: owned by the vendor's published words, read on a date, with a hash, and never probed, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u2/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u2/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5822,7 +5822,7 @@ The position on a connector that is present and switched off, which is the most 
 
 > The grant and its evidence, one of the universes an ABP row crosses: owned by whoever observed, or the documentation that was read, with its own node types and verbs, sharing only the grammar. Status: one-edge.
 
-*Source: <https://abp.sgit.ai/model/universes/u3/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u3/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5891,7 +5891,7 @@ Lab 07's grant check, eleven of fifteen rows seen present in ordinary work and t
 
 > The enforcement, one of the universes an ABP row crosses: owned by whoever set the control: the vendor, the platform, the deployer or nobody, with its own node types and verbs, sharing only the grammar. Status: one-edge.
 
-*Source: <https://abp.sgit.ai/model/universes/u4/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u4/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5959,7 +5959,7 @@ Lab 06 added the property the 11 September brief did not have: a barrier is peri
 
 > The deployer, one of the universes an ABP row crosses: owned by the deployer, in their own words, and the named person who will correct the draft, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u5/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u5/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6034,7 +6034,7 @@ The interchange form lives here and nowhere else. The W3C rights expression voca
 
 > The derivation, one of the universes an ABP row crosses: owned by the computation, and never a person, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u6/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u6/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6094,7 +6094,7 @@ The gate's twelfth check, which recomputes every stored delta from its pinned in
 
 > The projections, one of the universes an ABP row crosses: owned by the renderer, and the fact diff that has to check it, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u7/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u7/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6154,7 +6154,7 @@ With FactSet as a node and every Projection carrying a projects edge to it, the 
 
 > The licence, the acceptance and the risk, one of the universes an ABP row crosses: owned by riskmandate.ai, with its own node types and verbs, sharing only the grammar. Status: outside.
 
-*Source: <https://abp.sgit.ai/model/universes/u8/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u8/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6210,7 +6210,7 @@ The edges are declared by riskmandate.ai in its vault, pointing at this site's a
 
 > The estate and the twin, one of the universes an ABP row crosses: owned by the customer, through twins.sgit.ai, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u9/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u9/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6257,7 +6257,7 @@ Named so that a twin has an address to attach to. Nothing is behind the name.
 
 > The obligations, one of the universes an ABP row crosses: owned by standards.sgit.ai and the AIUC-1 conformance vault, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u10/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u10/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6303,7 +6303,7 @@ Named so that a standard has an address to attach to.
 
 > The runtime, one of the universes an ABP row crosses: owned by whoever holds the logs: never this site, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u11/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u11/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6350,7 +6350,7 @@ Named so that a log has an address to attach to.
 
 > The estate of agents, one of the universes an ABP row crosses: owned by the organisation, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u12/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u12/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6397,7 +6397,7 @@ Named so that the next brief has an address to write to.
 
 > One article per release, explaining what changed and why, with the screenshots taken from the tag each one names and diagrams of the mechanisms a screenshot cannot show.
 
-*Source: <https://abp.sgit.ai/articles/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6413,31 +6413,38 @@ The version surface says what changed, in the release's own words, and it is del
 
 *[A chart here in the page: four small line panels, one per measure, across the eight releases. Pages: v0.1.0 52, v0.2.0 55, v0.3.0 93, v0.4.0 95, v0.4.1 111, v0.4.2 112, v0.4.3 113, v0.4.4 114. Nodes in the graph: none before v0.3.0, then 170 at v0.3.0 through v0.4.2, 216 at v0.4.3 and 369 at v0.4.4. Edges in the graph: none before v0.3.0, then 488 through v0.4.2, 658 at v0.4.3 and 993 at v0.4.4. Checks in the release gate: 10, 10, 11, 11, 12, 13, 13, 13. Each panel keeps its own scale]*
 
-## The articles
+## The articles, newest release first
 
-**[The ontology already existed, so the first release promoted it instead of writing one](../articles/an-ontology-that-already-existed/index.md)**: Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
-v0.1.0 &#183; 11 September 2026
+**One article per release, and the article is the release.** Each one is titled with the version it is about, says what that release changed and what it did not settle, and links to the release before it and the release after it, so the sequence can be read in either direction.
 
-**[A rule this site published in the morning was wrong by the afternoon, and the correction is on the page](../articles/a-rule-corrected-nine-hours-later/index.md)**: The foundation document says twice that the delta is computed and never stored. Half of that was right. The corrected rule is harder, the passages were not rewritten, and the check that enforced the old rule was inverted to enforce the new one.
-v0.2.0 &#183; 11 September 2026
+**[v0.5.0: The releases get one article each, and the screenshots come from the tag rather than from today's site](../articles/one-article-per-release/index.md)**: A release record says what changed and is deliberately terse. Nothing said why. This release adds the section you are reading, and the rule that makes it worth reading: a figure about the eleventh of September shows the site as it stood on the eleventh of September, version badge and all.
+20 September 2026 &#183; the current release
 
-**[read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax](../articles/three-nodes-and-three-edges/index.md)**: Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
-v0.3.0 &#183; 12 September 2026
+**[v0.4.4: Seven deployment shapes somebody else measured, promoted with their provenance intact](../articles/seven-shapes-somebody-else-measured/index.md)**: A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
+20 September 2026 &#183; 1 release back
 
-**[An ABP is a junction object, which is what Fractal Semantic Graphs is for](../articles/an-abp-is-a-junction-object/index.md)**: Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
-v0.4.0 &#183; 20 September 2026
+**[v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it](../articles/the-confirmations-flag-as-a-path/index.md)**: A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
+20 September 2026 &#183; 2 releases back
 
-**[The map became files, pages and a gate check, and the walk is rebuilt on every build](../articles/nine-universes-as-data/index.md)**: A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
-v0.4.1 &#183; 20 September 2026
+**[v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page](../articles/the-fact-diff-reads-the-published-page/index.md)**: Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
+20 September 2026 &#183; 3 releases back
 
-**[The fact diff was named as a blocker on four consecutive days, and it reads the published page](../articles/the-fact-diff-reads-the-published-page/index.md)**: Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
-v0.4.2 &#183; 20 September 2026
+**[v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build](../articles/nine-universes-as-data/index.md)**: A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
+20 September 2026 &#183; 4 releases back
 
-**[The home page has argued about one setting since v0.1.0, and now the build walks it](../articles/the-confirmations-flag-as-a-path/index.md)**: A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
-v0.4.3 &#183; 20 September 2026
+**[v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for](../articles/an-abp-is-a-junction-object/index.md)**: Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
+20 September 2026 &#183; 5 releases back
 
-**[Seven deployment shapes somebody else measured, promoted with their provenance intact](../articles/seven-shapes-somebody-else-measured/index.md)**: A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
-v0.4.4 &#183; 20 September 2026
+**[v0.3.0: read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax](../articles/three-nodes-and-three-edges/index.md)**: Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
+12 September 2026 &#183; 6 releases back
+
+**[v0.2.0: A rule this site published in the morning was wrong by the afternoon, and the correction is on the page](../articles/a-rule-corrected-nine-hours-later/index.md)**: The foundation document says twice that the delta is computed and never stored. Half of that was right. The corrected rule is harder, the passages were not rewritten, and the check that enforced the old rule was inverted to enforce the new one.
+11 September 2026 &#183; 7 releases back
+
+**[v0.1.0: The ontology already existed, so the first release promoted it instead of writing one](../articles/an-ontology-that-already-existed/index.md)**: Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
+11 September 2026 &#183; 8 releases back
+
+**Reading forwards** starts at [v0.1.0](../articles/an-ontology-that-already-existed/index.md), the first release, and follows the newer link at the foot of each article. **Reading backwards** starts at [v0.5.0](../articles/one-article-per-release/index.md) and follows the older link.
 
 ## How the screenshots were taken
 
@@ -6462,11 +6469,11 @@ v0.4.4 &#183; 20 September 2026
 
 <!-- https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html -->
 
-# The ontology already existed, so the first release promoted it instead of writing one
+# v0.1.0: The ontology already existed, so the first release promoted it instead of writing one
 
 > Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
 
-*Source: <https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6474,11 +6481,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.1.0
 
-# The ontology already existed, so the first release promoted it instead of writing one
+# v0.1.0: The ontology already existed, so the first release promoted it instead of writing one
 
 Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
 
-**v0.1.0**, 11 September 2026. [v0.1.0's own release record](../../versions/v0.1.0/index.md).
+> **This is the article for release v0.1.0, published 11 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.1.0's own release record](../../versions/v0.1.0/index.md). It is release 1 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.1.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.2.0](../../articles/a-rule-corrected-nine-hours-later/index.md), and it is where the sequence starts.
 
 ## The gap the document exists for
 
@@ -6560,6 +6567,13 @@ That is a stronger argument for the leaflet and against a headline number than t
 
 [The five examples](../../examples/index.md) &#183; [The capability grammar](../../model/capabilities/index.md) &#183; [The barrier](../../model/barriers/index.md) &#183; [v0.1.0's own release record](../../versions/v0.1.0/index.md)
 
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Newer** | [v0.2.0: A rule this site published in the morning was wrong by the afternoon, and the correction is on the page](../../articles/a-rule-corrected-nine-hours-later/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
+
 ---
 
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html)*
@@ -6569,11 +6583,11 @@ That is a stronger argument for the leaflet and against a headline number than t
 
 <!-- https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html -->
 
-# A rule this site published in the morning was wrong by the afternoon, and the correction is on the page
+# v0.2.0: A rule this site published in the morning was wrong by the afternoon, and the correction is on the page
 
 > The foundation document says twice that the delta is computed and never stored. Half of that was right. The corrected rule is harder, the passages were not rewritten, and the check that enforced the old rule was inverted to enforce the new one.
 
-*Source: <https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6581,11 +6595,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.2.0
 
-# A rule this site published in the morning was wrong by the afternoon, and the correction is on the page
+# v0.2.0: A rule this site published in the morning was wrong by the afternoon, and the correction is on the page
 
 The foundation document says twice that the delta is computed and never stored. Half of that was right. The corrected rule is harder, the passages were not rewritten, and the check that enforced the old rule was inverted to enforce the new one.
 
-**v0.2.0**, 11 September 2026. [v0.2.0's own release record](../../versions/v0.2.0/index.md).
+> **This is the article for release v0.2.0, published 11 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.2.0's own release record](../../versions/v0.2.0/index.md). It is release 2 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.2.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.3.0](../../articles/three-nodes-and-three-edges/index.md), or back to [v0.1.0](../../articles/an-ontology-that-already-existed/index.md).
 
 ## The rule that was wrong by lunchtime
 
@@ -6660,6 +6674,14 @@ The foundation document is the definition the rest of the site stands on, and it
 
 [The delta](../../model/delta/index.md) &#183; [The stored deltas as JSON](../../data/deltas/index.json) &#183; [v0.2.0's own release record](../../versions/v0.2.0/index.md)
 
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.1.0: The ontology already existed, so the first release promoted it instead of writing one](../../articles/an-ontology-that-already-existed/index.md) |
+| **Newer** | [v0.3.0: read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax](../../articles/three-nodes-and-three-edges/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
+
 ---
 
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html)*
@@ -6669,11 +6691,11 @@ The foundation document is the definition the rest of the site stands on, and it
 
 <!-- https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html -->
 
-# read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax
+# v0.3.0: read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax
 
 > Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
 
-*Source: <https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6681,11 +6703,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.3.0
 
-# read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax
+# v0.3.0: read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax
 
 Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
 
-**v0.3.0**, 12 September 2026. [v0.3.0's own release record](../../versions/v0.3.0/index.md).
+> **This is the article for release v0.3.0, published 12 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.3.0's own release record](../../versions/v0.3.0/index.md). It is release 3 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.3.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.0](../../articles/an-abp-is-a-junction-object/index.md), or back to [v0.2.0](../../articles/a-rule-corrected-nine-hours-later/index.md).
 
 ## The model pages were a projection of nothing
 
@@ -6747,6 +6769,14 @@ A thirteenth check arrived with the graph, and it found something immediately: *
 
 [The lexicon](../../model/lexicon/index.md) &#183; [The edge vocabulary](../../model/graph/edges/index.md) &#183; [The node type formulas](../../model/graph/formulas/index.md) &#183; [The three layers](../../model/graph/layers/index.md) &#183; [v0.3.0's own release record](../../versions/v0.3.0/index.md)
 
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.2.0: A rule this site published in the morning was wrong by the afternoon, and the correction is on the page](../../articles/a-rule-corrected-nine-hours-later/index.md) |
+| **Newer** | [v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for](../../articles/an-abp-is-a-junction-object/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
+
 ---
 
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html)*
@@ -6756,11 +6786,11 @@ A thirteenth check arrived with the graph, and it found something immediately: *
 
 <!-- https://abp.sgit.ai/articles/an-abp-is-a-junction-object/index.html -->
 
-# An ABP is a junction object, which is what Fractal Semantic Graphs is for
+# v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for
 
 > Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
 
-*Source: <https://abp.sgit.ai/articles/an-abp-is-a-junction-object/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/an-abp-is-a-junction-object/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6768,11 +6798,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.4.0
 
-# An ABP is a junction object, which is what Fractal Semantic Graphs is for
+# v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for
 
 Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
 
-**v0.4.0**, 20 September 2026. [v0.4.0's own release record](../../versions/v0.4.0/index.md).
+> **This is the article for release v0.4.0, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.0's own release record](../../versions/v0.4.0/index.md). It is release 4 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.1](../../articles/nine-universes-as-data/index.md), or back to [v0.3.0](../../articles/three-nodes-and-three-edges/index.md).
 
 ## A test this site had been quoting backwards
 
@@ -6830,6 +6860,14 @@ v0.4.0 is a brief and two corrections. It adds no data, no formula and no page b
 
 [The map](../../model/universes/index.md) &#183; [The graph rules](../../model/graph/index.md) &#183; [v0.4.0's own release record](../../versions/v0.4.0/index.md)
 
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.3.0: read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax](../../articles/three-nodes-and-three-edges/index.md) |
+| **Newer** | [v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build](../../articles/nine-universes-as-data/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
+
 ---
 
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/articles/an-abp-is-a-junction-object/index.html)*
@@ -6839,11 +6877,11 @@ v0.4.0 is a brief and two corrections. It adds no data, no formula and no page b
 
 <!-- https://abp.sgit.ai/articles/nine-universes-as-data/index.html -->
 
-# The map became files, pages and a gate check, and the walk is rebuilt on every build
+# v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build
 
 > A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
 
-*Source: <https://abp.sgit.ai/articles/nine-universes-as-data/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/nine-universes-as-data/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6851,11 +6889,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.4.1
 
-# The map became files, pages and a gate check, and the walk is rebuilt on every build
+# v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build
 
 A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
 
-**v0.4.1**, 20 September 2026. [v0.4.1's own release record](../../versions/v0.4.1/index.md).
+> **This is the article for release v0.4.1, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.1's own release record](../../versions/v0.4.1/index.md). It is release 5 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.1` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.2](../../articles/the-fact-diff-reads-the-published-page/index.md), or back to [v0.4.0](../../articles/an-abp-is-a-junction-object/index.md).
 
 ## A map in prose is a claim
 
@@ -6930,6 +6968,14 @@ The same release carries something that is not this site's: an external review o
 
 [The universes](../../model/universes/index.md) &#183; [The universes as JSON](../../data/universes/index.json) &#183; [The research note](../../docs/index.md#research) &#183; [v0.4.1's own release record](../../versions/v0.4.1/index.md)
 
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for](../../articles/an-abp-is-a-junction-object/index.md) |
+| **Newer** | [v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page](../../articles/the-fact-diff-reads-the-published-page/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
+
 ---
 
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/articles/nine-universes-as-data/index.html)*
@@ -6939,11 +6985,11 @@ The same release carries something that is not this site's: an external review o
 
 <!-- https://abp.sgit.ai/articles/the-fact-diff-reads-the-published-page/index.html -->
 
-# The fact diff was named as a blocker on four consecutive days, and it reads the published page
+# v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page
 
 > Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
 
-*Source: <https://abp.sgit.ai/articles/the-fact-diff-reads-the-published-page/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/the-fact-diff-reads-the-published-page/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6951,11 +6997,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.4.2
 
-# The fact diff was named as a blocker on four consecutive days, and it reads the published page
+# v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page
 
 Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
 
-**v0.4.2**, 20 September 2026. [v0.4.2's own release record](../../versions/v0.4.2/index.md).
+> **This is the article for release v0.4.2, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.2's own release record](../../versions/v0.4.2/index.md). It is release 6 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.2` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.3](../../articles/the-confirmations-flag-as-a-path/index.md), or back to [v0.4.1](../../articles/nine-universes-as-data/index.md).
 
 ## A rule with no mechanism behind it
 
@@ -7003,6 +7049,14 @@ The other half of the release is smaller and it closes a loop opened two version
 
 [The fact sets](../../data/facts/index.json) &#183; [An example](../../examples/github-actions-hosted-runner/index.md) &#183; [v0.4.2's own release record](../../versions/v0.4.2/index.md)
 
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build](../../articles/nine-universes-as-data/index.md) |
+| **Newer** | [v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it](../../articles/the-confirmations-flag-as-a-path/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
+
 ---
 
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/articles/the-fact-diff-reads-the-published-page/index.html)*
@@ -7012,11 +7066,11 @@ The other half of the release is smaller and it closes a loop opened two version
 
 <!-- https://abp.sgit.ai/articles/the-confirmations-flag-as-a-path/index.html -->
 
-# The home page has argued about one setting since v0.1.0, and now the build walks it
+# v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it
 
 > A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
 
-*Source: <https://abp.sgit.ai/articles/the-confirmations-flag-as-a-path/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/the-confirmations-flag-as-a-path/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7024,11 +7078,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.4.3
 
-# The home page has argued about one setting since v0.1.0, and now the build walks it
+# v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it
 
 A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
 
-**v0.4.3**, 20 September 2026. [v0.4.3's own release record](../../versions/v0.4.3/index.md).
+> **This is the article for release v0.4.3, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.3's own release record](../../versions/v0.4.3/index.md). It is release 7 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.3` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.4](../../articles/seven-shapes-somebody-else-measured/index.md), or back to [v0.4.2](../../articles/the-fact-diff-reads-the-published-page/index.md).
 
 ## An argument that had been a sentence since the first release
 
@@ -7081,6 +7135,14 @@ The other half of the release answers the first of three requests a consumer of 
 
 [The deployment shape universe](../../model/universes/u2/index.md) &#183; [The capability grammar](../../model/capabilities/index.md) &#183; [v0.4.3's own release record](../../versions/v0.4.3/index.md)
 
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page](../../articles/the-fact-diff-reads-the-published-page/index.md) |
+| **Newer** | [v0.4.4: Seven deployment shapes somebody else measured, promoted with their provenance intact](../../articles/seven-shapes-somebody-else-measured/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
+
 ---
 
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/articles/the-confirmations-flag-as-a-path/index.html)*
@@ -7090,11 +7152,11 @@ The other half of the release answers the first of three requests a consumer of 
 
 <!-- https://abp.sgit.ai/articles/seven-shapes-somebody-else-measured/index.html -->
 
-# Seven deployment shapes somebody else measured, promoted with their provenance intact
+# v0.4.4: Seven deployment shapes somebody else measured, promoted with their provenance intact
 
 > A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
 
-*Source: <https://abp.sgit.ai/articles/seven-shapes-somebody-else-measured/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/seven-shapes-somebody-else-measured/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7102,11 +7164,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.4.4
 
-# Seven deployment shapes somebody else measured, promoted with their provenance intact
+# v0.4.4: Seven deployment shapes somebody else measured, promoted with their provenance intact
 
 A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
 
-**v0.4.4**, 20 September 2026. [v0.4.4's own release record](../../versions/v0.4.4/index.md).
+> **This is the article for release v0.4.4, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.4's own release record](../../versions/v0.4.4/index.md). It is release 8 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.4` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.5.0](../../articles/one-article-per-release/index.md), or back to [v0.4.3](../../articles/the-confirmations-flag-as-a-path/index.md).
 
 ## Somebody else did the work first
 
@@ -7188,9 +7250,116 @@ So `gmail.readonly` is a node in the vendor's word, never translated, joined to 
 
 [The data layer](../../data/index.md) &#183; [The contributed manifest](../../data/contributed/riskmandate/manifest.json) &#183; [The deployment shape universe](../../model/universes/u2/index.md) &#183; [v0.4.4's own release record](../../versions/v0.4.4/index.md)
 
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it](../../articles/the-confirmations-flag-as-a-path/index.md) |
+| **Newer** | [v0.5.0: The releases get one article each, and the screenshots come from the tag rather than from today's site](../../articles/one-article-per-release/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
+
 ---
 
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/articles/seven-shapes-somebody-else-measured/index.html)*
+
+
+------------------------------------------------------------------------
+
+<!-- https://abp.sgit.ai/articles/one-article-per-release/index.html -->
+
+# v0.5.0: The releases get one article each, and the screenshots come from the tag rather than from today's site
+
+> A release record says what changed and is deliberately terse. Nothing said why. This release adds the section you are reading, and the rule that makes it worth reading: a figure about the eleventh of September shows the site as it stood on the eleventh of September, version badge and all.
+
+*Source: <https://abp.sgit.ai/articles/one-article-per-release/index.html> · site v0.5.1 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../index.md) / [Articles](../../articles/index.md) / v0.5.0
+
+# v0.5.0: The releases get one article each, and the screenshots come from the tag rather than from today's site
+
+A release record says what changed and is deliberately terse. Nothing said why. This release adds the section you are reading, and the rule that makes it worth reading: a figure about the eleventh of September shows the site as it stood on the eleventh of September, version badge and all.
+
+> **This is the article for release v0.5.0, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.5.0's own release record](../../versions/v0.5.0/index.md). It is release 9 of 9 on this site, and the most recent. Every screenshot below was captured from a checkout of the `v0.5.0` tag, so it shows the site as it stood at that release and not as it stands today. Nothing follows it yet, or back to [v0.4.4](../../articles/seven-shapes-somebody-else-measured/index.md).
+
+## A release record is not an explanation
+
+This site has had a version surface since its first release. Every version has a title that is a sentence rather than a label, a summary, a list of what moved and a list of what it was built against. **It is deliberately terse, and it explains nothing.**
+
+That is the right shape for a record and the wrong shape for a reader who wants to know why a decision was made, what it cost, or what it failed to settle. This release adds the section you are reading: one article per release, and the article is the release.
+
+![The articles index with a four panel chart of pages, nodes, edges and gate checks across eight releases](../../assets/articles/v050-articles-index.png)
+
+*The index opens with the four measures across the releases. It is small multiples rather than one chart with two y axes, because the four numbers have different scales and a single axis carrying two of them would say something untrue about both. (abp.sgit.ai at v0.5.0, captured 20 September 2026 from a checkout of the v0.5.0 tag.)*
+
+## The rule that makes the figures worth having
+
+**Every screenshot in an article was captured from the tag that article names**, not from the site as it stands today. For each release tag a detached worktree produced a checkout of that exact commit, a static server served it, and a headless browser captured the named section of the named page.
+
+![An article showing the v0.1.0 home page, with a caption naming the version and the capture date](../../assets/articles/v050-shot-caption.png)
+
+*The first release's home page, inside an article written nine days later. The version badge in the captured chrome reads v0.1.0, which is the whole point: the figure is evidence of what the site said, not an illustration of what it says now. (abp.sgit.ai at v0.5.0, captured 20 September 2026 from a checkout of the v0.5.0 tag.)*
+
+> **A screenshot of today's page illustrating a claim about a fortnight ago is a small lie, and it is the kind nobody catches**, because the page looks right and the claim sounds right. The tags are in the repository and the method is four commands, so the figures are reproducible rather than trusted. Every caption carries the version, the capture date and the word unretouched.
+
+## What a diagram is for, and what it is not for
+
+A screenshot shows what a reader would have seen. **A diagram shows a mechanism no screenshot can**: an edge, a formula, a loop, a thing that does not happen. Ten figures were written for this release, and the rule applied to each was that a figure which only repeats the sentence beside it does not get made.
+
+![An article section with a two column diagram contrasting a hierarchy with a fractal zoom](../../assets/articles/v050-article-diagram.png)
+
+*The zoom test as a figure. The left column is one vocabulary all the way down and the right is a new ontology at every step joined by a named edge, which is a distinction that survives being drawn and does not survive being described in a sentence. (abp.sgit.ai at v0.5.0, captured 20 September 2026 from a checkout of the v0.5.0 tag.)*
+
+**Each diagram carries a described equivalent for the markdown twin**, in the same form the grant-against-mandate figure has used since v0.1.0. A reader of the twin gets the figure's content in words rather than being sent to the page to find out what the picture said.
+
+## The chart had to be argued with before it could be drawn
+
+The four measures on the index are pages, nodes, edges and checks in the release gate. They span 10 to 993, so the temptation is one chart with two y axes, and that is the single most common way a chart lies.
+
+| The decision | Why |
+|---|---|
+| Small multiples, one series per panel | four scales, four panels, each with its own axis. No panel implies a comparison the numbers do not support |
+| No label on the top gridline | it sits at the maximum, the maximum is the last value in every panel, and the last value is already labelled at the dot. The same number twice is a reconciliation the reader does for nothing |
+| A dashed run before v0.3.0 on two panels | there was no graph before that release. Plotting zero would claim the graph existed and was empty, which is a different and untrue statement |
+| The two colours were validated, not chosen | the house teal failed the chroma floor and reads as grey. It was snapped to the nearest step that passes the lightness band, the chroma floor, colour vision separation, the normal vision floor and contrast against both surfaces |
+| No text inside a bar fill | white on either segment is under contrast for small text, and an interior segment has no free end to put a label beside. The legend carries the values |
+
+## The gate caught two things in this release's own work
+
+The articles are held to every rule the rest of the site is: no score, no adjective about a named product, pure ASCII, the same forbidden words. Writing them tripped the gate twice.
+
+```
+$ node admin/build/validate.js
+validate: 4 error(s)
+  x figtest.html: no canonical link
+  x figtest.md is a page in the tree and is not listed in llms.txt
+  x admin/build/figures.py:515: non-ASCII "a" (U+430) outside the declared
+    glyph set
+```
+
+A scratch file used to preview a figure had been copied into the repository, and a Cyrillic character had reached a diagram through a careless edit. Neither is interesting on its own. **What is interesting is that a site about what a control is could not publish a page that broke its own rules**, which is the only honest demonstration of a control there is.
+
+## What this release does not do
+
+- **It does not restate the model.** Where an article describes a rule it links to the page that owns it, and where the two disagree the model page is right and the article needs correcting.
+- **It adds no data and no formula.** The chart counts what the tags already held; the articles explain releases that had already shipped.
+- **It does not make the site's argument twice.** An article is about a release, not about the Agent Behaviour Policy. The argument lives on the model pages.
+
+[One article per release](../../articles/index.md) &#183; [The version surface](../../versions/index.md) &#183; [v0.5.0's own release record](../../versions/v0.5.0/index.md)
+
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.4.4: Seven deployment shapes somebody else measured, promoted with their provenance intact](../../articles/seven-shapes-somebody-else-measured/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
+
+---
+
+*[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/articles/one-article-per-release/index.html)*
 
 
 ------------------------------------------------------------------------
@@ -7201,7 +7370,7 @@ So `gmail.readonly` is a node in the vendor's word, never translated, joined to 
 
 > version v0.33.70 date 11 September 2026 from Dinis Cruz to Anyone deploying an agent, anyone building one, and anyone who has to sign for one
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7428,7 +7597,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever models the graph, whoever builds the renderer, and whoever compiles the prohibitions into something that enforces them
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7655,7 +7824,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7943,7 +8112,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever names the product, prices it, and stands at the table with it next week
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8201,7 +8370,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever plans the ladder from the behaviour policy to everything above it, and whoever talks to an underwriter first
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8449,7 +8618,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.4.0 date 20 September 2026 from The site's agent, for the project lead to Whoever models the ABP graph, whoever builds the pages of abp.sgit.ai, and the teams at riskmandate.ai and store.sgit.ai who render against its data
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8953,7 +9122,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > You are building abp.sgit.ai, the site for the Agent Behaviour Policy. This pack is what has been decided, what already exists, and what you must not invent.
 
-*Source: <https://abp.sgit.ai/docs/pack/00__START-HERE/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/00__START-HERE/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9053,7 +9222,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Every site in the network is named for an argument rather than for a function, and there are twenty seven of them. The argument here is not a product name.
 
-*Source: <https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9171,7 +9340,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Three sources govern how this site is built. Read all three before writing code. Where this pack and a source disagree, the source wins and you should say so.
 
-*Source: <https://abp.sgit.ai/docs/pack/02__THE-CONVENTIONS/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/02__THE-CONVENTIONS/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9272,7 +9441,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The ABP describes. It does not judge. It states what the agent can do, what it was authorised to do, the gap between them, and what stands in the way. It says nothing about whether any of that is acceptable, because acceptability is not in...
 
-*Source: <https://abp.sgit.ai/docs/pack/03__THE-ABP-MODEL/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/03__THE-ABP-MODEL/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9469,7 +9638,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The memo asks for a few ABPs, from simple to complex, to find out what they look like in practice and how hard they are to make. The answer is that the first five can be derived rather than authored, because the data exists.
 
-*Source: <https://abp.sgit.ai/docs/pack/04__THE-FIRST-EXAMPLES/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/04__THE-FIRST-EXAMPLES/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9558,7 +9727,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Thirteen rules that constrain this site. Each has a source and a reason. Rule 0 sits above the others and rules 1 and 13 are the two most likely to be broken.
 
-*Source: <https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9631,7 +9800,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Paste this to the agent that builds the site. It is the standard prompt for a new network site, extended with what this one needs.
 
-*Source: <https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9704,7 +9873,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > date 20 September 2026 from A review produced by ChatGPT at the project lead's request, on the Fractal Semantic Graphs page at sgit.ai and its supporting vaults, and handed to this site for the record to Whoever builds the universes on...
 
-*Source: <https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9951,7 +10120,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
 
-*Source: <https://abp.sgit.ai/docs/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10044,45 +10213,44 @@ External readings of the ideas this site is built on, published as received and 
 
 ------------------------------------------------------------------------
 
-<!-- https://abp.sgit.ai/versions/v0.5.0/index.html -->
+<!-- https://abp.sgit.ai/versions/v0.5.1/index.html -->
 
-# v0.5.0: the releases get one article each, with the screenshots taken from the tag each one names rather than from today's site
+# v0.5.1: the articles run newest first, carry their version in the title, and link to the release before and after them
 
-> The version surface says what changed, in the release's own words, and it is deliberately terse. Nothing on this site said why. This release adds an articles section: one article per release from v0.1.0 to v0.4.4, each explaining what the release changed, what it cost, and what...
+> Four changes to the section added yesterday, all of them about making the sequence readable. The index lists the newest release first, because that is what a reader arriving at it wants, while the register underneath stays in release order because that is the order the older and...
 
-*Source: <https://abp.sgit.ai/versions/v0.5.0/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.5.1/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
 ---
 
-[Home](../../index.md) / [Versions](../../versions/index.md) / v0.5.0
+[Home](../../index.md) / [Versions](../../versions/index.md) / v0.5.1
 
-# v0.5.0: the releases get one article each, with the screenshots taken from the tag each one names rather than from today's site
+# v0.5.1: the articles run newest first, carry their version in the title, and link to the release before and after them
 
-The version surface says what changed, in the release's own words, and it is deliberately terse. Nothing on this site said why. This release adds an articles section: one article per release from v0.1.0 to v0.4.4, each explaining what the release changed, what it cost, and what it did not settle. Every screenshot in them was captured from a checkout of the tag it names, so an article about the eleventh of September shows the site as it stood on the eleventh of September, badge and all. Ten diagrams carry the mechanisms a screenshot cannot show, and one chart carries the four measures across the eight releases.
+Four changes to the section added yesterday, all of them about making the sequence readable. The index lists the newest release first, because that is what a reader arriving at it wants, while the register underneath stays in release order because that is the order the older and newer links walk. Every article is titled with the version it is about, since one article per version is the whole idea and the title should say so. Every article opens with a note stating which release it is the article for and where it sits in the sequence, and closes with a table pointing at the release before it and the release after it. And v0.5.0, which added the section, now has an article of its own.
 
 | Field | Value |
 |---|---|
-| Version | `v0.5.0` |
-| Date | 2026-09-20 |
-| Commit | **`git rev-list -n 1 v0.5.0`**. The tag is the record: CI derives it from `admin/build/version.txt` and creates it on the commit whose subject carries `site v0.5.0:`. The hash is not written into [`versions/v0.5.0.json`](../../versions/v0.5.0.json), because a release commit cannot contain its own hash and reading it back from the tag made the build produce different bytes on a checkout with tags than on one without. |
+| Version | `v0.5.1` |
+| Date | 2026-09-21 |
+| Commit | **`git rev-list -n 1 v0.5.1`**. The tag is the record: CI derives it from `admin/build/version.txt` and creates it on the commit whose subject carries `site v0.5.1:`. The hash is not written into [`versions/v0.5.1.json`](../../versions/v0.5.1.json), because a release commit cannot contain its own hash and reading it back from the tag made the build produce different bytes on a checkout with tags than on one without. |
 | Reconstructed | no |
-| Machine readable | [`versions/v0.5.0.json`](../../versions/v0.5.0.json) |
+| Machine readable | [`versions/v0.5.1.json`](../../versions/v0.5.1.json) |
 
 ## What changed
 
-- Nine pages at /articles/: an index generated from the article register, and eight articles, one per release. Each states its version and date, links to that version's own record, and ends with the pages it is about rather than restating them.
-- Twenty seven screenshots under assets/articles/, every one captured from a detached worktree of the tag it names and carrying that version and the capture date in its own caption. Nothing was retouched or staged, and the method is four commands, so the figures are reproducible rather than trusted.
-- Ten figures in admin/build/figures.py, each with a described equivalent for the markdown twin so a reader of the twin is not sent to the page to find out what the picture said. Nine are diagrams of a mechanism: the four objects, the enforcer test, a string becoming three nodes, the zoom test in two halves, the nine universes, the fact diff, the confirmations flag as a path, the intake path, and where the sixteen shapes came from.
-- One chart, as small multiples: pages, nodes, edges and gate checks across the eight releases, one series per panel because the four measures have different scales and a single axis carrying two of them would say something untrue about both. Its two colours were chosen by a validator rather than by eye and pass the lightness band, the chroma floor, colour-vision separation, the normal-vision floor and contrast against both surfaces; the house teal failed the chroma floor and was snapped to the nearest passing step.
-- The articles are held to every rule the rest of the site is: no score, no adjective about a named product, pure ASCII, and the same forbidden words. Two of them were caught by the gate while this release was being written, one of them a stray non-ASCII character in a figure.
+- The index renders the register reversed, newest release first, and says so in the heading. Each card carries how many releases back it is, computed rather than written. Underneath, two sentences name where to start for reading forwards and for reading backwards.
+- Every article's title and page heading now begin with the version: an article about a release should be findable by the version number, in a tab strip and in a search result, without opening it.
+- Every article opens with a note saying which release it is the article for, the date, where it sits in the sequence, that the screenshots came from that tag, and links to the neighbouring releases. The position is computed, because an article that called itself the latest would be wrong on the next push.
+- Every article closes with an older and newer table, labelled by direction rather than numbered, so a reader can walk the sequence either way without guessing which of two links goes forwards.
+- An article for v0.5.0, the release that added the section, with three screenshots captured from the v0.5.0 tag: the index and its chart, an article showing the v0.1.0 home page with its own version badge, and an article section carrying a diagram. It also records the two things the gate caught in that release's own work.
 
 ## What it was built against
 
-- The eight release tags in this repository, which are what the screenshots were taken from and what the chart's numbers were counted from.
-- The version records under versions/, which the articles explain rather than restate, and which win where an article and a record disagree.
-- The visualisation guidance this estate follows for charts: pick the form before the colour, never two y axes, validate a categorical palette with a runnable check rather than by eye, and label selectively.
+- The section as it shipped at v0.5.0, read back as a reader rather than as its author, which is where the ordering and the missing navigation became obvious.
+- The house rule that an index is generated from the data it indexes, which is why there is one register in one order and two renderings of it.
 
 ## The five verifications against the sibling
 
@@ -10121,6 +10289,53 @@ The published source wins and the disagreement is recorded. **The estate's metho
 
 ---
 
+*[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/versions/v0.5.1/index.html)*
+
+
+------------------------------------------------------------------------
+
+<!-- https://abp.sgit.ai/versions/v0.5.0/index.html -->
+
+# v0.5.0: the releases get one article each, with the screenshots taken from the tag each one names rather than from today's site
+
+> The version surface says what changed, in the release's own words, and it is deliberately terse. Nothing on this site said why. This release adds an articles section: one article per release from v0.1.0 to v0.4.4, each explaining what the release changed, what it cost, and what...
+
+*Source: <https://abp.sgit.ai/versions/v0.5.0/index.html> · site v0.5.1 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../index.md) / [Versions](../../versions/index.md) / v0.5.0
+
+# v0.5.0: the releases get one article each, with the screenshots taken from the tag each one names rather than from today's site
+
+The version surface says what changed, in the release's own words, and it is deliberately terse. Nothing on this site said why. This release adds an articles section: one article per release from v0.1.0 to v0.4.4, each explaining what the release changed, what it cost, and what it did not settle. Every screenshot in them was captured from a checkout of the tag it names, so an article about the eleventh of September shows the site as it stood on the eleventh of September, badge and all. Ten diagrams carry the mechanisms a screenshot cannot show, and one chart carries the four measures across the eight releases.
+
+| Field | Value |
+|---|---|
+| Version | `v0.5.0` |
+| Date | 2026-09-20 |
+| Commit | **`git rev-list -n 1 v0.5.0`**. The tag is the record: CI derives it from `admin/build/version.txt` and creates it on the commit whose subject carries `site v0.5.0:`. The hash is not written into [`versions/v0.5.0.json`](../../versions/v0.5.0.json), because a release commit cannot contain its own hash and reading it back from the tag made the build produce different bytes on a checkout with tags than on one without. |
+| Reconstructed | no |
+| Machine readable | [`versions/v0.5.0.json`](../../versions/v0.5.0.json) |
+
+## What changed
+
+- Nine pages at /articles/: an index generated from the article register, and eight articles, one per release. Each states its version and date, links to that version's own record, and ends with the pages it is about rather than restating them.
+- Twenty seven screenshots under assets/articles/, every one captured from a detached worktree of the tag it names and carrying that version and the capture date in its own caption. Nothing was retouched or staged, and the method is four commands, so the figures are reproducible rather than trusted.
+- Ten figures in admin/build/figures.py, each with a described equivalent for the markdown twin so a reader of the twin is not sent to the page to find out what the picture said. Nine are diagrams of a mechanism: the four objects, the enforcer test, a string becoming three nodes, the zoom test in two halves, the nine universes, the fact diff, the confirmations flag as a path, the intake path, and where the sixteen shapes came from.
+- One chart, as small multiples: pages, nodes, edges and gate checks across the eight releases, one series per panel because the four measures have different scales and a single axis carrying two of them would say something untrue about both. Its two colours were chosen by a validator rather than by eye and pass the lightness band, the chroma floor, colour-vision separation, the normal-vision floor and contrast against both surfaces; the house teal failed the chroma floor and was snapped to the nearest passing step.
+- The articles are held to every rule the rest of the site is: no score, no adjective about a named product, pure ASCII, and the same forbidden words. Two of them were caught by the gate while this release was being written, one of them a stray non-ASCII character in a figure.
+
+## What it was built against
+
+- The eight release tags in this repository, which are what the screenshots were taken from and what the chart's numbers were counted from.
+- The version records under versions/, which the articles explain rather than restate, and which win where an article and a record disagree.
+- The visualisation guidance this estate follows for charts: pick the form before the colour, never two y axes, validate a categorical palette with a runnable check rather than by eye, and label selectively.
+
+---
+
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/versions/v0.5.0/index.html)*
 
 
@@ -10132,7 +10347,7 @@ The published source wins and the disagreement is recorded. **The estate's metho
 
 > The second of the three requests riskmandate.ai published against this site on 12 September, the one it marked as unblocking a product. Seven deployment shapes it built ahead of this site, two Gmail scopes, a Drive scope, a Microsoft 365 connector, a Dropbox server, the Google...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.4/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.4/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10182,7 +10397,7 @@ The second of the three requests riskmandate.ai published against this site on 1
 
 > The deployment shape universe, as far as published data takes it. A shape used to carry its tools as strings and nothing about what distinguishes one variant of a product from another. Now a product is a node with its variants, every tool a shape runs with is a node that exposes...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.3/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.3/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10230,7 +10445,7 @@ The deployment shape universe, as far as published data takes it. A shape used t
 
 > The projections universe, one release after the map named it. Every projection renders the same fact set and the diff must be empty: a rule in force since August that blocked a promise on four consecutive days in September because the diff did not exist. It exists now, in the...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.2/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.2/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10277,7 +10492,7 @@ The projections universe, one release after the map named it. Every projection r
 
 > The map of v0.4.0 becomes files the build reads, pages that render one query, and a gate check. Thirteen universes are authored in admin/build/universes.py, each with its owner, its centre of gravity, its smallest node, its status, its node types and its verbs; the build writes...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.1/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.1/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10325,7 +10540,7 @@ The map of v0.4.0 becomes files the build reads, pages that render one query, an
 
 > A map, and nothing built from it yet. By the zoom test as graphs.sgit.ai now states it, the graph this site holds at v0.3.0 decomposes one vocabulary very well and crosses into another in exactly two places, the reach class disagreement and the bridge to the game. An ABP is a...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.0/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.0/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10372,7 +10587,7 @@ A map, and nothing built from it yet. By the zoom test as graphs.sgit.ai now sta
 
 > The model pages were a projection of nothing. A capability was an identifier with a gloss beside it, which is a self-describing node, which is schema-first thinking dressed in graph syntax: the meaning was attached to the node rather than derived from its edges. This release...
 
-*Source: <https://abp.sgit.ai/versions/v0.3.0/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.3.0/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10420,7 +10635,7 @@ The model pages were a projection of nothing. A capability was an identifier wit
 
 > A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes...
 
-*Source: <https://abp.sgit.ai/versions/v0.2.0/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.2.0/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10468,7 +10683,7 @@ A correction to a rule this site published nine hours earlier, applied in the op
 
 > The first version of abp.sgit.ai. The capability ontology the ABP needs already existed, published, as the data pack a game reads, so this release promotes it into a schema with a stable address rather than authoring a second one, and derives five worked ABPs from it. Nothing on...
 
-*Source: <https://abp.sgit.ai/versions/v0.1.0/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.1.0/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10522,7 +10737,7 @@ The first version of abp.sgit.ai. The capability ontology the ABP needs already 
 
 > Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
-*Source: <https://abp.sgit.ai/versions/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10536,6 +10751,7 @@ Every release of this site. **The badge in the top bar reads `current` from [`ve
 
 | Version | Date | What changed |
 |---|---|---|
+| [v0.5.1](../versions/v0.5.1/index.md) | 2026-09-21 | the articles run newest first, carry their version in the title, and link to the release before and after them |
 | [v0.5.0](../versions/v0.5.0/index.md) | 2026-09-20 | the releases get one article each, with the screenshots taken from the tag each one names rather than from today's site |
 | [v0.4.4](../versions/v0.4.4/index.md) | 2026-09-20 | seven shapes contributed by riskmandate.ai are promoted with their provenance, a vendor scope becomes a node, and the intake path is the same for anybody |
 | [v0.4.3](../versions/v0.4.3/index.md) | 2026-09-20 | the product, the tool and the setting become nodes, derived from data already published, and whose material is declared on the grammar |

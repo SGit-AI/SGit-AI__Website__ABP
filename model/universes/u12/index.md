@@ -2,7 +2,7 @@
 
 > The estate of agents, one of the universes an ABP row crosses: owned by the organisation, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u12/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u12/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 

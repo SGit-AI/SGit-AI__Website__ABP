@@ -106,9 +106,30 @@ ARTICLES = [
      "dated probe of a live instance. Under the three layers those are facts owned by nobody, "
      "so they belong at the address every consumer reads. The bytes are held unchanged and "
      "the evidence tier stays the contributor's."),
+    ("one-article-per-release", "v0.5.0", "20 September 2026",
+     "The releases get one article each, and the screenshots come from the tag rather than "
+     "from today's site",
+     "A release record says what changed and is deliberately terse. Nothing said why. This "
+     "release adds the section you are reading, and the rule that makes it worth reading: a "
+     "figure about the eleventh of September shows the site as it stood on the eleventh of "
+     "September, version badge and all."),
 ]
 
 BY_SLUG = {a[0]: a for a in ARTICLES}
+
+# THE REGISTER IS CHRONOLOGICAL AND THE INDEX IS NOT. The list above is in the order the
+# releases happened, because that is the order the story makes sense in and the order the
+# older/newer links walk. A reader arriving at the index wants the most recent release
+# first, so the index reverses it. One list, two orders, and neither is maintained by hand.
+NEWEST_FIRST = list(reversed(ARTICLES))
+
+
+def neighbours(slug):
+    """The release before this one and the release after it, in release order."""
+    i = [a[0] for a in ARTICLES].index(slug)
+    older = ARTICLES[i - 1] if i > 0 else None
+    newer = ARTICLES[i + 1] if i + 1 < len(ARTICLES) else None
+    return older, newer
 
 
 def href(slug):
@@ -135,9 +156,19 @@ def _index():
                      "stands now."),
             ("h2", "Eight releases, four measures"),
             figures.evolution(),
-            ("h2", "The articles"),
-            ("cards", [{"title": f"[{t}]({href(s)})", "sub": lead,
-                        "foot": f"{v} &#183; {d}"} for s, v, d, t, lead in ARTICLES]),
+            ("h2", "The articles, newest release first"),
+            ("p", "**One article per release, and the article is the release.** Each one is "
+                  "titled with the version it is about, says what that release changed and "
+                  "what it did not settle, and links to the release before it and the release "
+                  "after it, so the sequence can be read in either direction."),
+            ("cards", [{"title": f"[{v}: {t}]({href(s)})", "sub": lead,
+                        "foot": f"{d} &#183; " + ("the current release" if i == 0 else
+                                                  f"{i} release{'s' if i > 1 else ''} back")}
+                       for i, (s, v, d, t, lead) in enumerate(NEWEST_FIRST)]),
+            ("p", "**Reading forwards** starts at "
+                  f"[{ARTICLES[0][1]}]({href(ARTICLES[0][0])}), the first release, and follows "
+                  f"the newer link at the foot of each article. **Reading backwards** starts at "
+                  f"[{ARTICLES[-1][1]}]({href(ARTICLES[-1][0])}) and follows the older link."),
             ("h2", "How the screenshots were taken"),
             ("p", "**Every screenshot in these articles came from the tag it names, not from "
                   "today's site.** For each of the eight release tags, a detached worktree "
@@ -166,19 +197,46 @@ def _index():
     }
 
 
+def _nav_block(slug, where):
+    """Older and newer, named rather than numbered, so the direction is never in doubt."""
+    older, newer = neighbours(slug)
+    rows = []
+    if older:
+        rows.append(["**Older**", f"[{older[1]}: {older[3]}]({href(older[0])})"])
+    if newer:
+        rows.append(["**Newer**", f"[{newer[1]}: {newer[3]}]({href(newer[0])})"])
+    rows.append(["**All of them**", "[One article per release](articles/index.html)"])
+    return [("h2", where), ("table", ["Direction", "The release"], rows)]
+
+
 def pages():
     out = {"articles/index.html": _index()}
-    for slug, v, date, title, lead in ARTICLES:
+    n = len(ARTICLES)
+    for i, (slug, v, date, title, lead) in enumerate(ARTICLES):
         body = BODIES[slug]("../../")
+        older, newer = neighbours(slug)
+        # The position is computed rather than written, so it cannot go stale when a release
+        # is added: an article that said `the latest' would be wrong on the next push.
+        place = (f"It is release {i + 1} of {n} on this site"
+                 + (", and the most recent" if not newer else ""))
         out[href(slug)] = {
-            "title": title,
+            "title": f"{v}: {title}",
             "description": shell.strip(lead),
             "blocks": [
                 ("crumb", f"[Home](index.html) / [Articles](articles/index.html) / {v}"),
-                ("h1", title),
+                ("h1", f"{v}: {title}"),
                 ("lead", lead),
-                ("p", f"**{v}**, {date}. " + vlink(v) + "."),
-            ] + body,
+                ("note", f"**This is the article for release {v}, published {date}.** Every "
+                         f"release of this site gets one, and it explains what that release "
+                         f"changed and why rather than restating "
+                         + vlink(v) + f". {place}. Every screenshot below was captured from a "
+                         f"checkout of the `{v}` tag, so it shows the site as it stood at that "
+                         f"release and not as it stands today. "
+                         + (f"Read on to [{newer[1]}]({href(newer[0])})"
+                            if newer else "Nothing follows it yet")
+                         + (f", or back to [{older[1]}]({href(older[0])})." if older
+                            else ", and it is where the sequence starts.")),
+            ] + body + _nav_block(slug, "Read the sequence"),
         }
     return out
 
@@ -1060,3 +1118,119 @@ BODIES = {
     "the-confirmations-flag-as-a-path": _v043,
     "seven-shapes-somebody-else-measured": _v044,
 }
+
+
+# ---------------------------------------------------------------------------
+# v0.5.0
+# ---------------------------------------------------------------------------
+
+def _v050(up):
+    return [
+        ("h2", "A release record is not an explanation"),
+        ("p", "This site has had a version surface since its first release. Every version has "
+              "a title that is a sentence rather than a label, a summary, a list of what "
+              "moved and a list of what it was built against. **It is deliberately terse, and "
+              "it explains nothing.**"),
+        ("p", "That is the right shape for a record and the wrong shape for a reader who wants "
+              "to know why a decision was made, what it cost, or what it failed to settle. "
+              "This release adds the section you are reading: one article per release, and "
+              "the article is the release."),
+        shot(up, "v050-articles-index",
+             "The articles index with a four panel chart of pages, nodes, edges and gate "
+             "checks across eight releases",
+             "The index opens with the four measures across the releases. It is small "
+             "multiples rather than one chart with two y axes, because the four numbers have "
+             "different scales and a single axis carrying two of them would say something "
+             "untrue about both.", "v0.5.0"),
+
+        ("h2", "The rule that makes the figures worth having"),
+        ("p", "**Every screenshot in an article was captured from the tag that article names**, "
+              "not from the site as it stands today. For each release tag a detached worktree "
+              "produced a checkout of that exact commit, a static server served it, and a "
+              "headless browser captured the named section of the named page."),
+        shot(up, "v050-shot-caption",
+             "An article showing the v0.1.0 home page, with a caption naming the version and "
+             "the capture date",
+             "The first release's home page, inside an article written nine days later. The "
+             "version badge in the captured chrome reads v0.1.0, which is the whole point: the "
+             "figure is evidence of what the site said, not an illustration of what it says "
+             "now.", "v0.5.0"),
+        ("note", "**A screenshot of today's page illustrating a claim about a fortnight ago is "
+                 "a small lie, and it is the kind nobody catches**, because the page looks "
+                 "right and the claim sounds right. The tags are in the repository and the "
+                 "method is four commands, so the figures are reproducible rather than "
+                 "trusted. Every caption carries the version, the capture date and the word "
+                 "unretouched."),
+
+        ("h2", "What a diagram is for, and what it is not for"),
+        ("p", "A screenshot shows what a reader would have seen. **A diagram shows a mechanism "
+              "no screenshot can**: an edge, a formula, a loop, a thing that does not happen. "
+              "Ten figures were written for this release, and the rule applied to each was "
+              "that a figure which only repeats the sentence beside it does not get made."),
+        shot(up, "v050-article-diagram",
+             "An article section with a two column diagram contrasting a hierarchy with a "
+             "fractal zoom",
+             "The zoom test as a figure. The left column is one vocabulary all the way down "
+             "and the right is a new ontology at every step joined by a named edge, which is a "
+             "distinction that survives being drawn and does not survive being described in a "
+             "sentence.", "v0.5.0"),
+        ("p", "**Each diagram carries a described equivalent for the markdown twin**, in the "
+              "same form the grant-against-mandate figure has used since v0.1.0. A reader of "
+              "the twin gets the figure's content in words rather than being sent to the page "
+              "to find out what the picture said."),
+
+        ("h2", "The chart had to be argued with before it could be drawn"),
+        ("p", "The four measures on the index are pages, nodes, edges and checks in the "
+              "release gate. They span 10 to 993, so the temptation is one chart with two y "
+              "axes, and that is the single most common way a chart lies."),
+        ("table", ["The decision", "Why"], [
+            ["Small multiples, one series per panel",
+             "four scales, four panels, each with its own axis. No panel implies a comparison "
+             "the numbers do not support"],
+            ["No label on the top gridline",
+             "it sits at the maximum, the maximum is the last value in every panel, and the "
+             "last value is already labelled at the dot. The same number twice is a "
+             "reconciliation the reader does for nothing"],
+            ["A dashed run before v0.3.0 on two panels",
+             "there was no graph before that release. Plotting zero would claim the graph "
+             "existed and was empty, which is a different and untrue statement"],
+            ["The two colours were validated, not chosen",
+             "the house teal failed the chroma floor and reads as grey. It was snapped to the "
+             "nearest step that passes the lightness band, the chroma floor, colour vision "
+             "separation, the normal vision floor and contrast against both surfaces"],
+            ["No text inside a bar fill",
+             "white on either segment is under contrast for small text, and an interior "
+             "segment has no free end to put a label beside. The legend carries the values"],
+        ]),
+
+        ("h2", "The gate caught two things in this release's own work"),
+        ("p", "The articles are held to every rule the rest of the site is: no score, no "
+              "adjective about a named product, pure ASCII, the same forbidden words. Writing "
+              "them tripped the gate twice."),
+        ("pre", "$ node admin/build/validate.js\n"
+                "validate: 4 error(s)\n"
+                "  x figtest.html: no canonical link\n"
+                "  x figtest.md is a page in the tree and is not listed in llms.txt\n"
+                "  x admin/build/figures.py:515: non-ASCII \"a\" (U+430) outside the declared\n"
+                "    glyph set"),
+        ("p", "A scratch file used to preview a figure had been copied into the repository, "
+              "and a Cyrillic character had reached a diagram through a careless edit. Neither "
+              "is interesting on its own. **What is interesting is that a site about what a "
+              "control is could not publish a page that broke its own rules**, which is the "
+              "only honest demonstration of a control there is."),
+
+        ("h2", "What this release does not do"),
+        ("ul", [
+            "**It does not restate the model.** Where an article describes a rule it links to "
+            "the page that owns it, and where the two disagree the model page is right and "
+            "the article needs correcting.",
+            "**It adds no data and no formula.** The chart counts what the tags already held; "
+            "the articles explain releases that had already shipped.",
+            "**It does not make the site's argument twice.** An article is about a release, "
+            "not about the Agent Behaviour Policy. The argument lives on the model pages.",
+        ]),
+        ("p", "[One article per release](articles/index.html) &#183; "
+              "[The version surface](versions/index.html) &#183; " + vlink("v0.5.0")),
+    ]
+
+BODIES["one-article-per-release"] = _v050

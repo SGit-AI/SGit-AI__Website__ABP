@@ -1,8 +1,8 @@
-# The fact diff was named as a blocker on four consecutive days, and it reads the published page
+# v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page
 
 > Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
 
-*Source: <https://abp.sgit.ai/articles/the-fact-diff-reads-the-published-page/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/the-fact-diff-reads-the-published-page/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10,11 +10,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.4.2
 
-# The fact diff was named as a blocker on four consecutive days, and it reads the published page
+# v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page
 
 Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
 
-**v0.4.2**, 20 September 2026. [v0.4.2's own release record](../../versions/v0.4.2/index.md).
+> **This is the article for release v0.4.2, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.2's own release record](../../versions/v0.4.2/index.md). It is release 6 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.2` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.3](../../articles/the-confirmations-flag-as-a-path/index.md), or back to [v0.4.1](../../articles/nine-universes-as-data/index.md).
 
 ## A rule with no mechanism behind it
 
@@ -61,6 +61,14 @@ The other half of the release is smaller and it closes a loop opened two version
 **The two sentences are doing different work.** The first says the edges inside the model read correctly. The second says the edges between the model and eight other worlds do, including two this site does not own.
 
 [The fact sets](../../data/facts/index.json) &#183; [An example](../../examples/github-actions-hosted-runner/index.md) &#183; [v0.4.2's own release record](../../versions/v0.4.2/index.md)
+
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build](../../articles/nine-universes-as-data/index.md) |
+| **Newer** | [v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it](../../articles/the-confirmations-flag-as-a-path/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
 
 ---
 

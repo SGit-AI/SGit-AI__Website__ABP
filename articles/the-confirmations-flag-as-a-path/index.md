@@ -1,8 +1,8 @@
-# The home page has argued about one setting since v0.1.0, and now the build walks it
+# v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it
 
 > A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
 
-*Source: <https://abp.sgit.ai/articles/the-confirmations-flag-as-a-path/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/the-confirmations-flag-as-a-path/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10,11 +10,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.4.3
 
-# The home page has argued about one setting since v0.1.0, and now the build walks it
+# v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it
 
 A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
 
-**v0.4.3**, 20 September 2026. [v0.4.3's own release record](../../versions/v0.4.3/index.md).
+> **This is the article for release v0.4.3, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.3's own release record](../../versions/v0.4.3/index.md). It is release 7 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.3` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.4](../../articles/seven-shapes-somebody-else-measured/index.md), or back to [v0.4.2](../../articles/the-fact-diff-reads-the-published-page/index.md).
 
 ## An argument that had been a sentence since the first release
 
@@ -66,6 +66,14 @@ The other half of the release answers the first of three requests a consumer of 
 **A grant you hold over other people's material is not a grant you may pass on.** That sentence is in the foundation document and it had nowhere to live in the data until this release.
 
 [The deployment shape universe](../../model/universes/u2/index.md) &#183; [The capability grammar](../../model/capabilities/index.md) &#183; [v0.4.3's own release record](../../versions/v0.4.3/index.md)
+
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page](../../articles/the-fact-diff-reads-the-published-page/index.md) |
+| **Newer** | [v0.4.4: Seven deployment shapes somebody else measured, promoted with their provenance intact](../../articles/seven-shapes-somebody-else-measured/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
 
 ---
 

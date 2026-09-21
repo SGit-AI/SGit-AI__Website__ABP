@@ -3,7 +3,7 @@
   "id": "abp-published-vocabulary",
   "name": "The Agent Behaviour Policy published vocabulary",
   "_what_this_is": "The capabilities, barriers, undo classes and deployment shapes an ABP is written in, at a stable address with cross origin access. Promoted from the published capability map rather than authored here.",
-  "version": "v0.5.0",
+  "version": "v0.5.1",
   "site": "https://abp.sgit.ai/",
   "base": "https://abp.sgit.ai/data/",
   "licence": "CC BY 4.0",

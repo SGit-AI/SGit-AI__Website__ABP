@@ -1,8 +1,8 @@
-# The ontology already existed, so the first release promoted it instead of writing one
+# v0.1.0: The ontology already existed, so the first release promoted it instead of writing one
 
 > Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
 
-*Source: <https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10,11 +10,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.1.0
 
-# The ontology already existed, so the first release promoted it instead of writing one
+# v0.1.0: The ontology already existed, so the first release promoted it instead of writing one
 
 Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
 
-**v0.1.0**, 11 September 2026. [v0.1.0's own release record](../../versions/v0.1.0/index.md).
+> **This is the article for release v0.1.0, published 11 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.1.0's own release record](../../versions/v0.1.0/index.md). It is release 1 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.1.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.2.0](../../articles/a-rule-corrected-nine-hours-later/index.md), and it is where the sequence starts.
 
 ## The gap the document exists for
 
@@ -95,6 +95,13 @@ The foundation document says that turning confirmations off moves the barrier on
 That is a stronger argument for the leaflet and against a headline number than the original wording was, and it is recorded in [v0.1.0's notes](../../versions/v0.1.0/index.md) rather than quietly fixed. The method is to record the gap.
 
 [The five examples](../../examples/index.md) &#183; [The capability grammar](../../model/capabilities/index.md) &#183; [The barrier](../../model/barriers/index.md) &#183; [v0.1.0's own release record](../../versions/v0.1.0/index.md)
+
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Newer** | [v0.2.0: A rule this site published in the morning was wrong by the afternoon, and the correction is on the page](../../articles/a-rule-corrected-nine-hours-later/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
 
 ---
 

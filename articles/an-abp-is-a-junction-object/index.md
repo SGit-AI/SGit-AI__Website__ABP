@@ -1,8 +1,8 @@
-# An ABP is a junction object, which is what Fractal Semantic Graphs is for
+# v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for
 
 > Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
 
-*Source: <https://abp.sgit.ai/articles/an-abp-is-a-junction-object/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/an-abp-is-a-junction-object/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10,11 +10,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.4.0
 
-# An ABP is a junction object, which is what Fractal Semantic Graphs is for
+# v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for
 
 Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
 
-**v0.4.0**, 20 September 2026. [v0.4.0's own release record](../../versions/v0.4.0/index.md).
+> **This is the article for release v0.4.0, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.0's own release record](../../versions/v0.4.0/index.md). It is release 4 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.1](../../articles/nine-universes-as-data/index.md), or back to [v0.3.0](../../articles/three-nodes-and-three-edges/index.md).
 
 ## A test this site had been quoting backwards
 
@@ -71,6 +71,14 @@ v0.4.0 is a brief and two corrections. It adds no data, no formula and no page b
 **Naming the gaps is the point of publishing a map before building it.** Four of the thirteen universes are named with an owner and nothing behind them: the twin, the obligations, the runtime and the estate of agents. Named gaps get filled and unnamed ones do not.
 
 [The map](../../model/universes/index.md) &#183; [The graph rules](../../model/graph/index.md) &#183; [v0.4.0's own release record](../../versions/v0.4.0/index.md)
+
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.3.0: read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax](../../articles/three-nodes-and-three-edges/index.md) |
+| **Newer** | [v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build](../../articles/nine-universes-as-data/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
 
 ---
 

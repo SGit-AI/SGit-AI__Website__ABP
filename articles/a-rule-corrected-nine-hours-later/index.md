@@ -1,8 +1,8 @@
-# A rule this site published in the morning was wrong by the afternoon, and the correction is on the page
+# v0.2.0: A rule this site published in the morning was wrong by the afternoon, and the correction is on the page
 
 > The foundation document says twice that the delta is computed and never stored. Half of that was right. The corrected rule is harder, the passages were not rewritten, and the check that enforced the old rule was inverted to enforce the new one.
 
-*Source: <https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10,11 +10,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.2.0
 
-# A rule this site published in the morning was wrong by the afternoon, and the correction is on the page
+# v0.2.0: A rule this site published in the morning was wrong by the afternoon, and the correction is on the page
 
 The foundation document says twice that the delta is computed and never stored. Half of that was right. The corrected rule is harder, the passages were not rewritten, and the check that enforced the old rule was inverted to enforce the new one.
 
-**v0.2.0**, 11 September 2026. [v0.2.0's own release record](../../versions/v0.2.0/index.md).
+> **This is the article for release v0.2.0, published 11 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.2.0's own release record](../../versions/v0.2.0/index.md). It is release 2 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.2.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.3.0](../../articles/three-nodes-and-three-edges/index.md), or back to [v0.1.0](../../articles/an-ontology-that-already-existed/index.md).
 
 ## The rule that was wrong by lunchtime
 
@@ -88,6 +88,14 @@ The foundation document is the definition the rest of the site stands on, and it
 - **What happens to a stored delta whose computation version is superseded**: recomputed, marked, or left as the record of what was believed at the time. The third is the most honest and the least useful.
 
 [The delta](../../model/delta/index.md) &#183; [The stored deltas as JSON](../../data/deltas/index.json) &#183; [v0.2.0's own release record](../../versions/v0.2.0/index.md)
+
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.1.0: The ontology already existed, so the first release promoted it instead of writing one](../../articles/an-ontology-that-already-existed/index.md) |
+| **Newer** | [v0.3.0: read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax](../../articles/three-nodes-and-three-edges/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
 
 ---
 

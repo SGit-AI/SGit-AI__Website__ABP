@@ -1,8 +1,8 @@
-# The map became files, pages and a gate check, and the walk is rebuilt on every build
+# v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build
 
 > A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
 
-*Source: <https://abp.sgit.ai/articles/nine-universes-as-data/index.html> · site v0.5.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/nine-universes-as-data/index.html> · site v0.5.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10,11 +10,11 @@ below point at them.*
 
 [Home](../../index.md) / [Articles](../../articles/index.md) / v0.4.1
 
-# The map became files, pages and a gate check, and the walk is rebuilt on every build
+# v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build
 
 A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
 
-**v0.4.1**, 20 September 2026. [v0.4.1's own release record](../../versions/v0.4.1/index.md).
+> **This is the article for release v0.4.1, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.1's own release record](../../versions/v0.4.1/index.md). It is release 5 of 9 on this site. Every screenshot below was captured from a checkout of the `v0.4.1` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.2](../../articles/the-fact-diff-reads-the-published-page/index.md), or back to [v0.4.0](../../articles/an-abp-is-a-junction-object/index.md).
 
 ## A map in prose is a claim
 
@@ -88,6 +88,14 @@ The same release carries something that is not this site's: an external review o
 > **The review's sharpest point is taken and is not yet built.** A bridge that says *same individual* is not a bridge that says *approximate match*, and a client that follows an edge without knowing which of those it is has not interpreted it. Every junction and every declared bridge should carry a kind. That is written down as the next change rather than quietly added to the data, because the map is published and changing it silently is the thing this site keeps refusing to do.
 
 [The universes](../../model/universes/index.md) &#183; [The universes as JSON](../../data/universes/index.json) &#183; [The research note](../../docs/index.md#research) &#183; [v0.4.1's own release record](../../versions/v0.4.1/index.md)
+
+## Read the sequence
+
+| Direction | The release |
+|---|---|
+| **Older** | [v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for](../../articles/an-abp-is-a-junction-object/index.md) |
+| **Newer** | [v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page](../../articles/the-fact-diff-reads-the-published-page/index.md) |
+| **All of them** | [One article per release](../../articles/index.md) |
 
 ---
 
