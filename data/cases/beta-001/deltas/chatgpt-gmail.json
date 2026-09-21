@@ -1,0 +1,237 @@
+{
+  "type": "abp/delta/v1",
+  "profile": "anthropic/gmail-connector/default",
+  "mandate": "beta-001/chatgpt-gmail",
+  "grant_version": "2026-09-16",
+  "mandate_version": "2026-09-21",
+  "pack_version": "v0.8.0",
+  "computed_at": "2026-09-21T00:00:00Z",
+  "computed_by": "abp.delta/v1",
+  "excess": [
+    {
+      "capability": "read.credential.host",
+      "barrier": "none",
+      "evidence": "inferred",
+      "via": [
+        "search_threads",
+        "get_message"
+      ],
+      "control": null,
+      "note": "password resets, one-time codes, invitations and account-recovery mail arrive in a mailbox; reading messages reads those. Inferred, not documented — no tool or scope on either vendor's page separates them.",
+      "material": "own",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "read.record.history",
+      "barrier": "none",
+      "evidence": "measured",
+      "via": [
+        "list_labels",
+        "get_thread",
+        "list_filters (listed; the agent reported no such tool — see contradictions)"
+      ],
+      "control": null,
+      "note": "a mailbox is a retained record of years, and the consent line is \"View your email messages and settings.\" Measured 2026-09-16: asked for the account's settings, Claude returned the label structure with thread and unread counts for every system and custom label (an inventory of the mailbox's shape), and said it had no tool for forwarding rules, filters, the vacation responder or signatures. Nothing separates this from reading messages, so the barrier is the same as the row above: none beyond the consent itself.",
+      "material": "mixed",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "send.message.world",
+      "barrier": "setting",
+      "evidence": "measured",
+      "via": [
+        "Send email message",
+        "reply",
+        "forward"
+      ],
+      "control": "two layers. At consent, Google's screen asks for \"Manage drafts and send emails.\" (gmail.compose) and \"Read, compose and send emails from your Gmail account.\" (gmail.modify), each with its own tick box, all pre-ticked under \"Select all\" — unticked, sending would be a boundary; this shape assumes the default. After consent, the per-action approval prompt: \"By default, Claude asks for your approval before each of these actions. On Team and Enterprise plans, owners decide whether members can allow these actions to run without asking each time.\" A switch the account, or an org owner, can flip. On the screen the prompt reads \"Claude wants to use Send email message from Gmail\" with three buttons: Deny · Always allow · Allow once. \"Always allow\" is the switch — one click by the account holder, and the prompt is gone for good.",
+      "note": "Anthropic: \"Send, reply to, and forward emails from Gmail.\" and \"During authentication, Google's OAuth screen mentions email sending permissions... Claude can send, reply to, and forward emails, but only does so with your explicit approval by default.\" The directory listing names reply and forward; Google's own reference for the same server (2026-07-21) names no tool that sends — see contradictions. The credential is the grant; the approval prompt is the barrier, and by the enforcer test it is a setting — the grant includes the ability to remove it. Measured 2026-09-16: one message sent to an address the deployer named for the purpose, after \"Allow once\"; Claude confirmed the send and the sending address. The message as sent carries no header naming the client: no X-Mailer, no User-Agent; the Received line says \"by gmailapi.google.com with HTTPREST\" from a numeric sender that is the OAuth client's Google Cloud project number, and the body is signed with the account holder's name. To the recipient it is the account holder's mail (evidence/09).",
+      "material": "third_party",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "authenticate-as.credential.tenant",
+      "barrier": "boundary",
+      "evidence": "measured",
+      "via": [
+        "Sign in with Google — \"Claude for Gmail\""
+      ],
+      "control": "the Google OAuth consent; \"You must authenticate directly with your Google account before using these connectors.\" Revocable from the Google account (\"To make changes at any time, go to your Google Account.\") and from Claude's Connectors settings.",
+      "note": "acts as the account holder over the Gmail data of the connected account. \"Claude mirrors your existing permissions — you cannot access information you don't already have access to in Google Workspace.\" The OAuth application is named \"Claude for Gmail\" on Google's screens. Measured 2026-09-16: the three Google screens — choose an account; \"Sign in to Claude for Gmail\"; \"Claude for Gmail wants access to your Google Account\" with the three scope lines pre-ticked — are transcribed in evidence/.",
+      "material": "own",
+      "undo": "no",
+      "is_bounded": true
+    },
+    {
+      "capability": "create.schedule.tenant",
+      "barrier": "setting",
+      "evidence": "documented",
+      "via": [
+        "create_filter"
+      ],
+      "control": "the per-action approval prompt: \"By default, each action Claude takes on your behalf requires your explicit approval. On Team and Enterprise plans, owners decide whether members can allow certain actions to run without asking each time.\"",
+      "note": "a Gmail filter is a standing rule that acts on every future message without the agent present — labelling, archiving, forwarding — which is what this primitive names: \"something that outlives the session, on the platform\". The tool is on the directory listing (captured 2026-09-16); it is not on Google's reference page for the server (2026-07-21), and the scope that filters need, gmail.settings.basic — \"See, edit, create, or change your email settings and filters in Gmail.\" — is not among the three lines on the consent screen. Whether the tool works under the consented scopes is open; the row records what is listed. Asked in the measured session, Claude said: \"the Gmail connector I have access to only exposes labels/messages, not account-level settings like forwarding rules, filters, vacation responder, IMAP/POP config, or signatures\" — self-reported, and against the listing.",
+      "material": "mixed",
+      "undo": "yes",
+      "is_bounded": false
+    }
+  ],
+  "excess_refused": [
+    {
+      "capability": "read.credential.host",
+      "barrier": "none",
+      "evidence": "inferred",
+      "via": [
+        "search_threads",
+        "get_message"
+      ],
+      "control": null,
+      "note": "password resets, one-time codes, invitations and account-recovery mail arrive in a mailbox; reading messages reads those. Inferred, not documented — no tool or scope on either vendor's page separates them.",
+      "material": "own",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "send.message.world",
+      "barrier": "setting",
+      "evidence": "measured",
+      "via": [
+        "Send email message",
+        "reply",
+        "forward"
+      ],
+      "control": "two layers. At consent, Google's screen asks for \"Manage drafts and send emails.\" (gmail.compose) and \"Read, compose and send emails from your Gmail account.\" (gmail.modify), each with its own tick box, all pre-ticked under \"Select all\" — unticked, sending would be a boundary; this shape assumes the default. After consent, the per-action approval prompt: \"By default, Claude asks for your approval before each of these actions. On Team and Enterprise plans, owners decide whether members can allow these actions to run without asking each time.\" A switch the account, or an org owner, can flip. On the screen the prompt reads \"Claude wants to use Send email message from Gmail\" with three buttons: Deny · Always allow · Allow once. \"Always allow\" is the switch — one click by the account holder, and the prompt is gone for good.",
+      "note": "Anthropic: \"Send, reply to, and forward emails from Gmail.\" and \"During authentication, Google's OAuth screen mentions email sending permissions... Claude can send, reply to, and forward emails, but only does so with your explicit approval by default.\" The directory listing names reply and forward; Google's own reference for the same server (2026-07-21) names no tool that sends — see contradictions. The credential is the grant; the approval prompt is the barrier, and by the enforcer test it is a setting — the grant includes the ability to remove it. Measured 2026-09-16: one message sent to an address the deployer named for the purpose, after \"Allow once\"; Claude confirmed the send and the sending address. The message as sent carries no header naming the client: no X-Mailer, no User-Agent; the Received line says \"by gmailapi.google.com with HTTPREST\" from a numeric sender that is the OAuth client's Google Cloud project number, and the body is signed with the account holder's name. To the recipient it is the account holder's mail (evidence/09).",
+      "material": "third_party",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "create.schedule.tenant",
+      "barrier": "setting",
+      "evidence": "documented",
+      "via": [
+        "create_filter"
+      ],
+      "control": "the per-action approval prompt: \"By default, each action Claude takes on your behalf requires your explicit approval. On Team and Enterprise plans, owners decide whether members can allow certain actions to run without asking each time.\"",
+      "note": "a Gmail filter is a standing rule that acts on every future message without the agent present — labelling, archiving, forwarding — which is what this primitive names: \"something that outlives the session, on the platform\". The tool is on the directory listing (captured 2026-09-16); it is not on Google's reference page for the server (2026-07-21), and the scope that filters need, gmail.settings.basic — \"See, edit, create, or change your email settings and filters in Gmail.\" — is not among the three lines on the consent screen. Whether the tool works under the consented scopes is open; the row records what is listed. Asked in the measured session, Claude said: \"the Gmail connector I have access to only exposes labels/messages, not account-level settings like forwarding rules, filters, vacation responder, IMAP/POP config, or signatures\" — self-reported, and against the listing.",
+      "material": "mixed",
+      "undo": "yes",
+      "is_bounded": false
+    }
+  ],
+  "excess_unstated": [
+    {
+      "capability": "read.record.history",
+      "barrier": "none",
+      "evidence": "measured",
+      "via": [
+        "list_labels",
+        "get_thread",
+        "list_filters (listed; the agent reported no such tool — see contradictions)"
+      ],
+      "control": null,
+      "note": "a mailbox is a retained record of years, and the consent line is \"View your email messages and settings.\" Measured 2026-09-16: asked for the account's settings, Claude returned the label structure with thread and unread counts for every system and custom label (an inventory of the mailbox's shape), and said it had no tool for forwarding rules, filters, the vacation responder or signatures. Nothing separates this from reading messages, so the barrier is the same as the row above: none beyond the consent itself.",
+      "material": "mixed",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "authenticate-as.credential.tenant",
+      "barrier": "boundary",
+      "evidence": "measured",
+      "via": [
+        "Sign in with Google — \"Claude for Gmail\""
+      ],
+      "control": "the Google OAuth consent; \"You must authenticate directly with your Google account before using these connectors.\" Revocable from the Google account (\"To make changes at any time, go to your Google Account.\") and from Claude's Connectors settings.",
+      "note": "acts as the account holder over the Gmail data of the connected account. \"Claude mirrors your existing permissions — you cannot access information you don't already have access to in Google Workspace.\" The OAuth application is named \"Claude for Gmail\" on Google's screens. Measured 2026-09-16: the three Google screens — choose an account; \"Sign in to Claude for Gmail\"; \"Claude for Gmail wants access to your Google Account\" with the three scope lines pre-ticked — are transcribed in evidence/.",
+      "material": "own",
+      "undo": "no",
+      "is_bounded": true
+    }
+  ],
+  "unbounded_excess": [
+    {
+      "capability": "read.credential.host",
+      "barrier": "none",
+      "evidence": "inferred",
+      "via": [
+        "search_threads",
+        "get_message"
+      ],
+      "control": null,
+      "note": "password resets, one-time codes, invitations and account-recovery mail arrive in a mailbox; reading messages reads those. Inferred, not documented — no tool or scope on either vendor's page separates them.",
+      "material": "own",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "read.record.history",
+      "barrier": "none",
+      "evidence": "measured",
+      "via": [
+        "list_labels",
+        "get_thread",
+        "list_filters (listed; the agent reported no such tool — see contradictions)"
+      ],
+      "control": null,
+      "note": "a mailbox is a retained record of years, and the consent line is \"View your email messages and settings.\" Measured 2026-09-16: asked for the account's settings, Claude returned the label structure with thread and unread counts for every system and custom label (an inventory of the mailbox's shape), and said it had no tool for forwarding rules, filters, the vacation responder or signatures. Nothing separates this from reading messages, so the barrier is the same as the row above: none beyond the consent itself.",
+      "material": "mixed",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "send.message.world",
+      "barrier": "setting",
+      "evidence": "measured",
+      "via": [
+        "Send email message",
+        "reply",
+        "forward"
+      ],
+      "control": "two layers. At consent, Google's screen asks for \"Manage drafts and send emails.\" (gmail.compose) and \"Read, compose and send emails from your Gmail account.\" (gmail.modify), each with its own tick box, all pre-ticked under \"Select all\" — unticked, sending would be a boundary; this shape assumes the default. After consent, the per-action approval prompt: \"By default, Claude asks for your approval before each of these actions. On Team and Enterprise plans, owners decide whether members can allow these actions to run without asking each time.\" A switch the account, or an org owner, can flip. On the screen the prompt reads \"Claude wants to use Send email message from Gmail\" with three buttons: Deny · Always allow · Allow once. \"Always allow\" is the switch — one click by the account holder, and the prompt is gone for good.",
+      "note": "Anthropic: \"Send, reply to, and forward emails from Gmail.\" and \"During authentication, Google's OAuth screen mentions email sending permissions... Claude can send, reply to, and forward emails, but only does so with your explicit approval by default.\" The directory listing names reply and forward; Google's own reference for the same server (2026-07-21) names no tool that sends — see contradictions. The credential is the grant; the approval prompt is the barrier, and by the enforcer test it is a setting — the grant includes the ability to remove it. Measured 2026-09-16: one message sent to an address the deployer named for the purpose, after \"Allow once\"; Claude confirmed the send and the sending address. The message as sent carries no header naming the client: no X-Mailer, no User-Agent; the Received line says \"by gmailapi.google.com with HTTPREST\" from a numeric sender that is the OAuth client's Google Cloud project number, and the body is signed with the account holder's name. To the recipient it is the account holder's mail (evidence/09).",
+      "material": "third_party",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "create.schedule.tenant",
+      "barrier": "setting",
+      "evidence": "documented",
+      "via": [
+        "create_filter"
+      ],
+      "control": "the per-action approval prompt: \"By default, each action Claude takes on your behalf requires your explicit approval. On Team and Enterprise plans, owners decide whether members can allow certain actions to run without asking each time.\"",
+      "note": "a Gmail filter is a standing rule that acts on every future message without the agent present — labelling, archiving, forwarding — which is what this primitive names: \"something that outlives the session, on the platform\". The tool is on the directory listing (captured 2026-09-16); it is not on Google's reference page for the server (2026-07-21), and the scope that filters need, gmail.settings.basic — \"See, edit, create, or change your email settings and filters in Gmail.\" — is not among the three lines on the consent screen. Whether the tool works under the consented scopes is open; the row records what is listed. Asked in the measured session, Claude said: \"the Gmail connector I have access to only exposes labels/messages, not account-level settings like forwarding rules, filters, vacation responder, IMAP/POP config, or signatures\" — self-reported, and against the listing.",
+      "material": "mixed",
+      "undo": "yes",
+      "is_bounded": false
+    }
+  ],
+  "shortfall": [],
+  "aligned": [
+    {
+      "capability": "read.message.tenant",
+      "barrier": "boundary",
+      "evidence": "measured",
+      "via": [
+        "search_threads",
+        "get_thread",
+        "get_message",
+        "list_drafts"
+      ],
+      "control": "the Google OAuth consent — \"View your email messages and settings.\" (gmail.readonly), one of three lines the person can tick individually on Google's screen — and the per-connector toggle in Claude; revocable from Claude's Connectors settings and from the Google account's third-party access page",
+      "note": "Anthropic: \"Search and read emails using natural language queries.\" \"Access email metadata, including attachment metadata (not attachment content).\" Google's reference: \"Read data: Search emails, retrieve threads, and list labels.\" Read carries no per-action approval prompt on Anthropic's page; the prompt sentence sits under send, reply and forward. Measured 2026-09-16: asked to read the inbox and name the top messages, Claude returned ten threads with sender, subject and date, after \"Loaded tools, used Gmail integration\".",
+      "material": "mixed",
+      "undo": "no",
+      "is_bounded": true
+    }
+  ],
+  "derived_never_authored": "No field in this record is writable by a person. The way to change a delta is to change a grant or a mandate, and then recompute.",
+  "provisional": true,
+  "provisional_note": "Computed against the nearest published shape, which is not this deployment. It shows what the delta would look like if the deployment's grant matched that shape, and nothing more. The deployment's own grant has not been measured."
+}

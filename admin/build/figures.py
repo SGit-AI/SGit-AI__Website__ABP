@@ -712,3 +712,104 @@ def consent_moment():
                "actually asks whether you still want the thing you asked for thirty seconds "
                "ago, which has one answer. All six of the missing items are available to the "
                "software at the moment it asks")
+
+
+def estate_map():
+    """One person's estate: two assistants, six deployments, one account four of them share."""
+    body = [DEFS,
+            '<text x="24" y="22" class="fh">One person, two assistants, six deployments, one '
+            'shared account</text>',
+            '<text x="24" y="40" class="fk">each deployment is an ABP; the account is where '
+            'four of their grants union</text>']
+    # the person
+    body.append(_box(330, 56, 300, 40, "One person", "a business user, elicited on 21 September"))
+    # the assistants
+    body.append(_box(96, 136, 430, 44, "ChatGPT", "allow all: the per action approval is off"))
+    body.append(_box(600, 136, 264, 44, "Claude", "approval mode not stated"))
+    body.append(_arrow(420, 96, 311, 136))
+    body.append(_arrow(540, 96, 732, 136))
+    # the connectors under ChatGPT
+    names = [("Gmail", "mail"), ("Calendar", "events"), ("Drive", "files"),
+             ("Note taker", "meetings")]
+    for i, (n, sub) in enumerate(names):
+        x = 100 + i * 108
+        body.append(_box(x, 224, 100, 44, n, sub))
+        body.append(_arrow(150 + i * 108, 180, 150 + i * 108, 224))
+    # Slack under Claude
+    body.append(_box(682, 224, 100, 44, "Slack", "channels"))
+    body.append(_arrow(732, 180, 732, 224))
+    # the unattended scout, holding the Gmail grant with nobody present
+    body.append(_box(100, 300, 208, 44, "Inbox scout", "the same grant, nobody present",
+                     cls="box-x"))
+    body.append(_arrow(150, 268, 150, 300))
+    # the shared account
+    body.append(_box(100, 380, 424, 46, "One Google account",
+                     "mail, calendar, drive and the scout: the union of four grants",
+                     cls="box-a"))
+    for x in (258, 366):
+        body.append(_arrow(x, 268, x, 380, cls="edge-a"))
+    body.append(_arrow(204, 344, 204, 380, cls="edge-a"))
+    # out of scope
+    body.append(_box(600, 300, 264, 44, "A third assistant",
+                     "text messages: connected to neither, not mapped", cls="box-x"))
+    body.append('<text x="24" y="456" class="fd">Six ABPs one level down, each over the '
+                'grammar. One level up, one mandate in the person\'s words against the union '
+                'of every grant they hold.</text>')
+    return fig(_svg("".join(body), 470),
+               "The estate as elicited. The dashed scout holds the Gmail grant with no person "
+               "in front of it, which makes it a deployment of its own; the account underneath "
+               "is the junction where four separately consented grants meet.",
+               "A figure here in the page: one person at the top, connected to two assistants. "
+               "ChatGPT, with allow all switched on, has four connectors: Gmail, Calendar, "
+               "Drive and a meeting note taker. Claude has Slack. Under Gmail sits the inbox "
+               "scout, dashed, holding the same grant with nobody present. Under mail, "
+               "calendar, drive and the scout sits one Google account, the union of four "
+               "grants. A dashed box to the side names a third assistant for text messages, "
+               "connected to neither and not mapped")
+
+
+def calendar_rebuild():
+    """Which calendar events a mail trail could rebuild, and which are simply gone."""
+    cols = [
+        ("Arrived as an invitation", "from somebody else, or a group meeting with an agenda",
+         "the invitation, its updates and any cancellation are in the mailbox",
+         "Rebuildable from your own mail", "box-a"),
+        ("You created it, with guests", "a one to one you set up",
+         "your sent mail and the guests' inboxes hold the invitation",
+         "Rebuildable from somebody's mailbox, perhaps not yours", "box"),
+        ("You created it, no guests", "a block of time, a reminder, a note to yourself",
+         "nothing ever left the calendar",
+         "Not rebuildable: a deletion is the end of it", "box-x"),
+    ]
+    body = [DEFS,
+            '<text x="24" y="22" class="fh">Which events a deletion would actually cost</text>',
+            '<text x="24" y="40" class="fk">there is no backup; the mailbox is the only '
+            'trail, and it only holds what was sent</text>']
+    for i, (t, sub, trail, verdict, cls) in enumerate(cols):
+        x = 24 + i * 308
+        body.append(_box(x, 60, 296, 48, t, sub))
+        body.append(_arrow(x + 148, 108, x + 148, 150))
+        for j, line in enumerate(_wrap(trail, 40)):
+            body.append(f'<text x="{x + 148}" y="{168 + j * 17}" text-anchor="middle" '
+                        f'class="ft">{line}</text>')
+        body.append(_arrow(x + 148, 206, x + 148, 236))
+        vl = _wrap(verdict, 36)
+        h = 30 + 16 * len(vl)
+        body.append(f'<rect x="{x}" y="236" width="296" height="{h}" rx="9" class="{cls}"/>')
+        for j, line in enumerate(vl):
+            body.append(f'<text x="{x + 148}" y="{258 + j * 16}" text-anchor="middle" '
+                        f'class="fb">{line}</text>')
+    body.append('<text x="24" y="330" class="fd">The proportion between the three is unknown '
+                'for this estate. It is the number that says what one deletion costs, and the '
+                'deployer can produce it with one prompt.</text>')
+    return fig(_svg("".join(body), 344),
+               "Three kinds of event, sorted by what could put them back. The clause on the "
+               "calendar page asks the assistant to say which kind an event is before it "
+               "touches it.",
+               "A figure here in the page: three columns. An event that arrived as an "
+               "invitation from somebody else leaves the invitation, its updates and any "
+               "cancellation in the mailbox, so it is rebuildable from your own mail. An "
+               "event you created with guests is held in your sent mail and their inboxes, so "
+               "it is rebuildable from somebody's mailbox, perhaps not yours. An event you "
+               "created with no guests never left the calendar, so a deletion is the end of "
+               "it. The proportion between the three is unknown for this estate")

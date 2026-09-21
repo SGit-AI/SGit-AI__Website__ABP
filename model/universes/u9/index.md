@@ -1,8 +1,8 @@
 # U9: The estate and the twin
 
-> The estate and the twin, one of the universes an ABP row crosses: owned by the customer, through twins.sgit.ai, with its own node types and verbs, sharing only the grammar. Status: gap.
+> The estate and the twin, one of the universes an ABP row crosses: owned by the customer, through twins.sgit.ai, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u9/index.html> · site v0.6.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u9/index.html> · site v0.7.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12,9 +12,9 @@ below point at them.*
 
 # U9: The estate and the twin
 
-**Owner** the customer, through twins.sgit.ai. **Centre of gravity** this machine, this account, this repository attached to this session. **Smallest node** one connector present and switched off; one credential in one home directory. **Level** beside. **Status** a gap, named.
+**Owner** the customer, through twins.sgit.ai. **Centre of gravity** this machine, this account, this repository attached to this session. **Smallest node** one connector present and switched off; one credential in one home directory. **Level** beside. **Status** partial.
 
-> The one the delta page already named: this site has no twin connected to anything and its label says so. It resolves what host, tenant and world mean for one instance, which is the reach class disagreement made per estate; it holds one_setting_away for a capability whose switch is outside the grant; it carries synchronised_at for the second of the three clocks; and it holds a MaterialOverride when the estate knows whose material it is.
+> Partial since v0.7.0: one estate exists as authored data, at cases/beta-001, with six deployments each naming the nearest published shape or declaring the gap, and a mandate per deployment elicited from the person. It was written down from an interview rather than synchronised from anything, so it is not a twin, and no node of it is in the graph yet. Before that this was the one the delta page already named: this site has no twin connected to anything and its label says so. It resolves what host, tenant and world mean for one instance, which is the reach class disagreement made per estate; it holds one_setting_away for a capability whose switch is outside the grant; it carries synchronised_at for the second of the three clocks; and it holds a MaterialOverride when the estate knows whose material it is.
 
 ## Node types
 

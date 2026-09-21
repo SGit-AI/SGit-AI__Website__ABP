@@ -1,0 +1,15 @@
+{
+  "type": "abp/cases/v1",
+  "_what_this_is": "One person's estate of deployments, each an ABP, elicited rather than authored. The first thing this site holds in universe u9.",
+  "count": 1,
+  "cases": [
+    {
+      "id": "beta-001",
+      "label": "One person, two assistants, six deployments, one shared account",
+      "file": "cases/beta-001/case.json",
+      "deployments": 6,
+      "elicited": "2026-09-21",
+      "corrected": null
+    }
+  ]
+}

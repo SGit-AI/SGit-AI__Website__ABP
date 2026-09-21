@@ -38,6 +38,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import abp  # noqa: E402
 import abp_pages  # noqa: E402
 import articles  # noqa: E402
+import cases  # noqa: E402
 import docs_pages  # noqa: E402
 import gmail_pages  # noqa: E402
 import graph  # noqa: E402
@@ -116,6 +117,10 @@ NAV = [
      [("The walkthrough", "gmail/index.html")]
      + [(f"{tag}: {name}", rel) for rel, tag, name, _ in gmail_pages.STEPS],
      ("gmail/",)),
+    ("Cases", "cases/index.html",
+     [("One person, six deployments", "cases/beta-001/index.html")]
+     + [(d["connector"], f"cases/beta-001/{d['id']}/index.html") for d in cases.DEPLOYMENTS],
+     ("cases/",)),
     ("Articles", "articles/index.html",
      [("One per release", "articles/index.html")]
      + [(v, "articles/" + slug + "/index.html") for slug, v, *_ in articles.ARTICLES],
@@ -135,6 +140,7 @@ FOOTER = [
         ("The four objects", "model/index.html"),
         ("The barrier", "model/barriers/index.html"),
         ("Five worked examples", "examples/index.html"),
+        ("One person's estate", "cases/beta-001/index.html"),
     ]),
     ("The data", [
         ("The published vocabulary", "data/index.html"),
@@ -160,6 +166,58 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.7.0", "2026-09-21",
+     "the first case: one person's estate of six deployments, the mandates elicited from an "
+     "interview line by line, and the grants not yet measured",
+     {
+       "summary":
+         "Every shape on this site is a vendor's product in a configuration. This release "
+         "adds the object one level up: a case, which is one person, the assistants they "
+         "actually run, the connectors they actually switched on, and a mandate for each "
+         "elicited in their own words. The first case is an early beta user with two chat "
+         "assistants over five connectors, four of the six deployments sharing one Google "
+         "account, and allow all switched on for every one of the ChatGPT connectors. It is "
+         "the first thing this site holds in universe u9, which goes from gap to partial, and "
+         "it is the fractal claim made concrete: the same four objects one level up, with the "
+         "person's single mandate on one side and the union of every grant they hold on the "
+         "other, and the account as the node where the levels meet.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "A cases data type at data/cases/: an index, the case, one mandate per deployment "
+         "over all 23 primitives, and one provisional delta per deployment that has a nearest "
+         "published shape. Every wanted or refused line carries whether the person said it or "
+         "it was inferred, and from what fragment; every unstated line says so. The grant on "
+         "every deployment is recorded as not measured, because it is not.",
+         "Eight pages: the cases index, the estate, and one page per deployment with the "
+         "mandate line by line, what the grammar has no word for, the nearest shape and its "
+         "provisional delta or the declared gap, the clauses drafted in the person's voice for "
+         "them to correct, and the discovery prompt that produces the grant.",
+         "Two figures: the estate as elicited, with the unattended scout dashed and the "
+         "shared account underneath as the junction of four grants; and which calendar events "
+         "a mail trail could rebuild, because the thing the person values most has no backup.",
+         "Universe u9 goes from gap to partial, with the status note saying exactly what "
+         "exists: one estate as authored data, written down from an interview, not a twin, "
+         "and no node of it in the graph yet.",
+         "A sixteenth gate check: every case mandate covers the grammar once, every elicited "
+         "line says how it is known, every provisional delta recomputes from the nearest shape "
+         "and the mandate and is marked provisional, no deployment without a shape stores a "
+         "delta, and no grant claims to be measured.",
+         "A finding recorded rather than fixed: the grammar has no word for a calendar event, "
+         "a read or unread state, a share setting, a transcript or a channel post. The mandate "
+         "over primitives for the calendar is nearly empty and the clauses carry all of it.",
+       ],
+       "basis": [
+         "One interview, elicited by riskmandate.ai on 21 September 2026 and transcribed "
+         "automatically. The transcript is not published; every quoted fragment was checked "
+         "against it, and nothing identifies the person.",
+         "The mailbox walkthrough at v0.6.0, whose prompts are reused per deployment, and "
+         "whose fourth page is what the clauses on every case page point at.",
+         "The Fractal Semantic Graphs mapping at v0.4.0, which named u9 as a gap and said what "
+         "would have to exist for it to be anything else.",
+       ],
+     }),
     ("v0.6.1", "2026-09-21",
      "the mailbox walkthrough gets its article, with six figures captured from the v0.6.0 tag",
      {
@@ -1056,6 +1114,11 @@ def home(D):
                         "it can already do, what you actually asked for, the behaviour policy, "
                         "and what a prompt cannot do.",
                  "foot": "Start here if you have connected one to your mail."},
+                {"title": "[A case: one person, six deployments](cases/beta-001/index.html)",
+                 "sub": "Two assistants, five connectors, one shared account. The mandates "
+                        "elicited from one interview, line by line, and the grants not yet "
+                        "measured. The four objects one level up.",
+                 "foot": "The first thing in the estate universe."},
                 {"title": "[What an ABP is](what-is-an-abp/index.html)",
                  "sub": "The foundation document: the definition, the four objects, the barrier, "
                         "one worked example with published numbers, and the questions we would "
@@ -1348,7 +1411,7 @@ def main():
     cls = graph.classify(g)
     pages = {"index.html": home(D), "what-is-an-abp/index.html": what_is_an_abp(D)}
     for source in (abp_pages.pages(D), lexicon_pages.pages(D, g, cls),
-                   universe_pages.pages(D, g, cls), gmail_pages.pages(D),
+                   universe_pages.pages(D, g, cls), gmail_pages.pages(D), cases.pages(D),
                    articles.pages(), docs_pages.pages(),
                    version_pages()):
         clash = set(source) & set(pages)

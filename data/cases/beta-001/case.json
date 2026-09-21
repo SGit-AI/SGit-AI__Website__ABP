@@ -1,0 +1,242 @@
+{
+  "type": "abp/case/v1",
+  "id": "beta-001",
+  "label": "One person, two assistants, six deployments, one shared account",
+  "who": "An early beta user: a business user whose day runs in a mail, calendar and files suite, with two chat assistants connected to different parts of it and a third, out of scope here, handling text messages.",
+  "elicited": "2026-09-21",
+  "elicited_by": "riskmandate.ai, in an interview on 21 September 2026, transcribed automatically; the transcript is held by riskmandate.ai and is not published",
+  "corrected": null,
+  "status": "elicited, not yet corrected by the deployer, no grant measured",
+  "universe": "u9",
+  "assistants": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "consent": "allow all",
+      "consent_note": "the per action approval is switched off: asked whether they were authorising every action, the answer was that they had done the allow all. So the one setting that stands in front of an action in this product is off, on every connector below."
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "consent": "not stated",
+      "consent_note": "the approval mode for the Slack connector was not asked about."
+    }
+  ],
+  "shared_account": {
+    "what": "one Google account",
+    "deployments": [
+      "chatgpt-gmail",
+      "chatgpt-calendar",
+      "chatgpt-drive",
+      "chatgpt-inbox-scout"
+    ],
+    "why_it_matters": "A connector attaches to the account rather than to a conversation, so each of these grants holds in every session that has it attached, and the account's exposure is the union of all four. A scheduled task holds the same grant with nobody in front of it."
+  },
+  "out_of_scope": [
+    "A third assistant that handles text messages and WhatsApp. It is connected to neither of the two above and was not mapped.",
+    "Tasks and notes in the suite: named as present and not connected to either assistant."
+  ],
+  "information_architecture": [
+    {
+      "fact": "Mail is unread counts, not labels",
+      "detail": "\"unreads, not so much labels, which I should use basically\". About 314,000 unread messages, never purged. So the unread set is not a task list here, it is a backlog, and a change to it would go unnoticed for a long time. The one thing that would not: fifty messages flipping state in the part of the inbox they actually look at."
+    },
+    {
+      "fact": "An auto prioritisation runs on the inbox",
+      "detail": "\"auto prioritisation that is also being done based on some P0, P1\": a priority marking the deployer treats as the real task list. What produces it was not established (a Gmail feature, a filter, a third party, or the assistant) and it is the first open question below."
+    },
+    {
+      "fact": "An assistant scouts the inbox unattended",
+      "detail": "\"I also have OpenAI that is scouting my inbox for high priority emails\": a task that runs when the person is not in the conversation, over the same grant. It is listed as its own deployment below because a grant with nobody in front of it is a different shape from the same grant in a chat."
+    },
+    {
+      "fact": "The calendar is the thing that matters most",
+      "detail": "\"my calendar runs my life\". Some events carry detail and some do not; one to ones usually have titles; anything from a third party or a group meeting usually has an agenda. Asked to rank, the calendar sits above mail."
+    },
+    {
+      "fact": "There is no backup of the calendar",
+      "detail": "Asked whether any backup exists: none. As far as the deployer knows a deleted event is gone. The one trail that could rebuild some of it is the mailbox, because invitations, declines and cancellations arrive as mail. Which events could be rebuilt from that trail, and which could not, is a map nobody has drawn."
+    },
+    {
+      "fact": "Some of what they hold must never leave",
+      "detail": "Agreed without hesitation that the mailbox and the drive contain material received from others that must never be forwarded or passed on, which is an allow list and a deny list nobody has written."
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "What produces the P0 and P1 marking?",
+      "why": "If it is a Gmail feature or a filter, it is a setting in the account. If it is the assistant, it is the scout below acting on mail rather than only reading it, which changes that deployment's mandate."
+    },
+    {
+      "question": "How is the inbox scout implemented?",
+      "why": "A scheduled task inside the assistant, a recurring prompt the person runs, or a third party with its own grant. Each is a different shape and only the first is covered by the nearest shape named below."
+    },
+    {
+      "question": "Which scopes did the calendar and drive consents ask for?",
+      "why": "The consent screens were not captured. Read only and full access are different grants and the same allow all click sits in front of both."
+    },
+    {
+      "question": "What is the approval mode on the Slack connector?",
+      "why": "Not asked. Per action or allow all decides the barrier on every row."
+    },
+    {
+      "question": "What does the meeting note taker's connector expose?",
+      "why": "Transcripts of other people's speech, summaries, or both, and whether the connector can write back. Not documented anywhere this site has read."
+    },
+    {
+      "question": "Which calendar events could be rebuilt from mail?",
+      "why": "Events that arrived as invitations leave a trail in the mailbox; events the person created with no guests leave none. The proportion is unknown and it decides how much of the calendar a deletion would actually cost."
+    }
+  ],
+  "deployments": [
+    {
+      "id": "chatgpt-gmail",
+      "name": "ChatGPT with the Gmail connector, allow all",
+      "assistant": "chatgpt",
+      "connector": "Gmail",
+      "consent": "allow all",
+      "nearest_shape": "anthropic/gmail-connector/default",
+      "nearest_note": "a different client on the same platform: the measured profile for a chat assistant with a Gmail connector, 4 of 6 rows seen on the thing itself. The Google scopes are the same layer; the tool list is not this product's.",
+      "grant": "not measured",
+      "mandate": "cases/beta-001/mandates/chatgpt-gmail.json",
+      "delta": "cases/beta-001/deltas/chatgpt-gmail.json",
+      "page": "https://abp.sgit.ai/cases/beta-001/chatgpt-gmail/index.html",
+      "want": [
+        "read.message.tenant"
+      ],
+      "do_not_want": [
+        "send.message.world",
+        "read.credential.host",
+        "create.schedule.tenant"
+      ],
+      "unstated_count": 19,
+      "said_count": 1,
+      "inferred_count": 3,
+      "provisional_excess": 5,
+      "provisional_unbounded_excess": 4
+    },
+    {
+      "id": "chatgpt-calendar",
+      "name": "ChatGPT with the Google Calendar connector, allow all",
+      "assistant": "chatgpt",
+      "connector": "Google Calendar",
+      "consent": "allow all",
+      "nearest_shape": null,
+      "nearest_note": "no published shape. A calendar connector for a chat assistant is on riskmandate.ai's list of shapes asked for and not yet published, and the grammar this site is written in has no word for a calendar event at all, which is the finding on this page.",
+      "grant": "not measured",
+      "mandate": "cases/beta-001/mandates/chatgpt-calendar.json",
+      "delta": null,
+      "page": "https://abp.sgit.ai/cases/beta-001/chatgpt-calendar/index.html",
+      "want": [],
+      "do_not_want": [
+        "send.message.world",
+        "create.schedule.tenant"
+      ],
+      "unstated_count": 21,
+      "said_count": 0,
+      "inferred_count": 2
+    },
+    {
+      "id": "chatgpt-drive",
+      "name": "ChatGPT with the Google Drive connector, allow all",
+      "assistant": "chatgpt",
+      "connector": "Google Drive",
+      "consent": "allow all",
+      "nearest_shape": "google/drive/readonly-connector",
+      "nearest_note": "the read only shape, derived and not measured. This deployment's consent was not captured and may be the full drive scope, in which case the nearest shape understates the grant by every write and delete row.",
+      "grant": "not measured",
+      "mandate": "cases/beta-001/mandates/chatgpt-drive.json",
+      "delta": "cases/beta-001/deltas/chatgpt-drive.json",
+      "page": "https://abp.sgit.ai/cases/beta-001/chatgpt-drive/index.html",
+      "want": [
+        "read.file.host"
+      ],
+      "do_not_want": [
+        "delete.file.host",
+        "send.message.world",
+        "create.record.world"
+      ],
+      "unstated_count": 19,
+      "said_count": 1,
+      "inferred_count": 3,
+      "provisional_excess": 2,
+      "provisional_unbounded_excess": 1
+    },
+    {
+      "id": "chatgpt-granola",
+      "name": "ChatGPT with a meeting note taker connected",
+      "assistant": "chatgpt",
+      "connector": "a meeting note taker",
+      "consent": "allow all",
+      "nearest_shape": null,
+      "nearest_note": "no published shape, and nothing this site has read documents what the connector exposes: transcripts, summaries, or both, and whether it can write. Everything in it is other people's speech.",
+      "grant": "not measured",
+      "mandate": "cases/beta-001/mandates/chatgpt-granola.json",
+      "delta": null,
+      "page": "https://abp.sgit.ai/cases/beta-001/chatgpt-granola/index.html",
+      "want": [
+        "read.record.history"
+      ],
+      "do_not_want": [
+        "send.message.world",
+        "create.record.world"
+      ],
+      "unstated_count": 20,
+      "said_count": 1,
+      "inferred_count": 2
+    },
+    {
+      "id": "chatgpt-inbox-scout",
+      "name": "The inbox scout: the same Gmail grant, running with nobody present",
+      "assistant": "chatgpt",
+      "connector": "Gmail, unattended",
+      "consent": "allow all",
+      "nearest_shape": "generic/scheduled-job/service-account",
+      "nearest_note": "the derived shape for a job that runs when nobody is watching. It is not a mail connector, so the primitives differ; what it shares with this deployment is the one property that matters: no person's judgement stands in front of any action.",
+      "grant": "not measured",
+      "mandate": "cases/beta-001/mandates/chatgpt-inbox-scout.json",
+      "delta": "cases/beta-001/deltas/chatgpt-inbox-scout.json",
+      "page": "https://abp.sgit.ai/cases/beta-001/chatgpt-inbox-scout/index.html",
+      "want": [
+        "read.message.tenant"
+      ],
+      "do_not_want": [
+        "send.message.world",
+        "read.credential.host",
+        "create.schedule.tenant",
+        "execute.process.host",
+        "write.file.host",
+        "delete.file.host"
+      ],
+      "unstated_count": 16,
+      "said_count": 1,
+      "inferred_count": 6,
+      "provisional_excess": 7,
+      "provisional_unbounded_excess": 7
+    },
+    {
+      "id": "claude-slack",
+      "name": "Claude with the Slack connector",
+      "assistant": "claude",
+      "connector": "Slack",
+      "consent": "not stated",
+      "nearest_shape": null,
+      "nearest_note": "no published shape. A Slack connector for a chat assistant is on riskmandate.ai's list of shapes asked for and not yet published, with the note that channels are mostly other people's writing.",
+      "grant": "not measured",
+      "mandate": "cases/beta-001/mandates/claude-slack.json",
+      "delta": null,
+      "page": "https://abp.sgit.ai/cases/beta-001/claude-slack/index.html",
+      "want": [
+        "read.message.tenant"
+      ],
+      "do_not_want": [
+        "send.message.world"
+      ],
+      "unstated_count": 21,
+      "said_count": 1,
+      "inferred_count": 1
+    }
+  ],
+  "page": "https://abp.sgit.ai/cases/beta-001/index.html",
+  "not_an_assessment": "Nothing here is a measurement, an assessment, an audit or a review of any named product. The mandates were elicited from one person and have not been corrected by them; the grants have not been measured; every delta is provisional against a shape that is not this deployment."
+}

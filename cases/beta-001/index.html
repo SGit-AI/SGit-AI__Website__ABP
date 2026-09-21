@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Case beta-001: One person, two assistants, six deployments, one shared account - abp.sgit.ai</title>
+<meta name="description" content="One business user, two chat assistants, six deployments over five connectors, four of them sharing one Google account. The estate mapped, the mandates elicited, the grants not yet measured.">
+<link rel="canonical" href="https://abp.sgit.ai/cases/beta-001/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/cases/beta-001/index.html">
+<meta property="og:title" content="Case beta-001: One person, two assistants, six deployments, one shared account - abp.sgit.ai">
+<meta property="og:description" content="One business user, two chat assistants, six deployments over five connectors, four of them sharing one Google account. The estate mapped, the mandates elicited, the grants not yet measured.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.7.0/index.html" title="What changed in v0.7.0, and the commit it was built from">v0.7.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../gmail/index.html">Your mailbox<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../gmail/index.html">The walkthrough</a>
+      <a class="sl" href="../../gmail/what-it-can-do/index.html">Step 1: What it can already do</a>
+      <a class="sl" href="../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a>
+      <a class="sl" href="../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a>
+      <a class="sl" href="../../gmail/what-a-prompt-cannot-do/index.html">Step 4: What a prompt cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../cases/index.html">Cases<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl here" href="../../cases/beta-001/index.html">One person, six deployments</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-gmail/index.html">Gmail</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-calendar/index.html">Google Calendar</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-drive/index.html">Google Drive</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-granola/index.html">a meeting note taker</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-inbox-scout/index.html">Gmail, unattended</a>
+      <a class="sl" href="../../cases/beta-001/claude-slack/index.html">Slack</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../articles/index.html">One per release</a>
+      <a class="sl" href="../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
+      <a class="sl" href="../../articles/thirteen-prompts-and-the-fourth-page/index.html">v0.6.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../cases/index.html">Cases</a> / beta-001</p>
+  <h1>One person, two assistants, six deployments, one shared account</h1>
+  <p class="lead"><b>An early beta user: a business user whose day runs in a mail, calendar and files suite, with two chat assistants connected to different parts of it and a third, out of scope here, handling text messages.</b> Two assistants, six deployments, and one Google account that four of them share. Everything below was elicited from one interview on 2026-09-21; nothing was measured.</p>
+  <div class="note"><b>Where the words on this page came from.</b> One interview, elicited by riskmandate.ai on 21 September 2026 and transcribed automatically. The transcript is not published; every quoted fragment was checked against it. <b>Nothing here is measured.</b> No grant was probed, no tool list was captured, and every delta is provisional against a published shape that is not this deployment. The deployer has not yet corrected the draft, and the correction is the mandate.</div>
+  <h2 id="the-estate">The estate</h2>
+  <figure class="fig"><svg class="fig" viewBox="0 0 960 470" role="img" preserveAspectRatio="xMidYMid meet"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d5d0c2"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0b8f80"/></marker></defs><text x="24" y="22" class="fh">One person, two assistants, six deployments, one shared account</text><text x="24" y="40" class="fk">each deployment is an ABP; the account is where four of their grants union</text><rect x="330" y="56" width="300" height="40" rx="9" class="box"/><text x="480.0" y="72.0" text-anchor="middle" class="fb">One person</text><text x="480.0" y="88.0" text-anchor="middle" class="fd">a business user, elicited on 21 September</text><rect x="96" y="136" width="430" height="44" rx="9" class="box"/><text x="311.0" y="154.0" text-anchor="middle" class="fb">ChatGPT</text><text x="311.0" y="170.0" text-anchor="middle" class="fd">allow all: the per action approval is off</text><rect x="600" y="136" width="264" height="44" rx="9" class="box"/><text x="732.0" y="154.0" text-anchor="middle" class="fb">Claude</text><text x="732.0" y="170.0" text-anchor="middle" class="fd">approval mode not stated</text><path d="M 420 96 L 311 136" class="edge" marker-end="url(#ah)"/><path d="M 540 96 L 732 136" class="edge" marker-end="url(#ah)"/><rect x="100" y="224" width="100" height="44" rx="9" class="box"/><text x="150.0" y="242.0" text-anchor="middle" class="fb">Gmail</text><text x="150.0" y="258.0" text-anchor="middle" class="fd">mail</text><path d="M 150 180 L 150 224" class="edge" marker-end="url(#ah)"/><rect x="208" y="224" width="100" height="44" rx="9" class="box"/><text x="258.0" y="242.0" text-anchor="middle" class="fb">Calendar</text><text x="258.0" y="258.0" text-anchor="middle" class="fd">events</text><path d="M 258 180 L 258 224" class="edge" marker-end="url(#ah)"/><rect x="316" y="224" width="100" height="44" rx="9" class="box"/><text x="366.0" y="242.0" text-anchor="middle" class="fb">Drive</text><text x="366.0" y="258.0" text-anchor="middle" class="fd">files</text><path d="M 366 180 L 366 224" class="edge" marker-end="url(#ah)"/><rect x="424" y="224" width="100" height="44" rx="9" class="box"/><text x="474.0" y="242.0" text-anchor="middle" class="fb">Note taker</text><text x="474.0" y="258.0" text-anchor="middle" class="fd">meetings</text><path d="M 474 180 L 474 224" class="edge" marker-end="url(#ah)"/><rect x="682" y="224" width="100" height="44" rx="9" class="box"/><text x="732.0" y="242.0" text-anchor="middle" class="fb">Slack</text><text x="732.0" y="258.0" text-anchor="middle" class="fd">channels</text><path d="M 732 180 L 732 224" class="edge" marker-end="url(#ah)"/><rect x="100" y="300" width="208" height="44" rx="9" class="box-x"/><text x="204.0" y="318.0" text-anchor="middle" class="fb">Inbox scout</text><text x="204.0" y="334.0" text-anchor="middle" class="fd">the same grant, nobody present</text><path d="M 150 268 L 150 300" class="edge" marker-end="url(#ah)"/><rect x="100" y="380" width="424" height="46" rx="9" class="box-a"/><text x="312.0" y="399.0" text-anchor="middle" class="fb">One Google account</text><text x="312.0" y="415.0" text-anchor="middle" class="fd">mail, calendar, drive and the scout: the union of four grants</text><path d="M 258 268 L 258 380" class="edge-a" marker-end="url(#aha)"/><path d="M 366 268 L 366 380" class="edge-a" marker-end="url(#aha)"/><path d="M 204 344 L 204 380" class="edge-a" marker-end="url(#aha)"/><rect x="600" y="300" width="264" height="44" rx="9" class="box-x"/><text x="732.0" y="318.0" text-anchor="middle" class="fb">A third assistant</text><text x="732.0" y="334.0" text-anchor="middle" class="fd">text messages: connected to neither, not mapped</text><text x="24" y="456" class="fd">Six ABPs one level down, each over the grammar. One level up, one mandate in the person's words against the union of every grant they hold.</text></svg><figcaption>The estate as elicited. The dashed scout holds the Gmail grant with no person in front of it, which makes it a deployment of its own; the account underneath is the junction where four separately consented grants meet.</figcaption></figure>
+  <div class="tablewrap"><table><thead><tr><th>Deployment</th><th>Consent</th><th>Nearest published shape</th><th>The mandate</th><th>Provisional delta</th></tr></thead><tbody><tr><td><a href="../../cases/beta-001/chatgpt-gmail/index.html">ChatGPT with the Gmail connector, allow all</a></td><td>allow all</td><td><a href="../../examples/index.html"><code>anthropic/gmail-connector/default</code></a></td><td>1 wanted, 3 refused, 19 unstated</td><td>5 excess, 4 unbounded</td></tr><tr><td><a href="../../cases/beta-001/chatgpt-calendar/index.html">ChatGPT with the Google Calendar connector, allow all</a></td><td>allow all</td><td><b>none published</b></td><td>0 wanted, 2 refused, 21 unstated</td><td>no shape to compute against</td></tr><tr><td><a href="../../cases/beta-001/chatgpt-drive/index.html">ChatGPT with the Google Drive connector, allow all</a></td><td>allow all</td><td><a href="../../examples/index.html"><code>google/drive/readonly-connector</code></a></td><td>1 wanted, 3 refused, 19 unstated</td><td>2 excess, 1 unbounded</td></tr><tr><td><a href="../../cases/beta-001/chatgpt-granola/index.html">ChatGPT with a meeting note taker connected</a></td><td>allow all</td><td><b>none published</b></td><td>1 wanted, 2 refused, 20 unstated</td><td>no shape to compute against</td></tr><tr><td><a href="../../cases/beta-001/chatgpt-inbox-scout/index.html">The inbox scout: the same Gmail grant, running with nobody present</a></td><td>allow all</td><td><a href="../../examples/index.html"><code>generic/scheduled-job/service-account</code></a></td><td>1 wanted, 6 refused, 16 unstated</td><td>7 excess, 7 unbounded</td></tr><tr><td><a href="../../cases/beta-001/claude-slack/index.html">Claude with the Slack connector</a></td><td>not stated</td><td><b>none published</b></td><td>1 wanted, 1 refused, 21 unstated</td><td>no shape to compute against</td></tr></tbody></table></div>
+  <p><b>Allow all is on for every ChatGPT connector.</b> Asked whether they were authorising each action, the deployer said they had done the allow all. That is the third barrier kind switched to off: the one setting the product puts in front of an action is not there, so on every row of the four ChatGPT deployments the barrier is whatever Google's scopes leave and nothing above it.</p>
+  <h2 id="the-account-is-the-junction">The account is the junction</h2>
+  <p>Four deployments run over <b>one Google account</b>: mail, calendar, drive and the unattended scout. Each holds its own grant, each was consented to separately, and <b>the account's exposure is the union of the four</b>, which no single deployment's ABP can see. A connector attaches to the account rather than to a conversation, so each of these grants holds in every session that has it attached, and the account's exposure is the union of all four. A scheduled task holds the same grant with nobody in front of it.</p>
+  <p>This is the fractal claim made concrete rather than argued. One level down, each deployment is four objects over the grammar. One level up, the person is four objects again: one mandate, in their words, against the union of every grant they hold. Same shape, different ontology, and the account is the node where the levels meet.</p>
+  <h2 id="what-they-told-us-about-how-they-work">What they told us about how they work</h2>
+  <ul><li><b>Mail is unread counts, not labels.</b> "unreads, not so much labels, which I should use basically". About 314,000 unread messages, never purged. So the unread set is not a task list here, it is a backlog, and a change to it would go unnoticed for a long time. The one thing that would not: fifty messages flipping state in the part of the inbox they actually look at.</li><li><b>An auto prioritisation runs on the inbox.</b> "auto prioritisation that is also being done based on some P0, P1": a priority marking the deployer treats as the real task list. What produces it was not established (a Gmail feature, a filter, a third party, or the assistant) and it is the first open question below.</li><li><b>An assistant scouts the inbox unattended.</b> "I also have OpenAI that is scouting my inbox for high priority emails": a task that runs when the person is not in the conversation, over the same grant. It is listed as its own deployment below because a grant with nobody in front of it is a different shape from the same grant in a chat.</li><li><b>The calendar is the thing that matters most.</b> "my calendar runs my life". Some events carry detail and some do not; one to ones usually have titles; anything from a third party or a group meeting usually has an agenda. Asked to rank, the calendar sits above mail.</li><li><b>There is no backup of the calendar.</b> Asked whether any backup exists: none. As far as the deployer knows a deleted event is gone. The one trail that could rebuild some of it is the mailbox, because invitations, declines and cancellations arrive as mail. Which events could be rebuilt from that trail, and which could not, is a map nobody has drawn.</li><li><b>Some of what they hold must never leave.</b> Agreed without hesitation that the mailbox and the drive contain material received from others that must never be forwarded or passed on, which is an allow list and a deny list nobody has written.</li></ul>
+  <h2 id="the-calendar-has-no-backup-and-the-mailbox-is-the-only-trail">The calendar has no backup, and the mailbox is the only trail</h2>
+  <p>The thing the deployer values most is the thing with no backup. Asked, the answer was that as far as they know a deleted event is gone. But some of a calendar arrives as mail: invitations, updates, declines and cancellations all land in the inbox, and from that trail some events could be rebuilt. Which ones is a map nobody has drawn, and it decides what a deletion would actually cost.</p>
+  <figure class="fig"><svg class="fig" viewBox="0 0 960 344" role="img" preserveAspectRatio="xMidYMid meet"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d5d0c2"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0b8f80"/></marker></defs><text x="24" y="22" class="fh">Which events a deletion would actually cost</text><text x="24" y="40" class="fk">there is no backup; the mailbox is the only trail, and it only holds what was sent</text><rect x="24" y="60" width="296" height="48" rx="9" class="box"/><text x="172.0" y="80.0" text-anchor="middle" class="fb">Arrived as an invitation</text><text x="172.0" y="96.0" text-anchor="middle" class="fd">from somebody else, or a group meeting with an agenda</text><path d="M 172 108 L 172 150" class="edge" marker-end="url(#ah)"/><text x="172" y="168" text-anchor="middle" class="ft">the invitation, its updates and any</text><text x="172" y="185" text-anchor="middle" class="ft">cancellation are in the mailbox</text><path d="M 172 206 L 172 236" class="edge" marker-end="url(#ah)"/><rect x="24" y="236" width="296" height="46" rx="9" class="box-a"/><text x="172" y="258" text-anchor="middle" class="fb">Rebuildable from your own mail</text><rect x="332" y="60" width="296" height="48" rx="9" class="box"/><text x="480.0" y="80.0" text-anchor="middle" class="fb">You created it, with guests</text><text x="480.0" y="96.0" text-anchor="middle" class="fd">a one to one you set up</text><path d="M 480 108 L 480 150" class="edge" marker-end="url(#ah)"/><text x="480" y="168" text-anchor="middle" class="ft">your sent mail and the guests' inboxes</text><text x="480" y="185" text-anchor="middle" class="ft">hold the invitation</text><path d="M 480 206 L 480 236" class="edge" marker-end="url(#ah)"/><rect x="332" y="236" width="296" height="62" rx="9" class="box"/><text x="480" y="258" text-anchor="middle" class="fb">Rebuildable from somebody's mailbox,</text><text x="480" y="274" text-anchor="middle" class="fb">perhaps not yours</text><rect x="640" y="60" width="296" height="48" rx="9" class="box"/><text x="788.0" y="80.0" text-anchor="middle" class="fb">You created it, no guests</text><text x="788.0" y="96.0" text-anchor="middle" class="fd">a block of time, a reminder, a note to yourself</text><path d="M 788 108 L 788 150" class="edge" marker-end="url(#ah)"/><text x="788" y="168" text-anchor="middle" class="ft">nothing ever left the calendar</text><path d="M 788 206 L 788 236" class="edge" marker-end="url(#ah)"/><rect x="640" y="236" width="296" height="62" rx="9" class="box-x"/><text x="788" y="258" text-anchor="middle" class="fb">Not rebuildable: a deletion is the</text><text x="788" y="274" text-anchor="middle" class="fb">end of it</text><text x="24" y="330" class="fd">The proportion between the three is unknown for this estate. It is the number that says what one deletion costs, and the deployer can produce it with one prompt.</text></svg><figcaption>Three kinds of event, sorted by what could put them back. The clause on the calendar page asks the assistant to say which kind an event is before it touches it.</figcaption></figure>
+  <h2 id="open-questions-the-deployer-can-answer">Open questions the deployer can answer</h2>
+  <p>Each of these changes a mandate or a barrier on one of the pages below, and none of them can be answered from here.</p>
+  <ol><li><b>What produces the P0 and P1 marking?</b> If it is a Gmail feature or a filter, it is a setting in the account. If it is the assistant, it is the scout below acting on mail rather than only reading it, which changes that deployment's mandate.</li><li><b>How is the inbox scout implemented?</b> A scheduled task inside the assistant, a recurring prompt the person runs, or a third party with its own grant. Each is a different shape and only the first is covered by the nearest shape named below.</li><li><b>Which scopes did the calendar and drive consents ask for?</b> The consent screens were not captured. Read only and full access are different grants and the same allow all click sits in front of both.</li><li><b>What is the approval mode on the Slack connector?</b> Not asked. Per action or allow all decides the barrier on every row.</li><li><b>What does the meeting note taker's connector expose?</b> Transcripts of other people's speech, summaries, or both, and whether the connector can write back. Not documented anywhere this site has read.</li><li><b>Which calendar events could be rebuilt from mail?</b> Events that arrived as invitations leave a trail in the mailbox; events the person created with no guests leave none. The proportion is unknown and it decides how much of the calendar a deletion would actually cost.</li></ol>
+  <h2 id="the-first-prompt-for-both-assistants">The first prompt, for both assistants</h2>
+  <p>Before any of the six pages, one prompt to paste into each assistant separately. Two answers, one account, and the comparison is the point.</p>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt A</span><b>The connectors, from the inside</b><span class="psub">Run it in ChatGPT and in Claude. The two lists together are the estate.</span></figcaption><pre class="ptext">List every connector and every external tool you have on my account, by name. For each
+one say:
+
+  - whether each action needs my approval, or whether I have allowed all
+  - what you have already done through it in our conversations, as far as you can see,
+    and say plainly if you cannot see earlier sessions
+  - whether it can only read, or can also change or send something
+  - whether anything runs through it on a schedule, when I am not here
+
+Then tell me which of these connectors share one underlying account, because a grant on
+one of them is a grant on the account.</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <h2 id="the-six-deployments">The six deployments</h2>
+  <div class="gamegrid"><div class="gamecard"><h3><a href="../../cases/beta-001/chatgpt-gmail/index.html">ChatGPT with the Gmail connector, allow all</a></h3><p class="sub">a different client on the same platform: the measured profile for a chat assistant with a Gmail connector, 4 of 6 rows seen on the thing itself. The Google scopes are the same layer; the tool list is not this product's.</p><div class="foot">1 said, 3 inferred, 19 unstated</div></div><div class="gamecard"><h3><a href="../../cases/beta-001/chatgpt-calendar/index.html">ChatGPT with the Google Calendar connector, allow all</a></h3><p class="sub">no published shape. A calendar connector for a chat assistant is on riskmandate.ai's list of shapes asked for and not yet published, and the grammar this site is written in has no word for a calendar event at all, which is the finding on this page.</p><div class="foot">0 said, 2 inferred, 21 unstated</div></div><div class="gamecard"><h3><a href="../../cases/beta-001/chatgpt-drive/index.html">ChatGPT with the Google Drive connector, allow all</a></h3><p class="sub">the read only shape, derived and not measured. This deployment's consent was not captured and may be the full drive scope, in which case the nearest shape understates the grant by every write and delete row.</p><div class="foot">1 said, 3 inferred, 19 unstated</div></div><div class="gamecard"><h3><a href="../../cases/beta-001/chatgpt-granola/index.html">ChatGPT with a meeting note taker connected</a></h3><p class="sub">no published shape, and nothing this site has read documents what the connector exposes: transcripts, summaries, or both, and whether it can write. Everything in it is other people's speech.</p><div class="foot">1 said, 2 inferred, 20 unstated</div></div><div class="gamecard"><h3><a href="../../cases/beta-001/chatgpt-inbox-scout/index.html">The inbox scout: the same Gmail grant, running with nobody present</a></h3><p class="sub">the derived shape for a job that runs when nobody is watching. It is not a mail connector, so the primitives differ; what it shares with this deployment is the one property that matters: no person's judgement stands in front of any action.</p><div class="foot">1 said, 6 inferred, 16 unstated</div></div><div class="gamecard"><h3><a href="../../cases/beta-001/claude-slack/index.html">Claude with the Slack connector</a></h3><p class="sub">no published shape. A Slack connector for a chat assistant is on riskmandate.ai's list of shapes asked for and not yet published, with the note that channels are mostly other people's writing.</p><div class="foot">1 said, 1 inferred, 21 unstated</div></div></div>
+  <h2 id="out-of-scope">Out of scope</h2>
+  <ul><li>A third assistant that handles text messages and WhatsApp. It is connected to neither of the two above and was not mapped.</li><li>Tasks and notes in the suite: named as present and not connected to either assistant.</li></ul>
+  <div class="note"><b>Nothing on this site is an assessment, an audit, a certification or a security review of any named product</b>, and no adjective on this page attaches to one. A case describes one person's deployments in their own words and against published shapes with their sources and dates.</div>
+  <p><a href="../../data/cases/beta-001/case.json">The case as JSON</a> &amp;#183; <a href="../../gmail/index.html">The walkthrough the discovery prompts come from</a> &amp;#183; <a href="../../model/universes/u9/index.html">The estate universe</a></p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.7.0/index.html">v0.7.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../cases/beta-001/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+    <a href="../../cases/beta-001/index.html">One person's estate</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+<script src="../../assets/copy.js" defer></script>
+</body>
+</html>

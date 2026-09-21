@@ -1,0 +1,101 @@
+{
+  "type": "abp/delta/v1",
+  "profile": "google/drive/readonly-connector",
+  "mandate": "beta-001/chatgpt-drive",
+  "grant_version": "2026-09-15",
+  "mandate_version": "2026-09-21",
+  "pack_version": "v0.8.0",
+  "computed_at": "2026-09-21T00:00:00Z",
+  "computed_by": "abp.delta/v1",
+  "excess": [
+    {
+      "capability": "read.credential.host",
+      "barrier": "none",
+      "evidence": "inferred",
+      "via": [
+        "drive.readonly"
+      ],
+      "control": null,
+      "note": "drives hold exported keys, service-account files, .env backups and password exports beside everything else. Reading all files reads those. Inferred, not documented.",
+      "material": "own",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "authenticate-as.credential.tenant",
+      "barrier": "boundary",
+      "evidence": "documented",
+      "via": [
+        "the OAuth consent"
+      ],
+      "control": "Google's consent screen; the assistant's vendor holds the refresh token",
+      "note": "the connector acts as the account holder",
+      "material": "own",
+      "undo": "no",
+      "is_bounded": true
+    }
+  ],
+  "excess_refused": [],
+  "excess_unstated": [
+    {
+      "capability": "read.credential.host",
+      "barrier": "none",
+      "evidence": "inferred",
+      "via": [
+        "drive.readonly"
+      ],
+      "control": null,
+      "note": "drives hold exported keys, service-account files, .env backups and password exports beside everything else. Reading all files reads those. Inferred, not documented.",
+      "material": "own",
+      "undo": "no",
+      "is_bounded": false
+    },
+    {
+      "capability": "authenticate-as.credential.tenant",
+      "barrier": "boundary",
+      "evidence": "documented",
+      "via": [
+        "the OAuth consent"
+      ],
+      "control": "Google's consent screen; the assistant's vendor holds the refresh token",
+      "note": "the connector acts as the account holder",
+      "material": "own",
+      "undo": "no",
+      "is_bounded": true
+    }
+  ],
+  "unbounded_excess": [
+    {
+      "capability": "read.credential.host",
+      "barrier": "none",
+      "evidence": "inferred",
+      "via": [
+        "drive.readonly"
+      ],
+      "control": null,
+      "note": "drives hold exported keys, service-account files, .env backups and password exports beside everything else. Reading all files reads those. Inferred, not documented.",
+      "material": "own",
+      "undo": "no",
+      "is_bounded": false
+    }
+  ],
+  "shortfall": [],
+  "aligned": [
+    {
+      "capability": "read.file.host",
+      "barrier": "boundary",
+      "evidence": "documented",
+      "via": [
+        "drive.readonly"
+      ],
+      "control": "the OAuth scope — restricted in Google's classification, so the assistant's vendor had to pass restricted-scope verification",
+      "note": "drive.readonly — \"View and download all your Drive files.\" The default corpus of a listing is \"files owned by or shared to the user\"; whether shared drives are included is open, below.",
+      "material": "mixed",
+      "undo": "no",
+      "is_bounded": true
+    }
+  ],
+  "derived_never_authored": "No field in this record is writable by a person. The way to change a delta is to change a grant or a mandate, and then recompute.",
+  "provisional": true,
+  "provisional_note": "Computed against the nearest published shape, which is not this deployment. It shows what the delta would look like if the deployment's grant matched that shape, and nothing more. The deployment's own grant has not been measured."
+}

@@ -562,6 +562,7 @@ def manifest(built, version, n_deltas):
             "lexicon": "lexicon/index.json",
             "bridges": "bridges/index.json",
             "universes": "universes/index.json",
+            "cases": "cases/index.json",
             "contributed": "contributed/riskmandate/manifest.json",
             "provenance": "provenance.json",
             "upstream": "upstream/pack.json",

@@ -46,6 +46,9 @@
 //      listed, a `live' status means every declared type is in the graph, and the walk
 //      crosses nine universes over a row the shape actually grants.
 //  15. THE FACT DIFF (v0.4.2): every projection renders the same fact set with an empty diff.
+//  16. THE CASES HOLD (v0.7.0): every elicited mandate covers the grammar once and says per
+//      line whether the person said it or it was inferred, every provisional delta recomputes
+//      from the nearest published shape, and no grant in a case claims to be measured.
 //      The label, the leaflet, the prohibitions and the figure are parsed back out of each
 //      example's published markdown twin and compared, leaf assertion by leaf assertion,
 //      with data/facts/. One row that differs fails the build.
@@ -922,6 +925,84 @@ for (const f of files) {
   if (checked === 0) errors.push('data/facts/index.json names no rendered projection, so the fact diff checked nothing -- run build_pages.py');
 }());
 
+// --- 16. the cases hold together -------------------------------------------
+// A CASE IS ONE PERSON'S ESTATE, ELICITED RATHER THAN AUTHORED, added at v0.7.0 as the first
+// thing the site holds in universe u9. Its mandates are drafts written down from an interview
+// and they carry a claim per line about where the line came from. Five things are cheap to
+// check and each one is a way a case could quietly become an authored mandate wearing a
+// person's name.
+//   (a) EVERY CASE MANDATE COVERS THE WHOLE GRAMMAR, once, with no capability both wanted and
+//       refused, exactly as a shape's mandate must.
+//   (b) EVERY WANTED OR REFUSED LINE SAYS HOW IT IS KNOWN: said or inferred, with the fragment
+//       it came from. An unmarked line is an authored one.
+//   (c) A NEAREST SHAPE, WHERE NAMED, IS A PUBLISHED PROFILE, and the provisional delta stored
+//       beside it recomputes from that profile and the mandate and is marked provisional. A
+//       delta stored against a shape that does not exist is a fiction about nothing.
+//   (d) A DEPLOYMENT WITH NO NEAREST SHAPE STORES NO DELTA. A delta against nothing would be
+//       the authored delta this site refuses.
+//   (e) EVERY DEPLOYMENT HAS A PAGE, and the case says on its face that no grant was measured.
+(function () {
+  const D = path.join(ROOT, 'data');
+  const J = f => { try { return JSON.parse(read(path.join(D, f))); }
+                   catch (e) { errors.push(`data/${f}: ${e.message}`); return null; } };
+  const cidx = J('cases/index.json');
+  const caps = J('capabilities.json');
+  const pidx = J('profiles/index.json');
+  if (!cidx || !caps || !pidx) return;
+  const CAP = new Set(caps.capabilities.map(c => c.id));
+  const PROF = new Set(pidx.profiles.map(p => p.id));
+  const barriers = J('barriers.json');
+  const isControl = Object.fromEntries((barriers.barriers || []).map(b => [b.id, b.is_control]));
+  if ((cidx.cases || []).length !== cidx.count) errors.push(`data/cases/index.json: count says ${cidx.count}, the list has ${(cidx.cases || []).length}`);
+  for (const e of cidx.cases || []) {
+    const c = J(e.file); if (!c) continue;
+    if (c.id !== e.id) errors.push(`data/${e.file}: id "${c.id}" does not match the index`);
+    if (!/not measured|no grant measured/i.test(c.status || '')) errors.push(`data/${e.file}: the status does not say that no grant was measured`);
+    if (!c.elicited_by) errors.push(`data/${e.file}: no elicited_by -- a mandate with no source is an authored one`);
+    for (const d of c.deployments || []) {
+      const where = `data/${e.file} (${d.id})`;
+      if (d.grant !== 'not measured') errors.push(`${where}: grant is "${d.grant}"; a case's grant is not measured until somebody measures it`);
+      const page = path.join(ROOT, 'cases', c.id, d.id, 'index.html');
+      if (!fs.existsSync(page)) errors.push(`${where}: no page at cases/${c.id}/${d.id}/index.html`);
+      const m = J(d.mandate); if (!m) continue;
+      // (a)
+      for (const k of ['want', 'do_not_want', 'unstated']) for (const x of m[k] || []) if (!CAP.has(x)) errors.push(`${where}: ${k} names unknown capability "${x}"`);
+      for (const x of (m.want || []).filter(x => (m.do_not_want || []).includes(x))) errors.push(`${where}: both wants and does not want "${x}"`);
+      const n = (m.want || []).length + (m.do_not_want || []).length + (m.unstated || []).length;
+      if (n !== caps.count) errors.push(`${where}: the mandate covers ${n} capabilities, there are ${caps.count}`);
+      if (m.status !== 'elicited') errors.push(`${where}: mandate status is "${m.status}", a case mandate is elicited`);
+      // (b)
+      for (const x of [...(m.want || []), ...(m.do_not_want || [])]) {
+        const s = (m.said || {})[x];
+        if (!s || !['said', 'inferred'].includes(s.status) || !s.from) errors.push(`${where}: ${x} is ${(m.want || []).includes(x) ? 'wanted' : 'refused'} and does not say whether it was said or inferred, and from what`);
+      }
+      for (const x of m.unstated || []) {
+        const s = (m.said || {})[x];
+        if (!s || s.status !== 'unstated') errors.push(`${where}: ${x} is unstated and marked "${s && s.status}"`);
+      }
+      // (c) and (d)
+      if (d.nearest_shape) {
+        if (!PROF.has(d.nearest_shape)) errors.push(`${where}: nearest shape "${d.nearest_shape}" is not a published profile`);
+        else if (!d.delta) errors.push(`${where}: has a nearest shape and no provisional delta`);
+        else {
+          const dl = J(d.delta); const prof = J(`profiles/${d.nearest_shape}.json`);
+          if (dl && prof) {
+            if (dl.provisional !== true) errors.push(`${where}: the delta is not marked provisional`);
+            const want = new Set(m.want || []);
+            const excess = prof.grant.filter(r => !want.has(r.capability)).map(r => r.capability).sort();
+            const stored = (dl.excess || []).map(r => r.capability).sort();
+            if (JSON.stringify(excess) !== JSON.stringify(stored)) errors.push(`${where}: the provisional delta's excess does not recompute from the nearest shape and the mandate`);
+            const unb = prof.grant.filter(r => !want.has(r.capability) && !isControl[r.barrier]).length;
+            if (unb !== (dl.unbounded_excess || []).length) errors.push(`${where}: the provisional delta says ${(dl.unbounded_excess || []).length} unbounded, recomputing gives ${unb}`);
+          }
+        }
+      } else if (d.delta) {
+        errors.push(`${where}: no nearest shape and a delta stored -- a delta against nothing is authored`);
+      }
+    }
+  }
+}());
+
 // --- report ---------------------------------------------------------------
 if (errors.length) {
   console.error(`validate: ${errors.length} error(s)`);
@@ -938,4 +1019,6 @@ console.log(`validate: OK -- ${VERSION} on ${HOST}, ${htmlFiles.length} pages, `
           + `every node type is owned, every junction is computed and listed, and the walk `
           + `crosses nine universes over a row the shape grants; and the fact diff is empty: every `
           + `label, leaflet, prohibition and figure parsed back out of its published page carries `
-          + `the leaf assertions of its fact set`);
+          + `the leaf assertions of its fact set; and the cases hold: every elicited line says how it `
+          + `is known, every provisional delta recomputes from the nearest shape, and no grant claims `
+          + `to be measured`);

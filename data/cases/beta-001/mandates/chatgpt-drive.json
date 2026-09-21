@@ -1,0 +1,155 @@
+{
+  "type": "abp/mandate/v1",
+  "id": "beta-001/chatgpt-drive",
+  "label": "ChatGPT with the Google Drive connector, allow all",
+  "surface": [
+    "web"
+  ],
+  "applies_to": [
+    "google/drive/readonly-connector"
+  ],
+  "applies_to_note": "the nearest published shape, so that a provisional delta can be computed; it is not this deployment",
+  "status": "elicited",
+  "authored": "2026-09-21",
+  "authored_by": "riskmandate.ai, in an interview on 21 September 2026, transcribed automatically; the transcript is held by riskmandate.ai and is not published",
+  "corrected": null,
+  "description": "Elicited from the deployer for ChatGPT with the Google Drive connector, allow all. Every line is marked said, inferred or unstated in `said`; the clauses on the page carry what the grammar has no word for.",
+  "want": [
+    "read.file.host"
+  ],
+  "do_not_want": [
+    "delete.file.host",
+    "send.message.world",
+    "create.record.world"
+  ],
+  "unstated": [
+    "read.file.project",
+    "write.file.project",
+    "write.file.host",
+    "execute.process.host",
+    "execute.process.self",
+    "send.endpoint.allowed",
+    "send.endpoint.world",
+    "read.credential.host",
+    "authenticate-as.credential.tenant",
+    "grant.credential.self",
+    "read.message.tenant",
+    "write.repository.project",
+    "write.repository.tenant",
+    "authenticate-as.credential.signing",
+    "write.budget.tenant",
+    "create.schedule.host",
+    "read.record.history",
+    "create.schedule.tenant",
+    "read.record.browsing"
+  ],
+  "said": {
+    "read.file.host": {
+      "status": "said",
+      "from": "the drive was connected so the assistant could read what is in it"
+    },
+    "delete.file.host": {
+      "status": "inferred",
+      "from": "nobody asked for deletion; no backup was mentioned for the drive either"
+    },
+    "send.message.world": {
+      "status": "inferred",
+      "from": "files received from others must never be passed on"
+    },
+    "create.record.world": {
+      "status": "inferred",
+      "from": "publishing a file under their name was never raised"
+    },
+    "read.file.project": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "write.file.project": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "write.file.host": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "execute.process.host": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "execute.process.self": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "send.endpoint.allowed": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "send.endpoint.world": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "read.credential.host": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "authenticate-as.credential.tenant": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "grant.credential.self": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "read.message.tenant": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "write.repository.project": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "write.repository.tenant": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "authenticate-as.credential.signing": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "write.budget.tenant": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "create.schedule.host": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "read.record.history": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "create.schedule.tenant": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    },
+    "read.record.browsing": {
+      "status": "unstated",
+      "from": "not raised in the interview"
+    }
+  },
+  "notes": {
+    "sharing": "changing who a file is shared with is not a capability in the grammar and it is the one that leaks; the clause carries it",
+    "write.file.host": "unstated: whether the assistant may edit or create files was not asked"
+  },
+  "not_in_grammar": [
+    "change who a file is shared with, or share a file with somebody outside the account",
+    "move a file or change its folder",
+    "read a file somebody else shared, as opposed to one the person owns"
+  ],
+  "provenance": {
+    "source": "an interview",
+    "elicited_by": "riskmandate.ai, in an interview on 21 September 2026, transcribed automatically; the transcript is held by riskmandate.ai and is not published",
+    "retrieved": "2026-09-21",
+    "note": "Elicited, not measured, not surveyed. Written down by abp.sgit.ai from the transcript; not yet corrected by the deployer. The correction is the mandate; this is the draft it will be made from."
+  }
+}

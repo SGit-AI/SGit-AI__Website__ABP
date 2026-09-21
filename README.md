@@ -65,8 +65,9 @@ CI fails a push whose committed tree does not match what the generator produces.
 | `admin/build/abp_pages.py` | Every page computed from the data. |
 | `admin/build/docs_pages.py` | The docs section. |
 | `admin/build/gmail_pages.py` | The mailbox walkthrough: four steps and the thirteen prompts. |
+| `admin/build/cases.py` | The cases: one person's estate of deployments, the mandates elicited, the grants not yet measured. |
 | `admin/build/articles.py` | One article per release, and the register the index is generated from. |
-| `admin/build/figures.py` | The figures: eleven diagrams and one chart, each with a markdown equivalent. |
+| `admin/build/figures.py` | The figures: thirteen diagrams and one chart, each with a markdown equivalent. |
 | `admin/build/build_pages.py` | The authored pages, the nav, the footer, the version log. |
 | `admin/build/shell.py` | One block list, two surfaces: the page and its markdown twin. |
 | `admin/build/validate.js` | The release gate. A failure means no tag and no publish. |

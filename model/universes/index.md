@@ -2,7 +2,7 @@
 
 > The ABP mapped onto Fractal Semantic Graphs: one capability row walked through nine universes, from the source bytes to a licence condition, each with its own owner and ontology, joined by named edges. Four more named as gaps.
 
-*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.6.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.7.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -61,7 +61,7 @@ Nine the walk crosses and four it names. **A status is a claim the gate checks**
 | 6 | [The derivation](../../model/universes/u6/index.md) | across | the computation, and never a person | partial | 3 of 8 | 5 |
 | 7 | [The projections](../../model/universes/u7/index.md) | across | the renderer, and the fact diff that has to check it | partial | 0 of 9 | 4 |
 | 8 | [The licence, the acceptance and the risk](../../model/universes/u8/index.md) | up | riskmandate.ai | outside: another site's | 0 of 5 | 4 |
-| 9 | [The estate and the twin](../../model/universes/u9/index.md) | beside | the customer, through twins.sgit.ai | a gap, named | 0 of 0 | 3 |
+| 9 | [The estate and the twin](../../model/universes/u9/index.md) | beside | the customer, through twins.sgit.ai | partial | 0 of 0 | 3 |
 | 10 | [The obligations](../../model/universes/u10/index.md) | beside | standards.sgit.ai and the AIUC-1 conformance vault | a gap, named | 0 of 0 | 2 |
 | 11 | [The runtime](../../model/universes/u11/index.md) | beside | whoever holds the logs: never this site | a gap, named | 0 of 0 | 3 |
 | 12 | [The estate of agents](../../model/universes/u12/index.md) | up | the organisation | a gap, named | 0 of 0 | 3 |
