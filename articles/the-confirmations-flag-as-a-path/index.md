@@ -2,7 +2,7 @@
 
 > A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
 
-*Source: <https://abp.sgit.ai/articles/the-confirmations-flag-as-a-path/index.html> · site v0.7.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/the-confirmations-flag-as-a-path/index.html> · site v0.7.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
 
-> **This is the article for release v0.4.3, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.3's own release record](../../versions/v0.4.3/index.md). It is release 7 of 10 on this site. Every screenshot below was captured from a checkout of the `v0.4.3` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.4](../../articles/seven-shapes-somebody-else-measured/index.md), or back to [v0.4.2](../../articles/the-fact-diff-reads-the-published-page/index.md).
+> **This is the article for release v0.4.3, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.3's own release record](../../versions/v0.4.3/index.md). It is release 7 of 11 on this site. Every screenshot below was captured from a checkout of the `v0.4.3` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.4](../../articles/seven-shapes-somebody-else-measured/index.md), or back to [v0.4.2](../../articles/the-fact-diff-reads-the-published-page/index.md).
 
 ## An argument that had been a sentence since the first release
 

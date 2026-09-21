@@ -2,7 +2,7 @@
 
 > One article per release, explaining what changed and why, with the screenshots taken from the tag each one names and diagrams of the mechanisms a screenshot cannot show.
 
-*Source: <https://abp.sgit.ai/articles/index.html> · site v0.7.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/index.html> · site v0.7.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,37 +22,40 @@ The version surface says what changed, in the release's own words, and it is del
 
 **One article per release, and the article is the release.** Each one is titled with the version it is about, says what that release changed and what it did not settle, and links to the release before it and the release after it, so the sequence can be read in either direction.
 
-**[v0.6.0: Thirteen prompts a reader runs against their own mailbox, and the fourth page that says what a prompt cannot do](../articles/thirteen-prompts-and-the-fourth-page/index.md)**: Every page before this one was written for somebody who already believes the argument. This release adds the door: a walkthrough that does not hand a reader a table, because the agent in front of them can produce a better one for their own deployment. And the page that keeps it honest, which is the one that says the document they just wrote is not a control.
+**[v0.7.0: The first case: one person's estate, the mandates elicited line by line, and the grants left empty on purpose](../articles/one-person-six-deployments/index.md)**: Every shape on this site is a vendor's product in a configuration. A case is one person, the assistants they actually run and the connectors they actually switched on, with a mandate for each in their own words. The first one has two assistants, six deployments and one account four of them share, and it starts with the mandate side full and the grant side empty, which is the opposite of a shape.
 21 September 2026 &#183; the current release
 
-**[v0.5.0: The releases get one article each, and the screenshots come from the tag rather than from today's site](../articles/one-article-per-release/index.md)**: A release record says what changed and is deliberately terse. Nothing said why. This release adds the section you are reading, and the rule that makes it worth reading: a figure about the eleventh of September shows the site as it stood on the eleventh of September, version badge and all.
-20 September 2026 &#183; 1 release back
+**[v0.6.0: Thirteen prompts a reader runs against their own mailbox, and the fourth page that says what a prompt cannot do](../articles/thirteen-prompts-and-the-fourth-page/index.md)**: Every page before this one was written for somebody who already believes the argument. This release adds the door: a walkthrough that does not hand a reader a table, because the agent in front of them can produce a better one for their own deployment. And the page that keeps it honest, which is the one that says the document they just wrote is not a control.
+21 September 2026 &#183; 1 release back
 
-**[v0.4.4: Seven deployment shapes somebody else measured, promoted with their provenance intact](../articles/seven-shapes-somebody-else-measured/index.md)**: A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
+**[v0.5.0: The releases get one article each, and the screenshots come from the tag rather than from today's site](../articles/one-article-per-release/index.md)**: A release record says what changed and is deliberately terse. Nothing said why. This release adds the section you are reading, and the rule that makes it worth reading: a figure about the eleventh of September shows the site as it stood on the eleventh of September, version badge and all.
 20 September 2026 &#183; 2 releases back
 
-**[v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it](../articles/the-confirmations-flag-as-a-path/index.md)**: A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
+**[v0.4.4: Seven deployment shapes somebody else measured, promoted with their provenance intact](../articles/seven-shapes-somebody-else-measured/index.md)**: A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
 20 September 2026 &#183; 3 releases back
 
-**[v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page](../articles/the-fact-diff-reads-the-published-page/index.md)**: Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
+**[v0.4.3: The home page has argued about one setting since v0.1.0, and now the build walks it](../articles/the-confirmations-flag-as-a-path/index.md)**: A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
 20 September 2026 &#183; 4 releases back
 
-**[v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build](../articles/nine-universes-as-data/index.md)**: A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
+**[v0.4.2: The fact diff was named as a blocker on four consecutive days, and it reads the published page](../articles/the-fact-diff-reads-the-published-page/index.md)**: Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
 20 September 2026 &#183; 5 releases back
 
-**[v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for](../articles/an-abp-is-a-junction-object/index.md)**: Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
+**[v0.4.1: The map became files, pages and a gate check, and the walk is rebuilt on every build](../articles/nine-universes-as-data/index.md)**: A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
 20 September 2026 &#183; 6 releases back
 
+**[v0.4.0: An ABP is a junction object, which is what Fractal Semantic Graphs is for](../articles/an-abp-is-a-junction-object/index.md)**: Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
+20 September 2026 &#183; 7 releases back
+
 **[v0.3.0: read.file.project was a string with a gloss beside it, which is schema-first thinking in graph syntax](../articles/three-nodes-and-three-edges/index.md)**: Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
-12 September 2026 &#183; 7 releases back
+12 September 2026 &#183; 8 releases back
 
 **[v0.2.0: A rule this site published in the morning was wrong by the afternoon, and the correction is on the page](../articles/a-rule-corrected-nine-hours-later/index.md)**: The foundation document says twice that the delta is computed and never stored. Half of that was right. The corrected rule is harder, the passages were not rewritten, and the check that enforced the old rule was inverted to enforce the new one.
-11 September 2026 &#183; 8 releases back
-
-**[v0.1.0: The ontology already existed, so the first release promoted it instead of writing one](../articles/an-ontology-that-already-existed/index.md)**: Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
 11 September 2026 &#183; 9 releases back
 
-**Reading forwards** starts at [v0.1.0](../articles/an-ontology-that-already-existed/index.md), the first release, and follows the newer link at the foot of each article. **Reading backwards** starts at [v0.6.0](../articles/thirteen-prompts-and-the-fourth-page/index.md) and follows the older link.
+**[v0.1.0: The ontology already existed, so the first release promoted it instead of writing one](../articles/an-ontology-that-already-existed/index.md)**: Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
+11 September 2026 &#183; 10 releases back
+
+**Reading forwards** starts at [v0.1.0](../articles/an-ontology-that-already-existed/index.md), the first release, and follows the newer link at the foot of each article. **Reading backwards** starts at [v0.7.0](../articles/one-person-six-deployments/index.md) and follows the older link.
 
 ## How the screenshots were taken
 

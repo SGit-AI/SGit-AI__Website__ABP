@@ -2,7 +2,7 @@
 
 > Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
-*Source: <https://abp.sgit.ai/versions/index.html> · site v0.7.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/index.html> · site v0.7.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -16,6 +16,7 @@ Every release of this site. **The badge in the top bar reads `current` from [`ve
 
 | Version | Date | What changed |
 |---|---|---|
+| [v0.7.1](../versions/v0.7.1/index.md) | 2026-09-21 | the first case gets its article, with six figures captured from the v0.7.0 tag |
 | [v0.7.0](../versions/v0.7.0/index.md) | 2026-09-21 | the first case: one person's estate of six deployments, the mandates elicited from an interview line by line, and the grants not yet measured |
 | [v0.6.1](../versions/v0.6.1/index.md) | 2026-09-21 | the mailbox walkthrough gets its article, with six figures captured from the v0.6.0 tag |
 | [v0.6.0](../versions/v0.6.0/index.md) | 2026-09-21 | a walkthrough for somebody who has connected an assistant to their own mailbox: four pages, thirteen prompts, and a fourth page that says what a prompt cannot do |

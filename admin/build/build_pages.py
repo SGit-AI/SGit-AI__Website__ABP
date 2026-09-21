@@ -166,6 +166,30 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.7.1", "2026-09-21",
+     "the first case gets its article, with six figures captured from the v0.7.0 tag",
+     {
+       "summary":
+         "One article per release, so the release that added the case gets one. It covers "
+         "why a case is the person's object where a shape is the vendor's, why the account is "
+         "the node where the two levels meet, why every elicited line carries a said or "
+         "inferred mark, why the grant side is left empty on purpose, and the finding that "
+         "the grammar has no word for the thing the person values most. Six screenshots, all "
+         "captured from a checkout of the v0.7.0 tag on the day it shipped.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "An article for v0.7.0, the eleventh in the section, with six screenshots and the two "
+         "figures the case itself carries. It ends on what the release did not settle: no "
+         "grant measured, the mandate uncorrected, six open questions, the estate not in the "
+         "graph, and the grammar gap recorded rather than filled.",
+       ],
+       "basis": [
+         "The v0.7.0 tag, checked out into a detached worktree and served locally, the same "
+         "method as every other article's figures.",
+       ],
+     }),
     ("v0.7.0", "2026-09-21",
      "the first case: one person's estate of six deployments, the mandates elicited from an "
      "interview line by line, and the grants not yet measured",
