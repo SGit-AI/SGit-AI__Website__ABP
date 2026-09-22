@@ -2,7 +2,7 @@
 
 > The document you wrote in step three is an expectation rather than a control. Why that is the honest reading, why it is still worth writing, and what would actually bound the behaviour.
 
-*Source: <https://abp.sgit.ai/gmail/what-a-prompt-cannot-do/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/gmail/what-a-prompt-cannot-do/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -76,6 +76,8 @@ No mail scope can be bounded by label, correspondent, thread, topic or sensitivi
 ### A setting is not a boundary, and this shape has 2 of them
 
 In the measured profile for this shape, **2 of 6 capabilities are held by a setting rather than by a boundary**, and the approval prompt is one of them: the vendor's own documentation says it is on by default and can be turned off. **4 capabilities in the gap have nothing in the way that counts as a control**, out of 5 in the gap altogether. That number is the only one on the label a buyer can move, and it moves by one for every capability that gains a real boundary.
+
+**And on the measured deployment the switch is off.** In the profile the agent holding the connector wrote, `send_message` sits on Always allow, so the row that is a setting here is nothing there: a live send went out with no prompt. The vault's whole recommendation is to flip that one switch, and the build derives the switch by diffing the two variants. [The measured deployment](../../gmail/measured/index.md).
 
 > **None of this is an assessment of any named product, and no adjective on this page attaches to one.** The rows above are a published deployment shape read from two vendors' own pages on a date, with the barrier on each row recorded by walking the enforcer test rather than by judging the product. Where the sources disagree with each other, the disagreement is published rather than resolved.
 

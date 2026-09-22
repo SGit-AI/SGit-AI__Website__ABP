@@ -6,7 +6,8 @@
     "web"
   ],
   "applies_to": [
-    "anthropic/gmail-connector/default"
+    "anthropic/gmail-connector/default",
+    "anthropic/gmail-connector/measured-2026-09-19"
   ],
   "status": "starting-point",
   "authored": "2026-09-16",
@@ -57,5 +58,9 @@
     "contributed_manifest": "contributed/riskmandate/manifest.json",
     "note": "Contributed by riskmandate.ai, promoted from claude-gmail-connector/mandate.json. `unstated` is recomputed here. A mandate is elicited, not measured: this is the contributor's first draft, written to be argued with.",
     "licence": "CC BY 4.0"
+  },
+  "applies_to_extended": {
+    "to": "anthropic/gmail-connector/measured-2026-09-19",
+    "note": "Extended at v0.11.0 to the measured variant of the same shape, so that the site's own starting mandate and the agent's inferred one can be read against one grant. The contributed bytes are unchanged; the extension is the site's."
   }
 }

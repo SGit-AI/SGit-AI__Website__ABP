@@ -2,7 +2,7 @@
 
 > The reach world as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/world/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/world/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,6 +28,7 @@ anything on the internet
 | [Claude Desktop (a desktop app with local tools)](../../../../examples/index.md) | `default` | the internet |
 | [Claude (in the browser, with connectors switched on)](../../../../examples/index.md) | `connectors-on` | the vendor's egress |
 | [Claude, with the Gmail connector enabled](../../../../examples/index.md) | `default` | anyone Claude replies to or forwards a message to |
+| [Claude, with the Gmail connector enabled](../../../../examples/index.md) | `measured-2026-09-19` | any address, as a recipient of send_message, reply or forward |
 | [Claude's Microsoft 365 connector (Outlook, SharePoint, OneDrive, Teams)](../../../../examples/index.md) | `default` | anyone reachable by mail from the user's address |
 | [The official Dropbox MCP server](../../../../examples/index.md) | `default` | anyone who holds a shared link or a file-request URL |
 | [A browser extension with broad host permissions](../../../../examples/index.md) | `broad-host-permissions` | the internet, from your browser |
@@ -47,9 +48,9 @@ anything on the internet
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`create.record.world`](../../../../model/capabilities/create.record.world/index.md) | Publish packages, images or pages under the name it holds | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`record`](../../../../model/lexicon/objects/record/index.md)`.`[`world`](../../../../model/lexicon/reaches/world/index.md) | no | 3 of 16 |
-| [`send.endpoint.world`](../../../../model/capabilities/send.endpoint.world/index.md) | Reach any host on the internet | [`send`](../../../../model/lexicon/verbs/send/index.md)`.`[`network-endpoint`](../../../../model/lexicon/objects/network-endpoint/index.md)`.`[`world`](../../../../model/lexicon/reaches/world/index.md) | no | 7 of 16 |
-| [`send.message.world`](../../../../model/capabilities/send.message.world/index.md) | Send a message to anyone | [`send`](../../../../model/lexicon/verbs/send/index.md)`.`[`message`](../../../../model/lexicon/objects/message/index.md)`.`[`world`](../../../../model/lexicon/reaches/world/index.md) | no | 3 of 16 |
+| [`create.record.world`](../../../../model/capabilities/create.record.world/index.md) | Publish packages, images or pages under the name it holds | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`record`](../../../../model/lexicon/objects/record/index.md)`.`[`world`](../../../../model/lexicon/reaches/world/index.md) | no | 3 of 17 |
+| [`send.endpoint.world`](../../../../model/capabilities/send.endpoint.world/index.md) | Reach any host on the internet | [`send`](../../../../model/lexicon/verbs/send/index.md)`.`[`network-endpoint`](../../../../model/lexicon/objects/network-endpoint/index.md)`.`[`world`](../../../../model/lexicon/reaches/world/index.md) | no | 7 of 17 |
+| [`send.message.world`](../../../../model/capabilities/send.message.world/index.md) | Send a message to anyone | [`send`](../../../../model/lexicon/verbs/send/index.md)`.`[`message`](../../../../model/lexicon/objects/message/index.md)`.`[`world`](../../../../model/lexicon/reaches/world/index.md) | no | 4 of 17 |
 
 ## How this node connects
 

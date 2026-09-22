@@ -2,7 +2,7 @@
 
 > What is in the published files, what this site added to the data it promoted, and the two rules a consumer and a contributor each have to follow.
 
-*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -21,8 +21,8 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 | [`/data/barriers.json`](../../data/barriers.json) | `abp/barriers/v1` | The four barriers, weakest first, each with `is_control` and the enforcer test behind it. |
 | [`/data/undo-classes.json`](../../data/undo-classes.json) | `abp/undo-classes/v1` | The three undo classes and the ordering rule. |
 | [`/data/evidence-tiers.json`](../../data/evidence-tiers.json) | `abp/evidence-tiers/v1` | The seven evidence tiers and which of them this site counts as measured. |
-| [`/data/profiles/index.json`](../../data/profiles/index.json) | `abp/profiles-index/v1` | The 16 deployment shapes. A shape is a product in a setting, not a product. |
-| [`/data/mandates/index.json`](../../data/mandates/index.json) | `abp/mandates-index/v1` | The 15 starting mandates, one per surface. |
+| [`/data/profiles/index.json`](../../data/profiles/index.json) | `abp/profiles-index/v1` | The 17 deployment shapes. A shape is a product in a setting, not a product. |
+| [`/data/mandates/index.json`](../../data/mandates/index.json) | `abp/mandates-index/v1` | The 16 starting mandates, one per surface. |
 | [`/data/provenance.json`](../../data/provenance.json) | `abp/provenance/v1` | Where every row came from, how many were measured, and the content hash to verify against. |
 | [`/data/contributed/riskmandate/`](../../data/contributed/riskmandate/manifest.json) | `abp/contributed-manifest/v1` | Seven deployment shapes contributed by riskmandate.ai: the bytes as fetched, unchanged, with a hash per file and a hash over all of them. Promoted into `profiles/` and `mandates/` with their provenance, and counted beside the map's rows rather than folded into them. |
 | [`/data/upstream/`](../../data/upstream/pack.json) | the source pack | The bytes as fetched, unchanged. Anything rendered stays one click from its source bytes. |
@@ -39,7 +39,7 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 
 ## The two rules
 
-> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.10.1`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
+> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.11.0`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
 
 > **A proposal carries evidence.** Every node taken from a third party site carries a source URL, a retrieval timestamp and a content hash. A proposal that changes a capability row without one is an assertion, and this site publishes capability claims about named commercial products.
 

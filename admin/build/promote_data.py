@@ -430,6 +430,124 @@ def build():
                           "file": f"mandates/{m['id']}.json",
                           "contributed_by": cman["contributor"]})
 
+    # --- a vault's evidence, mapped ------------------------------------------------
+    # A CONTRIBUTOR WHO WROTE IN THEIR OWN VOCABULARY. The vault holds its reach as markdown
+    # in the connector's tool names and names the missing join to the grammar as a gap. The
+    # verbatim bytes are held and hashed like every other contribution; the mapping into
+    # primitives is this site's, in a module the manifest names, one row per primitive citing
+    # the line it rests on. The profile pins the hash of the markdown it was read from, so a
+    # byte moved in the vault copy fails the build in the same three places.
+    import importlib
+    for entry in cman.get("vaults", []):
+        mod = importlib.import_module(entry["mapping"])
+        g = mod.profile()
+        grant = []
+        for r in g["grant"]:
+            if r["capability"] not in cap_undo:
+                raise SystemExit(f"{entry['mapping']}: {r['capability']} is not in the grammar")
+            grant.append({"capability": r["capability"], "barrier": r["barrier"],
+                          "evidence": r["evidence"], "via": list(r.get("via") or []),
+                          "control": r.get("control"), "note": r.get("note"),
+                          "material": r.get("material"),
+                          "undo": cap_undo[r["capability"]],
+                          "is_bounded": IS_CONTROL[r["barrier"]][0]})
+        grant.sort(key=lambda r: (["no", "with-effort", "yes"].index(r["undo"]),
+                                  barrier_rank(r["barrier"]), r["capability"]))
+        measured = sum(1 for r in grant if r["evidence"] in MEASURED_TIERS)
+        contributed_rows["total"] += len(grant)
+        contributed_rows["measured"] += measured
+        vprov = _contributed_provenance(
+            cman, entry, entry["grant_source"], per_file,
+            f"Measured by the agent holding the connector, written into sgit vault "
+            f"{entry['vault']} at {entry['vault_version']} (commit {entry['vault_commit']}), "
+            f"and read here with the vault's public read key. The vault writes its reach in "
+            f"the connector's own tool names; the mapping into the grammar is this site's, in "
+            f"admin/build/{entry['mapping']}.py, and every row cites the line it rests on. The "
+            f"evidence tier on every row is the tier the contributor's words support, never "
+            f"higher. The vault's earlier profile for this shape, read from the vendors' "
+            f"pages, is kept as a second variant of the same product.")
+        vprov["retrieved"] = entry["retrieved"]
+        vprov["retrieved_by"] = entry["retrieved_by"]
+        vprov["vault"] = {k: entry[k] for k in ("vault", "read_key", "read_key_note",
+                                                "vault_version", "vault_commit",
+                                                "written_by", "not_copied")}
+        prof = {
+            "type": "abp/profile/v1",
+            "id": g["id"], "vendor": g["vendor"], "product": g["product"],
+            "variant": g["variant"], "surface": g["surface"],
+            "profile_version": g["profile_version"],
+            "description": g["description"],
+            "reach_names": g["reach_names"],
+            "not_reachable": g["not_reachable"],
+            "tools": list(g["tools"]),
+            "grant": grant,
+            "grant_size": len(grant),
+            "irreversible": [r["capability"] for r in grant if r["undo"] == "no"],
+            "unbounded": [r["capability"] for r in grant if not r["is_bounded"]],
+            "widest_reach": widest([r["capability"] for r in grant], caps),
+            "rows": {"total": len(grant), "measured": measured,
+                     "derived": len(grant) - measured},
+            "sources": g["sources"],
+            "contradictions": g["contradictions"],
+            "research_needed": g["research_needed"],
+            "not_in_grammar": g["not_in_grammar"],
+            "contributed": {"by": cman["contributor"], "vault_page": entry["page"],
+                            "vault": entry["vault"], "read_key": entry["read_key"],
+                            "written_by": entry["written_by"],
+                            "verbatim": {k: f"contributed/riskmandate/{entry[k]}" for k in
+                                         ("grant_source", "mandate_source", "delta_source",
+                                          "rules_source")}},
+            "not_an_assessment": "This describes one deployment as measured by the agent "
+                                 "holding it on one day. It is not an assessment, an audit, "
+                                 "a certification or a security review of any named "
+                                 "product, and it carries no adjective and no score.",
+            "provenance": vprov,
+        }
+        profiles.append(prof)
+        index_rows.append({k: prof[k] for k in (
+            "id", "vendor", "product", "variant", "surface", "profile_version",
+            "grant_size", "widest_reach", "rows")} | {"file": f"profiles/{g['id']}.json",
+                                                     "contributed_by": cman["contributor"]})
+        src = mod.mandate()
+        mprov = _contributed_provenance(
+            cman, entry, entry["mandate_source"], per_file,
+            f"The agent's own inferred mandate, from MANDATE.md in vault {entry['vault']}, "
+            f"mapped into the grammar by this site. Marked inferred and not elicited, as the "
+            f"vault marks it: it is evidence of a mandate and not one. `unstated` is "
+            f"recomputed here.")
+        mprov["retrieved"] = entry["retrieved"]
+        m = {
+            "type": "abp/mandate/v1",
+            "id": src["id"], "label": src["label"], "surface": src["surface"],
+            "applies_to": src["applies_to"],
+            "status": src["status"],
+            "authored": src["authored"], "authored_by": src["authored_by"],
+            "description": src["description"],
+            "want": src["want"], "do_not_want": src["do_not_want"],
+            "unstated": sorted(c["id"] for c in caps
+                               if c["id"] not in src["want"]
+                               and c["id"] not in src["do_not_want"]),
+            "notes": src["notes"],
+            "provenance": mprov,
+        }
+        mandates.append(m)
+        midx_rows.append({"id": m["id"], "label": m["label"], "surface": m["surface"],
+                          "applies_to": m["applies_to"], "want": len(m["want"]),
+                          "do_not_want": len(m["do_not_want"]),
+                          "file": f"mandates/{m['id']}.json",
+                          "contributed_by": cman["contributor"]})
+        # The site's own starting mandate for the earlier variant applies to this one too,
+        # so the two mandates can be read against one grant. The contributed bytes are not
+        # touched; the extension is recorded as the site's.
+        for mid in entry.get("apply_existing_mandates", []):
+            for existing in mandates:
+                if existing["id"] == mid and g["id"] not in existing["applies_to"]:
+                    existing["applies_to"].append(g["id"])
+                    existing["applies_to_extended"] = {"to": g["id"], "note": mod.applies_to_note()}
+            for row in midx_rows:
+                if row["id"] == mid and g["id"] not in row["applies_to"]:
+                    row["applies_to"].append(g["id"])
+
     # --- totals --------------------------------------------------------------
     # The headline stays the map's own: 21 of 99. A contributed row is counted beside it,
     # never folded into it, because the two were obtained differently and a reader is
@@ -467,7 +585,7 @@ def build():
             "manifest": "contributed/riskmandate/manifest.json",
             "retrieved": cman["retrieved"],
             "content_hash": cman["content_hash"],
-            "shapes": len(cman["shapes"]),
+            "shapes": len(cman["shapes"]) + len(cman.get("vaults", [])),
             "rows": {"total": contributed_rows["total"],
                      "measured": contributed_rows["measured"],
                      "derived": contributed_rows["total"] - contributed_rows["measured"]},

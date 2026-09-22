@@ -2,7 +2,7 @@
 
 > The object schedule as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/schedule/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/schedule/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,8 +22,8 @@ The object `schedule`, and every primitive it appears in. **This page is a query
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`create.schedule.host`](../../../../model/capabilities/create.schedule.host/index.md) | Create something that outlives the turn where it runs (a cron, a service) | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`schedule`](../../../../model/lexicon/objects/schedule/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | yes | 4 of 16 |
-| [`create.schedule.tenant`](../../../../model/capabilities/create.schedule.tenant/index.md) | Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session) | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`schedule`](../../../../model/lexicon/objects/schedule/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | yes | 3 of 16 |
+| [`create.schedule.host`](../../../../model/capabilities/create.schedule.host/index.md) | Create something that outlives the turn where it runs (a cron, a service) | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`schedule`](../../../../model/lexicon/objects/schedule/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | yes | 4 of 17 |
+| [`create.schedule.tenant`](../../../../model/capabilities/create.schedule.tenant/index.md) | Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session) | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`schedule`](../../../../model/lexicon/objects/schedule/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | yes | 3 of 17 |
 
 ## How this node connects
 

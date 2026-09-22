@@ -66,6 +66,7 @@ CI fails a push whose committed tree does not match what the generator produces.
 | `admin/build/docs_pages.py` | The docs section. |
 | `admin/build/gmail_pages.py` | The mailbox walkthrough: four steps and the thirteen prompts. |
 | `admin/build/cost_pages.py` | The cost walkthrough: an ABP over how much rather than what, twelve prompts and an accountant. |
+| `admin/build/vault_evidence.py` | One vault's evidence mapped into the grammar: the Gmail connector as measured by the agent holding it. |
 | `admin/build/desktop_pages.py` | The desktop walkthrough: an assistant on your own machine, and the map of what matters on it. |
 | `admin/build/cases.py` | The cases: one person's estate of deployments, the mandates elicited, the grants mostly not yet measured. |
 | `admin/build/case_session_001.py`, `case_estate_002.py` | One authored case each: the site's own session as a ledger, and three surfaces over one record. |

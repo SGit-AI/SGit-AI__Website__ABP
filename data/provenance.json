@@ -27,18 +27,19 @@
     "contributor": "riskmandate.ai",
     "manifest": "contributed/riskmandate/manifest.json",
     "retrieved": "2026-09-20T17:23:43Z",
-    "content_hash": "sha256:70d1a4609d27f6954589b862a9ecbe33f14a1218786eb506c2215de49bc46361",
-    "shapes": 7,
+    "content_hash": "sha256:cb76bf9147de9ec2e38d9ec571237be05419185d0fb091e193adbafc85f80f95",
+    "shapes": 8,
     "rows": {
-      "total": 37,
-      "measured": 11,
+      "total": 42,
+      "measured": 16,
       "derived": 26
     },
     "by_tier": {
       "inferred": 6,
       "documented": 19,
-      "measured": 11,
-      "derived": 1
+      "measured": 13,
+      "derived": 1,
+      "observed": 3
     },
     "measured_means": "The contributor's own tier, kept as stated: `measured` rows come from a dated probe of an instance an early user was entitled to run, and the write up is the evidence file the contributor holds. This site did not observe them and does not raise a tier it did not observe."
   },

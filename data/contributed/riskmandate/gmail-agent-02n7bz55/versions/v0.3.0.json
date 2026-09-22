@@ -1,0 +1,18 @@
+{
+  "version": "v0.3.0",
+  "date": "2026-09-19",
+  "commit": "obj-cas-imm-8a6f437f6896",
+  "vault": "02n7bz55",
+  "reconstructed": false,
+  "title": "the record gets a top-level navigation and, at last, a version of its own",
+  "summary": "Four navigation groups across the top — Building it, Identities, The agent, Still open — so a reader arrives at an altitude rather than at the top of a thirteen-section scroll. The version number joins the masthead and links to its own entry. Adds the versions/ directory the sgit.ai guidance has required since before this vault existed and which both agents who worked on it missed.",
+  "changes": [
+    "index.html",
+    "content.json",
+    "versions/index.json",
+    "versions/v0.1.0.json",
+    "versions/v0.2.0.json",
+    "versions/v0.3.0.json"
+  ],
+  "basis": []
+}

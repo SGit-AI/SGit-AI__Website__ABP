@@ -2,7 +2,7 @@
 
 > Four prompts that make your own assistant enumerate its mailbox tools, what each one reaches, which of them you could undo, and which lines it is inferring rather than reading.
 
-*Source: <https://abp.sgit.ai/gmail/what-it-can-do/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/gmail/what-it-can-do/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -106,6 +106,8 @@ Two more questions about that table.
 ## Something to check the answer against
 
 This site publishes a measured profile for one common version of this shape, so you have a second account to compare yours with. It names **22 tools**, **6 of the 23 capability primitives**, **4 things it cannot reach**, and **5 places where the published sources disagree with each other**. It also records **4 capabilities the grammar has no word for** (drafts, labels, trash, and two tool names truncated in the listing) and **6 open questions** that were left open rather than filled in.
+
+And a second, [measured end to end](../../gmail/measured/index.md) by the agent holding the connector: **30 tools from the schemas, 10 of them unprompted**, and a finding that bears on this step directly: the agent could not see its own permission state and learned a tool was gated only when a call failed. Your assistant's table will be honest about its tools and blind to their gating; the settings page is where that column gets checked.
 
 > **If your assistant's answer disagrees with the published profile, neither one is automatically right.** The profile was read on a date from two vendors' own pages and measured in one session; your deployment is a different date and possibly a different build. A disagreement is a thing to check on the consent screen, not an error to resolve in the chat.
 

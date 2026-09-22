@@ -2,7 +2,7 @@
 
 > The verb write as a node: the 5 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/write/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/write/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,11 +22,11 @@ The verb `write`, and every primitive it appears in. **This page is a query, not
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`write.budget.tenant`](../../../../model/capabilities/write.budget.tenant/index.md) | Spend money or tokens against an account it holds | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`budget`](../../../../model/lexicon/objects/budget/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 2 of 16 |
-| [`write.file.host`](../../../../model/capabilities/write.file.host/index.md) | Change any file the account can reach | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | with-effort | 8 of 16 |
-| [`write.file.project`](../../../../model/capabilities/write.file.project/index.md) | Change the project it is working on | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 6 of 16 |
-| [`write.repository.project`](../../../../model/capabilities/write.repository.project/index.md) | Commit to the repository it was pointed at | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 4 of 16 |
-| [`write.repository.tenant`](../../../../model/capabilities/write.repository.tenant/index.md) | Push to a code host (any branch it can reach) | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | with-effort | 4 of 16 |
+| [`write.budget.tenant`](../../../../model/capabilities/write.budget.tenant/index.md) | Spend money or tokens against an account it holds | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`budget`](../../../../model/lexicon/objects/budget/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 2 of 17 |
+| [`write.file.host`](../../../../model/capabilities/write.file.host/index.md) | Change any file the account can reach | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | with-effort | 8 of 17 |
+| [`write.file.project`](../../../../model/capabilities/write.file.project/index.md) | Change the project it is working on | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 6 of 17 |
+| [`write.repository.project`](../../../../model/capabilities/write.repository.project/index.md) | Commit to the repository it was pointed at | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 4 of 17 |
+| [`write.repository.tenant`](../../../../model/capabilities/write.repository.tenant/index.md) | Push to a code host (any branch it can reach) | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | with-effort | 4 of 17 |
 
 ## How this node connects
 

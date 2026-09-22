@@ -1,7 +1,7 @@
 {
   "type": "abp/profiles-index/v1",
   "_what_this_is": "The deployment shapes this site holds a grant for. A shape is a product in a setting, not a product: two entries here are the same product with one setting different.",
-  "count": 16,
+  "count": 17,
   "profiles": [
     {
       "id": "anthropic/claude-code-remote/ccr-container",
@@ -264,6 +264,23 @@
         "derived": 1
       },
       "file": "profiles/n8n/self-hosted/owner-api-key.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "anthropic/gmail-connector/measured-2026-09-19",
+      "vendor": "Google (the MCP server and the account); Anthropic (Claude, the client, the per tool permission page and the approval prompt)",
+      "product": "Claude, with the Gmail connector enabled",
+      "variant": "measured-2026-09-19",
+      "surface": "web",
+      "profile_version": "2026-09-19",
+      "grant_size": 5,
+      "widest_reach": "world",
+      "rows": {
+        "total": 5,
+        "measured": 5,
+        "derived": 0
+      },
+      "file": "profiles/anthropic/gmail-connector/measured-2026-09-19.json",
       "contributed_by": "riskmandate.ai"
     }
   ],

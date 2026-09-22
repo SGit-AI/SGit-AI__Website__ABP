@@ -15,14 +15,14 @@
       "formula": "[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope",
       "exists_today": true,
       "note": null,
-      "matched": 78
+      "matched": 82
     },
     {
       "name": "UnboundedExcess",
       "formula": "[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]",
       "exists_today": true,
       "note": null,
-      "matched": 61
+      "matched": 64
     },
     {
       "name": "Shortfall",

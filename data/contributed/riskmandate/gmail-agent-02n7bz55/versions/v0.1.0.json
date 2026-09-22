@@ -1,0 +1,23 @@
+{
+  "version": "v0.1.0",
+  "date": "2026-09-19",
+  "commit": "obj-cas-imm-34bd76c28a22",
+  "vault": "02n7bz55",
+  "reconstructed": true,
+  "title": "the original record of attaching riskmandate.ai as a user alias domain",
+  "summary": "The operator-side runbook: the alias-versus-secondary decision, domain verification, the five Route 53 records, DKIM per domain, the four errors that cost time, the three sending identities, the agent address naming, the connector's missing sender field, and BIMI. Written as a vault app with content.json driving index.html through build.py.",
+  "changes": [
+    "index.html",
+    "content.json",
+    "RUNBOOK.md",
+    "README.md",
+    "build.py",
+    ".vault/app.json"
+  ],
+  "basis": [
+    "content.json",
+    "index.html",
+    "build.py"
+  ],
+  "note": "Reconstructed. This version was not recorded at the time; the entry was assembled afterwards from the vault's two pre-existing commits, and the commit named is the HEAD at clone. Labelled per the guidance, which asks that a history assembled after the fact says so."
+}

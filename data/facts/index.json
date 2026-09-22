@@ -2,7 +2,7 @@
   "type": "abp/facts-index/v1",
   "_what_this_is": "One fact set per stored delta: the leaf assertions every rendering of that ABP must agree on. Where an example page renders one, the index names the markdown twin the release gate parses the label, the leaflet, the prohibitions and the figure back out of, and the build fails on a single leaf assertion that differs. That is the fact diff.",
   "the_rule": "Every projection renders the same fact set with an empty diff. The facts are the leaf assertions; the classes a reader sees differ by altitude, and that is correct rather than a defect.",
-  "count": 16,
+  "count": 18,
   "facts": [
     {
       "id": "anthropic__claude-code__local-default__coding-assistant-on-my-machine",
@@ -104,6 +104,15 @@
       "file": "facts/anthropic__gmail-connector__default__read-and-draft-never-send.json"
     },
     {
+      "id": "anthropic__gmail-connector__measured-2026-09-19__read-and-draft-never-send",
+      "profile": "anthropic/gmail-connector/measured-2026-09-19",
+      "mandate": "read-and-draft-never-send",
+      "example": null,
+      "projections": 0,
+      "assertions": 36,
+      "file": "facts/anthropic__gmail-connector__measured-2026-09-19__read-and-draft-never-send.json"
+    },
+    {
       "id": "google__drive__readonly-connector__reader-on-my-drive",
       "profile": "google/drive/readonly-connector",
       "mandate": "reader-on-my-drive",
@@ -147,6 +156,15 @@
       "projections": 0,
       "assertions": 43,
       "file": "facts/n8n__self-hosted__owner-api-key__sandbox-build-one-agent-workflow.json"
+    },
+    {
+      "id": "anthropic__gmail-connector__measured-2026-09-19__inferred-from-one-session",
+      "profile": "anthropic/gmail-connector/measured-2026-09-19",
+      "mandate": "inferred-from-one-session",
+      "example": null,
+      "projections": 0,
+      "assertions": 35,
+      "file": "facts/anthropic__gmail-connector__measured-2026-09-19__inferred-from-one-session.json"
     }
   ],
   "provenance": {

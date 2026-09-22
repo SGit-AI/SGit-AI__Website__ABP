@@ -2,7 +2,7 @@
 
 > Read credentials stored where it runs. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.credential.host/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.credential.host/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,7 +28,7 @@ below point at them.*
 
 > **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `read.credential.host` is emerges from the edges traceable from it. The strongest case is [`host`](../../../model/lexicon/reaches/host/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
-## In 10 of 16 published shapes
+## In 11 of 17 published shapes
 
 |  | Deployment shape | Barrier there | Known by | Whose material | Note |
 |---|---|---|---|---|---|
@@ -37,6 +37,7 @@ below point at them.*
 | ● | Claude Code (the CLI, on your own machine) | none (not a control) | documented | not stated | a published read-only audit tool enumerates exactly this class in a home directory |
 | ● | Claude Desktop (a desktop app with local tools) | none (not a control) | documented | not stated |  |
 | ● | Claude, with the Gmail connector enabled *(contributed by riskmandate.ai)* | none (not a control) | inferred | own | password resets, one-time codes, invitations and account-recovery mail arrive in a mailbox; reading messages reads those. Inferred, not documented - no tool or scope on either vendor's page separates them. |
+| ● | Claude, with the Gmail connector enabled *(contributed by riskmandate.ai)* | none (not a control) | observed | own | the sender based sweep that relabelled sixteen messages swept up a one time verification code and two new device security alerts alongside marketing, and removed three messages from the inbox. The agent saw them in its own selection, which is why the tier is observed and not inferred as it was on the earlier profile. Debrief section 5.4. |
 | ● | Claude's Microsoft 365 connector (Outlook, SharePoint, OneDrive, Teams) *(contributed by riskmandate.ai)* | none (not a control) | inferred | organisation | a work mailbox carries password resets, MFA codes and shared credentials sent between colleagues; a SharePoint estate carries key files and configuration. Reading either reads those. Inferred, not documented. |
 | ● | An assistant connected to a personal Google Drive with drive.readonly *(contributed by riskmandate.ai)* | none (not a control) | inferred | own | drives hold exported keys, service-account files, .env backups and password exports beside everything else. Reading all files reads those. Inferred, not documented. |
 | ● | An assistant connected to a personal Gmail mailbox with gmail.readonly *(contributed by riskmandate.ai)* | none (not a control) | inferred | own | password resets, one-time codes, invitations and account-recovery mail arrive in this mailbox. Reading every message reads those. Inferred, not documented - and no scope separates them. |
@@ -56,7 +57,7 @@ below point at them.*
 |---|---|
 | **authorised** | none |
 | **refused** | A coding assistant on my machine, The desktop app, with local tools switched on, Chat in the browser, nothing connected, A CI job on a hosted runner, A reader on my mailbox, Find things in the inbox, draft replies, never send, A reader on my drive, Search our tenant, read-only, An assistant over my Workspace, reading, A sandbox: build and run one AI-agent workflow |
-| **unstated** | A coding assistant in a container on the web, Chat, with connectors switched on, A browser extension I installed, A scheduled job under a service account, Find and read my files |
+| **unstated** | A coding assistant in a container on the web, Chat, with connectors switched on, A browser extension I installed, A scheduled job under a service account, Find and read my files, What the agent inferred it was authorised to do, from one session |
 
 **Unstated is not authorised.** A mandate that never mentioned a capability did not authorise it, and the delta on every example page counts it as excess and says which kind it was.
 

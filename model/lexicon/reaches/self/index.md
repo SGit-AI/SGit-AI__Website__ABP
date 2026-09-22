@@ -2,7 +2,7 @@
 
 > The reach self as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/self/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/self/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,8 +22,8 @@ the agent's own process, sandbox or turn
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`execute.process.self`](../../../../model/capabilities/execute.process.self/index.md) | Run programs inside its own sandbox only | [`execute`](../../../../model/lexicon/verbs/execute/index.md)`.`[`process`](../../../../model/lexicon/objects/process/index.md)`.`[`self`](../../../../model/lexicon/reaches/self/index.md) | yes | 0 of 16 |
-| [`grant.credential.self`](../../../../model/capabilities/grant.credential.self/index.md) | Change its own permission settings | [`grant`](../../../../model/lexicon/verbs/grant/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`self`](../../../../model/lexicon/reaches/self/index.md) | yes | 3 of 16 |
+| [`execute.process.self`](../../../../model/capabilities/execute.process.self/index.md) | Run programs inside its own sandbox only | [`execute`](../../../../model/lexicon/verbs/execute/index.md)`.`[`process`](../../../../model/lexicon/objects/process/index.md)`.`[`self`](../../../../model/lexicon/reaches/self/index.md) | yes | 0 of 17 |
+| [`grant.credential.self`](../../../../model/capabilities/grant.credential.self/index.md) | Change its own permission settings | [`grant`](../../../../model/lexicon/verbs/grant/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`self`](../../../../model/lexicon/reaches/self/index.md) | yes | 3 of 17 |
 
 ## How this node connects
 

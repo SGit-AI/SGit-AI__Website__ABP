@@ -2,7 +2,7 @@
 
 > Derived and never authored: stored with the versions of its inputs, recomputed when either moves, and never edited by hand. Reality is the third input, the history is the business case, and there are three clocks.
 
-*Source: <https://abp.sgit.ai/model/delta/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/delta/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -56,7 +56,7 @@ The grant and the mandate are the append only side: a history of what changed an
 
 > **No field in that record is writable by a person. The way to change a delta is to change a grant or a mandate.** So the release gate does not take the stored records on trust: it **recomputes every one of them** from the profile and the mandate it names and fails on a single row of disagreement. That check is a few lines, because the computation is a set difference, and it is a set difference because the grant and the mandate are held as graphs with a schema rather than as prose. **That is the underlying capability.** All of this can be done by hand today and almost nobody does it.
 
-**16 stored deltas**, one per deployment shape and mandate pair: [`/data/deltas/index.json`](../../data/deltas/index.json).
+**18 stored deltas**, one per deployment shape and mandate pair: [`/data/deltas/index.json`](../../data/deltas/index.json).
 
 ## Reality is the third input
 

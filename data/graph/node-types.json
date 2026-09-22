@@ -52,7 +52,7 @@
       "formula": "[DeploymentShape] := a node that -grants-> at least one [Capability]",
       "note": "Not a product. Two shapes here are the same product with one setting different.",
       "universe": "u2",
-      "matched": 16
+      "matched": 17
     },
     {
       "name": "GrantedCapability",
@@ -60,7 +60,7 @@
       "formula": "[GrantedCapability] := a [Capability] with an inbound -grants-> from a [DeploymentShape], carrying a -bounded_by-> [Barrier] and a -known_by-> [EvidenceTier]",
       "note": "THE NODE THAT CARRIES THE BARRIER. The barrier is a property of the capability IN A SHAPE, never of the capability itself, which is the whole reason the ABP is about the deployment rather than the product.",
       "universe": "u3",
-      "matched": 118
+      "matched": 123
     },
     {
       "name": "Barrier",
@@ -84,7 +84,7 @@
       "formula": "[Mandate] := a node that -authorises-> at least one [Capability]",
       "note": null,
       "universe": "u5",
-      "matched": 15
+      "matched": 16
     },
     {
       "name": "Excess",
@@ -92,7 +92,7 @@
       "formula": "[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope",
       "note": "A capability the mandate never mentioned was not authorised. Unstated is not permission.",
       "universe": "u6",
-      "matched": 78
+      "matched": 82
     },
     {
       "name": "UnboundedExcess",
@@ -100,7 +100,7 @@
       "formula": "[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]",
       "note": "The only number on the label a buyer can move. Every control bought moves one capability into the fourth barrier and the count falls by one.",
       "universe": "u6",
-      "matched": 61
+      "matched": 64
     },
     {
       "name": "Shortfall",
@@ -124,7 +124,7 @@
       "formula": "[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]",
       "note": "In the vendor's own words: shell (Bash), the assistant's Gmail connector, REST API: workflows. A tool that exposes nothing is a name and not a node here.",
       "universe": "u2",
-      "matched": 64
+      "matched": 76
     },
     {
       "name": "Scope",
@@ -140,7 +140,7 @@
       "formula": "[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]",
       "note": "Two kinds today, both from published data: the reduction the map publishes per capability, and the setting that distinguishes two variants of one product, derived by diffing their grants. The confirmations flag is the second kind.",
       "universe": "u2",
-      "matched": 21
+      "matched": 22
     }
   ],
   "provenance": {

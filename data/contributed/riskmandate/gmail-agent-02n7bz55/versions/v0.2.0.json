@@ -1,0 +1,18 @@
+{
+  "version": "v0.2.0",
+  "date": "2026-09-19",
+  "commit": "obj-cas-imm-fcdf6e3c889d",
+  "vault": "02n7bz55",
+  "reconstructed": false,
+  "title": "the agent side of the record: what it can reach, what it was authorised to do, and the gap",
+  "summary": "The record covered how the identities were built. This adds what the agent standing on them can actually do: thirty connector tools measured from their own schemas, ten of them unprompted; a mandate inferred from one session and marked as inferred; and barriers separated into the kind that stop an uncooperative agent and the kind that only guide a cooperative one.",
+  "changes": [
+    "content.json",
+    "index.html",
+    "RUNBOOK.md",
+    "AGENTS.md",
+    "MANDATE.md",
+    "GRANT.md"
+  ],
+  "basis": []
+}

@@ -2,7 +2,7 @@
 
 > The cost walkthrough said no case had run its prompts. The first case here is that case, on the one shape whose grant was measured, with a ledger counted from the repository and the workflow log. The second is a deployer with one assistant on three surfaces and one rule: reading the past is on demand.
 
-*Source: <https://abp.sgit.ai/articles/a-ledger-and-a-record/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/a-ledger-and-a-record/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 

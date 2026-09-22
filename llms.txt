@@ -2,7 +2,7 @@
 
 > The Agent Behaviour Policy: what your agent can do, what you authorised it to do, the gap between them, and what actually stands in the way.
 
-Site version: v0.10.1
+Site version: v0.11.0
 
 Every page below has a markdown twin generated from the same content as the
 HTML page. Fetch the `.md` and you have the page, without the chrome.
@@ -104,6 +104,7 @@ rating and no risk level anywhere on it, including in the data.
 - [U11: The runtime](https://abp.sgit.ai/model/universes/u11/index.md): The runtime, one of the universes an ABP row crosses: owned by whoever holds the logs: never this site, with its own node types and verbs, sharing only the grammar. Status: gap.
 - [U12: The estate of agents](https://abp.sgit.ai/model/universes/u12/index.md): The estate of agents, one of the universes an ABP row crosses: owned by the organisation, with its own node types and verbs, sharing only the grammar. Status: gap.
 - [Your mailbox, and what you gave it](https://abp.sgit.ai/gmail/index.md): Four steps and thirteen prompts you paste into your own assistant, to find out what connecting it to your mailbox actually gave it, what you meant to give it, and how much of the difference you can write down.
+- [The measured deployment: what the agent that holds the connector found](https://abp.sgit.ai/gmail/measured/index.md): One mailbox, one Gmail connector, thirty tools measured from their own schemas by the agent holding them, and the four objects it wrote. The first shape on this site measured end to end by the thing being profiled, and the ratchet between an authored mandate and an inferred one, as a number.
 - [Step 1: what it can already do](https://abp.sgit.ai/gmail/what-it-can-do/index.md): Four prompts that make your own assistant enumerate its mailbox tools, what each one reaches, which of them you could undo, and which lines it is inferring rather than reading.
 - [Step 2: what you actually asked for](https://abp.sgit.ai/gmail/what-you-asked-for/index.md): Three prompts that make the assistant draft your mandate over its own tools in three lists, describe your mailbox as you actually use it, and derive the gap. Correcting the draft is the exercise.
 - [Step 3: write the behaviour policy](https://abp.sgit.ai/gmail/write-the-behaviour-policy/index.md): Four prompts that turn the gap into a document you can keep: four lines to paste anywhere, a full clause set, the same thing in the four object shape, and the layer your organisation owns rather than you.
@@ -169,6 +170,7 @@ rating and no risk level anywhere on it, including in the data.
 - [The Prompt](https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.md): Paste this to the agent that builds the site. It is the standard prompt for a new network site, extended with what this one needs.
 - [An External Review Of Fractal Semantic Graphs Against The Prior Work: Distributed Logics, Named Graphs, Ontology Alignment, Federation And Provenance](https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.md): date 20 September 2026 from A review produced by ChatGPT at the project lead's request, on the Fractal Semantic Graphs page at sgit.ai and its supporting vaults, and handed to this site for the record to Whoever builds the universes on...
 - [Docs](https://abp.sgit.ai/docs/index.md): Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
+- [v0.11.0: the Gmail connector measured end to end by the agent that holds it, read from a vault, mapped into the grammar, and set beside the profile read from the vendors' pages](https://abp.sgit.ai/versions/v0.11.0/index.md): On 19 September the agent operating a mailbox through the Gmail connector read its own thirty tool schemas, checked them against the live permission page, sent mail with no prompt, relabelled sixteen messages in nineteen unprompted writes, hit one refusal it could not explain,...
 - [v0.10.1: the desktop walkthrough gets its article, with six figures captured from the v0.10.0 tag](https://abp.sgit.ai/versions/v0.10.1/index.md): One article per release, so the release that added the desktop walkthrough gets one. It covers why the third walkthrough keeps the shape of the first two, why the switch is the character of the desktop shape, why the map of what matters comes before the rules and why every rule...
 - [v0.10.0: the desktop walkthrough: an assistant on your own machine, the map of what matters on it, and the rules that open with the map; plus the article for v0.9.0](https://abp.sgit.ai/versions/v0.10.0/index.md): The third walkthrough, in the same four steps as the mailbox and cost ones because the deployer asked for the workflow to always be the same: find out what is going on, then write the rules that let the agent decide better for itself. On a machine the word host means the...
 - [v0.9.0: two more cases: the session that built this site, as a ledger with a measured grant, and one person's three surfaces of one product over an account that holds every past conversation](https://abp.sgit.ai/versions/v0.9.0/index.md): The cost walkthrough shipped with the line that no case ran its prompts yet. The first case in this release is that case: the session that built releases v0.4.0 to v0.8.1, on the one shape this site holds whose grant was measured by the thing being profiled, with a ledger of...
@@ -197,6 +199,7 @@ rating and no risk level anywhere on it, including in the data.
 
 ## Release history
 
+- [v0.11.0](https://abp.sgit.ai/versions/v0.11.0/index.md) (2026-09-22) the Gmail connector measured end to end by the agent that holds it, read from a vault, mapped into the grammar, and set beside the profile read from the vendors' pages
 - [v0.10.1](https://abp.sgit.ai/versions/v0.10.1/index.md) (2026-09-22) the desktop walkthrough gets its article, with six figures captured from the v0.10.0 tag
 - [v0.10.0](https://abp.sgit.ai/versions/v0.10.0/index.md) (2026-09-22) the desktop walkthrough: an assistant on your own machine, the map of what matters on it, and the rules that open with the map; plus the article for v0.9.0
 - [v0.9.0](https://abp.sgit.ai/versions/v0.9.0/index.md) (2026-09-22) two more cases: the session that built this site, as a ledger with a measured grant, and one person's three surfaces of one product over an account that holds every past conversation
@@ -208,4 +211,3 @@ rating and no risk level anywhere on it, including in the data.
 - [v0.6.0](https://abp.sgit.ai/versions/v0.6.0/index.md) (2026-09-21) a walkthrough for somebody who has connected an assistant to their own mailbox: four pages, thirteen prompts, and a fourth page that says what a prompt cannot do
 - [v0.5.1](https://abp.sgit.ai/versions/v0.5.1/index.md) (2026-09-21) the articles run newest first, carry their version in the title, and link to the release before and after them
 - [v0.5.0](https://abp.sgit.ai/versions/v0.5.0/index.md) (2026-09-20) the releases get one article each, with the screenshots taken from the tag each one names rather than from today's site
-- [v0.4.4](https://abp.sgit.ai/versions/v0.4.4/index.md) (2026-09-20) seven shapes contributed by riskmandate.ai are promoted with their provenance, a vendor scope becomes a node, and the intake path is the same for anybody

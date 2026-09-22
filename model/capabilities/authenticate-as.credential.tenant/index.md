@@ -2,7 +2,7 @@
 
 > Act in accounts with the credentials it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,7 +28,7 @@ below point at them.*
 
 > **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `authenticate-as.credential.tenant` is emerges from the edges traceable from it. The strongest case is [`tenant`](../../../model/lexicon/reaches/tenant/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
-## In 14 of 16 published shapes
+## In 15 of 17 published shapes
 
 |  | Deployment shape | Barrier there | Known by | Whose material | Note |
 |---|---|---|---|---|---|
@@ -38,6 +38,7 @@ below point at them.*
 | ● | Claude Desktop (a desktop app with local tools) | none (not a control) | derived | not stated |  |
 | ○ | Claude (in the browser, with connectors switched on) | boundary | derived | not stated | a cloud connector acts as you |
 | ○ | Claude, with the Gmail connector enabled *(contributed by riskmandate.ai)* | boundary | measured | own | acts as the account holder over the Gmail data of the connected account. "Claude mirrors your existing permissions - you cannot access information you don't already have access to in Google Workspace." The OAuth application is named "Claude for Gmail" on Google's screens. Measured 2026-09-16: the three Google screens - choose an account; "Sign in to Claude for Gmail"; "Claude for Gmail wants access to your Google Account" with the three scope lines pre-ticked - are transcribed in evidence/. |
+| ○ | Claude, with the Gmail connector enabled *(contributed by riskmandate.ai)* | boundary | measured | organisation | acts as the account holder over one mailbox, and sends as whatever the account's default send-as entry is. The operator set that default to a disclosed agent alias on a second domain, DKIM signed and confirmed aligned by a live round trip. So the agent sends as the business and cannot send as anything else, including the account's primary address. |
 | ○ | Claude's Microsoft 365 connector (Outlook, SharePoint, OneDrive, Teams) *(contributed by riskmandate.ai)* | boundary | documented | own | "Users can only access Microsoft 365 data they already have permission for." Anthropic hosts the connector and holds the token. |
 | ○ | The official Dropbox MCP server *(contributed by riskmandate.ai)* | boundary | documented | own | "Get the authenticated Dropbox user's identity, team/account context"; the server acts as the account, and for team users GetUsageAndQuota "will retrieve the usage and quota for the entire team". |
 | ◐ | A browser extension with broad host permissions | setting (not a control) | documented | not stated | acts inside sites where you have a session, as you |
@@ -60,7 +61,7 @@ below point at them.*
 |---|---|
 | **authorised** | A scheduled job under a service account |
 | **refused** | A coding assistant on my machine, The desktop app, with local tools switched on, Chat in the browser, nothing connected, A browser extension I installed |
-| **unstated** | A coding assistant in a container on the web, Chat, with connectors switched on, A CI job on a hosted runner, A reader on my mailbox, Find things in the inbox, draft replies, never send, A reader on my drive, Search our tenant, read-only, Find and read my files, An assistant over my Workspace, reading, A sandbox: build and run one AI-agent workflow |
+| **unstated** | A coding assistant in a container on the web, Chat, with connectors switched on, A CI job on a hosted runner, A reader on my mailbox, Find things in the inbox, draft replies, never send, A reader on my drive, Search our tenant, read-only, Find and read my files, An assistant over my Workspace, reading, A sandbox: build and run one AI-agent workflow, What the agent inferred it was authorised to do, from one session |
 
 **Unstated is not authorised.** A mandate that never mentioned a capability did not authorise it, and the delta on every example page counts it as excess and says which kind it was.
 

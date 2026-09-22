@@ -178,7 +178,9 @@ for (const f of htmlFiles) {
 // be. The two are one character class apart to a careless eye. This site embeds no vault and
 // so PUBLISHED is empty: if that changes, escrow the write key before publishing and add the
 // read key here as an exact string, never as a pattern.
-const PUBLISHED = [];
+// One read key, published on purpose at v0.11.0: it opens a read-only clone of the vault the
+// Gmail evidence was read from, and nothing else. The write credential appears nowhere.
+const PUBLISHED = ['e698be2c2b5de0eaff0b72911be7748694a1c14311f9a10588781bfad61de883:02n7bz55'];
 const KEY_SHAPES = [
   /[A-Za-z0-9_-]{20,}:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/g,
   /[A-Za-z0-9_-]{16,}:[a-z0-9]{8}\b/g,
@@ -431,13 +433,24 @@ for (const f of files) {
       const want = 'sha256:' + (contributedHash[vb] || '');
       if (!contributedHash[vb]) errors.push(`data/${e.file}: contributed, and its verbatim bytes ${p.provenance.verbatim_bytes} are not in the contributed manifest`);
       else if (want !== p.provenance.content_hash) errors.push(`data/${e.file}: pins ${p.provenance.content_hash.slice(0, 22)}..., the contributed file hashes to ${want.slice(0, 22)}...`);
-      if (p.provenance.retrieved !== (cman || {}).retrieved) errors.push(`data/${e.file}: contributed, and its retrieval time is not the manifest's`);
+      // A vault entry is read on its own date, so its rows carry that entry's retrieval time.
+      const okTimes = new Set([(cman || {}).retrieved, ...((cman || {}).vaults || []).map(x => x.retrieved)]);
+      if (!okTimes.has(p.provenance.retrieved)) errors.push(`data/${e.file}: contributed, and its retrieval time is neither the manifest's nor a vault entry's`);
       if (e.contributed_by !== p.provenance.contributed_by) errors.push(`data/profiles/index.json: ${e.id} does not say who contributed it`);
     }
   }
   if (pidx && cman) {
     const nc = pidx.profiles.filter(x => x.contributed_by).length;
-    if (nc !== (cman.shapes || []).length) errors.push(`data/profiles/index.json: ${nc} contributed profiles, the manifest names ${(cman.shapes || []).length} shapes`);
+    const named = (cman.shapes || []).length + (cman.vaults || []).length;
+    if (nc !== named) errors.push(`data/profiles/index.json: ${nc} contributed profiles, the manifest names ${named} shapes and vaults`);
+    // A VAULT ENTRY'S SOURCES ARE ON DISK AND HASHED like every other contributed file, and the
+    // profile promoted from it pins the grant source's hash, so the check above covers it.
+    for (const ve of cman.vaults || []) {
+      for (const k of ['grant_source', 'mandate_source', 'delta_source', 'rules_source']) {
+        if (!contributedHash[ve[k]]) errors.push(`data/contributed/riskmandate/manifest.json: vault ${ve.vault} names ${k} ${ve[k]}, which is not among the hashed files`);
+      }
+      if (!PUBLISHED.includes(ve.read_key)) errors.push(`data/contributed/riskmandate/manifest.json: vault ${ve.vault} carries a read key that is not in PUBLISHED -- a key on this site is published on purpose or not at all`);
+    }
   }
 
   const midx = J('mandates/index.json');

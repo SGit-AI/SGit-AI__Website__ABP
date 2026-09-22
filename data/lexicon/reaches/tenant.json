@@ -81,6 +81,10 @@
     {
       "shape": "n8n/self-hosted/owner-api-key",
       "means": "the platform as an account holder: activation, schedules, the model credential it spends against"
+    },
+    {
+      "shape": "anthropic/gmail-connector/measured-2026-09-19",
+      "means": "the Google Workspace account the consent was given for, and the default send-as identity it carries"
     }
   ],
   "page": "https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html",

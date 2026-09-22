@@ -1,22 +1,22 @@
 {
   "type": "abp/graph-nodes/v1",
   "_what_this_is": "Every node, flat, with its type. The same shape of record at every altitude: a verb, a capability, a barrier and a deployment shape are all nodes here. That is the GRAMMAR surviving every zoom, which is the mechanism and not the claim: the claim is that a node opens into a world with its own ontology, joined by a named edge, and which universe each type belongs to is in universes/index.json. (Until v0.4.1 this field stated the first edition's test, one format everywhere, which scores decomposition as fractal.)",
-  "count": 369,
+  "count": 409,
   "by_type": {
     "Barrier": 4,
     "Capability": 23,
-    "DeploymentShape": 16,
+    "DeploymentShape": 17,
     "Enforcer": 3,
     "EvidenceTier": 6,
     "Family": 9,
-    "GrantedCapability": 118,
-    "Mandate": 15,
+    "GrantedCapability": 123,
+    "Mandate": 16,
     "ObjectClass": 9,
     "Product": 15,
     "ReachClass": 5,
     "Scope": 9,
-    "Setting": 21,
-    "Tool": 103,
+    "Setting": 22,
+    "Tool": 135,
     "UndoClass": 3,
     "Verb": 10
   },
@@ -203,6 +203,10 @@
         {
           "shape": "n8n/self-hosted/owner-api-key",
           "means": "the instance itself: its accounts, its credential store, its execution records"
+        },
+        {
+          "shape": "anthropic/gmail-connector/measured-2026-09-19",
+          "means": "the mailbox itself, whole: every message and thread including archived, sent and trashed mail, every label with its counts, every draft; attachment content on the way out, up to 25MB"
         }
       ]
     },
@@ -275,6 +279,10 @@
         {
           "shape": "n8n/self-hosted/owner-api-key",
           "means": "the platform as an account holder: activation, schedules, the model credential it spends against"
+        },
+        {
+          "shape": "anthropic/gmail-connector/measured-2026-09-19",
+          "means": "the Google Workspace account the consent was given for, and the default send-as identity it carries"
         }
       ]
     },
@@ -347,6 +355,10 @@
         {
           "shape": "n8n/self-hosted/owner-api-key",
           "means": "any host an outbound node can be pointed at — accepted on creation; what the platform's own server can reach was not tested"
+        },
+        {
+          "shape": "anthropic/gmail-connector/measured-2026-09-19",
+          "means": "any address, as a recipient of send_message, reply or forward"
         }
       ]
     },
@@ -1601,6 +1613,49 @@
       "capability": "create.schedule.tenant"
     },
     {
+      "id": "shape/anthropic/gmail-connector/measured-2026-09-19",
+      "type": "DeploymentShape",
+      "label": "Claude, with the Gmail connector enabled",
+      "variant": "measured-2026-09-19",
+      "surface": "web",
+      "version": "2026-09-19"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/measured-2026-09-19#read.credential.host",
+      "type": "GrantedCapability",
+      "label": "read.credential.host in measured-2026-09-19",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19",
+      "capability": "read.credential.host"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/measured-2026-09-19#read.record.history",
+      "type": "GrantedCapability",
+      "label": "read.record.history in measured-2026-09-19",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19",
+      "capability": "read.record.history"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/measured-2026-09-19#send.message.world",
+      "type": "GrantedCapability",
+      "label": "send.message.world in measured-2026-09-19",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19",
+      "capability": "send.message.world"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/measured-2026-09-19#authenticate-as.credential.tenant",
+      "type": "GrantedCapability",
+      "label": "authenticate-as.credential.tenant in measured-2026-09-19",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19",
+      "capability": "authenticate-as.credential.tenant"
+    },
+    {
+      "id": "granted/anthropic/gmail-connector/measured-2026-09-19#read.message.tenant",
+      "type": "GrantedCapability",
+      "label": "read.message.tenant in measured-2026-09-19",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19",
+      "capability": "read.message.tenant"
+    },
+    {
       "id": "product/anthropic/claude-code-remote",
       "type": "Product",
       "label": "Claude Code on the web",
@@ -2363,6 +2418,198 @@
       "shape": "n8n/self-hosted/owner-api-key"
     },
     {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#search-threads-always-allow",
+      "type": "Tool",
+      "label": "search_threads (Always allow)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#get-message-always-allow",
+      "type": "Tool",
+      "label": "get_message (Always allow)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#get-thread-always-allow",
+      "type": "Tool",
+      "label": "get_thread (Always allow)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#get-draft-always-allow",
+      "type": "Tool",
+      "label": "get_draft (Always allow)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#list-drafts-always-allow",
+      "type": "Tool",
+      "label": "list_drafts (Always allow)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#list-labels-always-allow",
+      "type": "Tool",
+      "label": "list_labels (Always allow)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#create-label-always-allow",
+      "type": "Tool",
+      "label": "create_label (Always allow)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#label-message-always-allow",
+      "type": "Tool",
+      "label": "label_message (Always allow)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#unlabel-message-always-allow",
+      "type": "Tool",
+      "label": "unlabel_message (Always allow)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#send-message-always-allow",
+      "type": "Tool",
+      "label": "send_message (Always allow)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#create-draft-needs-approval",
+      "type": "Tool",
+      "label": "create_draft (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#update-draft-needs-approval",
+      "type": "Tool",
+      "label": "update_draft (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#delete-draft-needs-approval",
+      "type": "Tool",
+      "label": "delete_draft (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#reply-needs-approval",
+      "type": "Tool",
+      "label": "reply (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#forward-needs-approval",
+      "type": "Tool",
+      "label": "forward (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#update-label-needs-approval",
+      "type": "Tool",
+      "label": "update_label (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#delete-label-needs-approval",
+      "type": "Tool",
+      "label": "delete_label (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#label-thread-needs-approval",
+      "type": "Tool",
+      "label": "label_thread (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#unlabel-thread-needs-approval",
+      "type": "Tool",
+      "label": "unlabel_thread (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#update-message-labels-needs-approval",
+      "type": "Tool",
+      "label": "update_message_labels (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#trash-message-needs-approval",
+      "type": "Tool",
+      "label": "trash_message (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#untrash-message-needs-approval",
+      "type": "Tool",
+      "label": "untrash_message (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#trash-thread-needs-approval",
+      "type": "Tool",
+      "label": "trash_thread (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#untrash-thread-needs-approval",
+      "type": "Tool",
+      "label": "untrash_thread (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#mark-message-spam-needs-approval",
+      "type": "Tool",
+      "label": "mark_message_spam (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#unmark-message-spam-needs-approval",
+      "type": "Tool",
+      "label": "unmark_message_spam (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#mark-thread-spam-needs-approval",
+      "type": "Tool",
+      "label": "mark_thread_spam (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#unmark-thread-spam-needs-approval",
+      "type": "Tool",
+      "label": "unmark_thread_spam (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#apply-sensitive-message-label-needs-approval",
+      "type": "Tool",
+      "label": "apply_sensitive_message_label (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#apply-sensitive-thread-label-needs-approval",
+      "type": "Tool",
+      "label": "apply_sensitive_thread_label (Needs approval)",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#the-google-oauth-consent",
+      "type": "Tool",
+      "label": "the Google OAuth consent",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
+      "id": "tool/anthropic/gmail-connector/measured-2026-09-19#the-account-s-default-send-as-identity",
+      "type": "Tool",
+      "label": "the account's default send-as identity",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19"
+    },
+    {
       "id": "setting/read.file.host",
       "type": "Setting",
       "label": "run the agent in a container with only the project mounted, or under a separate user account",
@@ -2533,6 +2780,16 @@
       ]
     },
     {
+      "id": "setting/anthropic/gmail-connector/default~measured-2026-09-19",
+      "type": "Setting",
+      "label": "the setting that distinguishes default from measured-2026-09-19",
+      "kind": "variant difference",
+      "between": [
+        "anthropic/gmail-connector/default",
+        "anthropic/gmail-connector/measured-2026-09-19"
+      ]
+    },
+    {
       "id": "mandate/coding-assistant-on-my-machine",
       "type": "Mandate",
       "label": "A coding assistant on my machine",
@@ -2650,6 +2907,14 @@
       "label": "A sandbox: build and run one AI-agent workflow",
       "surface": [
         "api"
+      ]
+    },
+    {
+      "id": "mandate/inferred-from-one-session",
+      "type": "Mandate",
+      "label": "What the agent inferred it was authorised to do, from one session",
+      "surface": [
+        "web"
       ]
     }
   ],

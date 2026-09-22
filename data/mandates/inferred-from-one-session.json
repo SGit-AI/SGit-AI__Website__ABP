@@ -1,0 +1,62 @@
+{
+  "type": "abp/mandate/v1",
+  "id": "inferred-from-one-session",
+  "label": "What the agent inferred it was authorised to do, from one session",
+  "surface": [
+    "web"
+  ],
+  "applies_to": [
+    "anthropic/gmail-connector/measured-2026-09-19"
+  ],
+  "status": "inferred by the agent, not elicited",
+  "authored": "2026-09-19",
+  "authored_by": "the agent operating the mailbox, reconstructing from ten things it was asked to do in one session and was not stopped from doing; not the business",
+  "description": "The vault's MANDATE.md, in the grammar. It is not a mandate and it says so on its first line: it is evidence of one, reconstructed by the agent from the same session that produced the reach, with fifteen questions the business has not answered. It is published beside the site's own starting mandate for this shape because the two disagree on exactly one primitive: the agent was asked to send one message and inferred that sending was authorised, so send.message.world sits on the wanted side here and on the refused side there. That one line is what the vault calls the ratchet: an agent that infers its mandate from unchallenged past behaviour will widen it with every action nobody objected to, and the gap closes on paper while nothing has changed.",
+  "want": [
+    "read.message.tenant",
+    "send.message.world"
+  ],
+  "do_not_want": [
+    "create.schedule.tenant"
+  ],
+  "unstated": [
+    "authenticate-as.credential.signing",
+    "authenticate-as.credential.tenant",
+    "create.record.world",
+    "create.schedule.host",
+    "delete.file.host",
+    "execute.process.host",
+    "execute.process.self",
+    "grant.credential.self",
+    "read.credential.host",
+    "read.file.host",
+    "read.file.project",
+    "read.record.browsing",
+    "read.record.history",
+    "send.endpoint.allowed",
+    "send.endpoint.world",
+    "write.budget.tenant",
+    "write.file.host",
+    "write.file.project",
+    "write.repository.project",
+    "write.repository.tenant"
+  ],
+  "notes": {
+    "read.message.tenant": "inferred with high confidence: read the inbox and report was the first instruction; the stream isolation and the seventy one messages marked read rest on it too",
+    "send.message.world": "inferred with high confidence: an alias was created expressly for the agent to send from, and it was asked to introduce itself to a named third party. Whether that authorises sending to anyone the operator has not named in session is the first of the vault's open questions, and this line is where the ratchet shows",
+    "create.schedule.tenant": "asked for filters and declined: the one thing the session established as not authorised, and also not reachable",
+    "the rest": "the vault's other inferred lines (labels, un-inboxing, trash, reading public pages, writing to a vault) are not primitives of this connector's grant; the last two belong to the container the same session ran in"
+  },
+  "provenance": {
+    "source": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: MANDATE.md",
+    "source_page": "https://riskmandate.ai/abp-vault-claude-gmail-connector.html",
+    "retrieved": "2026-09-22T10:40:00Z",
+    "pack_version": null,
+    "content_hash": "sha256:60a8b94b5620c82b34fe016ccdc25b282690f8fb6989f5fa56b226a3cb0d01e9",
+    "verbatim_bytes": "contributed/riskmandate/gmail-agent-02n7bz55/MANDATE.md",
+    "contributed_by": "riskmandate.ai",
+    "contributed_manifest": "contributed/riskmandate/manifest.json",
+    "note": "The agent's own inferred mandate, from MANDATE.md in vault 02n7bz55, mapped into the grammar by this site. Marked inferred and not elicited, as the vault marks it: it is evidence of a mandate and not one. `unstated` is recomputed here.",
+    "licence": "CC BY 4.0"
+  }
+}

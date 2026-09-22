@@ -1,7 +1,7 @@
 {
   "type": "abp/mandates-index/v1",
   "_what_this_is": "Starting mandates, one per surface. A mandate is what a reasonable person WANTED, stated per capability. None was measured or surveyed: each is a first draft written to be argued with.",
-  "count": 15,
+  "count": 16,
   "mandates": [
     {
       "id": "coding-assistant-on-my-machine",
@@ -129,7 +129,8 @@
         "web"
       ],
       "applies_to": [
-        "anthropic/gmail-connector/default"
+        "anthropic/gmail-connector/default",
+        "anthropic/gmail-connector/measured-2026-09-19"
       ],
       "want": 1,
       "do_not_want": 3,
@@ -204,6 +205,20 @@
       "want": 4,
       "do_not_want": 2,
       "file": "mandates/sandbox-build-one-agent-workflow.json",
+      "contributed_by": "riskmandate.ai"
+    },
+    {
+      "id": "inferred-from-one-session",
+      "label": "What the agent inferred it was authorised to do, from one session",
+      "surface": [
+        "web"
+      ],
+      "applies_to": [
+        "anthropic/gmail-connector/measured-2026-09-19"
+      ],
+      "want": 2,
+      "do_not_want": 1,
+      "file": "mandates/inferred-from-one-session.json",
       "contributed_by": "riskmandate.ai"
     }
   ],

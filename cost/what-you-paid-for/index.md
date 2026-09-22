@@ -2,7 +2,7 @@
 
 > Two prompts that turn the ledger into a cost mandate: what you want spent freely, what should be batched or asked about, what must never be spent, and what waste means for you in particular.
 
-*Source: <https://abp.sgit.ai/cost/what-you-paid-for/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cost/what-you-paid-for/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -70,7 +70,7 @@ rather than yours.
 
 ## What the published shapes say
 
-Nothing, which is the finding. Of 16 shapes on this site, 2 grant `write.budget.tenant`, and none carries a row for a count of any kind, because the grammar has no such row. **Every cost mandate on this page is over things the grant cannot express**, and that is why step three is a document rather than a permission.
+Nothing, which is the finding. Of 17 shapes on this site, 2 grant `write.budget.tenant`, and none carries a row for a count of any kind, because the grammar has no such row. **Every cost mandate on this page is over things the grant cannot express**, and that is why step three is a document rather than a permission.
 
 > **Nothing on this page is measured by this site.** There are no runtime logs here and there will not be; the runtime is universe u11, owned by whoever holds the logs and never by this site. Every number an agent gives back is a self report, which counts as a claim rather than a measurement, and the bill is the only log.
 

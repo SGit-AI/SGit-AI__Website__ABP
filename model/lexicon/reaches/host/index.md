@@ -2,7 +2,7 @@
 
 > The reach host as a node: the 8 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/host/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/host/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,6 +28,7 @@ the machine, container or account it runs as
 | [Claude Desktop (a desktop app with local tools)](../../../../examples/index.md) | `default` | your machine, as your user account |
 | [Claude (in the browser, with connectors switched on)](../../../../examples/index.md) | `connectors-on` | what the drive connector is scoped to; not your machine |
 | [Claude, with the Gmail connector enabled](../../../../examples/index.md) | `default` | the mailbox itself: every message and thread, labels, filters and saved drafts, and attachment metadata - never attachment content |
+| [Claude, with the Gmail connector enabled](../../../../examples/index.md) | `measured-2026-09-19` | the mailbox itself, whole: every message and thread including archived, sent and trashed mail, every label with its counts, every draft; attachment content on the way out, up to 25MB |
 | [Claude's Microsoft 365 connector (Outlook, SharePoint, OneDrive, Teams)](../../../../examples/index.md) | `default` | SharePoint sites and OneDrive files the user can already open - searched tenant-wide |
 | [The official Dropbox MCP server](../../../../examples/index.md) | `default` | the Dropbox account as a store - and for a team user, "the usage and quota for the entire team" |
 | [A browser extension with broad host permissions](../../../../examples/index.md) | `broad-host-permissions` | your browser - every page, every logged-in site |
@@ -47,14 +48,14 @@ the machine, container or account it runs as
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`create.schedule.host`](../../../../model/capabilities/create.schedule.host/index.md) | Create something that outlives the turn where it runs (a cron, a service) | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`schedule`](../../../../model/lexicon/objects/schedule/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | yes | 4 of 16 |
-| [`delete.file.host`](../../../../model/capabilities/delete.file.host/index.md) | Delete files anywhere the account can reach | [`delete`](../../../../model/lexicon/verbs/delete/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 5 of 16 |
-| [`execute.process.host`](../../../../model/capabilities/execute.process.host/index.md) | Run programs as the account | [`execute`](../../../../model/lexicon/verbs/execute/index.md)`.`[`process`](../../../../model/lexicon/objects/process/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | with-effort | 7 of 16 |
-| [`read.credential.host`](../../../../model/capabilities/read.credential.host/index.md) | Read credentials stored where it runs | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 10 of 16 |
-| [`read.file.host`](../../../../model/capabilities/read.file.host/index.md) | Read any file the account can reach | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 11 of 16 |
-| [`read.record.browsing`](../../../../model/capabilities/read.record.browsing/index.md) | Read every page you visit | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`record`](../../../../model/lexicon/objects/record/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 1 of 16 |
-| [`read.record.history`](../../../../model/capabilities/read.record.history/index.md) | Read a retained record: shell history, past sessions | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`record`](../../../../model/lexicon/objects/record/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 7 of 16 |
-| [`write.file.host`](../../../../model/capabilities/write.file.host/index.md) | Change any file the account can reach | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | with-effort | 8 of 16 |
+| [`create.schedule.host`](../../../../model/capabilities/create.schedule.host/index.md) | Create something that outlives the turn where it runs (a cron, a service) | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`schedule`](../../../../model/lexicon/objects/schedule/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | yes | 4 of 17 |
+| [`delete.file.host`](../../../../model/capabilities/delete.file.host/index.md) | Delete files anywhere the account can reach | [`delete`](../../../../model/lexicon/verbs/delete/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 5 of 17 |
+| [`execute.process.host`](../../../../model/capabilities/execute.process.host/index.md) | Run programs as the account | [`execute`](../../../../model/lexicon/verbs/execute/index.md)`.`[`process`](../../../../model/lexicon/objects/process/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | with-effort | 7 of 17 |
+| [`read.credential.host`](../../../../model/capabilities/read.credential.host/index.md) | Read credentials stored where it runs | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 11 of 17 |
+| [`read.file.host`](../../../../model/capabilities/read.file.host/index.md) | Read any file the account can reach | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 11 of 17 |
+| [`read.record.browsing`](../../../../model/capabilities/read.record.browsing/index.md) | Read every page you visit | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`record`](../../../../model/lexicon/objects/record/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 1 of 17 |
+| [`read.record.history`](../../../../model/capabilities/read.record.history/index.md) | Read a retained record: shell history, past sessions | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`record`](../../../../model/lexicon/objects/record/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 8 of 17 |
+| [`write.file.host`](../../../../model/capabilities/write.file.host/index.md) | Change any file the account can reach | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | with-effort | 8 of 17 |
 
 ## How this node connects
 

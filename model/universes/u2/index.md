@@ -2,7 +2,7 @@
 
 > The deployment shape, one of the universes an ABP row crosses: owned by the vendor's published words, read on a date, with a hash, and never probed, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u2/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u2/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -23,10 +23,10 @@ A node type is a required pattern of paths, not a label. The ones marked yes are
 | Type | Formula | Exists today | Note |
 |---|---|---|---|
 | **Product** | `[Product] := a node that -has_variant-> at least one [DeploymentShape]` | **yes**, 15 matched |  |
-| **DeploymentShape** | `[DeploymentShape] := a node that -grants-> at least one [Capability]` | **yes**, 16 matched |  |
-| **Tool** | `[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]` | **yes**, 64 matched | One node per shape, in the vendor's words, because what shell (Bash) reaches depends on where it runs. |
+| **DeploymentShape** | `[DeploymentShape] := a node that -grants-> at least one [Capability]` | **yes**, 17 matched |  |
+| **Tool** | `[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]` | **yes**, 76 matched | One node per shape, in the vendor's words, because what shell (Bash) reaches depends on where it runs. |
 | **Scope** | `[Scope] := a node that a [DeploymentShape] is -scoped_by-> and that -permits-> at least one [Capability]` | **yes**, 9 matched | In the vendor's word, never translated. The connector shapes contributed by riskmandate.ai at v0.4.4 reach most of their rows through one. |
-| **Setting** | `[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]` | **yes**, 21 matched | Two kinds, both from published data: the reduction the map publishes per capability, and the setting that distinguishes two variants of one product, derived by diffing their grants. The confirmations flag is the second kind, and it is the path the home page's pair of examples was a sentence about. |
+| **Setting** | `[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]` | **yes**, 22 matched | Two kinds, both from published data: the reduction the map publishes per capability, and the setting that distinguishes two variants of one product, derived by diffing their grants. The confirmations flag is the second kind, and it is the path the home page's pair of examples was a sentence about. |
 | **DocumentationPage** | `a [SourceFile] in U0 that a [Shape], [Tool], [Scope] or [Setting] is -documented_at->` | not yet |  |
 | **Contradiction** | `a node where an -advertises-> claim and a -scoped_by-> scope on the same [Product] disagree, both quoted, both dated, published unresolved` | not yet | riskmandate.ai's Lab 01 holds four of these with verbatim quotes and URLs. |
 

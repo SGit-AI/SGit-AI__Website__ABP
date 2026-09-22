@@ -2,7 +2,7 @@
 
 > The deployer, one of the universes an ABP row crosses: owned by the deployer, in their own words, and the named person who will correct the draft, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u5/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u5/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,7 +22,7 @@ A node type is a required pattern of paths, not a label. The ones marked yes are
 
 | Type | Formula | Exists today | Note |
 |---|---|---|---|
-| **Mandate** | `[Mandate] := a node that -authorises-> at least one [Capability]` | **yes**, 15 matched |  |
+| **Mandate** | `[Mandate] := a node that -authorises-> at least one [Capability]` | **yes**, 16 matched |  |
 | **Deployer** | `an [Organisation] or [Person] that -issued-> at least one [Mandate]` | not yet |  |
 | **Owner** | `a [Person] that -corrected-> or -signed-> a [Mandate]; never a team and never a function` | not yet |  |
 | **Job** | `a node a [Mandate] -is_for->, in the deployer's words: draft the reply, fix the build` | not yet |  |

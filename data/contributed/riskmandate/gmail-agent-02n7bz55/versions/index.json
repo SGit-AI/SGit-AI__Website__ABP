@@ -1,0 +1,30 @@
+{
+  "current": "v0.4.0",
+  "vault": "02n7bz55",
+  "versions": [
+    {
+      "version": "v0.4.0",
+      "date": "2026-09-19",
+      "title": "the four behaviour-policy objects get their real names, and the record stops overclaiming",
+      "reconstructed": false
+    },
+    {
+      "version": "v0.3.0",
+      "date": "2026-09-19",
+      "title": "the record gets a top-level navigation and, at last, a version of its own",
+      "reconstructed": false
+    },
+    {
+      "version": "v0.2.0",
+      "date": "2026-09-19",
+      "title": "the agent side of the record: what it can reach, what it was authorised to do, and the gap",
+      "reconstructed": false
+    },
+    {
+      "version": "v0.1.0",
+      "date": "2026-09-19",
+      "title": "the original record of attaching riskmandate.ai as a user alias domain",
+      "reconstructed": true
+    }
+  ]
+}

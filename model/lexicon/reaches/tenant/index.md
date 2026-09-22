@@ -2,7 +2,7 @@
 
 > The reach tenant as a node: the 7 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,6 +28,7 @@ the organisation's accounts, repositories and services
 | [Claude Desktop (a desktop app with local tools)](../../../../examples/index.md) | `default` | your accounts |
 | [Claude (in the browser, with connectors switched on)](../../../../examples/index.md) | `connectors-on` | the accounts you connected, as you scoped them |
 | [Claude, with the Gmail connector enabled](../../../../examples/index.md) | `default` | the Google account the consent was given for |
+| [Claude, with the Gmail connector enabled](../../../../examples/index.md) | `measured-2026-09-19` | the Google Workspace account the consent was given for, and the default send-as identity it carries |
 | [Claude's Microsoft 365 connector (Outlook, SharePoint, OneDrive, Teams)](../../../../examples/index.md) | `default` | the Microsoft Entra tenant the administrator consented for; the user's mailbox, shared mailboxes they are delegated to, and Teams chats |
 | [The official Dropbox MCP server](../../../../examples/index.md) | `default` | the Dropbox account or team the app was authorised for |
 | [A browser extension with broad host permissions](../../../../examples/index.md) | `broad-host-permissions` | the sites you are logged into, as you |
@@ -47,13 +48,13 @@ the organisation's accounts, repositories and services
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`authenticate-as.credential.signing`](../../../../model/capabilities/authenticate-as.credential.signing/index.md) | Sign commits with the key it holds | [`authenticate-as`](../../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 3 of 16 |
-| [`authenticate-as.credential.tenant`](../../../../model/capabilities/authenticate-as.credential.tenant/index.md) | Act in accounts with the credentials it holds | [`authenticate-as`](../../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 14 of 16 |
-| [`create.schedule.tenant`](../../../../model/capabilities/create.schedule.tenant/index.md) | Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session) | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`schedule`](../../../../model/lexicon/objects/schedule/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | yes | 3 of 16 |
-| [`read.message.tenant`](../../../../model/capabilities/read.message.tenant/index.md) | Read mail or chat it is connected to | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`message`](../../../../model/lexicon/objects/message/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 5 of 16 |
-| [`send.endpoint.allowed`](../../../../model/capabilities/send.endpoint.allowed/index.md) | Reach a permitted list of hosts | [`send`](../../../../model/lexicon/verbs/send/index.md)`.`[`network-endpoint`](../../../../model/lexicon/objects/network-endpoint/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 1 of 16 |
-| [`write.budget.tenant`](../../../../model/capabilities/write.budget.tenant/index.md) | Spend money or tokens against an account it holds | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`budget`](../../../../model/lexicon/objects/budget/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 2 of 16 |
-| [`write.repository.tenant`](../../../../model/capabilities/write.repository.tenant/index.md) | Push to a code host (any branch it can reach) | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | with-effort | 4 of 16 |
+| [`authenticate-as.credential.signing`](../../../../model/capabilities/authenticate-as.credential.signing/index.md) | Sign commits with the key it holds | [`authenticate-as`](../../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 3 of 17 |
+| [`authenticate-as.credential.tenant`](../../../../model/capabilities/authenticate-as.credential.tenant/index.md) | Act in accounts with the credentials it holds | [`authenticate-as`](../../../../model/lexicon/verbs/authenticate-as/index.md)`.`[`credential`](../../../../model/lexicon/objects/credential/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 15 of 17 |
+| [`create.schedule.tenant`](../../../../model/capabilities/create.schedule.tenant/index.md) | Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session) | [`create`](../../../../model/lexicon/verbs/create/index.md)`.`[`schedule`](../../../../model/lexicon/objects/schedule/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | yes | 3 of 17 |
+| [`read.message.tenant`](../../../../model/capabilities/read.message.tenant/index.md) | Read mail or chat it is connected to | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`message`](../../../../model/lexicon/objects/message/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 6 of 17 |
+| [`send.endpoint.allowed`](../../../../model/capabilities/send.endpoint.allowed/index.md) | Reach a permitted list of hosts | [`send`](../../../../model/lexicon/verbs/send/index.md)`.`[`network-endpoint`](../../../../model/lexicon/objects/network-endpoint/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 1 of 17 |
+| [`write.budget.tenant`](../../../../model/capabilities/write.budget.tenant/index.md) | Spend money or tokens against an account it holds | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`budget`](../../../../model/lexicon/objects/budget/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | no | 2 of 17 |
+| [`write.repository.tenant`](../../../../model/capabilities/write.repository.tenant/index.md) | Push to a code host (any branch it can reach) | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`tenant`](../../../../model/lexicon/reaches/tenant/index.md) | with-effort | 4 of 17 |
 
 ## How this node connects
 

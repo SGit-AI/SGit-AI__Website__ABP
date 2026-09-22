@@ -2,7 +2,7 @@
 
 > Three prompts that produce the map of the machine in the person's words: the work, the not-yours, the credentials, the record, and what in it must never be reused.
 
-*Source: <https://abp.sgit.ai/desktop/what-matters/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/desktop/what-matters/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 

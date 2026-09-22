@@ -2,7 +2,7 @@
 
 > Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
-*Source: <https://abp.sgit.ai/versions/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -16,6 +16,7 @@ Every release of this site. **The badge in the top bar reads `current` from [`ve
 
 | Version | Date | What changed |
 |---|---|---|
+| [v0.11.0](../versions/v0.11.0/index.md) | 2026-09-22 | the Gmail connector measured end to end by the agent that holds it, read from a vault, mapped into the grammar, and set beside the profile read from the vendors' pages |
 | [v0.10.1](../versions/v0.10.1/index.md) | 2026-09-22 | the desktop walkthrough gets its article, with six figures captured from the v0.10.0 tag |
 | [v0.10.0](../versions/v0.10.0/index.md) | 2026-09-22 | the desktop walkthrough: an assistant on your own machine, the map of what matters on it, and the rules that open with the map; plus the article for v0.9.0 |
 | [v0.9.0](../versions/v0.9.0/index.md) | 2026-09-22 | two more cases: the session that built this site, as a ledger with a measured grant, and one person's three surfaces of one product over an account that holds every past conversation |

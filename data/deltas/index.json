@@ -3,7 +3,7 @@
   "_what_this_is": "Stored deltas, one per deployment shape and mandate pair. DERIVED AND NEVER AUTHORED: each record pins the version of both inputs and the time and code version that produced it, so it can be recomputed and compared rather than taken on trust. A delta that carries no inputs is the stale claim the earlier `never stored` wording was afraid of.",
   "correction": "The foundation document of 11 September 2026 says the delta is computed and never stored. That was corrected the same day: the delta is derived and never authored. The correction and what follows from it are in the dev brief of 11 September in /docs/briefs/.",
   "never_authored": "No field in any of these records is writable by a person. The way to change a delta is to change a grant or a mandate, and recompute.",
-  "count": 16,
+  "count": 18,
   "deltas": [
     {
       "id": "anthropic__claude-code__local-default__coding-assistant-on-my-machine",
@@ -182,6 +182,22 @@
       "file": "deltas/anthropic__gmail-connector__default__read-and-draft-never-send.json"
     },
     {
+      "id": "anthropic__gmail-connector__measured-2026-09-19__read-and-draft-never-send",
+      "profile": "anthropic/gmail-connector/measured-2026-09-19",
+      "mandate": "read-and-draft-never-send",
+      "grant_version": "2026-09-19",
+      "mandate_version": "2026-09-16",
+      "computed_at": "2026-09-20T17:23:43Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 4,
+        "unbounded_excess": 3,
+        "shortfall": 0,
+        "aligned": 1
+      },
+      "file": "deltas/anthropic__gmail-connector__measured-2026-09-19__read-and-draft-never-send.json"
+    },
+    {
       "id": "google__drive__readonly-connector__reader-on-my-drive",
       "profile": "google/drive/readonly-connector",
       "mandate": "reader-on-my-drive",
@@ -260,6 +276,22 @@
         "aligned": 4
       },
       "file": "deltas/n8n__self-hosted__owner-api-key__sandbox-build-one-agent-workflow.json"
+    },
+    {
+      "id": "anthropic__gmail-connector__measured-2026-09-19__inferred-from-one-session",
+      "profile": "anthropic/gmail-connector/measured-2026-09-19",
+      "mandate": "inferred-from-one-session",
+      "grant_version": "2026-09-19",
+      "mandate_version": "2026-09-19",
+      "computed_at": "2026-09-22T10:40:00Z",
+      "computed_by": "abp.delta/v1",
+      "counts": {
+        "excess": 3,
+        "unbounded_excess": 2,
+        "shortfall": 0,
+        "aligned": 2
+      },
+      "file": "deltas/anthropic__gmail-connector__measured-2026-09-19__inferred-from-one-session.json"
     }
   ],
   "provenance": {

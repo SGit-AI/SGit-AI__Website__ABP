@@ -2,7 +2,7 @@
 
 > A node type is a required pattern of typed, directed paths that a node either matches or does not. Not a label somebody applied. Run against the graph on every build.
 
-*Source: <https://abp.sgit.ai/model/graph/formulas/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/formulas/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -23,18 +23,18 @@ below point at them.*
 | **ReachClass** | How far a primitive reaches. | `[ReachClass] := a node that is -reachable_from-> at least one [Capability]` | 5 |
 | **Family** | A grouping of primitives for a reader. | `[Family] := a node that is the -family_of-> at least one [Capability]` | 9 |
 | **Capability** | A primitive in the grammar. | `[Capability] := a node with a -has_verb-> [Verb] and an -acts_on-> [ObjectClass] and a -reaches-> [ReachClass]` | 23 |
-| **DeploymentShape** | A product in a setting. | `[DeploymentShape] := a node that -grants-> at least one [Capability]` | 16 |
-| **GrantedCapability** | A capability in a particular shape's grant. | `[GrantedCapability] := a [Capability] with an inbound -grants-> from a [DeploymentShape], carrying a -bounded_by-> [Barrier] and a -known_by-> [EvidenceTier]` | 118 |
+| **DeploymentShape** | A product in a setting. | `[DeploymentShape] := a node that -grants-> at least one [Capability]` | 17 |
+| **GrantedCapability** | A capability in a particular shape's grant. | `[GrantedCapability] := a [Capability] with an inbound -grants-> from a [DeploymentShape], carrying a -bounded_by-> [Barrier] and a -known_by-> [EvidenceTier]` | 123 |
 | **Barrier** | What stands between the agent and a capability. | `[Barrier] := a node that -bounds-> at least one [GrantedCapability]` | 4 |
 | **Control** | A barrier that actually bounds anything. | `[Control] := a [Barrier] that is -enforced_by-> an [Enforcer] the [Grant] does not include` | 1 |
-| **Mandate** | What a deployer authorised. | `[Mandate] := a node that -authorises-> at least one [Capability]` | 15 |
-| **Excess** | The finding. | `[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope` | 78 |
-| **UnboundedExcess** | The business case. | `[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]` | 61 |
+| **Mandate** | What a deployer authorised. | `[Mandate] := a node that -authorises-> at least one [Capability]` | 16 |
+| **Excess** | The finding. | `[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope` | 82 |
+| **UnboundedExcess** | The business case. | `[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]` | 64 |
 | **Shortfall** | Asked for and cannot. | `[Shortfall] := a [Capability] that a [Mandate] -authorises-> and no [DeploymentShape] in scope -grants->` | 2 |
 | **Product** | A vendor's product, which is not a shape. | `[Product] := a node that -has_variant-> at least one [DeploymentShape]` | 15 |
-| **Tool** | What a shape reaches a capability through. | `[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]` | 64 |
+| **Tool** | What a shape reaches a capability through. | `[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]` | 76 |
 | **Scope** | A vendor's own identifier for what a consent permits. | `[Scope] := a node that a [DeploymentShape] is -scoped_by-> and that -permits-> at least one [Capability]` | 9 |
-| **Setting** | What moves a barrier. | `[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]` | 21 |
+| **Setting** | What moves a barrier. | `[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]` | 22 |
 
 ## The one that carries the argument
 

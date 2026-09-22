@@ -10,8 +10,8 @@
     "bridges": "../bridges/index.json"
   },
   "counts": {
-    "nodes": 369,
-    "edges": 993,
+    "nodes": 409,
+    "edges": 1069,
     "edge_types": 22,
     "node_types": 17
   },
@@ -21,18 +21,18 @@
     "ReachClass": 5,
     "Family": 9,
     "Capability": 23,
-    "DeploymentShape": 16,
-    "GrantedCapability": 118,
+    "DeploymentShape": 17,
+    "GrantedCapability": 123,
     "Barrier": 4,
-    "Mandate": 15,
+    "Mandate": 16,
     "Control": 1,
-    "Excess": 78,
-    "UnboundedExcess": 61,
+    "Excess": 82,
+    "UnboundedExcess": 64,
     "Shortfall": 2,
     "Product": 15,
-    "Tool": 64,
+    "Tool": 76,
     "Scope": 9,
-    "Setting": 21
+    "Setting": 22
   },
   "discipline": "https://graphs.sgit.ai/",
   "provenance": {

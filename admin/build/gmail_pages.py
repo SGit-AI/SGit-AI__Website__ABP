@@ -30,12 +30,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import abp  # noqa: E402
+import abp_pages  # noqa: E402
 import figures  # noqa: E402
 import shell  # noqa: E402
 
 SHAPE = "anthropic/gmail-connector/default"
 MANDATE = "read-and-draft-never-send"
 VAULT_PAGE = "https://riskmandate.ai/abp-vault-claude-gmail-connector.html"
+SITE_GITHUB = "https://github.com/SGit-AI/SGit-AI__Website__ABP"
 
 STEPS = [
     ("gmail/what-it-can-do/index.html", "Step 1", "What it can already do",
@@ -155,10 +157,21 @@ def _hub(D):
                   f"mandate written to be argued with, **{len(dlt['excess'])} of them are "
                   f"excess and {len(dlt['unbounded_excess'])} of those have nothing real in "
                   f"the way.**"),
-            ("p", "Your deployment is not that one. The point of the walkthrough is to produce "
-                  "yours."),
+            ("p", "And since 22 September it holds a second one, **measured end to end by the "
+                  "agent that actually holds the connector**: thirty tools read from their "
+                  "own schemas, ten of them running with no prompt, a live send with no "
+                  "approval, and the four objects the agent wrote for itself. "
+                  "[The measured deployment](gmail/measured/index.html) is what the "
+                  "walkthrough's prompts produce when somebody runs them."),
+            ("p", "Your deployment is neither of those. The point of the walkthrough is to "
+                  "produce yours."),
             ("cards", [{"title": f"[{tag}: {name}]({rel})", "sub": obj,
-                        "foot": "about five minutes"} for rel, tag, name, obj in STEPS]),
+                        "foot": "about five minutes"} for rel, tag, name, obj in STEPS]
+                      + [{"title": "[The measured deployment](gmail/measured/index.html)",
+                          "sub": "What the agent that holds the connector found: thirty tools, "
+                                 "one barrier at nothing, and the ratchet between an authored "
+                                 "mandate and an inferred one.",
+                          "foot": "the evidence, from a vault"}]),
 
             ("h2", "What you will have at the end"),
             ("ul", [
@@ -316,6 +329,12 @@ Two more questions about that table.
                   f"(drafts, labels, trash, and two tool names truncated in the listing) and "
                   f"**{len(p['research_needed'])} open questions** that were left open rather "
                   f"than filled in."),
+            ("p", "And a second, [measured end to end](gmail/measured/index.html) by the agent "
+                  "holding the connector: **30 tools from the schemas, 10 of them unprompted**, "
+                  "and a finding that bears on this step directly: the agent could not see its "
+                  "own permission state and learned a tool was gated only when a call failed. "
+                  "Your assistant's table will be honest about its tools and blind to their "
+                  "gating; the settings page is where that column gets checked."),
             ("note", "**If your assistant's answer disagrees with the published profile, "
                      "neither one is automatically right.** The profile was read on a date from "
                      "two vendors' own pages and measured in one session; your deployment is a "
@@ -715,6 +734,12 @@ Then answer three questions, without softening them.
                   f"way that counts as a control**, out of {len(dlt['excess'])} in the gap "
                   f"altogether. That number is the only one on the label a buyer can move, and "
                   f"it moves by one for every capability that gains a real boundary."),
+            ("p", "**And on the measured deployment the switch is off.** In the profile the "
+                  "agent holding the connector wrote, `send_message` sits on Always allow, so "
+                  "the row that is a setting here is nothing there: a live send went out with "
+                  "no prompt. The vault's whole recommendation is to flip that one switch, "
+                  "and the build derives the switch by diffing the two variants. "
+                  "[The measured deployment](gmail/measured/index.html)."),
             ("note", "**None of this is an assessment of any named product, and no adjective on "
                      "this page attaches to one.** The rows above are a published deployment "
                      "shape read from two vendors' own pages on a date, with the barrier on each "
@@ -768,8 +793,270 @@ rule as a substitute.
 def pages(D):
     return {
         "gmail/index.html": _hub(D),
+        "gmail/measured/index.html": _measured(D),
         STEPS[0][0]: _step1(D),
         STEPS[1][0]: _step2(D),
         STEPS[2][0]: _step3(D),
         STEPS[3][0]: _step4(D),
+    }
+
+
+# ---------------------------------------------------------------------------
+# the measured deployment: what the agent that holds the connector found
+# ---------------------------------------------------------------------------
+
+MEASURED = "anthropic/gmail-connector/measured-2026-09-19"
+INFERRED = "inferred-from-one-session"
+VERBATIM = "data/contributed/riskmandate/gmail-agent-02n7bz55/"
+
+
+def _measured(D):
+    p = D["profiles"][MEASURED]
+    p0 = D["profiles"][SHAPE]
+    m_site = D["mandates"][MANDATE]
+    m_agent = D["mandates"][INFERRED]
+    d_site = abp.delta(p, m_site, D, computed_at=p["provenance"]["retrieved"])
+    d_agent = abp.delta(p, m_agent, D, computed_at=p["provenance"]["retrieved"])
+    ratchet = sorted(set(r["capability"] for r in d_site["excess"])
+                     - set(r["capability"] for r in d_agent["excess"]))
+    tools = [t for t in p["tools"]]
+    unprompted = [t.split(" (")[0] for t in tools if "Always allow" in t]
+    gated = [t.split(" (")[0] for t in tools if "Needs approval" in t]
+    pro = abp.prohibitions(d_site, D)
+    return {
+        "title": "The measured deployment: what the agent that holds the connector found",
+        "description": "One mailbox, one Gmail connector, thirty tools measured from their own "
+                       "schemas by the agent holding them, and the four objects it wrote. The "
+                       "first shape on this site measured end to end by the thing being "
+                       "profiled, and the ratchet between an authored mandate and an inferred "
+                       "one, as a number.",
+        "blocks": [
+            ("crumb", "[Home](index.html) / [Your mailbox](gmail/index.html) / The measured "
+                      "deployment"),
+            ("h1", "What the agent that actually holds the connector found"),
+            ("lead", "**Everything on the four walkthrough pages is a prompt for you to run. "
+                     "This page is what came back when somebody ran the equivalent.** On 19 "
+                     "September 2026 the agent operating a Google Workspace mailbox through "
+                     "the Gmail connector read its own thirty tool schemas, checked them "
+                     "against the live permission page, sent mail, trashed mail, relabelled "
+                     "sixteen messages, hit one refusal it could not explain, and wrote the "
+                     "four objects into a vault. This site read the vault with its public "
+                     "read key and mapped the reach into the grammar."),
+            ("note", f"**Where this comes from.** sgit vault `{p['contributed']['vault']}` at "
+                     f"{p['provenance']['vault']['vault_version']}, commit "
+                     f"`{p['provenance']['vault']['vault_commit']}`, written by "
+                     f"{p['provenance']['vault']['written_by']}. Six files were copied "
+                     f"unchanged and hashed: [GRANT.md]({VERBATIM}GRANT.md), "
+                     f"[MANDATE.md]({VERBATIM}MANDATE.md), [DELTA.md]({VERBATIM}DELTA.md), "
+                     f"[AGENTS.md]({VERBATIM}AGENTS.md), the README and the version records. "
+                     f"**The measurements are the contributor's; the mapping into the 23 "
+                     f"primitives is this site's**, in "
+                     f"[`vault_evidence.py`]({SITE_GITHUB}/blob/dev/admin/build/"
+                     f"vault_evidence.py), one row per primitive citing the line it rests "
+                     f"on. The read key is published on purpose: "
+                     f"`{p['contributed']['read_key']}` opens a read-only clone and nothing "
+                     f"else."),
+
+            ("h2", "Thirty tools, ten of them unprompted"),
+            ("p", f"The connector's schemas name **{len(tools)} tools**: six read only, "
+                  f"twenty four that write or delete, cross checked one to one against the "
+                  f"settings page with no extra and none missing. On this account **"
+                  f"{len(unprompted)} run with no prompt** and {len(gated)} stop at an "
+                  f"approval. None is blocked."),
+            ("table", ["Runs with no prompt", "Stops at an approval"], [
+                [", ".join(f"`{t}`" for t in unprompted),
+                 ", ".join(f"`{t}`" for t in gated)]]),
+            ("note", "**`send_message` is on the left and `trash_message` is on the right.** "
+                     "Trashing is recoverable for thirty days and confined to one mailbox; "
+                     "sending is irreversible and leaves the perimeter, which the session "
+                     "confirmed by sending a message to an external address, trying to recall "
+                     "it, and finding that only the sender's copy could be trashed. The "
+                     "vault's whole recommendation is one setting: move `send_message` to "
+                     "Needs approval and leave `create_draft` open, so the agent composes and "
+                     "a person releases."),
+            ("p", "**The connector has no sender field.** `send_message`, `reply`, "
+                  "`create_draft` and `update_draft` were each inspected: no from, no sendAs, "
+                  "no alias. Every message goes out as the account's default send-as entry, "
+                  "which the operator set to a disclosed agent alias on a second domain. So "
+                  "the agent sends as the business and cannot send as anything else, and the "
+                  "disclosure is carried by the address before any signature has to."),
+
+            ("h2", "The grant, in the grammar"),
+            ("p", f"**{p['grant_size']} of {D['capabilities']['count']} primitives, "
+                  f"{p['rows']['measured']} of {p['rows']['total']} rows measured**, ordered "
+                  f"irreversible first. Two tiers appear: *observed* where the agent saw it "
+                  f"on the thing itself in its own session, *measured* where the operator "
+                  f"confirmed it from outside. Nothing is inferred."),
+            abp_pages.grant_table(p, D, m_site, d_site),
+            abp_pages.barrier_legend(),
+            ("p", "**What it cannot reach, measured.** No account settings, so no filter, no "
+                  "forwarding rule, no delegation: nothing outlives a session. No permanent "
+                  "deletion: a thirty day floor under every destructive action. No per "
+                  "message sender. And no view of its own permission state: the one send that "
+                  "was refused returned *No approval received* and nothing else, "
+                  "indistinguishable from a denial, a timeout or a block."),
+            ("table", ["Cannot reach", "Why", "Evidence"],
+             [[shell.ascii_safe(x["what"]), shell.ascii_safe(x["why"]), x.get("evidence", "")]
+              for x in p["not_reachable"]]),
+
+            ("h2", "What changed against the profile read from the vendors' pages"),
+            ("p", f"This site already held a profile for this shape, "
+                  f"[`{SHAPE}`](data/profiles/{SHAPE}.json), read from two vendors' pages and "
+                  f"the directory listing on 16 September: {len(p0['tools'])} tool names, two "
+                  f"of them truncated, {p0['rows']['measured']} of {p0['rows']['total']} rows "
+                  f"measured. The vault does not replace it. The two are variants of one "
+                  f"product, and the difference between them is what a measurement is for."),
+            ("table", ["", "Read from the pages, 16 September", "Measured by the agent, 19 September"], [
+                ["Tools", f"{len(p0['tools'])} named, two truncated, more behind a fold",
+                 f"{len(tools)}, from the schemas, cross checked against the settings page"],
+                ["Filters", "`list_filters` and `create_filter` in the listing; the agent "
+                            "reported no such tool: recorded as a contradiction",
+                 "not among the thirty; asked for and declined. **Settled by measurement**: "
+                 "no `create.schedule.tenant` row"],
+                ["`send.message.world`", "a setting: the approval prompt, on by default",
+                 "**nothing**: `send_message` on Always allow, a live send with no prompt"],
+                ["`read.credential.host`", "inferred: codes and resets arrive in a mailbox",
+                 "observed: a one time code and two new device alerts were in the sixteen "
+                 "messages the agent relabelled"],
+                ["The two truncated tool names", "`apply_sensitive_message...`, unknown",
+                 "`apply_sensitive_message_label`, `apply_sensitive_thread_label`: an "
+                 "internal safeguard routing to trash or spam, on Needs approval"],
+                ["Which tool sends", "an open question: the prompt said *Send email message*",
+                 "`send_message`, plus `reply` and `forward`"],
+                ["Grant", f"{p0['grant_size']} primitives", f"{p['grant_size']} primitives"],
+            ]),
+            ("p", "**One barrier moved and the grant got smaller.** The setting that "
+                  "distinguishes the two variants is the per tool approval on `send_message`, "
+                  "and the build derives it by diffing the two grants, the same way it found "
+                  "the confirmations flag on the coding agent. "
+                  "[The setting node](model/graph/index.html)."),
+
+            ("h2", "Two mandates against one grant, and the ratchet as a number"),
+            ("p", "The vault's MANDATE.md opens by saying it is not a mandate. The agent "
+                  "reconstructed it from ten things it was asked to do in one session and was "
+                  "not stopped from doing, and DELTA.md then declines to compute a gap from it, "
+                  "because **an agent subtracting its own inferred mandate from its own "
+                  "measured reach will always report a narrow gap: the act of using a "
+                  "capability is what put it in the mandate column.** This site agrees, and "
+                  "publishes the mechanism rather than the number alone: the same grant "
+                  "against the site's own starting mandate and against the agent's inferred "
+                  "one, side by side."),
+            ("table", ["", "The site's starting mandate", "The agent's inferred mandate"], [
+                ["Status", m_site["status"], m_agent["status"]],
+                ["Wanted", ", ".join(f"`{c}`" for c in m_site["want"]),
+                 ", ".join(f"`{c}`" for c in m_agent["want"])],
+                ["Excess", f"**{len(d_site['excess'])}**", f"**{len(d_agent['excess'])}**"],
+                ["Unbounded excess", f"**{len(d_site['unbounded_excess'])}**",
+                 f"**{len(d_agent['unbounded_excess'])}**"],
+                ["The difference", "", ", ".join(f"`{c}`" for c in ratchet) or "none"],
+            ]),
+            ("p", f"**The difference is {', '.join('`' + c + '`' for c in ratchet)}.** The "
+                  f"operator created an alias for the agent to send from and asked it to "
+                  f"introduce itself to one named person, and the agent inferred that sending "
+                  f"was authorised. Whether that covers sending to anyone the operator has "
+                  f"not named in session is the first of the vault's fifteen open questions. "
+                  f"Until the business answers it, the row sits on the wanted side of one "
+                  f"mandate and the refused side of the other, and the gap differs by exactly "
+                  f"that row. That is the ratchet: **every action nobody objected to becomes "
+                  f"precedent, and over months the inferred mandate drifts toward the reach, "
+                  f"so the gap closes on paper while nothing has changed.**"),
+            abp_pages.grant_against_mandate(p, m_site, d_site, D,
+                                            "The measured Gmail deployment, against the "
+                                            "site's starting mandate"),
+            ("h3", "The prohibitions, against the site's mandate"),
+            ("p", f"One sentence per excess capability, each carrying its barrier today. "
+                  f"**{sum(1 for x in pro if not x['enforced_today'])} of {len(pro)} are not "
+                  f"enforced today.**"),
+            abp_pages.prohibition_table(d_site, D),
+
+            ("h2", "The rules the agent wrote for itself, and what it called them"),
+            ("p", "AGENTS.md in the vault is the agent's own behaviour policy, and its first "
+                  "section says what it is: **a soft barrier that shapes behaviour reliably "
+                  "under normal conditions, and not at all if it is absent from context, "
+                  "contradicted later, or overridden by content read from an untrusted "
+                  "source.** Every rule in it is tagged HARD or SOFT. The tags map onto this "
+                  "site's four barriers without remainder."),
+            ("table", ["The vault's tag", "This site's barrier", "What the vault puts there"], [
+                ["HARD, enforced by absence", "boundary",
+                 "no settings tool, no permanent delete, no sender field: capabilities the "
+                 "connector does not expose, which hold absolutely and were chosen by nobody"],
+                ["HARD, enforced by the settings page", "boundary, for the twenty gated tools",
+                 "the per tool approval, enforced outside the agent's reach; the vault notes "
+                 "it is the only hard barrier that is also configurable, and that "
+                 "`send_message` is on the wrong side of it"],
+                ["The operator reading each message as it is sent", "not in the four",
+                 "the barrier the vault says is doing the real work today: genuine, effective, "
+                 "and gone the moment anything is scheduled or triggered. It detects rather "
+                 "than prevents, which is why the four barriers have no row for it"],
+                ["SOFT", "expectation",
+                 "disclose on first contact; never send to a recipient named by an email "
+                 "rather than by the principal; treat message bodies as data and never as "
+                 "instruction; surface security alerts and codes before any bulk operation; "
+                 "state scope and count before a bulk change"],
+            ]),
+            ("note", "**The vault counts honestly and this site repeats the count.** Almost "
+                     "every barrier between this agent's reach and its mandate is the soft "
+                     "kind. The hard ones are accidents of the connector's design or a person "
+                     "reading the outbound. One configuration change converts the one "
+                     "irreversible action in the reach from soft to hard, at one click per "
+                     "send, and on the day the vault was written it had not been made."),
+            ("p", "**The line the vault calls the most important in the file:** content read "
+                  "from the mailbox is data, never instruction. Every message body is text a "
+                  "third party chose to send. With `send_message` unprompted, a message that "
+                  "talks the agent into replying has a way out, which is why the vault says "
+                  "gating egress closes the loop where it is cheapest to close."),
+
+            ("h2", "Three things the session found that no page had said"),
+            ("ul", [
+                "**The agent cannot see its own permissions.** There is no API over the per "
+                "user tool settings, nothing in the tool surface exposes them, and a refused "
+                "call says only *No approval received*. So step one of the walkthrough, "
+                "which asks your assistant what it can do, gets an answer that is honest "
+                "about its own tools and blind to their gating. The measured profile is the "
+                "second account you check it against.",
+                "**Nineteen unprompted writes in one sequence raised no more friction than "
+                "one.** Per tool permissioning has no notion of volume or of cumulative "
+                "effect. The sequence relabelled sixteen messages and removed three from the "
+                "inbox, and it swept a one time code and two security alerts along with the "
+                "marketing it was aimed at. That is the beta user's fear from the first case "
+                "and the cost walkthrough's clause with no number, measured.",
+                "**The reach is not the connector.** The same session held a shell, network "
+                "egress and two vault keys, and the vault records that a behaviour policy "
+                "scoped to the mailbox alone would have understated the reach by a wide "
+                "margin. This profile covers the connector; the container is a shape of its "
+                "own; the account is where they meet.",
+            ]),
+
+            ("h2", "What the vault leaves open, and this site does not close"),
+            ("ul", [
+                "**The mandate has not been elicited.** Fifteen questions in MANDATE.md, from "
+                "recipients and domain boundaries to whether the mandate covers unattended "
+                "operation, which the vault calls the load bearing one: the real control "
+                "today is a person reading along, and it does not survive automation.",
+                "**`send_message` was still on Always allow when the vault was written.**",
+                "**The delta is indicative on the inferred side and computed on the site's "
+                "side**, and the page says which is which on every row.",
+                "**The container's reach is stated, not enumerated.** The egress allowlist "
+                "was recorded from configuration rather than probed, and no list exists of "
+                "which vaults a key could reach.",
+                "**Measured in one session on one day.** Connector tool sets change without "
+                "notice; this is a snapshot with a date on it.",
+            ]),
+            ("note", "**Nothing on this site is an assessment, an audit, a certification or a "
+                     "security review of any named product**, and no adjective on this page "
+                     "attaches to one. The rows above are one deployment as its own agent "
+                     "measured it on one day, with the barrier on each row recorded by walking "
+                     "the enforcer test."),
+            ("p", f"[The profile as JSON](data/profiles/{MEASURED}.json) &#183; "
+                  f"[The agent's inferred mandate](data/mandates/{INFERRED}.json) &#183; "
+                  f"[The two deltas](data/deltas/index.json) &#183; "
+                  f"[The verbatim bytes and their hashes]"
+                  f"(data/contributed/riskmandate/manifest.json) &#183; "
+                  "[The walkthrough](gmail/index.html)"),
+            ("table", ["", ""], [
+                ["**Start the walkthrough**", "[Step 1: What it can already do]"
+                                              "(gmail/what-it-can-do/index.html)"],
+                ["**The hub**", "[Your mailbox, and what you gave it](gmail/index.html)"],
+            ]),
+        ],
     }

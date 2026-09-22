@@ -2,7 +2,7 @@
 
 > The family browser as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/browser/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/browser/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,7 +22,7 @@ what a browser extension or automation can see and do in your browser
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`read.record.browsing`](../../../../model/capabilities/read.record.browsing/index.md) | Read every page you visit | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`record`](../../../../model/lexicon/objects/record/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 1 of 16 |
+| [`read.record.browsing`](../../../../model/capabilities/read.record.browsing/index.md) | Read every page you visit | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`record`](../../../../model/lexicon/objects/record/index.md)`.`[`host`](../../../../model/lexicon/reaches/host/index.md) | no | 1 of 17 |
 
 ## How this node connects
 

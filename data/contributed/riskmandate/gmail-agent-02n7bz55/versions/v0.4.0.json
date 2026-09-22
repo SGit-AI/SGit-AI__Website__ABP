@@ -1,0 +1,19 @@
+{
+  "version": "v0.4.0",
+  "date": "2026-09-19",
+  "commit": "obj-cas-imm-7ded8a06b473",
+  "vault": "02n7bz55",
+  "reconstructed": false,
+  "title": "the four behaviour-policy objects get their real names, and the record stops overclaiming",
+  "summary": "GRANT.md was the session debrief under a name the abp vocabulary reserves for reach; it is now a measured reach record and the debrief has moved to notes/ as what it is. DELTA.md is added, and says the gap is not derivable while the mandate is inferred rather than elicited — an agent subtracting its own inferred mandate from its own measured reach will always report a narrow gap. README maps the vault correctly and carries the versioning steps both agents missed. The colophon no longer claims operator review of the agent-written half. The open list gains five items this session created, including one the record owes upstream to sgit.ai.",
+  "changes": [
+    "GRANT.md",
+    "DELTA.md",
+    "README.md",
+    "content.json",
+    "index.html",
+    "RUNBOOK.md",
+    "notes/session-2026-09-19.md"
+  ],
+  "basis": []
+}

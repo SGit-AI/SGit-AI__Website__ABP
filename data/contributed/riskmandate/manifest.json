@@ -9,8 +9,8 @@
   "licence": "CC BY 4.0, as each file's own provenance block states",
   "never_tested_here": "Nothing was probed by this site. The rows are the contributor's, on the evidence tier the contributor states, and this site does not raise a tier it did not observe.",
   "verify": "Recompute: sha256 over each file under contributed/riskmandate/ in path order, hashing the path then the bytes, skipping manifest.json. The build and the gate both do, and refuse to proceed if it disagrees.",
-  "content_hash": "sha256:70d1a4609d27f6954589b862a9ecbe33f14a1218786eb506c2215de49bc46361",
-  "files_hashed": 21,
+  "content_hash": "sha256:cb76bf9147de9ec2e38d9ec571237be05419185d0fb091e193adbafc85f80f95",
+  "files_hashed": 31,
   "shapes": [
     {
       "slug": "gmail-readonly",
@@ -209,6 +209,94 @@
       "url": "https://riskmandate.ai/vaults/n8n-owner-api-key/vault.json",
       "sha256": "798ac710f017423f4201e2abb373fc4adbd8b5e21ef214be6ebbe4d75592d7c2",
       "bytes": 1046
+    },
+    {
+      "path": "gmail-agent-02n7bz55/AGENTS.md",
+      "url": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: AGENTS.md",
+      "sha256": "c85e904b014a33952f923fab412a43694b4e1328b02f2b31c7c6d79552e6e788",
+      "bytes": 6356
+    },
+    {
+      "path": "gmail-agent-02n7bz55/DELTA.md",
+      "url": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: DELTA.md",
+      "sha256": "13bc88e97a008af676d8086c5fd7aee5292970d035d0717b3d75c360f3c1f550",
+      "bytes": 2735
+    },
+    {
+      "path": "gmail-agent-02n7bz55/GRANT.md",
+      "url": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: GRANT.md",
+      "sha256": "e29b5e86763e171789e0f5784c2e0419bfe7429467b09c35507b09f600290ad5",
+      "bytes": 4762
+    },
+    {
+      "path": "gmail-agent-02n7bz55/MANDATE.md",
+      "url": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: MANDATE.md",
+      "sha256": "60a8b94b5620c82b34fe016ccdc25b282690f8fb6989f5fa56b226a3cb0d01e9",
+      "bytes": 4511
+    },
+    {
+      "path": "gmail-agent-02n7bz55/README.md",
+      "url": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: README.md",
+      "sha256": "9e750bfcc19f21a61da2b2a6a75bc762a7df3582c00c3fbb59ee1e384c6a3f04",
+      "bytes": 3796
+    },
+    {
+      "path": "gmail-agent-02n7bz55/versions/index.json",
+      "url": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: versions/index.json",
+      "sha256": "169d4958a594014288c39c81219aef3d2c7f27315984e0e613be30bde8347e17",
+      "bytes": 854
+    },
+    {
+      "path": "gmail-agent-02n7bz55/versions/v0.1.0.json",
+      "url": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: versions/v0.1.0.json",
+      "sha256": "99b8efeb2278d82de7e4c79be62e0b38e459898fd0a4012119ff67ee0718efdc",
+      "bytes": 1063
+    },
+    {
+      "path": "gmail-agent-02n7bz55/versions/v0.2.0.json",
+      "url": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: versions/v0.2.0.json",
+      "sha256": "a9d7a262cd05181af8be67b8f892329a9d3b8ce62f80832b7ecbeb704374832e",
+      "bytes": 768
+    },
+    {
+      "path": "gmail-agent-02n7bz55/versions/v0.3.0.json",
+      "url": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: versions/v0.3.0.json",
+      "sha256": "71aba6f3749cbbb29b759bccfe2f91e82adc71a361e17ed4748b259d14c9314c",
+      "bytes": 815
+    },
+    {
+      "path": "gmail-agent-02n7bz55/versions/v0.4.0.json",
+      "url": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: versions/v0.4.0.json",
+      "sha256": "be821322230fa23405dc8c705b3905e20608cdbbf2421d52b7013d2cd2b94413",
+      "bytes": 1080
+    }
+  ],
+  "vaults": [
+    {
+      "slug": "gmail-agent-02n7bz55",
+      "shape": "anthropic/gmail-connector/measured-2026-09-19",
+      "vault": "02n7bz55",
+      "read_key": "e698be2c2b5de0eaff0b72911be7748694a1c14311f9a10588781bfad61de883:02n7bz55",
+      "read_key_note": "A read key, published on purpose: it opens a read-only clone and nothing else. The vault's write credential appears nowhere.",
+      "vault_version": "v0.4.0",
+      "vault_commit": "obj-cas-imm-7ded8a06b473",
+      "page": "https://riskmandate.ai/abp-vault-claude-gmail-connector.html",
+      "written_by": "the agent operating the mailbox, via the Claude.ai Gmail connector, in one session on 2026-09-19; reviewed by the operator only on the operator side, as the vault's own colophon says",
+      "grant_source": "gmail-agent-02n7bz55/GRANT.md",
+      "mandate_source": "gmail-agent-02n7bz55/MANDATE.md",
+      "delta_source": "gmail-agent-02n7bz55/DELTA.md",
+      "rules_source": "gmail-agent-02n7bz55/AGENTS.md",
+      "mapping": "vault_evidence",
+      "apply_existing_mandates": [
+        "read-and-draft-never-send"
+      ],
+      "retrieved": "2026-09-22T10:40:00Z",
+      "retrieved_by": "abp.sgit.ai's build session, with sgit clone and the read key above; six files copied unchanged, the rest of the vault (the operator's runbook app and the raw session debrief) left in the vault and cited by path",
+      "not_copied": [
+        "notes/session-2026-09-19.md (the raw debrief: a working record, not one of the four objects, and it carries a third address)",
+        "content.json, index.html, RUNBOOK.md, build.py, .vault/app.json (the operator's runbook app)"
+      ],
+      "mapping_note": "The vault writes its reach in the connector's own vocabulary and says so as a named gap. The mapping into the 23 primitives is this site's, in admin/build/vault_evidence.py, one row per primitive citing the line of GRANT.md or the debrief it rests on. The measurements are the contributor's; the mapping is ours; the evidence tier on every row is the tier the contributor's words support and never higher."
     }
   ]
 }

@@ -15,7 +15,7 @@
       "formula": "[Mandate] := a node that -authorises-> at least one [Capability]",
       "exists_today": true,
       "note": null,
-      "matched": 15
+      "matched": 16
     },
     {
       "name": "Deployer",

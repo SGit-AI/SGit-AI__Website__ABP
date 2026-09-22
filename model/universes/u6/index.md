@@ -2,7 +2,7 @@
 
 > The derivation, one of the universes an ABP row crosses: owned by the computation, and never a person, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u6/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u6/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -22,8 +22,8 @@ A node type is a required pattern of paths, not a label. The ones marked yes are
 
 | Type | Formula | Exists today | Note |
 |---|---|---|---|
-| **Excess** | `[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope` | **yes**, 78 matched |  |
-| **UnboundedExcess** | `[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]` | **yes**, 61 matched |  |
+| **Excess** | `[Excess] := a [GrantedCapability] with NO -authorised_by-> path to the [Mandate] in scope` | **yes**, 82 matched |  |
+| **UnboundedExcess** | `[UnboundedExcess] := an [Excess] whose -bounded_by-> [Barrier] is not a [Control]` | **yes**, 64 matched |  |
 | **Shortfall** | `[Shortfall] := a [Capability] that a [Mandate] -authorises-> and no [DeploymentShape] in scope -grants->` | **yes**, 2 matched |  |
 | **DeltaRecord** | `a node -derived_from-> exactly one [GrantVersion] and exactly one [MandateVersion], -computed_by-> one [Computation], with an excess, an unbounded excess and a shortfall set; no field writable by a person` | not yet | Exists as a file under data/deltas/ and not yet as a node in the graph. |
 | **Computation** | `a version of the code: abp.delta/v1 today` | not yet |  |

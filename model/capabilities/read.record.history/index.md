@@ -2,7 +2,7 @@
 
 > Read a retained record: shell history, past sessions. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,7 +28,7 @@ below point at them.*
 
 > **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `read.record.history` is emerges from the edges traceable from it. The strongest case is [`host`](../../../model/lexicon/reaches/host/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
-## In 7 of 16 published shapes
+## In 8 of 17 published shapes
 
 |  | Deployment shape | Barrier there | Known by | Whose material | Note |
 |---|---|---|---|---|---|
@@ -37,6 +37,7 @@ below point at them.*
 | ● | Claude Code (the CLI, on your own machine) | none (not a control) | documented | not stated | shell history and the harness's own transcripts |
 | ● | Claude Desktop (a desktop app with local tools) | none (not a control) | documented | not stated |  |
 | ● | Claude, with the Gmail connector enabled *(contributed by riskmandate.ai)* | none (not a control) | measured | mixed | a mailbox is a retained record of years, and the consent line is "View your email messages and settings." Measured 2026-09-16: asked for the account's settings, Claude returned the label structure with thread and unread counts for every system and custom label (an inventory of the mailbox's shape), and said it had no tool for forwarding rules, filters, the vacation responder or signatures. Nothing separates this from reading messages, so the barrier is the same as the row above: none beyond the consent itself. |
+| ● | Claude, with the Gmail connector enabled *(contributed by riskmandate.ai)* | none (not a control) | observed | mixed | search_threads accepts the full operator set including in:anywhere and in:trash, so archived, sent and trashed mail are all in reach; list_labels returned every label with thread and unread counts, including one custom label over 84 threads. Read only means read only to the mailbox and not limited in reach. No filters row: list_filters is not among the thirty. |
 | ● | An assistant connected to a personal Gmail mailbox with gmail.readonly *(contributed by riskmandate.ai)* | none (not a control) | inferred | mixed | a mailbox is a retained record of years: "settings" in the scope text includes filters and forwarding addresses. Whether the assistant reads settings is open, below. |
 | ● | A self-hosted n8n instance, reached with an owner-scoped API key *(contributed by riskmandate.ai)* | none (not a control) | measured | organisation | execution records read: the zero-execution baseline, then the one real execution with its status and the model's response. |
 
@@ -53,7 +54,7 @@ below point at them.*
 |---|---|
 | **authorised** | A sandbox: build and run one AI-agent workflow |
 | **refused** | A coding assistant on my machine, A coding assistant in a container on the web, The desktop app, with local tools switched on, Chat in the browser, nothing connected |
-| **unstated** | Chat, with connectors switched on, A CI job on a hosted runner, A browser extension I installed, A scheduled job under a service account, A reader on my mailbox, Find things in the inbox, draft replies, never send, A reader on my drive, Search our tenant, read-only, Find and read my files, An assistant over my Workspace, reading |
+| **unstated** | Chat, with connectors switched on, A CI job on a hosted runner, A browser extension I installed, A scheduled job under a service account, A reader on my mailbox, Find things in the inbox, draft replies, never send, A reader on my drive, Search our tenant, read-only, Find and read my files, An assistant over my Workspace, reading, What the agent inferred it was authorised to do, from one session |
 
 **Unstated is not authorised.** A mandate that never mentioned a capability did not authorise it, and the delta on every example page counts it as excess and says which kind it was.
 

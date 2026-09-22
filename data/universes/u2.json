@@ -22,14 +22,14 @@
       "formula": "[DeploymentShape] := a node that -grants-> at least one [Capability]",
       "exists_today": true,
       "note": null,
-      "matched": 16
+      "matched": 17
     },
     {
       "name": "Tool",
       "formula": "[Tool] := a node that a [DeploymentShape] -runs_with-> and that -exposes-> at least one [Capability]",
       "exists_today": true,
       "note": "One node per shape, in the vendor's words, because what shell (Bash) reaches depends on where it runs.",
-      "matched": 64
+      "matched": 76
     },
     {
       "name": "Scope",
@@ -43,7 +43,7 @@
       "formula": "[Setting] := a node that -narrows-> at least one [Capability] and -moves-> it to at least one [Barrier]",
       "exists_today": true,
       "note": "Two kinds, both from published data: the reduction the map publishes per capability, and the setting that distinguishes two variants of one product, derived by diffing their grants. The confirmations flag is the second kind, and it is the path the home page's pair of examples was a sentence about.",
-      "matched": 21
+      "matched": 22
     },
     {
       "name": "DocumentationPage",

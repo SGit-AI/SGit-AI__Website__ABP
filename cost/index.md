@@ -2,7 +2,7 @@
 
 > An Agent Behaviour Policy over how much an agent may spend: tokens, files, commits, fetches and other people's time. Four steps and twelve prompts, for a deployer watching the bill, the repository and the review queue all grow.
 
-*Source: <https://abp.sgit.ai/cost/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cost/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -18,7 +18,7 @@ below point at them.*
 
 ## Cost is not a capability
 
-A capability is in the grant or it is not. Cost is a property of every call the agent makes, whichever capability the call instances. **The grammar has one primitive for money, `write.budget.tenant`, and 2 of 16 published shapes grant it**, because it names spending against an account the agent holds, and an agent's own inference is billed to the deployer by the platform, not spent by the agent. There is no primitive for a count of anything.
+A capability is in the grant or it is not. Cost is a property of every call the agent makes, whichever capability the call instances. **The grammar has one primitive for money, `write.budget.tenant`, and 2 of 17 published shapes grant it**, because it names spending against an account the agent holds, and an agent's own inference is billed to the deployer by the platform, not spent by the agent. There is no primitive for a count of anything.
 
 *[A figure here in the page: two bands. The upper band is the ABP before the action, with its four objects, mandate, grant, delta and barrier. An arrow labelled every call is one instance of a capability leads to the lower band, the runtime, where quantity lives: calls in an interval, tokens seen by the platform, files, commits and fetches seen by the repository, and a person's hour, which nobody bills. Under it: a cost clause is a prohibition over a count; the grammar has one primitive for money and none for a count, so the clause carries what the grant cannot, and only a log outside the agent can say whether it was kept]*
 

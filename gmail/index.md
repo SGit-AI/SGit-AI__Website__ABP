@@ -2,7 +2,7 @@
 
 > Four steps and thirteen prompts you paste into your own assistant, to find out what connecting it to your mailbox actually gave it, what you meant to give it, and how much of the difference you can write down.
 
-*Source: <https://abp.sgit.ai/gmail/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/gmail/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -39,7 +39,9 @@ Between a mail platform and what a person meant, there are four layers. The top 
 
 This site holds a measured profile for one common version of this: Claude with the Gmail connector enabled. **It reaches 6 of the 23 capability primitives**, through 22 tools named in the directory listing. Against a starting mandate written to be argued with, **5 of them are excess and 4 of those have nothing real in the way.**
 
-Your deployment is not that one. The point of the walkthrough is to produce yours.
+And since 22 September it holds a second one, **measured end to end by the agent that actually holds the connector**: thirty tools read from their own schemas, ten of them running with no prompt, a live send with no approval, and the four objects the agent wrote for itself. [The measured deployment](../gmail/measured/index.md) is what the walkthrough's prompts produce when somebody runs them.
+
+Your deployment is neither of those. The point of the walkthrough is to produce yours.
 
 **[Step 1: What it can already do](../gmail/what-it-can-do/index.md)**: Ask your own assistant to enumerate its mailbox tools, what each one reaches, and which of them you could undo.
 about five minutes
@@ -52,6 +54,9 @@ about five minutes
 
 **[Step 4: What a prompt cannot do](../gmail/what-a-prompt-cannot-do/index.md)**: What you have written down is an expectation rather than a control. Why it is still worth writing, and what would actually bound it.
 about five minutes
+
+**[The measured deployment](../gmail/measured/index.md)**: What the agent that holds the connector found: thirty tools, one barrier at nothing, and the ratchet between an authored mandate and an inferred one.
+the evidence, from a vault
 
 ## What you will have at the end
 

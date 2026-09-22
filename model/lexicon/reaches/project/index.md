@@ -2,7 +2,7 @@
 
 > The reach project as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/project/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/project/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -32,9 +32,9 @@ the working tree or workspace it was pointed at
 
 | Primitive | Published gloss | Spelled out | Undo | In how many shapes |
 |---|---|---|---|---|
-| [`read.file.project`](../../../../model/capabilities/read.file.project/index.md) | Read the project it is working on | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | yes | 7 of 16 |
-| [`write.file.project`](../../../../model/capabilities/write.file.project/index.md) | Change the project it is working on | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 6 of 16 |
-| [`write.repository.project`](../../../../model/capabilities/write.repository.project/index.md) | Commit to the repository it was pointed at | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 4 of 16 |
+| [`read.file.project`](../../../../model/capabilities/read.file.project/index.md) | Read the project it is working on | [`read`](../../../../model/lexicon/verbs/read/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | yes | 7 of 17 |
+| [`write.file.project`](../../../../model/capabilities/write.file.project/index.md) | Change the project it is working on | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`file`](../../../../model/lexicon/objects/file/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 6 of 17 |
+| [`write.repository.project`](../../../../model/capabilities/write.repository.project/index.md) | Commit to the repository it was pointed at | [`write`](../../../../model/lexicon/verbs/write/index.md)`.`[`repository`](../../../../model/lexicon/objects/repository/index.md)`.`[`project`](../../../../model/lexicon/reaches/project/index.md) | with-effort | 4 of 17 |
 
 ## How this node connects
 

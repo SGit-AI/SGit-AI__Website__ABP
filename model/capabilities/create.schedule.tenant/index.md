@@ -2,7 +2,7 @@
 
 > Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session). Reach tenant, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.tenant/index.html> · site v0.10.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.tenant/index.html> · site v0.11.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -28,7 +28,7 @@ below point at them.*
 
 > **The gloss above is a convenience, not the definition.** A node carries no inherent meaning: what `create.schedule.tenant` is emerges from the edges traceable from it. The strongest case is [`tenant`](../../../model/lexicon/reaches/tenant/index.md), where the deployment shapes that use it **do not agree** about what it means, and the page keeps the disagreement rather than averaging it.
 
-## In 3 of 16 published shapes
+## In 3 of 17 published shapes
 
 |  | Deployment shape | Barrier there | Known by | Whose material | Note |
 |---|---|---|---|---|---|
@@ -48,7 +48,7 @@ below point at them.*
 | The mandate says | Which mandates |
 |---|---|
 | **authorised** | A sandbox: build and run one AI-agent workflow |
-| **refused** | A coding assistant in a container on the web, Chat in the browser, nothing connected, Find things in the inbox, draft replies, never send |
+| **refused** | A coding assistant in a container on the web, Chat in the browser, nothing connected, Find things in the inbox, draft replies, never send, What the agent inferred it was authorised to do, from one session |
 | **unstated** | A coding assistant on my machine, The desktop app, with local tools switched on, Chat, with connectors switched on, A CI job on a hosted runner, A browser extension I installed, A scheduled job under a service account, A reader on my mailbox, A reader on my drive, Search our tenant, read-only, Find and read my files, An assistant over my Workspace, reading |
 
 **Unstated is not authorised.** A mandate that never mentioned a capability did not authorise it, and the delta on every example page counts it as excess and says which kind it was.

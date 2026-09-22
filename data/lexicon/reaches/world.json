@@ -77,6 +77,10 @@
     {
       "shape": "n8n/self-hosted/owner-api-key",
       "means": "any host an outbound node can be pointed at — accepted on creation; what the platform's own server can reach was not tested"
+    },
+    {
+      "shape": "anthropic/gmail-connector/measured-2026-09-19",
+      "means": "any address, as a recipient of send_message, reply or forward"
     }
   ],
   "page": "https://abp.sgit.ai/model/lexicon/reaches/world/index.html",

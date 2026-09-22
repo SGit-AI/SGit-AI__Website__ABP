@@ -82,6 +82,10 @@
     {
       "shape": "n8n/self-hosted/owner-api-key",
       "means": "the instance itself: its accounts, its credential store, its execution records"
+    },
+    {
+      "shape": "anthropic/gmail-connector/measured-2026-09-19",
+      "means": "the mailbox itself, whole: every message and thread including archived, sent and trashed mail, every label with its counts, every draft; attachment content on the way out, up to 25MB"
     }
   ],
   "page": "https://abp.sgit.ai/model/lexicon/reaches/host/index.html",
