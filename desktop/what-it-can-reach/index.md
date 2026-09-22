@@ -2,7 +2,7 @@
 
 > Three prompts that make the desktop assistant list its local tools, connectors and past conversations, say which are switched on, and name what it cannot see about its own reach.
 
-*Source: <https://abp.sgit.ai/desktop/what-it-can-reach/index.html> · site v0.10.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/desktop/what-it-can-reach/index.html> · site v0.10.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 

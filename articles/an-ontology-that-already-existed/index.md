@@ -2,7 +2,7 @@
 
 > Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
 
-*Source: <https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html> · site v0.10.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html> · site v0.10.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
 
-> **This is the article for release v0.1.0, published 11 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.1.0's own release record](../../versions/v0.1.0/index.md). It is release 1 of 13 on this site. Every screenshot below was captured from a checkout of the `v0.1.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.2.0](../../articles/a-rule-corrected-nine-hours-later/index.md), and it is where the sequence starts.
+> **This is the article for release v0.1.0, published 11 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.1.0's own release record](../../versions/v0.1.0/index.md). It is release 1 of 14 on this site. Every screenshot below was captured from a checkout of the `v0.1.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.2.0](../../articles/a-rule-corrected-nine-hours-later/index.md), and it is where the sequence starts.
 
 ## The gap the document exists for
 

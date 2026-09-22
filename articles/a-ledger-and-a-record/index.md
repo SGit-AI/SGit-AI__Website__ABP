@@ -2,7 +2,7 @@
 
 > The cost walkthrough said no case had run its prompts. The first case here is that case, on the one shape whose grant was measured, with a ledger counted from the repository and the workflow log. The second is a deployer with one assistant on three surfaces and one rule: reading the past is on demand.
 
-*Source: <https://abp.sgit.ai/articles/a-ledger-and-a-record/index.html> · site v0.10.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/a-ledger-and-a-record/index.html> · site v0.10.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 The cost walkthrough said no case had run its prompts. The first case here is that case, on the one shape whose grant was measured, with a ledger counted from the repository and the workflow log. The second is a deployer with one assistant on three surfaces and one rule: reading the past is on demand.
 
-> **This is the article for release v0.9.0, published 22 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.9.0's own release record](../../versions/v0.9.0/index.md). It is release 13 of 13 on this site, and the most recent. Every screenshot below was captured from a checkout of the `v0.9.0` tag, so it shows the site as it stood at that release and not as it stands today. Nothing follows it yet, or back to [v0.8.0](../../articles/how-much-not-just-what/index.md).
+> **This is the article for release v0.9.0, published 22 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.9.0's own release record](../../versions/v0.9.0/index.md). It is release 13 of 14 on this site. Every screenshot below was captured from a checkout of the `v0.9.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.10.0](../../articles/context-on-what-matters/index.md), or back to [v0.8.0](../../articles/how-much-not-just-what/index.md).
 
 ## The case the cost walkthrough said did not exist yet
 
@@ -87,6 +87,7 @@ The deployer named the concept in the memo: what is being given to the agent is 
 | Direction | The release |
 |---|---|
 | **Older** | [v0.8.0: The cost ABP: every ABP so far bounded what, and this one bounds how much](../../articles/how-much-not-just-what/index.md) |
+| **Newer** | [v0.10.0: The desktop walkthrough: on your own machine, host means your machine, and the mandate is a map of what matters before it is a list of rules](../../articles/context-on-what-matters/index.md) |
 | **All of them** | [One article per release](../../articles/index.md) |
 
 ---

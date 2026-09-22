@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>v0.10.0: The desktop walkthrough: on your own machine, host means your machine, and the mandate is a map of what matters before it is a list of rules - abp.sgit.ai</title>
+<meta name="description" content="The third walkthrough in the same four steps, because the workflow is meant to always be the same. On a machine the published shape&#x27;s character is that reading files, changing them and running commands each sit at a switch the account can flip. The concept the section is built on is the deployer&#x27;s: what is being given to the agent is context on what is important and what is not.">
+<link rel="canonical" href="https://abp.sgit.ai/articles/context-on-what-matters/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/articles/context-on-what-matters/index.html">
+<meta property="og:title" content="v0.10.0: The desktop walkthrough: on your own machine, host means your machine, and the mandate is a map of what matters before it is a list of rules - abp.sgit.ai">
+<meta property="og:description" content="The third walkthrough in the same four steps, because the workflow is meant to always be the same. On a machine the published shape&#x27;s character is that reading files, changing them and running commands each sit at a switch the account can flip. The concept the section is built on is the deployer&#x27;s: what is being given to the agent is context on what is important and what is not.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.10.1/index.html" title="What changed in v0.10.1, and the commit it was built from">v0.10.1</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../gmail/index.html">Walkthroughs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../gmail/index.html">Your mailbox: what you gave it</a>
+      <a class="sl" href="../../cost/index.html">The cost ABP: how much, not just what</a>
+      <a class="sl" href="../../desktop/index.html">On your machine: what matters on it</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../cases/index.html">Cases<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../cases/index.html">All cases</a>
+      <a class="sl" href="../../cases/beta-001/index.html">One person, six deployments</a>
+      <a class="sl" href="../../cases/session-001/index.html">This site's own session, as a ledger</a>
+      <a class="sl" href="../../cases/estate-002/index.html">Three surfaces, one record</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../articles/index.html">One per release</a>
+      <a class="sl" href="../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
+      <a class="sl" href="../../articles/thirteen-prompts-and-the-fourth-page/index.html">v0.6.0</a>
+      <a class="sl" href="../../articles/one-person-six-deployments/index.html">v0.7.0</a>
+      <a class="sl" href="../../articles/how-much-not-just-what/index.html">v0.8.0</a>
+      <a class="sl" href="../../articles/a-ledger-and-a-record/index.html">v0.9.0</a>
+      <a class="sl here" href="../../articles/context-on-what-matters/index.html">v0.10.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../articles/index.html">Articles</a> / v0.10.0</p>
+  <h1>v0.10.0: The desktop walkthrough: on your own machine, host means your machine, and the mandate is a map of what matters before it is a list of rules</h1>
+  <p class="lead">The third walkthrough in the same four steps, because the workflow is meant to always be the same. On a machine the published shape's character is that reading files, changing them and running commands each sit at a switch the account can flip. The concept the section is built on is the deployer's: what is being given to the agent is context on what is important and what is not.</p>
+  <div class="note"><b>This is the article for release v0.10.0, published 22 September 2026.</b> Every release of this site gets one, and it explains what that release changed and why rather than restating <a href="../../versions/v0.10.0/index.html">v0.10.0's own release record</a>. It is release 14 of 14 on this site, and the most recent. Every screenshot below was captured from a checkout of the <code>v0.10.0</code> tag, so it shows the site as it stood at that release and not as it stands today. Nothing follows it yet, or back to <a href="../../articles/a-ledger-and-a-record/index.html">v0.9.0</a>.</div>
+  <h2 id="the-same-four-steps-on-purpose">The same four steps, on purpose</h2>
+  <p>The deployer's brief for this one was short: the same sequence of events, the workflow always the same, for people who run the assistant on their desktop. Two sets of items: help them find out what is going on, then give the agent what it needs to decide better for itself. <b>So the section is the third walkthrough in exactly the shape of the first two</b>, and the differences are all in what a machine is rather than in how the pages work.</p>
+  <figure class="shot"><img src="../../assets/articles/v100-desktop-hub.png" alt="The desktop walkthrough's hub at v0.10.0: the heading asking what an assistant on your own machine can reach and what on it matters" loading="lazy" decoding="async"><figcaption>The hub. The lead says the one thing that changes on a machine: host means your machine, and the agent cannot tell which part of it matters.<span class="attr">abp.sgit.ai at v0.10.0, captured 22 September 2026 from a checkout of the v0.10.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="on-a-machine-the-character-of-the-shape-is-the-switch">On a machine, the character of the shape is the switch</h2>
+  <p>The published profile for a desktop application with local tools is derived and not measured, ten of twenty three primitives, none seen on an instance. <b>Four of its rows sit at a setting</b>: reading any file the account can reach, changing any file, running commands, and changing its own permission settings. Each is one switch away, and the switch belongs to the account running the application, which is you. The hub puts the shape's own grant table on the page so the reader sees the four half circles before reading a word about them.</p>
+  <figure class="shot"><img src="../../assets/articles/v100-shape-table.png" alt="The desktop shape's grant table on the hub: ten rows, four of them at a setting, with the glyph, the undo class, the barrier and how each row is known" loading="lazy" decoding="async"><figcaption>The shape's leaflet on the hub. Two rows have no switch at all: the past conversations the application keeps and the credentials a home directory holds. If the past conversations contain secrets, those two rows are one row.<span class="attr">abp.sgit.ai at v0.10.0, captured 22 September 2026 from a checkout of the v0.10.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="the-map-comes-before-the-rules">The map comes before the rules</h2>
+  <p>The deployer named the concept in the memo for the estate case and it is the spine of this walkthrough: <b>what is being given to the agent is context on what is important and what is not.</b> A permission says what is possible; a rule says what is forbidden; neither says that the folder called clients is other people's or that the file with the token in it must never be opened. An agent with the map decides better on its own. One without it guesses, reasonably, which is how a client folder ends up summarised into a shared document.</p>
+  <figure class="shot"><img src="../../assets/articles/v100-map-prompt.png" alt="Prompt 4 of the desktop walkthrough: draft a map of the machine in four groups, the work, not mine, credentials and the record, without opening anything new" loading="lazy" decoding="async"><figcaption>Prompt 4 of 10. The agent drafts the map from what it has already seen, is told not to open anything new to do it, and puts anything it is unsure of in not mine so the person moves it rather than the agent guessing.<span class="attr">abp.sgit.ai at v0.10.0, captured 22 September 2026 from a checkout of the v0.10.0 tag. Unretouched.</span></figcaption></figure>
+  <div class="note"><b>The correction is the map, as the correction was the mandate in the first walkthrough.</b> Every folder the person moves between the four groups is a thing the agent would otherwise have decided about on its own. The prompt is written so that the draft errs toward not mine, because an agent that guesses a client folder is the work has already done the damage by the time anybody notices.</div>
+  <h2 id="rules-that-open-with-the-map-and-say-which-part-of-it-they-f">Rules that open with the map, and say which part of it they follow from</h2>
+  <p>Step three's long prompt asks for the document in an unusual order: the map first, in its four groups exactly as corrected, then the rules grouped by those same four, plus commands and instructions found in content, <b>with every rule saying which group of the map it follows from.</b> A rule with a reason attached is one the agent can extend to a case the rule did not name, and that is the whole difference between a document it decides against and one it guesses around.</p>
+  <figure class="shot"><img src="../../assets/articles/v100-rules-prompt.png" alt="Prompt 8: the full rule set opening with the map, grouped by the work, not mine, credentials, the record, commands, and instructions found in content" loading="lazy" decoding="async"><figcaption>Prompt 8 of 10. The commands group and the instructions found in content group are the two a machine adds to what the mailbox walkthrough had: a shell as you, and a disk full of text other people wrote.<span class="attr">abp.sgit.ai at v0.10.0, captured 22 September 2026 from a checkout of the v0.10.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="a-switch-you-can-flip-is-a-setting-and-on-a-managed-machine-">A switch you can flip is a setting, and on a managed machine it is not</h2>
+  <p>The fourth page applies the enforcer test to a toggle. An application running as your user account can change its own settings, because you can, and it is you. <b>So a switch in the application is not a control on the application.</b> It is the third barrier kind, and the same toggle is a boundary on a managed machine where an administrator holds it and you cannot flip it back. Which one you have is a fact about the deployment, not the product, which is the sentence the home page has been making about a different setting since v0.1.0.</p>
+  <figure class="shot"><img src="../../assets/articles/v100-switch-table.png" alt="The four barriers on a machine: nothing, expectation, setting and boundary, each with an example from a desktop deployment" loading="lazy" decoding="async"><figcaption>The barrier table for a machine. The setting row lists the four toggles; the boundary row lists what a person would actually have to build: a second account, a folder the account cannot read, a device policy, a sandbox.<span class="attr">abp.sgit.ai at v0.10.0, captured 22 September 2026 from a checkout of the v0.10.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="three-walkthroughs-one-nav-entry">Three walkthroughs, one nav entry</h2>
+  <p>With the third walkthrough the top navigation reached eight entries and two rows. The three now sit under one entry, each with its subtitle, and every step page keeps its own table of the step before and after. Small, and the kind of thing a release should say it did.</p>
+  <figure class="shot"><img src="../../assets/articles/v100-home-nav.png" alt="The home page chrome at v0.10.0 with the navigation on one row and a Walkthroughs entry" loading="lazy" decoding="async"><figcaption>The chrome after the fold. One row again, with the version badge reading v0.10.0.<span class="attr">abp.sgit.ai at v0.10.0, captured 22 September 2026 from a checkout of the v0.10.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="what-this-release-did-not-settle">What this release did not settle</h2>
+  <ul><li><b>The shape is derived and the walkthrough says so on every page.</b> Zero of eleven rows were seen on an instance. A reader's first prompt produces the measured version for their machine, and nothing here does.</li><li><b>The map is the reader's to draw and the site never sees it.</b> There is no case yet with a desktop map in it; the estate case's desktop deployment is a declared gap, and a filled in map from a real machine would be the first row.</li><li><b>The record's secrets prompt is a read of the record.</b> The page says to run it once, on demand, and close the conversation. Nothing enforces that.</li><li><b>Whether a desktop application reads past conversations, and by default or on demand, is not measured.</b> It is the first open question on the estate case and it is the same question here.</li><li><b>The three walkthroughs share a shape and not a module.</b> Each is written by hand in the same four steps. A fourth would be the point at which the shape becomes a template, and it is not yet.</li></ul>
+  <p><a href="../../desktop/index.html">The desktop walkthrough</a> &amp;#183; <a href="../../cases/estate-002/index.html">The three surfaces case</a> &amp;#183; <a href="../../model/barriers/index.html">The four barriers</a> &amp;#183; <a href="../../versions/v0.10.0/index.html">v0.10.0's own release record</a></p>
+  <h2 id="read-the-sequence">Read the sequence</h2>
+  <div class="tablewrap"><table><thead><tr><th>Direction</th><th>The release</th></tr></thead><tbody><tr><td><b>Older</b></td><td><a href="../../articles/a-ledger-and-a-record/index.html">v0.9.0: Two more cases: this site's own session as a ledger, and three surfaces of one product over a record that contains secrets</a></td></tr><tr><td><b>All of them</b></td><td><a href="../../articles/index.html">One article per release</a></td></tr></tbody></table></div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.10.1/index.html">v0.10.1</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../articles/context-on-what-matters/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../cost/index.html">The cost ABP</a>
+    <a href="../../desktop/index.html">On your machine</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+    <a href="../../cases/beta-001/index.html">One person's estate</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

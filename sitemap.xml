@@ -133,6 +133,7 @@
   <url><loc>https://abp.sgit.ai/articles/one-person-six-deployments/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/articles/how-much-not-just-what/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/articles/a-ledger-and-a-record/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/articles/context-on-what-matters/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html</loc><priority>0.7</priority></url>
@@ -155,6 +156,7 @@
   <url><loc>https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/versions/v0.10.1/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.10.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.9.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.8.1/index.html</loc><priority>0.7</priority></url>

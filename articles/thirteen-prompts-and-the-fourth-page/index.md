@@ -2,7 +2,7 @@
 
 > Every page before this one was written for somebody who already believes the argument. This release adds the door: a walkthrough that does not hand a reader a table, because the agent in front of them can produce a better one for their own deployment. And the page that keeps it honest, which is the one that says the document they just wrote is not a control.
 
-*Source: <https://abp.sgit.ai/articles/thirteen-prompts-and-the-fourth-page/index.html> · site v0.10.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/thirteen-prompts-and-the-fourth-page/index.html> · site v0.10.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 Every page before this one was written for somebody who already believes the argument. This release adds the door: a walkthrough that does not hand a reader a table, because the agent in front of them can produce a better one for their own deployment. And the page that keeps it honest, which is the one that says the document they just wrote is not a control.
 
-> **This is the article for release v0.6.0, published 21 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.6.0's own release record](../../versions/v0.6.0/index.md). It is release 10 of 13 on this site. Every screenshot below was captured from a checkout of the `v0.6.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.7.0](../../articles/one-person-six-deployments/index.md), or back to [v0.5.0](../../articles/one-article-per-release/index.md).
+> **This is the article for release v0.6.0, published 21 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.6.0's own release record](../../versions/v0.6.0/index.md). It is release 10 of 14 on this site. Every screenshot below was captured from a checkout of the `v0.6.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.7.0](../../articles/one-person-six-deployments/index.md), or back to [v0.5.0](../../articles/one-article-per-release/index.md).
 
 ## Every page here was written for somebody who already agrees
 

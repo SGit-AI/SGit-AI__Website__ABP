@@ -2,7 +2,7 @@
 
 > The elicited mandate, the clauses and the discovery prompt for ChatGPT with the Google Drive connector, allow all, with the nearest published shape standing in for a grant that has not been measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-drive/index.html> · site v0.10.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-drive/index.html> · site v0.10.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 

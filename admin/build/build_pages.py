@@ -171,6 +171,31 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.10.1", "2026-09-22",
+     "the desktop walkthrough gets its article, with six figures captured from the v0.10.0 tag",
+     {
+       "summary":
+         "One article per release, so the release that added the desktop walkthrough gets "
+         "one. It covers why the third walkthrough keeps the shape of the first two, why the "
+         "switch is the character of the desktop shape, why the map of what matters comes "
+         "before the rules and why every rule names the group of the map it follows from, "
+         "and why a toggle is a setting on your own machine and a boundary on a managed one. "
+         "Six screenshots from a checkout of the v0.10.0 tag on the day it shipped.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "An article for v0.10.0, the fourteenth in the section, with six screenshots. It "
+         "ends on what the release did not settle: the shape is derived, the map is the "
+         "reader's and the site never sees it, the secrets prompt is a read of the record, "
+         "the past conversations question is not measured, and the three walkthroughs share "
+         "a shape and not a module.",
+       ],
+       "basis": [
+         "The v0.10.0 tag, checked out into a detached worktree and served locally, the same "
+         "method as every other article's figures.",
+       ],
+     }),
     ("v0.10.0", "2026-09-22",
      "the desktop walkthrough: an assistant on your own machine, the map of what matters on "
      "it, and the rules that open with the map; plus the article for v0.9.0",
