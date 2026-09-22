@@ -1,0 +1,24 @@
+{
+  "version": "v0.9.0",
+  "date": "2026-09-22",
+  "title": "two more cases: the session that built this site, as a ledger with a measured grant, and one person's three surfaces of one product over an account that holds every past conversation",
+  "summary": "The cost walkthrough shipped with the line that no case ran its prompts yet. The first case in this release is that case: the session that built releases v0.4.0 to v0.8.1, on the one shape this site holds whose grant was measured by the thing being profiled, with a ledger of what it spent counted from the repository and the code host's workflow log, every line saying which of those it came from, or that it is an estimate, or that the agent cannot see it. The second case is a deployer who runs one assistant in the browser, as a coding agent and as a desktop work product, over one account that holds the record of every past conversation, which contains secrets; the mandate turns on one rule, that reading the past is on demand, and the case carries the concept the deployer named: what is being given to the agent is context on what is important and what is not.",
+  "commit": null,
+  "commit_resolves_by": "git rev-list -n 1 v0.9.0",
+  "commit_note": "The tag is the record. CI derives v0.9.0 from admin/build/version.txt and creates it on the commit whose subject carries `site v0.9.0:`, so `git rev-list -n 1 v0.9.0` resolves it for anybody from then on. The hash is not written into this file because a release commit cannot contain its own hash, and reading it back from the tag at build time made the build produce different bytes on a checkout with tags than on one without.",
+  "vault": null,
+  "reconstructed": false,
+  "changes": [
+    "The cases module holds several cases rather than one, each bringing its own estate figure, its own middle section and its own first prompt, with the deployments table, the mandate pages, the clauses and the discovery prompt generic across all of them.",
+    "Case session-001: one deployment, the published shape this site is maintained from, so for once the grant is measured and the delta is not provisional. A ledger of seventeen lines, a table of the six clauses that were actually in force and whether each was kept, the outside list, and three things the session would not do again. No accountant has read it and the status says so.",
+    "Case estate-002: three deployments over one account, the browser against the derived connectors shape, the coding agent against the measured container shape, and the desktop work product as a declared gap. A what matters table before the mandate, six open questions, and one prompt to run on all three surfaces asking whether each can read the past, by default or on demand.",
+    "A ledger record type, abp/ledger/v1, and gate check 16 extended: a grant may say the published shape only when that shape has measured rows, the delta is then not provisional and must not be marked so, every ledger line names its source from a closed set or says cannot see with no number, and a case with a ledger says whether an accountant has read it.",
+    "The three surfaces figure: one person, three surfaces, one account holding the record, with the two unmeasured arrows labelled with a question mark.",
+    "A finding confirmed rather than predicted: every clause that actually governed the site's own session was over a count, a place, a frequency or a delegation, and not one of them is a row in the mandate table."
+  ],
+  "basis": [
+    "The repository's history from v0.3.0 to v0.8.1 and the code host's workflow log, read on 22 September 2026, for every counted line of the ledger.",
+    "The deployer's voice memo of 22 September 2026, transcribed automatically, for the second case; every quoted fragment checked against it.",
+    "The measured profile for the container shape, 13 of 20 rows seen on the thing itself on 5 September, which is what lets one case have a grant."
+  ]
+}

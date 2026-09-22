@@ -48,7 +48,8 @@
 //  15. THE FACT DIFF (v0.4.2): every projection renders the same fact set with an empty diff.
 //  16. THE CASES HOLD (v0.7.0): every elicited mandate covers the grammar once and says per
 //      line whether the person said it or it was inferred, every provisional delta recomputes
-//      from the nearest published shape, and no grant in a case claims to be measured.
+//      from the nearest published shape, no grant in a case claims to be measured unless it
+//      is a published shape with measured rows, and every ledger line names its source.
 //      The label, the leaflet, the prohibitions and the figure are parsed back out of each
 //      example's published markdown twin and compared, leaf assertion by leaf assertion,
 //      with data/facts/. One row that differs fails the build.
@@ -957,11 +958,31 @@ for (const f of files) {
   for (const e of cidx.cases || []) {
     const c = J(e.file); if (!c) continue;
     if (c.id !== e.id) errors.push(`data/${e.file}: id "${c.id}" does not match the index`);
-    if (!/not measured|no grant measured/i.test(c.status || '')) errors.push(`data/${e.file}: the status does not say that no grant was measured`);
+    if (!/not measured|no grant measured|grant measured \(the published shape\)/i.test(c.status || '')) errors.push(`data/${e.file}: the status does not say whether the grant was measured`);
+    if (c.ledger) {
+      // A LEDGER LINE SAYS WHERE ITS NUMBER CAME FROM, or that it is an estimate, or that the
+      // agent cannot see it. A count with no source is the self report the walkthrough warns
+      // about, wearing a number.
+      const SRC = new Set(['repository', 'platform', 'self', 'estimate', 'cannot see']);
+      for (const ln of c.ledger.lines || []) {
+        if (!SRC.has(ln.evidence)) errors.push(`data/${e.file}: ledger line "${ln.what}" has evidence "${ln.evidence}", not one of repository, platform, self, estimate, cannot see`);
+        if (ln.evidence === 'cannot see' && ln.n !== null) errors.push(`data/${e.file}: ledger line "${ln.what}" says cannot see and carries a number`);
+        if (ln.evidence !== 'cannot see' && typeof ln.n !== 'number') errors.push(`data/${e.file}: ledger line "${ln.what}" carries no number`);
+      }
+      if (!/not yet read by an accountant|read by an accountant/.test(c.status)) errors.push(`data/${e.file}: has a ledger and the status does not say whether an accountant has read it`);
+    }
     if (!c.elicited_by) errors.push(`data/${e.file}: no elicited_by -- a mandate with no source is an authored one`);
     for (const d of c.deployments || []) {
       const where = `data/${e.file} (${d.id})`;
-      if (d.grant !== 'not measured') errors.push(`${where}: grant is "${d.grant}"; a case's grant is not measured until somebody measures it`);
+      // A grant is `not measured' until somebody measures it. The one exception is a deployment
+      // that IS a published shape whose rows were measured by the thing being profiled; then
+      // it says `the published shape' and the shape must have measured rows.
+      if (!['not measured', 'the published shape'].includes(d.grant)) errors.push(`${where}: grant is "${d.grant}"; a case's grant is not measured until somebody measures it`);
+      if (d.grant === 'the published shape') {
+        const sp = d.nearest_shape && J(`profiles/${d.nearest_shape}.json`);
+        if (!sp) errors.push(`${where}: says its grant is the published shape and names none`);
+        else if (!(sp.rows && sp.rows.measured > 0)) errors.push(`${where}: says its grant is the published shape, and ${d.nearest_shape} has no measured rows`);
+      }
       const page = path.join(ROOT, 'cases', c.id, d.id, 'index.html');
       if (!fs.existsSync(page)) errors.push(`${where}: no page at cases/${c.id}/${d.id}/index.html`);
       const m = J(d.mandate); if (!m) continue;
@@ -987,7 +1008,8 @@ for (const f of files) {
         else {
           const dl = J(d.delta); const prof = J(`profiles/${d.nearest_shape}.json`);
           if (dl && prof) {
-            if (dl.provisional !== true) errors.push(`${where}: the delta is not marked provisional`);
+            const mustBeProvisional = d.grant !== 'the published shape';
+            if (dl.provisional !== mustBeProvisional) errors.push(`${where}: the delta is ${dl.provisional ? '' : 'not '}marked provisional and the grant is ${d.grant}`);
             const want = new Set(m.want || []);
             const excess = prof.grant.filter(r => !want.has(r.capability)).map(r => r.capability).sort();
             const stored = (dl.excess || []).map(r => r.capability).sort();

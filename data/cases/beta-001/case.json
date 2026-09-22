@@ -112,6 +112,7 @@
       "unstated_count": 19,
       "said_count": 1,
       "inferred_count": 3,
+      "provisional": true,
       "provisional_excess": 5,
       "provisional_unbounded_excess": 4
     },
@@ -159,6 +160,7 @@
       "unstated_count": 19,
       "said_count": 1,
       "inferred_count": 3,
+      "provisional": true,
       "provisional_excess": 2,
       "provisional_unbounded_excess": 1
     },
@@ -211,6 +213,7 @@
       "unstated_count": 16,
       "said_count": 1,
       "inferred_count": 6,
+      "provisional": true,
       "provisional_excess": 7,
       "provisional_unbounded_excess": 7
     },
@@ -238,5 +241,5 @@
     }
   ],
   "page": "https://abp.sgit.ai/cases/beta-001/index.html",
-  "not_an_assessment": "Nothing here is a measurement, an assessment, an audit or a review of any named product. The mandates were elicited from one person and have not been corrected by them; the grants have not been measured; every delta is provisional against a shape that is not this deployment."
+  "not_an_assessment": "Nothing here is an assessment, an audit or a review of any named product. The mandates were elicited from one person and have not been corrected by them; every delta marked provisional is against a shape that is not this deployment."
 }

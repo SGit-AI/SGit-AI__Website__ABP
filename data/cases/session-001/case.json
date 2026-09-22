@@ -1,0 +1,241 @@
+{
+  "type": "abp/case/v1",
+  "id": "session-001",
+  "label": "The session that built this site's last twelve releases, as a ledger",
+  "who": "An agent in a managed container with this repository attached, over three days and nine turns, with a deployer giving instructions in prose and a harness with standing rules.",
+  "elicited": "2026-09-22",
+  "elicited_by": "the agent that ran the session, from the deployer's nine messages and the harness's standing rules, and from the repository and the code host's workflow log for every count",
+  "corrected": null,
+  "status": "elicited, not yet corrected by the deployer, grant measured (the published shape), ledger counted, not yet read by an accountant",
+  "universe": "u9",
+  "assistants": [
+    {
+      "id": "claude",
+      "name": "Claude Code on the web",
+      "consent": "the harness's permission mode",
+      "consent_note": "a classifier in front of some commands, which blocked five in the session and handed each to the deployer."
+    }
+  ],
+  "shared_account": null,
+  "out_of_scope": [
+    "The two sessions before this one, which built v0.1.0 to v0.3.0. Their ledgers could be counted the same way from the repository and were not."
+  ],
+  "information_architecture": [
+    {
+      "fact": "One commit per release, and a tag per commit",
+      "detail": "The release gate wants the version in the commit subject and tags every commit on the release branch, so a feature and its article are two commits and two pipeline runs, not one."
+    },
+    {
+      "fact": "The build regenerates most of the tree",
+      "detail": "418 of the 523 files this session changed were generated. A file count that does not separate hand written from generated says nothing about what the session cost."
+    },
+    {
+      "fact": "The harness has a cost policy of its own",
+      "detail": "Commit only when asked, no subagents unless asked, scratch files in the scratchpad, do not poll: four clauses that were in force before anybody wrote one down."
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "What did the session cost in tokens?",
+      "why": "The one number on the ledger the agent cannot see. The platform's usage page has it, and it is the number every other line is a proxy for."
+    },
+    {
+      "question": "How long did the deployer spend?",
+      "why": "Nine turns read and answered, three questions decided, five blocked commands decided. Nothing records the minutes."
+    },
+    {
+      "question": "Would an accountant agree with the outside list?",
+      "why": "The agent judged which of its own spend fell outside the mandate. The ninth prompt of the cost walkthrough exists so that a session with no stake in the answer does."
+    }
+  ],
+  "deployments": [
+    {
+      "id": "claude-code-web",
+      "name": "Claude Code on the web, one repository attached: the session that built v0.4.0 to v0.8.1",
+      "assistant": "claude",
+      "connector": "this repository",
+      "consent": "the harness's permission mode, with a classifier that blocked five commands",
+      "nearest_shape": "anthropic/claude-code-remote/ccr-container",
+      "nearest_note": "the shape this site is maintained from, measured by the thing being profiled: 13 of 20 rows seen on the container itself. For once the nearest shape is the deployment.",
+      "grant": "the published shape",
+      "mandate": "cases/session-001/mandates/claude-code-web.json",
+      "delta": "cases/session-001/deltas/claude-code-web.json",
+      "page": "https://abp.sgit.ai/cases/session-001/claude-code-web/index.html",
+      "want": [
+        "read.file.project",
+        "write.file.project",
+        "write.repository.project",
+        "write.repository.tenant",
+        "send.endpoint.allowed",
+        "execute.process.host",
+        "read.record.history"
+      ],
+      "do_not_want": [
+        "create.schedule.tenant"
+      ],
+      "unstated_count": 15,
+      "said_count": 6,
+      "inferred_count": 2,
+      "provisional": false,
+      "provisional_excess": 8,
+      "provisional_unbounded_excess": 6
+    }
+  ],
+  "page": "https://abp.sgit.ai/cases/session-001/index.html",
+  "not_an_assessment": "Nothing here is an assessment, an audit or a review of any named product. The mandates were elicited from one person and have not been corrected by them; every delta marked provisional is against a shape that is not this deployment.",
+  "ledger": {
+    "period": "20 September 2026 09:21 to 22 September 2026 09:27, the first commit to the last; working time inside that is not recorded anywhere",
+    "counted_on": "2026-09-22",
+    "counted_by": "the agent that ran the session, from the repository and the code host's workflow log; not yet read by an accountant",
+    "lines": [
+      {
+        "what": "commits",
+        "n": 13,
+        "evidence": "repository",
+        "note": "git log v0.3.0..HEAD, one per release from v0.4.0 to v0.8.1"
+      },
+      {
+        "what": "pushes to the release branch",
+        "n": 10,
+        "evidence": "platform",
+        "note": "the workflow log: runs 6 to 15, one per push; three pushes carried two commits"
+      },
+      {
+        "what": "pipeline runs started",
+        "n": 10,
+        "evidence": "platform",
+        "note": "9 succeeded, 1 cancelled when the next push arrived two minutes later"
+      },
+      {
+        "what": "pushes to the working branch",
+        "n": 13,
+        "evidence": "estimate",
+        "note": "one per commit, from memory; the code host does not list them"
+      },
+      {
+        "what": "files changed",
+        "n": 523,
+        "evidence": "repository",
+        "note": "298 added, 225 modified, over the whole session"
+      },
+      {
+        "what": "files written by hand",
+        "n": 20,
+        "evidence": "repository",
+        "note": "the build modules, the stylesheet, one script and the README: 7,990 lines inserted, 39 deleted"
+      },
+      {
+        "what": "files copied in unchanged",
+        "n": 53,
+        "evidence": "repository",
+        "note": "31 documents from two packs and one research note, 22 contributed data files held with their hashes"
+      },
+      {
+        "what": "screenshots captured",
+        "n": 48,
+        "evidence": "repository",
+        "note": "from detached worktrees of nine tags; about six more were taken and discarded after a scrolling mistake"
+      },
+      {
+        "what": "files generated by the build",
+        "n": 418,
+        "evidence": "repository",
+        "note": "214 added, 204 modified: pages, twins, data files, llms.txt, the sitemap"
+      },
+      {
+        "what": "fetches and searches",
+        "n": 110,
+        "evidence": "estimate",
+        "note": "about 40 pages read from three sites, about 30 to resolve 24 references in a research note, about 40 polls of the code host and the live site; no proxy log was consulted"
+      },
+      {
+        "what": "subagents spawned",
+        "n": 0,
+        "evidence": "self",
+        "note": "the harness's standing rule said not to unless asked, and nobody asked"
+      },
+      {
+        "what": "questions asked of the deployer",
+        "n": 3,
+        "evidence": "self",
+        "note": "a missing read key; whether three details from an interview should be published; whether to push that case live"
+      },
+      {
+        "what": "things handed to the deployer to read",
+        "n": 9,
+        "evidence": "self",
+        "note": "one reply per turn, each a summary of a release"
+      },
+      {
+        "what": "reviews requested, people notified",
+        "n": 0,
+        "evidence": "self",
+        "note": "no pull request was opened; nobody was assigned anything"
+      },
+      {
+        "what": "commands the harness blocked",
+        "n": 5,
+        "evidence": "self",
+        "note": "each one an interruption the deployer had to read and decide on: two pushes, two polling loops, one read of a data file"
+      },
+      {
+        "what": "tokens",
+        "n": null,
+        "evidence": "cannot see",
+        "note": "the platform can, on the account's usage page; the agent never can"
+      },
+      {
+        "what": "wall clock the deployer spent",
+        "n": null,
+        "evidence": "cannot see",
+        "note": "nine turns read and answered; nothing records how long each took"
+      }
+    ],
+    "clauses_in_force": [
+      {
+        "clause": "commit or push only when the deployer asks",
+        "from": "the harness",
+        "kept": "mostly: every push was asked for or covered by a standing instruction to push and continue; 13 commits against 4 explicit asks, because the release gate wants one commit per version"
+      },
+      {
+        "clause": "no subagents or workflows unless asked",
+        "from": "the harness",
+        "kept": "yes: none"
+      },
+      {
+        "clause": "temporary files go in the scratchpad, never the project",
+        "from": "the harness",
+        "kept": "once broken: a scratch figure was copied into the tree, the gate caught it on the next build, and it was removed before the commit"
+      },
+      {
+        "clause": "push to the designated branch and to the release branch only",
+        "from": "the deployer",
+        "kept": "yes"
+      },
+      {
+        "clause": "one article per release, with screenshots from that release's tag",
+        "from": "the deployer",
+        "kept": "yes, at the cost of a second release per feature: v0.6.1, v0.7.1, v0.8.1 exist to carry articles"
+      },
+      {
+        "clause": "do not poll external state in a loop; wait for a notification",
+        "from": "the harness",
+        "kept": "no: several polling loops against the code host and the live site, two of which the harness blocked"
+      }
+    ],
+    "outside": [
+      "README rows for every new module: five edits nobody asked for, in keeping with a standing house rule",
+      "home page cards and notes for three new sections",
+      "three new gate checks, 14, 15 and 16, each written to the house pattern of proving it fails before committing",
+      "status notes on two universes",
+      "a copy button and its script, so a prompt could be pasted",
+      "about six screenshots taken and discarded",
+      "one scratch file that reached the tree and the gate"
+    ],
+    "would_not_again": [
+      "poll the live site and the code host with sleep loops; the harness blocks them and a single check after a wait does the same job",
+      "capture a page section by scrolling the viewport; a clip on a full page screenshot is exact",
+      "write anything into the project tree that is not meant to ship"
+    ]
+  }
+}

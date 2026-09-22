@@ -1,0 +1,150 @@
+{
+  "type": "abp/mandate/v1",
+  "id": "estate-002/claude-cowork",
+  "label": "Claude Cowork, on the desktop",
+  "surface": [
+    "web"
+  ],
+  "applies_to": [],
+  "applies_to_note": "the nearest published shape, so that a provisional delta can be computed; it is not this deployment",
+  "status": "elicited",
+  "authored": "2026-09-22",
+  "authored_by": "the deployer, in a voice memo on 22 September 2026, transcribed automatically; the transcript is not published",
+  "corrected": null,
+  "description": "Elicited from the deployer for Claude Cowork, on the desktop. Every line is marked said, inferred or unstated in `said`; the clauses on the page carry what the grammar has no word for.",
+  "want": [],
+  "do_not_want": [
+    "read.record.history",
+    "read.credential.host"
+  ],
+  "unstated": [
+    "read.file.project",
+    "write.file.project",
+    "read.file.host",
+    "write.file.host",
+    "delete.file.host",
+    "execute.process.host",
+    "execute.process.self",
+    "send.endpoint.allowed",
+    "send.endpoint.world",
+    "authenticate-as.credential.tenant",
+    "grant.credential.self",
+    "send.message.world",
+    "read.message.tenant",
+    "write.repository.project",
+    "write.repository.tenant",
+    "authenticate-as.credential.signing",
+    "create.record.world",
+    "write.budget.tenant",
+    "create.schedule.host",
+    "create.schedule.tenant",
+    "read.record.browsing"
+  ],
+  "said": {
+    "read.record.history": {
+      "status": "said",
+      "from": "\"I think one or all of them can actually read past messages, which I think actually contain quite a number of secrets... that should always be an on-demand thing\""
+    },
+    "read.credential.host": {
+      "status": "inferred",
+      "from": "past conversations contain secrets, so reading the record is reading credentials; the deployer said the first half"
+    },
+    "read.file.project": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "write.file.project": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "read.file.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "write.file.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "delete.file.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "execute.process.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "execute.process.self": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "send.endpoint.allowed": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "send.endpoint.world": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "authenticate-as.credential.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "grant.credential.self": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "send.message.world": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "read.message.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "write.repository.project": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "write.repository.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "authenticate-as.credential.signing": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "create.record.world": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "write.budget.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "create.schedule.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "create.schedule.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "read.record.browsing": {
+      "status": "unstated",
+      "from": "not raised"
+    }
+  },
+  "notes": {
+    "everything else": "unstated, because the deployer said only that the product is one of the three surfaces; what they use it for was not raised"
+  },
+  "not_in_grammar": [
+    "read past conversations from another surface of the same account",
+    "act on local files and applications, which is what the product is for and what this site has not read a description of"
+  ],
+  "provenance": {
+    "source": "a voice memo",
+    "elicited_by": "the deployer, in a voice memo on 22 September 2026, transcribed automatically; the transcript is not published",
+    "retrieved": "2026-09-22",
+    "note": "Elicited, not measured, not surveyed. Written down by abp.sgit.ai; not yet corrected by the deployer. The correction is the mandate; this is the draft it will be made from."
+  }
+}

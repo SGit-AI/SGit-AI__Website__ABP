@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Case session-001: The session that built this site&#x27;s last twelve releases, as a ledger - abp.sgit.ai</title>
+<meta name="description" content="The session that built releases v0.4.0 to v0.8.1 of this site, as a case: the measured shape it ran on, the mandate from the deployer&#x27;s messages, and a ledger of what it spent, counted from the repository where it could be.">
+<link rel="canonical" href="https://abp.sgit.ai/cases/session-001/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/cases/session-001/index.html">
+<meta property="og:title" content="Case session-001: The session that built this site&#x27;s last twelve releases, as a ledger - abp.sgit.ai">
+<meta property="og:description" content="The session that built releases v0.4.0 to v0.8.1 of this site, as a case: the measured shape it ran on, the mandate from the deployer&#x27;s messages, and a ledger of what it spent, counted from the repository where it could be.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.9.0/index.html" title="What changed in v0.9.0, and the commit it was built from">v0.9.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../gmail/index.html">Your mailbox<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../gmail/index.html">The walkthrough</a>
+      <a class="sl" href="../../gmail/what-it-can-do/index.html">Step 1: What it can already do</a>
+      <a class="sl" href="../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a>
+      <a class="sl" href="../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a>
+      <a class="sl" href="../../gmail/what-a-prompt-cannot-do/index.html">Step 4: What a prompt cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../cost/index.html">The cost ABP<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../cost/index.html">The walkthrough</a>
+      <a class="sl" href="../../cost/what-it-spent/index.html">Step 1: What it has already spent</a>
+      <a class="sl" href="../../cost/what-you-paid-for/index.html">Step 2: What you actually paid for</a>
+      <a class="sl" href="../../cost/write-the-cost-policy/index.html">Step 3: Write the cost policy</a>
+      <a class="sl" href="../../cost/what-a-count-cannot-do/index.html">Step 4: What a clause over a count cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../cases/index.html">Cases<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../cases/index.html">All cases</a>
+      <a class="sl" href="../../cases/beta-001/index.html">One person, six deployments</a>
+      <a class="sl here" href="../../cases/session-001/index.html">This site's own session, as a ledger</a>
+      <a class="sl" href="../../cases/estate-002/index.html">Three surfaces, one record</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../articles/index.html">One per release</a>
+      <a class="sl" href="../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
+      <a class="sl" href="../../articles/thirteen-prompts-and-the-fourth-page/index.html">v0.6.0</a>
+      <a class="sl" href="../../articles/one-person-six-deployments/index.html">v0.7.0</a>
+      <a class="sl" href="../../articles/how-much-not-just-what/index.html">v0.8.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../cases/index.html">Cases</a> / session-001</p>
+  <h1>The session that built this site's last twelve releases, as a ledger</h1>
+  <p class="lead"><b>An agent in a managed container with this repository attached, over three days and nine turns, with a deployer giving instructions in prose and a harness with standing rules.</b> One deployment, the shape this site is maintained from, with a measured grant and a counted ledger. Everything below was elicited on 2026-09-22; the grant is the published shape, which was measured; the ledger was counted from the repository and the workflow log.</p>
+  <div class="note"><b>Where the numbers on this page came from.</b> The repository's history and the code host's workflow log, read by the agent that ran the session on 22 September 2026. Every ledger line says which of those it came from, or that it is an estimate, or that the agent cannot see it. <b>The grant is measured</b>: the deployment is the published shape this site is maintained from, 13 of 20 rows seen on the container itself. The mandate is elicited from the deployer's messages and the harness's rules and has not been corrected by the deployer. No accountant has read the ledger.</div>
+  <h2 id="the-estate">The estate</h2>
+  <div class="tablewrap"><table><thead><tr><th>Deployment</th><th>Consent</th><th>Nearest published shape</th><th>The mandate</th><th>Delta</th></tr></thead><tbody><tr><td><a href="../../cases/session-001/claude-code-web/index.html">Claude Code on the web, one repository attached: the session that built v0.4.0 to v0.8.1</a></td><td>the harness's permission mode, with a classifier that blocked five commands</td><td><a href="../../examples/index.html"><code>anthropic/claude-code-remote/ccr-container</code></a></td><td>7 wanted, 1 refused, 15 unstated</td><td>8 excess, 6 unbounded</td></tr></tbody></table></div>
+  <h2 id="the-ledger">The ledger</h2>
+  <p><b>Counted on 2026-09-22 by the agent that ran the session, from the repository and the code host's workflow log; not yet read by an accountant.</b> Period: 20 September 2026 09:21 to 22 September 2026 09:27, the first commit to the last; working time inside that is not recorded anywhere. An asterisk marks an estimate; cannot see means exactly that.</p>
+  <div class="tablewrap"><table><thead><tr><th>What was spent</th><th>How many</th><th>Counted from</th><th>Note</th></tr></thead><tbody><tr><td><b>commits</b></td><td>13</td><td>repository</td><td>git log v0.3.0..HEAD, one per release from v0.4.0 to v0.8.1</td></tr><tr><td><b>pushes to the release branch</b></td><td>10</td><td>platform</td><td>the workflow log: runs 6 to 15, one per push; three pushes carried two commits</td></tr><tr><td><b>pipeline runs started</b></td><td>10</td><td>platform</td><td>9 succeeded, 1 cancelled when the next push arrived two minutes later</td></tr><tr><td><b>pushes to the working branch</b></td><td>13*</td><td>estimate</td><td>one per commit, from memory; the code host does not list them</td></tr><tr><td><b>files changed</b></td><td>523</td><td>repository</td><td>298 added, 225 modified, over the whole session</td></tr><tr><td><b>files written by hand</b></td><td>20</td><td>repository</td><td>the build modules, the stylesheet, one script and the README: 7,990 lines inserted, 39 deleted</td></tr><tr><td><b>files copied in unchanged</b></td><td>53</td><td>repository</td><td>31 documents from two packs and one research note, 22 contributed data files held with their hashes</td></tr><tr><td><b>screenshots captured</b></td><td>48</td><td>repository</td><td>from detached worktrees of nine tags; about six more were taken and discarded after a scrolling mistake</td></tr><tr><td><b>files generated by the build</b></td><td>418</td><td>repository</td><td>214 added, 204 modified: pages, twins, data files, llms.txt, the sitemap</td></tr><tr><td><b>fetches and searches</b></td><td>110*</td><td>estimate</td><td>about 40 pages read from three sites, about 30 to resolve 24 references in a research note, about 40 polls of the code host and the live site; no proxy log was consulted</td></tr><tr><td><b>subagents spawned</b></td><td>0</td><td>self</td><td>the harness's standing rule said not to unless asked, and nobody asked</td></tr><tr><td><b>questions asked of the deployer</b></td><td>3</td><td>self</td><td>a missing read key; whether three details from an interview should be published; whether to push that case live</td></tr><tr><td><b>things handed to the deployer to read</b></td><td>9</td><td>self</td><td>one reply per turn, each a summary of a release</td></tr><tr><td><b>reviews requested, people notified</b></td><td>0</td><td>self</td><td>no pull request was opened; nobody was assigned anything</td></tr><tr><td><b>commands the harness blocked</b></td><td>5</td><td>self</td><td>each one an interruption the deployer had to read and decide on: two pushes, two polling loops, one read of a data file</td></tr><tr><td><b>tokens</b></td><td>cannot see</td><td>cannot see</td><td>the platform can, on the account's usage page; the agent never can</td></tr><tr><td><b>wall clock the deployer spent</b></td><td>cannot see</td><td>cannot see</td><td>nine turns read and answered; nothing records how long each took</td></tr></tbody></table></div>
+  <div class="note"><b>Two numbers on this table are the ones to sit with.</b> The token line, which the agent cannot see and the platform can, so every other line is a proxy for the bill. And the fifteenth line: five commands the harness blocked, each of which was a decision handed to the deployer, which is the fifth cost line in the cost walkthrough appearing in a real ledger for the first time.</div>
+  <h2 id="the-clauses-that-were-actually-in-force-and-whether-they-wer">The clauses that were actually in force, and whether they were kept</h2>
+  <p>This session had a cost policy before the cost walkthrough existed. It was spread across the harness's standing rules and the deployer's messages, and <b>every one of its clauses is over a count, a place, a frequency or a delegation rather than over a capability.</b> None of them is a row in the mandate table on the deployment page, which is the finding the walkthrough predicted and this case confirms.</p>
+  <div class="tablewrap"><table><thead><tr><th>Clause</th><th>From</th><th>Kept</th></tr></thead><tbody><tr><td>commit or push only when the deployer asks</td><td>the harness</td><td>mostly: every push was asked for or covered by a standing instruction to push and continue; 13 commits against 4 explicit asks, because the release gate wants one commit per version</td></tr><tr><td>no subagents or workflows unless asked</td><td>the harness</td><td>yes: none</td></tr><tr><td>temporary files go in the scratchpad, never the project</td><td>the harness</td><td>once broken: a scratch figure was copied into the tree, the gate caught it on the next build, and it was removed before the commit</td></tr><tr><td>push to the designated branch and to the release branch only</td><td>the deployer</td><td>yes</td></tr><tr><td>one article per release, with screenshots from that release's tag</td><td>the deployer</td><td>yes, at the cost of a second release per feature: v0.6.1, v0.7.1, v0.8.1 exist to carry articles</td></tr><tr><td>do not poll external state in a loop; wait for a notification</td><td>the harness</td><td>no: several polling loops against the code host and the live site, two of which the harness blocked</td></tr></tbody></table></div>
+  <h2 id="outside-the-mandate">Outside the mandate</h2>
+  <p>Things the session spent that nobody asked for. Some are in keeping with a standing house rule and would be asked for if the question were put; they are listed anyway, because the ledger's outside line is for the deployer to judge, not the agent.</p>
+  <ul><li>README rows for every new module: five edits nobody asked for, in keeping with a standing house rule</li><li>home page cards and notes for three new sections</li><li>three new gate checks, 14, 15 and 16, each written to the house pattern of proving it fails before committing</li><li>status notes on two universes</li><li>a copy button and its script, so a prompt could be pasted</li><li>about six screenshots taken and discarded</li><li>one scratch file that reached the tree and the gate</li></ul>
+  <h3 id="would-not-do-again">Would not do again</h3>
+  <ul><li>poll the live site and the code host with sleep loops; the harness blocks them and a single check after a wait does the same job</li><li>capture a page section by scrolling the viewport; a clip on a full page screenshot is exact</li><li>write anything into the project tree that is not meant to ship</li></ul>
+  <div class="note"><b>No accountant has read this ledger.</b> The cost walkthrough's ninth prompt is written for a second session with no tools; it has not been run on this one, and the case status says so. When it is, its report goes here, beside the ledger it read, and the status changes.</div>
+  <h2 id="open-questions-the-deployer-can-answer">Open questions the deployer can answer</h2>
+  <p>Each of these changes a mandate or a barrier on one of the pages below, and none of them can be answered from here.</p>
+  <ol><li><b>What did the session cost in tokens?</b> The one number on the ledger the agent cannot see. The platform's usage page has it, and it is the number every other line is a proxy for.</li><li><b>How long did the deployer spend?</b> Nine turns read and answered, three questions decided, five blocked commands decided. Nothing records the minutes.</li><li><b>Would an accountant agree with the outside list?</b> The agent judged which of its own spend fell outside the mandate. The ninth prompt of the cost walkthrough exists so that a session with no stake in the answer does.</li></ol>
+  <h2 id="the-1-deployment">The 1 deployment</h2>
+  <div class="gamegrid"><div class="gamecard"><h3><a href="../../cases/session-001/claude-code-web/index.html">Claude Code on the web, one repository attached: the session that built v0.4.0 to v0.8.1</a></h3><p class="sub">the shape this site is maintained from, measured by the thing being profiled: 13 of 20 rows seen on the container itself. For once the nearest shape is the deployment.</p><div class="foot">6 said, 2 inferred, 15 unstated</div></div></div>
+  <h2 id="out-of-scope">Out of scope</h2>
+  <ul><li>The two sessions before this one, which built v0.1.0 to v0.3.0. Their ledgers could be counted the same way from the repository and were not.</li></ul>
+  <div class="note"><b>Nothing on this site is an assessment, an audit, a certification or a security review of any named product</b>, and no adjective on this page attaches to one. A case describes one person's deployments in their own words and against published shapes with their sources and dates.</div>
+  <p><a href="../../data/cases/session-001/case.json">The case as JSON</a> &amp;#183; <a href="../../gmail/index.html">The walkthroughs the prompts come from</a> &amp;#183; <a href="../../model/universes/u9/index.html">The estate universe</a></p>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.9.0/index.html">v0.9.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../cases/session-001/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../cost/index.html">The cost ABP</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+    <a href="../../cases/beta-001/index.html">One person's estate</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

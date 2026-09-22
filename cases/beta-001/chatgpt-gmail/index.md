@@ -2,7 +2,7 @@
 
 > The elicited mandate, the clauses and the discovery prompt for ChatGPT with the Gmail connector, allow all, with the nearest published shape standing in for a grant that has not been measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-gmail/index.html> · site v0.8.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-gmail/index.html> · site v0.9.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -41,7 +41,7 @@ Unstated is not authorised, and it is not refused either. It is the list the dep
 - trash, archive or label a message
 - purge a backlog of three hundred thousand unread messages, which they asked about and which the walkthrough steers away from
 
-The grammar was promoted from a capability map drawn for coding agents and browsers, and a mailbox, a calendar and a channel are not files. Everything above carries in the clauses instead, which is where the rules that cannot be expressed as a permission were always going to live.
+The grammar was promoted from a capability map drawn for coding agents and browsers. Everything above carries in the clauses instead, which is where the rules that cannot be expressed as a permission were always going to live.
 
 ## The nearest published shape, and the provisional delta
 
@@ -67,13 +67,13 @@ The grammar was promoted from a capability map drawn for coding agents and brows
 | ○ | [`read.message.tenant`](../../../model/capabilities/read.message.tenant/index.md) Read mail or chat it is connected to | no | boundary | measured | **authorised** |
 | ◐ | [`create.schedule.tenant`](../../../model/capabilities/create.schedule.tenant/index.md) Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session) | yes | setting (not a control) | documented | **excess** (refused) |
 
-[The nearest shape's own page](../../../examples/index.md) &#183; [the provisional delta as JSON](../../../data/cases/beta-001/deltas/chatgpt-gmail.json)
+[The shape's own page](../../../examples/index.md) &#183; [the delta as JSON](../../../data/cases/beta-001/deltas/chatgpt-gmail.json)
 
 ## The clauses, drafted for the deployer to correct
 
 In their voice, as instructions to the assistant, carrying everything the grammar has no word for. **This is the second barrier kind**: a rule written down. It bounds nothing and it moves where responsibility lands, which is [step four of the walkthrough](../../../gmail/what-a-prompt-cannot-do/index.md).
 
-**The clauses: Rules for Gmail.** Paste at the top of any conversation where the assistant has this connector. Edit first: the lines you change are the ones that were actually yours.
+**The clauses: Rules for Gmail.** Paste at the top of any conversation where the assistant has this. Edit first: the lines you change are the ones that were actually yours.
 
 ```
 Rules for my mailbox. You have the Gmail connector with allow all switched on, so nothing
@@ -103,9 +103,9 @@ in the product asks me before you act. These rules are what asks.
       what it would take to put back
 ```
 
-## The discovery prompt, for this connector
+## The discovery prompt, for this deployment
 
-This is what produces the grant. The answer replaces the nearest shape above with the deployment's own rows.
+This is what produces the grant.
 
 **Prompt B: What you can do with Gmail.** One table, hardest thing to undo at the top, every line marked read or inferred.
 

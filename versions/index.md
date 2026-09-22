@@ -2,7 +2,7 @@
 
 > Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
-*Source: <https://abp.sgit.ai/versions/index.html> · site v0.8.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/index.html> · site v0.9.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -16,6 +16,7 @@ Every release of this site. **The badge in the top bar reads `current` from [`ve
 
 | Version | Date | What changed |
 |---|---|---|
+| [v0.9.0](../versions/v0.9.0/index.md) | 2026-09-22 | two more cases: the session that built this site, as a ledger with a measured grant, and one person's three surfaces of one product over an account that holds every past conversation |
 | [v0.8.1](../versions/v0.8.1/index.md) | 2026-09-22 | the cost ABP gets its article, with six figures captured from the v0.8.0 tag |
 | [v0.8.0](../versions/v0.8.0/index.md) | 2026-09-22 | the cost ABP: a walkthrough over how much an agent may spend rather than what it may do, with a ledger every turn and an accountant to read it |
 | [v0.7.1](../versions/v0.7.1/index.md) | 2026-09-21 | the first case gets its article, with six figures captured from the v0.7.0 tag |

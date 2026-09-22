@@ -1,0 +1,154 @@
+{
+  "type": "abp/mandate/v1",
+  "id": "estate-002/claude-code",
+  "label": "Claude Code, in a container with a repository attached",
+  "surface": [
+    "web"
+  ],
+  "applies_to": [
+    "anthropic/claude-code-remote/ccr-container"
+  ],
+  "applies_to_note": "the nearest published shape, so that a provisional delta can be computed; it is not this deployment",
+  "status": "elicited",
+  "authored": "2026-09-22",
+  "authored_by": "the deployer, in a voice memo on 22 September 2026, transcribed automatically; the transcript is not published",
+  "corrected": null,
+  "description": "Elicited from the deployer for Claude Code, in a container with a repository attached. Every line is marked said, inferred or unstated in `said`; the clauses on the page carry what the grammar has no word for.",
+  "want": [
+    "read.file.project",
+    "write.file.project",
+    "write.repository.project"
+  ],
+  "do_not_want": [
+    "read.record.history",
+    "read.credential.host"
+  ],
+  "unstated": [
+    "read.file.host",
+    "write.file.host",
+    "delete.file.host",
+    "execute.process.host",
+    "execute.process.self",
+    "send.endpoint.allowed",
+    "send.endpoint.world",
+    "authenticate-as.credential.tenant",
+    "grant.credential.self",
+    "send.message.world",
+    "read.message.tenant",
+    "write.repository.tenant",
+    "authenticate-as.credential.signing",
+    "create.record.world",
+    "write.budget.tenant",
+    "create.schedule.host",
+    "create.schedule.tenant",
+    "read.record.browsing"
+  ],
+  "said": {
+    "read.file.project": {
+      "status": "said",
+      "from": "the repository is the work"
+    },
+    "write.file.project": {
+      "status": "said",
+      "from": "the repository is the work"
+    },
+    "write.repository.project": {
+      "status": "said",
+      "from": "a coding agent that cannot commit is not one; the deployer runs this site from it"
+    },
+    "read.record.history": {
+      "status": "said",
+      "from": "\"I think one or all of them can actually read past messages, which I think actually contain quite a number of secrets... that should always be an on-demand thing\""
+    },
+    "read.credential.host": {
+      "status": "inferred",
+      "from": "past conversations contain secrets, so reading the record is reading credentials; the deployer said the first half"
+    },
+    "read.file.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "write.file.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "delete.file.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "execute.process.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "execute.process.self": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "send.endpoint.allowed": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "send.endpoint.world": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "authenticate-as.credential.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "grant.credential.self": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "send.message.world": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "read.message.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "write.repository.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "authenticate-as.credential.signing": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "create.record.world": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "write.budget.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "create.schedule.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "create.schedule.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "read.record.browsing": {
+      "status": "unstated",
+      "from": "not raised"
+    }
+  },
+  "notes": {
+    "the measured row": "the published shape's read.record.history row is measured: the harness's project directory holds the session's own earlier tool outputs, and no user shell history exists in the container. Whether it can reach conversations from the other two surfaces is the open question, not that row",
+    "the container": "host means the container and not the machine; the deployer's own credentials are not in it, per the measured profile"
+  },
+  "not_in_grammar": [
+    "read a conversation that happened on a different surface of the same account",
+    "distinguish the session's own transcript from every other transcript"
+  ],
+  "provenance": {
+    "source": "a voice memo",
+    "elicited_by": "the deployer, in a voice memo on 22 September 2026, transcribed automatically; the transcript is not published",
+    "retrieved": "2026-09-22",
+    "note": "Elicited, not measured, not surveyed. Written down by abp.sgit.ai; not yet corrected by the deployer. The correction is the mandate; this is the draft it will be made from."
+  }
+}

@@ -2,7 +2,7 @@
 
 > Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
 
-*Source: <https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html> · site v0.8.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html> · site v0.9.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 

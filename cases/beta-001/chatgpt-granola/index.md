@@ -2,7 +2,7 @@
 
 > The elicited mandate, the clauses and the discovery prompt for ChatGPT with a meeting note taker connected, with the nearest published shape standing in for a grant that has not been measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-granola/index.html> · site v0.8.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-granola/index.html> · site v0.9.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -38,7 +38,7 @@ Unstated is not authorised, and it is not refused either. It is the list the dep
 - attribute words to a named speaker
 - share a transcript or a summary with somebody who was not in the meeting
 
-The grammar was promoted from a capability map drawn for coding agents and browsers, and a mailbox, a calendar and a channel are not files. Everything above carries in the clauses instead, which is where the rules that cannot be expressed as a permission were always going to live.
+The grammar was promoted from a capability map drawn for coding agents and browsers. Everything above carries in the clauses instead, which is where the rules that cannot be expressed as a permission were always going to live.
 
 ## The nearest published shape, and the provisional delta
 
@@ -50,7 +50,7 @@ The grammar was promoted from a capability map drawn for coding agents and brows
 
 In their voice, as instructions to the assistant, carrying everything the grammar has no word for. **This is the second barrier kind**: a rule written down. It bounds nothing and it moves where responsibility lands, which is [step four of the walkthrough](../../../gmail/what-a-prompt-cannot-do/index.md).
 
-**The clauses: Rules for a meeting note taker.** Paste at the top of any conversation where the assistant has this connector. Edit first: the lines you change are the ones that were actually yours.
+**The clauses: Rules for a meeting note taker.** Paste at the top of any conversation where the assistant has this. Edit first: the lines you change are the ones that were actually yours.
 
 ```
 Rules for my meeting notes. Everything in them was said by people who were in a room with
@@ -68,9 +68,9 @@ me, and most of it is theirs.
     - at the end of every turn, list every meeting you read
 ```
 
-## The discovery prompt, for this connector
+## The discovery prompt, for this deployment
 
-This is what produces the grant. The answer replaces the nearest shape above with the deployment's own rows.
+This is what produces the grant.
 
 **Prompt B: What you can do with a meeting note taker.** One table, hardest thing to undo at the top, every line marked read or inferred.
 

@@ -1,0 +1,139 @@
+{
+  "type": "abp/delta/v1",
+  "profile": "anthropic/claude-web/connectors-on",
+  "mandate": "estate-002/claude-web",
+  "grant_version": "2026-09-05",
+  "mandate_version": "2026-09-22",
+  "pack_version": "v0.8.0",
+  "computed_at": "2026-09-22T00:00:00Z",
+  "computed_by": "abp.delta/v1",
+  "excess": [
+    {
+      "capability": "authenticate-as.credential.tenant",
+      "barrier": "boundary",
+      "evidence": "derived",
+      "via": [
+        "connectors"
+      ],
+      "control": "the connector's scope",
+      "note": "a cloud connector acts as you",
+      "material": null,
+      "undo": "no",
+      "is_bounded": true
+    },
+    {
+      "capability": "read.file.host",
+      "barrier": "boundary",
+      "evidence": "derived",
+      "via": [
+        "connectors"
+      ],
+      "control": "the connector's scope, held by the vendor",
+      "note": "a drive connector: your other files, as scoped",
+      "material": null,
+      "undo": "no",
+      "is_bounded": true
+    },
+    {
+      "capability": "read.message.tenant",
+      "barrier": "boundary",
+      "evidence": "derived",
+      "via": [
+        "connectors"
+      ],
+      "control": "the connector's scope",
+      "note": "a mail or chat connector reads your mail",
+      "material": null,
+      "undo": "no",
+      "is_bounded": true
+    },
+    {
+      "capability": "write.repository.tenant",
+      "barrier": "boundary",
+      "evidence": "derived",
+      "via": [
+        "connectors"
+      ],
+      "control": "the connector's scope",
+      "note": "a code-host connector",
+      "material": null,
+      "undo": "with-effort",
+      "is_bounded": true
+    }
+  ],
+  "excess_refused": [],
+  "excess_unstated": [
+    {
+      "capability": "authenticate-as.credential.tenant",
+      "barrier": "boundary",
+      "evidence": "derived",
+      "via": [
+        "connectors"
+      ],
+      "control": "the connector's scope",
+      "note": "a cloud connector acts as you",
+      "material": null,
+      "undo": "no",
+      "is_bounded": true
+    },
+    {
+      "capability": "read.file.host",
+      "barrier": "boundary",
+      "evidence": "derived",
+      "via": [
+        "connectors"
+      ],
+      "control": "the connector's scope, held by the vendor",
+      "note": "a drive connector: your other files, as scoped",
+      "material": null,
+      "undo": "no",
+      "is_bounded": true
+    },
+    {
+      "capability": "read.message.tenant",
+      "barrier": "boundary",
+      "evidence": "derived",
+      "via": [
+        "connectors"
+      ],
+      "control": "the connector's scope",
+      "note": "a mail or chat connector reads your mail",
+      "material": null,
+      "undo": "no",
+      "is_bounded": true
+    },
+    {
+      "capability": "write.repository.tenant",
+      "barrier": "boundary",
+      "evidence": "derived",
+      "via": [
+        "connectors"
+      ],
+      "control": "the connector's scope",
+      "note": "a code-host connector",
+      "material": null,
+      "undo": "with-effort",
+      "is_bounded": true
+    }
+  ],
+  "unbounded_excess": [],
+  "shortfall": [],
+  "aligned": [
+    {
+      "capability": "read.file.project",
+      "barrier": "none",
+      "evidence": "derived",
+      "via": [
+        "conversation and uploads"
+      ],
+      "control": null,
+      "note": null,
+      "material": null,
+      "undo": "yes",
+      "is_bounded": false
+    }
+  ],
+  "derived_never_authored": "No field in this record is writable by a person. The way to change a delta is to change a grant or a mandate, and then recompute.",
+  "provisional": true,
+  "provisional_note": "Computed against the nearest published shape, which is not this deployment. It shows what the delta would look like if the deployment's grant matched that shape, and nothing more. The deployment's own grant has not been measured."
+}

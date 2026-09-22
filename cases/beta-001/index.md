@@ -2,7 +2,7 @@
 
 > One business user, two chat assistants, six deployments over five connectors, four of them sharing one Google account. The estate mapped, the mandates elicited, the grants not yet measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/index.html> · site v0.8.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/index.html> · site v0.9.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12,7 +12,7 @@ below point at them.*
 
 # One person, two assistants, six deployments, one shared account
 
-**An early beta user: a business user whose day runs in a mail, calendar and files suite, with two chat assistants connected to different parts of it and a third, out of scope here, handling text messages.** Two assistants, six deployments, and one Google account that four of them share. Everything below was elicited from one interview on 2026-09-21; nothing was measured.
+**An early beta user: a business user whose day runs in a mail, calendar and files suite, with two chat assistants connected to different parts of it and a third, out of scope here, handling text messages.** Two assistants, six deployments, and one Google account that four of them share. Everything below was elicited on 2026-09-21; nothing was measured.
 
 > **Where the words on this page came from.** One interview, elicited by riskmandate.ai on 21 September 2026 and transcribed automatically. The transcript is not published; every quoted fragment was checked against it. **Nothing here is measured.** No grant was probed, no tool list was captured, and every delta is provisional against a published shape that is not this deployment. The deployer has not yet corrected the draft, and the correction is the mandate.
 
@@ -20,16 +20,14 @@ below point at them.*
 
 *[A figure here in the page: one person at the top, connected to two assistants. ChatGPT, with allow all switched on, has four connectors: Gmail, Calendar, Drive and a meeting note taker. Claude has Slack. Under Gmail sits the inbox scout, dashed, holding the same grant with nobody present. Under mail, calendar, drive and the scout sits one Google account, the union of four grants. A dashed box to the side names a third assistant for text messages, connected to neither and not mapped]*
 
-| Deployment | Consent | Nearest published shape | The mandate | Provisional delta |
+| Deployment | Consent | Nearest published shape | The mandate | Delta |
 |---|---|---|---|---|
-| [ChatGPT with the Gmail connector, allow all](../../cases/beta-001/chatgpt-gmail/index.md) | allow all | [`anthropic/gmail-connector/default`](../../examples/index.md) | 1 wanted, 3 refused, 19 unstated | 5 excess, 4 unbounded |
+| [ChatGPT with the Gmail connector, allow all](../../cases/beta-001/chatgpt-gmail/index.md) | allow all | [`anthropic/gmail-connector/default`](../../examples/index.md) | 1 wanted, 3 refused, 19 unstated | 5 excess, 4 unbounded (provisional) |
 | [ChatGPT with the Google Calendar connector, allow all](../../cases/beta-001/chatgpt-calendar/index.md) | allow all | **none published** | 0 wanted, 2 refused, 21 unstated | no shape to compute against |
-| [ChatGPT with the Google Drive connector, allow all](../../cases/beta-001/chatgpt-drive/index.md) | allow all | [`google/drive/readonly-connector`](../../examples/index.md) | 1 wanted, 3 refused, 19 unstated | 2 excess, 1 unbounded |
+| [ChatGPT with the Google Drive connector, allow all](../../cases/beta-001/chatgpt-drive/index.md) | allow all | [`google/drive/readonly-connector`](../../examples/index.md) | 1 wanted, 3 refused, 19 unstated | 2 excess, 1 unbounded (provisional) |
 | [ChatGPT with a meeting note taker connected](../../cases/beta-001/chatgpt-granola/index.md) | allow all | **none published** | 1 wanted, 2 refused, 20 unstated | no shape to compute against |
-| [The inbox scout: the same Gmail grant, running with nobody present](../../cases/beta-001/chatgpt-inbox-scout/index.md) | allow all | [`generic/scheduled-job/service-account`](../../examples/index.md) | 1 wanted, 6 refused, 16 unstated | 7 excess, 7 unbounded |
+| [The inbox scout: the same Gmail grant, running with nobody present](../../cases/beta-001/chatgpt-inbox-scout/index.md) | allow all | [`generic/scheduled-job/service-account`](../../examples/index.md) | 1 wanted, 6 refused, 16 unstated | 7 excess, 7 unbounded (provisional) |
 | [Claude with the Slack connector](../../cases/beta-001/claude-slack/index.md) | not stated | **none published** | 1 wanted, 1 refused, 21 unstated | no shape to compute against |
-
-**Allow all is on for every ChatGPT connector.** Asked whether they were authorising each action, the deployer said they had done the allow all. That is the third barrier kind switched to off: the one setting the product puts in front of an action is not there, so on every row of the four ChatGPT deployments the barrier is whatever Google's scopes leave and nothing above it.
 
 ## The account is the junction
 
@@ -83,7 +81,7 @@ Then tell me which of these connectors share one underlying account, because a g
 one of them is a grant on the account.
 ```
 
-## The six deployments
+## The 6 deployments
 
 **[ChatGPT with the Gmail connector, allow all](../../cases/beta-001/chatgpt-gmail/index.md)**: a different client on the same platform: the measured profile for a chat assistant with a Gmail connector, 4 of 6 rows seen on the thing itself. The Google scopes are the same layer; the tool list is not this product's.
 1 said, 3 inferred, 19 unstated
@@ -110,7 +108,7 @@ one of them is a grant on the account.
 
 > **Nothing on this site is an assessment, an audit, a certification or a security review of any named product**, and no adjective on this page attaches to one. A case describes one person's deployments in their own words and against published shapes with their sources and dates.
 
-[The case as JSON](../../data/cases/beta-001/case.json) &#183; [The walkthrough the discovery prompts come from](../../gmail/index.md) &#183; [The estate universe](../../model/universes/u9/index.md)
+[The case as JSON](../../data/cases/beta-001/case.json) &#183; [The walkthroughs the prompts come from](../../gmail/index.md) &#183; [The estate universe](../../model/universes/u9/index.md)
 
 ---
 

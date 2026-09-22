@@ -1,0 +1,159 @@
+{
+  "type": "abp/case/v1",
+  "id": "estate-002",
+  "label": "One person, three surfaces of one product, one account holding every past conversation",
+  "who": "A deployer who runs the same assistant in the browser, as a coding agent and as a desktop work product, and who knows the past conversations contain secrets.",
+  "elicited": "2026-09-22",
+  "elicited_by": "the deployer, in a voice memo on 22 September 2026, transcribed automatically; the transcript is not published",
+  "corrected": null,
+  "status": "elicited, not yet corrected by the deployer, no grant measured except the coding agent's, which is the published shape",
+  "universe": "u9",
+  "assistants": [
+    {
+      "id": "claude",
+      "name": "Claude, on three surfaces",
+      "consent": "not stated",
+      "consent_note": "the approval mode on the browser and the desktop product was not raised; the coding agent runs under its harness's permission mode."
+    }
+  ],
+  "shared_account": {
+    "what": "one account with the vendor",
+    "deployments": [
+      "claude-web",
+      "claude-code",
+      "claude-cowork"
+    ],
+    "why_it_matters": "The account holds the conversation record and the connectors. Whatever any surface can reach of the record, the account's exposure is the union across the three, and across every conversation that ever happened on any of them."
+  },
+  "out_of_scope": [
+    "Whichever connectors turn out to be enabled. Each is a deployment of its own once named, with the mailbox walkthrough's prompts ready for it.",
+    "The CLI on the deployer's own machine, if they run it. It is a different shape with a different host, and the site holds a derived profile for it."
+  ],
+  "information_architecture": [
+    {
+      "fact": "The record contains secrets",
+      "detail": "\"past messages, which I think actually contain quite a number of secrets. It contains quite a lot of data.\" Things get pasted into a chat that would never be committed to a repository, and the chat keeps them."
+    },
+    {
+      "fact": "Reading the past should be on demand",
+      "detail": "\"that should always be an on-demand thing.\" Not never: on demand, named, in the conversation that needs it. The grammar has a primitive for reading a retained record and no word for when."
+    },
+    {
+      "fact": "Some connectors may still be on",
+      "detail": "\"I might still have some connectors enabled.\" Which is the first open question, and each one is a deployment of its own."
+    },
+    {
+      "fact": "The question is blast radius, then policy",
+      "detail": "\"I want to understand the blast radius, and then I want to start to see what policies can I put in place... especially taking into account the exposure.\" The exposure is what is already in the record; the blast radius is what each surface can do with it."
+    },
+    {
+      "fact": "What is being given is context on what matters",
+      "detail": "\"we're giving agent context on what's important, what's not important, and I think that's an important concept.\" The mandate as an importance list before it is a list of prohibitions."
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Which surfaces can read past conversations, and is it on by default?",
+      "why": "The deployer believes one or all of the three can. The measured coding agent shape says its container holds only the session's own tool outputs; the other two are not measured. Prompt A asks each surface directly."
+    },
+    {
+      "question": "Which connectors are enabled on the account today?",
+      "why": "Each one is a deployment with its own grant, and the browser shape's five rows are placeholders until they are named."
+    },
+    {
+      "question": "Does Claude Code here mean the web container, the CLI on a machine, or both?",
+      "why": "The web container is measured and its host is the container. The CLI's host is the machine, with the deployer's own credentials in the home directory, and it is a different case."
+    },
+    {
+      "question": "What does the desktop work product expose?",
+      "why": "Local files, applications, connectors, the record: nothing this site has read describes it, and its page holds no shape."
+    },
+    {
+      "question": "Are past conversations shared across the three surfaces?",
+      "why": "If they are, the record is one credential store with three readers; if not, the exposure is per surface. The answer decides whether the estate has one junction or three."
+    },
+    {
+      "question": "Can the secrets already in the record be found and removed?",
+      "why": "A purge is itself a read of the record by something, and that something needs a mandate of its own."
+    }
+  ],
+  "deployments": [
+    {
+      "id": "claude-web",
+      "name": "Claude in the browser, with connectors possibly still on",
+      "assistant": "claude",
+      "connector": "the browser",
+      "consent": "unknown: \"I might still have some connectors enabled\"",
+      "nearest_shape": "anthropic/claude-web/connectors-on",
+      "nearest_note": "the derived shape for the web assistant with connectors switched on, 0 of 5 rows measured. Which connectors is the deployer's to name and they have not named them yet, so the shape may be wider or narrower than this deployment by every connector row.",
+      "grant": "not measured",
+      "mandate": "cases/estate-002/mandates/claude-web.json",
+      "delta": "cases/estate-002/deltas/claude-web.json",
+      "page": "https://abp.sgit.ai/cases/estate-002/claude-web/index.html",
+      "want": [
+        "read.file.project"
+      ],
+      "do_not_want": [
+        "read.record.history",
+        "read.credential.host"
+      ],
+      "unstated_count": 20,
+      "said_count": 2,
+      "inferred_count": 1,
+      "provisional": true,
+      "provisional_excess": 4,
+      "provisional_unbounded_excess": 0
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code, in a container with a repository attached",
+      "assistant": "claude",
+      "connector": "the coding agent",
+      "consent": "the harness's permission mode",
+      "nearest_shape": "anthropic/claude-code-remote/ccr-container",
+      "nearest_note": "the shape this site is maintained from, measured by the thing being profiled, 13 of 20 rows seen on the container itself. If the deployer also runs the CLI on their own machine, that is a second deployment with a different reach for host, and it is an open question.",
+      "grant": "not measured",
+      "mandate": "cases/estate-002/mandates/claude-code.json",
+      "delta": "cases/estate-002/deltas/claude-code.json",
+      "page": "https://abp.sgit.ai/cases/estate-002/claude-code/index.html",
+      "want": [
+        "read.file.project",
+        "write.file.project",
+        "write.repository.project"
+      ],
+      "do_not_want": [
+        "read.record.history",
+        "read.credential.host"
+      ],
+      "unstated_count": 18,
+      "said_count": 4,
+      "inferred_count": 1,
+      "provisional": true,
+      "provisional_excess": 12,
+      "provisional_unbounded_excess": 9
+    },
+    {
+      "id": "claude-cowork",
+      "name": "Claude Cowork, on the desktop",
+      "assistant": "claude",
+      "connector": "the desktop work product",
+      "consent": "unknown",
+      "nearest_shape": null,
+      "nearest_note": "no published shape, and nothing this site has read documents what the product exposes: which local files, which applications, whether it reads past conversations, and on what approval. The gap is declared.",
+      "grant": "not measured",
+      "mandate": "cases/estate-002/mandates/claude-cowork.json",
+      "delta": null,
+      "page": "https://abp.sgit.ai/cases/estate-002/claude-cowork/index.html",
+      "want": [],
+      "do_not_want": [
+        "read.record.history",
+        "read.credential.host"
+      ],
+      "unstated_count": 21,
+      "said_count": 1,
+      "inferred_count": 1
+    }
+  ],
+  "page": "https://abp.sgit.ai/cases/estate-002/index.html",
+  "not_an_assessment": "Nothing here is an assessment, an audit or a review of any named product. The mandates were elicited from one person and have not been corrected by them; every delta marked provisional is against a shape that is not this deployment."
+}

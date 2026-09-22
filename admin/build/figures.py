@@ -905,3 +905,45 @@ def cost_lines():
                "agent and any proxy. And another person's hour, paid by a reviewer, an "
                "answerer or a reader, on nobody's bill and seen only by that person "
                "afterwards")
+
+
+def three_surfaces():
+    """One person, three surfaces of one product, and the account that holds the record."""
+    body = [DEFS,
+            '<text x="24" y="22" class="fh">One person, three surfaces, one account holding '
+            'every past conversation</text>',
+            '<text x="24" y="40" class="fk">the record is a credential store, and the '
+            'question is which surfaces can read it and when</text>']
+    body.append(_box(330, 56, 300, 40, "One person", "a deployer, elicited on 22 September"))
+    surfaces = [("In the browser", "connectors possibly on", "box"),
+                ("The coding agent", "a container, a repository, measured", "box"),
+                ("The desktop work product", "no published shape", "box-x")]
+    for i, (t, sub, cls) in enumerate(surfaces):
+        x = 40 + i * 300
+        body.append(_box(x, 136, 280, 46, t, sub, cls=cls))
+        body.append(_arrow(480, 96, x + 140, 136))
+    body.append(_box(40, 250, 880, 52, "One account with the vendor",
+                     "the record of every past conversation, on every surface, plus the "
+                     "connectors", cls="box-a"))
+    for i in range(3):
+        x = 40 + i * 300 + 140
+        body.append(_arrow(x, 182, x, 250, label="reads?" if i != 1 else "reads its own",
+                           cls="edge-a"))
+    body.append('<text x="24" y="336" class="ft"><tspan class="fb">The union runs in time '
+                'as well as across surfaces.</tspan> Everything ever pasted is in the '
+                'record, and turning reading off today</text>')
+    body.append('<text x="24" y="354" class="ft">does not take it out. A mandate over this '
+                'estate says what to do about what is already there.</text>')
+    return fig(_svg("".join(body), 370),
+               "Three surfaces over one account. Two of the three arrows carry a question "
+               "mark, because whether the browser and the desktop product read the whole "
+               "record is not measured; the coding agent's container was measured to hold "
+               "only its own session's outputs.",
+               "A figure here in the page: one person at the top, connected to three "
+               "surfaces of the same product: in the browser with connectors possibly on, "
+               "the coding agent in a measured container, and the desktop work product with "
+               "no published shape. All three sit over one account with the vendor, which "
+               "holds the record of every past conversation on every surface plus the "
+               "connectors. The browser and desktop arrows are labelled reads with a question "
+               "mark; the coding agent's is labelled reads its own. The union runs in time as "
+               "well as across surfaces: everything ever pasted is in the record")

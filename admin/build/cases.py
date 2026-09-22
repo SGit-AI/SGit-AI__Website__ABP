@@ -66,6 +66,7 @@ CASE = {
     "elicited_by": ELICITED_BY,
     "corrected": CORRECTED,
     "status": "elicited, not yet corrected by the deployer, no grant measured",
+    "source": "an interview",
     "assistants": [
         {"id": "chatgpt", "name": "ChatGPT", "consent": "allow all",
          "consent_note": "the per action approval is switched off: asked whether they were "
@@ -464,285 +465,44 @@ other, in a place they think of as theirs.
     },
 ]
 
-BY_ID = {d["id"]: d for d in DEPLOYMENTS}
+
+# THE BETA CASE'S OWN BLOCKS: the parts of its estate page that only it has. Every other
+# case brings its own function under the same name, and the generic page calls whichever it
+# is given between the deployments table and the open questions.
+def _beta_blocks(case, rec, D):
+    shared = case["shared_account"]
+    return [
+        ("h2", "The account is the junction"),
+        ("p", f"Four deployments run over **{shared['what']}**: mail, calendar, drive and "
+              f"the unattended scout. Each holds its own grant, each was consented to "
+              f"separately, and **the account's exposure is the union of the four**, which "
+              f"no single deployment's ABP can see. {shared['why_it_matters']}"),
+        ("p", "This is the fractal claim made concrete rather than argued. One level down, "
+              "each deployment is four objects over the grammar. One level up, the person "
+              "is four objects again: one mandate, in their words, against the union of "
+              "every grant they hold. Same shape, different ontology, and the account is "
+              "the node where the levels meet."),
+        ("h2", "What they told us about how they work"),
+        ("ul", [f"**{f['fact']}.** {f['detail']}" for f in rec["information_architecture"]]),
+        ("h2", "The calendar has no backup, and the mailbox is the only trail"),
+        ("p", "The thing the deployer values most is the thing with no backup. Asked, the "
+              "answer was that as far as they know a deleted event is gone. But some of a "
+              "calendar arrives as mail: invitations, updates, declines and cancellations "
+              "all land in the inbox, and from that trail some events could be rebuilt. "
+              "Which ones is a map nobody has drawn, and it decides what a deletion would "
+              "actually cost."),
+        figures.calendar_rebuild(),
+    ]
 
 
-# ---------------------------------------------------------------------------
-# the records
-# ---------------------------------------------------------------------------
-
-def _full_mandate(dep, D):
-    """The deployment's mandate as an abp/mandate/v1 record over all 23 primitives."""
-    m = dep["mandate"]
-    all_caps = [c["id"] for c in D["capabilities"]["capabilities"]]
-    named = set(m["want"]) | set(m["do_not_want"])
-    said = {c: {"status": s, "from": f} for c, (s, f) in m["said"].items()}
-    for c in all_caps:
-        if c not in named:
-            said[c] = {"status": "unstated", "from": "not raised in the interview"}
-    return {
-        "type": "abp/mandate/v1",
-        "id": f"{CASE['id']}/{dep['id']}",
-        "label": dep["name"],
-        "surface": ["web"],
-        "applies_to": [dep["nearest_shape"]] if dep["nearest_shape"] else [],
-        "applies_to_note": "the nearest published shape, so that a provisional delta can be "
-                           "computed; it is not this deployment",
-        "status": "elicited",
-        "authored": ELICITED,
-        "authored_by": ELICITED_BY,
-        "corrected": CORRECTED,
-        "description": f"Elicited from the deployer for {dep['name']}. Every line is marked "
-                       f"said, inferred or unstated in `said`; the clauses on the page carry "
-                       f"what the grammar has no word for.",
-        "want": m["want"],
-        "do_not_want": m["do_not_want"],
-        "unstated": [c for c in all_caps if c not in named],
-        "said": said,
-        "notes": m["notes"],
-        "not_in_grammar": dep["not_in_grammar"],
-        "provenance": {
-            "source": "an interview",
-            "elicited_by": ELICITED_BY,
-            "retrieved": ELICITED,
-            "note": "Elicited, not measured, not surveyed. Written down by abp.sgit.ai from the "
-                    "transcript; not yet corrected by the deployer. The correction is the "
-                    "mandate; this is the draft it will be made from.",
-        },
-    }
-
-
-def _delta(dep, D):
-    if not dep["nearest_shape"]:
-        return None
-    p = D["profiles"][dep["nearest_shape"]]
-    m = _full_mandate(dep, D)
-    d = abp.delta(p, m, D, computed_at=ELICITED + "T00:00:00Z")
-    d["provisional"] = True
-    d["provisional_note"] = ("Computed against the nearest published shape, which is not this "
-                             "deployment. It shows what the delta would look like if the "
-                             "deployment's grant matched that shape, and nothing more. The "
-                             "deployment's own grant has not been measured.")
-    return d
-
-
-def write(D):
-    """The case as files: an index, the case, one mandate per deployment and one provisional
-    delta per deployment that has a nearest shape. Regenerated on every build."""
-    OUT.mkdir(parents=True, exist_ok=True)
-    cdir = OUT / CASE["id"]
-    (cdir / "mandates").mkdir(parents=True, exist_ok=True)
-    (cdir / "deltas").mkdir(parents=True, exist_ok=True)
-    deps = []
-    for dep in DEPLOYMENTS:
-        m = _full_mandate(dep, D)
-        (cdir / "mandates" / f"{dep['id']}.json").write_text(
-            json.dumps(m, indent=2, ensure_ascii=False) + "\n")
-        d = _delta(dep, D)
-        rec = {
-            "id": dep["id"], "name": dep["name"], "assistant": dep["assistant"],
-            "connector": dep["connector"], "consent": dep["consent"],
-            "nearest_shape": dep["nearest_shape"], "nearest_note": dep["nearest_note"],
-            "grant": "not measured",
-            "mandate": f"cases/{CASE['id']}/mandates/{dep['id']}.json",
-            "delta": f"cases/{CASE['id']}/deltas/{dep['id']}.json" if d else None,
-            "page": f"https://abp.sgit.ai/cases/{CASE['id']}/{dep['id']}/index.html",
-            "want": m["want"], "do_not_want": m["do_not_want"],
-            "unstated_count": len(m["unstated"]),
-            "said_count": sum(1 for v in m["said"].values() if v["status"] == "said"),
-            "inferred_count": sum(1 for v in m["said"].values() if v["status"] == "inferred"),
-        }
-        if d:
-            (cdir / "deltas" / f"{dep['id']}.json").write_text(
-                json.dumps(d, indent=2, ensure_ascii=False) + "\n")
-            rec["provisional_excess"] = len(d["excess"])
-            rec["provisional_unbounded_excess"] = len(d["unbounded_excess"])
-        deps.append(rec)
-    case = {
-        "type": "abp/case/v1",
-        "id": CASE["id"],
-        "label": CASE["label"],
-        "who": CASE["who"],
-        "elicited": CASE["elicited"],
-        "elicited_by": CASE["elicited_by"],
-        "corrected": CASE["corrected"],
-        "status": CASE["status"],
-        "universe": "u9",
-        "assistants": CASE["assistants"],
-        "shared_account": CASE["shared_account"],
-        "out_of_scope": CASE["out_of_scope"],
-        "information_architecture": [{"fact": f, "detail": d}
-                                     for f, d in CASE["information_architecture"]],
-        "open_questions": [{"question": q, "why": w} for q, w in CASE["open_questions"]],
-        "deployments": deps,
-        "page": f"https://abp.sgit.ai/cases/{CASE['id']}/index.html",
-        "not_an_assessment": "Nothing here is a measurement, an assessment, an audit or a "
-                             "review of any named product. The mandates were elicited from one "
-                             "person and have not been corrected by them; the grants have not "
-                             "been measured; every delta is provisional against a shape that "
-                             "is not this deployment.",
-    }
-    (cdir / "case.json").write_text(json.dumps(case, indent=2, ensure_ascii=False) + "\n")
-    (OUT / "index.json").write_text(json.dumps({
-        "type": "abp/cases/v1",
-        "_what_this_is": "One person's estate of deployments, each an ABP, elicited rather than "
-                         "authored. The first thing this site holds in universe u9.",
-        "count": 1,
-        "cases": [{"id": CASE["id"], "label": CASE["label"], "file": f"cases/{CASE['id']}/case.json",
-                   "deployments": len(deps), "elicited": CASE["elicited"],
-                   "corrected": CASE["corrected"]}],
-    }, indent=2, ensure_ascii=False) + "\n")
-    return case
-
-
-# ---------------------------------------------------------------------------
-# the pages
-# ---------------------------------------------------------------------------
-
-def _href(dep_id=None):
-    base = f"cases/{CASE['id']}/"
-    return base + (f"{dep_id}/index.html" if dep_id else "index.html")
-
-
-def _prov_note():
-    return ("note", f"**Where the words on this page came from.** One interview, elicited by "
-                    f"riskmandate.ai on 21 September 2026 and transcribed automatically. The "
-                    f"transcript is not published; every quoted fragment was checked against "
-                    f"it. **Nothing here is measured.** No grant was probed, no tool list was "
-                    f"captured, and every delta is provisional against a published shape that "
-                    f"is not this deployment. The deployer has not yet corrected the draft, "
-                    f"and the correction is the mandate.")
-
-
-def _not_assessment():
-    return ("note", "**Nothing on this site is an assessment, an audit, a certification or a "
-                    "security review of any named product**, and no adjective on this page "
-                    "attaches to one. A case describes one person's deployments in their own "
-                    "words and against published shapes with their sources and dates.")
-
-
-def _index_page(case):
-    return {
-        "title": "Cases",
-        "description": "One person's estate of deployments, each an Agent Behaviour Policy, "
-                       "elicited from them rather than authored. The first thing this site "
-                       "holds in the estate universe.",
-        "blocks": [
-            ("crumb", "[Home](index.html) / Cases"),
-            ("h1", "Cases: one person's deployments, each an ABP"),
-            ("lead", "**Every shape on this site is a vendor's product in a configuration. A "
-                     "case is one level up and across from that**: one person, the assistants "
-                     "they actually run, the connectors they actually switched on, and a "
-                     "mandate for each elicited in their own words. The same four objects, "
-                     "one level up, with the person's single mandate on one side and the union "
-                     "of every grant they hold on the other."),
-            ("note", "**This is the first thing this site holds in universe u9, the estate.** "
-                     "Until now that universe was a name with nothing behind it. A case is "
-                     "not a twin: it was elicited by hand from one interview rather than "
-                     "synchronised from anything, and its status says so. "
-                     "[The universes](model/universes/index.html)."),
-            ("h2", "The cases"),
-            ("cards", [{
-                "title": f"[{case['label']}]({_href()})",
-                "sub": case["who"],
-                "foot": f"{len(case['deployments'])} deployments, elicited "
-                        f"{case['elicited']}, not yet corrected, no grant measured",
-            }]),
-            ("h2", "What a case holds"),
-            ("table", ["Object", "In a shape", "In a case"], [
-                ["**The mandate**", "a starting point the site authored, to be argued with",
-                 "**elicited from the person**, every line marked said, inferred or unstated"],
-                ["**The grant**", "measured or read from the vendor's pages on a date",
-                 "**not yet measured**; the nearest published shape stands in, labelled"],
-                ["**The delta**", "derived, stored, recomputed on every build",
-                 "**provisional**, against the nearest shape, and it says so"],
-                ["**The barrier**", "recorded per row from the vendor's words",
-                 "**unknown on most rows**, because the consent screens were not captured"],
-            ]),
-            ("p", "The honest summary is that a case starts with the mandate side full and the "
-                  "grant side empty, which is the opposite of a shape. The walkthrough at "
-                  "[your mailbox](gmail/index.html) is how the grant side gets filled: the "
-                  "person runs the discovery prompts in each assistant and the answers become "
-                  "the measured rows."),
-            _not_assessment(),
-            ("p", "[The cases as JSON](data/cases/index.json) &#183; "
-                  "[The four objects](model/index.html) &#183; "
-                  "[The estate universe](model/universes/u9/index.html)"),
-        ],
-    }
-
-
-def _case_page(case, D):
-    deps = case["deployments"]
-    shared = CASE["shared_account"]
-    rows = []
-    for d in deps:
-        near = (f"[`{d['nearest_shape']}`](examples/index.html)" if d["nearest_shape"]
-                else "**none published**")
-        prov = (f"{d['provisional_excess']} excess, {d['provisional_unbounded_excess']} "
-                f"unbounded" if d.get("delta") else "no shape to compute against")
-        rows.append([f"[{d['name']}]({_href(d['id'])})", d["consent"], near,
-                     f"{len(d['want'])} wanted, {len(d['do_not_want'])} refused, "
-                     f"{d['unstated_count']} unstated", prov])
-    ia = [f"**{f['fact']}.** {f['detail']}" for f in case["information_architecture"]]
-    oq = [f"**{q['question']}** {q['why']}" for q in case["open_questions"]]
-    return {
-        "title": f"Case {case['id']}: {case['label']}",
-        "description": "One business user, two chat assistants, six deployments over five "
-                       "connectors, four of them sharing one Google account. The estate mapped, "
-                       "the mandates elicited, the grants not yet measured.",
-        "blocks": [
-            ("crumb", f"[Home](index.html) / [Cases](cases/index.html) / {case['id']}"),
-            ("h1", case["label"]),
-            ("lead", f"**{case['who']}** Two assistants, six deployments, and one Google "
-                     f"account that four of them share. Everything below was elicited from "
-                     f"one interview on {case['elicited']}; nothing was measured."),
-            _prov_note(),
-
-            ("h2", "The estate"),
-            figures.estate_map(),
-            ("table", ["Deployment", "Consent", "Nearest published shape", "The mandate",
-                       "Provisional delta"], rows),
-            ("p", "**Allow all is on for every ChatGPT connector.** Asked whether they were "
-                  "authorising each action, the deployer said they had done the allow all. "
-                  "That is the third barrier kind switched to off: the one setting the product "
-                  "puts in front of an action is not there, so on every row of the four "
-                  "ChatGPT deployments the barrier is whatever Google's scopes leave and "
-                  "nothing above it."),
-
-            ("h2", "The account is the junction"),
-            ("p", f"Four deployments run over **{shared['what']}**: mail, calendar, drive and "
-                  f"the unattended scout. Each holds its own grant, each was consented to "
-                  f"separately, and **the account's exposure is the union of the four**, which "
-                  f"no single deployment's ABP can see. {shared['why_it_matters']}"),
-            ("p", "This is the fractal claim made concrete rather than argued. One level down, "
-                  "each deployment is four objects over the grammar. One level up, the person "
-                  "is four objects again: one mandate, in their words, against the union of "
-                  "every grant they hold. Same shape, different ontology, and the account is "
-                  "the node where the levels meet."),
-
-            ("h2", "What they told us about how they work"),
-            ("ul", ia),
-            ("h2", "The calendar has no backup, and the mailbox is the only trail"),
-            ("p", "The thing the deployer values most is the thing with no backup. Asked, the "
-                  "answer was that as far as they know a deleted event is gone. But some of a "
-                  "calendar arrives as mail: invitations, updates, declines and cancellations "
-                  "all land in the inbox, and from that trail some events could be rebuilt. "
-                  "Which ones is a map nobody has drawn, and it decides what a deletion would "
-                  "actually cost."),
-            figures.calendar_rebuild(),
-
-            ("h2", "Open questions the deployer can answer"),
-            ("p", "Each of these changes a mandate or a barrier on one of the pages below, and "
-                  "none of them can be answered from here."),
-            ("ol", oq),
-
-            ("h2", "The first prompt, for both assistants"),
-            ("p", "Before any of the six pages, one prompt to paste into each assistant "
-                  "separately. Two answers, one account, and the comparison is the point."),
-            prompt("Prompt A", "The connectors, from the inside",
-                   "Run it in ChatGPT and in Claude. The two lists together are the estate.",
-                   """
+def _beta_first_prompt():
+    return [
+        ("h2", "The first prompt, for both assistants"),
+        ("p", "Before any of the six pages, one prompt to paste into each assistant "
+              "separately. Two answers, one account, and the comparison is the point."),
+        prompt("Prompt A", "The connectors, from the inside",
+               "Run it in ChatGPT and in Claude. The two lists together are the estate.",
+               """
 List every connector and every external tool you have on my account, by name. For each
 one say:
 
@@ -755,25 +515,325 @@ one say:
 Then tell me which of these connectors share one underlying account, because a grant on
 one of them is a grant on the account.
 """),
+    ]
 
-            ("h2", "The six deployments"),
-            ("cards", [{"title": f"[{d['name']}]({_href(d['id'])})",
-                        "sub": d["nearest_note"],
-                        "foot": f"{d['said_count']} said, {d['inferred_count']} inferred, "
-                                f"{d['unstated_count']} unstated"} for d in deps]),
-            ("h2", "Out of scope"),
-            ("ul", case["out_of_scope"]),
+
+CASE["deployments"] = DEPLOYMENTS
+CASE["figure"] = figures.estate_map
+CASE["page_blocks"] = _beta_blocks
+CASE["first_prompt"] = _beta_first_prompt
+CASE["lead_tail"] = ("Two assistants, six deployments, and one Google account that four of "
+                     "them share.")
+CASE["description"] = ("One business user, two chat assistants, six deployments over five "
+                       "connectors, four of them sharing one Google account. The estate mapped, "
+                       "the mandates elicited, the grants not yet measured.")
+CASE["prov_note"] = (
+    "**Where the words on this page came from.** One interview, elicited by riskmandate.ai on "
+    "21 September 2026 and transcribed automatically. The transcript is not published; every "
+    "quoted fragment was checked against it. **Nothing here is measured.** No grant was "
+    "probed, no tool list was captured, and every delta is provisional against a published "
+    "shape that is not this deployment. The deployer has not yet corrected the draft, and the "
+    "correction is the mandate.")
+CASE["crumb_word"] = lambda dep: dep["connector"]
+CASE["nav_name"] = "One person, six deployments"
+
+BETA_001 = CASE
+
+import case_session_001  # noqa: E402
+import case_estate_002  # noqa: E402
+
+CASES = [BETA_001, case_session_001.CASE, case_estate_002.CASE]
+
+
+# ---------------------------------------------------------------------------
+# the records
+# ---------------------------------------------------------------------------
+
+def _full_mandate(case, dep, D):
+    """The deployment's mandate as an abp/mandate/v1 record over all 23 primitives."""
+    m = dep["mandate"]
+    all_caps = [c["id"] for c in D["capabilities"]["capabilities"]]
+    named = set(m["want"]) | set(m["do_not_want"])
+    said = {c: {"status": s, "from": f} for c, (s, f) in m["said"].items()}
+    for c in all_caps:
+        if c not in named:
+            said[c] = {"status": "unstated", "from": "not raised"}
+    return {
+        "type": "abp/mandate/v1",
+        "id": f"{case['id']}/{dep['id']}",
+        "label": dep["name"],
+        "surface": ["web"],
+        "applies_to": [dep["nearest_shape"]] if dep["nearest_shape"] else [],
+        "applies_to_note": ("the nearest published shape, so that a provisional delta can be "
+                            "computed; it is not this deployment"
+                            if dep.get("grant", "not measured") == "not measured" else
+                            "the published shape this deployment is"),
+        "status": "elicited",
+        "authored": case["elicited"],
+        "authored_by": case["elicited_by"],
+        "corrected": case["corrected"],
+        "description": f"Elicited from the deployer for {dep['name']}. Every line is marked "
+                       f"said, inferred or unstated in `said`; the clauses on the page carry "
+                       f"what the grammar has no word for.",
+        "want": m["want"],
+        "do_not_want": m["do_not_want"],
+        "unstated": [c for c in all_caps if c not in named],
+        "said": said,
+        "notes": m["notes"],
+        "not_in_grammar": dep["not_in_grammar"],
+        "provenance": {
+            "source": case["source"],
+            "elicited_by": case["elicited_by"],
+            "retrieved": case["elicited"],
+            "note": "Elicited, not measured, not surveyed. Written down by abp.sgit.ai; not "
+                    "yet corrected by the deployer. The correction is the mandate; this is the "
+                    "draft it will be made from.",
+        },
+    }
+
+
+def _delta(case, dep, D):
+    if not dep["nearest_shape"]:
+        return None
+    p = D["profiles"][dep["nearest_shape"]]
+    m = _full_mandate(case, dep, D)
+    d = abp.delta(p, m, D, computed_at=case["elicited"] + "T00:00:00Z")
+    if dep.get("grant", "not measured") == "not measured":
+        d["provisional"] = True
+        d["provisional_note"] = ("Computed against the nearest published shape, which is not "
+                                 "this deployment. It shows what the delta would look like if "
+                                 "the deployment's grant matched that shape, and nothing more. "
+                                 "The deployment's own grant has not been measured.")
+    else:
+        d["provisional"] = False
+        d["provisional_note"] = ("Computed against the published shape this deployment is, "
+                                 "whose rows were measured by the thing being profiled. The "
+                                 "mandate side is still an elicited draft.")
+    return d
+
+
+def _write_case(case, D):
+    cdir = OUT / case["id"]
+    (cdir / "mandates").mkdir(parents=True, exist_ok=True)
+    (cdir / "deltas").mkdir(parents=True, exist_ok=True)
+    deps = []
+    for dep in case["deployments"]:
+        m = _full_mandate(case, dep, D)
+        (cdir / "mandates" / f"{dep['id']}.json").write_text(
+            json.dumps(m, indent=2, ensure_ascii=False) + "\n")
+        d = _delta(case, dep, D)
+        rec = {
+            "id": dep["id"], "name": dep["name"], "assistant": dep["assistant"],
+            "connector": dep["connector"], "consent": dep["consent"],
+            "nearest_shape": dep["nearest_shape"], "nearest_note": dep["nearest_note"],
+            "grant": dep.get("grant", "not measured"),
+            "mandate": f"cases/{case['id']}/mandates/{dep['id']}.json",
+            "delta": f"cases/{case['id']}/deltas/{dep['id']}.json" if d else None,
+            "page": f"https://abp.sgit.ai/cases/{case['id']}/{dep['id']}/index.html",
+            "want": m["want"], "do_not_want": m["do_not_want"],
+            "unstated_count": len(m["unstated"]),
+            "said_count": sum(1 for v in m["said"].values() if v["status"] == "said"),
+            "inferred_count": sum(1 for v in m["said"].values() if v["status"] == "inferred"),
+        }
+        if d:
+            (cdir / "deltas" / f"{dep['id']}.json").write_text(
+                json.dumps(d, indent=2, ensure_ascii=False) + "\n")
+            rec["provisional"] = d["provisional"]
+            rec["provisional_excess"] = len(d["excess"])
+            rec["provisional_unbounded_excess"] = len(d["unbounded_excess"])
+        deps.append(rec)
+    out = {
+        "type": "abp/case/v1",
+        "id": case["id"],
+        "label": case["label"],
+        "who": case["who"],
+        "elicited": case["elicited"],
+        "elicited_by": case["elicited_by"],
+        "corrected": case["corrected"],
+        "status": case["status"],
+        "universe": "u9",
+        "assistants": case["assistants"],
+        "shared_account": case.get("shared_account"),
+        "out_of_scope": case.get("out_of_scope", []),
+        "information_architecture": [{"fact": f, "detail": d}
+                                     for f, d in case.get("information_architecture", [])],
+        "open_questions": [{"question": q, "why": w} for q, w in case.get("open_questions", [])],
+        "deployments": deps,
+        "page": f"https://abp.sgit.ai/cases/{case['id']}/index.html",
+        "not_an_assessment": "Nothing here is an assessment, an audit or a review of any named "
+                             "product. The mandates were elicited from one person and have not "
+                             "been corrected by them; every delta marked provisional is against "
+                             "a shape that is not this deployment.",
+    }
+    if case.get("ledger"):
+        out["ledger"] = case["ledger"]
+        (cdir / "ledger.json").write_text(
+            json.dumps({"type": "abp/ledger/v1", "case": case["id"], **case["ledger"]},
+                       indent=2, ensure_ascii=False) + "\n")
+    (cdir / "case.json").write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
+    return out
+
+
+def write(D):
+    """Every case as files: an index, and per case the case, one mandate per deployment, one
+    delta per deployment that has a shape to compute against, and a ledger where the case
+    has one. Regenerated on every build."""
+    OUT.mkdir(parents=True, exist_ok=True)
+    recs = [_write_case(c, D) for c in CASES]
+    (OUT / "index.json").write_text(json.dumps({
+        "type": "abp/cases/v1",
+        "_what_this_is": "One person's estate of deployments, each an ABP, elicited rather than "
+                         "authored. What this site holds in universe u9.",
+        "count": len(recs),
+        "cases": [{"id": r["id"], "label": r["label"], "file": f"cases/{r['id']}/case.json",
+                   "deployments": len(r["deployments"]), "elicited": r["elicited"],
+                   "corrected": r["corrected"], "ledger": bool(r.get("ledger"))} for r in recs],
+    }, indent=2, ensure_ascii=False) + "\n")
+    return recs
+
+
+# ---------------------------------------------------------------------------
+# the pages
+# ---------------------------------------------------------------------------
+
+def _href(case, dep_id=None):
+    base = f"cases/{case['id']}/"
+    return base + (f"{dep_id}/index.html" if dep_id else "index.html")
+
+
+def _not_assessment():
+    return ("note", "**Nothing on this site is an assessment, an audit, a certification or a "
+                    "security review of any named product**, and no adjective on this page "
+                    "attaches to one. A case describes one person's deployments in their own "
+                    "words and against published shapes with their sources and dates.")
+
+
+def _index_page(recs):
+    cards = []
+    for c, r in zip(CASES, recs):
+        cards.append({
+            "title": f"[{r['label']}]({_href(c)})",
+            "sub": r["who"],
+            "foot": f"{len(r['deployments'])} deployment"
+                    f"{'s' if len(r['deployments']) != 1 else ''}, elicited {r['elicited']}, "
+                    + ("with a ledger" if r.get("ledger") else "no grant measured"),
+        })
+    return {
+        "title": "Cases",
+        "description": "One person's estate of deployments, each an Agent Behaviour Policy, "
+                       "elicited from them rather than authored. What this site holds in the "
+                       "estate universe.",
+        "blocks": [
+            ("crumb", "[Home](index.html) / Cases"),
+            ("h1", "Cases: one person's deployments, each an ABP"),
+            ("lead", "**Every shape on this site is a vendor's product in a configuration. A "
+                     "case is one level up and across from that**: one person, the assistants "
+                     "they actually run, the connectors they actually switched on, and a "
+                     "mandate for each elicited in their own words. The same four objects, "
+                     "one level up, with the person's single mandate on one side and the union "
+                     "of every grant they hold on the other."),
+            ("note", "**This is what this site holds in universe u9, the estate.** A case is "
+                     "not a twin: it was elicited by hand rather than synchronised from "
+                     "anything, and its status says so. "
+                     "[The universes](model/universes/index.html)."),
+            ("h2", "The cases"),
+            ("cards", cards),
+            ("h2", "What a case holds"),
+            ("table", ["Object", "In a shape", "In a case"], [
+                ["**The mandate**", "a starting point the site authored, to be argued with",
+                 "**elicited from the person**, every line marked said, inferred or unstated"],
+                ["**The grant**", "measured or read from the vendor's pages on a date",
+                 "**usually not yet measured**; the nearest published shape stands in, "
+                 "labelled. One case is the shape this site is maintained from, which was "
+                 "measured"],
+                ["**The delta**", "derived, stored, recomputed on every build",
+                 "**provisional** against the nearest shape wherever the grant is not "
+                 "measured, and it says so"],
+                ["**The barrier**", "recorded per row from the vendor's words",
+                 "**unknown on most rows**, because consent screens were not captured"],
+                ["**The ledger**", "not a thing a shape has",
+                 "**what one session actually spent**, counted from the repository where it "
+                 "could be and marked estimated or cannot see where it could not"],
+            ]),
+            ("p", "The honest summary is that a case starts with the mandate side full and the "
+                  "grant side empty, which is the opposite of a shape. The walkthroughs at "
+                  "[your mailbox](gmail/index.html) and [the cost ABP](cost/index.html) are "
+                  "how the other side gets filled: the person runs the discovery prompts in "
+                  "each assistant and the answers become the measured rows."),
             _not_assessment(),
-            ("p", f"[The case as JSON](data/cases/{case['id']}/case.json) &#183; "
-                  "[The walkthrough the discovery prompts come from](gmail/index.html) &#183; "
+            ("p", "[The cases as JSON](data/cases/index.json) &#183; "
+                  "[The four objects](model/index.html) &#183; "
                   "[The estate universe](model/universes/u9/index.html)"),
         ],
     }
 
 
-def _dep_page(dep, case, D):
-    rec = next(x for x in case["deployments"] if x["id"] == dep["id"])
-    m = _full_mandate(dep, D)
+def _dep_rows(case, rec):
+    rows = []
+    for d in rec["deployments"]:
+        near = (f"[`{d['nearest_shape']}`](examples/index.html)" if d["nearest_shape"]
+                else "**none published**")
+        if d.get("delta"):
+            prov = (f"{d['provisional_excess']} excess, {d['provisional_unbounded_excess']} "
+                    f"unbounded" + (" (provisional)" if d["provisional"] else ""))
+        else:
+            prov = "no shape to compute against"
+        rows.append([f"[{d['name']}]({_href(case, d['id'])})", d["consent"], near,
+                     f"{len(d['want'])} wanted, {len(d['do_not_want'])} refused, "
+                     f"{d['unstated_count']} unstated", prov])
+    return rows
+
+
+def _case_page(case, rec, D):
+    n = len(rec["deployments"])
+    blocks = [
+        ("crumb", f"[Home](index.html) / [Cases](cases/index.html) / {case['id']}"),
+        ("h1", case["label"]),
+        ("lead", f"**{case['who']}** {case['lead_tail']} Everything below was elicited on "
+                 f"{case['elicited']}; " + case.get("lead_measured", "nothing was measured.")),
+        ("note", case["prov_note"]),
+        ("h2", "The estate"),
+    ]
+    if case.get("figure"):
+        blocks.append(case["figure"]())
+    blocks.append(("table", ["Deployment", "Consent", "Nearest published shape", "The mandate",
+                             "Delta"], _dep_rows(case, rec)))
+    blocks += case["page_blocks"](case, rec, D)
+    if rec["open_questions"]:
+        blocks += [
+            ("h2", "Open questions the deployer can answer"),
+            ("p", "Each of these changes a mandate or a barrier on one of the pages below, and "
+                  "none of them can be answered from here."),
+            ("ol", [f"**{q['question']}** {q['why']}" for q in rec["open_questions"]]),
+        ]
+    if case.get("first_prompt"):
+        blocks += case["first_prompt"]()
+    blocks += [
+        ("h2", f"The {n} deployment{'s' if n != 1 else ''}"),
+        ("cards", [{"title": f"[{d['name']}]({_href(case, d['id'])})",
+                    "sub": d["nearest_note"],
+                    "foot": f"{d['said_count']} said, {d['inferred_count']} inferred, "
+                            f"{d['unstated_count']} unstated"} for d in rec["deployments"]]),
+    ]
+    if rec["out_of_scope"]:
+        blocks += [("h2", "Out of scope"), ("ul", rec["out_of_scope"])]
+    blocks += [
+        _not_assessment(),
+        ("p", f"[The case as JSON](data/cases/{case['id']}/case.json) &#183; "
+              "[The walkthroughs the prompts come from](gmail/index.html) &#183; "
+              "[The estate universe](model/universes/u9/index.html)"),
+    ]
+    return {
+        "title": f"Case {case['id']}: {case['label']}",
+        "description": case["description"],
+        "blocks": blocks,
+    }
+
+
+def _dep_page(case, dep, rec, D):
+    r = next(x for x in rec["deployments"] if x["id"] == dep["id"])
+    m = _full_mandate(case, dep, D)
+    measured = dep.get("grant", "not measured") != "not measured"
     said_rows = []
     for cap in m["want"] + m["do_not_want"]:
         s = m["said"][cap]
@@ -785,16 +845,16 @@ def _dep_page(dep, case, D):
     unstated = ", ".join(f"`{c}`" for c in m["unstated"])
     blocks = [
         ("crumb", f"[Home](index.html) / [Cases](cases/index.html) / "
-                  f"[{case['id']}]({_href()}) / {dep['connector']}"),
+                  f"[{case['id']}]({_href(case)}) / {case['crumb_word'](dep)}"),
         ("h1", dep["name"]),
         ("lead", f"**Consent: {dep['consent']}.** The mandate below was elicited, not "
-                 f"authored: {rec['said_count']} line{'s' if rec['said_count'] != 1 else ''} "
-                 f"the deployer said, {rec['inferred_count']} inferred from something they "
-                 f"said, and "
-                 f"{rec['unstated_count']} of the {D['capabilities']['count']} primitives never "
-                 f"raised. The grant has not been measured."),
-        _prov_note(),
-
+                 f"authored: {r['said_count']} line{'s' if r['said_count'] != 1 else ''} "
+                 f"the deployer said, {r['inferred_count']} inferred from something they "
+                 f"said, and {r['unstated_count']} of the {D['capabilities']['count']} "
+                 f"primitives never raised. "
+                 + ("The grant is the published shape, measured." if measured
+                    else "The grant has not been measured.")),
+        ("note", case["prov_note"]),
         ("h2", "The mandate, line by line"),
         ("table", ["Capability", "Side", "How we know", "From what"], said_rows),
         ("p", f"**Unstated, {len(m['unstated'])} primitives:** {unstated}."),
@@ -807,34 +867,37 @@ def _dep_page(dep, case, D):
     blocks += [
         ("ul", dep["not_in_grammar"]),
         ("p", "The grammar was promoted from a capability map drawn for coding agents and "
-              "browsers, and a mailbox, a calendar and a channel are not files. Everything "
-              "above carries in the clauses instead, which is where the rules that cannot be "
-              "expressed as a permission were always going to live."),
-
-        ("h2", "The nearest published shape, and the provisional delta"),
+              "browsers. Everything above carries in the clauses instead, which is where the "
+              "rules that cannot be expressed as a permission were always going to live."),
+        ("h2", "The published shape, and the delta" if measured
+               else "The nearest published shape, and the provisional delta"),
         ("p", f"**{shell.ascii_safe(dep['nearest_note'][0].upper() + dep['nearest_note'][1:])}**"),
     ]
     if dep["nearest_shape"]:
         p = D["profiles"][dep["nearest_shape"]]
-        d = _delta(dep, D)
+        d = _delta(case, dep, D)
         blocks += [
-            ("note", "**This is not this deployment's delta.** It is what the delta would be "
+            ("note", "**This is the deployment's own delta on the grant side and a draft on "
+                     "the mandate side.** The shape was measured by the thing being profiled; "
+                     "the mandate is elicited and not yet corrected." if measured else
+                     "**This is not this deployment's delta.** It is what the delta would be "
                      "if the deployment's grant matched the nearest published shape, computed "
                      "so the reader can see the mechanism with real rows. The deployment's own "
                      "grant is produced by the discovery prompt at the bottom of the page."),
-            ("table", ["Field", "Against the nearest shape"], [
+            ("table", ["Field", "Against the published shape" if measured
+                                else "Against the nearest shape"], [
                 ["Shape", p["product"]],
                 ["Grant", f"{p['grant_size']} of {D['capabilities']['count']} primitives, "
                           f"{p['rows']['measured']} of {p['rows']['total']} rows measured"],
-                ["Mandate", f"{len(m['want'])} primitive{'s' if len(m['want']) != 1 else ''} wanted"],
+                ["Mandate", f"{len(m['want'])} primitive{'s' if len(m['want']) != 1 else ''} "
+                            f"wanted"],
                 ["Excess", str(len(d["excess"]))],
                 ["Unbounded excess", str(len(d["unbounded_excess"]))],
                 ["Shortfall", ", ".join(f"`{c}`" for c in d["shortfall"]) or "none"],
             ]),
             abp_pages.grant_table(p, D, m, d),
-            ("p", f"[The nearest shape's own page](examples/index.html) &#183; "
-                  f"[the provisional delta as JSON](data/cases/{case['id']}/deltas/"
-                  f"{dep['id']}.json)"),
+            ("p", f"[The shape's own page](examples/index.html) &#183; "
+                  f"[the delta as JSON](data/cases/{case['id']}/deltas/{dep['id']}.json)"),
         ]
     else:
         blocks += [
@@ -842,6 +905,8 @@ def _dep_page(dep, case, D):
                      "be a fiction, so this deployment's page holds the mandate and the clauses "
                      "and waits for the grant."),
         ]
+    if dep.get("extra_blocks"):
+        blocks += dep["extra_blocks"](case, dep, rec, D)
     blocks += [
         ("h2", "The clauses, drafted for the deployer to correct"),
         ("p", "In their voice, as instructions to the assistant, carrying everything the "
@@ -849,16 +914,16 @@ def _dep_page(dep, case, D):
               "down. It bounds nothing and it moves where responsibility lands, which is "
               "[step four of the walkthrough](gmail/what-a-prompt-cannot-do/index.html)."),
         prompt("The clauses", f"Rules for {dep['connector']}",
-               "Paste at the top of any conversation where the assistant has this connector. "
-               "Edit first: the lines you change are the ones that were actually yours.",
+               "Paste at the top of any conversation where the assistant has this. Edit "
+               "first: the lines you change are the ones that were actually yours.",
                dep["clauses"]),
-        ("h2", "The discovery prompt, for this connector"),
-        ("p", "This is what produces the grant. The answer replaces the nearest shape above "
-              "with the deployment's own rows."),
+        ("h2", "The discovery prompt, for this deployment"),
+        ("p", "This is what produces the grant." if not measured else
+              "The grant is measured, and this is what checks it against today's build."),
         prompt("Prompt B", f"What you can do with {dep['connector']}",
                "One table, hardest thing to undo at the top, every line marked read or "
                "inferred.",
-               f"""
+               dep.get("discovery") or f"""
 Put every tool you have for {dep['connector']} into one table, one row per tool, with
 these columns.
 
@@ -877,31 +942,35 @@ these tools you have already used in our conversations, and which you cannot tel
 """),
         _not_assessment(),
         ("p", f"[The mandate as JSON](data/cases/{case['id']}/mandates/{dep['id']}.json) "
-              f"&#183; [The estate]({_href()}) &#183; "
+              f"&#183; [The estate]({_href(case)}) &#183; "
               "[The walkthrough](gmail/index.html)"),
     ]
-    # the step before and after, so the six can be walked
-    ids = [x["id"] for x in DEPLOYMENTS]
+    ids = [x["id"] for x in case["deployments"]]
+    by_id = {x["id"]: x for x in case["deployments"]}
     i = ids.index(dep["id"])
     nav = []
     if i:
-        nav.append(["**Before this**", f"[{BY_ID[ids[i-1]]['name']}]({_href(ids[i-1])})"])
+        nav.append(["**Before this**", f"[{by_id[ids[i-1]]['name']}]({_href(case, ids[i-1])})"])
     if i + 1 < len(ids):
-        nav.append(["**Next**", f"[{BY_ID[ids[i+1]]['name']}]({_href(ids[i+1])})"])
-    nav.append(["**The estate**", f"[{case['label']}]({_href()})"])
+        nav.append(["**Next**", f"[{by_id[ids[i+1]]['name']}]({_href(case, ids[i+1])})"])
+    nav.append(["**The estate**", f"[{case['label']}]({_href(case)})"])
     blocks.append(("table", ["", ""], nav))
     return {
         "title": f"Case {case['id']}: {dep['name']}",
         "description": f"The elicited mandate, the clauses and the discovery prompt for "
-                       f"{dep['name']}, with the nearest published shape standing in for a "
-                       f"grant that has not been measured.",
+                       f"{dep['name']}"
+                       + (", against the published shape this deployment is." if measured else
+                          ", with the nearest published shape standing in for a grant that "
+                          "has not been measured."),
         "blocks": blocks,
     }
 
 
 def pages(D):
-    case = write(D)
-    out = {"cases/index.html": _index_page(case), _href(): _case_page(case, D)}
-    for dep in DEPLOYMENTS:
-        out[_href(dep["id"])] = _dep_page(dep, case, D)
+    recs = write(D)
+    out = {"cases/index.html": _index_page(recs)}
+    for case, rec in zip(CASES, recs):
+        out[_href(case)] = _case_page(case, rec, D)
+        for dep in case["deployments"]:
+            out[_href(case, dep["id"])] = _dep_page(case, dep, rec, D)
     return out

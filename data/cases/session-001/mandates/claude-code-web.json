@@ -1,0 +1,156 @@
+{
+  "type": "abp/mandate/v1",
+  "id": "session-001/claude-code-web",
+  "label": "Claude Code on the web, one repository attached: the session that built v0.4.0 to v0.8.1",
+  "surface": [
+    "web"
+  ],
+  "applies_to": [
+    "anthropic/claude-code-remote/ccr-container"
+  ],
+  "applies_to_note": "the published shape this deployment is",
+  "status": "elicited",
+  "authored": "2026-09-22",
+  "authored_by": "the agent that ran the session, from the deployer's nine messages and the harness's standing rules, and from the repository and the code host's workflow log for every count",
+  "corrected": null,
+  "description": "Elicited from the deployer for Claude Code on the web, one repository attached: the session that built v0.4.0 to v0.8.1. Every line is marked said, inferred or unstated in `said`; the clauses on the page carry what the grammar has no word for.",
+  "want": [
+    "read.file.project",
+    "write.file.project",
+    "write.repository.project",
+    "write.repository.tenant",
+    "send.endpoint.allowed",
+    "execute.process.host",
+    "read.record.history"
+  ],
+  "do_not_want": [
+    "create.schedule.tenant"
+  ],
+  "unstated": [
+    "read.file.host",
+    "write.file.host",
+    "delete.file.host",
+    "execute.process.self",
+    "send.endpoint.world",
+    "read.credential.host",
+    "authenticate-as.credential.tenant",
+    "grant.credential.self",
+    "send.message.world",
+    "read.message.tenant",
+    "authenticate-as.credential.signing",
+    "create.record.world",
+    "write.budget.tenant",
+    "create.schedule.host",
+    "read.record.browsing"
+  ],
+  "said": {
+    "read.file.project": {
+      "status": "said",
+      "from": "\"start by reviewing the content on this site\""
+    },
+    "write.file.project": {
+      "status": "said",
+      "from": "\"build those two next versions\""
+    },
+    "write.repository.project": {
+      "status": "said",
+      "from": "\"commit your work\", the harness's branch rules"
+    },
+    "write.repository.tenant": {
+      "status": "said",
+      "from": "\"push to dev what you have done, which should trigger the CI pipeline\""
+    },
+    "send.endpoint.allowed": {
+      "status": "said",
+      "from": "\"read the guidance at sgit.ai/llms.txt\", \"read in detail the content at RiskMandate.ai\""
+    },
+    "execute.process.host": {
+      "status": "inferred",
+      "from": "building and validating the site is running programs in the container; nobody said so and every release needed it"
+    },
+    "read.record.history": {
+      "status": "said",
+      "from": "the harness pointed at the session's own transcript for details lost to context compaction"
+    },
+    "create.schedule.tenant": {
+      "status": "inferred",
+      "from": "no routine, wakeup or new session was asked for, and the harness rule says not to poll"
+    },
+    "read.file.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "write.file.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "delete.file.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "execute.process.self": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "send.endpoint.world": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "read.credential.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "authenticate-as.credential.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "grant.credential.self": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "send.message.world": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "read.message.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "authenticate-as.credential.signing": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "create.record.world": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "write.budget.tenant": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "create.schedule.host": {
+      "status": "unstated",
+      "from": "not raised"
+    },
+    "read.record.browsing": {
+      "status": "unstated",
+      "from": "not raised"
+    }
+  },
+  "notes": {
+    "how much": "every clause that actually governed this session was over a count, not a capability: how many commits, whether to spawn subagents, where scratch files go. None of them is a row in this table, which is the finding the cost walkthrough predicted"
+  },
+  "not_in_grammar": [
+    "commit only when asked, which is a rule over when rather than over whether",
+    "no subagents unless asked, which is a rule over delegation",
+    "scratch files in the scratchpad, which is a rule over where",
+    "one article per release, which is a rule over what must accompany a push",
+    "do not poll in a loop, which is a rule over how often"
+  ],
+  "provenance": {
+    "source": "the session's own messages and repository",
+    "elicited_by": "the agent that ran the session, from the deployer's nine messages and the harness's standing rules, and from the repository and the code host's workflow log for every count",
+    "retrieved": "2026-09-22",
+    "note": "Elicited, not measured, not surveyed. Written down by abp.sgit.ai; not yet corrected by the deployer. The correction is the mandate; this is the draft it will be made from."
+  }
+}

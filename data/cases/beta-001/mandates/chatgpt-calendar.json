@@ -51,87 +51,87 @@
     },
     "read.file.project": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "write.file.project": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "read.file.host": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "write.file.host": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "delete.file.host": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "execute.process.host": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "execute.process.self": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "send.endpoint.allowed": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "send.endpoint.world": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "read.credential.host": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "authenticate-as.credential.tenant": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "grant.credential.self": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "read.message.tenant": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "write.repository.project": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "write.repository.tenant": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "authenticate-as.credential.signing": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "create.record.world": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "write.budget.tenant": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "create.schedule.host": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "read.record.history": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     },
     "read.record.browsing": {
       "status": "unstated",
-      "from": "not raised in the interview"
+      "from": "not raised"
     }
   },
   "notes": {
@@ -148,6 +148,6 @@
     "source": "an interview",
     "elicited_by": "riskmandate.ai, in an interview on 21 September 2026, transcribed automatically; the transcript is held by riskmandate.ai and is not published",
     "retrieved": "2026-09-21",
-    "note": "Elicited, not measured, not surveyed. Written down by abp.sgit.ai from the transcript; not yet corrected by the deployer. The correction is the mandate; this is the draft it will be made from."
+    "note": "Elicited, not measured, not surveyed. Written down by abp.sgit.ai; not yet corrected by the deployer. The correction is the mandate; this is the draft it will be made from."
   }
 }

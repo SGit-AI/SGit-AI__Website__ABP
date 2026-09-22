@@ -108,6 +108,12 @@
   <url><loc>https://abp.sgit.ai/cases/beta-001/chatgpt-granola/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/cases/beta-001/chatgpt-inbox-scout/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/cases/beta-001/claude-slack/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cases/session-001/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cases/session-001/claude-code-web/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cases/estate-002/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cases/estate-002/claude-web/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cases/estate-002/claude-code/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cases/estate-002/claude-cowork/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/articles/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html</loc><priority>0.7</priority></url>
@@ -143,6 +149,7 @@
   <url><loc>https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/versions/v0.9.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.8.1/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.8.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.7.1/index.html</loc><priority>0.7</priority></url>
