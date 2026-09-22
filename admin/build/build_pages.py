@@ -172,6 +172,31 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.8.1", "2026-09-22",
+     "the cost ABP gets its article, with six figures captured from the v0.8.0 tag",
+     {
+       "summary":
+         "One article per release, so the release that added the cost walkthrough gets one. "
+         "It covers why cost is a property of every call rather than a capability, why the "
+         "section is written over the runtime universe and says so on every page, why the "
+         "fifth cost line is the reason the section exists, why a behaviour policy is what a "
+         "skill runs inside rather than another skill, and why a limit over a number the "
+         "agent cannot see is an expectation twice over. Six screenshots from a checkout of "
+         "the v0.8.0 tag on the day it shipped.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "An article for v0.8.0, the twelfth in the section, with six screenshots and the "
+         "two figures the walkthrough carries. It ends on what the release did not settle: "
+         "nothing measured, placeholder numbers, no meter for a person's hour, no case "
+         "running the prompts, and cost never becoming a node.",
+       ],
+       "basis": [
+         "The v0.8.0 tag, checked out into a detached worktree and served locally, the same "
+         "method as every other article's figures.",
+       ],
+     }),
     ("v0.8.0", "2026-09-22",
      "the cost ABP: a walkthrough over how much an agent may spend rather than what it may "
      "do, with a ledger every turn and an accountant to read it",

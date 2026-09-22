@@ -2,7 +2,7 @@
 
 > Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
 
-*Source: <https://abp.sgit.ai/articles/the-fact-diff-reads-the-published-page/index.html> · site v0.8.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/the-fact-diff-reads-the-published-page/index.html> · site v0.8.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
 
-> **This is the article for release v0.4.2, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.2's own release record](../../versions/v0.4.2/index.md). It is release 6 of 11 on this site. Every screenshot below was captured from a checkout of the `v0.4.2` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.3](../../articles/the-confirmations-flag-as-a-path/index.md), or back to [v0.4.1](../../articles/nine-universes-as-data/index.md).
+> **This is the article for release v0.4.2, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.2's own release record](../../versions/v0.4.2/index.md). It is release 6 of 12 on this site. Every screenshot below was captured from a checkout of the `v0.4.2` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.4.3](../../articles/the-confirmations-flag-as-a-path/index.md), or back to [v0.4.1](../../articles/nine-universes-as-data/index.md).
 
 ## A rule with no mechanism behind it
 

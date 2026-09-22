@@ -2,7 +2,7 @@
 
 > Every shape on this site is a vendor's product in a configuration. A case is one person, the assistants they actually run and the connectors they actually switched on, with a mandate for each in their own words. The first one has two assistants, six deployments and one account four of them share, and it starts with the mandate side full and the grant side empty, which is the opposite of a shape.
 
-*Source: <https://abp.sgit.ai/articles/one-person-six-deployments/index.html> · site v0.8.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/one-person-six-deployments/index.html> · site v0.8.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 Every shape on this site is a vendor's product in a configuration. A case is one person, the assistants they actually run and the connectors they actually switched on, with a mandate for each in their own words. The first one has two assistants, six deployments and one account four of them share, and it starts with the mandate side full and the grant side empty, which is the opposite of a shape.
 
-> **This is the article for release v0.7.0, published 21 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.7.0's own release record](../../versions/v0.7.0/index.md). It is release 11 of 11 on this site, and the most recent. Every screenshot below was captured from a checkout of the `v0.7.0` tag, so it shows the site as it stood at that release and not as it stands today. Nothing follows it yet, or back to [v0.6.0](../../articles/thirteen-prompts-and-the-fourth-page/index.md).
+> **This is the article for release v0.7.0, published 21 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.7.0's own release record](../../versions/v0.7.0/index.md). It is release 11 of 12 on this site. Every screenshot below was captured from a checkout of the `v0.7.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.8.0](../../articles/how-much-not-just-what/index.md), or back to [v0.6.0](../../articles/thirteen-prompts-and-the-fourth-page/index.md).
 
 ## A shape is the vendor's. A case is the person's
 
@@ -112,6 +112,7 @@ The universes map at v0.4.1 named the estate as universe u9 and marked it a gap:
 | Direction | The release |
 |---|---|
 | **Older** | [v0.6.0: Thirteen prompts a reader runs against their own mailbox, and the fourth page that says what a prompt cannot do](../../articles/thirteen-prompts-and-the-fourth-page/index.md) |
+| **Newer** | [v0.8.0: The cost ABP: every ABP so far bounded what, and this one bounds how much](../../articles/how-much-not-just-what/index.md) |
 | **All of them** | [One article per release](../../articles/index.md) |
 
 ---

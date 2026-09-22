@@ -2,7 +2,7 @@
 
 > A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
 
-*Source: <https://abp.sgit.ai/articles/seven-shapes-somebody-else-measured/index.html> · site v0.8.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/seven-shapes-somebody-else-measured/index.html> · site v0.8.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
 
-> **This is the article for release v0.4.4, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.4's own release record](../../versions/v0.4.4/index.md). It is release 8 of 11 on this site. Every screenshot below was captured from a checkout of the `v0.4.4` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.5.0](../../articles/one-article-per-release/index.md), or back to [v0.4.3](../../articles/the-confirmations-flag-as-a-path/index.md).
+> **This is the article for release v0.4.4, published 20 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.4.4's own release record](../../versions/v0.4.4/index.md). It is release 8 of 12 on this site. Every screenshot below was captured from a checkout of the `v0.4.4` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.5.0](../../articles/one-article-per-release/index.md), or back to [v0.4.3](../../articles/the-confirmations-flag-as-a-path/index.md).
 
 ## Somebody else did the work first
 

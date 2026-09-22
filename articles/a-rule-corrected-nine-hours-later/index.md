@@ -2,7 +2,7 @@
 
 > The foundation document says twice that the delta is computed and never stored. Half of that was right. The corrected rule is harder, the passages were not rewritten, and the check that enforced the old rule was inverted to enforce the new one.
 
-*Source: <https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html> · site v0.8.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html> · site v0.8.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 The foundation document says twice that the delta is computed and never stored. Half of that was right. The corrected rule is harder, the passages were not rewritten, and the check that enforced the old rule was inverted to enforce the new one.
 
-> **This is the article for release v0.2.0, published 11 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.2.0's own release record](../../versions/v0.2.0/index.md). It is release 2 of 11 on this site. Every screenshot below was captured from a checkout of the `v0.2.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.3.0](../../articles/three-nodes-and-three-edges/index.md), or back to [v0.1.0](../../articles/an-ontology-that-already-existed/index.md).
+> **This is the article for release v0.2.0, published 11 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.2.0's own release record](../../versions/v0.2.0/index.md). It is release 2 of 12 on this site. Every screenshot below was captured from a checkout of the `v0.2.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.3.0](../../articles/three-nodes-and-three-edges/index.md), or back to [v0.1.0](../../articles/an-ontology-that-already-existed/index.md).
 
 ## The rule that was wrong by lunchtime
 

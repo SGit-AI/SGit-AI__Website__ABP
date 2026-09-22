@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>v0.8.0: The cost ABP: every ABP so far bounded what, and this one bounds how much - abp.sgit.ai</title>
+<meta name="description" content="Cost is not a capability. It is a property of every call, the grammar has one primitive for money and none for a count, and quantity lives in the one universe this site has no node in. So the release says that first, then puts the substance where it can live: twelve prompts, a ledger every turn, and an accountant to read it.">
+<link rel="canonical" href="https://abp.sgit.ai/articles/how-much-not-just-what/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/articles/how-much-not-just-what/index.html">
+<meta property="og:title" content="v0.8.0: The cost ABP: every ABP so far bounded what, and this one bounds how much - abp.sgit.ai">
+<meta property="og:description" content="Cost is not a capability. It is a property of every call, the grammar has one primitive for money and none for a count, and quantity lives in the one universe this site has no node in. So the release says that first, then puts the substance where it can live: twelve prompts, a ledger every turn, and an accountant to read it.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.8.1/index.html" title="What changed in v0.8.1, and the commit it was built from">v0.8.1</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../gmail/index.html">Your mailbox<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../gmail/index.html">The walkthrough</a>
+      <a class="sl" href="../../gmail/what-it-can-do/index.html">Step 1: What it can already do</a>
+      <a class="sl" href="../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a>
+      <a class="sl" href="../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a>
+      <a class="sl" href="../../gmail/what-a-prompt-cannot-do/index.html">Step 4: What a prompt cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../cost/index.html">The cost ABP<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../cost/index.html">The walkthrough</a>
+      <a class="sl" href="../../cost/what-it-spent/index.html">Step 1: What it has already spent</a>
+      <a class="sl" href="../../cost/what-you-paid-for/index.html">Step 2: What you actually paid for</a>
+      <a class="sl" href="../../cost/write-the-cost-policy/index.html">Step 3: Write the cost policy</a>
+      <a class="sl" href="../../cost/what-a-count-cannot-do/index.html">Step 4: What a clause over a count cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../cases/index.html">Cases<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../cases/beta-001/index.html">One person, six deployments</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-gmail/index.html">Gmail</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-calendar/index.html">Google Calendar</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-drive/index.html">Google Drive</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-granola/index.html">a meeting note taker</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-inbox-scout/index.html">Gmail, unattended</a>
+      <a class="sl" href="../../cases/beta-001/claude-slack/index.html">Slack</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../articles/index.html">One per release</a>
+      <a class="sl" href="../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
+      <a class="sl" href="../../articles/thirteen-prompts-and-the-fourth-page/index.html">v0.6.0</a>
+      <a class="sl" href="../../articles/one-person-six-deployments/index.html">v0.7.0</a>
+      <a class="sl here" href="../../articles/how-much-not-just-what/index.html">v0.8.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../articles/index.html">Articles</a> / v0.8.0</p>
+  <h1>v0.8.0: The cost ABP: every ABP so far bounded what, and this one bounds how much</h1>
+  <p class="lead">Cost is not a capability. It is a property of every call, the grammar has one primitive for money and none for a count, and quantity lives in the one universe this site has no node in. So the release says that first, then puts the substance where it can live: twelve prompts, a ledger every turn, and an accountant to read it.</p>
+  <div class="note"><b>This is the article for release v0.8.0, published 22 September 2026.</b> Every release of this site gets one, and it explains what that release changed and why rather than restating <a href="../../versions/v0.8.0/index.html">v0.8.0's own release record</a>. It is release 12 of 12 on this site, and the most recent. Every screenshot below was captured from a checkout of the <code>v0.8.0</code> tag, so it shows the site as it stood at that release and not as it stands today. Nothing follows it yet, or back to <a href="../../articles/one-person-six-deployments/index.html">v0.7.0</a>.</div>
+  <h2 id="the-bill-the-repository-and-the-review-queue-all-grew">The bill, the repository and the review queue all grew</h2>
+  <p>The request that produced this release was a deployer's list, and it is worth keeping in its own order: agents writing too many files, committing too many things, creating too much traffic, spending a lot of tokens, doing research that did not need doing, and, the one that had no name until somebody in one of their projects invented an accountant role to notice it, <b>offloading work to people</b>. Every item on that list is a cost. Not one of them is a capability.</p>
+  <p>That is the whole problem with writing an ABP about cost, and the release is built around saying so rather than around pretending otherwise.</p>
+  <figure class="shot"><img src="../../assets/articles/v080-cost-hub.png" alt="The cost walkthrough's hub page at v0.8.0: the heading saying every ABP so far bounds what and this one bounds how much, and the start here note" loading="lazy" decoding="async"><figcaption>The hub. The heading is the claim, the note under it asks for one prompt rather than twelve, and the first figure down the page is the one that says where cost actually lives.<span class="attr">abp.sgit.ai at v0.8.0, captured 22 September 2026 from a checkout of the v0.8.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="cost-is-a-property-of-every-call-and-the-grammar-knows-it">Cost is a property of every call, and the grammar knows it</h2>
+  <p>A capability is in the grant or it is not. Cost is what every call spends, whichever capability the call instances. The grammar this site is written in has exactly one primitive for money, <code>write.budget.tenant</code>, and <b>two of sixteen published shapes grant it</b>, because it names spending against an account the agent holds, not the agent's own inference, which the platform bills to the deployer without the agent ever holding a budget. There is no primitive for a count of anything.</p>
+  <figure class="fig"><svg class="fig" viewBox="0 0 960 392" role="img" preserveAspectRatio="xMidYMid meet"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d5d0c2"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0b8f80"/></marker></defs><text x="24" y="22" class="fh">What an agent may do, and how much of it</text><text x="24" y="40" class="fk">the four objects sit before the action; every count sits after it, in a universe this site has no node in</text><rect x="24" y="58" width="912" height="112" rx="10" class="box"/><text x="40" y="80" class="fb">Before the action: the ABP (u2 to u6)</text><rect x="40" y="96" width="206" height="56" rx="9" class="box-a"/><text x="143.0" y="120.0" text-anchor="middle" class="fb">Mandate</text><text x="143.0" y="136.0" text-anchor="middle" class="fd">what was asked</text><rect x="262" y="96" width="206" height="56" rx="9" class="box-a"/><text x="365.0" y="120.0" text-anchor="middle" class="fb">Grant</text><text x="365.0" y="136.0" text-anchor="middle" class="fd">what it can do</text><rect x="484" y="96" width="206" height="56" rx="9" class="box-a"/><text x="587.0" y="120.0" text-anchor="middle" class="fb">Delta</text><text x="587.0" y="136.0" text-anchor="middle" class="fd">the difference</text><rect x="706" y="96" width="206" height="56" rx="9" class="box-a"/><text x="809.0" y="120.0" text-anchor="middle" class="fb">Barrier</text><text x="809.0" y="136.0" text-anchor="middle" class="fd">what is in the way</text><path d="M 480 170 L 480 214" class="edge" marker-end="url(#ah)"/><text x="490" y="196.0" class="fmd">every call is one instance of a capability</text><rect x="24" y="214" width="912" height="118" rx="10" class="box-x"/><text x="40" y="236" class="fb">After the action: the runtime (u11), where quantity lives</text><rect x="40" y="254" width="206" height="56" rx="9" class="box"/><text x="143.0" y="278.0" text-anchor="middle" class="fb">Calls</text><text x="143.0" y="294.0" text-anchor="middle" class="fd">how many, in which interval</text><rect x="262" y="254" width="206" height="56" rx="9" class="box"/><text x="365.0" y="278.0" text-anchor="middle" class="fb">Tokens</text><text x="365.0" y="294.0" text-anchor="middle" class="fd">the bill, seen by the platform</text><rect x="484" y="254" width="206" height="56" rx="9" class="box"/><text x="587.0" y="278.0" text-anchor="middle" class="fb">Files, commits, fetches</text><text x="587.0" y="294.0" text-anchor="middle" class="fd">what the repository sees</text><rect x="706" y="254" width="206" height="56" rx="9" class="box"/><text x="809.0" y="278.0" text-anchor="middle" class="fb">A person's hour</text><text x="809.0" y="294.0" text-anchor="middle" class="fd">what nobody bills</text><text x="24" y="358" class="ft"><tspan class="fb">A cost clause is a prohibition over a count.</tspan> The grammar has one primitive for money and none for a count,</text><text x="24" y="376" class="ft">so the clause carries what the grant cannot, and only a log held outside the agent can say whether it was kept.</text></svg><figcaption>The four objects describe what an agent may do before it acts. Every count is a fact about what it did, which is the runtime universe, owned by whoever holds the logs and never by this site.</figcaption></figure>
+  <p>So a cost ABP is the first ABP written over the runtime, universe u11, which the map at v0.4.1 named as the place where quantity lives and marked as a gap this site would not fill because it has no logs and will not hold any. <b>Every clause in a cost policy is a prohibition over a count, and only a log held outside the agent can say whether one was kept.</b> The release says that on every page, in the same note, because it is the fact that decides what the rest of the section is worth.</p>
+  <h2 id="five-things-it-spends-and-the-fifth-is-on-nobody-s-bill">Five things it spends, and the fifth is on nobody's bill</h2>
+  <figure class="fig"><svg class="fig" viewBox="0 0 960 396" role="img" preserveAspectRatio="xMidYMid meet"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d5d0c2"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0b8f80"/></marker></defs><text x="24" y="22" class="fh">Five things an agent spends, and who pays for each</text><text x="24" y="40" class="fk">only the first one is on a bill, and it is the one the agent cannot see</text><text x="40" y="66" class="fb">What is spent</text><text x="300" y="66" class="fb">Who pays</text><text x="640" y="66" class="fb">Who can see the number</text><path d="M 24 74 L 936 74" class="edge"/><rect x="24" y="78" width="912" height="46" rx="8" class="box"/><text x="40" y="100" class="fb">Tokens</text><text x="300" y="92" class="ft">the account holder, on the platform's bill</text><text x="640" y="92" class="ft">the platform; the agent usually cannot see its</text><text x="640" y="108" class="ft">own count</text><rect x="24" y="132" width="912" height="46" rx="8" class="box"/><text x="40" y="154" class="fb">Files written and changed</text><text x="300" y="146" class="ft">the repository, and whoever reads it next</text><text x="640" y="146" class="ft">the agent, exactly; the repository, in its</text><text x="640" y="162" class="ft">history</text><rect x="24" y="186" width="912" height="46" rx="8" class="box"/><text x="40" y="208" class="fb">Commits and pushes</text><text x="300" y="200" class="ft">the pipeline, in minutes and money, per push</text><text x="640" y="200" class="ft">the agent; the code host; the pipeline's own</text><text x="640" y="216" class="ft">log</text><rect x="24" y="240" width="912" height="46" rx="8" class="box"/><text x="40" y="262" class="fb">Fetches, searches, research</text><text x="300" y="254" class="ft">tokens, time, and one send.endpoint.world each</text><text x="640" y="254" class="ft">the agent; the proxy, if there is one</text><rect x="24" y="294" width="912" height="46" rx="8" class="box-x"/><text x="40" y="316" class="fb">Another person's hour</text><text x="300" y="308" class="ft">a reviewer, an answerer, a reader of what it</text><text x="300" y="324" class="ft">produced</text><text x="640" y="308" class="ft">nobody's bill; only the person, afterwards</text><text x="24" y="380" class="fd">The fifth line is dashed because it never appears on any bill. It is the one an accountant agent exists to count.</text></svg><figcaption>Five lines, and a person's hour is the one nothing meters. An agent that produces a document for somebody to read, asks a question, or opens something for review has spent that hour, and no ledger records it unless the clause asks for it.</figcaption></figure>
+  <p>The table exists for its last row. An agent that asks a question, produces a document for a person to read, opens something for review or delegates to another agent that then does the same has spent an hour that no meter records. <b>It is the one cost the agent will never list when asked what it wasted</b>, because it can count files and fetches and the hour never came back to it. Step two says to add the line by hand if it is missing, and step three gives it a reader.</p>
+  <h2 id="why-this-is-an-abp-and-not-a-skill">Why this is an ABP and not a skill</h2>
+  <p>The obvious way to contain an agent's spend is a skill, and the request said as much. The release's answer is a table rather than an argument: <b>a skill says how to do one task well; a behaviour policy says what may not be done and how much the doing may cost, for one agent in one deployment, across every task.</b> They compose. The ABP is what every skill runs inside.</p>
+  <figure class="shot"><img src="../../assets/articles/v080-skill-table.png" alt="A table contrasting a skill with a behaviour policy across what it says, its scope, who writes it and how they relate" loading="lazy" decoding="async"><figcaption>The distinction in four rows. The last one is the point: a deployer watching the bill does not need another skill, they need the clauses every skill has to fit inside.<span class="attr">abp.sgit.ai at v0.8.0, captured 22 September 2026 from a checkout of the v0.8.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="the-agent-counts-first-and-says-what-it-cannot-count">The agent counts first, and says what it cannot count</h2>
+  <p>An agent can count its own files, commits, fetches, subagents and questions exactly. It usually cannot see its own token count at all. The first prompt asks for six lines and <b>the sixth is allowed to say cannot see</b>, because that answer is correct and the fourth page is built on it.</p>
+  <figure class="shot"><img src="../../assets/articles/v080-ledger-prompt.png" alt="The first prompt of the cost walkthrough: a six line ledger of files, commits, fetches, subagents, questions and tokens for the current session" loading="lazy" decoding="async"><figcaption>Prompt 1 of 12. Numbers rather than a description, an asterisk where it is estimating, and permission to say it cannot see the bill.<span class="attr">abp.sgit.ai at v0.8.0, captured 22 September 2026 from a checkout of the v0.8.0 tag. Unretouched.</span></figcaption></figure>
+  <div class="note"><b>The bill is the one cost the agent cannot report, so everything it can report is a proxy for it.</b> Files, commits and fetches are the proxies that can be checked today, against the repository's history and a proxy's log. That is why the clauses are written in those units and not in money.</div>
+  <h2 id="the-ledger-makes-the-clauses-falsifiable-and-the-accountant-">The ledger makes the clauses falsifiable, and the accountant reads it</h2>
+  <p>Step three has the clause set every skill runs inside: limits per turn in countable units, a research rule that says read before you fetch, a delegation rule, and a rule about other people's time that has no number on purpose because any number would be wrong. Then the clause that makes the others mean something: <b>a ledger at the end of every turn, in a fixed form, with one line for everything the turn spent that the deployer did not ask for.</b></p>
+  <figure class="shot"><img src="../../assets/articles/v080-accountant.png" alt="Prompt 9, the accountant: a second session that reads the first agent's ledgers against its cost rules and reports what was kept, what fell outside, and every place work was made for a person" loading="lazy" decoding="async"><figcaption>The accountant. One agent's output as another's input is universe u12, and this is its first useful shape here: no tools, almost no spend, and the only reader of the fifth cost line.<span class="attr">abp.sgit.ai at v0.8.0, captured 22 September 2026 from a checkout of the v0.8.0 tag. Unretouched.</span></figcaption></figure>
+  <p>The accountant reads self reports, so its report is a claim about claims. It is still worth having, and the release says why in one sentence: an agent that knows its ledger will be read tends to produce a truer one, which is the cheapest control there is and not a control at all.</p>
+  <h2 id="a-limit-over-a-number-the-agent-cannot-see-is-an-expectation">A limit over a number the agent cannot see is an expectation twice over</h2>
+  <p>The fourth page applies the enforcer test to a quantity. <b>A limit you set is a setting. A limit somebody else set that you cannot remove is a boundary.</b> The same number in the same place is one or the other depending on who can change it. And for cost there is a third case the capability pages never had: a clause over a number the agent cannot see, which it can only keep by accident.</p>
+  <figure class="shot"><img src="../../assets/articles/v080-count-barriers.png" alt="The four barriers table on step four, with a third column saying what each one is for a count rather than for a capability" loading="lazy" decoding="async"><figcaption>The four barriers, for a count. Nearly every deployment sits on the first row for files, commits, fetches and questions, and every clause from step three sits on the second.<span class="attr">abp.sgit.ai at v0.8.0, captured 22 September 2026 from a checkout of the v0.8.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="u11-stays-a-gap-and-says-why-in-one-more-sentence">u11 stays a gap, and says why in one more sentence</h2>
+  <p>The runtime universe's status did not change. The release adds a sentence to its note saying the cost walkthrough is written over it and that only a log held there, never here, can say whether a clause was kept. <b>That is the correct amount of change</b>: a section that wrote prohibitions over counts and then claimed the site could check them would have been the fact diff's opposite.</p>
+  <figure class="shot"><img src="../../assets/articles/v080-u11.png" alt="The u11 universe page at v0.8.0, status gap, with the note naming the cost walkthrough" loading="lazy" decoding="async"><figcaption>Universe u11 after the release. Still a gap, one sentence longer.<span class="attr">abp.sgit.ai at v0.8.0, captured 22 September 2026 from a checkout of the v0.8.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="what-this-release-did-not-settle">What this release did not settle</h2>
+  <ul><li><b>Nothing in the section is measured, and nothing on this site can measure it.</b> Every ledger is a self report; the bill, the repository's history and a proxy's log are the only things that can agree with one.</li><li><b>The numbers in the clauses are placeholders.</b> Ten files, one push, five fetches: the prompt says so and asks the agent to propose the right ones for how the deployer works. No number on the page is a recommendation.</li><li><b>The fifth cost line has no meter and this release did not build one.</b> The accountant reads what the ledger says about questions asked and things handed over; nothing records what the person then spent.</li><li><b>No case runs the cost prompts yet.</b> The estate at cases/beta-001 is over what its deployments can do; a cost ledger from a deployment somebody actually runs would be the first real row.</li><li><b>Cost never became a node.</b> The grammar is owned by the map and bridged, not merged, so a count did not become a primitive here and will not.</li></ul>
+  <p><a href="../../cost/index.html">The cost walkthrough</a> &amp;#183; <a href="../../model/universes/u11/index.html">The runtime universe</a> &amp;#183; <a href="../../model/universes/u12/index.html">The estate of agents</a> &amp;#183; <a href="../../versions/v0.8.0/index.html">v0.8.0's own release record</a></p>
+  <h2 id="read-the-sequence">Read the sequence</h2>
+  <div class="tablewrap"><table><thead><tr><th>Direction</th><th>The release</th></tr></thead><tbody><tr><td><b>Older</b></td><td><a href="../../articles/one-person-six-deployments/index.html">v0.7.0: The first case: one person's estate, the mandates elicited line by line, and the grants left empty on purpose</a></td></tr><tr><td><b>All of them</b></td><td><a href="../../articles/index.html">One article per release</a></td></tr></tbody></table></div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.8.1/index.html">v0.8.1</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../articles/how-much-not-just-what/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../cost/index.html">The cost ABP</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+    <a href="../../cases/beta-001/index.html">One person's estate</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>
