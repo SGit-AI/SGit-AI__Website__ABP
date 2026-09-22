@@ -2,7 +2,7 @@
 
 > The Agent Behaviour Policy: what your agent can do, what you authorised it to do, the gap between them, and what actually stands in the way.
 
-Site version: v0.7.1. Generated from the same content as the HTML pages, so
+Site version: v0.8.0. Generated from the same content as the HTML pages, so
 this file cannot disagree with them.
 
 
@@ -14,7 +14,7 @@ this file cannot disagree with them.
 
 > You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.
 
-*Source: <https://abp.sgit.ai/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -85,6 +85,9 @@ The clearest way to see what an ABP does is to change one setting and watch the 
 **[Your mailbox, and what you gave it](gmail/index.md)**: Four steps and thirteen prompts, run against your own deployment: what it can already do, what you actually asked for, the behaviour policy, and what a prompt cannot do.
 Start here if you have connected one to your mail.
 
+**[The cost ABP: how much, not just what](cost/index.md)**: Every ABP so far bounds what an agent may do. This one bounds how much: tokens, files, commits, fetches, and the hour of somebody else's time. Twelve prompts and an accountant.
+The first ABP written over the runtime.
+
 **[A case: one person, six deployments](cases/beta-001/index.md)**: Two assistants, five connectors, one shared account. The mandates elicited from one interview, line by line, and the grants not yet measured. The four objects one level up.
 The first thing in the estate universe.
 
@@ -141,7 +144,7 @@ The argument, the model, the examples and the data are published here. **There i
 
 > The foundation document: the definition of the Agent Behaviour Policy, the four objects, the barrier as the test of whether anything is in the way, the rule that it never judges, and the questions we are asking.
 
-*Source: <https://abp.sgit.ai/what-is-an-abp/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/what-is-an-abp/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -378,7 +381,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The four objects an ABP is made of, the grammar they are written in, the barrier that decides whether anything is in the way, and the graph rules that govern all of it.
 
-*Source: <https://abp.sgit.ai/model/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -457,7 +460,7 @@ Each states which rows were measured and which derived.
 
 > verb.object.reach: 23 capability primitives, each with its reach and the undo class of its effect. The action vocabulary for everything else on this site.
 
-*Source: <https://abp.sgit.ai/model/capabilities/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -536,7 +539,7 @@ below point at them.*
 
 > Read the project it is working on. Reach project, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.file.project/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.file.project/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -614,7 +617,7 @@ below point at them.*
 
 > Change the project it is working on. Reach project, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.file.project/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.file.project/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -691,7 +694,7 @@ below point at them.*
 
 > Read any file the account can reach. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.file.host/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -773,7 +776,7 @@ below point at them.*
 
 > Change any file the account can reach. Reach host, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.file.host/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.file.host/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -852,7 +855,7 @@ below point at them.*
 
 > Delete files anywhere the account can reach. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/delete.file.host/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/delete.file.host/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -928,7 +931,7 @@ below point at them.*
 
 > Run programs as the account. Reach host, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/execute.process.host/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/execute.process.host/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1006,7 +1009,7 @@ below point at them.*
 
 > Run programs inside its own sandbox only. Reach self, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/execute.process.self/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/execute.process.self/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1076,7 +1079,7 @@ No published shape in this set has it.
 
 > Reach a permitted list of hosts. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.allowed/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.allowed/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1148,7 +1151,7 @@ below point at them.*
 
 > Reach any host on the internet. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.world/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.endpoint.world/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1226,7 +1229,7 @@ below point at them.*
 
 > Read credentials stored where it runs. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.credential.host/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.credential.host/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1307,7 +1310,7 @@ below point at them.*
 
 > Act in accounts with the credentials it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.tenant/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1392,7 +1395,7 @@ below point at them.*
 
 > Change its own permission settings. Reach self, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/grant.credential.self/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/grant.credential.self/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1466,7 +1469,7 @@ below point at them.*
 
 > Send a message to anyone. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/send.message.world/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/send.message.world/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1540,7 +1543,7 @@ below point at them.*
 
 > Read mail or chat it is connected to. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.message.tenant/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1616,7 +1619,7 @@ below point at them.*
 
 > Commit to the repository it was pointed at. Reach project, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.repository.project/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.repository.project/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1691,7 +1694,7 @@ below point at them.*
 
 > Push to a code host (any branch it can reach). Reach tenant, undo with-effort. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.repository.tenant/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.repository.tenant/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1766,7 +1769,7 @@ below point at them.*
 
 > Sign commits with the key it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.signing/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/authenticate-as.credential.signing/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1840,7 +1843,7 @@ below point at them.*
 
 > Publish packages, images or pages under the name it holds. Reach world, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.record.world/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.record.world/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1914,7 +1917,7 @@ below point at them.*
 
 > Spend money or tokens against an account it holds. Reach tenant, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/write.budget.tenant/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/write.budget.tenant/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -1987,7 +1990,7 @@ below point at them.*
 
 > Create something that outlives the turn where it runs (a cron, a service). Reach host, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.host/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.host/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2062,7 +2065,7 @@ below point at them.*
 
 > Read a retained record: shell history, past sessions. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.record.history/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2140,7 +2143,7 @@ below point at them.*
 
 > Create something that outlives the session, on the platform (a routine, a scheduled trigger, a new session). Reach tenant, undo yes. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.tenant/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/create.schedule.tenant/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2206,7 +2209,7 @@ below point at them.*
 
 > Read every page you visit. Reach host, undo no. Which published deployment shapes have it, at what barrier, and what the starting mandates say.
 
-*Source: <https://abp.sgit.ai/model/capabilities/read.record.browsing/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/read.record.browsing/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2278,7 +2281,7 @@ below point at them.*
 
 > Four kinds of thing that can stand between an agent and a capability, and only the fourth bounds anything. The enforcer test, which this estate published as a glyph before it named it as a rule.
 
-*Source: <https://abp.sgit.ai/model/barriers/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/barriers/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2330,7 +2333,7 @@ The glyph system on [the published map](https://what-can-it-do.games.sgit.ai/map
 
 > Three classes of reversibility, the ordering on every rendering this site produces, and the one column that is not fully context free.
 
-*Source: <https://abp.sgit.ai/model/undo/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/undo/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2373,7 +2376,7 @@ An ABP that lists prohibitions alphabetically has buried the only ones that matt
 
 > Derived and never authored: stored with the versions of its inputs, recomputed when either moves, and never edited by hand. Reality is the third input, the history is the business case, and there are three clocks.
 
-*Source: <https://abp.sgit.ai/model/delta/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/delta/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2539,7 +2542,7 @@ The market has a word for a related phenomenon and it is drift. Products announc
 
 > The five published graph rules, what they force on this model, and the sentence test that decides whether the edges are right.
 
-*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2605,7 +2608,7 @@ The W3C has had a rights expression vocabulary since 2018: a policy carries perm
 
 > What is in the published files, what this site added to the data it promoted, and the two rules a consumer and a contributor each have to follow.
 
-*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/schema/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2642,7 +2645,7 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 
 ## The two rules
 
-> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.7.1`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
+> **A consumer pins a version.** Anything that computes from these files states which version it computed against. This is `v0.8.0`, content hash `sha256:d6d4ba40f1fb1f93f66`. A clone that floats against the latest has no reproducible output.
 
 > **A proposal carries evidence.** Every node taken from a third party site carries a source URL, a retrieval timestamp and a content hash. A proposal that changes a capability row without one is an assertion, and this site publishes capability claims about named commercial products.
 
@@ -2661,7 +2664,7 @@ The published vocabulary, file by file, at stable addresses with cross origin ac
 
 > An Agent Behaviour Policy for chatGPT (in the browser, no connectors): a grant of 1, a mandate of 1, an excess of 0 and an unbounded excess of 0. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/chatgpt-web-no-connectors/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2808,7 +2811,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for claude Code (the CLI, on your own machine): a grant of 16, a mandate of 5, an excess of 12 and an unbounded excess of 12. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -2982,7 +2985,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for claude Code (the CLI, on your own machine): a grant of 16, a mandate of 5, an excess of 12 and an unbounded excess of 12. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3156,7 +3159,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for A browser extension with broad host permissions: a grant of 3, a mandate of 1, an excess of 2 and an unbounded excess of 2. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3311,7 +3314,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > An Agent Behaviour Policy for actions runner (a hosted CI job): a grant of 8, a mandate of 5, an excess of 4 and an unbounded excess of 3. Derived from published data, with no score.
 
-*Source: <https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/github-actions-hosted-runner/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3475,7 +3478,7 @@ That path stays inside one vocabulary. The same row also crosses nine worlds, ea
 
 > Five Agent Behaviour Policies, one per deployment shape, derived from published data rather than authored. Each states which of its rows were measured and which were derived, and none carries a score.
 
-*Source: <https://abp.sgit.ai/examples/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/examples/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3540,7 +3543,7 @@ Nobody knows what an ABP costs to produce, and the store has to price one. So th
 
 > The capabilities, barriers, undo classes, deployment shapes and mandates an ABP is written in, as JSON at stable addresses with cross origin access, with the source bytes they were promoted from.
 
-*Source: <https://abp.sgit.ai/data/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/data/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3552,7 +3555,7 @@ below point at them.*
 
 The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4 barriers**, **3 undo classes**, **16 deployment shapes** and **15 starting mandates**, at stable addresses with cross origin access.
 
-> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.7.1`.
+> **Start at [`/data/index.json`](../data/index.json).** It names every other file, carries the counts and states the version to pin. This is `v0.8.0`.
 
 ## Where it came from, and what that obliges
 
@@ -3654,7 +3657,7 @@ The published vocabulary of the Agent Behaviour Policy: **23 capabilities**, **4
 
 > Every word in the capability grammar as a node with its own address, its own JSON and its own page: ten verbs, nine object classes, five reach classes and nine families.
 
-*Source: <https://abp.sgit.ai/model/lexicon/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3723,7 +3726,7 @@ below point at them.*
 
 > The verb authenticate-as as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/authenticate-as/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/authenticate-as/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3768,7 +3771,7 @@ The verb `authenticate-as`, and every primitive it appears in. **This page is a 
 
 > The verb create as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/create/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/create/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3814,7 +3817,7 @@ The verb `create`, and every primitive it appears in. **This page is a query, no
 
 > The verb delete as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/delete/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/delete/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3858,7 +3861,7 @@ The verb `delete`, and every primitive it appears in. **This page is a query, no
 
 > The verb execute as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/execute/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/execute/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3903,7 +3906,7 @@ The verb `execute`, and every primitive it appears in. **This page is a query, n
 
 > The verb grant as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/grant/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/grant/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3947,7 +3950,7 @@ The verb `grant`, and every primitive it appears in. **This page is a query, not
 
 > The verb read as a node: the 6 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/read/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/read/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -3996,7 +3999,7 @@ The verb `read`, and every primitive it appears in. **This page is a query, not 
 
 > The verb receive as a node: the 0 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/receive/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/receive/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4038,7 +4041,7 @@ None. The table below is what this node connects to, and it is empty, which is t
 
 > The verb revoke as a node: the 0 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/revoke/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/revoke/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4080,7 +4083,7 @@ None. The table below is what this node connects to, and it is empty, which is t
 
 > The verb send as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/send/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/send/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4126,7 +4129,7 @@ The verb `send`, and every primitive it appears in. **This page is a query, not 
 
 > The verb write as a node: the 5 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/verbs/write/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/verbs/write/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4174,7 +4177,7 @@ The verb `write`, and every primitive it appears in. **This page is a query, not
 
 > The object budget as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/budget/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/budget/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4218,7 +4221,7 @@ The object `budget`, and every primitive it appears in. **This page is a query, 
 
 > The object credential as a node: the 4 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/credential/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/credential/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4265,7 +4268,7 @@ The object `credential`, and every primitive it appears in. **This page is a que
 
 > The object file as a node: the 5 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/file/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/file/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4313,7 +4316,7 @@ The object `file`, and every primitive it appears in. **This page is a query, no
 
 > The object message as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/message/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/message/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4358,7 +4361,7 @@ The object `message`, and every primitive it appears in. **This page is a query,
 
 > The object network-endpoint as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/network-endpoint/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/network-endpoint/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4403,7 +4406,7 @@ The object `network-endpoint`, and every primitive it appears in. **This page is
 
 > The object process as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/process/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/process/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4448,7 +4451,7 @@ The object `process`, and every primitive it appears in. **This page is a query,
 
 > The object record as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/record/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/record/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4494,7 +4497,7 @@ The object `record`, and every primitive it appears in. **This page is a query, 
 
 > The object repository as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/repository/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/repository/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4539,7 +4542,7 @@ The object `repository`, and every primitive it appears in. **This page is a que
 
 > The object schedule as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/objects/schedule/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/objects/schedule/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4584,7 +4587,7 @@ The object `schedule`, and every primitive it appears in. **This page is a query
 
 > The reach host as a node: the 8 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/host/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/host/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4660,7 +4663,7 @@ the machine, container or account it runs as
 
 > The reach project as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/project/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/project/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4716,7 +4719,7 @@ the working tree or workspace it was pointed at
 
 > The reach self as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/self/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/self/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4761,7 +4764,7 @@ the agent's own process, sandbox or turn
 
 > The reach tenant as a node: the 7 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/tenant/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4836,7 +4839,7 @@ the organisation's accounts, repositories and services
 
 > The reach world as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/reaches/world/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/reaches/world/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4907,7 +4910,7 @@ anything on the internet
 
 > The family browser as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/browser/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/browser/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4951,7 +4954,7 @@ what a browser extension or automation can see and do in your browser
 
 > The family code as a node: the 4 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/code/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/code/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -4998,7 +5001,7 @@ repositories and what lands in them
 
 > The family communication as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/communication/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/communication/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5043,7 +5046,7 @@ messages to people
 
 > The family filesystem as a node: the 6 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/filesystem/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/filesystem/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5092,7 +5095,7 @@ files and directories
 
 > The family identity as a node: the 3 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/identity/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/identity/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5138,7 +5141,7 @@ credentials and who the agent can act as
 
 > The family money as a node: the 1 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/money/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/money/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5182,7 +5185,7 @@ budgets and spend
 
 > The family network as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/network/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/network/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5227,7 +5230,7 @@ endpoints and hosts
 
 > The family process as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/process/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/process/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5272,7 +5275,7 @@ programs and their execution
 
 > The family schedule as a node: the 2 capability primitives it appears in, what they reach, and how it connects. Meaning from connectivity, not from a definition.
 
-*Source: <https://abp.sgit.ai/model/lexicon/families/schedule/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/lexicon/families/schedule/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5317,7 +5320,7 @@ things that outlive the turn
 
 > The 22 edges this model is written in, each a verb with a distinct inverse, a stated domain and range, and the sentence it reads as.
 
-*Source: <https://abp.sgit.ai/model/graph/edges/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/edges/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5388,7 +5391,7 @@ These are not this site's to rename. They are published at [the network's edge s
 
 > A node type is a required pattern of typed, directed paths that a node either matches or does not. Not a label somebody applied. Run against the graph on every build.
 
-*Source: <https://abp.sgit.ai/model/graph/formulas/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/formulas/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5454,7 +5457,7 @@ That is the usual objection and it deserves a direct answer. **Somebody still de
 
 > How a customer vault extends this vocabulary without merging anything: shared facts owned by nobody, per-party formulas, and declared bridges. Parties can disagree about meaning while still agreeing about facts.
 
-*Source: <https://abp.sgit.ai/model/graph/layers/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/graph/layers/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5529,7 +5532,7 @@ A customer vault is layers 2 and 3, pointing at layer 1 by address, version and 
 
 > The ABP mapped onto Fractal Semantic Graphs: one capability row walked through nine universes, from the source bytes to a licence condition, each with its own owner and ontology, joined by named edges. Four more named as gaps.
 
-*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5633,7 +5636,7 @@ Nine the walk crosses and four it names. **A status is a claim the gate checks**
 
 > The source bytes, one of the universes an ABP row crosses: owned by nobody: the bytes are what they are, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u0/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u0/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5685,7 +5688,7 @@ Today the provenance block sits on every data file and says the same thing for e
 
 > The grammar, one of the universes an ABP row crosses: owned by abp.sgit.ai, promoted from what-can-it-do.games.sgit.ai and bridged back to it, with its own node types and verbs, sharing only the grammar. Status: live.
 
-*Source: <https://abp.sgit.ai/model/universes/u1/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u1/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5756,7 +5759,7 @@ Two verbs in it, receive and revoke, have nothing under them and are kept as nam
 
 > The deployment shape, one of the universes an ABP row crosses: owned by the vendor's published words, read on a date, with a hash, and never probed, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u2/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u2/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5831,7 +5834,7 @@ The position on a connector that is present and switched off, which is the most 
 
 > The grant and its evidence, one of the universes an ABP row crosses: owned by whoever observed, or the documentation that was read, with its own node types and verbs, sharing only the grammar. Status: one-edge.
 
-*Source: <https://abp.sgit.ai/model/universes/u3/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u3/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5900,7 +5903,7 @@ Lab 07's grant check, eleven of fifteen rows seen present in ordinary work and t
 
 > The enforcement, one of the universes an ABP row crosses: owned by whoever set the control: the vendor, the platform, the deployer or nobody, with its own node types and verbs, sharing only the grammar. Status: one-edge.
 
-*Source: <https://abp.sgit.ai/model/universes/u4/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u4/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -5968,7 +5971,7 @@ Lab 06 added the property the 11 September brief did not have: a barrier is peri
 
 > The deployer, one of the universes an ABP row crosses: owned by the deployer, in their own words, and the named person who will correct the draft, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u5/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u5/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6043,7 +6046,7 @@ The interchange form lives here and nowhere else. The W3C rights expression voca
 
 > The derivation, one of the universes an ABP row crosses: owned by the computation, and never a person, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u6/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u6/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6103,7 +6106,7 @@ The gate's twelfth check, which recomputes every stored delta from its pinned in
 
 > The projections, one of the universes an ABP row crosses: owned by the renderer, and the fact diff that has to check it, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u7/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u7/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6163,7 +6166,7 @@ With FactSet as a node and every Projection carrying a projects edge to it, the 
 
 > The licence, the acceptance and the risk, one of the universes an ABP row crosses: owned by riskmandate.ai, with its own node types and verbs, sharing only the grammar. Status: outside.
 
-*Source: <https://abp.sgit.ai/model/universes/u8/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u8/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6219,7 +6222,7 @@ The edges are declared by riskmandate.ai in its vault, pointing at this site's a
 
 > The estate and the twin, one of the universes an ABP row crosses: owned by the customer, through twins.sgit.ai, with its own node types and verbs, sharing only the grammar. Status: partial.
 
-*Source: <https://abp.sgit.ai/model/universes/u9/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u9/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6266,7 +6269,7 @@ Named so that a twin has an address to attach to. Nothing is behind the name.
 
 > The obligations, one of the universes an ABP row crosses: owned by standards.sgit.ai and the AIUC-1 conformance vault, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u10/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u10/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6312,7 +6315,7 @@ Named so that a standard has an address to attach to.
 
 > The runtime, one of the universes an ABP row crosses: owned by whoever holds the logs: never this site, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u11/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u11/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6324,7 +6327,7 @@ below point at them.*
 
 **Owner** whoever holds the logs: never this site. **Centre of gravity** the tool call. **Smallest node** one call in one turn of one session. **Level** beside. **Status** a gap, named.
 
-> The ABP is before the action and this universe is after it. Quantity lives here, which is the first gap the foundation document names: counts within an interval, sums within an interval, the licence to operate simulation's per turn cost, and behaviour drift. The two are joined by exactly the edges that make drift and excess different measurements.
+> The ABP is before the action and this universe is after it. Quantity lives here, which is the first gap the foundation document names: counts within an interval, sums within an interval, the licence to operate simulation's per turn cost, and behaviour drift. The two are joined by exactly the edges that make drift and excess different measurements. Since v0.8.0 the cost walkthrough at /cost/ is written over this universe: every one of its clauses is a prohibition over a count, and the page says on its face that only a log held here, never on this site, can say whether one was kept.
 
 ## Node types
 
@@ -6359,7 +6362,7 @@ Named so that a log has an address to attach to.
 
 > The estate of agents, one of the universes an ABP row crosses: owned by the organisation, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u12/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u12/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6406,7 +6409,7 @@ Named so that the next brief has an address to write to.
 
 > Four steps and thirteen prompts you paste into your own assistant, to find out what connecting it to your mailbox actually gave it, what you meant to give it, and how much of the difference you can write down.
 
-*Source: <https://abp.sgit.ai/gmail/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/gmail/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6483,7 +6486,7 @@ about five minutes
 
 > Four prompts that make your own assistant enumerate its mailbox tools, what each one reaches, which of them you could undo, and which lines it is inferring rather than reading.
 
-*Source: <https://abp.sgit.ai/gmail/what-it-can-do/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/gmail/what-it-can-do/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6613,7 +6616,7 @@ This site publishes a measured profile for one common version of this shape, so 
 
 > Three prompts that make the assistant draft your mandate over its own tools in three lists, describe your mailbox as you actually use it, and derive the gap. Correcting the draft is the exercise.
 
-*Source: <https://abp.sgit.ai/gmail/what-you-asked-for/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/gmail/what-you-asked-for/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6731,7 +6734,7 @@ Against a starting mandate written to be argued with, the measured profile for t
 
 > Four prompts that turn the gap into a document you can keep: four lines to paste anywhere, a full clause set, the same thing in the four object shape, and the layer your organisation owns rather than you.
 
-*Source: <https://abp.sgit.ai/gmail/write-the-behaviour-policy/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/gmail/write-the-behaviour-policy/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6876,7 +6879,7 @@ organisation's, or the law's. Where the three disagree, say which one wins and w
 
 > The document you wrote in step three is an expectation rather than a control. Why that is the honest reading, why it is still worth writing, and what would actually bound the behaviour.
 
-*Source: <https://abp.sgit.ai/gmail/what-a-prompt-cannot-do/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/gmail/what-a-prompt-cannot-do/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -6997,13 +7000,563 @@ The briefs behind this section: [no mail scope lets an agent draft without letti
 
 ------------------------------------------------------------------------
 
+<!-- https://abp.sgit.ai/cost/index.html -->
+
+# The cost ABP: how much, not just what
+
+> An Agent Behaviour Policy over how much an agent may spend: tokens, files, commits, fetches and other people's time. Four steps and twelve prompts, for a deployer watching the bill, the repository and the review queue all grow.
+
+*Source: <https://abp.sgit.ai/cost/index.html> · site v0.8.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../index.md) / The cost ABP
+
+# Every ABP so far bounds what. This one bounds how much
+
+**Four steps, twelve prompts, and one honest ending.** For anybody who has watched an agent write forty files nobody asked for, push twelve commits where one would do, research a question that was already answered, and hand three people something to review. You are paying for all of it, and nothing in the grant says a word about any of it.
+
+> **Start here if you only do one thing.** Open the agent you are paying for, in the session you are worried about, and paste [the first prompt](../cost/what-it-spent/index.md). It counts what it can count and tells you what it cannot see, which is usually the bill.
+
+## Cost is not a capability
+
+A capability is in the grant or it is not. Cost is a property of every call the agent makes, whichever capability the call instances. **The grammar has one primitive for money, `write.budget.tenant`, and 2 of 16 published shapes grant it**, because it names spending against an account the agent holds, and an agent's own inference is billed to the deployer by the platform, not spent by the agent. There is no primitive for a count of anything.
+
+*[A figure here in the page: two bands. The upper band is the ABP before the action, with its four objects, mandate, grant, delta and barrier. An arrow labelled every call is one instance of a capability leads to the lower band, the runtime, where quantity lives: calls in an interval, tokens seen by the platform, files, commits and fetches seen by the repository, and a person's hour, which nobody bills. Under it: a cost clause is a prohibition over a count; the grammar has one primitive for money and none for a count, so the clause carries what the grant cannot, and only a log outside the agent can say whether it was kept]*
+
+So a cost ABP is the first ABP written over the runtime rather than over the grant. Its four objects are the same. Its mandate is a set of budgets in your words. Its grant is everything the agent can spend, which is everything it can do. Its delta is what it spent that you did not ask for. And its barrier, on nearly every row, is a sentence, because **almost nothing in a deployment caps a count**.
+
+## Five things it spends, and one of them is never on a bill
+
+*[A figure here in the page: a table of five things an agent spends. Tokens, paid by the account holder on the platform's bill, seen by the platform and usually not by the agent. Files written and changed, paid by the repository and whoever reads it next, seen exactly by the agent. Commits and pushes, paid by the pipeline per push, seen by the agent and the code host. Fetches and research, paid in tokens and time and one network reach each, seen by the agent and any proxy. And another person's hour, paid by a reviewer, an answerer or a reader, on nobody's bill and seen only by that person afterwards]*
+
+**The fifth line is the one this walkthrough exists for.** An agent that asks a question, produces a document for a person to read, opens something for review or delegates to another agent that then does the same has spent an hour that no meter records. Organisations are starting to notice it as overhead without a source. The accountant on step three is the pattern that gives it one.
+
+## Why this is an ABP and not another skill
+
+|  | A skill | A behaviour policy |
+|---|---|---|
+| What it says | how to do one task well | what may not be done, and how much the doing may cost |
+| Scope | one task, whenever it comes up | one agent in one deployment, across every task |
+| Who writes it | whoever knows the task | whoever pays: the deployer, in their own words |
+| How they relate | runs under the ABP | is what every skill has to fit inside |
+
+A deployer watching the bill does not need another skill. They need the clauses that every skill has to run within, and a ledger at the end of every turn that says what the turn cost in the units they can check.
+
+## The four steps
+
+**[Step 1: What it has already spent](../cost/what-it-spent/index.md)**: Ask the agent to count what it can count in this session, and to say which numbers it cannot see at all.
+about five minutes
+
+**[Step 2: What you actually paid for](../cost/what-you-paid-for/index.md)**: Sort what it did into what you asked for, what it decided was needed, and what it would now call waste. Then say what waste means for you.
+about five minutes
+
+**[Step 3: Write the cost policy](../cost/write-the-cost-policy/index.md)**: Limits per turn, batching, research only when blocked, and a ledger at the end of every turn. Plus the accountant: a second agent whose only job is to read the ledger.
+about five minutes
+
+**[Step 4: What a clause over a count cannot do](../cost/what-a-count-cannot-do/index.md)**: A limit the agent cannot measure is an expectation twice over. What a turn cap, a spend limit and a pipeline budget actually are, and who can turn each one off.
+about five minutes
+
+## What you will have at the end
+
+- **A ledger for one session**: files, commits, fetches, subagents, questions asked and things handed to people, counted by the agent, with the numbers it cannot see named as such.
+- **A cost mandate**: what you want it to spend freely on, what it should batch or ask about, and what it must never spend, including other people's time.
+- **A cost policy**: limits per turn, a research rule, a delegation rule, a never-create-work-for-others rule, and the ledger clause that makes the rest checkable.
+- **And the straight answer**: a limit the agent cannot measure is an expectation twice over, and what would actually cap it.
+
+> **Nothing on this page is measured by this site.** There are no runtime logs here and there will not be; the runtime is universe u11, owned by whoever holds the logs and never by this site. Every number an agent gives back is a self report, which counts as a claim rather than a measurement, and the bill is the only log.
+
+> **Nothing on this site is an assessment, an audit, a certification or a security review of any named product.** No adjective on these pages attaches to one.
+
+[Your mailbox, the first walkthrough](../gmail/index.md) &#183; [The runtime universe](../model/universes/u11/index.md) &#183; [`write.budget.tenant`](../model/capabilities/write.budget.tenant/index.md) &#183; [The four barriers](../model/barriers/index.md)
+
+---
+
+*[Site index for agents](../llms.txt) · [HTML version](https://abp.sgit.ai/cost/index.html)*
+
+
+------------------------------------------------------------------------
+
+<!-- https://abp.sgit.ai/cost/what-it-spent/index.html -->
+
+# Step 1: what it has already spent
+
+> Three prompts that make the agent count what it can count in the current session, sort it into asked for and decided, and name the numbers it cannot see.
+
+*Source: <https://abp.sgit.ai/cost/what-it-spent/index.html> · site v0.8.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../index.md) / [The cost ABP](../../cost/index.md) / Step 1
+
+# Step 1: what it has already spent
+
+**An agent can count its own files, commits, fetches and questions exactly, and it usually cannot see its own token count at all.** So ask for the numbers it has, and for the honest list of the ones it does not. Three prompts, shortest first, in the session you are worried about.
+
+|  |  |
+|---|---|
+| **The objective** | Ask the agent to count what it can count in this session, and to say which numbers it cannot see at all. |
+| **Next** | [Step 2: What you actually paid for](../../cost/what-you-paid-for/index.md) |
+| **All four steps** | [The cost walkthrough](../../cost/index.md) |
+
+> **What you gain from this page.** A ledger for one session, in the units you can check against the repository and the bill, with a line saying which numbers the agent is guessing and which it cannot produce.
+
+## Start with the count
+
+**Prompt 1: The ledger, for this session so far.** Six counts. The ones it cannot produce are the point.
+
+```
+Before we go on, count what you have spent in this session so far, in six lines:
+
+  FILES      written or changed, and how many of them still exist
+  COMMITS    made, and pushes, and how many pipeline runs those will have started
+  FETCHES    web pages read, searches run, external calls made
+  SUBAGENTS  spawned, and roughly what each one did
+  QUESTIONS  you asked me, and things you handed me to read, review or approve
+  TOKENS     if you can see them; if you cannot, say so, and say who can
+
+Give the numbers, not a description. Where you are estimating rather than counting, put
+an asterisk on the line.
+```
+
+Two things usually happen. The file and commit counts are larger than either of you pictured, and the token line says it cannot see the number. Both are the point. **The bill is the one cost the agent cannot report, so everything it can report is a proxy for it.**
+
+## Then ask what you paid for and what it decided
+
+**Prompt 2: Asked for, decided, and would not do again.** Three lists over the ledger. The middle one is where the money went.
+
+```
+Take every line of that ledger and sort what is in it into three lists.
+
+  ASKED FOR   things I asked for, with the message where I asked
+  DECIDED     things you decided were needed on the way to something I asked for
+  WOULD NOT   things you would not do again if I gave you the same task now
+
+For the DECIDED list, say for each item what would have happened if you had not done it.
+For the WOULD NOT list, say what it cost, in the units of the ledger. Do not defend
+anything: if a piece of research turned out not to be needed, it goes in the third list
+even if it was reasonable at the time.
+```
+
+## Then the numbers it cannot see
+
+This is the line that decides step four. A limit over a number the agent cannot see is a limit the agent cannot keep on purpose, whatever it promises.
+
+**Prompt 3: What you cannot count about yourself.** Names each blind spot, who can see it, and where.
+
+```
+Now the numbers you cannot produce. For each of these say whether you can see it, and if
+not, who can and where they would look:
+
+  - the tokens this session has used, and what it has cost in money
+  - the wall clock time I have spent waiting on you
+  - the minutes the pipeline spent on your pushes
+  - what any subagent you spawned spent, on all of the above
+  - how long the people you handed things to spent on them
+
+Then tell me which of your own limits, if I set them, you could keep by counting and
+which you could only keep by guessing.
+```
+
+## What to look for in the answer
+
+- **A DECIDED list longer than the ASKED FOR list.** That is normal and it is where the spend is. The question for step two is which of it you would have authorised if asked.
+- **Research nobody used.** A fetch is tokens, time and one network reach. Ten of them to answer a question the repository already answered is the commonest line in the WOULD NOT list.
+- **Commits that could have been one.** Each push may start a pipeline. The count is on the code host and the pipeline's own log, so this is a line you can check today.
+- **Anything handed to a person.** Every one of those is an hour on nobody's bill.
+- **An honest token line.** If it says it cannot see the number, that is the correct answer and the next three pages are built on it.
+
+> **Nothing on this page is measured by this site.** There are no runtime logs here and there will not be; the runtime is universe u11, owned by whoever holds the logs and never by this site. Every number an agent gives back is a self report, which counts as a claim rather than a measurement, and the bill is the only log.
+
+|  |  |
+|---|---|
+| **The objective** | Ask the agent to count what it can count in this session, and to say which numbers it cannot see at all. |
+| **Next** | [Step 2: What you actually paid for](../../cost/what-you-paid-for/index.md) |
+| **All four steps** | [The cost walkthrough](../../cost/index.md) |
+
+---
+
+*[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/cost/what-it-spent/index.html)*
+
+
+------------------------------------------------------------------------
+
+<!-- https://abp.sgit.ai/cost/what-you-paid-for/index.html -->
+
+# Step 2: what you actually paid for
+
+> Two prompts that turn the ledger into a cost mandate: what you want spent freely, what should be batched or asked about, what must never be spent, and what waste means for you in particular.
+
+*Source: <https://abp.sgit.ai/cost/what-you-paid-for/index.html> · site v0.8.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../index.md) / [The cost ABP](../../cost/index.md) / Step 2
+
+# Step 2: what you actually paid for
+
+**A budget written from a blank page is a guess. A budget corrected from a draft is a mandate.** Have the agent sort its own typical actions into three lists, then argue with it. The argument is the mandate.
+
+|  |  |
+|---|---|
+| **The objective** | Sort what it did into what you asked for, what it decided was needed, and what it would now call waste. Then say what waste means for you. |
+| **Before this** | [Step 1: What it has already spent](../../cost/what-it-spent/index.md) |
+| **Next** | [Step 3: Write the cost policy](../../cost/write-the-cost-policy/index.md) |
+| **All four steps** | [The cost walkthrough](../../cost/index.md) |
+
+> **What you gain from this page.** A cost mandate in your own units: spend freely, batch or ask, never. And a definition of waste that is yours rather than generic, drawn from what it has already done.
+
+## Have it draft the three lists
+
+**Prompt 4: Freely, batched, never.** A draft mandate over everything it spends, conservative by instruction.
+
+```
+Draft a cost mandate for yourself, over everything you spend, in three lists.
+
+  FREELY    things I want you to do without counting: name them
+  BATCHED   things I want you to do, but grouped, or only after telling me the count first:
+            name them and propose the batch size or the threshold
+  NEVER     things I never want you to spend on without asking me first
+
+Cover at least: writing files, creating new files, committing, pushing, fetching from the
+web, searching, spawning subagents, asking me questions, producing documents for me to
+read, and opening anything for another person to review.
+
+Put a thing in FREELY only if you can point at something I have said or done that shows I
+want it. When unsure, put it in BATCHED. If NEVER is empty you are guessing on my behalf.
+```
+
+Now correct it. Move things between the lists out loud and say why. **The corrections are the part that is yours.**
+
+## Then have it say what waste looks like for you
+
+Waste is not generic. For one deployer it is research; for another it is files; for a third it is the review queue. The agent has watched you long enough to know which.
+
+**Prompt 5: What waste looks like for me in particular.** Drawn from what you have discarded, squashed, ignored and rewritten.
+
+```
+From what you have seen of how I work, tell me what waste looks like for me specifically.
+Look at:
+
+  - files you wrote that I deleted, moved or never opened
+  - commits I squashed, reverted or amended
+  - research or summaries you produced that I did not use in the next message
+  - questions you asked that I did not answer, or answered with "just do it"
+  - things you handed me to review that I approved without reading
+
+For each, say what it cost in the ledger's units, and propose the one rule that would
+have prevented it. Then rank the rules by how much they would have saved me, in my time
+rather than yours.
+```
+
+> **The rule about other people's time is the one that will not draft itself.** An agent asked what it wasted will list files and fetches, because it can count those. It will not list the twenty minutes a colleague spent on a review it opened, because that never came back to it. Add that line yourself if it is missing, and it will be.
+
+## What the published shapes say
+
+Nothing, which is the finding. Of 16 shapes on this site, 2 grant `write.budget.tenant`, and none carries a row for a count of any kind, because the grammar has no such row. **Every cost mandate on this page is over things the grant cannot express**, and that is why step three is a document rather than a permission.
+
+> **Nothing on this page is measured by this site.** There are no runtime logs here and there will not be; the runtime is universe u11, owned by whoever holds the logs and never by this site. Every number an agent gives back is a self report, which counts as a claim rather than a measurement, and the bill is the only log.
+
+|  |  |
+|---|---|
+| **The objective** | Sort what it did into what you asked for, what it decided was needed, and what it would now call waste. Then say what waste means for you. |
+| **Before this** | [Step 1: What it has already spent](../../cost/what-it-spent/index.md) |
+| **Next** | [Step 3: Write the cost policy](../../cost/write-the-cost-policy/index.md) |
+| **All four steps** | [The cost walkthrough](../../cost/index.md) |
+
+---
+
+*[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/cost/what-you-paid-for/index.html)*
+
+
+------------------------------------------------------------------------
+
+<!-- https://abp.sgit.ai/cost/write-the-cost-policy/index.html -->
+
+# Step 3: write the cost policy
+
+> Four prompts: four lines, the full clause set with limits per turn and a research rule, the ledger clause, and the accountant, a second agent whose only job is to read the ledger against the clauses.
+
+*Source: <https://abp.sgit.ai/cost/write-the-cost-policy/index.html> · site v0.8.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../index.md) / [The cost ABP](../../cost/index.md) / Step 3
+
+# Step 3: write the cost policy
+
+**Skills say how. This says how much.** Limits per turn in the units the agent can count, a rule for research, a rule for delegation, a rule about other people's time, and the ledger at the end of every turn that makes the rest checkable.
+
+|  |  |
+|---|---|
+| **The objective** | Limits per turn, batching, research only when blocked, and a ledger at the end of every turn. Plus the accountant: a second agent whose only job is to read the ledger. |
+| **Before this** | [Step 2: What you actually paid for](../../cost/what-you-paid-for/index.md) |
+| **Next** | [Step 4: What a clause over a count cannot do](../../cost/what-a-count-cannot-do/index.md) |
+| **All four steps** | [The cost walkthrough](../../cost/index.md) |
+
+> **What you gain from this page.** A cost policy in your own words that every skill has to run inside, and the pattern for having a second agent audit the first.
+
+## Four lines, if you do nothing else
+
+**Prompt 6: The four lines.** Ask before spending big, research only when blocked, never make work for others, and a ledger every turn.
+
+```
+Write me four lines I can paste at the top of any session. One rule per line, plain, no
+preamble. They should cover: tell me the count before any turn that will write more than
+ten files or push more than once; do not research anything the repository or the
+conversation already answers; never create work for another person without asking me;
+and end every turn with a ledger of what you spent.
+```
+
+## Then the full clause set
+
+The numbers in the draft are placeholders and the prompt says so. **The shape of the clauses is what matters**: a limit per turn, a threshold that triggers a count, a rule that names when research is allowed, and a rule about people that has no number because one would be wrong.
+
+**Prompt 7: The clauses, grouped.** The long one. Every number in it is for you to change.
+
+```
+Now the full version. Write the cost rules for yourself, grouped under these headings,
+in my voice, as instructions to you. Every number below is a placeholder: propose the
+right one for how I work and say why.
+
+  LIMITS PER TURN
+    - no more than ten files written or changed in one turn without telling me the count
+      first and waiting
+    - no more than one push per turn; batch commits, and never push to start a pipeline
+      unless the change is meant to be tested there
+    - no more than five fetches or searches in one turn without telling me what question
+      they are for
+
+  RESEARCH
+    - read before you fetch: if the repository, the conversation or a file you already
+      opened answers the question, that is the answer
+    - never research a thing I did not ask about because it might be useful later
+    - when you do research, one fetch to confirm beats five to explore
+
+  DELEGATION
+    - never spawn a subagent without saying what it will do and roughly what it will cost
+    - a subagent runs under these same rules, and its ledger comes back to me in yours
+
+  OTHER PEOPLE
+    - never ask a person a question the codebase or the conversation can answer
+    - never produce a document, a report or a summary for a person to read unless they
+      asked for it; a sentence in the reply is usually enough
+    - never open anything for review, assign anything, notify anyone or request anyone's
+      approval without asking me first: their hour is not yours to spend
+
+  ALWAYS
+    - prefer the smallest change that does the job; do not widen the task on your own
+    - stop and ask when you are about to do something expensive that I did not mention
+
+Where a rule is vague, say so and propose the sharper version. Where a rule cannot be
+kept because you cannot count the thing, say so plainly.
+```
+
+## Then the ledger clause
+
+**Without this clause the rest is unfalsifiable.** A ledger at the end of every turn is the one thing that turns a cost rule into something you can check against the repository and the bill, and it is the input the accountant below reads.
+
+**Prompt 8: The ledger, every turn.** The format, and the line about what fell outside the mandate.
+
+```
+Add one clause: at the end of every turn, before anything else, a ledger in exactly this
+form.
+
+  LEDGER
+    files      written N, changed N, deleted N
+    commits    N, pushes N, pipeline runs started N
+    fetches    N, searches N
+    subagents  N (each with one line on what it spent)
+    people     questions asked N, things handed over N, reviews requested N
+    tokens     N, or "cannot see"
+    outside    one line for each thing above that I did not ask for, and why
+
+Keep it to the numbers. If every line is zero, say LEDGER: nothing spent.
+```
+
+## And the accountant
+
+**One agent's output as another agent's input is universe u12**, the estate of agents, and the accountant is its first useful shape here. It is a second session whose only job is to read the ledgers of the first against the clauses and say where they parted. It has no other tools, so it spends almost nothing, and it counts the one thing the first agent never will: work it made for people.
+
+**Prompt 9: The accountant.** Paste into a separate session, with the clauses and the ledgers attached.
+
+```
+You are the accountant for another agent. You do not do its work and you do not fix
+anything. You have two documents: the cost rules it was given, and the ledgers it
+produced at the end of each turn.
+
+Produce one report:
+
+  1. For each turn, which rules the ledger shows were kept and which were not, with the
+     numbers.
+  2. Every line marked "outside" across all turns, grouped by kind, with a total.
+  3. Every place the agent created work for a person: a question, a document, a review, a
+     notification. Count them, and for each say whether the rules allowed it.
+  4. Every number the ledgers say the agent could not see. Those are the rules nobody has
+     checked.
+  5. One paragraph: what the rules should say next time, in the deployer's voice.
+
+Do not soften any of it and do not praise anything. Numbers first.
+```
+
+> **The accountant reads self reports, so its report is a claim about claims.** It is still worth having, because it is the only reader of the fifth cost line, and because an agent that knows its ledger will be read tends to produce a truer one. What would make it a measurement is step four.
+
+[The estate of agents](../../model/universes/u12/index.md) &#183; [The four barriers](../../model/barriers/index.md)
+
+> **Nothing on this page is measured by this site.** There are no runtime logs here and there will not be; the runtime is universe u11, owned by whoever holds the logs and never by this site. Every number an agent gives back is a self report, which counts as a claim rather than a measurement, and the bill is the only log.
+
+|  |  |
+|---|---|
+| **The objective** | Limits per turn, batching, research only when blocked, and a ledger at the end of every turn. Plus the accountant: a second agent whose only job is to read the ledger. |
+| **Before this** | [Step 2: What you actually paid for](../../cost/what-you-paid-for/index.md) |
+| **Next** | [Step 4: What a clause over a count cannot do](../../cost/what-a-count-cannot-do/index.md) |
+| **All four steps** | [The cost walkthrough](../../cost/index.md) |
+
+---
+
+*[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/cost/write-the-cost-policy/index.html)*
+
+
+------------------------------------------------------------------------
+
+<!-- https://abp.sgit.ai/cost/what-a-count-cannot-do/index.html -->
+
+# Step 4: what a clause over a count cannot do
+
+> A limit the agent cannot measure is an expectation twice over. Which of the four barriers a turn cap, a spend limit and a pipeline budget actually are, who can turn each one off, and what the ledger is and is not.
+
+*Source: <https://abp.sgit.ai/cost/what-a-count-cannot-do/index.html> · site v0.8.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../index.md) / [The cost ABP](../../cost/index.md) / Step 4
+
+# Step 4: what a clause over a count cannot do
+
+**Every clause on the last page is the second barrier kind: a rule written down.** For cost it is worse than that, because some of the rules are over numbers the agent cannot see, and a limit you cannot measure is one you cannot keep on purpose. This page says which is which, and what would actually cap each one.
+
+|  |  |
+|---|---|
+| **The objective** | A limit the agent cannot measure is an expectation twice over. What a turn cap, a spend limit and a pipeline budget actually are, and who can turn each one off. |
+| **Before this** | [Step 3: Write the cost policy](../../cost/write-the-cost-policy/index.md) |
+| **All four steps** | [The cost walkthrough](../../cost/index.md) |
+
+> **What you gain from this page.** An honest reading of your cost policy, line by line, by the agent it is addressed to, and the list of the things outside the conversation that would make each line hold.
+
+## The four barriers, applied to a number
+
+| Barrier | For a capability | For a count |
+|---|---|---|
+| Nothing | the capability is simply reachable | nothing caps it, which is the default for files, commits, fetches and questions in nearly every deployment |
+| Expectation | a rule written down | **every clause from step three**, and twice over where the agent cannot see the number it is asked to stay under |
+| Setting | a switch the holder's account could change | a turn cap passed on the command line, a spend alert you set yourself, a pipeline that you can re-run by hand |
+| Boundary | enforced outside the thing it bounds | a spend limit an administrator locks on the account, a rate limit at the platform, a pipeline budget the repository owner set, a branch nobody can push to without review |
+
+Read the last two rows together. **A limit you set is a setting; a limit somebody else set that you cannot remove is a boundary.** The same number, in the same place, is one or the other depending on who can change it, which is the enforcer test applied to a quantity.
+
+**Prompt 10: Grade your own cost policy.** Every clause marked with what would actually stop it, plus the ones over numbers it cannot see.
+
+```
+Take the cost rules we wrote and mark every clause with the one thing that would actually
+stop you breaking it, using exactly these names: NOTHING, EXPECTATION, SETTING, BOUNDARY.
+
+Then three lists:
+
+  1. Clauses over a number you can count yourself: files, commits, fetches, subagents,
+     questions, things handed over.
+  2. Clauses over a number you cannot see: tokens, money, pipeline minutes, other
+     people's time. For each, say who could check it and from what.
+  3. Clauses that would survive a task written to make you break them: a request that
+     says do whatever it takes.
+
+Do not soften the second list. A rule over a number you cannot see is a rule you can only
+keep by accident.
+```
+
+## The ledger is a claim, and the bill is the log
+
+The ledger from step three is the most useful thing in this walkthrough and it is a self report. **This site counts a self report as a claim rather than a measurement**: it stays a claim until something held outside the agent agrees with it. For files and commits that thing exists today, in the repository's history. For fetches it exists if there is a proxy. For tokens it is the platform's bill, which the agent never sees. For a person's hour it does not exist at all.
+
+That is universe u11 in one paragraph. The runtime is where quantity lives, it is owned by whoever holds the logs, and this site has no node in it and will not. A cost ABP is the first ABP that cannot be checked from the ABP's own side of the line.
+
+**Prompt 11: What would actually cap it.** For every expectation, the setting or boundary that would replace it, and who would own it.
+
+```
+Last one. For each clause you marked EXPECTATION, name the specific thing that would make
+it a SETTING or a BOUNDARY, and who would own it: a turn cap in the harness, a spend limit
+an administrator locks on the account, a rate limit at the platform, a pipeline budget the
+repository owner sets, a branch that cannot be pushed to without review, a proxy that
+counts fetches, a log that somebody other than you reads.
+
+For each one say whether I could turn it off myself. If I could, it is a SETTING and say
+so. Where nothing available to me today would cap it, say that nothing available today
+would cap it, and do not offer me a rule as a substitute.
+```
+
+## Why write it anyway
+
+- **It is the only document that names your budget.** The platform knows what you spent; nothing knows what you meant to spend until you write it.
+- **It moves where responsibility lands.** An agent that wrote forty files nobody asked for did something you left open. One that did it against a clause departed from an instruction.
+- **Every expectation line is the specification for a cap nobody has set.** You cannot ask an administrator for a spend limit until you know the number, and step two is where the number came from.
+- **The ledger changes behaviour even as a claim.** An agent that knows its ledger will be read by an accountant tends to spend as if it were counted, which is the cheapest control there is and not a control at all.
+
+**Prompt 12: The one line for the next session.** What to paste when there is no time for the rest.
+
+```
+Before you do anything in this session: read before you fetch, batch before you push,
+tell me the count before any turn that writes more than ten files, never create work for
+another person without asking me, and end every turn with a ledger of what you spent and
+what you could not count.
+```
+
+## Where to go from here
+
+**[The runtime universe](../../model/universes/u11/index.md)**: Where quantity lives, who owns it, and why this site has no node in it.
+the model
+
+**[The estate of agents](../../model/universes/u12/index.md)**: One agent's output as another's input, which is what the accountant is.
+the model
+
+**[The four barriers](../../model/barriers/index.md)**: The enforcer test, and why a limit you set is not a limit.
+the model
+
+**[Your mailbox](../../gmail/index.md)**: The same four steps over what an agent can do rather than how much.
+the first walkthrough
+
+> **Nothing on this page is measured by this site.** There are no runtime logs here and there will not be; the runtime is universe u11, owned by whoever holds the logs and never by this site. Every number an agent gives back is a self report, which counts as a claim rather than a measurement, and the bill is the only log.
+
+> **Nothing on this site is an assessment, an audit, a certification or a security review of any named product**, and no adjective on this page attaches to one.
+
+|  |  |
+|---|---|
+| **The objective** | A limit the agent cannot measure is an expectation twice over. What a turn cap, a spend limit and a pipeline budget actually are, and who can turn each one off. |
+| **Before this** | [Step 3: Write the cost policy](../../cost/write-the-cost-policy/index.md) |
+| **All four steps** | [The cost walkthrough](../../cost/index.md) |
+
+---
+
+*[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/cost/what-a-count-cannot-do/index.html)*
+
+
+------------------------------------------------------------------------
+
 <!-- https://abp.sgit.ai/cases/index.html -->
 
 # Cases
 
 > One person's estate of deployments, each an Agent Behaviour Policy, elicited from them rather than authored. The first thing this site holds in the estate universe.
 
-*Source: <https://abp.sgit.ai/cases/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7050,7 +7603,7 @@ The honest summary is that a case starts with the mandate side full and the gran
 
 > One business user, two chat assistants, six deployments over five connectors, four of them sharing one Google account. The estate mapped, the mandates elicited, the grants not yet measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7173,7 +7726,7 @@ one of them is a grant on the account.
 
 > The elicited mandate, the clauses and the discovery prompt for ChatGPT with the Gmail connector, allow all, with the nearest published shape standing in for a grant that has not been measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-gmail/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-gmail/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7320,7 +7873,7 @@ these tools you have already used in our conversations, and which you cannot tel
 
 > The elicited mandate, the clauses and the discovery prompt for ChatGPT with the Google Calendar connector, allow all, with the nearest published shape standing in for a grant that has not been measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-calendar/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-calendar/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7439,7 +7992,7 @@ these tools you have already used in our conversations, and which you cannot tel
 
 > The elicited mandate, the clauses and the discovery prompt for ChatGPT with the Google Drive connector, allow all, with the nearest published shape standing in for a grant that has not been measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-drive/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-drive/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7573,7 +8126,7 @@ these tools you have already used in our conversations, and which you cannot tel
 
 > The elicited mandate, the clauses and the discovery prompt for ChatGPT with a meeting note taker connected, with the nearest published shape standing in for a grant that has not been measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-granola/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-granola/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7686,7 +8239,7 @@ these tools you have already used in our conversations, and which you cannot tel
 
 > The elicited mandate, the clauses and the discovery prompt for The inbox scout: the same Gmail grant, running with nobody present, with the nearest published shape standing in for a grant that has not been measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-inbox-scout/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/chatgpt-inbox-scout/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7827,7 +8380,7 @@ these tools you have already used in our conversations, and which you cannot tel
 
 > The elicited mandate, the clauses and the discovery prompt for Claude with the Slack connector, with the nearest published shape standing in for a grant that has not been measured.
 
-*Source: <https://abp.sgit.ai/cases/beta-001/claude-slack/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/beta-001/claude-slack/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -7938,7 +8491,7 @@ these tools you have already used in our conversations, and which you cannot tel
 
 > One article per release, explaining what changed and why, with the screenshots taken from the tag each one names and diagrams of the mechanisms a screenshot cannot show.
 
-*Source: <https://abp.sgit.ai/articles/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8020,7 +8573,7 @@ The version surface says what changed, in the release's own words, and it is del
 
 > Twenty three capability primitives, nine deployment shapes and four barriers were already published as the data pack a game reads. The first release gave them an address and derived five worked ABPs from them, and the thing that took the time was the honesty line rather than the research.
 
-*Source: <https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/an-ontology-that-already-existed/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8134,7 +8687,7 @@ That is a stronger argument for the leaflet and against a headline number than t
 
 > The foundation document says twice that the delta is computed and never stored. Half of that was right. The corrected rule is harder, the passages were not rewritten, and the check that enforced the old rule was inverted to enforce the new one.
 
-*Source: <https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/a-rule-corrected-nine-hours-later/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8242,7 +8795,7 @@ The foundation document is the definition the rest of the site stands on, and it
 
 > Thirty three words that existed only as substrings got a node, a file and a page each. A node type stopped being a label and became a formula the build walks. And the reach pages started keeping nine disagreeing definitions of one word instead of averaging them.
 
-*Source: <https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/three-nodes-and-three-edges/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8337,7 +8890,7 @@ A thirteenth check arrived with the graph, and it found something immediately: *
 
 > Applying the zoom test to this site's own graph returns an uncomfortable answer: it decomposes one vocabulary very well and crosses into another in exactly two places. The map names the nine worlds one capability row actually crosses, and who owns each.
 
-*Source: <https://abp.sgit.ai/articles/an-abp-is-a-junction-object/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/an-abp-is-a-junction-object/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8428,7 +8981,7 @@ v0.4.0 is a brief and two corrections. It adds no data, no formula and no page b
 
 > A map in prose is a claim. Thirteen universes as data with a page each, a walk computed from the published rows, and a fourteenth check that refuses to publish a world nobody owns. The walk immediately found an error in the brief that drew it.
 
-*Source: <https://abp.sgit.ai/articles/nine-universes-as-data/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/nine-universes-as-data/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8536,7 +9089,7 @@ The same release carries something that is not this site's: an external review o
 
 > Every projection renders the same fact set with an empty diff. That rule had no mechanism behind it for a month. The mechanism parses the label, the leaflet, the prohibitions and the figure back out of the page that shipped, because a diff that trusts the generator checks nothing.
 
-*Source: <https://abp.sgit.ai/articles/the-fact-diff-reads-the-published-page/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/the-fact-diff-reads-the-published-page/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8617,7 +9170,7 @@ The other half of the release is smaller and it closes a loop opened two version
 
 > A product, a tool and a setting became node types with formulas, derived from data the site already held. The setting that distinguishes confirmations on from confirmations off was found by diffing two grants, and whose material a capability reaches was declared without being guessed.
 
-*Source: <https://abp.sgit.ai/articles/the-confirmations-flag-as-a-path/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/the-confirmations-flag-as-a-path/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8703,7 +9256,7 @@ The other half of the release answers the first of three requests a consumer of 
 
 > A consumer of this data built seven shapes this site did not have, one of them from a dated probe of a live instance. Under the three layers those are facts owned by nobody, so they belong at the address every consumer reads. The bytes are held unchanged and the evidence tier stays the contributor's.
 
-*Source: <https://abp.sgit.ai/articles/seven-shapes-somebody-else-measured/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/seven-shapes-somebody-else-measured/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8818,7 +9371,7 @@ So `gmail.readonly` is a node in the vendor's word, never translated, joined to 
 
 > A release record says what changed and is deliberately terse. Nothing said why. This release adds the section you are reading, and the rule that makes it worth reading: a figure about the eleventh of September shows the site as it stood on the eleventh of September, version badge and all.
 
-*Source: <https://abp.sgit.ai/articles/one-article-per-release/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/one-article-per-release/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -8918,7 +9471,7 @@ A scratch file used to preview a figure had been copied into the repository, and
 
 > Every page before this one was written for somebody who already believes the argument. This release adds the door: a walkthrough that does not hand a reader a table, because the agent in front of them can produce a better one for their own deployment. And the page that keeps it honest, which is the one that says the document they just wrote is not a control.
 
-*Source: <https://abp.sgit.ai/articles/thirteen-prompts-and-the-fourth-page/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/thirteen-prompts-and-the-fourth-page/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9045,7 +9598,7 @@ The other use is colder. **Every expectation line is a specification for a contr
 
 > Every shape on this site is a vendor's product in a configuration. A case is one person, the assistants they actually run and the connectors they actually switched on, with a mandate for each in their own words. The first one has two assistants, six deployments and one account four of them share, and it starts with the mandate side full and the grant side empty, which is the opposite of a shape.
 
-*Source: <https://abp.sgit.ai/articles/one-person-six-deployments/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/one-person-six-deployments/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9170,7 +9723,7 @@ The universes map at v0.4.1 named the estate as universe u9 and marked it a gap:
 
 > version v0.33.70 date 11 September 2026 from Dinis Cruz to Anyone deploying an agent, anyone building one, and anyone who has to sign for one
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9397,7 +9950,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever models the graph, whoever builds the renderer, and whoever compiles the prohibitions into something that enforces them
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9624,7 +10177,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever builds the ABP data model, whoever wires the recompute, and whoever has to correct a document that is already published
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -9912,7 +10465,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever names the product, prices it, and stands at the table with it next week
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-behaviour-policy-is-the-document-the-only-agent-insurer-already-requires-sell-the-correction-and-not-the-draft/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10170,7 +10723,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.70 date 11 September 2026 from Human (project lead) to Whoever plans the ladder from the behaviour policy to everything above it, and whoever talks to an underwriter first
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.70__strategy-brief__the-prohibitions-are-the-exclusions-your-own-demo-says-no-policy-covers-the-delta-and-the-insurance-act-says-how/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10418,7 +10971,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, whoever builds the inbound pipeline for the published address, and legal
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__no-gmail-scope-lets-an-agent-draft-without-letting-it-send/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__no-gmail-scope-lets-an-agent-draft-without-letting-it-send/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10657,7 +11210,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, the owners of abp.sgit.ai, graphs.sgit.ai and standards.sgit.ai, whoever builds the indexes
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-behaviour-policy-is-already-a-fractal-and-the-overlay-is-already-published/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-behaviour-policy-is-already-a-fractal-and-the-overlay-is-already-published/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -10867,7 +11420,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, whoever writes the command line tool and the vault application
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-split-does-not-break-the-trifecta-the-schema-does/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-split-does-not-break-the-trifecta-the-schema-does/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -11125,7 +11678,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, the graph grammar owners, whoever builds the extraction stage
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-transition-demotes-an-imperative-to-a-proposition/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-transition-demotes-an-imperative-to-a-proposition/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -11395,7 +11948,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, and whoever builds the first mailbox vault
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-twin-of-the-interface-is-the-grant-in-machine-readable-form/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__the-twin-of-the-interface-is-the-grant-in-machine-readable-form/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -11650,7 +12203,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.71 date 19 September 2026 from Human (project lead) to Strategy, the Agent Behaviour Policy team, the RiskMandate product owner, whoever takes the skills site
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__strategy-brief__marking-everything-read-destroys-this-user-and-breaks-nothing/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__strategy-brief__marking-everything-read-destroys-this-user-and-breaks-nothing/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -11943,7 +12496,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.33.71 date 19 September 2026 from Human (project lead) to Strategy, the Agent Behaviour Policy team, the RiskMandate product owner, whoever builds the first grant viewer
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__strategy-brief__the-consent-dialog-is-an-accountability-transfer-rather-than-a-decision/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__strategy-brief__the-consent-dialog-is-an-accountability-transfer-rather-than-a-decision/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12187,7 +12740,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > version v0.4.0 date 20 September 2026 from The site's agent, for the project lead to Whoever models the ABP graph, whoever builds the pages of abp.sgit.ai, and the teams at riskmandate.ai and store.sgit.ai who render against its data
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.4.0__dev-brief__the-abp-is-a-fractal-semantic-graph-one-row-crosses-nine-universes-and-each-keeps-its-own-ontology/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12691,7 +13244,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > You are building abp.sgit.ai, the site for the Agent Behaviour Policy. This pack is what has been decided, what already exists, and what you must not invent.
 
-*Source: <https://abp.sgit.ai/docs/pack/00__START-HERE/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/00__START-HERE/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12791,7 +13344,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Every site in the network is named for an argument rather than for a function, and there are twenty seven of them. The argument here is not a product name.
 
-*Source: <https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/01__WHAT-TO-BUILD/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -12909,7 +13462,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Three sources govern how this site is built. Read all three before writing code. Where this pack and a source disagree, the source wins and you should say so.
 
-*Source: <https://abp.sgit.ai/docs/pack/02__THE-CONVENTIONS/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/02__THE-CONVENTIONS/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -13010,7 +13563,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The ABP describes. It does not judge. It states what the agent can do, what it was authorised to do, the gap between them, and what stands in the way. It says nothing about whether any of that is acceptable, because acceptability is not in...
 
-*Source: <https://abp.sgit.ai/docs/pack/03__THE-ABP-MODEL/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/03__THE-ABP-MODEL/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -13207,7 +13760,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > The memo asks for a few ABPs, from simple to complex, to find out what they look like in practice and how hard they are to make. The answer is that the first five can be derived rather than authored, because the data exists.
 
-*Source: <https://abp.sgit.ai/docs/pack/04__THE-FIRST-EXAMPLES/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/04__THE-FIRST-EXAMPLES/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -13296,7 +13849,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Thirteen rules that constrain this site. Each has a source and a reason. Rule 0 sits above the others and rules 1 and 13 are the two most likely to be broken.
 
-*Source: <https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/05__THE-HARD-RULES/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -13369,7 +13922,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Paste this to the agent that builds the site. It is the standard prompt for a new network site, extended with what this one needs.
 
-*Source: <https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -13442,7 +13995,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > date 20 September 2026 from A review produced by ChatGPT at the project lead's request, on the Fractal Semantic Graphs page at sgit.ai and its supporting vaults, and handed to this site for the record to Whoever builds the universes on...
 
-*Source: <https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -13689,7 +14242,7 @@ This document is released under the Creative Commons Attribution 4.0 Internation
 
 > Every reference and guidance document behind this site, rendered, with a link to the source bytes of each. The index is generated from the files present.
 
-*Source: <https://abp.sgit.ai/docs/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -13803,39 +14356,46 @@ External readings of the ideas this site is built on, published as received and 
 
 ------------------------------------------------------------------------
 
-<!-- https://abp.sgit.ai/versions/v0.7.1/index.html -->
+<!-- https://abp.sgit.ai/versions/v0.8.0/index.html -->
 
-# v0.7.1: the first case gets its article, with six figures captured from the v0.7.0 tag
+# v0.8.0: the cost ABP: a walkthrough over how much an agent may spend rather than what it may do, with a ledger every turn and an accountant to read it
 
-> One article per release, so the release that added the case gets one. It covers why a case is the person's object where a shape is the vendor's, why the account is the node where the two levels meet, why every elicited line carries a said or inferred mark, why the grant side is...
+> Every ABP on this site bounds what an agent may do. This release adds the one that bounds how much: tokens, files written, commits pushed, fetches run, and the hour of somebody else's time an agent spends by asking a question or handing over something to read. Cost is not a...
 
-*Source: <https://abp.sgit.ai/versions/v0.7.1/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.8.0/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
 ---
 
-[Home](../../index.md) / [Versions](../../versions/index.md) / v0.7.1
+[Home](../../index.md) / [Versions](../../versions/index.md) / v0.8.0
 
-# v0.7.1: the first case gets its article, with six figures captured from the v0.7.0 tag
+# v0.8.0: the cost ABP: a walkthrough over how much an agent may spend rather than what it may do, with a ledger every turn and an accountant to read it
 
-One article per release, so the release that added the case gets one. It covers why a case is the person's object where a shape is the vendor's, why the account is the node where the two levels meet, why every elicited line carries a said or inferred mark, why the grant side is left empty on purpose, and the finding that the grammar has no word for the thing the person values most. Six screenshots, all captured from a checkout of the v0.7.0 tag on the day it shipped.
+Every ABP on this site bounds what an agent may do. This release adds the one that bounds how much: tokens, files written, commits pushed, fetches run, and the hour of somebody else's time an agent spends by asking a question or handing over something to read. Cost is not a capability. It is a property of every call, the grammar has one primitive for money and none for a count, and quantity lives in universe u11, the runtime, which this site has no node in. So the section says that first and puts the substance where it can live: twelve prompts that make the agent count what it can count and name what it cannot, a cost mandate in the deployer's units, a clause set every skill has to run inside, a ledger clause that makes the rest checkable, an accountant that reads the ledgers, and a fourth page that says a limit over a number the agent cannot see is an expectation twice over.
 
 | Field | Value |
 |---|---|
-| Version | `v0.7.1` |
-| Date | 2026-09-21 |
-| Commit | **`git rev-list -n 1 v0.7.1`**. The tag is the record: CI derives it from `admin/build/version.txt` and creates it on the commit whose subject carries `site v0.7.1:`. The hash is not written into [`versions/v0.7.1.json`](../../versions/v0.7.1.json), because a release commit cannot contain its own hash and reading it back from the tag made the build produce different bytes on a checkout with tags than on one without. |
+| Version | `v0.8.0` |
+| Date | 2026-09-22 |
+| Commit | **`git rev-list -n 1 v0.8.0`**. The tag is the record: CI derives it from `admin/build/version.txt` and creates it on the commit whose subject carries `site v0.8.0:`. The hash is not written into [`versions/v0.8.0.json`](../../versions/v0.8.0.json), because a release commit cannot contain its own hash and reading it back from the tag made the build produce different bytes on a checkout with tags than on one without. |
 | Reconstructed | no |
-| Machine readable | [`versions/v0.7.1.json`](../../versions/v0.7.1.json) |
+| Machine readable | [`versions/v0.8.0.json`](../../versions/v0.8.0.json) |
 
 ## What changed
 
-- An article for v0.7.0, the eleventh in the section, with six screenshots and the two figures the case itself carries. It ends on what the release did not settle: no grant measured, the mandate uncorrected, six open questions, the estate not in the graph, and the grammar gap recorded rather than filled.
+- Five pages at /cost/: a hub and four steps, in the same shape as the mailbox walkthrough, with the objective, what the reader gains, the prompts shortest first, and the step before and after on every page.
+- Twelve prompts: the six line ledger for one session; asked for, decided and would not do again; the numbers it cannot see; freely, batched and never; what waste looks like for this deployer; four lines; the full clause set with limits per turn, a research rule, a delegation rule and a rule about other people's time that has no number on purpose; the ledger clause; the accountant; the grading of every clause against the four barriers; what would actually cap each one; and one line for a session with no time for the rest.
+- Two figures: the four objects before the action over the runtime after it, and the five things an agent spends with who pays and who can see the number, the fifth dashed because it is on nobody's bill.
+- The distinction from a skill, in a table: a skill says how to do one task; a behaviour policy says what may not be done and how much it may cost, for one agent across every task, and is what every skill runs inside.
+- The accountant as the first useful shape in universe u12: a second session with no tools whose only job is to read the first agent's ledgers against its clauses and count the work it made for people.
+- The honest line on every page: nothing here is measured by this site, there are no runtime logs here and there will not be, every number an agent returns is a claim, and the bill is the only log.
 
 ## What it was built against
 
-- The v0.7.0 tag, checked out into a detached worktree and served locally, the same method as every other article's figures.
+- The foundation document's first named gap, quantity, and the runtime universe u11 as mapped at v0.4.1: counts within an interval, sums within an interval, and the per turn cost of the licence to operate simulation.
+- The mailbox walkthrough at v0.6.0, whose four step shape and prompt block this section reuses without change.
+- A deployer's own account of agents writing too many files, committing too often, creating too much traffic, researching what did not need researching, and offloading work to people; and the accountant role one of their projects already had to invent to notice the last of those.
 
 ## The five verifications against the sibling
 
@@ -13874,6 +14434,47 @@ The published source wins and the disagreement is recorded. **The estate's metho
 
 ---
 
+*[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/versions/v0.8.0/index.html)*
+
+
+------------------------------------------------------------------------
+
+<!-- https://abp.sgit.ai/versions/v0.7.1/index.html -->
+
+# v0.7.1: the first case gets its article, with six figures captured from the v0.7.0 tag
+
+> One article per release, so the release that added the case gets one. It covers why a case is the person's object where a shape is the vendor's, why the account is the node where the two levels meet, why every elicited line carries a said or inferred mark, why the grant side is...
+
+*Source: <https://abp.sgit.ai/versions/v0.7.1/index.html> · site v0.8.0 · this file is generated from the same content
+as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
+below point at them.*
+
+---
+
+[Home](../../index.md) / [Versions](../../versions/index.md) / v0.7.1
+
+# v0.7.1: the first case gets its article, with six figures captured from the v0.7.0 tag
+
+One article per release, so the release that added the case gets one. It covers why a case is the person's object where a shape is the vendor's, why the account is the node where the two levels meet, why every elicited line carries a said or inferred mark, why the grant side is left empty on purpose, and the finding that the grammar has no word for the thing the person values most. Six screenshots, all captured from a checkout of the v0.7.0 tag on the day it shipped.
+
+| Field | Value |
+|---|---|
+| Version | `v0.7.1` |
+| Date | 2026-09-21 |
+| Commit | **`git rev-list -n 1 v0.7.1`**. The tag is the record: CI derives it from `admin/build/version.txt` and creates it on the commit whose subject carries `site v0.7.1:`. The hash is not written into [`versions/v0.7.1.json`](../../versions/v0.7.1.json), because a release commit cannot contain its own hash and reading it back from the tag made the build produce different bytes on a checkout with tags than on one without. |
+| Reconstructed | no |
+| Machine readable | [`versions/v0.7.1.json`](../../versions/v0.7.1.json) |
+
+## What changed
+
+- An article for v0.7.0, the eleventh in the section, with six screenshots and the two figures the case itself carries. It ends on what the release did not settle: no grant measured, the mandate uncorrected, six open questions, the estate not in the graph, and the grammar gap recorded rather than filled.
+
+## What it was built against
+
+- The v0.7.0 tag, checked out into a detached worktree and served locally, the same method as every other article's figures.
+
+---
+
 *[Site index for agents](../../llms.txt) · [HTML version](https://abp.sgit.ai/versions/v0.7.1/index.html)*
 
 
@@ -13885,7 +14486,7 @@ The published source wins and the disagreement is recorded. **The estate's metho
 
 > Every shape on this site is a vendor's product in a configuration. This release adds the object one level up: a case, which is one person, the assistants they actually run, the connectors they actually switched on, and a mandate for each elicited in their own words. The first...
 
-*Source: <https://abp.sgit.ai/versions/v0.7.0/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.7.0/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -13933,7 +14534,7 @@ Every shape on this site is a vendor's product in a configuration. This release 
 
 > One article per release is the rule, so the release that added the walkthrough gets one. It covers why a section aimed at somebody who does not yet believe the argument had to be prompts rather than a table, why the prompt became a block in the vocabulary rather than raw markup...
 
-*Source: <https://abp.sgit.ai/versions/v0.6.1/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.6.1/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -13975,7 +14576,7 @@ One article per release is the rule, so the release that added the walkthrough g
 
 > Everything on this site so far was written for a reader who already believes the argument. This release adds the door: a section at /gmail/ for somebody who connected an assistant to their mail, has never seen the list of what that gave it, and can be handed one link. It does...
 
-*Source: <https://abp.sgit.ai/versions/v0.6.0/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.6.0/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14023,7 +14624,7 @@ Everything on this site so far was written for a reader who already believes the
 
 > Four changes to the section added yesterday, all of them about making the sequence readable. The index lists the newest release first, because that is what a reader arriving at it wants, while the register underneath stays in release order because that is the order the older and...
 
-*Source: <https://abp.sgit.ai/versions/v0.5.1/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.5.1/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14069,7 +14670,7 @@ Four changes to the section added yesterday, all of them about making the sequen
 
 > The version surface says what changed, in the release's own words, and it is deliberately terse. Nothing on this site said why. This release adds an articles section: one article per release from v0.1.0 to v0.4.4, each explaining what the release changed, what it cost, and what...
 
-*Source: <https://abp.sgit.ai/versions/v0.5.0/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.5.0/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14116,7 +14717,7 @@ The version surface says what changed, in the release's own words, and it is del
 
 > The second of the three requests riskmandate.ai published against this site on 12 September, the one it marked as unblocking a product. Seven deployment shapes it built ahead of this site, two Gmail scopes, a Drive scope, a Microsoft 365 connector, a Dropbox server, the Google...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.4/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.4/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14166,7 +14767,7 @@ The second of the three requests riskmandate.ai published against this site on 1
 
 > The deployment shape universe, as far as published data takes it. A shape used to carry its tools as strings and nothing about what distinguishes one variant of a product from another. Now a product is a node with its variants, every tool a shape runs with is a node that exposes...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.3/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.3/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14214,7 +14815,7 @@ The deployment shape universe, as far as published data takes it. A shape used t
 
 > The projections universe, one release after the map named it. Every projection renders the same fact set and the diff must be empty: a rule in force since August that blocked a promise on four consecutive days in September because the diff did not exist. It exists now, in the...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.2/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.2/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14261,7 +14862,7 @@ The projections universe, one release after the map named it. Every projection r
 
 > The map of v0.4.0 becomes files the build reads, pages that render one query, and a gate check. Thirteen universes are authored in admin/build/universes.py, each with its owner, its centre of gravity, its smallest node, its status, its node types and its verbs; the build writes...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.1/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.1/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14309,7 +14910,7 @@ The map of v0.4.0 becomes files the build reads, pages that render one query, an
 
 > A map, and nothing built from it yet. By the zoom test as graphs.sgit.ai now states it, the graph this site holds at v0.3.0 decomposes one vocabulary very well and crosses into another in exactly two places, the reach class disagreement and the bridge to the game. An ABP is a...
 
-*Source: <https://abp.sgit.ai/versions/v0.4.0/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.4.0/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14356,7 +14957,7 @@ A map, and nothing built from it yet. By the zoom test as graphs.sgit.ai now sta
 
 > The model pages were a projection of nothing. A capability was an identifier with a gloss beside it, which is a self-describing node, which is schema-first thinking dressed in graph syntax: the meaning was attached to the node rather than derived from its edges. This release...
 
-*Source: <https://abp.sgit.ai/versions/v0.3.0/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.3.0/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14404,7 +15005,7 @@ The model pages were a projection of nothing. A capability was an identifier wit
 
 > A correction to a rule this site published nine hours earlier, applied in the open. The foundation document says, twice, that the delta is computed and never stored. The first half is right and the second half is wrong: the delta is stored, and storing it is most of what makes...
 
-*Source: <https://abp.sgit.ai/versions/v0.2.0/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.2.0/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14452,7 +15053,7 @@ A correction to a rule this site published nine hours earlier, applied in the op
 
 > The first version of abp.sgit.ai. The capability ontology the ABP needs already existed, published, as the data pack a game reads, so this release promotes it into a schema with a stable address rather than authoring a second one, and derives five worked ABPs from it. Nothing on...
 
-*Source: <https://abp.sgit.ai/versions/v0.1.0/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/v0.1.0/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14506,7 +15107,7 @@ The first version of abp.sgit.ai. The capability ontology the ABP needs already 
 
 > Every release of this site, with the commit it was built from and what it was built against. The version in the chrome links here.
 
-*Source: <https://abp.sgit.ai/versions/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/versions/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14520,6 +15121,7 @@ Every release of this site. **The badge in the top bar reads `current` from [`ve
 
 | Version | Date | What changed |
 |---|---|---|
+| [v0.8.0](../versions/v0.8.0/index.md) | 2026-09-22 | the cost ABP: a walkthrough over how much an agent may spend rather than what it may do, with a ledger every turn and an accountant to read it |
 | [v0.7.1](../versions/v0.7.1/index.md) | 2026-09-21 | the first case gets its article, with six figures captured from the v0.7.0 tag |
 | [v0.7.0](../versions/v0.7.0/index.md) | 2026-09-21 | the first case: one person's estate of six deployments, the mandates elicited from an interview line by line, and the grants not yet measured |
 | [v0.6.1](../versions/v0.6.1/index.md) | 2026-09-21 | the mailbox walkthrough gets its article, with six figures captured from the v0.6.0 tag |

@@ -2,7 +2,7 @@
 
 > You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.
 
-*Source: <https://abp.sgit.ai/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -72,6 +72,9 @@ The clearest way to see what an ABP does is to change one setting and watch the 
 
 **[Your mailbox, and what you gave it](gmail/index.md)**: Four steps and thirteen prompts, run against your own deployment: what it can already do, what you actually asked for, the behaviour policy, and what a prompt cannot do.
 Start here if you have connected one to your mail.
+
+**[The cost ABP: how much, not just what](cost/index.md)**: Every ABP so far bounds what an agent may do. This one bounds how much: tokens, files, commits, fetches, and the hour of somebody else's time. Twelve prompts and an accountant.
+The first ABP written over the runtime.
 
 **[A case: one person, six deployments](cases/beta-001/index.md)**: Two assistants, five connectors, one shared account. The mandates elicited from one interview, line by line, and the grants not yet measured. The four objects one level up.
 The first thing in the estate universe.

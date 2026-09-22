@@ -813,3 +813,95 @@ def calendar_rebuild():
                "it is rebuildable from somebody's mailbox, perhaps not yours. An event you "
                "created with no guests never left the calendar, so a deletion is the end of "
                "it. The proportion between the three is unknown for this estate")
+
+
+def what_vs_how_much():
+    """An ABP bounds what; cost is how much, and how much lives in the runtime underneath."""
+    body = [DEFS,
+            '<text x="24" y="22" class="fh">What an agent may do, and how much of it</text>',
+            '<text x="24" y="40" class="fk">the four objects sit before the action; every '
+            'count sits after it, in a universe this site has no node in</text>']
+    # the ABP: four objects, before the action
+    body.append('<rect x="24" y="58" width="912" height="112" rx="10" class="box"/>')
+    body.append('<text x="40" y="80" class="fb">Before the action: the ABP (u2 to u6)</text>')
+    for i, (t, sub) in enumerate([("Mandate", "what was asked"), ("Grant", "what it can do"),
+                                  ("Delta", "the difference"), ("Barrier", "what is in the way")]):
+        body.append(_box(40 + i * 222, 96, 206, 56, t, sub, cls="box-a"))
+    body.append(_arrow(480, 170, 480, 214, label="every call is one instance of a capability"))
+    # the runtime: counts, after the action
+    body.append('<rect x="24" y="214" width="912" height="118" rx="10" class="box-x"/>')
+    body.append('<text x="40" y="236" class="fb">After the action: the runtime (u11), where '
+                'quantity lives</text>')
+    for i, (t, sub) in enumerate([("Calls", "how many, in which interval"),
+                                  ("Tokens", "the bill, seen by the platform"),
+                                  ("Files, commits, fetches", "what the repository sees"),
+                                  ("A person's hour", "what nobody bills")]):
+        body.append(_box(40 + i * 222, 254, 206, 56, t, sub))
+    body.append('<text x="24" y="358" class="ft"><tspan class="fb">A cost clause is a '
+                'prohibition over a count.</tspan> The grammar has one primitive for money '
+                'and none for a count,</text>')
+    body.append('<text x="24" y="376" class="ft">so the clause carries what the grant cannot, '
+                'and only a log held outside the agent can say whether it was kept.</text>')
+    return fig(_svg("".join(body), 392),
+               "The four objects describe what an agent may do before it acts. Every count "
+               "is a fact about what it did, which is the runtime universe, owned by whoever "
+               "holds the logs and never by this site.",
+               "A figure here in the page: two bands. The upper band is the ABP before the "
+               "action, with its four objects, mandate, grant, delta and barrier. An arrow "
+               "labelled every call is one instance of a capability leads to the lower band, "
+               "the runtime, where quantity lives: calls in an interval, tokens seen by the "
+               "platform, files, commits and fetches seen by the repository, and a person's "
+               "hour, which nobody bills. Under it: a cost clause is a prohibition over a "
+               "count; the grammar has one primitive for money and none for a count, so the "
+               "clause carries what the grant cannot, and only a log outside the agent can say "
+               "whether it was kept")
+
+
+def cost_lines():
+    """The five things an agent spends, who pays each one, and who can see the number."""
+    rows = [
+        ("Tokens", "the account holder, on the platform's bill",
+         "the platform; the agent usually cannot see its own count"),
+        ("Files written and changed", "the repository, and whoever reads it next",
+         "the agent, exactly; the repository, in its history"),
+        ("Commits and pushes", "the pipeline, in minutes and money, per push",
+         "the agent; the code host; the pipeline's own log"),
+        ("Fetches, searches, research", "tokens, time, and one send.endpoint.world each",
+         "the agent; the proxy, if there is one"),
+        ("Another person's hour", "a reviewer, an answerer, a reader of what it produced",
+         "nobody's bill; only the person, afterwards"),
+    ]
+    body = [DEFS,
+            '<text x="24" y="22" class="fh">Five things an agent spends, and who pays for '
+            'each</text>',
+            '<text x="24" y="40" class="fk">only the first one is on a bill, and it is the '
+            'one the agent cannot see</text>',
+            '<text x="40" y="66" class="fb">What is spent</text>',
+            '<text x="300" y="66" class="fb">Who pays</text>',
+            '<text x="640" y="66" class="fb">Who can see the number</text>',
+            '<path d="M 24 74 L 936 74" class="edge"/>']
+    for i, (what, who, seen) in enumerate(rows):
+        y = 96 + i * 54
+        cls = "box-x" if i == 4 else "box"
+        body.append(f'<rect x="24" y="{y - 18}" width="912" height="46" rx="8" class="{cls}"/>')
+        body.append(f'<text x="40" y="{y + 4}" class="fb">{what}</text>')
+        for j, line in enumerate(_wrap(who, 48)):
+            body.append(f'<text x="300" y="{y - 4 + j * 16}" class="ft">{line}</text>')
+        for j, line in enumerate(_wrap(seen, 46)):
+            body.append(f'<text x="640" y="{y - 4 + j * 16}" class="ft">{line}</text>')
+    body.append('<text x="24" y="380" class="fd">The fifth line is dashed because it never '
+                'appears on any bill. It is the one an accountant agent exists to count.</text>')
+    return fig(_svg("".join(body), 396),
+               "Five lines, and a person's hour is the one nothing meters. An agent that "
+               "produces a document for somebody to read, asks a question, or opens something "
+               "for review has spent that hour, and no ledger records it unless the clause "
+               "asks for it.",
+               "A figure here in the page: a table of five things an agent spends. Tokens, "
+               "paid by the account holder on the platform's bill, seen by the platform and "
+               "usually not by the agent. Files written and changed, paid by the repository "
+               "and whoever reads it next, seen exactly by the agent. Commits and pushes, "
+               "paid by the pipeline per push, seen by the agent and the code host. Fetches "
+               "and research, paid in tokens and time and one network reach each, seen by the "
+               "agent and any proxy. And another person's hour, paid by a reviewer, an "
+               "answerer or a reader, on nobody's bill and seen only by that person "
+               "afterwards")

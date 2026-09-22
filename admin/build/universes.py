@@ -645,7 +645,10 @@ UNIVERSES = [
                        "counts within an interval, sums within an interval, the licence to "
                        "operate simulation's per turn cost, and behaviour drift. The two are "
                        "joined by exactly the edges that make drift and excess different "
-                       "measurements.",
+                       "measurements. Since v0.8.0 the cost walkthrough at /cost/ is written "
+                       "over this universe: every one of its clauses is a prohibition over a "
+                       "count, and the page says on its face that only a log held here, "
+                       "never on this site, can say whether one was kept.",
         "node_types": [],
         "verbs": [
             _v("instance_of", "instanced_by", "ToolCall", "Capability",

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Step 2: what you actually paid for - abp.sgit.ai</title>
+<meta name="description" content="Two prompts that turn the ledger into a cost mandate: what you want spent freely, what should be batched or asked about, what must never be spent, and what waste means for you in particular.">
+<link rel="canonical" href="https://abp.sgit.ai/cost/what-you-paid-for/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/cost/what-you-paid-for/index.html">
+<meta property="og:title" content="Step 2: what you actually paid for - abp.sgit.ai">
+<meta property="og:description" content="Two prompts that turn the ledger into a cost mandate: what you want spent freely, what should be batched or asked about, what must never be spent, and what waste means for you in particular.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.8.0/index.html" title="What changed in v0.8.0, and the commit it was built from">v0.8.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../gmail/index.html">Your mailbox<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../gmail/index.html">The walkthrough</a>
+      <a class="sl" href="../../gmail/what-it-can-do/index.html">Step 1: What it can already do</a>
+      <a class="sl" href="../../gmail/what-you-asked-for/index.html">Step 2: What you actually asked for</a>
+      <a class="sl" href="../../gmail/write-the-behaviour-policy/index.html">Step 3: Write the behaviour policy</a>
+      <a class="sl" href="../../gmail/what-a-prompt-cannot-do/index.html">Step 4: What a prompt cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../cost/index.html">The cost ABP<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../cost/index.html">The walkthrough</a>
+      <a class="sl" href="../../cost/what-it-spent/index.html">Step 1: What it has already spent</a>
+      <a class="sl here" href="../../cost/what-you-paid-for/index.html">Step 2: What you actually paid for</a>
+      <a class="sl" href="../../cost/write-the-cost-policy/index.html">Step 3: Write the cost policy</a>
+      <a class="sl" href="../../cost/what-a-count-cannot-do/index.html">Step 4: What a clause over a count cannot do</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../cases/index.html">Cases<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../cases/beta-001/index.html">One person, six deployments</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-gmail/index.html">Gmail</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-calendar/index.html">Google Calendar</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-drive/index.html">Google Drive</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-granola/index.html">a meeting note taker</a>
+      <a class="sl" href="../../cases/beta-001/chatgpt-inbox-scout/index.html">Gmail, unattended</a>
+      <a class="sl" href="../../cases/beta-001/claude-slack/index.html">Slack</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../articles/index.html">One per release</a>
+      <a class="sl" href="../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
+      <a class="sl" href="../../articles/thirteen-prompts-and-the-fourth-page/index.html">v0.6.0</a>
+      <a class="sl" href="../../articles/one-person-six-deployments/index.html">v0.7.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../cost/index.html">The cost ABP</a> / Step 2</p>
+  <h1>Step 2: what you actually paid for</h1>
+  <p class="lead"><b>A budget written from a blank page is a guess. A budget corrected from a draft is a mandate.</b> Have the agent sort its own typical actions into three lists, then argue with it. The argument is the mandate.</p>
+  <div class="tablewrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><b>The objective</b></td><td>Sort what it did into what you asked for, what it decided was needed, and what it would now call waste. Then say what waste means for you.</td></tr><tr><td><b>Before this</b></td><td><a href="../../cost/what-it-spent/index.html">Step 1: What it has already spent</a></td></tr><tr><td><b>Next</b></td><td><a href="../../cost/write-the-cost-policy/index.html">Step 3: Write the cost policy</a></td></tr><tr><td><b>All four steps</b></td><td><a href="../../cost/index.html">The cost walkthrough</a></td></tr></tbody></table></div>
+  <div class="note"><b>What you gain from this page.</b> A cost mandate in your own units: spend freely, batch or ask, never. And a definition of waste that is yours rather than generic, drawn from what it has already done.</div>
+  <h2 id="have-it-draft-the-three-lists">Have it draft the three lists</h2>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt 4</span><b>Freely, batched, never</b><span class="psub">A draft mandate over everything it spends, conservative by instruction.</span></figcaption><pre class="ptext">Draft a cost mandate for yourself, over everything you spend, in three lists.
+
+  FREELY    things I want you to do without counting: name them
+  BATCHED   things I want you to do, but grouped, or only after telling me the count first:
+            name them and propose the batch size or the threshold
+  NEVER     things I never want you to spend on without asking me first
+
+Cover at least: writing files, creating new files, committing, pushing, fetching from the
+web, searching, spawning subagents, asking me questions, producing documents for me to
+read, and opening anything for another person to review.
+
+Put a thing in FREELY only if you can point at something I have said or done that shows I
+want it. When unsure, put it in BATCHED. If NEVER is empty you are guessing on my behalf.</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <p>Now correct it. Move things between the lists out loud and say why. <b>The corrections are the part that is yours.</b></p>
+  <h2 id="then-have-it-say-what-waste-looks-like-for-you">Then have it say what waste looks like for you</h2>
+  <p>Waste is not generic. For one deployer it is research; for another it is files; for a third it is the review queue. The agent has watched you long enough to know which.</p>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt 5</span><b>What waste looks like for me in particular</b><span class="psub">Drawn from what you have discarded, squashed, ignored and rewritten.</span></figcaption><pre class="ptext">From what you have seen of how I work, tell me what waste looks like for me specifically.
+Look at:
+
+  - files you wrote that I deleted, moved or never opened
+  - commits I squashed, reverted or amended
+  - research or summaries you produced that I did not use in the next message
+  - questions you asked that I did not answer, or answered with &quot;just do it&quot;
+  - things you handed me to review that I approved without reading
+
+For each, say what it cost in the ledger&#x27;s units, and propose the one rule that would
+have prevented it. Then rank the rules by how much they would have saved me, in my time
+rather than yours.</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <div class="note"><b>The rule about other people's time is the one that will not draft itself.</b> An agent asked what it wasted will list files and fetches, because it can count those. It will not list the twenty minutes a colleague spent on a review it opened, because that never came back to it. Add that line yourself if it is missing, and it will be.</div>
+  <h2 id="what-the-published-shapes-say">What the published shapes say</h2>
+  <p>Nothing, which is the finding. Of 16 shapes on this site, 2 grant <code>write.budget.tenant</code>, and none carries a row for a count of any kind, because the grammar has no such row. <b>Every cost mandate on this page is over things the grant cannot express</b>, and that is why step three is a document rather than a permission.</p>
+  <div class="note"><b>Nothing on this page is measured by this site.</b> There are no runtime logs here and there will not be; the runtime is universe u11, owned by whoever holds the logs and never by this site. Every number an agent gives back is a self report, which counts as a claim rather than a measurement, and the bill is the only log.</div>
+  <div class="tablewrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><b>The objective</b></td><td>Sort what it did into what you asked for, what it decided was needed, and what it would now call waste. Then say what waste means for you.</td></tr><tr><td><b>Before this</b></td><td><a href="../../cost/what-it-spent/index.html">Step 1: What it has already spent</a></td></tr><tr><td><b>Next</b></td><td><a href="../../cost/write-the-cost-policy/index.html">Step 3: Write the cost policy</a></td></tr><tr><td><b>All four steps</b></td><td><a href="../../cost/index.html">The cost walkthrough</a></td></tr></tbody></table></div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.8.0/index.html">v0.8.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../cost/what-you-paid-for/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../cost/index.html">The cost ABP</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+    <a href="../../cases/beta-001/index.html">One person's estate</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+<script src="../../assets/copy.js" defer></script>
+</body>
+</html>

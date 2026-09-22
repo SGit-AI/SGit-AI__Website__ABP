@@ -95,6 +95,11 @@
   <url><loc>https://abp.sgit.ai/gmail/what-you-asked-for/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/gmail/write-the-behaviour-policy/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/gmail/what-a-prompt-cannot-do/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cost/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cost/what-it-spent/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cost/what-you-paid-for/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cost/write-the-cost-policy/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/cost/what-a-count-cannot-do/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/cases/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/cases/beta-001/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/cases/beta-001/chatgpt-gmail/index.html</loc><priority>0.7</priority></url>
@@ -137,6 +142,7 @@
   <url><loc>https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/versions/v0.8.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.7.1/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.7.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.6.1/index.html</loc><priority>0.7</priority></url>

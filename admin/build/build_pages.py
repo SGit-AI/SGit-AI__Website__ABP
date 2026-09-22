@@ -39,6 +39,7 @@ import abp  # noqa: E402
 import abp_pages  # noqa: E402
 import articles  # noqa: E402
 import cases  # noqa: E402
+import cost_pages  # noqa: E402
 import docs_pages  # noqa: E402
 import gmail_pages  # noqa: E402
 import graph  # noqa: E402
@@ -117,6 +118,10 @@ NAV = [
      [("The walkthrough", "gmail/index.html")]
      + [(f"{tag}: {name}", rel) for rel, tag, name, _ in gmail_pages.STEPS],
      ("gmail/",)),
+    ("The cost ABP", "cost/index.html",
+     [("The walkthrough", "cost/index.html")]
+     + [(f"{tag}: {name}", rel) for rel, tag, name, _ in cost_pages.STEPS],
+     ("cost/",)),
     ("Cases", "cases/index.html",
      [("One person, six deployments", "cases/beta-001/index.html")]
      + [(d["connector"], f"cases/beta-001/{d['id']}/index.html") for d in cases.DEPLOYMENTS],
@@ -137,6 +142,7 @@ FOOTER = [
     ("The argument", [
         ("&#8594; What is an ABP", "what-is-an-abp/index.html"),
         ("Your mailbox, in four steps", "gmail/index.html"),
+        ("The cost ABP", "cost/index.html"),
         ("The four objects", "model/index.html"),
         ("The barrier", "model/barriers/index.html"),
         ("Five worked examples", "examples/index.html"),
@@ -166,6 +172,61 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.8.0", "2026-09-22",
+     "the cost ABP: a walkthrough over how much an agent may spend rather than what it may "
+     "do, with a ledger every turn and an accountant to read it",
+     {
+       "summary":
+         "Every ABP on this site bounds what an agent may do. This release adds the one that "
+         "bounds how much: tokens, files written, commits pushed, fetches run, and the hour "
+         "of somebody else's time an agent spends by asking a question or handing over "
+         "something to read. Cost is not a capability. It is a property of every call, the "
+         "grammar has one primitive for money and none for a count, and quantity lives in "
+         "universe u11, the runtime, which this site has no node in. So the section says that "
+         "first and puts the substance where it can live: twelve prompts that make the agent "
+         "count what it can count and name what it cannot, a cost mandate in the deployer's "
+         "units, a clause set every skill has to run inside, a ledger clause that makes the "
+         "rest checkable, an accountant that reads the ledgers, and a fourth page that says "
+         "a limit over a number the agent cannot see is an expectation twice over.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "Five pages at /cost/: a hub and four steps, in the same shape as the mailbox "
+         "walkthrough, with the objective, what the reader gains, the prompts shortest first, "
+         "and the step before and after on every page.",
+         "Twelve prompts: the six line ledger for one session; asked for, decided and would "
+         "not do again; the numbers it cannot see; freely, batched and never; what waste "
+         "looks like for this deployer; four lines; the full clause set with limits per turn, "
+         "a research rule, a delegation rule and a rule about other people's time that has no "
+         "number on purpose; the ledger clause; the accountant; the grading of every clause "
+         "against the four barriers; what would actually cap each one; and one line for a "
+         "session with no time for the rest.",
+         "Two figures: the four objects before the action over the runtime after it, and the "
+         "five things an agent spends with who pays and who can see the number, the fifth "
+         "dashed because it is on nobody's bill.",
+         "The distinction from a skill, in a table: a skill says how to do one task; a "
+         "behaviour policy says what may not be done and how much it may cost, for one agent "
+         "across every task, and is what every skill runs inside.",
+         "The accountant as the first useful shape in universe u12: a second session with no "
+         "tools whose only job is to read the first agent's ledgers against its clauses and "
+         "count the work it made for people.",
+         "The honest line on every page: nothing here is measured by this site, there are no "
+         "runtime logs here and there will not be, every number an agent returns is a claim, "
+         "and the bill is the only log.",
+       ],
+       "basis": [
+         "The foundation document's first named gap, quantity, and the runtime universe u11 "
+         "as mapped at v0.4.1: counts within an interval, sums within an interval, and the per "
+         "turn cost of the licence to operate simulation.",
+         "The mailbox walkthrough at v0.6.0, whose four step shape and prompt block this "
+         "section reuses without change.",
+         "A deployer's own account of agents writing too many files, committing too often, "
+         "creating too much traffic, researching what did not need researching, and "
+         "offloading work to people; and the accountant role one of their projects already "
+         "had to invent to notice the last of those.",
+       ],
+     }),
     ("v0.7.1", "2026-09-21",
      "the first case gets its article, with six figures captured from the v0.7.0 tag",
      {
@@ -1138,6 +1199,11 @@ def home(D):
                         "it can already do, what you actually asked for, the behaviour policy, "
                         "and what a prompt cannot do.",
                  "foot": "Start here if you have connected one to your mail."},
+                {"title": "[The cost ABP: how much, not just what](cost/index.html)",
+                 "sub": "Every ABP so far bounds what an agent may do. This one bounds how "
+                        "much: tokens, files, commits, fetches, and the hour of somebody "
+                        "else's time. Twelve prompts and an accountant.",
+                 "foot": "The first ABP written over the runtime."},
                 {"title": "[A case: one person, six deployments](cases/beta-001/index.html)",
                  "sub": "Two assistants, five connectors, one shared account. The mandates "
                         "elicited from one interview, line by line, and the grants not yet "
@@ -1435,7 +1501,8 @@ def main():
     cls = graph.classify(g)
     pages = {"index.html": home(D), "what-is-an-abp/index.html": what_is_an_abp(D)}
     for source in (abp_pages.pages(D), lexicon_pages.pages(D, g, cls),
-                   universe_pages.pages(D, g, cls), gmail_pages.pages(D), cases.pages(D),
+                   universe_pages.pages(D, g, cls), gmail_pages.pages(D), cost_pages.pages(D),
+                   cases.pages(D),
                    articles.pages(), docs_pages.pages(),
                    version_pages()):
         clash = set(source) & set(pages)

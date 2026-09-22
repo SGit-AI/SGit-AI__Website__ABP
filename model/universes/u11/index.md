@@ -2,7 +2,7 @@
 
 > The runtime, one of the universes an ABP row crosses: owned by whoever holds the logs: never this site, with its own node types and verbs, sharing only the grammar. Status: gap.
 
-*Source: <https://abp.sgit.ai/model/universes/u11/index.html> · site v0.7.1 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/universes/u11/index.html> · site v0.8.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 **Owner** whoever holds the logs: never this site. **Centre of gravity** the tool call. **Smallest node** one call in one turn of one session. **Level** beside. **Status** a gap, named.
 
-> The ABP is before the action and this universe is after it. Quantity lives here, which is the first gap the foundation document names: counts within an interval, sums within an interval, the licence to operate simulation's per turn cost, and behaviour drift. The two are joined by exactly the edges that make drift and excess different measurements.
+> The ABP is before the action and this universe is after it. Quantity lives here, which is the first gap the foundation document names: counts within an interval, sums within an interval, the licence to operate simulation's per turn cost, and behaviour drift. The two are joined by exactly the edges that make drift and excess different measurements. Since v0.8.0 the cost walkthrough at /cost/ is written over this universe: every one of its clauses is a prohibition over a count, and the page says on its face that only a log held here, never on this site, can say whether one was kept.
 
 ## Node types
 
