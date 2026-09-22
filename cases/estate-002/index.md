@@ -2,7 +2,7 @@
 
 > A deployer who runs one assistant in the browser, as a coding agent and as a desktop work product, over one account that holds every past conversation. The mandates elicited around one rule: reading the past is on demand.
 
-*Source: <https://abp.sgit.ai/cases/estate-002/index.html> · site v0.9.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/cases/estate-002/index.html> · site v0.10.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 

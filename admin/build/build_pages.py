@@ -40,6 +40,7 @@ import abp_pages  # noqa: E402
 import articles  # noqa: E402
 import cases  # noqa: E402
 import cost_pages  # noqa: E402
+import desktop_pages  # noqa: E402
 import docs_pages  # noqa: E402
 import gmail_pages  # noqa: E402
 import graph  # noqa: E402
@@ -114,14 +115,11 @@ NAV = [
         ("A browser extension", "examples/browser-extension-broad-host-permissions/index.html"),
         ("A hosted CI runner", "examples/github-actions-hosted-runner/index.html"),
     ], ("examples/",)),
-    ("Your mailbox", "gmail/index.html",
-     [("The walkthrough", "gmail/index.html")]
-     + [(f"{tag}: {name}", rel) for rel, tag, name, _ in gmail_pages.STEPS],
-     ("gmail/",)),
-    ("The cost ABP", "cost/index.html",
-     [("The walkthrough", "cost/index.html")]
-     + [(f"{tag}: {name}", rel) for rel, tag, name, _ in cost_pages.STEPS],
-     ("cost/",)),
+    ("Walkthroughs", "gmail/index.html", [
+        ("Your mailbox: what you gave it", "gmail/index.html"),
+        ("The cost ABP: how much, not just what", "cost/index.html"),
+        ("On your machine: what matters on it", "desktop/index.html"),
+    ], ("gmail/", "cost/", "desktop/")),
     ("Cases", "cases/index.html",
      [("All cases", "cases/index.html")]
      + [(c["nav_name"], f"cases/{c['id']}/index.html") for c in cases.CASES],
@@ -143,6 +141,7 @@ FOOTER = [
         ("&#8594; What is an ABP", "what-is-an-abp/index.html"),
         ("Your mailbox, in four steps", "gmail/index.html"),
         ("The cost ABP", "cost/index.html"),
+        ("On your machine", "desktop/index.html"),
         ("The four objects", "model/index.html"),
         ("The barrier", "model/barriers/index.html"),
         ("Five worked examples", "examples/index.html"),
@@ -172,6 +171,49 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.10.0", "2026-09-22",
+     "the desktop walkthrough: an assistant on your own machine, the map of what matters on "
+     "it, and the rules that open with the map; plus the article for v0.9.0",
+     {
+       "summary":
+         "The third walkthrough, in the same four steps as the mailbox and cost ones because "
+         "the deployer asked for the workflow to always be the same: find out what is going "
+         "on, then write the rules that let the agent decide better for itself. On a machine "
+         "the word host means the machine, and the published shape's character is that "
+         "reading files, changing them and running commands each sit at a setting the "
+         "account can flip. The concept the section is built on is the deployer's: what is "
+         "being given to the agent is context on what is important and what is not, so step "
+         "two produces a map of the machine in four groups, the work, the not-yours, the "
+         "credentials and the record, and step three's rules open with that map rather than "
+         "with prohibitions. The release also carries the article for v0.9.0.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "Five pages at /desktop/: a hub and four steps, the same shape as the other two "
+         "walkthroughs, with the shape's own grant table on the hub and every number "
+         "computed from the derived profile.",
+         "Ten prompts: what is switched on right now; what it has already reached; what it "
+         "cannot tell about its own reach; the map of the machine in four groups; what in "
+         "the record must never come back, written as a one time read on purpose; freely, "
+         "ask first and never; four lines; the full rules opening with the map, each rule "
+         "naming the group it follows from; grade your own rules; and what on the machine "
+         "would actually bound it.",
+         "The fourth page applies the enforcer test to a switch: the same toggle is a "
+         "setting on your own laptop and a boundary on a managed one, because on the "
+         "managed one somebody else holds it.",
+         "The article for v0.9.0, the thirteenth in the section, with six screenshots "
+         "captured from the v0.9.0 tag.",
+       ],
+       "basis": [
+         "The derived profile for a desktop application with local tools, 0 of 11 rows "
+         "measured, four of them at a setting.",
+         "The deployer's voice memo of 22 September 2026: the same sequence for the desktop "
+         "product, two sets of items, and the concept of context on what matters.",
+         "The estate case estate-002, whose desktop deployment has no shape and whose "
+         "clauses this walkthrough generalises.",
+       ],
+     }),
     ("v0.9.0", "2026-09-22",
      "two more cases: the session that built this site, as a ledger with a measured grant, and "
      "one person's three surfaces of one product over an account that holds every past "
@@ -1284,11 +1326,17 @@ def home(D):
                         "much: tokens, files, commits, fetches, and the hour of somebody "
                         "else's time. Twelve prompts and an accountant.",
                  "foot": "The first ABP written over the runtime."},
-                {"title": "[A case: one person, six deployments](cases/beta-001/index.html)",
-                 "sub": "Two assistants, five connectors, one shared account. The mandates "
-                        "elicited from one interview, line by line, and the grants not yet "
-                        "measured. The four objects one level up.",
-                 "foot": "The first thing in the estate universe."},
+                {"title": "[An assistant on your own machine](desktop/index.html)",
+                 "sub": "Local files, commands, connectors and past conversations, each one "
+                        "switch away. Ten prompts that produce the map of what matters on the "
+                        "machine, and the rules that open with it.",
+                 "foot": "The third walkthrough, same four steps."},
+                {"title": "[The cases](cases/index.html)",
+                 "sub": "Three so far: a beta user with six deployments over one Google "
+                        "account, this site's own session as a ledger with a measured grant, "
+                        "and three surfaces of one product over one record of past "
+                        "conversations. The four objects one level up.",
+                 "foot": "What the estate universe holds."},
                 {"title": "[What an ABP is](what-is-an-abp/index.html)",
                  "sub": "The foundation document: the definition, the four objects, the barrier, "
                         "one worked example with published numbers, and the questions we would "
@@ -1582,7 +1630,7 @@ def main():
     pages = {"index.html": home(D), "what-is-an-abp/index.html": what_is_an_abp(D)}
     for source in (abp_pages.pages(D), lexicon_pages.pages(D, g, cls),
                    universe_pages.pages(D, g, cls), gmail_pages.pages(D), cost_pages.pages(D),
-                   cases.pages(D),
+                   desktop_pages.pages(D), cases.pages(D),
                    articles.pages(), docs_pages.pages(),
                    version_pages()):
         clash = set(source) & set(pages)

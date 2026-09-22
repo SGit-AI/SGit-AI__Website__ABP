@@ -2,7 +2,7 @@
 
 > You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.
 
-*Source: <https://abp.sgit.ai/index.html> · site v0.9.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/index.html> · site v0.10.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -76,8 +76,11 @@ Start here if you have connected one to your mail.
 **[The cost ABP: how much, not just what](cost/index.md)**: Every ABP so far bounds what an agent may do. This one bounds how much: tokens, files, commits, fetches, and the hour of somebody else's time. Twelve prompts and an accountant.
 The first ABP written over the runtime.
 
-**[A case: one person, six deployments](cases/beta-001/index.md)**: Two assistants, five connectors, one shared account. The mandates elicited from one interview, line by line, and the grants not yet measured. The four objects one level up.
-The first thing in the estate universe.
+**[An assistant on your own machine](desktop/index.md)**: Local files, commands, connectors and past conversations, each one switch away. Ten prompts that produce the map of what matters on the machine, and the rules that open with it.
+The third walkthrough, same four steps.
+
+**[The cases](cases/index.md)**: Three so far: a beta user with six deployments over one Google account, this site's own session as a ledger with a measured grant, and three surfaces of one product over one record of past conversations. The four objects one level up.
+What the estate universe holds.
 
 **[What an ABP is](what-is-an-abp/index.md)**: The foundation document: the definition, the four objects, the barrier, one worked example with published numbers, and the questions we would like answered.
 This is the document, rendered. Not a summary of it.

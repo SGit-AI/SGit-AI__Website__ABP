@@ -2,7 +2,7 @@
 
 > Cost is not a capability. It is a property of every call, the grammar has one primitive for money and none for a count, and quantity lives in the one universe this site has no node in. So the release says that first, then puts the substance where it can live: twelve prompts, a ledger every turn, and an accountant to read it.
 
-*Source: <https://abp.sgit.ai/articles/how-much-not-just-what/index.html> · site v0.9.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/how-much-not-just-what/index.html> · site v0.10.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 Cost is not a capability. It is a property of every call, the grammar has one primitive for money and none for a count, and quantity lives in the one universe this site has no node in. So the release says that first, then puts the substance where it can live: twelve prompts, a ledger every turn, and an accountant to read it.
 
-> **This is the article for release v0.8.0, published 22 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.8.0's own release record](../../versions/v0.8.0/index.md). It is release 12 of 12 on this site, and the most recent. Every screenshot below was captured from a checkout of the `v0.8.0` tag, so it shows the site as it stood at that release and not as it stands today. Nothing follows it yet, or back to [v0.7.0](../../articles/one-person-six-deployments/index.md).
+> **This is the article for release v0.8.0, published 22 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.8.0's own release record](../../versions/v0.8.0/index.md). It is release 12 of 13 on this site. Every screenshot below was captured from a checkout of the `v0.8.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.9.0](../../articles/a-ledger-and-a-record/index.md), or back to [v0.7.0](../../articles/one-person-six-deployments/index.md).
 
 ## The bill, the repository and the review queue all grew
 
@@ -99,6 +99,7 @@ The runtime universe's status did not change. The release adds a sentence to its
 | Direction | The release |
 |---|---|
 | **Older** | [v0.7.0: The first case: one person's estate, the mandates elicited line by line, and the grants left empty on purpose](../../articles/one-person-six-deployments/index.md) |
+| **Newer** | [v0.9.0: Two more cases: this site's own session as a ledger, and three surfaces of one product over a record that contains secrets](../../articles/a-ledger-and-a-record/index.md) |
 | **All of them** | [One article per release](../../articles/index.md) |
 
 ---

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Step 4: what a switch is, and is not - abp.sgit.ai</title>
+<meta name="description" content="Four of the shape&#x27;s rows sit at a setting the account can flip. Why a switch you can turn off is not a control, what on a machine actually is one, and the two prompts that grade the rules and name the caps.">
+<link rel="canonical" href="https://abp.sgit.ai/desktop/what-a-switch-is/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/desktop/what-a-switch-is/index.html">
+<meta property="og:title" content="Step 4: what a switch is, and is not - abp.sgit.ai">
+<meta property="og:description" content="Four of the shape&#x27;s rows sit at a setting the account can flip. Why a switch you can turn off is not a control, what on a machine actually is one, and the two prompts that grade the rules and name the caps.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.10.0/index.html" title="What changed in v0.10.0, and the commit it was built from">v0.10.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../gmail/index.html">Walkthroughs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../gmail/index.html">Your mailbox: what you gave it</a>
+      <a class="sl" href="../../cost/index.html">The cost ABP: how much, not just what</a>
+      <a class="sl" href="../../desktop/index.html">On your machine: what matters on it</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../cases/index.html">Cases<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../cases/index.html">All cases</a>
+      <a class="sl" href="../../cases/beta-001/index.html">One person, six deployments</a>
+      <a class="sl" href="../../cases/session-001/index.html">This site's own session, as a ledger</a>
+      <a class="sl" href="../../cases/estate-002/index.html">Three surfaces, one record</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../articles/index.html">One per release</a>
+      <a class="sl" href="../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
+      <a class="sl" href="../../articles/thirteen-prompts-and-the-fourth-page/index.html">v0.6.0</a>
+      <a class="sl" href="../../articles/one-person-six-deployments/index.html">v0.7.0</a>
+      <a class="sl" href="../../articles/how-much-not-just-what/index.html">v0.8.0</a>
+      <a class="sl" href="../../articles/a-ledger-and-a-record/index.html">v0.9.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../desktop/index.html">On your machine</a> / Step 4</p>
+  <h1>Step 4: what a switch is, and is not</h1>
+  <p class="lead"><b>The document you wrote is the second barrier kind, a rule written down, and the switches in the application are the third.</b> Neither is a control. This page says why, and what on a machine is.</p>
+  <div class="tablewrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><b>The objective</b></td><td>Four of the shape's rows sit at a setting you can flip. Why that is not a control, and what on a machine actually is one.</td></tr><tr><td><b>Before this</b></td><td><a href="../../desktop/write-the-rules/index.html">Step 3: Write the rules</a></td></tr><tr><td><b>All four steps</b></td><td><a href="../../desktop/index.html">The desktop walkthrough</a></td></tr></tbody></table></div>
+  <div class="note"><b>What you gain from this page.</b> An honest reading of your rules by the agent they are addressed to, and the short list of things on a machine that would actually bound it.</div>
+  <h2 id="the-enforcer-test-applied-to-a-switch">The enforcer test, applied to a switch</h2>
+  <p><b>A control bounds what something can do only if it is enforced by something that thing's own access does not include.</b> An application running as your user account can change its own settings, because you can, and it is you. So a switch in the application is not a control on the application. It is a setting, and the published shape says so on <b>4 of its 10 rows</b>: <code>read.file.host</code>, <code>execute.process.host</code>, <code>write.file.host</code>, <code>grant.credential.self</code>.</p>
+  <div class="tablewrap"><table><thead><tr><th>Barrier</th><th>On a machine</th><th>Example</th></tr></thead><tbody><tr><td>Nothing</td><td>reachable, nothing in the way</td><td>the home directory, as your account</td></tr><tr><td>Expectation</td><td>a rule written down</td><td><b>every line of the document from step three</b></td></tr><tr><td>Setting</td><td>a switch the account can flip</td><td>the local files toggle, the commands toggle, the per action prompt, the file that turns the prompt off</td></tr><tr><td>Boundary</td><td>enforced by something the account does not include</td><td>a second account with no rights to the folder, a disk the account cannot mount, a device policy an administrator locks, a sandbox the application cannot leave</td></tr></tbody></table></div>
+  <p>Read the last two rows together. <b>The same switch is a setting on your own laptop and a boundary on a managed one</b>, because on the managed one somebody else holds it and you cannot flip it back. Which one you have is a fact about the deployment and not about the product.</p>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt 9</span><b>Grade your own rules</b><span class="psub">Every rule marked with the one thing that would actually stop it.</span></figcaption><pre class="ptext">Take the rules we wrote and mark every one with the one thing that would actually stop
+you breaking it, using exactly these names: NOTHING, EXPECTATION, SETTING, BOUNDARY.
+
+Then answer three questions without softening them:
+  1. How many rules are held by nothing except your own compliance?
+  2. Which of the switches in this application could you, running as my account, turn
+     back on if a task seemed to need it?
+  3. Which rules would survive a file on this machine written to talk you out of them?</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <figure class="prompt"><figcaption><span class="ptag">Prompt 10</span><b>What on this machine would actually bound you</b><span class="psub">For each expectation, the boundary that would replace it, and who owns it.</span></figcaption><pre class="ptext">For each rule you marked EXPECTATION or SETTING, name the specific thing on this machine
+or above it that would make it a BOUNDARY, and who would own it: a separate account for
+the work with no rights to the rest, a folder my account cannot read, a device policy an
+administrator locks, a sandbox, a proxy that counts what leaves, a log somebody else
+reads. Where nothing available to me today would do it, say that nothing available today
+would do it, and do not offer me a rule as a substitute.</pre><button class="pcopy" type="button" data-copy>Copy this prompt</button></figure>
+  <h2 id="why-write-it-anyway">Why write it anyway</h2>
+  <ul><li><b>It is the only document that names what matters.</b> The application knows what is possible and what is switched on. Nothing knows that the folder called <code>clients</code> is other people's until you write it.</li><li><b>It moves where responsibility lands.</b> An agent that summarised a client folder into a shared document did something you left open; one that did it against the map departed from an instruction.</li><li><b>It is the specification for the boundary you have not built.</b> A second account for the work is a two line task once the map says what the work is.</li></ul>
+  <h2 id="where-to-go-from-here">Where to go from here</h2>
+  <div class="gamegrid"><div class="gamecard"><h3><a href="../../model/barriers/index.html">The four barriers</a></h3><p class="sub">The enforcer test, walked, with the one row that is a control.</p><div class="foot">the model</div></div><div class="gamecard"><h3><a href="../../examples/index.html">The confirmations pair</a></h3><p class="sub">One setting, two documents: the same agent on the same machine with the prompt on and off.</p><div class="foot">the worked examples</div></div><div class="gamecard"><h3><a href="../../cases/estate-002/index.html">Three surfaces of one product</a></h3><p class="sub">A deployer who runs the assistant in the browser, as a coding agent and on the desktop, over one record.</p><div class="foot">a case</div></div><div class="gamecard"><h3><a href="../../gmail/index.html">Your mailbox</a></h3><p class="sub">The same four steps over a connector rather than a machine.</p><div class="foot">the first walkthrough</div></div></div>
+  <div class="note"><b>Where the numbers on this page come from.</b> The published profile for <code>anthropic/claude-desktop/default</code>, which is derived and not measured: <b>0 of 11 rows were seen on an instance</b>, and the rest were read from what a desktop application running as a user account architecturally is. Your deployment is not that one; the prompts on this page produce yours. <a href="../../examples/index.html">The rows</a>, <a href="../../data/profiles/anthropic/claude-desktop/default.json">the profile as JSON</a>.</div>
+  <div class="note"><b>Nothing on this site is an assessment, an audit, a certification or a security review of any named product</b>, and no adjective on this page attaches to one.</div>
+  <div class="tablewrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><b>The objective</b></td><td>Four of the shape's rows sit at a setting you can flip. Why that is not a control, and what on a machine actually is one.</td></tr><tr><td><b>Before this</b></td><td><a href="../../desktop/write-the-rules/index.html">Step 3: Write the rules</a></td></tr><tr><td><b>All four steps</b></td><td><a href="../../desktop/index.html">The desktop walkthrough</a></td></tr></tbody></table></div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.10.0/index.html">v0.10.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../desktop/what-a-switch-is/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../cost/index.html">The cost ABP</a>
+    <a href="../../desktop/index.html">On your machine</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+    <a href="../../cases/beta-001/index.html">One person's estate</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+<script src="../../assets/copy.js" defer></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 > version v0.33.71 date 20 September 2026 from Human (project lead) to Architecture, the Agent Behaviour Policy team, whoever builds the inbound pipeline for the published address, and legal
 
-*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__no-gmail-scope-lets-an-agent-draft-without-letting-it-send/index.html> · site v0.9.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/docs/briefs/v0.33.71__arch-brief__no-gmail-scope-lets-an-agent-draft-without-letting-it-send/index.html> · site v0.10.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 

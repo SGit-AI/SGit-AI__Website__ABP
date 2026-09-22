@@ -100,6 +100,11 @@
   <url><loc>https://abp.sgit.ai/cost/what-you-paid-for/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/cost/write-the-cost-policy/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/cost/what-a-count-cannot-do/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/desktop/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/desktop/what-it-can-reach/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/desktop/what-matters/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/desktop/write-the-rules/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/desktop/what-a-switch-is/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/cases/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/cases/beta-001/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/cases/beta-001/chatgpt-gmail/index.html</loc><priority>0.7</priority></url>
@@ -127,6 +132,7 @@
   <url><loc>https://abp.sgit.ai/articles/thirteen-prompts-and-the-fourth-page/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/articles/one-person-six-deployments/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/articles/how-much-not-just-what/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/articles/a-ledger-and-a-record/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-behaviour-policy-is-a-graph-and-every-document-is-a-projection-the-w3c-has-the-vocabulary-and-a-prohibition-has-two-lives/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/briefs/v0.33.70__dev-brief__the-delta-is-derived-and-never-authored-storing-it-is-the-point-and-the-history-is-the-business-case/index.html</loc><priority>0.7</priority></url>
@@ -149,6 +155,7 @@
   <url><loc>https://abp.sgit.ai/docs/pack/06__THE-PROMPT/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/research/2026-09-20__external-review__fractal-semantic-graphs-against-the-prior-work/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/docs/index.html</loc><priority>0.7</priority></url>
+  <url><loc>https://abp.sgit.ai/versions/v0.10.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.9.0/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.8.1/index.html</loc><priority>0.7</priority></url>
   <url><loc>https://abp.sgit.ai/versions/v0.8.0/index.html</loc><priority>0.7</priority></url>

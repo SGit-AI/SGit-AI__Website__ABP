@@ -1042,5 +1042,5 @@ console.log(`validate: OK -- ${VERSION} on ${HOST}, ${htmlFiles.length} pages, `
           + `crosses nine universes over a row the shape grants; and the fact diff is empty: every `
           + `label, leaflet, prohibition and figure parsed back out of its published page carries `
           + `the leaf assertions of its fact set; and the cases hold: every elicited line says how it `
-          + `is known, every provisional delta recomputes from the nearest shape, and no grant claims `
-          + `to be measured`);
+          + `is known, every provisional delta recomputes from the nearest shape, and no grant claims to be `
+          + `measured unless it is a measured shape`);

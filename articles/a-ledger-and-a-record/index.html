@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>v0.9.0: Two more cases: this site&#x27;s own session as a ledger, and three surfaces of one product over a record that contains secrets - abp.sgit.ai</title>
+<meta name="description" content="The cost walkthrough said no case had run its prompts. The first case here is that case, on the one shape whose grant was measured, with a ledger counted from the repository and the workflow log. The second is a deployer with one assistant on three surfaces and one rule: reading the past is on demand.">
+<link rel="canonical" href="https://abp.sgit.ai/articles/a-ledger-and-a-record/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/articles/a-ledger-and-a-record/index.html">
+<meta property="og:title" content="v0.9.0: Two more cases: this site&#x27;s own session as a ledger, and three surfaces of one product over a record that contains secrets - abp.sgit.ai">
+<meta property="og:description" content="The cost walkthrough said no case had run its prompts. The first case here is that case, on the one shape whose grant was measured, with a ledger counted from the repository and the workflow log. The second is a deployer with one assistant on three surfaces and one rule: reading the past is on demand.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.10.0/index.html" title="What changed in v0.10.0, and the commit it was built from">v0.10.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../gmail/index.html">Walkthroughs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../gmail/index.html">Your mailbox: what you gave it</a>
+      <a class="sl" href="../../cost/index.html">The cost ABP: how much, not just what</a>
+      <a class="sl" href="../../desktop/index.html">On your machine: what matters on it</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../cases/index.html">Cases<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../cases/index.html">All cases</a>
+      <a class="sl" href="../../cases/beta-001/index.html">One person, six deployments</a>
+      <a class="sl" href="../../cases/session-001/index.html">This site's own session, as a ledger</a>
+      <a class="sl" href="../../cases/estate-002/index.html">Three surfaces, one record</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../articles/index.html">One per release</a>
+      <a class="sl" href="../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
+      <a class="sl" href="../../articles/thirteen-prompts-and-the-fourth-page/index.html">v0.6.0</a>
+      <a class="sl" href="../../articles/one-person-six-deployments/index.html">v0.7.0</a>
+      <a class="sl" href="../../articles/how-much-not-just-what/index.html">v0.8.0</a>
+      <a class="sl here" href="../../articles/a-ledger-and-a-record/index.html">v0.9.0</a>
+      </div>
+    </div>
+    <div class="ni"><a class="nl" href="../../data/index.html">Data</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../articles/index.html">Articles</a> / v0.9.0</p>
+  <h1>v0.9.0: Two more cases: this site's own session as a ledger, and three surfaces of one product over a record that contains secrets</h1>
+  <p class="lead">The cost walkthrough said no case had run its prompts. The first case here is that case, on the one shape whose grant was measured, with a ledger counted from the repository and the workflow log. The second is a deployer with one assistant on three surfaces and one rule: reading the past is on demand.</p>
+  <div class="note"><b>This is the article for release v0.9.0, published 22 September 2026.</b> Every release of this site gets one, and it explains what that release changed and why rather than restating <a href="../../versions/v0.9.0/index.html">v0.9.0's own release record</a>. It is release 13 of 13 on this site, and the most recent. Every screenshot below was captured from a checkout of the <code>v0.9.0</code> tag, so it shows the site as it stood at that release and not as it stands today. Nothing follows it yet, or back to <a href="../../articles/how-much-not-just-what/index.html">v0.8.0</a>.</div>
+  <h2 id="the-case-the-cost-walkthrough-said-did-not-exist-yet">The case the cost walkthrough said did not exist yet</h2>
+  <p>The article for v0.8.0 ended on a list of what that release did not settle, and the fourth item was that no case ran the cost prompts. <b>The obvious candidate was the session writing the sentence.</b> It runs on the one shape this site holds whose grant was measured by the thing being profiled, its commits and pushes are in the repository and the code host's workflow log, and the deployer's instructions are nine messages anybody can count.</p>
+  <figure class="shot"><img src="../../assets/articles/v090-cases-index.png" alt="The cases index at v0.9.0 with three cards: the beta user, the site's own session as a ledger, and three surfaces over one record" loading="lazy" decoding="async"><figcaption>Three cases. The second card is the site counting itself, and its foot says with a ledger where the others say no grant measured.<span class="attr">abp.sgit.ai at v0.9.0, captured 22 September 2026 from a checkout of the v0.9.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="a-ledger-where-every-line-says-where-its-number-came-from">A ledger where every line says where its number came from</h2>
+  <p>Seventeen lines. Commits, pushes, pipeline runs, files changed split into written by hand, copied in, captured and generated, fetches, subagents, questions asked of the deployer, things handed over, reviews requested, commands the harness blocked, tokens, and the deployer's own time. <b>Each line carries one of five sources: repository, platform, self, estimate, or cannot see</b>, and the gate refuses any other word. An estimate carries an asterisk. A cannot see line carries no number at all, and the gate refuses one that does.</p>
+  <figure class="shot"><img src="../../assets/articles/v090-ledger.png" alt="The ledger table on the session case: what was spent, how many, counted from, and a note, with commits from the repository and tokens marked cannot see" loading="lazy" decoding="async"><figcaption>The top of the ledger. Thirteen commits, ten pipeline runs, 523 files of which 20 were written by hand and 418 were generated, and the token line saying what it has to say.<span class="attr">abp.sgit.ai at v0.9.0, captured 22 September 2026 from a checkout of the v0.9.0 tag. Unretouched.</span></figcaption></figure>
+  <div class="note"><b>Two lines are the ones to sit with.</b> Tokens, which the agent cannot see and the platform can, so every other line is a proxy for the bill. And the five commands the harness blocked, each a decision handed to the deployer: the fifth cost line from the walkthrough, another person's hour, appearing in a real ledger for the first time and counted by the thing that spent it.</div>
+  <h2 id="the-clauses-that-were-in-force-before-anybody-wrote-a-cost-p">The clauses that were in force before anybody wrote a cost policy</h2>
+  <p>The session had a cost policy. It was spread across the harness's standing rules and the deployer's messages, and nobody had called it one. <b>Every clause in it is over a count, a place, a frequency or a delegation</b>: commit only when asked, no subagents, scratch files in the scratchpad, do not poll. Not one is a row in the mandate table on the deployment page, which is the finding the cost walkthrough predicted a day earlier and this case confirms with the site's own numbers.</p>
+  <figure class="shot"><img src="../../assets/articles/v090-clauses-kept.png" alt="A table of six clauses that were in force during the session, where each came from, and whether it was kept" loading="lazy" decoding="async"><figcaption>Six clauses, two sources, and an honest third column: one kept mostly, one broken once and caught by the gate, one not kept at all.<span class="attr">abp.sgit.ai at v0.9.0, captured 22 September 2026 from a checkout of the v0.9.0 tag. Unretouched.</span></figcaption></figure>
+  <p>The kept column is the agent grading itself, and the case says so: <b>no accountant has read this ledger</b>, the status carries that sentence, and the gate refuses a case with a ledger whose status does not say one way or the other.</p>
+  <h2 id="for-once-the-grant-is-measured">For once the grant is measured</h2>
+  <p>Every other case on this site says its grant is not measured, and the gate insists on the words. This one runs on <code>anthropic/claude-code-remote/ccr-container</code>, 13 of 20 rows seen on the container itself, so the deployment is the published shape and the delta on the grant side is the shape's own. The gate allows the phrase the published shape only when the named shape has measured rows, and it then requires the delta not to be marked provisional.</p>
+  <figure class="shot"><img src="../../assets/articles/v090-measured-delta.png" alt="The delta table on the session deployment page: the shape, 15 of 23 primitives, 13 of 20 rows measured, the mandate, the excess and the unbounded excess" loading="lazy" decoding="async"><figcaption>The one delta on a case page that is not provisional. The mandate side is still a draft elicited from nine messages, and the page says which side is which.<span class="attr">abp.sgit.ai at v0.9.0, captured 22 September 2026 from a checkout of the v0.9.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="the-second-case-turns-on-one-rule">The second case turns on one rule</h2>
+  <p>A deployer who runs one assistant in the browser, as a coding agent and as a desktop work product, over one account. <b>The account holds the record of every past conversation, and the record contains secrets</b>, because things get pasted into a chat that would never be committed anywhere. So the record is a credential store, reading it is reading credentials, and the deployer's rule is that reading it should always be on demand.</p>
+  <figure class="fig"><svg class="fig" viewBox="0 0 960 370" role="img" preserveAspectRatio="xMidYMid meet"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d5d0c2"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0b8f80"/></marker></defs><text x="24" y="22" class="fh">One person, three surfaces, one account holding every past conversation</text><text x="24" y="40" class="fk">the record is a credential store, and the question is which surfaces can read it and when</text><rect x="330" y="56" width="300" height="40" rx="9" class="box"/><text x="480.0" y="72.0" text-anchor="middle" class="fb">One person</text><text x="480.0" y="88.0" text-anchor="middle" class="fd">a deployer, elicited on 22 September</text><rect x="40" y="136" width="280" height="46" rx="9" class="box"/><text x="180.0" y="155.0" text-anchor="middle" class="fb">In the browser</text><text x="180.0" y="171.0" text-anchor="middle" class="fd">connectors possibly on</text><path d="M 480 96 L 180 136" class="edge" marker-end="url(#ah)"/><rect x="340" y="136" width="280" height="46" rx="9" class="box"/><text x="480.0" y="155.0" text-anchor="middle" class="fb">The coding agent</text><text x="480.0" y="171.0" text-anchor="middle" class="fd">a container, a repository, measured</text><path d="M 480 96 L 480 136" class="edge" marker-end="url(#ah)"/><rect x="640" y="136" width="280" height="46" rx="9" class="box-x"/><text x="780.0" y="155.0" text-anchor="middle" class="fb">The desktop work product</text><text x="780.0" y="171.0" text-anchor="middle" class="fd">no published shape</text><path d="M 480 96 L 780 136" class="edge" marker-end="url(#ah)"/><rect x="40" y="250" width="880" height="52" rx="9" class="box-a"/><text x="480.0" y="272.0" text-anchor="middle" class="fb">One account with the vendor</text><text x="480.0" y="288.0" text-anchor="middle" class="fd">the record of every past conversation, on every surface, plus the connectors</text><path d="M 180 182 L 180 250" class="edge-a" marker-end="url(#aha)"/><text x="190" y="220.0" class="fmd">reads?</text><path d="M 480 182 L 480 250" class="edge-a" marker-end="url(#aha)"/><text x="490" y="220.0" class="fmd">reads its own</text><path d="M 780 182 L 780 250" class="edge-a" marker-end="url(#aha)"/><text x="790" y="220.0" class="fmd">reads?</text><text x="24" y="336" class="ft"><tspan class="fb">The union runs in time as well as across surfaces.</tspan> Everything ever pasted is in the record, and turning reading off today</text><text x="24" y="354" class="ft">does not take it out. A mandate over this estate says what to do about what is already there.</text></svg><figcaption>Three surfaces over one account. Two of the three arrows carry a question mark, because whether the browser and the desktop product read the whole record is not measured; the coding agent's container was measured to hold only its own session's outputs.</figcaption></figure>
+  <p>The first case found that four grants over one Google account union into the account's exposure. This one adds a dimension: <b>the union runs in time as well as across surfaces.</b> Everything ever pasted is in the record, and turning reading off today does not take it out. A mandate over this estate has to say what to do about what is already there, which is why the case carries a prompt that finds the secrets so they can be removed, and says on its face that the prompt is itself a read of the record.</p>
+  <figure class="shot"><img src="../../assets/articles/v090-web-mandate.png" alt="The mandate table on the browser deployment page: one wanted line, two refused, each with how we know and the fragment it came from" loading="lazy" decoding="async"><figcaption>The browser deployment's mandate. One line said, one said and one inferred, and twenty unstated, because which connectors are enabled is the first open question.<span class="attr">abp.sgit.ai at v0.9.0, captured 22 September 2026 from a checkout of the v0.9.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="what-matters-before-what-is-forbidden">What matters, before what is forbidden</h2>
+  <p>The deployer named the concept in the memo: what is being given to the agent is context on what is important and what is not. <b>A mandate is that list before it is a list of prohibitions.</b> So the case carries a what matters table beside the mandate, and every clause set on its three pages opens with it. It changed how the clauses read: they start with the record matters, the repository is the work, the container is disposable, and the prohibitions follow from those rather than standing alone.</p>
+  <figure class="shot"><img src="../../assets/articles/v090-what-matters.png" alt="A table headed what matters, and what does not, with four rows: matters most, matters unknown, does not matter, must never be reused" loading="lazy" decoding="async"><figcaption>The importance list. It is the part of a mandate the grammar cannot hold and the part an agent most needs, and it is one table.<span class="attr">abp.sgit.ai at v0.9.0, captured 22 September 2026 from a checkout of the v0.9.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="what-this-release-did-not-settle">What this release did not settle</h2>
+  <ul><li><b>The ledger is graded by the agent that produced it.</b> The accountant prompt exists and has not been run on this case; when it is, its report goes beside the ledger and the status changes.</li><li><b>Two numbers on the ledger are estimates and two are invisible.</b> Pushes to the working branch and fetches are from memory; tokens and the deployer's time are the platform's and the deployer's to supply.</li><li><b>Nothing in the second case is measured except the coding agent's shape.</b> Whether the browser and the desktop product read the whole record is the first of six open questions, and Prompt A asks each surface directly.</li><li><b>The desktop product has no shape.</b> Its page holds a mandate, clauses and a declared gap, and the next release gives that product a walkthrough of its own.</li><li><b>The record's secrets are still in it.</b> The prompt that finds them is on the page; running it is the deployer's, once, on demand.</li></ul>
+  <p><a href="../../cases/session-001/index.html">The session case</a> &amp;#183; <a href="../../cases/estate-002/index.html">The three surfaces case</a> &amp;#183; <a href="../../cost/index.html">The cost walkthrough</a> &amp;#183; <a href="../../versions/v0.9.0/index.html">v0.9.0's own release record</a></p>
+  <h2 id="read-the-sequence">Read the sequence</h2>
+  <div class="tablewrap"><table><thead><tr><th>Direction</th><th>The release</th></tr></thead><tbody><tr><td><b>Older</b></td><td><a href="../../articles/how-much-not-just-what/index.html">v0.8.0: The cost ABP: every ABP so far bounded what, and this one bounds how much</a></td></tr><tr><td><b>All of them</b></td><td><a href="../../articles/index.html">One article per release</a></td></tr></tbody></table></div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.10.0/index.html">v0.10.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../articles/a-ledger-and-a-record/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../cost/index.html">The cost ABP</a>
+    <a href="../../desktop/index.html">On your machine</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+    <a href="../../cases/beta-001/index.html">One person's estate</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>
