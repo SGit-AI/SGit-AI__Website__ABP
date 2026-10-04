@@ -48,12 +48,14 @@
     "the rest": "the vault's other inferred lines (labels, un-inboxing, trash, reading public pages, writing to a vault) are not primitives of this connector's grant; the last two belong to the container the same session ran in"
   },
   "provenance": {
-    "source": "sgit vault 02n7bz55, read with the public read key, at vault v0.4.0: MANDATE.md",
+    "source": "vault:02n7bz55/MANDATE.md",
     "source_page": "https://riskmandate.ai/abp-vault-claude-gmail-connector.html",
     "retrieved": "2026-09-22T10:40:00Z",
     "pack_version": null,
     "content_hash": "sha256:60a8b94b5620c82b34fe016ccdc25b282690f8fb6989f5fa56b226a3cb0d01e9",
-    "verbatim_bytes": "contributed/riskmandate/gmail-agent-02n7bz55/MANDATE.md",
+    "verbatim_bytes": null,
+    "cited": "vault:02n7bz55/MANDATE.md",
+    "cited_why": "withdrawn from the copied set at v0.12.1 at the editor's request because it names a third party who is not the vault's author; cited by vault path and by the hash it had when read, so anybody holding the read key can check it",
     "contributed_by": "riskmandate.ai",
     "contributed_manifest": "contributed/riskmandate/manifest.json",
     "note": "The agent's own inferred mandate, from MANDATE.md in vault 02n7bz55, mapped into the grammar by this site. Marked inferred and not elicited, as the vault marks it: it is evidence of a mandate and not one. `unstated` is recomputed here.",

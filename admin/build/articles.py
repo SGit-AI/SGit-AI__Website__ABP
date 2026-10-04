@@ -2213,9 +2213,10 @@ def _v110(up):
             "**`send_message` was still on Always allow when the vault was written.** The "
             "recommendation is one click and it had not been made.",
             "**The raw debrief and the runbook app stay in the vault**, cited by path, "
-            "because the debrief carries a personal address. The four objects, the README "
-            "and the version records were copied; two of them name a colleague by first "
-            "name, which the editor has been asked about.",
+            "because the debrief carries a personal address. MANDATE.md and AGENTS.md were "
+            "copied at this release and withdrawn at v0.12.1, at the editor's request, "
+            "because each names a third party; they are now cited by vault path with the "
+            "hash each had when read.",
             "**The container's reach is stated, not enumerated.** The same session held a "
             "shell, egress and two vault keys; the vault records it as reach beyond the "
             "mailbox, and this profile covers the connector alone.",

@@ -446,8 +446,14 @@ for (const f of files) {
     // A VAULT ENTRY'S SOURCES ARE ON DISK AND HASHED like every other contributed file, and the
     // profile promoted from it pins the grant source's hash, so the check above covers it.
     for (const ve of cman.vaults || []) {
+      // The grant and the delta must be held. The mandate and the rules may instead be CITED:
+      // withdrawn from the copied set, named by vault path, with the hash they had when read.
       for (const k of ['grant_source', 'mandate_source', 'delta_source', 'rules_source']) {
-        if (!contributedHash[ve[k]]) errors.push(`data/contributed/riskmandate/manifest.json: vault ${ve.vault} names ${k} ${ve[k]}, which is not among the hashed files`);
+        const cited = (ve.cited || {})[ve[k]];
+        const citable = k === 'mandate_source' || k === 'rules_source';
+        if (contributedHash[ve[k]]) continue;
+        if (citable && cited && /^[0-9a-f]{64}$/.test(cited.sha256 || '') && cited.why) continue;
+        errors.push(`data/contributed/riskmandate/manifest.json: vault ${ve.vault} names ${k} ${ve[k]}, which is neither among the hashed files nor cited with a hash and a reason`);
       }
       if (!PUBLISHED.includes(ve.read_key)) errors.push(`data/contributed/riskmandate/manifest.json: vault ${ve.vault} carries a read key that is not in PUBLISHED -- a key on this site is published on purpose or not at all`);
     }
@@ -464,7 +470,12 @@ for (const f of files) {
     }
     const n = (m.want || []).length + (m.do_not_want || []).length + (m.unstated || []).length;
     if (n !== caps.count) errors.push(`data/${e.file}: covers ${n} capabilities, there are ${caps.count}`);
-    if (m.provenance && m.provenance.contributed_by) {
+    if (m.provenance && m.provenance.contributed_by && m.provenance.cited) {
+      // A cited mandate pins the hash the manifest records for that citation.
+      const c = ((cman || {}).vaults || []).map(x => (x.cited || {})[m.provenance.cited]).find(Boolean);
+      if (!c) errors.push(`data/${e.file}: cites ${m.provenance.cited}, which no vault entry in the contributed manifest cites`);
+      else if ('sha256:' + c.sha256 !== m.provenance.content_hash) errors.push(`data/${e.file}: pins a hash the manifest's citation does not have`);
+    } else if (m.provenance && m.provenance.contributed_by) {
       const vb = String(m.provenance.verbatim_bytes || '').replace(/^contributed\/riskmandate\//, '');
       if (!contributedHash[vb]) errors.push(`data/${e.file}: contributed, and its verbatim bytes are not in the contributed manifest`);
       else if ('sha256:' + contributedHash[vb] !== m.provenance.content_hash) errors.push(`data/${e.file}: pins a hash the contributed file does not have`);

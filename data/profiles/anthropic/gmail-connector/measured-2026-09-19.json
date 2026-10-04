@@ -286,9 +286,21 @@
     "written_by": "the agent operating the mailbox, via the Claude.ai Gmail connector, in one session on 2026-09-19; reviewed by the operator only on the operator side, as the vault's own colophon says",
     "verbatim": {
       "grant_source": "contributed/riskmandate/gmail-agent-02n7bz55/GRANT.md",
-      "mandate_source": "contributed/riskmandate/gmail-agent-02n7bz55/MANDATE.md",
+      "mandate_source": null,
       "delta_source": "contributed/riskmandate/gmail-agent-02n7bz55/DELTA.md",
-      "rules_source": "contributed/riskmandate/gmail-agent-02n7bz55/AGENTS.md"
+      "rules_source": null
+    },
+    "cited": {
+      "vault:02n7bz55/MANDATE.md": {
+        "sha256": "60a8b94b5620c82b34fe016ccdc25b282690f8fb6989f5fa56b226a3cb0d01e9",
+        "bytes": 4511,
+        "why": "withdrawn from the copied set at v0.12.1 at the editor's request because it names a third party who is not the vault's author; cited by vault path and by the hash it had when read, so anybody holding the read key can check it"
+      },
+      "vault:02n7bz55/AGENTS.md": {
+        "sha256": "c85e904b014a33952f923fab412a43694b4e1328b02f2b31c7c6d79552e6e788",
+        "bytes": 6356,
+        "why": "withdrawn from the copied set at v0.12.1 at the editor's request because it names a third party who is not the vault's author; cited by vault path and by the hash it had when read, so anybody holding the read key can check it"
+      }
     }
   },
   "not_an_assessment": "This describes one deployment as measured by the agent holding it on one day. It is not an assessment, an audit, a certification or a security review of any named product, and it carries no adjective and no score.",
@@ -303,7 +315,7 @@
     "contributed_manifest": "contributed/riskmandate/manifest.json",
     "note": "Measured by the agent holding the connector, written into sgit vault 02n7bz55 at v0.4.0 (commit obj-cas-imm-7ded8a06b473), and read here with the vault's public read key. The vault writes its reach in the connector's own tool names; the mapping into the grammar is this site's, in admin/build/vault_evidence.py, and every row cites the line it rests on. The evidence tier on every row is the tier the contributor's words support, never higher. The vault's earlier profile for this shape, read from the vendors' pages, is kept as a second variant of the same product.",
     "licence": "CC BY 4.0",
-    "retrieved_by": "abp.sgit.ai's build session, with sgit clone and the read key above; six files copied unchanged, the rest of the vault (the operator's runbook app and the raw session debrief) left in the vault and cited by path",
+    "retrieved_by": "abp.sgit.ai's build session, with sgit clone and the read key above; four files copied unchanged (six at v0.11.0, two withdrawn at v0.12.1), the rest of the vault (the operator's runbook app and the raw session debrief) left in the vault and cited by path",
     "vault": {
       "vault": "02n7bz55",
       "read_key": "e698be2c2b5de0eaff0b72911be7748694a1c14311f9a10588781bfad61de883:02n7bz55",
@@ -312,6 +324,7 @@
       "vault_commit": "obj-cas-imm-7ded8a06b473",
       "written_by": "the agent operating the mailbox, via the Claude.ai Gmail connector, in one session on 2026-09-19; reviewed by the operator only on the operator side, as the vault's own colophon says",
       "not_copied": [
+        "MANDATE.md and AGENTS.md (copied at v0.11.0 and withdrawn at v0.12.1: each names a third party; cited by path and hash instead)",
         "notes/session-2026-09-19.md (the raw debrief: a working record, not one of the four objects, and it carries a third address)",
         "content.json, index.html, RUNBOOK.md, build.py, .vault/app.json (the operator's runbook app)"
       ]

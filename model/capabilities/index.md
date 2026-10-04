@@ -2,7 +2,7 @@
 
 > verb.object.reach: 23 capability primitives, each with its reach and the undo class of its effect. The action vocabulary for everything else on this site.
 
-*Source: <https://abp.sgit.ai/model/capabilities/index.html> · site v0.12.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/model/capabilities/index.html> · site v0.12.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -66,7 +66,7 @@ below point at them.*
 
 [The capabilities as JSON](../../data/capabilities.json) · [The source bytes](../../data/upstream/primitives.json)
 
-> **Provenance.** 21 of 99 capability rows from the published map were measured, meaning seen directly on the thing itself. The other 78 were derived from what the deployment architecturally is, or from the vendor's published documentation. Those rows trace to [the published capability map](https://what-can-it-do.games.sgit.ai/map/index.html), retrieved 2026-09-11T13:00:37Z, content hash `sha256:d6d4ba40f1fb1f93f66`. [The source bytes](../../data/upstream/pack.json). **A further 42 rows across 8 shapes were contributed by riskmandate.ai**, 16 of them at the contributor's measured tier and 26 read from vendor documentation on a date; this site did not observe any of them and keeps the tier as stated. Retrieved 2026-09-20T17:23:43Z, content hash `sha256:cb76bf9147de9ec2e38`. [The contributed bytes](../../data/contributed/riskmandate/manifest.json).
+> **Provenance.** 21 of 99 capability rows from the published map were measured, meaning seen directly on the thing itself. The other 78 were derived from what the deployment architecturally is, or from the vendor's published documentation. Those rows trace to [the published capability map](https://what-can-it-do.games.sgit.ai/map/index.html), retrieved 2026-09-11T13:00:37Z, content hash `sha256:d6d4ba40f1fb1f93f66`. [The source bytes](../../data/upstream/pack.json). **A further 42 rows across 8 shapes were contributed by riskmandate.ai**, 16 of them at the contributor's measured tier and 26 read from vendor documentation on a date; this site did not observe any of them and keeps the tier as stated. Retrieved 2026-09-20T17:23:43Z, content hash `sha256:39cd86720258da95e4c`. [The contributed bytes](../../data/contributed/riskmandate/manifest.json).
 
 ---
 

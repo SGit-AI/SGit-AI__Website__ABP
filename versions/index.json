@@ -1,7 +1,14 @@
 {
-  "current": "v0.12.0",
+  "current": "v0.12.1",
   "_what_this_is": "The version surface. The badge in the site chrome reads `current` from this file, so the badge cannot drift from the tag: the tag is derived from admin/build/version.txt and this file is generated from the same string.",
   "versions": [
+    {
+      "version": "v0.12.1",
+      "date": "2026-10-04",
+      "title": "two files from the Gmail vault are withdrawn from the copied set and cited instead, because each names a third party",
+      "file": "v0.12.1.json",
+      "page": "v0.12.1/index.html"
+    },
     {
       "version": "v0.12.0",
       "date": "2026-10-04",

@@ -2,7 +2,7 @@
 
 > Gaps a behaviour policy finds in providers' products, the rule each defeats, who accepts the risk and the request to close it; and gaps found in our own behaviour policies, with what was done about them.
 
-*Source: <https://abp.sgit.ai/gaps/index.html> · site v0.12.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/gaps/index.html> · site v0.12.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 

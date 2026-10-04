@@ -2,7 +2,7 @@
 
 > An agent read its own thirty tool schemas, sent mail with no prompt, hit a refusal it could not explain, and wrote the four objects into a vault in the connector's own words, naming the join to this grammar as a gap. This release is that join, and it puts the agent's inferred mandate beside the site's own so the gap between them is one row rather than a warning.
 
-*Source: <https://abp.sgit.ai/articles/the-agent-that-holds-the-connector/index.html> · site v0.12.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/the-agent-that-holds-the-connector/index.html> · site v0.12.1 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -78,7 +78,7 @@ A vault is a contributor who wrote in their own vocabulary, so the manifest gain
 
 - **The mandate is still inferred.** Fifteen questions in MANDATE.md wait for the business, and the load bearing one is whether the mandate covers unattended operation, because the control doing the real work is a person reading along.
 - **`send_message` was still on Always allow when the vault was written.** The recommendation is one click and it had not been made.
-- **The raw debrief and the runbook app stay in the vault**, cited by path, because the debrief carries a personal address. The four objects, the README and the version records were copied; two of them name a colleague by first name, which the editor has been asked about.
+- **The raw debrief and the runbook app stay in the vault**, cited by path, because the debrief carries a personal address. MANDATE.md and AGENTS.md were copied at this release and withdrawn at v0.12.1, at the editor's request, because each names a third party; they are now cited by vault path with the hash each had when read.
 - **The container's reach is stated, not enumerated.** The same session held a shell, egress and two vault keys; the vault records it as reach beyond the mailbox, and this profile covers the connector alone.
 - **One day, one account.** Connector tool sets change without notice; this is a snapshot with a date on it, and the next measurement is a third variant.
 

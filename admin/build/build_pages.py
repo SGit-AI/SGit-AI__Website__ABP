@@ -177,6 +177,40 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.12.1", "2026-10-04",
+     "two files from the Gmail vault are withdrawn from the copied set and cited instead, "
+     "because each names a third party",
+     {
+       "summary":
+         "MANDATE.md and AGENTS.md from vault 02n7bz55 were copied verbatim at v0.11.0. Each "
+         "names a colleague of the operator by first name, somebody who is not the vault's "
+         "author and did not ask to be on a public site. At the editor's request both are "
+         "withdrawn from the copied set. Nothing derived from them changes: the agent's "
+         "inferred mandate is still promoted, now pinning the hash its source had when read, "
+         "and anybody holding the vault's read key can check that hash.",
+       "commit": None,
+       "vault": "02n7bz55",
+       "reconstructed": False,
+       "changes": [
+         "The two files are removed from data/contributed/riskmandate/gmail-agent-02n7bz55/ "
+         "and from the manifest, whose content hash is recomputed. The vault entry gains a "
+         "`cited` map: vault path, the sha256 and byte count each file had when read, and "
+         "the reason it is cited rather than held.",
+         "The inferred mandate's provenance pins the cited hash, with the vault path as its "
+         "source and no verbatim bytes. The profile's verbatim map says null for the two.",
+         "The gate: the grant and delta sources must still be held; the mandate and rules "
+         "sources may instead be cited, with a 64 hex hash and a reason; a cited mandate must "
+         "pin the hash its citation records.",
+         "The measured page and the v0.11.0 article say which files are held and which are "
+         "cited, and why.",
+       ],
+       "basis": [
+         "The editor's decision of 4 October 2026.",
+         "The files remain in this repository's history at v0.11.0 and v0.12.0; history is "
+         "not rewritten on a shared release branch, and the release record says so rather "
+         "than implying they were never published.",
+       ],
+     }),
     ("v0.12.0", "2026-10-04",
      "a gaps and requests register: what a behaviour policy wants and a product cannot enforce "
      "or cannot express, who accepts the risk, and the request to close it; plus the article "

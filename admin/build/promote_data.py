@@ -494,9 +494,11 @@ def build():
             "contributed": {"by": cman["contributor"], "vault_page": entry["page"],
                             "vault": entry["vault"], "read_key": entry["read_key"],
                             "written_by": entry["written_by"],
-                            "verbatim": {k: f"contributed/riskmandate/{entry[k]}" for k in
-                                         ("grant_source", "mandate_source", "delta_source",
-                                          "rules_source")}},
+                            "verbatim": {k: (f"contributed/riskmandate/{entry[k]}"
+                                             if entry[k] in per_file else None)
+                                         for k in ("grant_source", "mandate_source",
+                                                   "delta_source", "rules_source")},
+                            "cited": entry.get("cited", {})},
             "not_an_assessment": "This describes one deployment as measured by the agent "
                                  "holding it on one day. It is not an assessment, an audit, "
                                  "a certification or a security review of any named "
@@ -509,12 +511,23 @@ def build():
             "grant_size", "widest_reach", "rows")} | {"file": f"profiles/{g['id']}.json",
                                                      "contributed_by": cman["contributor"]})
         src = mod.mandate()
-        mprov = _contributed_provenance(
-            cman, entry, entry["mandate_source"], per_file,
-            f"The agent's own inferred mandate, from MANDATE.md in vault {entry['vault']}, "
-            f"mapped into the grammar by this site. Marked inferred and not elicited, as the "
-            f"vault marks it: it is evidence of a mandate and not one. `unstated` is "
-            f"recomputed here.")
+        mnote = (f"The agent's own inferred mandate, from MANDATE.md in vault {entry['vault']}, "
+                 f"mapped into the grammar by this site. Marked inferred and not elicited, as "
+                 f"the vault marks it: it is evidence of a mandate and not one. `unstated` is "
+                 f"recomputed here.")
+        if entry["mandate_source"] in per_file:
+            mprov = _contributed_provenance(cman, entry, entry["mandate_source"], per_file, mnote)
+        else:
+            # CITED, NOT HELD. The source was withdrawn from the copied set; the mandate pins
+            # the hash it had when read, so a reader with the vault's read key can check it.
+            c = entry["cited"][entry["mandate_source"]]
+            mprov = {"source": entry["mandate_source"], "source_page": entry["page"],
+                     "retrieved": entry["retrieved"], "pack_version": None,
+                     "content_hash": "sha256:" + c["sha256"], "verbatim_bytes": None,
+                     "cited": entry["mandate_source"], "cited_why": c["why"],
+                     "contributed_by": cman["contributor"],
+                     "contributed_manifest": "contributed/riskmandate/manifest.json",
+                     "note": mnote, "licence": LICENCE}
         mprov["retrieved"] = entry["retrieved"]
         m = {
             "type": "abp/mandate/v1",
