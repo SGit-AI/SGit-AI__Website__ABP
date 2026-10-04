@@ -2,7 +2,7 @@
 
 > The third walkthrough in the same four steps, because the workflow is meant to always be the same. On a machine the published shape's character is that reading files, changing them and running commands each sit at a switch the account can flip. The concept the section is built on is the deployer's: what is being given to the agent is context on what is important and what is not.
 
-*Source: <https://abp.sgit.ai/articles/context-on-what-matters/index.html> · site v0.11.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/articles/context-on-what-matters/index.html> · site v0.12.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -14,7 +14,7 @@ below point at them.*
 
 The third walkthrough in the same four steps, because the workflow is meant to always be the same. On a machine the published shape's character is that reading files, changing them and running commands each sit at a switch the account can flip. The concept the section is built on is the deployer's: what is being given to the agent is context on what is important and what is not.
 
-> **This is the article for release v0.10.0, published 22 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.10.0's own release record](../../versions/v0.10.0/index.md). It is release 14 of 14 on this site, and the most recent. Every screenshot below was captured from a checkout of the `v0.10.0` tag, so it shows the site as it stood at that release and not as it stands today. Nothing follows it yet, or back to [v0.9.0](../../articles/a-ledger-and-a-record/index.md).
+> **This is the article for release v0.10.0, published 22 September 2026.** Every release of this site gets one, and it explains what that release changed and why rather than restating [v0.10.0's own release record](../../versions/v0.10.0/index.md). It is release 14 of 15 on this site. Every screenshot below was captured from a checkout of the `v0.10.0` tag, so it shows the site as it stood at that release and not as it stands today. Read on to [v0.11.0](../../articles/the-agent-that-holds-the-connector/index.md), or back to [v0.9.0](../../articles/a-ledger-and-a-record/index.md).
 
 ## The same four steps, on purpose
 
@@ -81,6 +81,7 @@ With the third walkthrough the top navigation reached eight entries and two rows
 | Direction | The release |
 |---|---|
 | **Older** | [v0.9.0: Two more cases: this site's own session as a ledger, and three surfaces of one product over a record that contains secrets](../../articles/a-ledger-and-a-record/index.md) |
+| **Newer** | [v0.11.0: The Gmail connector measured end to end by the agent that holds it, and the ratchet as a number](../../articles/the-agent-that-holds-the-connector/index.md) |
 | **All of them** | [One article per release](../../articles/index.md) |
 
 ---

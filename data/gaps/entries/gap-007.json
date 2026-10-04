@@ -1,0 +1,21 @@
+{
+  "id": "gap-007",
+  "kind": "provider",
+  "provider": "Anthropic",
+  "product": "Claude Cowork, and the account's connectors",
+  "gap": "A session's tools cannot be narrowed per agent. If the account holds Gmail write tools, every session on the account gets send and draft.",
+  "abp_impact": "The rule this agent may not send is an expectation with no barrier: the grant is the account's and the mandate is the agent's, and nothing in between can hold a difference.",
+  "barrier_possible": "expectation",
+  "barrier_possible_theirs": "policy only",
+  "risk_to_accept": "That every agent on the account can do whatever the widest one was given. Accepted by the account holder, in the act of enabling the connector.",
+  "evidence": "The contributor's own sessions. This site's estate case for three surfaces of one product records the same property as its first open question.",
+  "request": "Per agent or per session tool permissions, or an account level way to publish a narrower grant to a named agent.",
+  "related": [
+    "cases/estate-002/index.html",
+    "gmail/what-a-prompt-cannot-do/index.html"
+  ],
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "first_seen": "2026-10-04",
+  "status": "open",
+  "evidence_tier": "self-reported"
+}

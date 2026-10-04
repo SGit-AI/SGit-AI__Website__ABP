@@ -1,0 +1,17 @@
+{
+  "id": "gap-003",
+  "kind": "provider",
+  "provider": "Google and Anthropic",
+  "product": "Gmail, through the Claude connector",
+  "gap": "Image tags are stripped from drafts, so images can only go as attachments and inline images are impossible.",
+  "abp_impact": "None on the four objects. Recorded because it shapes what an agent can send, and a register that only lists what fails a policy would misstate what shapes one.",
+  "barrier_possible": "not applicable",
+  "barrier_possible_theirs": "not applicable",
+  "risk_to_accept": "None. A capability absent rather than a rule unenforceable.",
+  "evidence": "The contributor's drafts, as received.",
+  "request": "Inline images in HTML drafts, or a documented statement that they are stripped.",
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "first_seen": "2026-10-04",
+  "status": "open",
+  "evidence_tier": "self-reported"
+}

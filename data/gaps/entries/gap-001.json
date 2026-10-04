@@ -1,0 +1,21 @@
+{
+  "id": "gap-001",
+  "kind": "provider",
+  "provider": "Google",
+  "product": "Google Calendar, the API and every connector built on it",
+  "gap": "Creating an event with guests sends the invitations at that moment: there is no draft, no preview and no edit before send, and the API's sendUpdates parameter only chooses who is notified.",
+  "abp_impact": "The rule draft only, a person sends cannot be expressed for calendar invitations at all. send.message.world through an invitation has no row a mandate can refuse while still granting the calendar.",
+  "barrier_possible": "none",
+  "barrier_possible_theirs": "none",
+  "risk_to_accept": "That the agent can invite anyone, immediately, with no step between composing and sending. Accepted by whoever grants a calendar to an agent, in the act of granting it.",
+  "evidence": "The Calendar API reference for events.insert and its sendUpdates parameter; the contributor's own agents, which hold Calendar.",
+  "request": "A draft or hold state for invitations, so that an event with guests can exist before anybody is notified.",
+  "related": [
+    "cases/beta-001/chatgpt-calendar/index.html",
+    "gmail/what-a-prompt-cannot-do/index.html"
+  ],
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "first_seen": "2026-10-04",
+  "status": "open",
+  "evidence_tier": "self-reported"
+}

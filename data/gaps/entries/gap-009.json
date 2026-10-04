@@ -1,0 +1,17 @@
+{
+  "id": "gap-009",
+  "kind": "provider",
+  "provider": "sgit.ai",
+  "product": "The sgit command line, versions 0.16.0 and 0.17.0",
+  "gap": "pull silently discards uncommitted edits to tracked files.",
+  "abp_impact": "An agent that writes to a vault and pulls before committing loses the write with no error. A record kept in a vault is only as durable as the agent's commit discipline.",
+  "barrier_possible": "not applicable",
+  "barrier_possible_theirs": "not applicable",
+  "risk_to_accept": "Lost edits. Workaround: commit before pull. Accepted by nobody; this one is a defect in our own estate and is reported.",
+  "evidence": "Reproduced by the contributor in a throwaway vault; report and script on request. This site's own session on 22 September cloned a vault with 0.16.0 and did not exercise pull.",
+  "status": "reported",
+  "request": "pull refuses, stashes, or merges when tracked files have uncommitted edits; a regression test.",
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "first_seen": "2026-10-04",
+  "evidence_tier": "self-reported"
+}

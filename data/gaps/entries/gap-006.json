@@ -1,0 +1,17 @@
+{
+  "id": "gap-006",
+  "kind": "provider",
+  "provider": "Google",
+  "product": "Gmail, personal accounts and most Workspace editions",
+  "gap": "Personal Gmail has no native message encryption: only TLS in transit and Confidential Mode, which is not encryption. Hosted S/MIME and client side encryption exist on some Workspace editions only, and client side encryption leaves headers in clear.",
+  "abp_impact": "The rule only the recipient can read it cannot be enforced for most people. A hallucination, a bug or a wrong address leaks the whole message; nothing in the grant or the platform bounds send.message.world by who can open what was sent.",
+  "barrier_possible": "boundary, if built outside the platform",
+  "barrier_possible_theirs": "identity boundary",
+  "risk_to_accept": "That anything the agent sends can be read by whoever receives it, intended or not. Accepted by the deployer, until a key held by the recipient becomes the boundary.",
+  "evidence": "Google's own documentation of Confidential Mode, S/MIME and client side encryption and the editions each is available on; the contributor's edition.",
+  "request": "None of the provider. The contributor's answer is a browser extension that encrypts to a recipient's published key, which is a boundary the platform does not have to supply.",
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "first_seen": "2026-10-04",
+  "status": "open",
+  "evidence_tier": "self-reported"
+}

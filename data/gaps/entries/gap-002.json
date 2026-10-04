@@ -1,0 +1,20 @@
+{
+  "id": "gap-002",
+  "kind": "provider",
+  "provider": "Google",
+  "product": "Gmail, through the connector",
+  "gap": "Discarding a draft is irreversible and leaves no log the agent can read: a discarded draft cannot be recovered or audited through the connector.",
+  "abp_impact": "A mistaken discard is invisible to the deployer and to the agent's own end of turn report. Drafts are outside the grammar, so the loss cannot even be named as a row.",
+  "barrier_possible": "expectation",
+  "barrier_possible_theirs": "policy only",
+  "risk_to_accept": "That drafted work disappears without trace. Accepted by the deployer who lets the agent manage drafts.",
+  "evidence": "The connector's delete_draft tool, which the measured Gmail profile on this site lists on Needs approval; no untrash_draft exists among the thirty.",
+  "request": "A recoverable trash for drafts, and an audit event when one is discarded.",
+  "related": [
+    "gmail/measured/index.html"
+  ],
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "first_seen": "2026-10-04",
+  "status": "open",
+  "evidence_tier": "self-reported"
+}

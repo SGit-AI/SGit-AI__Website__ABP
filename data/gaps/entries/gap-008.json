@@ -1,0 +1,21 @@
+{
+  "id": "gap-008",
+  "kind": "provider",
+  "provider": "Anthropic",
+  "product": "Claude, the connectors directory",
+  "gap": "Grants grow mid session. A newly added connector's tools appeared in a running session without anyone in the session asking for them.",
+  "abp_impact": "The reach changed while the mandate did not, and the grant the behaviour policy was written against is not the grant the session finished with. No object on this site has a row for a grant that moves during a session.",
+  "barrier_possible": "none",
+  "barrier_possible_theirs": "none",
+  "risk_to_accept": "That a session acquires capabilities nobody in it granted. Accepted by the account holder, who may not be in the session.",
+  "evidence": "The contributor's session, in which a Zapier connector's tools arrived mid session.",
+  "request": "A session pins its tool set at start, or is told, in the transcript, when the set changes.",
+  "related": [
+    "gmail/index.html",
+    "model/universes/u11/index.html"
+  ],
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "first_seen": "2026-10-04",
+  "status": "open",
+  "evidence_tier": "self-reported"
+}

@@ -2,7 +2,7 @@
 
 > You know what you asked for. You do not know what it can do. The Agent Behaviour Policy is the document that puts the two on the same page: the grant, the mandate, the delta and the barrier, for one agent in one deployment, with no score.
 
-*Source: <https://abp.sgit.ai/index.html> · site v0.11.0 · this file is generated from the same content
+*Source: <https://abp.sgit.ai/index.html> · site v0.12.0 · this file is generated from the same content
 as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links
 below point at them.*
 
@@ -78,6 +78,9 @@ The first ABP written over the runtime.
 
 **[An assistant on your own machine](desktop/index.md)**: Local files, commands, connectors and past conversations, each one switch away. Ten prompts that produce the map of what matters on the machine, and the rules that open with it.
 The third walkthrough, same four steps.
+
+**[The gaps register](gaps/index.md)**: What a behaviour policy wants and a product cannot enforce, or cannot express: the rule each gap defeats, who accepts the risk, and the request to close it. And the same for our own policies.
+One file per entry; add one by pull request.
 
 **[The cases](cases/index.md)**: Three so far: a beta user with six deployments over one Google account, this site's own session as a ledger with a measured grant, and three surfaces of one product over one record of past conversations. The four objects one level up.
 What the estate universe holds.

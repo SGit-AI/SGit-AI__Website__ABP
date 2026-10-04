@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>v0.11.0: The Gmail connector measured end to end by the agent that holds it, and the ratchet as a number - abp.sgit.ai</title>
+<meta name="description" content="An agent read its own thirty tool schemas, sent mail with no prompt, hit a refusal it could not explain, and wrote the four objects into a vault in the connector&#x27;s own words, naming the join to this grammar as a gap. This release is that join, and it puts the agent&#x27;s inferred mandate beside the site&#x27;s own so the gap between them is one row rather than a warning.">
+<link rel="canonical" href="https://abp.sgit.ai/articles/the-agent-that-holds-the-connector/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="abp.sgit.ai">
+<meta property="og:url" content="https://abp.sgit.ai/articles/the-agent-that-holds-the-connector/index.html">
+<meta property="og:title" content="v0.11.0: The Gmail connector measured end to end by the agent that holds it, and the ratchet as a number - abp.sgit.ai">
+<meta property="og:description" content="An agent read its own thirty tool schemas, sent mail with no prompt, hit a refusal it could not explain, and wrote the four objects into a vault in the connector&#x27;s own words, naming the join to this grammar as a gap. This release is that join, and it puts the agent&#x27;s inferred mandate beside the site&#x27;s own so the gap between them is one row rather than a warning.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="../../assets/favicon.svg" color="#0f766e">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<nav class="site"><div class="row">
+  <a class="brand" href="../../index.html">abp<span>.sgit.ai</span></a>
+  <a class="parent" href="https://sgit.ai" title="sgit.ai - the network this site is part of">&#8599; part of <b>sgit.ai</b></a>
+  <span class="stage-pill">the free library</span>
+  <a class="ver" href="../../versions/v0.12.0/index.html" title="What changed in v0.12.0, and the commit it was built from">v0.12.0</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+  <div class="nav-items">
+    <div class="ni"><a class="nl" href="../../index.html">Home</a></div>
+    <div class="ni"><a class="nl" href="../../what-is-an-abp/index.html">What is an ABP</a></div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../model/index.html">The model<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../model/index.html">The four objects</a>
+      <a class="sl" href="../../model/capabilities/index.html">The capability grammar</a>
+      <a class="sl" href="../../model/lexicon/index.html">The lexicon</a>
+      <a class="sl" href="../../model/barriers/index.html">The barrier</a>
+      <a class="sl" href="../../model/undo/index.html">The undo class</a>
+      <a class="sl" href="../../model/graph/index.html">The graph</a>
+      <a class="sl" href="../../model/graph/edges/index.html">The edge vocabulary</a>
+      <a class="sl" href="../../model/graph/formulas/index.html">The node type formulas</a>
+      <a class="sl" href="../../model/graph/layers/index.html">The three layers</a>
+      <a class="sl" href="../../model/universes/index.html">The universes</a>
+      <a class="sl" href="../../model/schema/index.html">The schema</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../examples/index.html">Examples<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../examples/index.html">All five</a>
+      <a class="sl" href="../../examples/chatgpt-web-no-connectors/index.html">Chat, nothing connected</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-enabled/index.html">A CLI agent, confirmations on</a>
+      <a class="sl" href="../../examples/claude-code-cli-confirmations-disabled/index.html">The same, confirmations off</a>
+      <a class="sl" href="../../examples/browser-extension-broad-host-permissions/index.html">A browser extension</a>
+      <a class="sl" href="../../examples/github-actions-hosted-runner/index.html">A hosted CI runner</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../gmail/index.html">Walkthroughs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../gmail/index.html">Your mailbox: what you gave it</a>
+      <a class="sl" href="../../gmail/measured/index.html">The measured Gmail deployment</a>
+      <a class="sl" href="../../cost/index.html">The cost ABP: how much, not just what</a>
+      <a class="sl" href="../../desktop/index.html">On your machine: what matters on it</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../cases/index.html">Cases<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../cases/index.html">All cases</a>
+      <a class="sl" href="../../cases/beta-001/index.html">One person, six deployments</a>
+      <a class="sl" href="../../cases/session-001/index.html">This site's own session, as a ledger</a>
+      <a class="sl" href="../../cases/estate-002/index.html">Three surfaces, one record</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl here" href="../../articles/index.html">Articles<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../articles/index.html">One per release</a>
+      <a class="sl" href="../../articles/an-ontology-that-already-existed/index.html">v0.1.0</a>
+      <a class="sl" href="../../articles/a-rule-corrected-nine-hours-later/index.html">v0.2.0</a>
+      <a class="sl" href="../../articles/three-nodes-and-three-edges/index.html">v0.3.0</a>
+      <a class="sl" href="../../articles/an-abp-is-a-junction-object/index.html">v0.4.0</a>
+      <a class="sl" href="../../articles/nine-universes-as-data/index.html">v0.4.1</a>
+      <a class="sl" href="../../articles/the-fact-diff-reads-the-published-page/index.html">v0.4.2</a>
+      <a class="sl" href="../../articles/the-confirmations-flag-as-a-path/index.html">v0.4.3</a>
+      <a class="sl" href="../../articles/seven-shapes-somebody-else-measured/index.html">v0.4.4</a>
+      <a class="sl" href="../../articles/one-article-per-release/index.html">v0.5.0</a>
+      <a class="sl" href="../../articles/thirteen-prompts-and-the-fourth-page/index.html">v0.6.0</a>
+      <a class="sl" href="../../articles/one-person-six-deployments/index.html">v0.7.0</a>
+      <a class="sl" href="../../articles/how-much-not-just-what/index.html">v0.8.0</a>
+      <a class="sl" href="../../articles/a-ledger-and-a-record/index.html">v0.9.0</a>
+      <a class="sl" href="../../articles/context-on-what-matters/index.html">v0.10.0</a>
+      <a class="sl here" href="../../articles/the-agent-that-holds-the-connector/index.html">v0.11.0</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../data/index.html">Data<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../data/index.html">The published vocabulary</a>
+      <a class="sl" href="../../gaps/index.html">The gaps register</a>
+      </div>
+    </div>
+    <div class="ni ni-has">
+      <a class="nl" href="../../docs/index.html">Docs<span class="caret">&#9662;</span></a>
+      <div class="sub">
+      <a class="sl" href="../../docs/index.html">Everything, rendered</a>
+      <a class="sl" href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+      <a class="sl" href="../../versions/index.html">How this site is built</a>
+      </div>
+    </div>
+  </div>
+  <a class="gh" href="https://github.com/SGit-AI/SGit-AI__Website__ABP">&#9733; GitHub</a>
+  <script src="../../assets/nav.js" defer></script>
+</div></nav>
+
+<main class="doc">
+  <p class="crumb"><a href="../../index.html">Home</a> / <a href="../../articles/index.html">Articles</a> / v0.11.0</p>
+  <h1>v0.11.0: The Gmail connector measured end to end by the agent that holds it, and the ratchet as a number</h1>
+  <p class="lead">An agent read its own thirty tool schemas, sent mail with no prompt, hit a refusal it could not explain, and wrote the four objects into a vault in the connector's own words, naming the join to this grammar as a gap. This release is that join, and it puts the agent's inferred mandate beside the site's own so the gap between them is one row rather than a warning.</p>
+  <div class="note"><b>This is the article for release v0.11.0, published 22 September 2026.</b> Every release of this site gets one, and it explains what that release changed and why rather than restating <a href="../../versions/v0.11.0/index.html">v0.11.0's own release record</a>. It is release 15 of 15 on this site, and the most recent. Every screenshot below was captured from a checkout of the <code>v0.11.0</code> tag, so it shows the site as it stood at that release and not as it stands today. Nothing follows it yet, or back to <a href="../../articles/context-on-what-matters/index.html">v0.10.0</a>.</div>
+  <h2 id="the-walkthrough-asked-a-question-and-a-vault-answered-it">The walkthrough asked a question, and a vault answered it</h2>
+  <p>Every page of the mailbox walkthrough is a prompt for the reader to run against their own assistant, and the honest line under all of them was that this site had never seen the answer. On 19 September an agent operating a Google Workspace mailbox through the Gmail connector ran the equivalent: it read its own thirty tool schemas, checked them against the live permission page, sent mail, trashed mail, relabelled sixteen messages, hit one refusal it could not explain, and wrote GRANT.md, MANDATE.md, DELTA.md and AGENTS.md into an sgit vault. <b>It wrote them in the connector's own vocabulary and named the missing join to this grammar as a gap.</b> This release is the join.</p>
+  <figure class="shot"><img src="../../assets/articles/v110-measured-top.png" alt="The measured deployment page at v0.11.0: the heading, the lead, and the provenance note naming the vault, its version and commit, and the read key" loading="lazy" decoding="async"><figcaption>The page. The note under the lead names the vault, its version and commit, the six files copied unchanged, whose words are whose, and the read key, published on purpose because it opens a read-only clone and nothing else.<span class="attr">abp.sgit.ai at v0.11.0, captured 4 October 2026 from a checkout of the v0.11.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="thirty-tools-and-the-one-on-the-wrong-side">Thirty tools, and the one on the wrong side</h2>
+  <p>The schemas name thirty tools, six read only and twenty four that write or delete, cross checked one to one against the settings page. On this account ten run with no prompt: every read tool, three label tools, and <code>send_message</code>. <b>Trashing a message needs approval and sending one does not</b>, which inverts the usual ordering, and the session confirmed the consequence by sending to an external address and finding that only the sender's copy could be trashed.</p>
+  <figure class="shot"><img src="../../assets/articles/v110-tools-split.png" alt="A two column table: the ten tools that run with no prompt on the left, the twenty that stop at an approval on the right" loading="lazy" decoding="async"><figcaption>The split as the settings page showed it. send_message is in the left column. The vault's whole recommendation is to move it to the right and leave create_draft open.<span class="attr">abp.sgit.ai at v0.11.0, captured 4 October 2026 from a checkout of the v0.11.0 tag. Unretouched.</span></figcaption></figure>
+  <div class="note"><b>The connector has no sender field.</b> Every compose tool was inspected: no from, no sendAs, no alias. The From header is the account's default send-as entry, which the operator set to a disclosed agent alias on a second domain. So the agent sends as the business and cannot send as anything else, and the disclosure is carried by the address before any signature has to.</div>
+  <h2 id="what-the-measurement-changed-and-what-it-did-not-replace">What the measurement changed, and what it did not replace</h2>
+  <p>This site already held a profile for the shape, read from two vendors' pages and the directory listing on 16 September. The vault settles three of its open questions and one of its contradictions: which tool sends, what the two truncated tool names were, and whether filter tools exist. <b>They do not</b>, so the earlier profile's <code>create.schedule.tenant</code> row is absent from this one, and the grant got smaller by being measured. The earlier profile stays as a second variant of the same product, which is the pattern the site has used for a coding agent since v0.1.0.</p>
+  <figure class="shot"><img src="../../assets/articles/v110-changed.png" alt="A table comparing the profile read from the pages on 16 September with the one measured by the agent on 19 September, row by row" loading="lazy" decoding="async"><figcaption>Read against measured. One barrier moved, from a setting to nothing, and the build derives the setting that distinguishes the two variants by diffing their grants.<span class="attr">abp.sgit.ai at v0.11.0, captured 4 October 2026 from a checkout of the v0.11.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="the-ratchet-as-a-number">The ratchet, as a number</h2>
+  <p>MANDATE.md opens by saying it is not a mandate: the agent reconstructed it from ten things it was asked to do in one session and was not stopped from doing. DELTA.md then declines to compute a gap from it, with the clearest sentence in the vault: <b>an agent subtracting its own inferred mandate from its own measured reach will always report a narrow gap, because the act of using a capability is what put it in the mandate column.</b></p>
+  <p>This site agreed and published the mechanism rather than the number alone. The measured grant is read against the site's own starting mandate and against the agent's inferred one, side by side, and the two deltas differ by exactly one primitive.</p>
+  <figure class="shot"><img src="../../assets/articles/v110-ratchet.png" alt="A table with two columns, the site's starting mandate and the agent's inferred mandate, showing excess 4 against 3 and the difference as send.message.world" loading="lazy" decoding="async"><figcaption>Two mandates against one grant. The operator created an alias for the agent to send from and asked it to introduce itself to one person; the agent inferred that sending was authorised. The difference between the columns is that inference.<span class="attr">abp.sgit.ai at v0.11.0, captured 4 October 2026 from a checkout of the v0.11.0 tag. Unretouched.</span></figcaption></figure>
+  <figure class="fig"><svg class="fig" viewBox="0 0 960 384" role="img" preserveAspectRatio="xMidYMid meet"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d5d0c2"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0b8f80"/></marker></defs><text x="24" y="22" class="fh">What the approval prompt asks, and what it leaves out</text><text x="24" y="40" class="fk">it arrives at the moment you know least about the thing you are approving</text><rect x="24" y="60" width="420" height="34" rx="8" class="box-a"/><text x="40" y="82" class="fb">What it tells you</text><text x="40" y="116" class="ft">the class of action</text><text x="40" y="138" class="ft">that something is about to happen</text><text x="40" y="160" class="ft">a yes and a no</text><rect x="496" y="60" width="440" height="34" rx="8" class="box"/><text x="512" y="82" class="fb">What it does not</text><text x="512" y="116" class="fd">which message or thread</text><text x="512" y="138" class="fd">how many items</text><text x="512" y="160" class="fd">who the correspondent is</text><text x="512" y="182" class="fd">whether you can undo it</text><text x="512" y="204" class="fd">whether the label is one you built in 2019</text><text x="512" y="226" class="fd">whether this is one step of forty</text><rect x="24" y="260" width="912" height="66" rx="10" class="box-x"/><text x="42" y="286" class="ft"><tspan class="fb">So the question it appears to ask is not the question it asks.</tspan> It appears to ask whether this action, on this object, is acceptable.</text><text x="42" y="306" class="ft">It asks whether you still want the thing you asked for thirty seconds ago, and that question has one answer.</text><text x="24" y="360" class="fd">Every one of the six on the right is available to the software at the moment it asks. This is a design gap rather than a data gap.</text></svg><figcaption>Approving is a formality rather than a decision, and a formality that produces a record of your agreement. Turning the prompt off removes the formality and changes nothing about the grant.</figcaption></figure>
+  <h2 id="hard-and-soft-are-the-four-barriers-under-other-names">HARD and SOFT are the four barriers under other names</h2>
+  <p>AGENTS.md tags every rule the agent follows as HARD or SOFT, and its first section says what the file is: a soft barrier that shapes behaviour reliably under normal conditions, and not at all if it is absent from context, contradicted later, or overridden by content read from an untrusted source. <b>The tags map onto this site's barriers without remainder</b>, with one row the four have no home for: the operator reading each message as it is sent, which the vault says is the barrier doing the real work and which detects rather than prevents.</p>
+  <figure class="shot"><img src="../../assets/articles/v110-hard-soft.png" alt="A table mapping the vault's HARD and SOFT tags onto the site's barriers, with a row for the operator reading each message that fits none of the four" loading="lazy" decoding="async"><figcaption>The mapping. HARD by absence is a boundary; HARD by the settings page is a boundary for twenty tools; SOFT is an expectation; and a person reading along is not a barrier in the four, which is why nothing scheduled survives it.<span class="attr">abp.sgit.ai at v0.11.0, captured 4 October 2026 from a checkout of the v0.11.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="what-a-measured-row-looks-like-beside-a-read-one">What a measured row looks like beside a read one</h2>
+  <p>Five primitives, five of five rows measured, two tiers: <em>observed</em> where the agent saw it on the thing itself in its own session, <em>measured</em> where the operator confirmed it from outside. The <code>read.credential.host</code> row is the one to notice: on the earlier profile it was inferred, because codes and resets arrive in mailboxes; here it is observed, because the sender based sweep that relabelled sixteen messages swept a one time code and two new device alerts along with the marketing it was aimed at.</p>
+  <figure class="shot"><img src="../../assets/articles/v110-gam.png" alt="The grant against mandate figure for the measured Gmail deployment: one line from the mandate to read.message.tenant, four marks on the grant side with no line" loading="lazy" decoding="async"><figcaption>The grant against the site's mandate. Four marks with no line reaching them, three at a barrier that is not a control, and every row behind them seen on the thing itself.<span class="attr">abp.sgit.ai at v0.11.0, captured 4 October 2026 from a checkout of the v0.11.0 tag. Unretouched.</span></figcaption></figure>
+  <h2 id="what-the-gate-learned">What the gate learned</h2>
+  <p>A vault is a contributor who wrote in their own vocabulary, so the manifest gained a <code>vaults</code> list beside <code>shapes</code>: the vault, its version and commit, the read key published on purpose, who wrote it, what was and was not copied, and the module that does the mapping. The gate accepts a vault entry's own retrieval time, counts vault shapes with the others, requires every named source to be among the hashed files, and <b>requires any read key a vault entry carries to be in the published list</b>, so a key on this site is published on purpose or not at all. One altered byte in the vault copy fails the build in two places, which was tested before the commit.</p>
+  <h2 id="what-this-release-did-not-settle">What this release did not settle</h2>
+  <ul><li><b>The mandate is still inferred.</b> Fifteen questions in MANDATE.md wait for the business, and the load bearing one is whether the mandate covers unattended operation, because the control doing the real work is a person reading along.</li><li><b><code>send_message</code> was still on Always allow when the vault was written.</b> The recommendation is one click and it had not been made.</li><li><b>The raw debrief and the runbook app stay in the vault</b>, cited by path, because the debrief carries a personal address. The four objects, the README and the version records were copied; two of them name a colleague by first name, which the editor has been asked about.</li><li><b>The container's reach is stated, not enumerated.</b> The same session held a shell, egress and two vault keys; the vault records it as reach beyond the mailbox, and this profile covers the connector alone.</li><li><b>One day, one account.</b> Connector tool sets change without notice; this is a snapshot with a date on it, and the next measurement is a third variant.</li></ul>
+  <p><a href="../../gmail/measured/index.html">The measured deployment</a> &amp;#183; <a href="../../data/contributed/riskmandate/manifest.json">The verbatim bytes</a> &amp;#183; <a href="../../gmail/index.html">The walkthrough</a> &amp;#183; <a href="../../versions/v0.11.0/index.html">v0.11.0's own release record</a></p>
+  <h2 id="read-the-sequence">Read the sequence</h2>
+  <div class="tablewrap"><table><thead><tr><th>Direction</th><th>The release</th></tr></thead><tbody><tr><td><b>Older</b></td><td><a href="../../articles/context-on-what-matters/index.html">v0.10.0: The desktop walkthrough: on your own machine, host means your machine, and the mandate is a map of what matters before it is a list of rules</a></td></tr><tr><td><b>All of them</b></td><td><a href="../../articles/index.html">One article per release</a></td></tr></tbody></table></div>
+</main>
+
+<footer class="site"><div class="cols">
+  <div>
+    <div class="brandline">abp<span>.sgit.ai</span></div>
+    <p>The <b>Agent Behaviour Policy</b>: one document, for one agent in one deployment, that puts the grant and the mandate on the same page. It describes and it does not judge, so it carries no score. <a href="../../what-is-an-abp/index.html" style="display:inline;padding:0">The definition</a>.</p>
+    <p class="netline"><a href="https://what-can-it-do.games.sgit.ai/map/index.html">&#8599; what-can-it-do.games.sgit.ai</a> - the capability map this site's data was promoted from &#183; <a href="https://graphs.sgit.ai/">&#8599; graphs.sgit.ai</a> - the five graph rules &#183; <a href="https://twins.sgit.ai/">&#8599; twins.sgit.ai</a> - the interface to the real environment &#183; <a href="https://risks.sgit.ai/">&#8599; risks.sgit.ai</a> - where a score lives, and a named person signs</p>
+    <p class="partnote">This site is static. It sets no cookie, runs no analytics script and sends nothing anywhere. <a href="../../data/index.html" style="display:inline;padding:0">The data it publishes</a> is served with cross origin access on purpose.</p>
+    <p class="verline">site <a href="../../versions/v0.12.0/index.html">v0.12.0</a> · <a href="../../versions/index.html">all versions</a> · <a href="../../llms.txt">llms.txt</a> · CC BY 4.0 · <a href="../../articles/the-agent-that-holds-the-connector/index.md">this page as markdown</a></p>
+  </div>
+  <div>
+    <h4>The argument</h4>
+    <a href="../../what-is-an-abp/index.html">&#8594; What is an ABP</a>
+    <a href="../../gmail/index.html">Your mailbox, in four steps</a>
+    <a href="../../cost/index.html">The cost ABP</a>
+    <a href="../../desktop/index.html">On your machine</a>
+    <a href="../../model/index.html">The four objects</a>
+    <a href="../../model/barriers/index.html">The barrier</a>
+    <a href="../../examples/index.html">Five worked examples</a>
+    <a href="../../cases/beta-001/index.html">One person's estate</a>
+  </div>
+  <div>
+    <h4>The data</h4>
+    <a href="../../data/index.html">The published vocabulary</a>
+    <a href="../../model/schema/index.html">The schema</a>
+    <a href="../../data/upstream/pack.json">The source bytes</a>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">Where it came from</a>
+    <a href="../../gaps/index.html">The gaps register</a>
+  </div>
+  <div>
+    <h4>The documents</h4>
+    <a href="../../docs/index.html">Docs</a>
+    <a href="../../docs/briefs/v0.33.70__foundation__agent-behaviour-policy-you-know-what-you-asked-for-and-you-do-not-know-what-it-can-do/index.html">The foundation document</a>
+    <a href="../../docs/pack/05__THE-HARD-RULES/index.html">The hard rules</a>
+    <a href="../../versions/index.html">Release history</a>
+  </div>
+  <div>
+    <h4>Across the network</h4>
+    <a href="https://what-can-it-do.games.sgit.ai/map/index.html">The capability map</a>
+    <a href="https://graphs.sgit.ai/">The graph rules</a>
+    <a href="https://coding.sgit.ai/">The style rules</a>
+    <a href="../../llms.txt">llms.txt</a>
+  </div>
+</div></footer>
+</body>
+</html>

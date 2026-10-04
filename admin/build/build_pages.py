@@ -42,6 +42,7 @@ import cases  # noqa: E402
 import cost_pages  # noqa: E402
 import desktop_pages  # noqa: E402
 import docs_pages  # noqa: E402
+import gaps_pages  # noqa: E402
 import gmail_pages  # noqa: E402
 import graph  # noqa: E402
 import lexicon_pages  # noqa: E402
@@ -129,7 +130,10 @@ NAV = [
      [("One per release", "articles/index.html")]
      + [(v, "articles/" + slug + "/index.html") for slug, v, *_ in articles.ARTICLES],
      ("articles/",)),
-    ("Data", "data/index.html", [], ("data/",)),
+    ("Data", "data/index.html", [
+        ("The published vocabulary", "data/index.html"),
+        ("The gaps register", "gaps/index.html"),
+    ], ("data/", "gaps/")),
     ("Docs", "docs/index.html", [
         ("Everything, rendered", "docs/index.html"),
         ("The foundation document", FOUNDATION_PAGE),
@@ -153,6 +157,7 @@ FOOTER = [
         ("The schema", "model/schema/index.html"),
         ("The source bytes", "data/upstream/pack.json"),
         ("Where it came from", MAP),
+        ("The gaps register", "gaps/index.html"),
     ]),
     ("The documents", [
         ("Docs", "docs/index.html"),
@@ -172,6 +177,49 @@ FOOTER = [
 # from, and whether it was reconstructed after the fact. `basis' is what the release was built
 # against; `changes' is what actually moved.
 VERSION_LOG = [
+    ("v0.12.0", "2026-10-04",
+     "a gaps and requests register: what a behaviour policy wants and a product cannot enforce "
+     "or cannot express, who accepts the risk, and the request to close it; plus the article "
+     "for v0.11.0",
+     {
+       "summary":
+         "Asked for by the RiskMandate agent team in a brief pack of 4 October: one page and "
+         "one JSON file recording the gaps found in providers' products when writing behaviour "
+         "policies, because when a product cannot enforce a rule somebody accepts the risk, "
+         "usually silently and in the act of granting the connector. Nine provider entries from "
+         "the brief, each with the rule it defeats, the barrier that is possible in the site's "
+         "four words and the contributor's, the risk and who accepts it, the evidence and its "
+         "tier, and the request. Three entries on our own policies, where an agent's reach "
+         "exceeded its mandate and what was done about it, on the same page on purpose. "
+         "Entries are files, one each, so adding one is a pull request. The release also "
+         "carries the article for v0.11.0.",
+       "commit": None,
+       "vault": None,
+       "reconstructed": False,
+       "changes": [
+         "data/gaps/entries/: twelve JSON files, nine provider gaps and three of our own, each "
+         "naming who reported it and the evidence tier. The provider entries are self "
+         "reported by the contributor and the page says this site did not test them; the "
+         "own entries rest on the measured Gmail vault.",
+         "data/gaps/index.json, generated from the files present, with the field list, the "
+         "declared values for barrier and status, counts by kind and by provider, and the "
+         "statement that a count is not a score.",
+         "gaps/: the page. The register by provider, the mapping of the contributor's four "
+         "words onto the four barriers with both kept, every entry as a table, the own "
+         "section, and how to add one.",
+         "The first entry is a gap where the rule cannot be written at all: a calendar "
+         "invitation sends when the event is created, with no draft, so draft only, a person "
+         "sends has no row. Two of nine provider gaps are of that kind.",
+         "The article for v0.11.0, the fifteenth, with six screenshots from the v0.11.0 tag.",
+       ],
+       "basis": [
+         "The brief pack of 4 October 2026 from the RiskMandate agent team, pasted by the "
+         "editor of record; its items A and D are this release.",
+         "The four barriers and the enforcer test, which the contributor's four words map "
+         "onto without remainder.",
+         "The measured Gmail vault at v0.11.0, which the three own entries rest on.",
+       ],
+     }),
     ("v0.11.0", "2026-09-22",
      "the Gmail connector measured end to end by the agent that holds it, read from a vault, "
      "mapped into the grammar, and set beside the profile read from the vendors' pages",
@@ -1414,6 +1462,11 @@ def home(D):
                         "switch away. Ten prompts that produce the map of what matters on the "
                         "machine, and the rules that open with it.",
                  "foot": "The third walkthrough, same four steps."},
+                {"title": "[The gaps register](gaps/index.html)",
+                 "sub": "What a behaviour policy wants and a product cannot enforce, or cannot "
+                        "express: the rule each gap defeats, who accepts the risk, and the "
+                        "request to close it. And the same for our own policies.",
+                 "foot": "One file per entry; add one by pull request."},
                 {"title": "[The cases](cases/index.html)",
                  "sub": "Three so far: a beta user with six deployments over one Google "
                         "account, this site's own session as a ledger with a measured grant, "
@@ -1713,7 +1766,7 @@ def main():
     pages = {"index.html": home(D), "what-is-an-abp/index.html": what_is_an_abp(D)}
     for source in (abp_pages.pages(D), lexicon_pages.pages(D, g, cls),
                    universe_pages.pages(D, g, cls), gmail_pages.pages(D), cost_pages.pages(D),
-                   desktop_pages.pages(D), cases.pages(D),
+                   desktop_pages.pages(D), cases.pages(D), gaps_pages.pages(),
                    articles.pages(), docs_pages.pages(),
                    version_pages()):
         clash = set(source) & set(pages)

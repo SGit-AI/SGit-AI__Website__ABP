@@ -1,0 +1,21 @@
+{
+  "id": "own-001",
+  "kind": "own",
+  "provider": "RiskMandate.ai",
+  "product": "Every RiskMandate agent behaviour policy that grants Google Calendar",
+  "gap": "The calendar invitation gap (gap-001) is a gap in each of them: every one assumes a person releases outbound, and for invitations nothing can.",
+  "abp_impact": "send.message.world through an invitation sits on the wanted side wherever Calendar is granted, with no draft step to point a clause at.",
+  "barrier_possible": "none",
+  "barrier_possible_theirs": "none",
+  "risk_to_accept": "That an agent holding Calendar can invite anyone immediately.",
+  "what_we_did": "Recorded it here. The risk is accepted by the operator for every policy that grants Calendar, until a hold state exists or Calendar is withdrawn from the agents.",
+  "evidence": "gap-001, and the contributor's own policies.",
+  "request": "see gap-001",
+  "related": [
+    "cases/beta-001/chatgpt-calendar/index.html"
+  ],
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "first_seen": "2026-10-04",
+  "status": "open",
+  "evidence_tier": "self-reported"
+}

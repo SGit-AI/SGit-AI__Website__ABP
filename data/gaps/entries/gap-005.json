@@ -1,0 +1,17 @@
+{
+  "id": "gap-005",
+  "kind": "provider",
+  "provider": "Google and Anthropic",
+  "product": "Gmail, through the Claude connector",
+  "gap": "Plain text drafts reach recipients with links rewritten through a google.com redirect, so the recipient sees a redirect URL rather than the address the agent wrote.",
+  "abp_impact": "None on the four objects. A fidelity and trust issue: a disclosed agent identity that sends links which look rewritten undercuts the disclosure.",
+  "barrier_possible": "not applicable",
+  "barrier_possible_theirs": "not applicable",
+  "risk_to_accept": "None. Workaround in use: an HTML body with explicit anchors.",
+  "evidence": "The contributor's sent mail, as received.",
+  "request": "Plain text links delivered as written, or the rewrite documented.",
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "first_seen": "2026-10-04",
+  "status": "open",
+  "evidence_tier": "self-reported"
+}

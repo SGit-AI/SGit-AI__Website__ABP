@@ -1,0 +1,20 @@
+{
+  "id": "own-002",
+  "kind": "own",
+  "provider": "RiskMandate.ai",
+  "product": "The Gmail connector on the agent's mailbox, as measured on 19 September 2026",
+  "gap": "send_message was on Always allow: the one irreversible action in the reach sat at nothing, while trashing a message needed approval.",
+  "abp_impact": "send.message.world at barrier none against a mandate that had never been elicited. The reach exceeded anything the business had said.",
+  "barrier_possible": "setting",
+  "barrier_possible_theirs": "admin setting",
+  "risk_to_accept": "That the agent sends to anyone with no prompt, and that a message which talks it into replying has a way out.",
+  "what_we_did": "The agent recommended moving send_message to Needs approval and leaving create_draft open. On the day the vault was written the change had not been made, so the risk was accepted by the operator, by reading each message as it was sent.",
+  "evidence": "GRANT.md and AGENTS.md in vault 02n7bz55, held verbatim on this site.",
+  "first_seen": "2026-09-19",
+  "evidence_tier": "measured",
+  "related": [
+    "gmail/measured/index.html"
+  ],
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "status": "open"
+}

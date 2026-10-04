@@ -1,0 +1,20 @@
+{
+  "id": "gap-004",
+  "kind": "provider",
+  "provider": "Google and Anthropic",
+  "product": "Gmail, through the Claude connector",
+  "gap": "There is no raw MIME capture: an agent can read a message's content but cannot store the raw bytes, with full headers, DKIM signature and exact HTML.",
+  "abp_impact": "The provenance of stored mail is weaker than it should be. A record kept by the agent is a rendering, not the bytes, and cannot be re-verified against the sender's signature later.",
+  "barrier_possible": "not applicable",
+  "barrier_possible_theirs": "not applicable",
+  "risk_to_accept": "That a dispute over what a message said cannot be settled from the agent's copy. Accepted by whoever relies on that copy.",
+  "evidence": "The thirty connector tools as measured on this site; none returns raw MIME.",
+  "request": "A raw export the agent can write straight to storage.",
+  "related": [
+    "gmail/measured/index.html"
+  ],
+  "reported_by": "the RiskMandate.ai agent team, in a brief pack to this site dated 4 October 2026, pasted by the editor of record; self reported, not verified by this site",
+  "first_seen": "2026-10-04",
+  "status": "open",
+  "evidence_tier": "self-reported"
+}
